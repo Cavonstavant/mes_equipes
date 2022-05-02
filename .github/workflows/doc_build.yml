@@ -1,0 +1,44 @@
+name: GH Pages deployment
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: |
+        sudo apt update
+        sudo apt install libsdl2-2.0-0 libsdl2-gfx-1.0-0 libsdl2-image-2.0-0 libsdl2-mixer-2.0-0 libsdl2-net-2.0-0 libsdl2-ttf-2.0-0 libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev -y
+        sudo apt install libsfml-dev -y
+        sudo apt install graphviz -y
+        sudo apt install doxygen -y
+
+    - name: Build documentation
+      run: doxygen
+
+    - name: Add .nojekyll
+      run: |
+        touch ${{github.workspace}}/doc/build/html/.nojekyll
+
+    - name: Create dependency graphs
+      run: |
+        cd graph
+        cmake .. --graphviz=deps.dot
+        dot -Tpng deps.dot > deps.png
+        cd ../
+        mkdir doc/build/html/graph
+        cp graph/deps.png doc/build/html/graph/deps.png
+
+    - name: Deploy documentation
+      uses: JamesIves/github-pages-deploy-action@v4.2.5
+      with:
+        github_token: ${{ inputs.github_token }}
+        folder: doc/build/html
+        message: "Update generated documentation"
+        branch: gh-pages
