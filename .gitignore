@@ -50,3 +50,15 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+
+# IDE files
+*.vscode
+*.idea
+
+
+# Build specific
+build
+myteams_server
+myteams_client
+
