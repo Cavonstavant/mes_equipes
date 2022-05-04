@@ -1,0 +1,1 @@
+set (TARGET_NAME ${PROJECT_NAME}_server)
