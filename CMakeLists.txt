@@ -17,5 +17,5 @@ add_custom_target(re
 
 add_custom_target(fclean
     COMMAND make clean
-    COMMAND rm -f ${PROJECT_NAME}_client ${PROJECT_NAME}_server
+    COMMAND rm -f ${PROJECT_NAME}_cli ${PROJECT_NAME}_server
 )
