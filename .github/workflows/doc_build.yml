@@ -14,8 +14,6 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt update
-        sudo apt install libsdl2-2.0-0 libsdl2-gfx-1.0-0 libsdl2-image-2.0-0 libsdl2-mixer-2.0-0 libsdl2-net-2.0-0 libsdl2-ttf-2.0-0 libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev -y
-        sudo apt install libsfml-dev -y
         sudo apt install graphviz -y
         sudo apt install doxygen -y
 
@@ -25,15 +23,6 @@ jobs:
     - name: Add .nojekyll
       run: |
         touch ${{github.workspace}}/doc/build/html/.nojekyll
-
-    - name: Create dependency graphs
-      run: |
-        cd graph
-        cmake .. --graphviz=deps.dot
-        dot -Tpng deps.dot > deps.png
-        cd ../
-        mkdir doc/build/html/graph
-        cp graph/deps.png doc/build/html/graph/deps.png
 
     - name: Deploy documentation
       uses: JamesIves/github-pages-deploy-action@v4.2.5

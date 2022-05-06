@@ -8,3 +8,12 @@ set (SRC
 )
 
 add_executable(${TARGET} ${SRC})
+
+# target_include_directories(${TARGET}_core
+#     PUBLIC ${INCLUDE_DIR}
+#     PRIVATE ${SRC_DIR}
+# )
+
+set_target_properties(${TARGET} PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}
+)
