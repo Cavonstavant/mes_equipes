@@ -5,4 +5,6 @@
 ** object_team
 */
 
+/// \file /objects/src/object_team.c
+
 #include "object_team.h"

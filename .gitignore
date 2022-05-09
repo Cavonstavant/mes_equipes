@@ -60,5 +60,5 @@ dkms.conf
 # Build specific
 build
 myteams_server
-myteams_client
+myteams_cli
 

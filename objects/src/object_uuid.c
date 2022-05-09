@@ -5,4 +5,6 @@
 ** object_uuid
 */
 
+/// \file /objects/src/object_uuid.c
+
 #include "object_uuid.h"

@@ -5,9 +5,15 @@
 ** object_body
 */
 
+/// \file /objects/include/object_body.h
+
 #ifndef OBJECT_BODY_H_
     #define OBJECT_BODY_H_
 
+///
+///@brief Body object equivalent of a string
+///
+///
 typedef char *body_t;
 
 #endif /* !OBJECT_BODY_H_ */

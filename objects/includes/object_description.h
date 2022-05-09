@@ -5,9 +5,15 @@
 ** object_description
 */
 
+/// \file /objects/include/object_description.h
+
 #ifndef OBJECT_DESCRIPTION_H_
     #define OBJECT_DESCRIPTION_H_
 
+///
+///@brief Description object equivalent of a string
+///
+///
 typedef char *description_t;
 
 #endif /* !OBJECT_DESCRIPTION_H_ */

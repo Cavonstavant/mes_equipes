@@ -5,4 +5,6 @@
 ** object_user
 */
 
+/// \file /objects/src/object_user.c
+
 #include "object_user.h"

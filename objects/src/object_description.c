@@ -5,4 +5,6 @@
 ** object_description
 */
 
+/// \file /objects/src/object_description.c
+
 #include "object_description.h"

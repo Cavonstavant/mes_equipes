@@ -5,4 +5,6 @@
 ** object_channel
 */
 
+/// \file /objects/src/object_channel.c
+
 #include "object_channel.h"

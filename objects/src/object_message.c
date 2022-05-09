@@ -5,4 +5,6 @@
 ** object_message
 */
 
+/// \file /objects/src/object_message.c
+
 #include "object_message.h"

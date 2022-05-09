@@ -5,4 +5,6 @@
 ** object_threads
 */
 
+/// \file /objects/src/object_thread.c
+
 #include "object_thread.h"

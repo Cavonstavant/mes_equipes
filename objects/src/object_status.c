@@ -5,4 +5,6 @@
 ** object_status
 */
 
+/// \file /objects/src/object_status.c
+
 #include "object_status.h"
