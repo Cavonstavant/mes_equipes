@@ -11,7 +11,7 @@
     #define OBJECT_NAME_H_
 
 ///
-///@brief Name object equivalent of a string
+/// \brief Name object equivalent of a string
 ///
 ///
 typedef char name_t[32];

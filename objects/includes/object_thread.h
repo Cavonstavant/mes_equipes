@@ -16,17 +16,24 @@
     #include <time.h>
 
 ///
-///@brief Thread object
+/// \brief Thread object
 ///
 ///
 typedef struct thread_s {
-    uuid_t uuid; /// Uuid of the thread
-    uuid_t author; /// Uuid of the attached author
-    uuid_t channel; /// Uuid of the attached channel
-    name_t name; /// Name of the thread
-    body_t body; /// Body of the thread
-    time_t date; /// Time of creation of the thread
-    uuid_t *comments; /// Uuid list of the attached comments
+    /// Uuid of the thread
+    uuid_t uuid;
+    /// Uuid of the attached author
+    uuid_t author;
+    /// Uuid of the attached channel
+    uuid_t channel;
+    /// Name of the thread
+    name_t name;
+    /// Body of the thread
+    body_t body;
+    /// Time of creation of the thread
+    time_t date;
+    /// Uuid list of the attached comments
+    uuid_t *comments;
 } thread_t;
 
 #endif /* !OBJECT_THREADS_H_ */

@@ -15,15 +15,20 @@
     #include "object_status.h"
 
 ///
-///@brief User object
+/// \brief User object
 ///
 ///
 typedef struct user_s {
-    uuid_t uuid; /// Uuid of the user
-    name_t name; /// Name of the user
-    status_t status; /// Status of the user, isConnected ?
-    uuid_t *teams; /// Uuid list of the attached teams
-    uuid_t *conversation; /// UUid list of the attached conversation
+    /// Uuid of the user
+    uuid_t uuid;
+    /// Name of the user
+    name_t name;
+    /// Status of the user, isConnected ?
+    status_t status;
+    /// Uuid list of the attached teams
+    uuid_t *teams;
+    /// Uuid list of the attached conversation
+    uuid_t *conversation;
 } user_t;
 
 #endif /* !OBJECT_USER_H_ */

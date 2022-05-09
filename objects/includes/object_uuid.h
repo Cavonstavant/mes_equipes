@@ -11,7 +11,7 @@
     #define OBJECT_UUID_H_
 
 ///
-///@brief Uuid object equivalent of a string
+/// \brief Uuid object equivalent of a string
 /// To Refacto with issue #25
 ///
 typedef char *uuid_t;

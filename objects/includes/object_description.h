@@ -11,7 +11,7 @@
     #define OBJECT_DESCRIPTION_H_
 
 ///
-///@brief Description object equivalent of a string
+/// \brief Description object equivalent of a string
 ///
 ///
 typedef char description_t[255];

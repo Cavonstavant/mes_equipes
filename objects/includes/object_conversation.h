@@ -13,13 +13,16 @@
     #include "object_uuid.h"
 
 ///
-///@brief Conversation object
+/// \brief Conversation object
 ///
 ///
 typedef struct conversation_s {
-    uuid_t uuid; /// Uuid of the channel
-    uuid_t *users; /// Uuid list of the attached user
-    uuid_t *message; /// Uuid list of the attached message
+    /// Uuid of the channel
+    uuid_t uuid;
+    /// Uuid list of the attached user
+    uuid_t *users;
+    /// Uuid list of the attached message
+    uuid_t *message;
 } conversation_t;
 
 #endif /* !OBJECT_CONVERSATION_H_ */

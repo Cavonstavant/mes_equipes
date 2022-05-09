@@ -15,13 +15,16 @@
     #include <time.h>
 
 ///
-///@brief Message object
+/// \brief Message object
 ///
 ///
 typedef struct message_s {
-    uuid_t uuid; /// Uuid of the message
-    body_t body; /// Body of the message
-    time_t time; /// Time of the message creation
+    /// Uuid of the message
+    uuid_t uuid;
+    /// Body of the message
+    body_t body;
+    /// Time of the message creation
+    time_t time;
 } message_t;
 
 #endif /* !OBJECT_MESSAGE_H_ */

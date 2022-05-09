@@ -18,7 +18,7 @@
     #define OFFLINE false
 
 ///
-///@brief Status object equivalent of a bool
+/// \brief Status object equivalent of a bool
 ///
 ///
 typedef bool status_t;

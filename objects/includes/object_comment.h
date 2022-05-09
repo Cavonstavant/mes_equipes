@@ -15,15 +15,20 @@
     #include <time.h>
 
 ///
-///@brief Comment object
+/// \brief Comment object
 ///
 ///
 typedef struct comment_s {
-    uuid_t uuid; /// Uuid of the comment
-    uuid_t thread; /// Uuid of the attached thread
-    uuid_t author; /// Uuid of the attached user
-    body_t body; /// Body object of the comment
-    time_t time; /// Time creation of the comment 
+    /// Uuid of the comment
+    uuid_t uuid;
+    /// Uuid of the attached thread
+    uuid_t thread;
+    /// Uuid of the attached user
+    uuid_t author;
+    /// Body object of the comment
+    body_t body;
+    /// Time creation of the comment
+    time_t time;
 } comment_t;
 
 #endif /* !OBJECT_COMMENT_H_ */

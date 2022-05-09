@@ -11,7 +11,7 @@
     #define OBJECT_BODY_H_
 
 ///
-///@brief Body object equivalent of a string
+/// \brief Body object equivalent of a string
 ///
 ///
 typedef char body_t[512];

@@ -15,15 +15,20 @@
     #include "object_description.h"
 
 ///
-///@brief Channel object
+/// \brief Channel object
 ///
 ///
 typedef struct channel_s {
-    uuid_t uuid; /// Uuid of the channel
-    name_t name; /// Name of the channel
-    description_t description; /// Description of the channel
-    uuid_t team; /// Uuid of the attached team
-    uuid_t *threads; /// Uuid list of the attached threads
+    /// Uuid of the channel
+    uuid_t uuid;
+    /// Name of the channel
+    name_t name;
+    /// Description of the channel
+    description_t description;
+    /// Uuid of the attached team
+    uuid_t team;
+    /// Uuid list of the attached threads
+    uuid_t *threads;
 } channel_t;
 
 #endif /* !OBJECT_CHANNEL_H_ */
