@@ -5,7 +5,7 @@
 ** object_team
 */
 
-/// \file /objects/include/object_team.h
+/// \file /objects/includes/object_team.h
 
 #ifndef OBJECT_TEAM_H_
     #define OBJECT_TEAM_H_

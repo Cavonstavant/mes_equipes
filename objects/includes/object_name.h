@@ -5,7 +5,7 @@
 ** object_name
 */
 
-/// \file /objects/include/object_name.h
+/// \file /objects/includes/object_name.h
 
 #ifndef OBJECT_NAME_H_
     #define OBJECT_NAME_H_

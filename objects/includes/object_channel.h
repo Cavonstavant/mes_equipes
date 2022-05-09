@@ -5,7 +5,7 @@
 ** object_channel
 */
 
-/// \file /objects/include/object_channel.h
+/// \file /objects/includes/object_channel.h
 
 #ifndef OBJECT_CHANNEL_H_
     #define OBJECT_CHANNEL_H_

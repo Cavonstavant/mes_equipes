@@ -5,7 +5,7 @@
 ** object_status
 */
 
-/// \file /objects/include/object_status.h
+/// \file /objects/includes/object_status.h
 
 #ifndef OBJECT_STATUS_H_
     #define OBJECT_STATUS_H_

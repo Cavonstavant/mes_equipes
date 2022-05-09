@@ -5,7 +5,7 @@
 ** object_user
 */
 
-/// \file /objects/include/object_user.h
+/// \file /objects/includes/object_user.h
 
 #ifndef OBJECT_USER_H_
     #define OBJECT_USER_H_

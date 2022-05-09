@@ -5,7 +5,7 @@
 ** object_description
 */
 
-/// \file /objects/include/object_description.h
+/// \file /objects/includes/object_description.h
 
 #ifndef OBJECT_DESCRIPTION_H_
     #define OBJECT_DESCRIPTION_H_

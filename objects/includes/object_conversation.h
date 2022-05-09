@@ -5,7 +5,7 @@
 ** object_conversation
 */
 
-/// \file /objects/include/object_conversation.h
+/// \file /objects/includes/object_conversation.h
 
 #ifndef OBJECT_CONVERSATION_H_
     #define OBJECT_CONVERSATION_H_

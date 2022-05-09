@@ -5,7 +5,7 @@
 ** object_threads
 */
 
-/// \file /objects/include/object_thread.h
+/// \file /objects/includes/object_thread.h
 
 #ifndef OBJECT_THREAD_H_
     #define OBJECT_THREAD_H_

@@ -5,7 +5,7 @@
 ** object_message
 */
 
-/// \file /objects/include/object_message.h
+/// \file /objects/includes/object_message.h
 
 #ifndef OBJECT_MESSAGE_H_
     #define OBJECT_MESSAGE_H_
