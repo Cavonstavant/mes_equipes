@@ -14,6 +14,6 @@
 ///@brief Description object equivalent of a string
 ///
 ///
-typedef char *description_t;
+typedef char description_t[255];
 
 #endif /* !OBJECT_DESCRIPTION_H_ */

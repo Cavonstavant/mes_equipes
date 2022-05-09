@@ -14,6 +14,6 @@
 ///@brief Body object equivalent of a string
 ///
 ///
-typedef char *body_t;
+typedef char body_t[512];
 
 #endif /* !OBJECT_BODY_H_ */

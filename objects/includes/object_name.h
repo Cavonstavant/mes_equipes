@@ -14,6 +14,6 @@
 ///@brief Name object equivalent of a string
 ///
 ///
-typedef char *name_t;
+typedef char name_t[32];
 
 #endif /* !OBJECT_NAME_H_ */
