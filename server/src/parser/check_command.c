@@ -35,9 +35,24 @@ static int count_tab_len(char **tab)
     return (arg_count);
 }
 
-int check_parser(char **arguments)
+int command_find(char **arguments, cli_command_t *commands)
 {
     int arg_count = count_tab_len(arguments);
 
+    if (strcmp(arguments[0], commands->name) == 0) {
+        if (arg_count == count_tab_len(commands->arguments) + 1) {
+            return (1);
+        }
+    }
+    return (0);
+}
+
+int check_parser(char **arguments)
+{
+    for (int i = 0; i < 14; i++) {
+        if (command_find(arguments, &commands[i])) {
+            return (1);
+        }
+    }
     return (0);
 }
