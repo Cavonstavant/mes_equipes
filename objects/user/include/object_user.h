@@ -31,4 +31,15 @@ typedef struct user_s {
     uuid_t *conversation;
 } user_t;
 
+///
+/// \brief User creation object
+/// Object containing all the information for a user creation
+///
+typedef struct user_creation_s {
+    /// Initial name for the user creation
+    name_t name;
+    /// Initial status for the user creation
+    status_t status;
+} user_creation_t;
+
 #endif /* !OBJECT_USER_H_ */

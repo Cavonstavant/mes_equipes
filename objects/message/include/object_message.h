@@ -27,4 +27,13 @@ typedef struct message_s {
     time_t time;
 } message_t;
 
+///
+/// \brief Message creation object
+/// Object containing all the information for a message creation
+///
+typedef struct message_creation_s {
+    /// Initial body for the message creation
+    body_t body;
+} message_creation_t;
+
 #endif /* !OBJECT_MESSAGE_H_ */

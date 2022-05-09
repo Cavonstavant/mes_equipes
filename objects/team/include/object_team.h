@@ -31,4 +31,15 @@ typedef struct team_s {
     uuid_t *users;
 } team_t;
 
+///
+/// \brief Team creation object
+/// Object containing all the information for team creation
+///
+typedef struct team_creation_s {
+    /// Initial name for the team creation
+    name_t name;
+    /// Initial description for the team creation
+    description_t description;
+} team_creation_t;
+
 #endif /* !OBJECT_TEAM_H_ */

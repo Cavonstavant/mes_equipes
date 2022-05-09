@@ -36,4 +36,19 @@ typedef struct thread_s {
     uuid_t *comments;
 } thread_t;
 
+///
+/// \brief Thread creation object
+/// Object containing all the information for a thread creation
+///
+typedef struct thread_creation_s {
+    /// Initial name for the thread creation
+    name_t name;
+    /// Initial body for the thread creation
+    body_t body;
+    /// Author uuid of the thread
+    uuid_t author;
+    /// parent channel for the thread creation
+    uuid_t channel;
+} thread_creation_t;
+
 #endif /* !OBJECT_THREADS_H_ */

@@ -31,4 +31,17 @@ typedef struct channel_s {
     uuid_t *threads;
 } channel_t;
 
+///
+/// \brief Channel creation object
+/// Object containing all the information for a channel creation
+///
+typedef struct channel_creation_s {
+    /// Initial team for the channel creation
+    name_t name;
+    /// Initial description for the channel creation
+    description_t description;
+    /// parent team for the channel creation
+    uuid_t team;
+} channel_creation_t;
+
 #endif /* !OBJECT_CHANNEL_H_ */

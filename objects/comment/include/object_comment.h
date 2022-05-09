@@ -31,4 +31,17 @@ typedef struct comment_s {
     time_t time;
 } comment_t;
 
+///
+/// \brief Comment creation object
+/// Object containing all the information for a comment creation
+///
+typedef struct comment_creation_s {
+    /// Initial body for the comment creation
+    body_t body;
+    /// parent thread for the comment creation
+    uuid_t thread;
+    /// author uuid for the comment creation
+    uuid_t author;
+} comment_creation_t;
+
 #endif /* !OBJECT_COMMENT_H_ */
