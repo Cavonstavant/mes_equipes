@@ -35,7 +35,7 @@ static int count_tab_len(char **tab)
     return (arg_count);
 }
 
-int command_find(char **arguments, cli_command_t *commands)
+static int command_find(char **arguments, cli_command_t *commands)
 {
     int arg_count = count_tab_len(arguments);
 
