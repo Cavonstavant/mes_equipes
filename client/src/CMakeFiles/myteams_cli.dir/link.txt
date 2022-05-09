@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/myteams_cli.dir/entrypoint.c.o  -o ../../myteams_cli 
