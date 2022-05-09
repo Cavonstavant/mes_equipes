@@ -7,5 +7,8 @@
 
 int check_parser(char **arguments)
 {
+    for (int index = 0; arguments[index]; index++) {
+        printf("%s\n", arguments[index]);
+    }
     return (0);
 }
