@@ -54,7 +54,3 @@ target_include_directories(${TARGET}
     PUBLIC ${INCLUDE_UUID}
     PRIVATE ${SRC_ROOT}
 )
-
-set_target_properties(${TARGET} PROPERTIES
-    RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}
-)
