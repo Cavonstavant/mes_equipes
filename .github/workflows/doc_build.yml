@@ -20,9 +20,9 @@ jobs:
     - name: Build documentation
       run: doxygen
 
-    - name: Add .nojekyll
-      run: |
-        touch ${{github.workspace}}/docs/build/html/.nojekyll
+    # - name: Add .nojekyll
+    #   run: |
+    #     touch ${{github.workspace}}/docs/build/html/.nojekyll
 
     - name: Deploy documentation
       uses: JamesIves/github-pages-deploy-action@v4.2.5
