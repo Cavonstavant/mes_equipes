@@ -1,1 +1,56 @@
-add_subdirectory(src)
+set (INCLUDE_BODY ${PROJECT_SOURCE_DIR}/objects/body/include)
+set (INCLUDE_CHANNEL ${PROJECT_SOURCE_DIR}/objects/channel/include)
+set (INCLUDE_COMMENT ${PROJECT_SOURCE_DIR}/objects/comment/include)
+set (INCLUDE_DESCRIPTION ${PROJECT_SOURCE_DIR}/objects/description/include)
+set (INCLUDE_MESSAGE ${PROJECT_SOURCE_DIR}/objects/message/include)
+set (INCLUDE_NAME ${PROJECT_SOURCE_DIR}/objects/name/include)
+set (INCLUDE_STATUS ${PROJECT_SOURCE_DIR}/objects/status/include)
+set (INCLUDE_TEAM ${PROJECT_SOURCE_DIR}/objects/team/include)
+set (INCLUDE_THREAD ${PROJECT_SOURCE_DIR}/objects/thread/include)
+set (INCLUDE_USER ${PROJECT_SOURCE_DIR}/objects/user/include)
+set (INCLUDE_UUID ${PROJECT_SOURCE_DIR}/objects/uuid/include)
+
+set (SRC_BODY ${PROJECT_SOURCE_DIR}/objects/body/src)
+set (SRC_CHANNEL ${PROJECT_SOURCE_DIR}/objects/channel/src)
+set (SRC_COMMENT ${PROJECT_SOURCE_DIR}/objects/comment/src)
+set (SRC_DESCRIPTION ${PROJECT_SOURCE_DIR}/objects/description/src)
+set (SRC_MESSAGE ${PROJECT_SOURCE_DIR}/objects/message/src)
+set (SRC_NAME ${PROJECT_SOURCE_DIR}/objects/name/src)
+set (SRC_STATUS ${PROJECT_SOURCE_DIR}/objects/status/src)
+set (SRC_TEAM ${PROJECT_SOURCE_DIR}/objects/team/src)
+set (SRC_THREAD ${PROJECT_SOURCE_DIR}/objects/thread/src)
+set (SRC_USER ${PROJECT_SOURCE_DIR}/objects/user/src)
+set (SRC_UUID ${PROJECT_SOURCE_DIR}/objects/uuid/src)
+
+set (TARGET ${PROJECT_NAME}_objects)
+
+set (SRC
+    ${SRC_BODY}/object_body.c
+    ${SRC_CHANNEL}/object_channel.c
+    ${SRC_COMMENT}/object_comment.c
+    ${SRC_DESCRIPTION}/object_description.c
+    ${SRC_MESSAGE}/object_message.c
+    ${SRC_NAME}/object_name.c
+    ${SRC_STATUS}/object_status.c
+    ${SRC_TEAM}/object_team.c
+    ${SRC_THREAD}/object_thread.c
+    ${SRC_USER}/object_user.c
+    ${SRC_UUID}/object_uuid.c
+)
+
+add_library(${TARGET} ${SRC})
+
+target_include_directories(${TARGET}
+    PUBLIC ${INCLUDE_BODY}
+    PUBLIC ${INCLUDE_CHANNEL}
+    PUBLIC ${INCLUDE_COMMENT}
+    PUBLIC ${INCLUDE_DESCRIPTION}
+    PUBLIC ${INCLUDE_MESSAGE}
+    PUBLIC ${INCLUDE_NAME}
+    PUBLIC ${INCLUDE_STATUS}
+    PUBLIC ${INCLUDE_TEAM}
+    PUBLIC ${INCLUDE_THREAD}
+    PUBLIC ${INCLUDE_USER}
+    PUBLIC ${INCLUDE_UUID}
+    PRIVATE ${SRC_ROOT}
+)
