@@ -1,0 +1,12 @@
+<map id="objects/name/include/object_name.h" name="objects/name/include/object_name.h">
+<area shape="rect" id="node1" title=" " alt="" coords="404,5,565,47"/>
+<area shape="rect" id="node2" href="$object__channel_8h.html" title=" " alt="" coords="5,95,180,136"/>
+<area shape="rect" id="node4" href="$object__name_8c.html" title=" " alt="" coords="204,95,381,136"/>
+<area shape="rect" id="node5" href="$object__team_8h.html" title=" " alt="" coords="405,95,564,136"/>
+<area shape="rect" id="node7" href="$object__thread_8h.html" title=" " alt="" coords="588,95,755,136"/>
+<area shape="rect" id="node9" href="$object__user_8h.html" title=" " alt="" coords="779,95,931,136"/>
+<area shape="rect" id="node3" href="$object__channel_8c.html" title=" " alt="" coords="19,184,166,225"/>
+<area shape="rect" id="node6" href="$object__team_8c.html" title=" " alt="" coords="397,184,572,225"/>
+<area shape="rect" id="node8" href="$object__thread_8c.html" title=" " alt="" coords="602,184,741,225"/>
+<area shape="rect" id="node10" href="$object__user_8c.html" title=" " alt="" coords="771,184,939,225"/>
+</map>

@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['channel_5fcreation_5ft_129',['channel_creation_t',['../object__channel_8h.html#a5c817119c0c70af8858d4dd08e0e3df7',1,'object_channel.h']]],
+  ['channel_5ft_130',['channel_t',['../object__channel_8h.html#aa2c062d2c6fa83f13b145dc4f80623fd',1,'object_channel.h']]],
+  ['comment_5fcreation_5ft_131',['comment_creation_t',['../object__comment_8h.html#a82fbda2130932bc4277a74148dd855c3',1,'object_comment.h']]],
+  ['comment_5ft_132',['comment_t',['../object__comment_8h.html#a231e6f7e5e699b6c27385e53b2217524',1,'object_comment.h']]]
+];

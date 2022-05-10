@@ -1,0 +1,8 @@
+<map id="objects/description/include/object_description.h" name="objects/description/include/object_description.h">
+<area shape="rect" id="node1" title=" " alt="" coords="190,5,398,47"/>
+<area shape="rect" id="node2" href="$object__channel_8h.html" title=" " alt="" coords="5,95,180,136"/>
+<area shape="rect" id="node4" href="$object__description_8c.html" title=" " alt="" coords="205,95,383,136"/>
+<area shape="rect" id="node5" href="$object__team_8h.html" title=" " alt="" coords="408,95,567,136"/>
+<area shape="rect" id="node3" href="$object__channel_8c.html" title=" " alt="" coords="19,184,166,225"/>
+<area shape="rect" id="node6" href="$object__team_8c.html" title=" " alt="" coords="400,184,575,225"/>
+</map>
