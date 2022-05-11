@@ -17,7 +17,7 @@ body_t body_init(char *body_content)
     body_t new_body;
 
     if (strlen(body_content) > BODY_SIZE) {
-        printf("%s Body init : %s.",BODY_INVALID_SIZE, body_content);
+        printf("%s Body init : %s.\n", BODY_INVALID_SIZE, body_content);
         return BODY_ERROR;
     }
     new_body = malloc(sizeof(body_t) * (BODY_SIZE + 1));

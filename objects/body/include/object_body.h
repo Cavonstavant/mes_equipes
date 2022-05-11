@@ -12,8 +12,19 @@
 
     #include <stddef.h>
 
+    ///
+    /// \brief Max size of a body object
+    ///
     #define BODY_SIZE 512
+
+    ///
+    /// \brief Error inside a body object
+    ///
     #define BODY_ERROR NULL
+
+    ///
+    /// \brief Body error message for bad size
+    ///
     #define BODY_INVALID_SIZE "Invalid content size."
 
 ///
