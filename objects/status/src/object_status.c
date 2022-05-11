@@ -16,3 +16,8 @@ status_t status_init(void)
     new_status = OFFLINE;
     return new_status;
 }
+
+void status_destroy(status_t status_to_destroy)
+{
+    (void) status_to_destroy;
+}

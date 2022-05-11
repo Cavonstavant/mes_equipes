@@ -36,4 +36,12 @@ typedef bool status_t;
 ///
 status_t status_init(void);
 
+///
+/// \brief Destroy a status object
+/// Do nothing
+///
+/// \param status_to_destroy Status object to destroy
+///
+void status_destroy(status_t status_to_destroy);
+
 #endif /* !OBJECT_STATUS_H_ */
