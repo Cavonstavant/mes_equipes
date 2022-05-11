@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.17)
 project(myteams LANGUAGES C)
 
-set (CMAKE_C_STANDARD 11)
-set (CMAKE_C_STANDARD_REQUIRED true)
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD_REQUIRED true)
 
-enable_testing ()
+enable_testing()
 
 if(NOT DEFINED CMAKE_SUPPRESS_DEVELOPER_WARNINGS)
     set(CMAKE_SUPPRESS_DEVELOPER_WARNINGS 1 CACHE INTERNAL "No dev warnings")
