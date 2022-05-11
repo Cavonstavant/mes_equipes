@@ -98,11 +98,14 @@ $(document).ready(function(){initNavTree('parser_8h_source.html',''); initResiza
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef PARSER_H_</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">    #define PARSER_H_</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">int</span> <a class="code" href="parser_8h.html#a4c97aa9b07ff34928d35e079167ff5c2">check_arguments</a>(<span class="keywordtype">char</span> **arguments);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">char</span> **<a class="code" href="parser_8h.html#aa05e47fed4b4adeb9c03f6610bcb5cac">split_command</a>(<span class="keywordtype">char</span> *command);</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !PARSER_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">int</span> <a class="code" href="parser_8h.html#a4c97aa9b07ff34928d35e079167ff5c2">check_arguments</a>(<span class="keywordtype">char</span> **arguments);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !PARSER_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aparser_8h_html_aa05e47fed4b4adeb9c03f6610bcb5cac"><div class="ttname"><a href="parser_8h.html#aa05e47fed4b4adeb9c03f6610bcb5cac">split_command</a></div><div class="ttdeci">char ** split_command(char *command)</div><div class="ttdoc">Get a command and split it in a array of char * to process the command.</div><div class="ttdef"><b>Definition:</b> split_command.c:10</div></div>
 <div class="ttc" id="aparser_8h_html_a4c97aa9b07ff34928d35e079167ff5c2"><div class="ttname"><a href="parser_8h.html#a4c97aa9b07ff34928d35e079167ff5c2">check_arguments</a></div><div class="ttdeci">int check_arguments(char **arguments)</div><div class="ttdoc">This function check if arguments are valid, depending of the first element on the array.</div><div class="ttdef"><b>Definition:</b> check_command.c:58</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Mes équipes: server/src/parser/include/parser.h File Reference</title>
+<title>Mes équipes: server/src/parser/split_command.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,7 +64,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('parser_8h.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('split__command_8c.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -86,57 +86,17 @@ $(document).ready(function(){initNavTree('parser_8h.html',''); initResizable(); 
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">parser.h File Reference</div>  </div>
+<div class="title">split_command.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><a href="parser_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa05e47fed4b4adeb9c03f6610bcb5cac"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8h.html#aa05e47fed4b4adeb9c03f6610bcb5cac">split_command</a> (char *command)</td></tr>
-<tr class="memdesc:aa05e47fed4b4adeb9c03f6610bcb5cac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a command and split it in a array of char * to process the command.  <a href="parser_8h.html#aa05e47fed4b4adeb9c03f6610bcb5cac">More...</a><br /></td></tr>
+<tr class="memitem:aa05e47fed4b4adeb9c03f6610bcb5cac"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="split__command_8c.html#aa05e47fed4b4adeb9c03f6610bcb5cac">split_command</a> (char *command)</td></tr>
+<tr class="memdesc:aa05e47fed4b4adeb9c03f6610bcb5cac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a command and split it in a array of char * to process the command.  <a href="split__command_8c.html#aa05e47fed4b4adeb9c03f6610bcb5cac">More...</a><br /></td></tr>
 <tr class="separator:aa05e47fed4b4adeb9c03f6610bcb5cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c97aa9b07ff34928d35e079167ff5c2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8h.html#a4c97aa9b07ff34928d35e079167ff5c2">check_arguments</a> (char **arguments)</td></tr>
-<tr class="memdesc:a4c97aa9b07ff34928d35e079167ff5c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function check if arguments are valid, depending of the first element on the array.  <a href="parser_8h.html#a4c97aa9b07ff34928d35e079167ff5c2">More...</a><br /></td></tr>
-<tr class="separator:a4c97aa9b07ff34928d35e079167ff5c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a4c97aa9b07ff34928d35e079167ff5c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c97aa9b07ff34928d35e079167ff5c2">&#9670;&nbsp;</a></span>check_arguments()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int check_arguments </td>
-          <td>(</td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>arguments</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>This function check if arguments are valid, depending of the first element on the array. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">char</td><td>** Array of arguments which will be check. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if arguments are not good, 1 otherwise.</dd></dl>
-<p>This function check if arguments are valid, depending of the first element on the array.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">char</td><td>** Arguments of the command with the command at the index 0 </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0, or -1 if it failed. </dd></dl>
-
-</div>
-</div>
 <a id="aa05e47fed4b4adeb9c03f6610bcb5cac"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa05e47fed4b4adeb9c03f6610bcb5cac">&#9670;&nbsp;</a></span>split_command()</h2>
 
@@ -169,7 +129,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a class="el" href="dir_a063914ab482288b7b0e1b2fca86158c.html">src</a></li><li class="navelem"><a class="el" href="dir_0d2bd8aef9a1d5e03f22ed5477f85ed5.html">parser</a></li><li class="navelem"><a class="el" href="dir_f029f33be702d86df4ba05da1b97e8e7.html">include</a></li><li class="navelem"><a class="el" href="parser_8h.html">parser.h</a></li>
+    <li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a class="el" href="dir_a063914ab482288b7b0e1b2fca86158c.html">src</a></li><li class="navelem"><a class="el" href="dir_0d2bd8aef9a1d5e03f22ed5477f85ed5.html">parser</a></li><li class="navelem"><a class="el" href="split__command_8c.html">split_command.c</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
