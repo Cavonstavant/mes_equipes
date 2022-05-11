@@ -46,7 +46,7 @@ typedef struct my_uuid_s {
 
 ///
 /// \brief Init a My_uuid object
-/// Call the Uuid library to generate a unique UUID
+/// Call the uuid library to generate a unique UUID
 ///
 /// \param uuid_content Store the type of the uuid
 /// \return my_uuid_t The newly created uuid object
