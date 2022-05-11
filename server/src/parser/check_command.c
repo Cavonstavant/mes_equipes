@@ -5,6 +5,8 @@
 ** check_command
 */
 
+/// \file server/src/parser/check_command.c
+
 #include "cli_commands.h"
 #include <stddef.h>
 
