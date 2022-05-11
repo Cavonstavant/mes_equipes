@@ -21,11 +21,11 @@
 ///
 typedef struct thread_s {
     /// Uuid of the thread
-    uuid_t uuid;
+    my_uuid_t uuid;
     /// Uuid of the attached author
-    uuid_t author;
+    my_uuid_t author;
     /// Uuid of the attached channel
-    uuid_t channel;
+    my_uuid_t channel;
     /// Name of the thread
     name_t name;
     /// Body of the thread
@@ -33,7 +33,7 @@ typedef struct thread_s {
     /// Time of creation of the thread
     time_t date;
     /// Uuid list of the attached comments
-    uuid_t *comments;
+    my_uuid_t *comments;
 } thread_t;
 
 ///
@@ -46,9 +46,9 @@ typedef struct thread_creation_s {
     /// Initial body for the thread creation
     body_t body;
     /// Author uuid of the thread
-    uuid_t author;
+    my_uuid_t author;
     /// parent channel for the thread creation
-    uuid_t channel;
+    my_uuid_t channel;
 } thread_creation_t;
 
 #endif /* !OBJECT_THREADS_H_ */
