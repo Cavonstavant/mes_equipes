@@ -8,25 +8,6 @@
 /// \file server/src/parser/check_command.c
 
 #include "cli_commands.h"
-#include <stddef.h>
-
-/// \brief List all available command
-static const cli_command_t *commands[14] = {
-    {"/help", NULL, &help_command},
-    {"/login", {"", NULL}, &login_command},
-    {"/logout", NULL, &logout_command},
-    {"/users", NULL, &users_command},
-    {"/user", {"", NULL}, &user_command},
-    {"/send", {"", "", NULL}, &send_command},
-    {"/messages", {"", NULL}, &messages_command},
-    {"/subscribe", {"", NULL}, &subscribe_command},
-    {"/subscribed", {"", NULL}, &subscribed_command},
-    {"/unsubscribe", {"", NULL}, &unsubscribe_command},
-    {"/use", {"", NULL}, &use_command},
-    {"/create", {"", "", NULL}, &create_command},
-    {"/list", NULL, &list_command},
-    {"/info", NULL, &info_command}
-};
 
 /// \brief Calcul the len of the tab
 /// \param char **tab
@@ -59,6 +40,8 @@ static int find_command(char **arguments, cli_command_t *commands)
 
 int check_arguments(char **arguments)
 {
+    cli_command_t *commands = get_cli_commands();
+
     for (int i = 0; i < 14; i++) {
         if (find_command(arguments, &commands[i])) {
             return (1);
