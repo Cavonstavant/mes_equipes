@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['unsubscribe_5fcommand_200',['unsubscribe_command',['../cli__commands_8h.html#a1c5e6476bdc524fea31b1501dab320ae',1,'cli_commands.h']]],
-  ['use_5fcommand_201',['use_command',['../cli__commands_8h.html#a9be26d10605846e2779a9210c5a45f68',1,'cli_commands.h']]],
-  ['user_5fcommand_202',['user_command',['../cli__commands_8h.html#a3febd7f1db525b701de4dd958eaaa8c4',1,'cli_commands.h']]],
-  ['users_5fcommand_203',['users_command',['../cli__commands_8h.html#a970b4b65073d7f218c3799d635ce7b51',1,'cli_commands.h']]]
+  ['unsubscribe_5fcommand_224',['unsubscribe_command',['../cli__commands_8h.html#a1c5e6476bdc524fea31b1501dab320ae',1,'cli_commands.h']]],
+  ['use_5fcommand_225',['use_command',['../cli__commands_8h.html#a9be26d10605846e2779a9210c5a45f68',1,'cli_commands.h']]],
+  ['user_5fcommand_226',['user_command',['../cli__commands_8h.html#a3febd7f1db525b701de4dd958eaaa8c4',1,'cli_commands.h']]],
+  ['users_5fcommand_227',['users_command',['../cli__commands_8h.html#a970b4b65073d7f218c3799d635ce7b51',1,'cli_commands.h']]]
 ];

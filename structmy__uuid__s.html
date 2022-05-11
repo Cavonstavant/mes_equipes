@@ -102,10 +102,33 @@ Public Attributes</h2></td></tr>
 <tr class="separator:aa534007518276a4f9f3ba51246013cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4cb368599a9713542a73a8435782457"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__uuid_8h.html#a57b740de5742d01ee27f22256b230860">uuid_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__uuid__s.html#aa4cb368599a9713542a73a8435782457">type</a></td></tr>
 <tr class="separator:aa4cb368599a9713542a73a8435782457"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc2139b1d8f690ec767b942d5af13b73"><td class="memItemLeft" align="right" valign="top">uuid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__uuid__s.html#adc2139b1d8f690ec767b942d5af13b73">uuid</a></td></tr>
+<tr class="memdesc:adc2139b1d8f690ec767b942d5af13b73"><td class="mdescLeft">&#160;</td><td class="mdescRight">uuid_t instance  <a href="structmy__uuid__s.html#adc2139b1d8f690ec767b942d5af13b73">More...</a><br /></td></tr>
+<tr class="separator:adc2139b1d8f690ec767b942d5af13b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a479193d1976e1ecc159da6c525a6e732"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmy__uuid__s.html#a479193d1976e1ecc159da6c525a6e732">repr</a> [40]</td></tr>
+<tr class="memdesc:a479193d1976e1ecc159da6c525a6e732"><td class="mdescLeft">&#160;</td><td class="mdescRight">null terminated string representation of uuid_t  <a href="structmy__uuid__s.html#a479193d1976e1ecc159da6c525a6e732">More...</a><br /></td></tr>
+<tr class="separator:a479193d1976e1ecc159da6c525a6e732"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Uuid object equivalent of a string To Refacto with issue #25. </p>
+<p>wrapper struct around uuid_t </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a479193d1976e1ecc159da6c525a6e732"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a479193d1976e1ecc159da6c525a6e732">&#9670;&nbsp;</a></span>repr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char my_uuid_s::repr[40]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>null terminated string representation of uuid_t </p>
+
+</div>
+</div>
 <a id="aa4cb368599a9713542a73a8435782457"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa4cb368599a9713542a73a8435782457">&#9670;&nbsp;</a></span>type</h2>
 
@@ -120,8 +143,24 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="adc2139b1d8f690ec767b942d5af13b73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc2139b1d8f690ec767b942d5af13b73">&#9670;&nbsp;</a></span>uuid <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uuid_t my_uuid_s::uuid</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>uuid_t instance </p>
+
+</div>
+</div>
 <a id="aa534007518276a4f9f3ba51246013cd5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa534007518276a4f9f3ba51246013cd5">&#9670;&nbsp;</a></span>uuid</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa534007518276a4f9f3ba51246013cd5">&#9670;&nbsp;</a></span>uuid <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -134,8 +173,9 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<hr/>The documentation for this struct was generated from the following files:<ul>
 <li>objects/uuid/include/<a class="el" href="object__uuid_8h_source.html">object_uuid.h</a></li>
+<li>objects/uuid/uuid_wrapper/src/include/<a class="el" href="my__uuid_8h_source.html">my_uuid.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
