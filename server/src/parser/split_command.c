@@ -5,6 +5,8 @@
 ** split_command
 */
 
+/// \file server/src/parser/split_command.c
+
 char **split_command(char *command)
 {
     char **args = 0;

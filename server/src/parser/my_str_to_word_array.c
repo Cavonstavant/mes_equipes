@@ -5,6 +5,8 @@
 ** my_str_to_word_array
 */
 
+/// \file server/src/parser/my_str_to_word_array.c
+
 #include <stdlib.h>
 
 static int find_separator(char c, char *separators)
