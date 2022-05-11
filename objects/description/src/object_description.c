@@ -28,3 +28,9 @@ description_t description_init(char *description_content)
     strcat(new_description, description_content);
     return new_description;
 }
+
+void description_destroy(description_t description_to_destroy)
+{
+    if (description_to_destroy != DESCRIPTION_ERROR)
+        free(description_to_destroy);
+}

@@ -43,4 +43,12 @@ typedef char *description_t;
 ///
 description_t description_init(char *description_content);
 
+///
+/// \brief Destroy the description object
+/// If the description_to_destroy is equivalent to DESCRIPTION_ERROR do nothing
+///
+/// \param description_to_destroy Description object to destroy
+///
+void description_destroy(description_t description_to_destroy);
+
 #endif /* !OBJECT_DESCRIPTION_H_ */
