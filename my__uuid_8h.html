@@ -95,14 +95,16 @@ $(document).ready(function(){initNavTree('my__uuid_8h.html',''); initResizable()
 <div class="contents">
 <div class="textblock"><code>#include &lt;uuid/uuid.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for my_uuid.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="my__uuid_8h__incl.png" border="0" usemap="#objects_2uuid_2uuid__wrapper_2src_2include_2my__uuid_8h" alt=""/></div>
 <map name="objects_2uuid_2uuid__wrapper_2src_2include_2my__uuid_8h" id="objects_2uuid_2uuid__wrapper_2src_2include_2my__uuid_8h">
-<area shape="rect" title=" " alt="" coords="8,5,201,47"/>
+<area shape="rect" title=" " alt="" coords="61,5,255,47"/>
 <area shape="rect" title=" " alt="" coords="5,95,100,121"/>
 <area shape="rect" title=" " alt="" coords="125,95,191,121"/>
+<area shape="rect" title=" " alt="" coords="216,95,287,121"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -129,8 +131,8 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a17268e9fbb3abfa8d2089c1193b2cda1"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structmy__uuid__s.html">my_uuid_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="my__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a></td></tr>
 <tr class="memdesc:a17268e9fbb3abfa8d2089c1193b2cda1"><td class="mdescLeft">&#160;</td><td class="mdescRight">wrapper struct around uuid_t  <a href="my__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">More...</a><br /></td></tr>
 <tr class="separator:a17268e9fbb3abfa8d2089c1193b2cda1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec8e1ffaed7c7492c7063ba604a8baf9"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="my__uuid_8h.html#ad44929f66e293eb56915bc6c747ede18">my_uuid_prefix_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="my__uuid_8h.html#aec8e1ffaed7c7492c7063ba604a8baf9">my_uuid_prefix</a></td></tr>
-<tr class="separator:aec8e1ffaed7c7492c7063ba604a8baf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a377719a9f8d7cdf0455b4a8fecb0cee4"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="my__uuid_8h.html#ad44929f66e293eb56915bc6c747ede18">my_uuid_prefix_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="my__uuid_8h.html#a377719a9f8d7cdf0455b4a8fecb0cee4">my_uuid_prefix_t</a></td></tr>
+<tr class="separator:a377719a9f8d7cdf0455b4a8fecb0cee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -150,15 +152,15 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2c59ace4f46a2ab46385ecdba8078bc1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="my__uuid_8h.html#a2c59ace4f46a2ab46385ecdba8078bc1">my_uuid_generate</a> (<a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *out, <a class="el" href="my__uuid_8h.html#aec8e1ffaed7c7492c7063ba604a8baf9">my_uuid_prefix</a> prefix)</td></tr>
-<tr class="memdesc:a2c59ace4f46a2ab46385ecdba8078bc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a new uuid.  <a href="my__uuid_8h.html#a2c59ace4f46a2ab46385ecdba8078bc1">More...</a><br /></td></tr>
-<tr class="separator:a2c59ace4f46a2ab46385ecdba8078bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86a156b8f14f949e98a95e6f8c357bd6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="my__uuid_8h.html#a86a156b8f14f949e98a95e6f8c357bd6">my_uuid_generate</a> (<a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *out, <a class="el" href="my__uuid_8h.html#a377719a9f8d7cdf0455b4a8fecb0cee4">my_uuid_prefix_t</a> prefix)</td></tr>
+<tr class="memdesc:a86a156b8f14f949e98a95e6f8c357bd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a new uuid.  <a href="my__uuid_8h.html#a86a156b8f14f949e98a95e6f8c357bd6">More...</a><br /></td></tr>
+<tr class="separator:a86a156b8f14f949e98a95e6f8c357bd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e94621b60eb4663f26f0e7408898795"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="my__uuid_8h.html#a6e94621b60eb4663f26f0e7408898795">my_uuid_copy</a> (<a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *dst, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *src)</td></tr>
 <tr class="memdesc:a6e94621b60eb4663f26f0e7408898795"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy one uuid from another.  <a href="my__uuid_8h.html#a6e94621b60eb4663f26f0e7408898795">More...</a><br /></td></tr>
 <tr class="separator:a6e94621b60eb4663f26f0e7408898795"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3bd31997659e568b0dfad8811f6dcd3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="my__uuid_8h.html#aec8e1ffaed7c7492c7063ba604a8baf9">my_uuid_prefix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="my__uuid_8h.html#aa3bd31997659e568b0dfad8811f6dcd3">my_uuid_get_prefix</a> (<a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *uuid)</td></tr>
-<tr class="memdesc:aa3bd31997659e568b0dfad8811f6dcd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the my_uuid_prefix representation of a given uuid  <a href="my__uuid_8h.html#aa3bd31997659e568b0dfad8811f6dcd3">More...</a><br /></td></tr>
-<tr class="separator:aa3bd31997659e568b0dfad8811f6dcd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa408fa6465a655c8220c04f714121ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="my__uuid_8h.html#a377719a9f8d7cdf0455b4a8fecb0cee4">my_uuid_prefix_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="my__uuid_8h.html#afa408fa6465a655c8220c04f714121ba">my_uuid_get_prefix</a> (<a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *uuid)</td></tr>
+<tr class="memdesc:afa408fa6465a655c8220c04f714121ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the my_uuid_prefix_t representation of a given uuid  <a href="my__uuid_8h.html#afa408fa6465a655c8220c04f714121ba">More...</a><br /></td></tr>
+<tr class="separator:afa408fa6465a655c8220c04f714121ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -167,14 +169,14 @@ Variables</h2></td></tr>
 <tr class="separator:ab0bd1cc703c62a541d8ed61605c49cd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
-<a id="aec8e1ffaed7c7492c7063ba604a8baf9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec8e1ffaed7c7492c7063ba604a8baf9">&#9670;&nbsp;</a></span>my_uuid_prefix</h2>
+<a id="a377719a9f8d7cdf0455b4a8fecb0cee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a377719a9f8d7cdf0455b4a8fecb0cee4">&#9670;&nbsp;</a></span>my_uuid_prefix_t</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef enum <a class="el" href="my__uuid_8h.html#ad44929f66e293eb56915bc6c747ede18">my_uuid_prefix_e</a> <a class="el" href="my__uuid_8h.html#aec8e1ffaed7c7492c7063ba604a8baf9">my_uuid_prefix</a></td>
+          <td class="memname">typedef enum <a class="el" href="my__uuid_8h.html#ad44929f66e293eb56915bc6c747ede18">my_uuid_prefix_e</a> <a class="el" href="my__uuid_8h.html#a377719a9f8d7cdf0455b4a8fecb0cee4">my_uuid_prefix_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -269,8 +271,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a2c59ace4f46a2ab46385ecdba8078bc1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c59ace4f46a2ab46385ecdba8078bc1">&#9670;&nbsp;</a></span>my_uuid_generate()</h2>
+<a id="a86a156b8f14f949e98a95e6f8c357bd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86a156b8f14f949e98a95e6f8c357bd6">&#9670;&nbsp;</a></span>my_uuid_generate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -284,7 +286,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="my__uuid_8h.html#aec8e1ffaed7c7492c7063ba604a8baf9">my_uuid_prefix</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="my__uuid_8h.html#a377719a9f8d7cdf0455b4a8fecb0cee4">my_uuid_prefix_t</a>&#160;</td>
           <td class="paramname"><em>prefix</em>&#160;</td>
         </tr>
         <tr>
@@ -307,14 +309,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="aa3bd31997659e568b0dfad8811f6dcd3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3bd31997659e568b0dfad8811f6dcd3">&#9670;&nbsp;</a></span>my_uuid_get_prefix()</h2>
+<a id="afa408fa6465a655c8220c04f714121ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa408fa6465a655c8220c04f714121ba">&#9670;&nbsp;</a></span>my_uuid_get_prefix()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="my__uuid_8h.html#aec8e1ffaed7c7492c7063ba604a8baf9">my_uuid_prefix</a> my_uuid_get_prefix </td>
+          <td class="memname"><a class="el" href="my__uuid_8h.html#a377719a9f8d7cdf0455b4a8fecb0cee4">my_uuid_prefix_t</a> my_uuid_get_prefix </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
           <td class="paramname"><em>uuid</em></td><td>)</td>
@@ -323,7 +325,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>get the my_uuid_prefix representation of a given uuid </p>
+<p>get the my_uuid_prefix_t representation of a given uuid </p>
 
 </div>
 </div>

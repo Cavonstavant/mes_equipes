@@ -1,7 +1,7 @@
 var my__uuid_8h =
 [
     [ "my_uuid_s", "structmy__uuid__s.html", "structmy__uuid__s" ],
-    [ "my_uuid_prefix", "my__uuid_8h.html#aec8e1ffaed7c7492c7063ba604a8baf9", null ],
+    [ "my_uuid_prefix_t", "my__uuid_8h.html#a377719a9f8d7cdf0455b4a8fecb0cee4", null ],
     [ "my_uuid_t", "my__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1", null ],
     [ "my_uuid_prefix_e", "my__uuid_8h.html#ad44929f66e293eb56915bc6c747ede18", [
       [ "MY_UUID_PREFIX_TEAM", "my__uuid_8h.html#ad44929f66e293eb56915bc6c747ede18aa479aece3d9ae18031b0d8a40235a964", null ],
@@ -14,7 +14,7 @@ var my__uuid_8h =
       [ "MY_UUID_PREFIX_COUNT", "my__uuid_8h.html#ad44929f66e293eb56915bc6c747ede18a7c9192aa0a0f554978c29321592811be", null ]
     ] ],
     [ "my_uuid_copy", "my__uuid_8h.html#a6e94621b60eb4663f26f0e7408898795", null ],
-    [ "my_uuid_generate", "my__uuid_8h.html#a2c59ace4f46a2ab46385ecdba8078bc1", null ],
-    [ "my_uuid_get_prefix", "my__uuid_8h.html#aa3bd31997659e568b0dfad8811f6dcd3", null ],
+    [ "my_uuid_generate", "my__uuid_8h.html#a86a156b8f14f949e98a95e6f8c357bd6", null ],
+    [ "my_uuid_get_prefix", "my__uuid_8h.html#afa408fa6465a655c8220c04f714121ba", null ],
     [ "TEAMS_UUID_PREFIXES", "my__uuid_8h.html#ab0bd1cc703c62a541d8ed61605c49cd8", null ]
 ];
