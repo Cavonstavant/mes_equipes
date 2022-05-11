@@ -35,11 +35,11 @@ typedef char *description_t;
 
 ///
 /// \brief Init the description object
-/// If the description_content is too long compared to description_size
-/// return DESCRIPTION_ERROR
 ///
 /// \param description_content Content of the new Description object
 /// \return description_t Newly created Description object
+/// If the description_content is too long compared to description_size
+/// return DESCRIPTION_ERROR
 ///
 description_t description_init(char *description_content);
 

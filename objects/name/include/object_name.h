@@ -35,10 +35,10 @@ typedef char *name_t;
 
 ///
 /// \brief Init a name object
-/// If the name_contet is too long compared to NAME_SIZE, return NAME_ERROR
 ///
 /// \param name_content Content of the new name object
 /// \return name_t The newly created name object
+/// If the name_content is too long compared to NAME_SIZE, return NAME_ERROR
 ///
 name_t name_init(char *name_content);
 
