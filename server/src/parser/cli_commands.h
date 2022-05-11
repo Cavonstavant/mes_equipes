@@ -10,13 +10,13 @@
 #ifndef PARSER_H_
     #define PARSER_H_
 
-/// \brief structure to store available client command
+/// \brief structure to store available client command.
 typedef struct cli_command_s {
-    /// \brief char * The name of the command
+    /// \brief char * The name of the command.
     char *name;
-    /// \brief char ** Arguments for the command
+    /// \brief char ** Arguments for the command.
     char **arguments;
-    /// \brief void * Function to call
+    /// \brief void * Function to call.
     void *(*function)(void *);
 } cli_command_t;
 
@@ -47,8 +47,13 @@ char **split_command(char *command);
 /// \return 0 if arguments are not good, 1 otherwise.
 int check_arguments(char **arguments);
 
-/// \brief This function get the commands static const defined in cli_command.c
-/// \return const cli_command_t * An array of available commands
+/// \brief This function call the function corresponding to the command.
+/// \param char ** Array of arguments which will be used to call the function.
+/// \return 0, or -1 if an error occurs.
+int call_command(char **arguments);
+
+/// \brief This function get the commands static const defined in cli_command.c.
+/// \return const cli_command_t * An array of available commands.
 const cli_command_t *get_cli_commands();
 
 /// \brief It get a command and an array of separators.
