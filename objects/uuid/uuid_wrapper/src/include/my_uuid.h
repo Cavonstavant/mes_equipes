@@ -12,6 +12,7 @@
 
     #include <uuid/uuid.h>
     #include <stdio.h>
+    #include <string.h>
 
 /// \brief wrapper struct around uuid_t
 typedef struct my_uuid_s {
@@ -42,13 +43,13 @@ typedef enum my_uuid_prefix_e {
     MY_UUID_PREFIX_DIRECT_MESSAGE,
     /// \brief Number of uuid prefixes
     MY_UUID_PREFIX_COUNT
-} my_uuid_prefix;
+} my_uuid_prefix_t;
 
 /// \brief UUID prefix getter
 /// \param prefix_id The prefix index, please use the proper macros in order
 /// to access the correct prefix
 /// \return The uuid prefix
-static inline const char *get_prefix(my_uuid_prefix id)
+static inline const char *get_prefix(my_uuid_prefix_t id)
 {
     return TEAMS_UUID_PREFIXES[id];
 }
@@ -57,7 +58,7 @@ static inline const char *get_prefix(my_uuid_prefix id)
 /// \param out The output uuid
 /// \param prefix The prefix to be inserted before the uuid
 /// \return 0 on success, -1 on failure
-int my_uuid_generate(my_uuid_t *out, my_uuid_prefix prefix);
+int my_uuid_generate(my_uuid_t *out, my_uuid_prefix_t prefix);
 
 /// \brief Copy one uuid from another
 /// \param dst The destination uuid
@@ -83,7 +84,7 @@ static inline int my_uuid_compare(my_uuid_t uu1, my_uuid_t uu2)
     return (uuid_compare(uu1.uuid, uu2.uuid));
 }
 
-/// \brief get the my_uuid_prefix representation of a given uuid
-my_uuid_prefix my_uuid_get_prefix(my_uuid_t *uuid);
+/// \brief get the my_uuid_prefix_t representation of a given uuid
+my_uuid_prefix_t my_uuid_get_prefix(my_uuid_t *uuid);
 
 #endif /* MY_UUID_H */

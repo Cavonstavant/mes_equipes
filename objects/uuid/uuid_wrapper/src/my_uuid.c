@@ -8,7 +8,7 @@
 #include "my_uuid.h"
 #include <string.h>
 
-int my_uuid_generate(my_uuid_t *out, my_uuid_prefix prefix)
+int my_uuid_generate(my_uuid_t *out, my_uuid_prefix_t prefix)
 {
     if (prefix < 0 || prefix > 7)
         return (-1);
@@ -19,7 +19,7 @@ int my_uuid_generate(my_uuid_t *out, my_uuid_prefix prefix)
     return (0);
 }
 
-my_uuid_prefix my_uuid_get_prefix(my_uuid_t *uuid)
+my_uuid_prefix_t my_uuid_get_prefix(my_uuid_t *uuid)
 {
     if (uuid == NULL)
         return (-1);
