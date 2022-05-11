@@ -20,15 +20,15 @@
 ///
 typedef struct user_s {
     /// Uuid of the user
-    uuid_t uuid;
+    my_uuid_t uuid;
     /// Name of the user
     name_t name;
     /// Status of the user, isConnected ?
     status_t status;
     /// Uuid list of the attached teams
-    uuid_t *teams;
+    my_uuid_t *teams;
     /// Uuid list of the attached conversation
-    uuid_t *conversation;
+    my_uuid_t *conversation;
 } user_t;
 
 ///

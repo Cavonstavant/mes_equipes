@@ -20,15 +20,15 @@
 ///
 typedef struct channel_s {
     /// Uuid of the channel
-    uuid_t uuid;
+    my_uuid_t uuid;
     /// Name of the channel
     name_t name;
     /// Description of the channel
     description_t description;
     /// Uuid of the attached team
-    uuid_t team;
+    my_uuid_t team;
     /// Uuid list of the attached threads
-    uuid_t *threads;
+    my_uuid_t *threads;
 } channel_t;
 
 ///
@@ -41,7 +41,7 @@ typedef struct channel_creation_s {
     /// Initial description for the channel creation
     description_t description;
     /// parent team for the channel creation
-    uuid_t team;
+    my_uuid_t team;
 } channel_creation_t;
 
 #endif /* !OBJECT_CHANNEL_H_ */
