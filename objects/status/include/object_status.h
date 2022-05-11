@@ -12,9 +12,14 @@
 
     #include <stdbool.h>
 
-    /// possible value of the status object
+    ///
+    /// \brief possible value of the status object
+    ///
     #define ONLINE true
-    /// possible value of the status object
+
+    ///
+    /// \brief possible value of the status object
+    ///
     #define OFFLINE false
 
 ///
@@ -22,5 +27,13 @@
 ///
 ///
 typedef bool status_t;
+
+///
+/// \brief Init a status object
+/// Default value is set to OFFLINE
+///
+/// \return status_t The newly created status object
+///
+status_t status_init(void);
 
 #endif /* !OBJECT_STATUS_H_ */
