@@ -20,7 +20,7 @@
 ///
 typedef struct message_s {
     /// Uuid of the message
-    uuid_t uuid;
+    my_uuid_t uuid;
     /// Body of the message
     body_t body;
     /// Time of the message creation
