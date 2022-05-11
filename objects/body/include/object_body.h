@@ -23,12 +23,20 @@
 typedef char *body_t;
 
 ///
-/// \brief Init the Body object
+/// \brief Init a Body object
 /// If the body_content is too long compared to BODY_SIZE, return BODY_ERROR
 ///
 /// \param body_content Content of the new body object
 /// \return body_t The newly created body object
 ///
 body_t body_init(char *body_content);
+
+///
+/// \brief Destroy a Body object
+/// If the body_to_destroy is BODY_ERROR, do nothing
+///
+/// \param body_to_destroy Body object to destroy
+///
+void body_destroy(body_t body_to_destroy);
 
 #endif /* !OBJECT_BODY_H_ */

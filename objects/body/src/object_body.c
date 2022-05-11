@@ -27,3 +27,9 @@ body_t body_init(char *body_content)
     strcat(new_body, body_content);
     return new_body;
 }
+
+void body_destroy(body_t body_to_destroy)
+{
+    if (body_to_destroy != BODY_ERROR)
+        free(body_to_destroy);
+}
