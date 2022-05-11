@@ -51,6 +51,14 @@ typedef struct my_uuid_s {
 /// \param uuid_content Store the type of the uuid
 /// \return my_uuid_t The newly created uuid object
 ///
-my_uuid_t my_uuid_init(uuid_type_t uuid_content);
+my_uuid_t *my_uuid_init(uuid_type_t uuid_content);
+
+///
+/// \brief Destroy a My_uuid object
+/// If the uuid_to_destroy is UUID_ERROR, do nothing
+///
+/// \param uuid_to_destroy Uuid object to destroy
+///
+void my_uuid_destroy(my_uuid_t *uuid_to_destroy);
 
 #endif /* !OBJECT_UUID_H_ */
