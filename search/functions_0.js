@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['main_110',['main',['../client_2src_2entrypoint_8c.html#a0c99d968a34e803d378692bde2e3f18f',1,'main(int ac, char **av):&#160;entrypoint.c'],['../server_2src_2entrypoint_8c.html#a0c99d968a34e803d378692bde2e3f18f',1,'main(int ac, char **av):&#160;entrypoint.c']]]
+  ['check_5farguments_136',['check_arguments',['../check__command_8c.html#a4c97aa9b07ff34928d35e079167ff5c2',1,'check_arguments(char **arguments):&#160;check_command.c'],['../cli__commands_8h.html#a4c97aa9b07ff34928d35e079167ff5c2',1,'check_arguments(char **arguments):&#160;check_command.c'],['../parser_8h.html#a4c97aa9b07ff34928d35e079167ff5c2',1,'check_arguments(char **arguments):&#160;check_command.c']]],
+  ['create_5fcommand_137',['create_command',['../cli__commands_8h.html#a020a991874c285010ccc76f3351c6767',1,'cli_commands.h']]]
 ];

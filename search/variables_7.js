@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['users_126',['users',['../structteam__s.html#ae6608ff90fe4ec3fa9b71ef592cb34c0',1,'team_s']]],
-  ['uuid_127',['uuid',['../structchannel__s.html#ad274628af5768215fc05010a7f6f8d9d',1,'channel_s::uuid()'],['../structcomment__s.html#aaa1023837cba7d85356d917e9f8f9331',1,'comment_s::uuid()'],['../structmessage__s.html#a4b5295dafbe47af9722073833a88d950',1,'message_s::uuid()'],['../structteam__s.html#ae56736d4929d3b309ccbd5ff4d354f1d',1,'team_s::uuid()'],['../structthread__s.html#aa41d6e30f00fc185a295093c65e80c85',1,'thread_s::uuid()'],['../structuser__s.html#a8c311acd8af08f4713d51bece9123816',1,'user_s::uuid()']]]
+  ['team_164',['team',['../structchannel__s.html#a22023408031b7a771bd662dec6156126',1,'channel_s::team()'],['../structchannel__creation__s.html#abfb8ae9a30dade6f4dd3ea5cdb13499c',1,'channel_creation_s::team()']]],
+  ['teams_165',['teams',['../structuser__s.html#a7e0459a162a3f95279bf8351de95fc98',1,'user_s']]],
+  ['thread_166',['thread',['../structcomment__s.html#a0696b4cb4d840a0322b2a88fcd75c91d',1,'comment_s::thread()'],['../structcomment__creation__s.html#a872de3c19eb162c44c198e3d0a8ee070',1,'comment_creation_s::thread()']]],
+  ['threads_167',['threads',['../structchannel__s.html#a6bacb0c5d59ae6761b67b1769a0d1bab',1,'channel_s']]],
+  ['time_168',['time',['../structcomment__s.html#a2b94b4253324c1f155ad5939ef0aae8e',1,'comment_s::time()'],['../structmessage__s.html#a32bbc7e572451a1bbaa4dbb4f3495ac7',1,'message_s::time()']]]
 ];

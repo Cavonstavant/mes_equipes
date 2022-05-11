@@ -1,5 +1,10 @@
 var searchData=
 [
-  ['status_52',['status',['../structuser__s.html#afc7d47ad763d508ce22c162f22cba47e',1,'user_s::status()'],['../structuser__creation__s.html#a28e8c05c01a78ddd5781beee19ef9b4d',1,'user_creation_s::status()']]],
-  ['status_5ft_53',['status_t',['../object__status_8h.html#a1907f7bdf9168d8a969704df10f3cec3',1,'object_status.h']]]
+  ['mes_5fequipes_32',['mes_equipes',['../index.html',1,'']]],
+  ['main_33',['main',['../client_2src_2entrypoint_8c.html#a0c99d968a34e803d378692bde2e3f18f',1,'main(int ac, char **av):&#160;entrypoint.c'],['../server_2src_2entrypoint_8c.html#a0c99d968a34e803d378692bde2e3f18f',1,'main(int ac, char **av):&#160;entrypoint.c']]],
+  ['message_5fcreation_5fs_34',['message_creation_s',['../structmessage__creation__s.html',1,'']]],
+  ['message_5fcreation_5ft_35',['message_creation_t',['../object__message_8h.html#a10628c656ad57a5eee856ba8e26d7fdb',1,'object_message.h']]],
+  ['message_5fs_36',['message_s',['../structmessage__s.html',1,'']]],
+  ['message_5ft_37',['message_t',['../object__message_8h.html#aa97dfcb9d4234ce2616da71acaab2ab2',1,'object_message.h']]],
+  ['messages_5fcommand_38',['messages_command',['../cli__commands_8h.html#a2e3f9a0352961b2780163ac498129f76',1,'cli_commands.h']]]
 ];
