@@ -51,4 +51,12 @@ int check_arguments(char **arguments);
 /// \return const cli_command_t * An array of available commands
 const cli_command_t *get_cli_commands();
 
+/// \brief It get a command and an array of separators.
+/// It will split the command by using the separators as separator char.
+/// It will return an array of char * containing all arguments.
+/// \param char * The command to be split.
+/// \param char * The separators array.
+/// \return char ** An array of arguments.
+char **my_str_to_word_array(char *command, char *separators);
+
 #endif /* !PARSER_H_ */
