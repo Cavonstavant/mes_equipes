@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['offline_199',['OFFLINE',['../object__status_8h.html#a9fc595816a36e47d2b583afa775b3d4c',1,'object_status.h']]],
-  ['online_200',['ONLINE',['../object__status_8h.html#a5d8d172be98804c39bb311ead048123a',1,'object_status.h']]]
+  ['body_5ferror_251',['BODY_ERROR',['../object__body_8h.html#ad08e5d24686b6cdcee3c358ab0e256c6',1,'object_body.h']]],
+  ['body_5finvalid_5fsize_252',['BODY_INVALID_SIZE',['../object__body_8h.html#a3ff789875cfb47105b577bd5a0c07484',1,'object_body.h']]],
+  ['body_5fsize_253',['BODY_SIZE',['../object__body_8h.html#a3170fd55c9e7f4a582647deab1b25aab',1,'object_body.h']]]
 ];

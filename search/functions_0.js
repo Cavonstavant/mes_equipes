@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['check_5farguments_144',['check_arguments',['../check__command_8c.html#a4c97aa9b07ff34928d35e079167ff5c2',1,'check_arguments(char **arguments):&#160;check_command.c'],['../cli__commands_8h.html#a4c97aa9b07ff34928d35e079167ff5c2',1,'check_arguments(char **arguments):&#160;check_command.c'],['../parser_8h.html#a4c97aa9b07ff34928d35e079167ff5c2',1,'check_arguments(char **arguments):&#160;check_command.c']]],
-  ['create_5fcommand_145',['create_command',['../cli__commands_8h.html#a020a991874c285010ccc76f3351c6767',1,'cli_commands.h']]]
+  ['body_5fdestroy_176',['body_destroy',['../object__body_8h.html#a8047934d863367897ec90bb5562b3151',1,'body_destroy(body_t body_to_destroy):&#160;object_body.c'],['../object__body_8c.html#a8047934d863367897ec90bb5562b3151',1,'body_destroy(body_t body_to_destroy):&#160;object_body.c']]],
+  ['body_5finit_177',['body_init',['../object__body_8h.html#a48a1d1932cdf056c860d8c35e661c81a',1,'body_init(char *body_content):&#160;object_body.c'],['../object__body_8c.html#a48a1d1932cdf056c860d8c35e661c81a',1,'body_init(char *body_content):&#160;object_body.c']]]
 ];

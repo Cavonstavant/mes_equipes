@@ -85,7 +85,8 @@ $(document).ready(function(){initNavTree('object__status_8h.html',''); initResiz
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">object_status.h File Reference</div>  </div>
 </div><!--header-->
@@ -128,6 +129,15 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a1907f7bdf9168d8a969704df10f3cec3"><td class="memItemLeft" align="right" valign="top">typedef bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__status_8h.html#a1907f7bdf9168d8a969704df10f3cec3">status_t</a></td></tr>
 <tr class="memdesc:a1907f7bdf9168d8a969704df10f3cec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status object equivalent of a bool.  <a href="object__status_8h.html#a1907f7bdf9168d8a969704df10f3cec3">More...</a><br /></td></tr>
 <tr class="separator:a1907f7bdf9168d8a969704df10f3cec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a190af32d8ddcf938f7f1900355b6ec58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__status_8h.html#a1907f7bdf9168d8a969704df10f3cec3">status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__status_8h.html#a190af32d8ddcf938f7f1900355b6ec58">status_init</a> (void)</td></tr>
+<tr class="memdesc:a190af32d8ddcf938f7f1900355b6ec58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init a status object Default value is set to OFFLINE.  <a href="object__status_8h.html#a190af32d8ddcf938f7f1900355b6ec58">More...</a><br /></td></tr>
+<tr class="separator:a190af32d8ddcf938f7f1900355b6ec58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1f2058804b6d25cc3d34c036708baee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__status_8h.html#ad1f2058804b6d25cc3d34c036708baee">status_destroy</a> (<a class="el" href="object__status_8h.html#a1907f7bdf9168d8a969704df10f3cec3">status_t</a> status_to_destroy)</td></tr>
+<tr class="memdesc:ad1f2058804b6d25cc3d34c036708baee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a status object Do nothing.  <a href="object__status_8h.html#ad1f2058804b6d25cc3d34c036708baee">More...</a><br /></td></tr>
+<tr class="separator:ad1f2058804b6d25cc3d34c036708baee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a9fc595816a36e47d2b583afa775b3d4c"></a>
@@ -176,6 +186,54 @@ Typedefs</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Status object equivalent of a bool. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ad1f2058804b6d25cc3d34c036708baee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1f2058804b6d25cc3d34c036708baee">&#9670;&nbsp;</a></span>status_destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void status_destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__status_8h.html#a1907f7bdf9168d8a969704df10f3cec3">status_t</a>&#160;</td>
+          <td class="paramname"><em>status_to_destroy</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destroy a status object Do nothing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status_to_destroy</td><td>Status object to destroy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a190af32d8ddcf938f7f1900355b6ec58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a190af32d8ddcf938f7f1900355b6ec58">&#9670;&nbsp;</a></span>status_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__status_8h.html#a1907f7bdf9168d8a969704df10f3cec3">status_t</a> status_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Init a status object Default value is set to OFFLINE. </p>
+<dl class="section return"><dt>Returns</dt><dd>status_t The newly created status object </dd></dl>
 
 </div>
 </div>

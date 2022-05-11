@@ -1,0 +1,4 @@
+<map id="message_s" name="message_s">
+<area shape="rect" id="node1" title="Message object." alt="" coords="5,95,100,121"/>
+<area shape="rect" id="node2" href="$structmy__uuid__s.html" title="Uuid object equivalent of a string To Refacto with issue #25." alt="" coords="7,5,99,32"/>
+</map>

@@ -98,12 +98,26 @@ $(document).ready(function(){initNavTree('object__name_8h_source.html',''); init
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef OBJECT_NAME_H_</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">    #define OBJECT_NAME_H_</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="object__name_8h.html#af8c1c342a3ab6aebe9a6584bf116e59c">   17</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">char</span> <a class="code" href="object__name_8h.html#af8c1c342a3ab6aebe9a6584bf116e59c">name_t</a>[32];</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !OBJECT_NAME_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">    #include &lt;stddef.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="object__name_8h.html#a834e9a379307f869a10f4da078be5786">   18</a></span>&#160;<span class="preprocessor">    #define NAME_SIZE 32</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="object__name_8h.html#a28a305ae9ffbe772b9d8ed9ea604372e">   23</a></span>&#160;<span class="preprocessor">    #define NAME_ERROR NULL</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="object__name_8h.html#ae2b0ff9c3cd18ed9595e4470fb8e904e">   28</a></span>&#160;<span class="preprocessor">    #define NAME_INVALID_SIZE &quot;Invalid content size&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="object__name_8h.html#a7c53defcff0156d399a40b293cfa94b9">   34</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">char</span> *<a class="code" href="object__name_8h.html#a7c53defcff0156d399a40b293cfa94b9">name_t</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<a class="code" href="object__name_8h.html#a7c53defcff0156d399a40b293cfa94b9">name_t</a> <a class="code" href="object__name_8h.html#aad501cf366c38f0ce88ac0da0d849393">name_init</a>(<span class="keywordtype">char</span> *name_content);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">void</span> <a class="code" href="object__name_8h.html#a2bf14b5c1159a184866399de7f36b4e3">name_destroy</a>(<a class="code" href="object__name_8h.html#a7c53defcff0156d399a40b293cfa94b9">name_t</a> name_to_destroy);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !OBJECT_NAME_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aobject__name_8h_html_af8c1c342a3ab6aebe9a6584bf116e59c"><div class="ttname"><a href="object__name_8h.html#af8c1c342a3ab6aebe9a6584bf116e59c">name_t</a></div><div class="ttdeci">char name_t[32]</div><div class="ttdoc">Name object equivalent of a string.</div><div class="ttdef"><b>Definition:</b> object_name.h:17</div></div>
+<div class="ttc" id="aobject__name_8h_html_a2bf14b5c1159a184866399de7f36b4e3"><div class="ttname"><a href="object__name_8h.html#a2bf14b5c1159a184866399de7f36b4e3">name_destroy</a></div><div class="ttdeci">void name_destroy(name_t name_to_destroy)</div><div class="ttdoc">Destroy a Name object If the name_to_destroy is NAME_ERROR, do nothing.</div><div class="ttdef"><b>Definition:</b> object_name.c:31</div></div>
+<div class="ttc" id="aobject__name_8h_html_a7c53defcff0156d399a40b293cfa94b9"><div class="ttname"><a href="object__name_8h.html#a7c53defcff0156d399a40b293cfa94b9">name_t</a></div><div class="ttdeci">char * name_t</div><div class="ttdoc">Name object equivalent of a string.</div><div class="ttdef"><b>Definition:</b> object_name.h:34</div></div>
+<div class="ttc" id="aobject__name_8h_html_aad501cf366c38f0ce88ac0da0d849393"><div class="ttname"><a href="object__name_8h.html#aad501cf366c38f0ce88ac0da0d849393">name_init</a></div><div class="ttdeci">name_t name_init(char *name_content)</div><div class="ttdoc">Init a name object If the name_contet is too long compared to NAME_SIZE, return NAME_ERROR.</div><div class="ttdef"><b>Definition:</b> object_name.c:15</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

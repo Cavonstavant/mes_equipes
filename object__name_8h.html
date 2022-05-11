@@ -84,12 +84,24 @@ $(document).ready(function(){initNavTree('object__name_8h.html',''); initResizab
 
 <div class="header">
   <div class="summary">
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">object_name.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &lt;stddef.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for object_name.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="object__name_8h__incl.png" border="0" usemap="#objects_2name_2include_2object__name_8h" alt=""/></div>
+<map name="objects_2name_2include_2object__name_8h" id="objects_2name_2include_2object__name_8h">
+<area shape="rect" title=" " alt="" coords="5,5,167,47"/>
+<area shape="rect" title=" " alt="" coords="49,95,123,121"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="object__name_8h__dep__incl.png" border="0" usemap="#objects_2name_2include_2object__name_8hdep" alt=""/></div>
@@ -109,26 +121,150 @@ This graph shows which files directly or indirectly include this file:</div>
 </div>
 <p><a href="object__name_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a834e9a379307f869a10f4da078be5786"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__name_8h.html#a834e9a379307f869a10f4da078be5786">NAME_SIZE</a>&#160;&#160;&#160;32</td></tr>
+<tr class="memdesc:a834e9a379307f869a10f4da078be5786"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max size of a name object.  <a href="object__name_8h.html#a834e9a379307f869a10f4da078be5786">More...</a><br /></td></tr>
+<tr class="separator:a834e9a379307f869a10f4da078be5786"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28a305ae9ffbe772b9d8ed9ea604372e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__name_8h.html#a28a305ae9ffbe772b9d8ed9ea604372e">NAME_ERROR</a>&#160;&#160;&#160;NULL</td></tr>
+<tr class="memdesc:a28a305ae9ffbe772b9d8ed9ea604372e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error inside a name object.  <a href="object__name_8h.html#a28a305ae9ffbe772b9d8ed9ea604372e">More...</a><br /></td></tr>
+<tr class="separator:a28a305ae9ffbe772b9d8ed9ea604372e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2b0ff9c3cd18ed9595e4470fb8e904e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__name_8h.html#ae2b0ff9c3cd18ed9595e4470fb8e904e">NAME_INVALID_SIZE</a>&#160;&#160;&#160;&quot;Invalid content size&quot;</td></tr>
+<tr class="memdesc:ae2b0ff9c3cd18ed9595e4470fb8e904e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name error message for bad size.  <a href="object__name_8h.html#ae2b0ff9c3cd18ed9595e4470fb8e904e">More...</a><br /></td></tr>
+<tr class="separator:ae2b0ff9c3cd18ed9595e4470fb8e904e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:af8c1c342a3ab6aebe9a6584bf116e59c"><td class="memItemLeft" align="right" valign="top">typedef char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__name_8h.html#af8c1c342a3ab6aebe9a6584bf116e59c">name_t</a>[32]</td></tr>
-<tr class="memdesc:af8c1c342a3ab6aebe9a6584bf116e59c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name object equivalent of a string.  <a href="object__name_8h.html#af8c1c342a3ab6aebe9a6584bf116e59c">More...</a><br /></td></tr>
-<tr class="separator:af8c1c342a3ab6aebe9a6584bf116e59c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c53defcff0156d399a40b293cfa94b9"><td class="memItemLeft" align="right" valign="top">typedef char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__name_8h.html#a7c53defcff0156d399a40b293cfa94b9">name_t</a></td></tr>
+<tr class="memdesc:a7c53defcff0156d399a40b293cfa94b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name object equivalent of a string.  <a href="object__name_8h.html#a7c53defcff0156d399a40b293cfa94b9">More...</a><br /></td></tr>
+<tr class="separator:a7c53defcff0156d399a40b293cfa94b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aad501cf366c38f0ce88ac0da0d849393"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__name_8h.html#a7c53defcff0156d399a40b293cfa94b9">name_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__name_8h.html#aad501cf366c38f0ce88ac0da0d849393">name_init</a> (char *name_content)</td></tr>
+<tr class="memdesc:aad501cf366c38f0ce88ac0da0d849393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init a name object If the name_contet is too long compared to NAME_SIZE, return NAME_ERROR.  <a href="object__name_8h.html#aad501cf366c38f0ce88ac0da0d849393">More...</a><br /></td></tr>
+<tr class="separator:aad501cf366c38f0ce88ac0da0d849393"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bf14b5c1159a184866399de7f36b4e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__name_8h.html#a2bf14b5c1159a184866399de7f36b4e3">name_destroy</a> (<a class="el" href="object__name_8h.html#a7c53defcff0156d399a40b293cfa94b9">name_t</a> name_to_destroy)</td></tr>
+<tr class="memdesc:a2bf14b5c1159a184866399de7f36b4e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a Name object If the name_to_destroy is NAME_ERROR, do nothing.  <a href="object__name_8h.html#a2bf14b5c1159a184866399de7f36b4e3">More...</a><br /></td></tr>
+<tr class="separator:a2bf14b5c1159a184866399de7f36b4e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="af8c1c342a3ab6aebe9a6584bf116e59c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8c1c342a3ab6aebe9a6584bf116e59c">&#9670;&nbsp;</a></span>name_t</h2>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a28a305ae9ffbe772b9d8ed9ea604372e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28a305ae9ffbe772b9d8ed9ea604372e">&#9670;&nbsp;</a></span>NAME_ERROR</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef char name_t[32]</td>
+          <td class="memname">#define NAME_ERROR&#160;&#160;&#160;NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Error inside a name object. </p>
+
+</div>
+</div>
+<a id="ae2b0ff9c3cd18ed9595e4470fb8e904e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2b0ff9c3cd18ed9595e4470fb8e904e">&#9670;&nbsp;</a></span>NAME_INVALID_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NAME_INVALID_SIZE&#160;&#160;&#160;&quot;Invalid content size&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Name error message for bad size. </p>
+
+</div>
+</div>
+<a id="a834e9a379307f869a10f4da078be5786"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a834e9a379307f869a10f4da078be5786">&#9670;&nbsp;</a></span>NAME_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NAME_SIZE&#160;&#160;&#160;32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Max size of a name object. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a7c53defcff0156d399a40b293cfa94b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c53defcff0156d399a40b293cfa94b9">&#9670;&nbsp;</a></span>name_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef char* <a class="el" href="object__name_8h.html#a7c53defcff0156d399a40b293cfa94b9">name_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Name object equivalent of a string. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a2bf14b5c1159a184866399de7f36b4e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bf14b5c1159a184866399de7f36b4e3">&#9670;&nbsp;</a></span>name_destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void name_destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__name_8h.html#a7c53defcff0156d399a40b293cfa94b9">name_t</a>&#160;</td>
+          <td class="paramname"><em>name_to_destroy</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destroy a Name object If the name_to_destroy is NAME_ERROR, do nothing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name_to_destroy</td><td>Name object to destroy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aad501cf366c38f0ce88ac0da0d849393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad501cf366c38f0ce88ac0da0d849393">&#9670;&nbsp;</a></span>name_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__name_8h.html#a7c53defcff0156d399a40b293cfa94b9">name_t</a> name_init </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name_content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Init a name object If the name_contet is too long compared to NAME_SIZE, return NAME_ERROR. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name_content</td><td>Content of the new name object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>name_t The newly created name object </dd></dl>
 
 </div>
 </div>

@@ -83,21 +83,94 @@ $(document).ready(function(){initNavTree('object__description_8c.html',''); init
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">object_description.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="object__description_8h_source.html">object_description.h</a>&quot;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for object_description.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="object__description_8c__incl.png" border="0" usemap="#objects_2description_2src_2object__description_8c" alt=""/></div>
 <map name="objects_2description_2src_2object__description_8c" id="objects_2description_2src_2object__description_8c">
-<area shape="rect" title=" " alt="" coords="5,5,184,47"/>
-<area shape="rect" href="object__description_8h.html" title=" " alt="" coords="18,95,171,121"/>
+<area shape="rect" title=" " alt="" coords="175,5,354,47"/>
+<area shape="rect" href="object__description_8h.html" title=" " alt="" coords="5,95,159,121"/>
+<area shape="rect" title=" " alt="" coords="183,95,253,121"/>
+<area shape="rect" title=" " alt="" coords="278,95,345,121"/>
+<area shape="rect" title=" " alt="" coords="369,95,440,121"/>
+<area shape="rect" title=" " alt="" coords="45,169,119,196"/>
 </map>
 </div>
-</div></div><!-- contents -->
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aeec1220fa1bdd2359531d4f936e70cef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__description_8h.html#aa41bbffc9ededb512782906ea65b2016">description_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__description_8c.html#aeec1220fa1bdd2359531d4f936e70cef">description_init</a> (char *description_content)</td></tr>
+<tr class="memdesc:aeec1220fa1bdd2359531d4f936e70cef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init the description object If the description_content is too long compared to description_size return DESCRIPTION_ERROR.  <a href="object__description_8c.html#aeec1220fa1bdd2359531d4f936e70cef">More...</a><br /></td></tr>
+<tr class="separator:aeec1220fa1bdd2359531d4f936e70cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4d9f3aa7fc0712ece8a0c79ccc066b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__description_8c.html#aa4d9f3aa7fc0712ece8a0c79ccc066b1">description_destroy</a> (<a class="el" href="object__description_8h.html#aa41bbffc9ededb512782906ea65b2016">description_t</a> description_to_destroy)</td></tr>
+<tr class="memdesc:aa4d9f3aa7fc0712ece8a0c79ccc066b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the description object If the description_to_destroy is equivalent to DESCRIPTION_ERROR do nothing.  <a href="object__description_8c.html#aa4d9f3aa7fc0712ece8a0c79ccc066b1">More...</a><br /></td></tr>
+<tr class="separator:aa4d9f3aa7fc0712ece8a0c79ccc066b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="aa4d9f3aa7fc0712ece8a0c79ccc066b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4d9f3aa7fc0712ece8a0c79ccc066b1">&#9670;&nbsp;</a></span>description_destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void description_destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__description_8h.html#aa41bbffc9ededb512782906ea65b2016">description_t</a>&#160;</td>
+          <td class="paramname"><em>description_to_destroy</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destroy the description object If the description_to_destroy is equivalent to DESCRIPTION_ERROR do nothing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">description_to_destroy</td><td>Description object to destroy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aeec1220fa1bdd2359531d4f936e70cef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeec1220fa1bdd2359531d4f936e70cef">&#9670;&nbsp;</a></span>description_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__description_8h.html#aa41bbffc9ededb512782906ea65b2016">description_t</a> description_init </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>description_content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Init the description object If the description_content is too long compared to description_size return DESCRIPTION_ERROR. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">description_content</td><td>Content of the new Description object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>description_t Newly created Description object </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

@@ -1,0 +1,4 @@
+<map id="thread_creation_s" name="thread_creation_s">
+<area shape="rect" id="node1" title="Thread creation object Object containing all the information for a thread creation." alt="" coords="5,109,144,136"/>
+<area shape="rect" id="node2" href="$structmy__uuid__s.html" title="Uuid object equivalent of a string To Refacto with issue #25." alt="" coords="29,5,121,32"/>
+</map>

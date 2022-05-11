@@ -1,4 +1,8 @@
 <map id="objects/body/src/object_body.c" name="objects/body/src/object_body.c">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,177,47"/>
-<area shape="rect" id="node2" href="$object__body_8h.html" title=" " alt="" coords="36,95,147,121"/>
+<area shape="rect" id="node1" title=" " alt="" coords="136,5,308,47"/>
+<area shape="rect" id="node2" href="$object__body_8h.html" title=" " alt="" coords="5,95,116,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="140,95,211,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="235,95,302,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="327,95,397,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="23,169,98,196"/>
 </map>

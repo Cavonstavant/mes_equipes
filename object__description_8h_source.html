@@ -98,12 +98,26 @@ $(document).ready(function(){initNavTree('object__description_8h_source.html',''
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef OBJECT_DESCRIPTION_H_</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">    #define OBJECT_DESCRIPTION_H_</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="object__description_8h.html#a7bb4b5072c9dd28c19fa2e359c8e56e1">   17</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">char</span> <a class="code" href="object__description_8h.html#a7bb4b5072c9dd28c19fa2e359c8e56e1">description_t</a>[255];</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !OBJECT_DESCRIPTION_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">    #include &lt;stddef.h&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="object__description_8h.html#a4965142ad70c33aa7b746701fd4bda9a">   18</a></span>&#160;<span class="preprocessor">    #define DESCRIPTION_ERROR NULL</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="object__description_8h.html#ae65de56d83bcd3d97079de992f01d1dd">   23</a></span>&#160;<span class="preprocessor">    #define DESCRIPTION_SIZE 255</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="object__description_8h.html#aa592bd9ac483091ccc93feae2abf8742">   28</a></span>&#160;<span class="preprocessor">    #define DESCRIPTION_INVALID_SIZE &quot;Invalid Description size.&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="object__description_8h.html#aa41bbffc9ededb512782906ea65b2016">   34</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">char</span> *<a class="code" href="object__description_8h.html#aa41bbffc9ededb512782906ea65b2016">description_t</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<a class="code" href="object__description_8h.html#aa41bbffc9ededb512782906ea65b2016">description_t</a> <a class="code" href="object__description_8h.html#aeec1220fa1bdd2359531d4f936e70cef">description_init</a>(<span class="keywordtype">char</span> *description_content);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">void</span> <a class="code" href="object__description_8h.html#aa4d9f3aa7fc0712ece8a0c79ccc066b1">description_destroy</a>(<a class="code" href="object__description_8h.html#aa41bbffc9ededb512782906ea65b2016">description_t</a> description_to_destroy);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !OBJECT_DESCRIPTION_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aobject__description_8h_html_a7bb4b5072c9dd28c19fa2e359c8e56e1"><div class="ttname"><a href="object__description_8h.html#a7bb4b5072c9dd28c19fa2e359c8e56e1">description_t</a></div><div class="ttdeci">char description_t[255]</div><div class="ttdoc">Description object equivalent of a string.</div><div class="ttdef"><b>Definition:</b> object_description.h:17</div></div>
+<div class="ttc" id="aobject__description_8h_html_aa41bbffc9ededb512782906ea65b2016"><div class="ttname"><a href="object__description_8h.html#aa41bbffc9ededb512782906ea65b2016">description_t</a></div><div class="ttdeci">char * description_t</div><div class="ttdoc">Description object equivalent of a string.</div><div class="ttdef"><b>Definition:</b> object_description.h:34</div></div>
+<div class="ttc" id="aobject__description_8h_html_aa4d9f3aa7fc0712ece8a0c79ccc066b1"><div class="ttname"><a href="object__description_8h.html#aa4d9f3aa7fc0712ece8a0c79ccc066b1">description_destroy</a></div><div class="ttdeci">void description_destroy(description_t description_to_destroy)</div><div class="ttdoc">Destroy the description object If the description_to_destroy is equivalent to DESCRIPTION_ERROR do no...</div><div class="ttdef"><b>Definition:</b> object_description.c:32</div></div>
+<div class="ttc" id="aobject__description_8h_html_aeec1220fa1bdd2359531d4f936e70cef"><div class="ttname"><a href="object__description_8h.html#aeec1220fa1bdd2359531d4f936e70cef">description_init</a></div><div class="ttdeci">description_t description_init(char *description_content)</div><div class="ttdoc">Init the description object If the description_content is too long compared to description_size retur...</div><div class="ttdef"><b>Definition:</b> object_description.c:15</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

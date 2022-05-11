@@ -84,12 +84,24 @@ $(document).ready(function(){initNavTree('object__body_8h.html',''); initResizab
 
 <div class="header">
   <div class="summary">
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">object_body.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &lt;stddef.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for object_body.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="object__body_8h__incl.png" border="0" usemap="#objects_2body_2include_2object__body_8h" alt=""/></div>
+<map name="objects_2body_2include_2object__body_8h" id="objects_2body_2include_2object__body_8h">
+<area shape="rect" title=" " alt="" coords="5,5,161,47"/>
+<area shape="rect" title=" " alt="" coords="46,95,121,121"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="object__body_8h__dep__incl.png" border="0" usemap="#objects_2body_2include_2object__body_8hdep" alt=""/></div>
@@ -107,26 +119,150 @@ This graph shows which files directly or indirectly include this file:</div>
 </div>
 <p><a href="object__body_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a3170fd55c9e7f4a582647deab1b25aab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__body_8h.html#a3170fd55c9e7f4a582647deab1b25aab">BODY_SIZE</a>&#160;&#160;&#160;512</td></tr>
+<tr class="memdesc:a3170fd55c9e7f4a582647deab1b25aab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max size of a body object.  <a href="object__body_8h.html#a3170fd55c9e7f4a582647deab1b25aab">More...</a><br /></td></tr>
+<tr class="separator:a3170fd55c9e7f4a582647deab1b25aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad08e5d24686b6cdcee3c358ab0e256c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__body_8h.html#ad08e5d24686b6cdcee3c358ab0e256c6">BODY_ERROR</a>&#160;&#160;&#160;NULL</td></tr>
+<tr class="memdesc:ad08e5d24686b6cdcee3c358ab0e256c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error inside a body object.  <a href="object__body_8h.html#ad08e5d24686b6cdcee3c358ab0e256c6">More...</a><br /></td></tr>
+<tr class="separator:ad08e5d24686b6cdcee3c358ab0e256c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ff789875cfb47105b577bd5a0c07484"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__body_8h.html#a3ff789875cfb47105b577bd5a0c07484">BODY_INVALID_SIZE</a>&#160;&#160;&#160;&quot;Invalid content size.&quot;</td></tr>
+<tr class="memdesc:a3ff789875cfb47105b577bd5a0c07484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Body error message for bad size.  <a href="object__body_8h.html#a3ff789875cfb47105b577bd5a0c07484">More...</a><br /></td></tr>
+<tr class="separator:a3ff789875cfb47105b577bd5a0c07484"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ac0ca187fe3f902665ee4d2fa01b59321"><td class="memItemLeft" align="right" valign="top">typedef char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__body_8h.html#ac0ca187fe3f902665ee4d2fa01b59321">body_t</a>[512]</td></tr>
-<tr class="memdesc:ac0ca187fe3f902665ee4d2fa01b59321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Body object equivalent of a string.  <a href="object__body_8h.html#ac0ca187fe3f902665ee4d2fa01b59321">More...</a><br /></td></tr>
-<tr class="separator:ac0ca187fe3f902665ee4d2fa01b59321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae76459eee75ca162d91d057e2dd9f3d8"><td class="memItemLeft" align="right" valign="top">typedef char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__body_8h.html#ae76459eee75ca162d91d057e2dd9f3d8">body_t</a></td></tr>
+<tr class="memdesc:ae76459eee75ca162d91d057e2dd9f3d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Body object equivalent of a string.  <a href="object__body_8h.html#ae76459eee75ca162d91d057e2dd9f3d8">More...</a><br /></td></tr>
+<tr class="separator:ae76459eee75ca162d91d057e2dd9f3d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a48a1d1932cdf056c860d8c35e661c81a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__body_8h.html#ae76459eee75ca162d91d057e2dd9f3d8">body_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__body_8h.html#a48a1d1932cdf056c860d8c35e661c81a">body_init</a> (char *body_content)</td></tr>
+<tr class="memdesc:a48a1d1932cdf056c860d8c35e661c81a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init a Body object If the body_content is too long compared to BODY_SIZE, return BODY_ERROR.  <a href="object__body_8h.html#a48a1d1932cdf056c860d8c35e661c81a">More...</a><br /></td></tr>
+<tr class="separator:a48a1d1932cdf056c860d8c35e661c81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8047934d863367897ec90bb5562b3151"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__body_8h.html#a8047934d863367897ec90bb5562b3151">body_destroy</a> (<a class="el" href="object__body_8h.html#ae76459eee75ca162d91d057e2dd9f3d8">body_t</a> body_to_destroy)</td></tr>
+<tr class="memdesc:a8047934d863367897ec90bb5562b3151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a Body object If the body_to_destroy is BODY_ERROR, do nothing.  <a href="object__body_8h.html#a8047934d863367897ec90bb5562b3151">More...</a><br /></td></tr>
+<tr class="separator:a8047934d863367897ec90bb5562b3151"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="ac0ca187fe3f902665ee4d2fa01b59321"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0ca187fe3f902665ee4d2fa01b59321">&#9670;&nbsp;</a></span>body_t</h2>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ad08e5d24686b6cdcee3c358ab0e256c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad08e5d24686b6cdcee3c358ab0e256c6">&#9670;&nbsp;</a></span>BODY_ERROR</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef char body_t[512]</td>
+          <td class="memname">#define BODY_ERROR&#160;&#160;&#160;NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Error inside a body object. </p>
+
+</div>
+</div>
+<a id="a3ff789875cfb47105b577bd5a0c07484"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ff789875cfb47105b577bd5a0c07484">&#9670;&nbsp;</a></span>BODY_INVALID_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BODY_INVALID_SIZE&#160;&#160;&#160;&quot;Invalid content size.&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Body error message for bad size. </p>
+
+</div>
+</div>
+<a id="a3170fd55c9e7f4a582647deab1b25aab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3170fd55c9e7f4a582647deab1b25aab">&#9670;&nbsp;</a></span>BODY_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BODY_SIZE&#160;&#160;&#160;512</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Max size of a body object. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ae76459eee75ca162d91d057e2dd9f3d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae76459eee75ca162d91d057e2dd9f3d8">&#9670;&nbsp;</a></span>body_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef char* <a class="el" href="object__body_8h.html#ae76459eee75ca162d91d057e2dd9f3d8">body_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Body object equivalent of a string. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a8047934d863367897ec90bb5562b3151"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8047934d863367897ec90bb5562b3151">&#9670;&nbsp;</a></span>body_destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void body_destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__body_8h.html#ae76459eee75ca162d91d057e2dd9f3d8">body_t</a>&#160;</td>
+          <td class="paramname"><em>body_to_destroy</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destroy a Body object If the body_to_destroy is BODY_ERROR, do nothing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">body_to_destroy</td><td>Body object to destroy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a48a1d1932cdf056c860d8c35e661c81a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48a1d1932cdf056c860d8c35e661c81a">&#9670;&nbsp;</a></span>body_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__body_8h.html#ae76459eee75ca162d91d057e2dd9f3d8">body_t</a> body_init </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>body_content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Init a Body object If the body_content is too long compared to BODY_SIZE, return BODY_ERROR. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">body_content</td><td>Content of the new body object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>body_t The newly created body object </dd></dl>
 
 </div>
 </div>
