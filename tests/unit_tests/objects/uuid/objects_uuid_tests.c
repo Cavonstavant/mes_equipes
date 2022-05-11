@@ -11,7 +11,7 @@
 Test(objects_my_uuid, classic) {
     my_uuid_t *my_uuid = my_uuid_init(COM_);
 
-    if (my_uuid->uuid !=NULL)
+    if (my_uuid == NULL)
         cr_assert_eq(1, 2);
     cr_assert_eq(2, 2);
 }

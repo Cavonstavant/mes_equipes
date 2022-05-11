@@ -40,6 +40,10 @@ set (SRC
 
 add_library(${TARGET} ${SRC})
 
+target_link_libraries(${TARGET}
+    PRIVATE ${PROJECT_NAME}_uuid_wrapper
+)
+
 target_include_directories(${TARGET}
     PUBLIC ${INCLUDE_BODY}
     PUBLIC ${INCLUDE_CHANNEL}
@@ -53,7 +57,6 @@ target_include_directories(${TARGET}
     PUBLIC ${INCLUDE_USER}
     PUBLIC ${INCLUDE_UUID}
     PRIVATE ${SRC_ROOT}
-    PRIVATE ${PROJECT_NAME}_uuid_wrapper
 )
 
 add_subdirectory(uuid/uuid_wrapper)

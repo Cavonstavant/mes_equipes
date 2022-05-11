@@ -11,6 +11,7 @@
     #define OBJECT_UUID_H_
 
     #include <stddef.h>
+    #include "my_uuid.h"
 
     #define UUID_ERROR NULL
 
@@ -40,8 +41,7 @@ typedef enum uuid_type_s {
 /// To Refacto with issue #25
 ///
 typedef struct my_uuid_s {
-    char *uuid;
-    uuid_type_t type;
+    w_uuid_t uuid;
 } my_uuid_t;
 
 ///

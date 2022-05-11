@@ -16,8 +16,11 @@ my_uuid_t *my_uuid_init(uuid_type_t uuid_content)
 
     if (new_uuid == UUID_ERROR)
         return UUID_ERROR;
-    new_uuid->uuid = UUID_ERROR; /// CALL UUID LIBRARY
-    new_uuid->type = uuid_content;
+    if (my_uuid_generate(&(new_uuid->uuid),
+        (my_uuid_prefix_t) uuid_content) == -1) {
+        free(new_uuid);
+        return UUID_ERROR;
+    }
     return new_uuid;
 }
 

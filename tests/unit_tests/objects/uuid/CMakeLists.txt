@@ -8,5 +8,5 @@ set(SRC
 create_test(
     TEST_NAME objects_uuid_tests
     TEST_SRC ${SRC}
-    TEST_DEPS ${PROJECT_NAME}_objects
+    TEST_DEPS ${PROJECT_NAME}_objects ${PROJECT_NAME}_uuid_wrapper
 )
