@@ -13,7 +13,7 @@ endif()
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 add_compile_options (
-    "-std=gnu11" "-Wall" "-Wextra" "-Wpedantic" "-Wshadow" "-Wpointer-arith" "-Wattributes"
+    "-std=gnu11" "-Werror" "-Wall" "-Wextra" "-Wpedantic" "-Wshadow" "-Wpointer-arith" "-Wattributes"
 )
 
 add_subdirectory(objects)

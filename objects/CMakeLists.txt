@@ -53,4 +53,7 @@ target_include_directories(${TARGET}
     PUBLIC ${INCLUDE_USER}
     PUBLIC ${INCLUDE_UUID}
     PRIVATE ${SRC_ROOT}
+    PRIVATE ${PROJECT_NAME}_uuid_wrapper
 )
+
+add_subdirectory(uuid/uuid_wrapper)
