@@ -25,7 +25,6 @@
     ///
     /// \brief Name error message for bad size
     ///
-    ///
     #define NAME_INVALID_SIZE "Invalid content size"
 
 ///
@@ -42,5 +41,13 @@ typedef char *name_t;
 /// \return name_t The newly created name object
 ///
 name_t name_init(char *name_content);
+
+///
+/// \brief Destroy a Name object
+/// If the name_to_destroy is NAME_ERROR, do nothing
+///
+/// \param name_to_destroy Name object to destroy
+///
+void name_destroy(name_t name_to_destroy);
 
 #endif /* !OBJECT_NAME_H_ */
