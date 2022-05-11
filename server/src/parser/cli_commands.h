@@ -35,9 +35,20 @@ void *users_command(void *);
 void *logout_command(void *);
 void *login_command(void *);
 
-/// \brief Check arguments of the command
-/// \param char ** Arguments of the command with the command at the index 0
-/// \return 0, or -1 if it failed.
+/// \brief Get a command and split it in a array of char *
+/// to process the command.
+/// \param char * The command to be split.
+/// \return char ** The array of char * to be process.
+char **split_command(char *command);
+
+/// \brief This function check if arguments are valid, depending of the first
+/// element on the array.
+/// \param char ** Array of arguments which will be check.
+/// \return 0 if arguments are not good, 1 otherwise.
 int check_arguments(char **arguments);
+
+/// \brief This function get the commands static const defined in cli_command.c
+/// \return const cli_command_t * An array of available commands
+const cli_command_t *get_cli_commands();
 
 #endif /* !PARSER_H_ */
