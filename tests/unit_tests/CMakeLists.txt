@@ -21,5 +21,4 @@ function (create_test)
     add_test(${TEST_NAME} ${TEST_NAME})
 endfunction()
 
-# add_subdirectory(Parser)
-# add_subdirectory(MessageQueue)
+add_subdirectory(objects)

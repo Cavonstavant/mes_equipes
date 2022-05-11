@@ -23,4 +23,8 @@ re:
 all:
 	cmake . && make
 
-.PHONY: all clean fclean re
+tests:
+	cmake --build ./build
+	cd ./build ; ctest
+
+.PHONY: all clean fclean re tests
