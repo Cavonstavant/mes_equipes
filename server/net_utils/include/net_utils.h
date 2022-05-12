@@ -37,11 +37,17 @@ typedef struct peer_s {
     // A pointer to a generic data type.
     void *data;
 
-    /// Reprensents the state of an incoming message
+    /// Represents the state of an incoming message
     /// true if the transaction as been started but not finished
     /// false if the transaction has been finished or not started
     /// defaulted to false
     bool pending_command;
+
+    /// Represents the state of an outcoming message
+    /// true if the transaction as been started but not finished
+    /// false if the transaction has been finished or not started
+    /// defaulted to false
+    bool pending_write;
 
     /// A pointer to the next/prev peer.
     CIRCLEQ_ENTRY(peer_s) peers;
@@ -99,9 +105,11 @@ bool add_user_to_server(tcp_server_t *srv, char *username, char *password);
 void restore_fd_sets(fd_set *read_fds, fd_set *write_fds,
     fd_set *read_save, fd_set *write_save);
 
-bool fill_fd_sets(tcp_server_t *srv);
+/// \brief Update the read and write fd sets according to
+/// peer_t::pending_command of every peers connected
+/// \param srv The tcp server containing the peers and the w/r fd sets
+void fill_fd_sets(tcp_server_t *srv);
 
 bool host_selected_process(tcp_server_t *srv);
-
 
 #endif //NET_UTILS_H
