@@ -6,7 +6,7 @@
 */
 
 #ifndef PARSER_H_
-#define PARSER_H_
+    #define PARSER_H_
 
 /// \brief Compute the command if it's ok.
 /// \param char * Command to be call.
