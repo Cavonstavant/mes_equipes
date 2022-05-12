@@ -5,10 +5,16 @@
 ** parser
 */
 
-/// \file server/src/include/parser.h
+/// \file server/src/parser/include/parser.h
 
 #ifndef PARSER_H_
     #define PARSER_H_
+
+/// \brief Get a command and split it in a array of char *
+/// to process the command.
+/// \param char * The command to be split.
+/// \return char ** The array of char * to be process.
+char **split_command(char *command);
 
 /// \brief This function check if arguments are valid, depending of the first
 /// element on the array.

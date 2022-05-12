@@ -5,8 +5,11 @@
 ** entrypoint
 */
 
+#include <stdio.h>
+
 int main(int ac, char **av)
 {
+    (void)av;
     if (ac != 2) {
         printf("Usage: ./mes_equipes <team_name>\n");
         return (84);

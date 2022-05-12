@@ -20,15 +20,15 @@
 ///
 typedef struct team_s {
     /// Uuid of the team
-    uuid_t uuid;
+    my_uuid_t uuid;
     /// Name of the team
     name_t name;
     /// Description of the team
     description_t description;
     /// Uuid list of the attached channels
-    uuid_t *channels;
+    my_uuid_t *channels;
     /// Uuid list of the authorized users
-    uuid_t *users;
+    my_uuid_t *users;
 } team_t;
 
 ///
