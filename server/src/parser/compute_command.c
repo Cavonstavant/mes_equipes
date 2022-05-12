@@ -14,11 +14,13 @@ static void free_args(char **args)
 {
     int index = 0;
 
-    while (args[index]) {
-        free(args[index]);
-        index++;
+    if (args) {
+        while (args[index]) {
+            free(args[index]);
+            index++;
+        }
+        free(args);
     }
-    free(args);
 }
 
 int compute_command(char *command)
