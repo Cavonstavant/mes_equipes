@@ -5,7 +5,10 @@
 ** compute_command
 */
 
+/// \file server/src/parser/compute_command.c
+
 #include <stdio.h>
+#include "cli_commands.h"
 
 static void free_args(char **args)
 {
@@ -18,7 +21,7 @@ static void free_args(char **args)
     free(args);
 }
 
-int compute_command(const char *command)
+int compute_command(char *command)
 {
     char **args = split_command(command);
     int retval = 0;
