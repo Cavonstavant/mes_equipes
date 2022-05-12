@@ -5,6 +5,8 @@
 ** peer
 */
 
+/// \file server/net_utils/peer.c
+
 #include "net_utils.h"
 
 peer_t *new_peer(int fd, struct sockaddr_in addr)

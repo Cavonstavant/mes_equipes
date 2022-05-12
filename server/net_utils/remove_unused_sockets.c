@@ -5,6 +5,8 @@
 ** display_utils
 */
 
+/// \file server/net_utils/remove_unused_sockets.c
+
 #include "net_utils.h"
 
 void remove_unused_sockets(struct peers_head *peers, int tbr[FD_SETSIZE])

@@ -5,6 +5,8 @@
 ** fd_set_manage
 */
 
+/// \file server/net_utils/fd_set_manage.c
+
 #include "net_utils.h"
 
 void restore_fd_sets(fd_set *read_fds, fd_set *write_fds,

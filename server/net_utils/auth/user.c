@@ -5,7 +5,7 @@
 ** user
 */
 
-/// \file src/server/auth/user.c
+/// \file server/net_utils/auth/user.c
 
 #include "net_utils/auth/user.h"
 #include <stdlib.h>

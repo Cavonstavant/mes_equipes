@@ -5,7 +5,7 @@
 ** user
 */
 
-/// \file src/net_utils/include/net_utils/auth/user.h
+/// \file server/net_utils/include/net_utils/auth/user.h
 
 #ifndef USER_H
     #define USER_H

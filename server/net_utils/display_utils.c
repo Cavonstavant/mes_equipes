@@ -5,7 +5,7 @@
 ** display_utils
 */
 
-/// \file src/net_utils/display_utils.c
+/// \file server/net_utils/display_utils.c
 
 #include "net_utils.h"
 

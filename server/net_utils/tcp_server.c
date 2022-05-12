@@ -5,6 +5,8 @@
 ** tcp_server
 */
 
+/// \file server/net_utils/tcp_server.c
+
 #include "net_utils.h"
 
 static void bind_and_listen_on_socket(tcp_server_t *srv, long port)
