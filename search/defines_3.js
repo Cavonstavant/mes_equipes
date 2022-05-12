@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['offline_296',['OFFLINE',['../object__status_8h.html#a9fc595816a36e47d2b583afa775b3d4c',1,'object_status.h']]],
-  ['online_297',['ONLINE',['../object__status_8h.html#a5d8d172be98804c39bb311ead048123a',1,'object_status.h']]]
+  ['name_5ferror_301',['NAME_ERROR',['../object__name_8h.html#a28a305ae9ffbe772b9d8ed9ea604372e',1,'object_name.h']]],
+  ['name_5finvalid_5fsize_302',['NAME_INVALID_SIZE',['../object__name_8h.html#ae2b0ff9c3cd18ed9595e4470fb8e904e',1,'object_name.h']]],
+  ['name_5fsize_303',['NAME_SIZE',['../object__name_8h.html#a834e9a379307f869a10f4da078be5786',1,'object_name.h']]]
 ];

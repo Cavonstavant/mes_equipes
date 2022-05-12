@@ -85,6 +85,7 @@ $(document).ready(function(){initNavTree('cli__commands_8h.html',''); initResiza
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
@@ -96,8 +97,10 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="cli__commands_8h__dep__incl.png" border="0" usemap="#server_2src_2parser_2cli__commands_8hdep" alt=""/></div>
 <map name="server_2src_2parser_2cli__commands_8hdep" id="server_2src_2parser_2cli__commands_8hdep">
-<area shape="rect" title=" " alt="" coords="17,5,167,47"/>
-<area shape="rect" href="check__command_8c.html" title=" " alt="" coords="5,95,179,136"/>
+<area shape="rect" title=" " alt="" coords="200,5,351,47"/>
+<area shape="rect" href="call__command_8c.html" title=" " alt="" coords="5,95,164,136"/>
+<area shape="rect" href="check__command_8c.html" title=" " alt="" coords="189,95,362,136"/>
+<area shape="rect" href="cli__commands_8c.html" title=" " alt="" coords="387,95,537,136"/>
 </map>
 </div>
 </div>
@@ -106,13 +109,18 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcli__command__s.html">cli_command_s</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">structure to store available client command  <a href="structcli__command__s.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">structure to store available client command.  <a href="structcli__command__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ad76b751c750c8112044d0f24a26094c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli__commands_8h.html#ad76b751c750c8112044d0f24a26094c6">COMMAND_NUMBER</a>&#160;&#160;&#160;14</td></tr>
+<tr class="separator:ad76b751c750c8112044d0f24a26094c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:aad57a9a9f24b943a80700aa407287a6e"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structcli__command__s.html">cli_command_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli__commands_8h.html#aad57a9a9f24b943a80700aa407287a6e">cli_command_t</a></td></tr>
-<tr class="memdesc:aad57a9a9f24b943a80700aa407287a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">structure to store available client command  <a href="cli__commands_8h.html#aad57a9a9f24b943a80700aa407287a6e">More...</a><br /></td></tr>
+<tr class="memdesc:aad57a9a9f24b943a80700aa407287a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">structure to store available client command.  <a href="cli__commands_8h.html#aad57a9a9f24b943a80700aa407287a6e">More...</a><br /></td></tr>
 <tr class="separator:aad57a9a9f24b943a80700aa407287a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -145,10 +153,40 @@ Functions</h2></td></tr>
 <tr class="separator:a0717e5271a388b23c7bda4b7d9d5224a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a770438158f74cb2b5b2ba1fbe91c2c9a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli__commands_8h.html#a770438158f74cb2b5b2ba1fbe91c2c9a">login_command</a> (void *)</td></tr>
 <tr class="separator:a770438158f74cb2b5b2ba1fbe91c2c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa05e47fed4b4adeb9c03f6610bcb5cac"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli__commands_8h.html#aa05e47fed4b4adeb9c03f6610bcb5cac">split_command</a> (char *command)</td></tr>
+<tr class="memdesc:aa05e47fed4b4adeb9c03f6610bcb5cac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a command and split it in a array of char * to process the command.  <a href="cli__commands_8h.html#aa05e47fed4b4adeb9c03f6610bcb5cac">More...</a><br /></td></tr>
+<tr class="separator:aa05e47fed4b4adeb9c03f6610bcb5cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c97aa9b07ff34928d35e079167ff5c2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli__commands_8h.html#a4c97aa9b07ff34928d35e079167ff5c2">check_arguments</a> (char **arguments)</td></tr>
-<tr class="memdesc:a4c97aa9b07ff34928d35e079167ff5c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check arguments of the command.  <a href="cli__commands_8h.html#a4c97aa9b07ff34928d35e079167ff5c2">More...</a><br /></td></tr>
+<tr class="memdesc:a4c97aa9b07ff34928d35e079167ff5c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function check if arguments are valid, depending of the first element on the array.  <a href="cli__commands_8h.html#a4c97aa9b07ff34928d35e079167ff5c2">More...</a><br /></td></tr>
 <tr class="separator:a4c97aa9b07ff34928d35e079167ff5c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4be9df6c364b51d0d9c6f0497cd7466d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli__commands_8h.html#a4be9df6c364b51d0d9c6f0497cd7466d">call_command</a> (char **arguments)</td></tr>
+<tr class="memdesc:a4be9df6c364b51d0d9c6f0497cd7466d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function call the function corresponding to the command.  <a href="cli__commands_8h.html#a4be9df6c364b51d0d9c6f0497cd7466d">More...</a><br /></td></tr>
+<tr class="separator:a4be9df6c364b51d0d9c6f0497cd7466d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9744b15a63eff3572f1ffdb0c8f7040"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="cli__commands_8h.html#aad57a9a9f24b943a80700aa407287a6e">cli_command_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli__commands_8h.html#ac9744b15a63eff3572f1ffdb0c8f7040">get_cli_commands</a> ()</td></tr>
+<tr class="memdesc:ac9744b15a63eff3572f1ffdb0c8f7040"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function get the commands static const defined in cli_command.c.  <a href="cli__commands_8h.html#ac9744b15a63eff3572f1ffdb0c8f7040">More...</a><br /></td></tr>
+<tr class="separator:ac9744b15a63eff3572f1ffdb0c8f7040"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3be87adad64eb43e3778c5559034e754"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="cli__commands_8h.html#aad57a9a9f24b943a80700aa407287a6e">cli_command_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli__commands_8h.html#a3be87adad64eb43e3778c5559034e754">get_cli_command_by_name</a> (char *command)</td></tr>
+<tr class="memdesc:a3be87adad64eb43e3778c5559034e754"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function get a cli_commands depending of it's name.  <a href="cli__commands_8h.html#a3be87adad64eb43e3778c5559034e754">More...</a><br /></td></tr>
+<tr class="separator:a3be87adad64eb43e3778c5559034e754"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa48fdc3486fe17bb79555b20e6f43a2a"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli__commands_8h.html#aa48fdc3486fe17bb79555b20e6f43a2a">my_str_to_word_array</a> (char *command, char *separators)</td></tr>
+<tr class="memdesc:aa48fdc3486fe17bb79555b20e6f43a2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">It get a command and an array of separators. It will split the command by using the separators as separator char. It will return an array of char * containing all arguments.  <a href="cli__commands_8h.html#aa48fdc3486fe17bb79555b20e6f43a2a">More...</a><br /></td></tr>
+<tr class="separator:aa48fdc3486fe17bb79555b20e6f43a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ad76b751c750c8112044d0f24a26094c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad76b751c750c8112044d0f24a26094c6">&#9670;&nbsp;</a></span>COMMAND_NUMBER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define COMMAND_NUMBER&#160;&#160;&#160;14</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="aad57a9a9f24b943a80700aa407287a6e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aad57a9a9f24b943a80700aa407287a6e">&#9670;&nbsp;</a></span>cli_command_t</h2>
@@ -162,11 +200,38 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>structure to store available client command </p>
+<p>structure to store available client command. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a4be9df6c364b51d0d9c6f0497cd7466d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4be9df6c364b51d0d9c6f0497cd7466d">&#9670;&nbsp;</a></span>call_command()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int call_command </td>
+          <td>(</td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>arguments</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function call the function corresponding to the command. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">char</td><td>** Array of arguments which will be used to call the function. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0, or -1 if an error occurs. </dd></dl>
+
+</div>
+</div>
 <a id="a4c97aa9b07ff34928d35e079167ff5c2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4c97aa9b07ff34928d35e079167ff5c2">&#9670;&nbsp;</a></span>check_arguments()</h2>
 
@@ -183,14 +248,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Check arguments of the command. </p>
+<p>This function check if arguments are valid, depending of the first element on the array. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">char</td><td>** Arguments of the command with the command at the index 0 </td></tr>
+    <tr><td class="paramname">char</td><td>** Array of arguments which will be check. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0, or -1 if it failed. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if arguments are not good, 1 otherwise. </dd></dl>
 
 </div>
 </div>
@@ -209,6 +274,47 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3be87adad64eb43e3778c5559034e754"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3be87adad64eb43e3778c5559034e754">&#9670;&nbsp;</a></span>get_cli_command_by_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="cli__commands_8h.html#aad57a9a9f24b943a80700aa407287a6e">cli_command_t</a>* get_cli_command_by_name </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>command</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function get a cli_commands depending of it's name. </p>
+<dl class="section return"><dt>Returns</dt><dd>const cli_command_t * Pointer to the corresponding cli_command. </dd></dl>
+
+</div>
+</div>
+<a id="ac9744b15a63eff3572f1ffdb0c8f7040"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9744b15a63eff3572f1ffdb0c8f7040">&#9670;&nbsp;</a></span>get_cli_commands()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="cli__commands_8h.html#aad57a9a9f24b943a80700aa407287a6e">cli_command_t</a>* get_cli_commands </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function get the commands static const defined in cli_command.c. </p>
+<dl class="section return"><dt>Returns</dt><dd>const cli_command_t * An array of available commands. </dd></dl>
 
 </div>
 </div>
@@ -320,6 +426,44 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aa48fdc3486fe17bb79555b20e6f43a2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa48fdc3486fe17bb79555b20e6f43a2a">&#9670;&nbsp;</a></span>my_str_to_word_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char** my_str_to_word_array </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>command</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>separators</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>It get a command and an array of separators. It will split the command by using the separators as separator char. It will return an array of char * containing all arguments. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">char</td><td>* The command to be split. </td></tr>
+    <tr><td class="paramname">char</td><td>* The separators array. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>char ** An array of arguments. </dd></dl>
+
+</div>
+</div>
 <a id="a40013f4791243acdce48c237ac1f6301"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a40013f4791243acdce48c237ac1f6301">&#9670;&nbsp;</a></span>send_command()</h2>
 
@@ -335,6 +479,33 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa05e47fed4b4adeb9c03f6610bcb5cac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa05e47fed4b4adeb9c03f6610bcb5cac">&#9670;&nbsp;</a></span>split_command()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char** split_command </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>command</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a command and split it in a array of char * to process the command. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">char</td><td>* The command to be split. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>char ** The array of char * to be process. </dd></dl>
 
 </div>
 </div>

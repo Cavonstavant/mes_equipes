@@ -90,22 +90,20 @@ $(document).ready(function(){initNavTree('check__command_8c.html',''); initResiz
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="cli__commands_8h_source.html">cli_commands.h</a>&quot;</code><br />
-<code>#include &lt;stddef.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for check_command.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="check__command_8c__incl.png" border="0" usemap="#server_2src_2parser_2check__command_8c" alt=""/></div>
 <map name="server_2src_2parser_2check__command_8c" id="server_2src_2parser_2check__command_8c">
-<area shape="rect" title=" " alt="" coords="45,5,219,47"/>
-<area shape="rect" href="cli__commands_8h.html" title=" " alt="" coords="5,95,133,121"/>
-<area shape="rect" title=" " alt="" coords="157,95,232,121"/>
+<area shape="rect" title=" " alt="" coords="5,5,179,47"/>
+<area shape="rect" href="cli__commands_8h.html" title=" " alt="" coords="28,95,156,121"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a4c97aa9b07ff34928d35e079167ff5c2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="check__command_8c.html#a4c97aa9b07ff34928d35e079167ff5c2">check_arguments</a> (char **arguments)</td></tr>
-<tr class="memdesc:a4c97aa9b07ff34928d35e079167ff5c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check arguments of the command.  <a href="check__command_8c.html#a4c97aa9b07ff34928d35e079167ff5c2">More...</a><br /></td></tr>
+<tr class="memdesc:a4c97aa9b07ff34928d35e079167ff5c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function check if arguments are valid, depending of the first element on the array.  <a href="check__command_8c.html#a4c97aa9b07ff34928d35e079167ff5c2">More...</a><br /></td></tr>
 <tr class="separator:a4c97aa9b07ff34928d35e079167ff5c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -125,15 +123,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Check arguments of the command. </p>
-<p>This function check if arguments are valid, depending of the first element on the array.</p>
+<p>This function check if arguments are valid, depending of the first element on the array. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">char</td><td>** Arguments of the command with the command at the index 0 </td></tr>
+    <tr><td class="paramname">char</td><td>** Array of arguments which will be check. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0, or -1 if it failed. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if arguments are not good, 1 otherwise. </dd></dl>
 
 </div>
 </div>

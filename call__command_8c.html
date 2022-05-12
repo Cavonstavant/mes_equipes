@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Mes équipes: server/src/parser/split_command.h File Reference</title>
+<title>Mes équipes: server/src/parser/call_command.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,7 +64,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('split__command_8h.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('call__command_8c.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -86,54 +86,55 @@ $(document).ready(function(){initNavTree('split__command_8h.html',''); initResiz
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">split_command.h File Reference</div>  </div>
+<div class="title">call_command.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><a href="split__command_8h_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
+<div class="textblock"><code>#include &quot;<a class="el" href="cli__commands_8h_source.html">cli_commands.h</a>&quot;</code><br />
+<code>#include &lt;stddef.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for call_command.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="call__command_8c__incl.png" border="0" usemap="#server_2src_2parser_2call__command_8c" alt=""/></div>
+<map name="server_2src_2parser_2call__command_8c" id="server_2src_2parser_2call__command_8c">
+<area shape="rect" title=" " alt="" coords="115,5,274,47"/>
+<area shape="rect" href="cli__commands_8h.html" title=" " alt="" coords="5,95,133,121"/>
+<area shape="rect" title=" " alt="" coords="157,95,232,121"/>
+<area shape="rect" title=" " alt="" coords="256,95,339,121"/>
+</map>
+</div>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aa48fdc3486fe17bb79555b20e6f43a2a"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="split__command_8h.html#aa48fdc3486fe17bb79555b20e6f43a2a">my_str_to_word_array</a> (char *command, char *separators)</td></tr>
-<tr class="memdesc:aa48fdc3486fe17bb79555b20e6f43a2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">It get a command and an array of separators. It will split the command by using the separators as separator char. It will return an array of char * containing all arguments.  <a href="split__command_8h.html#aa48fdc3486fe17bb79555b20e6f43a2a">More...</a><br /></td></tr>
-<tr class="separator:aa48fdc3486fe17bb79555b20e6f43a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4be9df6c364b51d0d9c6f0497cd7466d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="call__command_8c.html#a4be9df6c364b51d0d9c6f0497cd7466d">call_command</a> (char **arguments)</td></tr>
+<tr class="memdesc:a4be9df6c364b51d0d9c6f0497cd7466d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function call the function corresponding to the command.  <a href="call__command_8c.html#a4be9df6c364b51d0d9c6f0497cd7466d">More...</a><br /></td></tr>
+<tr class="separator:a4be9df6c364b51d0d9c6f0497cd7466d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="aa48fdc3486fe17bb79555b20e6f43a2a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa48fdc3486fe17bb79555b20e6f43a2a">&#9670;&nbsp;</a></span>my_str_to_word_array()</h2>
+<a id="a4be9df6c364b51d0d9c6f0497cd7466d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4be9df6c364b51d0d9c6f0497cd7466d">&#9670;&nbsp;</a></span>call_command()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char** my_str_to_word_array </td>
+          <td class="memname">int call_command </td>
           <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>command</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>arguments</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>separators</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>It get a command and an array of separators. It will split the command by using the separators as separator char. It will return an array of char * containing all arguments. </p>
+<p>This function call the function corresponding to the command. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">char</td><td>* The command to be split. </td></tr>
-    <tr><td class="paramname">char</td><td>* The separators array. </td></tr>
+    <tr><td class="paramname">char</td><td>** Array of arguments which will be used to call the function. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>char ** An array of arguments. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0, or -1 if an error occurs. </dd></dl>
 
 </div>
 </div>
@@ -142,7 +143,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a class="el" href="dir_a063914ab482288b7b0e1b2fca86158c.html">src</a></li><li class="navelem"><a class="el" href="dir_0d2bd8aef9a1d5e03f22ed5477f85ed5.html">parser</a></li><li class="navelem"><a class="el" href="split__command_8h.html">split_command.h</a></li>
+    <li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a class="el" href="dir_a063914ab482288b7b0e1b2fca86158c.html">src</a></li><li class="navelem"><a class="el" href="dir_0d2bd8aef9a1d5e03f22ed5477f85ed5.html">parser</a></li><li class="navelem"><a class="el" href="call__command_8c.html">call_command.c</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
