@@ -28,6 +28,15 @@ static const cli_command_t commands[14] = {
     {"/info", NULL, &info_command}
 };
 
+const cli_command_t *get_cli_command_by_name(char *command)
+{
+    for (int i = 0; i < COMMAND_NUMBER; i++) {
+        if (strcmp(command, commands[i]) == 0)
+            return (&commands[i]);
+    }
+    return (NULL);
+}
+
 const cli_command_t *get_cli_commands()
 {
     return (commands);

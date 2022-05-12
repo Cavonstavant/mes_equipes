@@ -57,6 +57,10 @@ int call_command(char **arguments);
 /// \return const cli_command_t * An array of available commands.
 const cli_command_t *get_cli_commands();
 
+/// \brief This function get a cli_commands depending of it's name.
+/// \return const cli_command_t * Pointer to the corresponding cli_command.
+const cli_command_t *get_cli_command_by_name(char *command);
+
 /// \brief It get a command and an array of separators.
 /// It will split the command by using the separators as separator char.
 /// It will return an array of char * containing all arguments.
