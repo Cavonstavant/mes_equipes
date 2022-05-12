@@ -26,17 +26,14 @@ static void free_args(char **args)
 int compute_command(char *command)
 {
     char **args = split_command(command);
-    int retval = 0;
 
     if (!args) {
         return (-1);
     }
-    retval = check_arguments_validity(args);
-    if (retval < 0) {
+    if (check_arguments_validity(args) < 0) {
         return (-1);
     }
-    retval = call_command_function(args);
-    if (retval < 0) {
+    if (call_command_function(args) < 0) {
         return (-1);
     }
     free_args(args);
