@@ -17,7 +17,7 @@ int call_command(char **arguments)
     void *retval = NULL;
     bool command_found = false;
 
-    for (int i = 0; i < 14; i++) {
+    for (int i = 0; i < COMMAND_NUMBER; i++) {
         if (strcmp(arguments[0], commands[i].name) == 0) {
             retval = commands[i].function(NULL);
             command_found = true;

@@ -42,7 +42,7 @@ int check_arguments(char **arguments)
 {
     cli_command_t *commands = get_cli_commands();
 
-    for (int i = 0; i < 14; i++) {
+    for (int i = 0; i < COMMAND_NUMBER; i++) {
         if (find_command(arguments, &commands[i])) {
             return (1);
         }

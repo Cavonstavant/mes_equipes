@@ -10,6 +10,7 @@
 #ifndef PARSER_H_
     #define PARSER_H_
 
+    #define COMMAND_NUMBER 14
 /// \brief structure to store available client command.
 typedef struct cli_command_s {
     /// \brief char * The name of the command.
