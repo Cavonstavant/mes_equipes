@@ -21,7 +21,7 @@
     #include <stddef.h>
 
     ///
-    /// \brief WError inside a Wrapper object
+    /// \brief Error inside a Wrapper object
     ///
     #define WRAPPER_ERROR NULL
 
