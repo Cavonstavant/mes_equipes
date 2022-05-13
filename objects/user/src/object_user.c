@@ -30,3 +30,15 @@ user_t *user_init(user_creation_t content)
     new_user->status = status_init(); /// NEED TO CHANGE STATUS STATE #24
     return new_user;
 }
+
+void user_destroy(user_t *user)
+{
+    if (user == USER_ERROR)
+        return;
+    my_uuid_destroy(user->uuid);
+    name_destroy(user->name);
+    status_destroy(user->status);
+    free(user->teams);
+    free(user->conversation);
+    free(user);
+}

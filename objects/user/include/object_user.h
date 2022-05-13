@@ -55,4 +55,12 @@ typedef struct user_creation_s {
 ///
 user_t *user_init(user_creation_t content);
 
+///
+/// \brief Destroy a user object
+/// If the user is USER_ERROR, do nothing
+///
+/// \param user User object to destroy
+///
+void user_destroy(user_t *user);
+
 #endif /* !OBJECT_USER_H_ */
