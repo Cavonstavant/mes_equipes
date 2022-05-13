@@ -13,16 +13,16 @@ static void bind_and_listen_on_socket(tcp_server_t *srv, long port)
 {
     srv->sock_fd = socket(PF_INET, SOCK_STREAM, 0);
     if (srv->sock_fd < 0)
-        HANDLE_ERROR("socket");
+        TEAMS_LOG("socket");
     bzero(&srv->self, sizeof(srv->self));
     srv->self.sin_family = AF_INET;
     srv->self.sin_port = htons(port);
     srv->self.sin_addr.s_addr = htonl(INADDR_ANY);
     if (bind(srv->sock_fd, (struct sockaddr *) &srv->self,
         sizeof(struct sockaddr)) < 0)
-        HANDLE_ERROR("bind");
+        TEAMS_LOG("bind");
     if (listen(srv->sock_fd, LISTEN_BACKLOG) < 0)
-        HANDLE_ERROR("listen");
+        TEAMS_LOG("listen");
 }
 
 bool add_user_to_server(tcp_server_t *srv, char *username, char *password)
@@ -41,7 +41,7 @@ tcp_server_t *create_tcp_server(long port)
     tcp_server_t *server = malloc(sizeof(tcp_server_t));
 
     if (!server)
-        HANDLE_ERROR("malloc");
+        TEAMS_LOG("malloc");
     server->port = htons(port);
     bind_and_listen_on_socket(server, port);
     FD_ZERO(&server->read_fds);

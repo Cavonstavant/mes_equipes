@@ -20,6 +20,7 @@
     #include <stdlib.h>
     #include <stdbool.h>
     #include <unistd.h>
+    #include <errno.h>
     #include "net_utils/auth/user.h"
 
     #define LISTEN_BACKLOG 50
@@ -97,8 +98,16 @@ typedef struct tcp_server_s {
     void *arbitrary_data;
 } tcp_server_t;
 
-    #define HANDLE_ERROR(msg) \
-        do {perror(msg); exit(84);} while (0)
+static inline void log_error(int line,
+    const char *file,
+    const char *func,
+    const char *msg)
+{
+    printf("%s:%d:%s():\n%s: %s\n", file, line, func, msg, strerror(errno));
+}
+
+    #define TEAMS_LOG(msg) \
+        do {log_error(__LINE__, __FILE__, __func__, msg);} while (0)
 
 /// \brief Creates a new client
 /// \param sock_fd The client file descriptor
@@ -130,8 +139,9 @@ bool add_user_to_server(tcp_server_t *srv, char *username, char *password);
 /// \param srv The tcp server containing the peers and the w/r fd sets
 void server_fill_fd_sets(tcp_server_t *srv);
 
+/// 
 int server_wait(tcp_server_t *srv);
 
-bool server_read(tcp_server_t *srv);
+bool server_manage_fd_update(tcp_server_t *srv);
 
 #endif //NET_UTILS_H
