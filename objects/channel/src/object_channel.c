@@ -29,3 +29,14 @@ channel_t *channel_init(channel_creation_t content)
     new_channel->threads[0] = NULL;
     return new_channel;
 }
+
+void channel_destroy(channel_t *channel)
+{
+    if (channel == CHANNEL_ERROR)
+        return;
+    name_destroy(channel->name);
+    description_destroy(channel->description);
+    my_uuid_destroy(channel->uuid);
+    free(channel->threads);
+    free(channel);
+}
