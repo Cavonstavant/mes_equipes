@@ -64,4 +64,12 @@ typedef struct thread_creation_s {
 ///
 thread_t *thread_init(thread_creation_t content);
 
+///
+/// \brief Destroy a thread object
+/// If the thread is THREAD_ERROR, do nothing
+///
+/// \param thread Thread object to destroy
+///
+void thread_destroy(thread_t *thread);
+
 #endif /* !OBJECT_THREADS_H_ */
