@@ -2,13 +2,13 @@
 ** EPITECH PROJECT, 2022
 ** Project
 ** File description:
-** content_adding
+** upper_component_adding
 */
 
 /// \file objects/wrapper/include/upper_component_adding.h
 
-#ifndef CONTENT_ADDING_H_
-    #define CONTENT_ADDING_H_
+#ifndef UPPER_COMPONENT_ADDING_H_
+    #define UPPER_COMPONENT_ADDING_H_
 
     #include "object_wrapper.h"
     #include <stdlib.h>
@@ -75,4 +75,4 @@ thread_creation_t content);
 bool wrapper_adding_channel(object_wrapper_t *wrapper,
 channel_creation_t content);
 
-#endif /* !CONTENT_ADDING_H_ */
+#endif /* !UPPER_COMPONENT_ADDING_H_ */

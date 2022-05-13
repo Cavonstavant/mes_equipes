@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2022
 ** Project
 ** File description:
-** wrapper_adding
+** upper_component_adding
 */
 
 /// \file objects/wrapper/src/upper_component_adding.c

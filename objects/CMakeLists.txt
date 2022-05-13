@@ -45,6 +45,7 @@ set (SRC
     ${SRC_UUID}/object_uuid.c
     ${SRC_WRAPPER}/object_wrapper.c
     ${SRC_WRAPPER}/upper_component_adding.c
+    ${SRC_WRAPPER}/lower_component_adding.c
 )
 
 add_library(${TARGET} ${SRC})
