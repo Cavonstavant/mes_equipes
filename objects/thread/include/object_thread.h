@@ -15,17 +15,22 @@
     #include "object_body.h"
     #include <time.h>
 
+    ///
+    /// \brief Error inside a thread object
+    ///
+    #define THREAD_ERROR NULL
+
 ///
 /// \brief Thread object
 ///
 ///
 typedef struct thread_s {
     /// Uuid of the thread
-    my_uuid_t uuid;
+    my_uuid_t *uuid;
     /// Uuid of the attached author
-    my_uuid_t author;
+    my_uuid_t *author;
     /// Uuid of the attached channel
-    my_uuid_t channel;
+    my_uuid_t *channel;
     /// Name of the thread
     name_t name;
     /// Body of the thread
@@ -33,7 +38,7 @@ typedef struct thread_s {
     /// Time of creation of the thread
     time_t date;
     /// Uuid list of the attached comments
-    my_uuid_t *comments;
+    my_uuid_t **comments;
 } thread_t;
 
 ///
@@ -42,13 +47,21 @@ typedef struct thread_s {
 ///
 typedef struct thread_creation_s {
     /// Initial name for the thread creation
-    name_t name;
+    char *name;
     /// Initial body for the thread creation
-    body_t body;
+    char *body;
     /// Author uuid of the thread
-    my_uuid_t author;
+    my_uuid_t *author;
     /// parent channel for the thread creation
-    my_uuid_t channel;
+    my_uuid_t *channel;
 } thread_creation_t;
+
+///
+/// \brief Init a new thread object
+///
+/// \param content Content of the new thread object
+/// \return thread_t* Newly created thread object
+///
+thread_t *thread_init(thread_creation_t content);
 
 #endif /* !OBJECT_THREADS_H_ */
