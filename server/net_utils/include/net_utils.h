@@ -84,15 +84,6 @@ typedef struct tcp_server_s {
     /// The collection of errored file descriptor set
     fd_set err_fds;
 
-    /// Temporary read file descriptor set used in select
-    fd_set tmp_read_fds;
-
-    /// Temporary write file descriptor set used in select
-    fd_set tmp_write_fds;
-
-    /// Temporary error file descriptor set used in select
-    fd_set tmp_err_fds;
-
     /// Sockets to be removed after read failed
     /// sockets_to_be_removed[i] == true if the socket at index <b>i</b> is
     ///to be removed
@@ -119,6 +110,8 @@ peer_t *new_peer(int fd, struct sockaddr_in addr);
 /// \param tbr to be removed peers with <b>tbr[peer->sock_fd] == 1</b>
 void remove_unused_sockets(struct peers_head *peers, int tbr[FD_SETSIZE]);
 
+
+/// \brief Util function to display currently connected clients
 void display_clients(struct peers_head *peers_head);
 
 /// \brief Create a TCP server
@@ -132,20 +125,13 @@ tcp_server_t *create_tcp_server(long port);
 /// \warning The password is inserted 'as is' inside the server
 bool add_user_to_server(tcp_server_t *srv, char *username, char *password);
 
-/// \brief Restore read and write fd sets to their state
-/// before calling select / pselect
-/// \param read_fds The read fd set to restore
-/// \param write_fds The write fd set to restore
-/// \param read_save The saverd read fds
-/// \param write_save The saved write fds
-void restore_fd_sets(fd_set *read_fds, fd_set *write_fds,
-    fd_set *read_save, fd_set *write_save);
-
 /// \brief Update the read and write fd sets according to
 /// peer_t::pending_command of every peers connected
 /// \param srv The tcp server containing the peers and the w/r fd sets
-void fill_fd_sets(tcp_server_t *srv);
+void server_fill_fd_sets(tcp_server_t *srv);
 
-bool host_selected_process(tcp_server_t *srv);
+int server_wait(tcp_server_t *srv);
+
+bool server_read(tcp_server_t *srv);
 
 #endif //NET_UTILS_H
