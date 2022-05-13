@@ -41,10 +41,6 @@ typedef struct object_wrapper_s {
     conversation_t **conversations;
     /// Number of conversations
     int conversation_n;
-    /// List of all the description
-    description_t **descriptions;
-    /// Number of descriptions
-    int description_n;
     /// List of all the message
     message_t **messages;
     /// Number of messages
@@ -71,4 +67,11 @@ typedef struct object_wrapper_s {
 ///
 object_wrapper_t *wrapper_init(void);
 
+///
+/// \brief Destroy a wrapper object
+/// If the wrapper object is WRAPPER_ERROR, do nothing
+///
+/// \param wrapper Wrapper object to destroy
+///
+void wrapper_destroy(object_wrapper_t *wrapper);
 #endif /* !OBJECT_WRAPPER_H_ */
