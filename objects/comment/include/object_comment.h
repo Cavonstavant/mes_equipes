@@ -57,4 +57,12 @@ typedef struct comment_creation_s {
 ///
 comment_t *comment_init(comment_creation_t content);
 
+///
+/// \brief Destroy a comment object
+/// If the comment is COMMENT_ERROR, do nothing
+///
+/// \param comment Comment object to destroy
+///
+void comment_destroy(comment_t *comment);
+
 #endif /* !OBJECT_COMMENT_H_ */

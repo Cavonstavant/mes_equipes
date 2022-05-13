@@ -25,3 +25,12 @@ comment_t *comment_init(comment_creation_t content)
     new_comment->time = time(NULL);
     return new_comment;
 }
+
+void comment_destroy(comment_t *comment)
+{
+    if (comment == COMMENT_ERROR)
+        return;
+    my_uuid_destroy(comment->uuid);
+    body_destroy(comment->body);
+    free(comment);
+}
