@@ -7,6 +7,7 @@
 
 #include <criterion/criterion.h>
 #include "object_wrapper.h"
+#include "upper_component_adding.h"
 
 Test(objects_my_wrapper, classic) {
     object_wrapper_t *my_wrapper = wrapper_init();
