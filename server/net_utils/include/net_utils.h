@@ -32,8 +32,10 @@
 typedef struct peer_s {
     /// A file descriptor for the socket.
     int sock_fd;
-    /// The address of the client.
+
+    /// The address of the client
     struct sockaddr_in peer_addr;
+
     // A pointer to a generic data type.
     void *data;
 
@@ -49,7 +51,7 @@ typedef struct peer_s {
     /// defaulted to false
     bool pending_write;
 
-    /// A pointer to the next/prev peer.
+    /// A pointer to the next/prev peer
     CIRCLEQ_ENTRY(peer_s) peers;
 } peer_t;
 
@@ -58,15 +60,49 @@ CIRCLEQ_HEAD(peers_head, peer_s);
 
 /// \brief Represents a basic tcp server
 typedef struct tcp_server_s {
+    /// The file descriptor of the server socket
     int sock_fd;
+
+    /// The port of the server
     uint16_t port;
+
+    /// The address representation of the server
     struct sockaddr_in self;
+
+    /// The collection of clients (network side)
     struct peers_head peers_head;
+
+    /// The collection of users (application side)
     struct users_head users_head;
+
+    /// The collection of file descriptor set that are ready to be read
     fd_set read_fds;
+
+    /// The collection of file descriptor set that are ready to be written
     fd_set write_fds;
+
+    /// The collection of errored file descriptor set
+    fd_set err_fds;
+
+    /// Temporary read file descriptor set used in select
+    fd_set tmp_read_fds;
+
+    /// Temporary write file descriptor set used in select
+    fd_set tmp_write_fds;
+
+    /// Temporary error file descriptor set used in select
+    fd_set tmp_err_fds;
+
+    /// Sockets to be removed after read failed
+    /// sockets_to_be_removed[i] == true if the socket at index <b>i</b> is
+    ///to be removed
     int sockets_to_be_removed[FD_SETSIZE];
+
+    /// The state of the server
+    /// true == running / false == stopped
     bool state;
+
+    /// Arbitrary data to be stored inside the server
     void *arbitrary_data;
 } tcp_server_t;
 
