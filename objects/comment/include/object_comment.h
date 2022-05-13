@@ -14,17 +14,22 @@
     #include "object_body.h"
     #include <time.h>
 
+    ///
+    /// \brief Error inside a comment object
+    ///
+    #define COMMENT_ERROR NULL
+
 ///
 /// \brief Comment object
 ///
 ///
 typedef struct comment_s {
     /// Uuid of the comment
-    my_uuid_t uuid;
+    my_uuid_t *uuid;
     /// Uuid of the attached thread
-    my_uuid_t thread;
+    my_uuid_t *thread;
     /// Uuid of the attached user
-    my_uuid_t author;
+    my_uuid_t *author;
     /// Body object of the comment
     body_t body;
     /// Time creation of the comment
@@ -37,11 +42,19 @@ typedef struct comment_s {
 ///
 typedef struct comment_creation_s {
     /// Initial body for the comment creation
-    body_t body;
+    char *body;
     /// parent thread for the comment creation
-    my_uuid_t thread;
+    my_uuid_t *thread;
     /// author uuid for the comment creation
-    my_uuid_t author;
+    my_uuid_t *author;
 } comment_creation_t;
+
+///
+/// \brief Init a comment object
+///
+/// \param content content of the comment object
+/// \return comment_t* Newly created content object
+///
+comment_t *comment_init(comment_creation_t content);
 
 #endif /* !OBJECT_COMMENT_H_ */
