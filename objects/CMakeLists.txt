@@ -11,6 +11,8 @@ set (INCLUDE_THREAD ${PROJECT_SOURCE_DIR}/objects/thread/include)
 set (INCLUDE_USER ${PROJECT_SOURCE_DIR}/objects/user/include)
 set (INCLUDE_UUID ${PROJECT_SOURCE_DIR}/objects/uuid/include)
 
+set (INCLUDE_WRAPPER ${PROJECT_SOURCE_DIR}/objects/wrapper/include)
+
 set (SRC_BODY ${PROJECT_SOURCE_DIR}/objects/body/src)
 set (SRC_CHANNEL ${PROJECT_SOURCE_DIR}/objects/channel/src)
 set (SRC_COMMENT ${PROJECT_SOURCE_DIR}/objects/comment/src)
@@ -23,6 +25,8 @@ set (SRC_TEAM ${PROJECT_SOURCE_DIR}/objects/team/src)
 set (SRC_THREAD ${PROJECT_SOURCE_DIR}/objects/thread/src)
 set (SRC_USER ${PROJECT_SOURCE_DIR}/objects/user/src)
 set (SRC_UUID ${PROJECT_SOURCE_DIR}/objects/uuid/src)
+
+set (SRC_WRAPPER ${PROJECT_SOURCE_DIR}/objects/wrapper/src)
 
 set (TARGET ${PROJECT_NAME}_objects)
 
@@ -39,6 +43,7 @@ set (SRC
     ${SRC_THREAD}/object_thread.c
     ${SRC_USER}/object_user.c
     ${SRC_UUID}/object_uuid.c
+    ${SRC_WRAPPER}/object_wrapper.c
 )
 
 add_library(${TARGET} ${SRC})
@@ -60,6 +65,7 @@ target_include_directories(${TARGET}
     PUBLIC ${INCLUDE_THREAD}
     PUBLIC ${INCLUDE_USER}
     PUBLIC ${INCLUDE_UUID}
+    PUBLIC ${INCLUDE_WRAPPER}
     PRIVATE ${SRC_ROOT}
 )
 
