@@ -28,3 +28,13 @@ conversation_t *conversation_init(conversation_creation_t content)
     new_conv->participant[1] = content.participant_two;
     return new_conv;
 }
+
+void conversation_destroy(conversation_t *conversation)
+{
+    if (conversation == CONVERSATION_ERROR)
+        return;
+    my_uuid_destroy(conversation->uuid);
+    free(conversation->participant);
+    free(conversation->messages);
+    free(conversation);
+}

@@ -51,4 +51,12 @@ typedef struct conversation_creation_s {
 ///
 conversation_t *conversation_init(conversation_creation_t content);
 
+///
+/// \brief Destroy a conversation object
+/// If the conversation is CONVERSATION_ERROR, do nothing
+///
+/// \param conversation Conversation object to destroy
+///
+void conversation_destroy(conversation_t *conversation);
+
 #endif /* !OBJECT_CONVERSATION_H_ */
