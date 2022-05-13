@@ -8,17 +8,9 @@
 /// \file server/net_utils/fd_set_manage.c
 
 #include "net_utils.h"
+#include <sys/time.h>
 
-void restore_fd_sets(fd_set *read_fds, fd_set *write_fds,
-    fd_set *read_save, fd_set *write_save)
-{
-    FD_ZERO(read_fds);
-    FD_ZERO(write_fds);
-    *read_fds = *read_save;
-    *write_fds = *write_save;
-}
-
-void fill_fd_sets(tcp_server_t *srv)
+void server_fill_fd_sets(tcp_server_t *srv)
 {
     peer_t *tmp = NULL;
 
