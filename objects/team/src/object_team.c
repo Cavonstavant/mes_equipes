@@ -31,3 +31,15 @@ team_t *team_init(team_creation_t content)
     new_team->channels[0] = NULL;
     return new_team;
 }
+
+void team_destroy(team_t *team)
+{
+    if (team == TEAM_ERROR)
+        return;
+    my_uuid_destroy(team->uuid);
+    name_destroy(team->name);
+    description_destroy(team->description);
+    free(team->channels);
+    free(team->users);
+    free(team);
+}

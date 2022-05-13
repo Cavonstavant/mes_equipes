@@ -55,4 +55,12 @@ typedef struct team_creation_s {
 ///
 team_t *team_init(team_creation_t content);
 
+///
+/// \brief Destroy a team object
+/// If the team is TEAM_ERROR, do nothing
+///
+/// \param team Team object to destroy
+///
+void team_destroy(team_t *team);
+
 #endif /* !OBJECT_TEAM_H_ */
