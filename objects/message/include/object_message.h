@@ -49,4 +49,12 @@ typedef struct message_creation_s {
 ///
 message_t *message_init(message_creation_t content);
 
+///
+/// \brief Destroy a message object
+/// If the message is MESSAGE_ERROR, do nothing
+///
+/// \param message Message object to destroy
+///
+void message_destroy(message_t *message);
+
 #endif /* !OBJECT_MESSAGE_H_ */

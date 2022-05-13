@@ -23,3 +23,12 @@ message_t *message_init(message_creation_t content)
     new_message->time = time(NULL);
     return new_message;
 }
+
+void message_destroy(message_t *message)
+{
+    if (message == MESSAGE_ERROR)
+        return;
+    my_uuid_destroy(message->uuid);
+    body_destroy(message->body);
+    free(message);
+}
