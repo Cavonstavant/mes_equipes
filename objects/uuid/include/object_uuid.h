@@ -11,6 +11,7 @@
     #define OBJECT_UUID_H_
 
     #include <stddef.h>
+    #include "my_uuid.h"
 
     #define UUID_ERROR NULL
 
@@ -40,13 +41,12 @@ typedef enum uuid_type_s {
 /// To Refacto with issue #25
 ///
 typedef struct my_uuid_s {
-    char *uuid;
-    uuid_type_t type;
+    w_uuid_t uuid;
 } my_uuid_t;
 
 ///
 /// \brief Init a My_uuid object
-/// Call the Uuid library to generate a unique UUID
+/// Call the uuid library to generate a unique UUID
 ///
 /// \param uuid_content Store the type of the uuid
 /// \return my_uuid_t The newly created uuid object

@@ -14,21 +14,26 @@
     #include "object_name.h"
     #include "object_description.h"
 
+    ///
+    /// \brief Error inside a channel object
+    ///
+    #define CHANNEL_ERROR NULL
+
 ///
 /// \brief Channel object
 ///
 ///
 typedef struct channel_s {
     /// Uuid of the channel
-    my_uuid_t uuid;
+    my_uuid_t *uuid;
     /// Name of the channel
     name_t name;
     /// Description of the channel
     description_t description;
     /// Uuid of the attached team
-    my_uuid_t team;
+    my_uuid_t *team;
     /// Uuid list of the attached threads
-    my_uuid_t *threads;
+    my_uuid_t **threads;
 } channel_t;
 
 ///
@@ -37,11 +42,27 @@ typedef struct channel_s {
 ///
 typedef struct channel_creation_s {
     /// Initial team for the channel creation
-    name_t name;
+    char *name;
     /// Initial description for the channel creation
-    description_t description;
+    char *description;
     /// parent team for the channel creation
-    my_uuid_t team;
+    my_uuid_t *team;
 } channel_creation_t;
+
+///
+/// \brief Init a Channel object
+///
+/// \param content Content of the new Channel object
+/// \return channel_t* channel_t newly created
+///
+channel_t *channel_init(channel_creation_t content);
+
+///
+/// \brief Destroy a channel object
+/// If the channel is CHANNEL_ERROR, do nothing
+///
+/// \param channel Channel object to destroy
+///
+void channel_destroy(channel_t *channel);
 
 #endif /* !OBJECT_CHANNEL_H_ */
