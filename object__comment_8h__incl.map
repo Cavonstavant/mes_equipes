@@ -1,7 +1,11 @@
 <map id="objects/comment/include/object_comment.h" name="objects/comment/include/object_comment.h">
-<area shape="rect" id="node1" title=" " alt="" coords="101,5,288,47"/>
-<area shape="rect" id="node2" href="$object__uuid_8h.html" title=" " alt="" coords="5,95,115,121"/>
-<area shape="rect" id="node4" href="$object__body_8h.html" title=" " alt="" coords="139,95,250,121"/>
-<area shape="rect" id="node5" title=" " alt="" coords="275,95,339,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="89,169,164,196"/>
+<area shape="rect" id="node1" title=" " alt="" coords="102,5,289,47"/>
+<area shape="rect" id="node2" href="$object__uuid_8h.html" title=" " alt="" coords="141,95,250,121"/>
+<area shape="rect" id="node8" href="$object__body_8h.html" title=" " alt="" coords="5,95,116,121"/>
+<area shape="rect" id="node9" title=" " alt="" coords="274,95,338,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="38,169,113,196"/>
+<area shape="rect" id="node4" href="$my__uuid_8h.html" title=" " alt="" coords="150,169,241,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="43,244,137,271"/>
+<area shape="rect" id="node6" title=" " alt="" coords="162,244,229,271"/>
+<area shape="rect" id="node7" title=" " alt="" coords="253,244,324,271"/>
 </map>

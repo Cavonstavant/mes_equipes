@@ -1,5 +1,5 @@
 var structuser__creation__s =
 [
-    [ "name", "structuser__creation__s.html#a35f4a5dcaa76112836627f69e68f0d91", null ],
-    [ "status", "structuser__creation__s.html#a28e8c05c01a78ddd5781beee19ef9b4d", null ]
+    [ "name", "structuser__creation__s.html#afebc0732f6a687d5bfa8eec58d7b1bab", null ],
+    [ "status", "structuser__creation__s.html#ab92b0b63af8a46869a281b32adc3845b", null ]
 ];

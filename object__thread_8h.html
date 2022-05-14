@@ -85,7 +85,9 @@ $(document).ready(function(){initNavTree('object__thread_8h.html',''); initResiz
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">object_thread.h File Reference</div>  </div>
 </div><!--header-->
@@ -99,12 +101,16 @@ Include dependency graph for object_thread.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="object__thread_8h__incl.png" border="0" usemap="#objects_2thread_2include_2object__thread_8h" alt=""/></div>
 <map name="objects_2thread_2include_2object__thread_8h" id="objects_2thread_2include_2object__thread_8h">
-<area shape="rect" title=" " alt="" coords="185,5,351,47"/>
-<area shape="rect" href="object__uuid_8h.html" title=" " alt="" coords="5,95,115,121"/>
-<area shape="rect" href="object__name_8h.html" title=" " alt="" coords="139,95,258,121"/>
-<area shape="rect" href="object__body_8h.html" title=" " alt="" coords="282,95,393,121"/>
+<area shape="rect" title=" " alt="" coords="187,5,353,47"/>
+<area shape="rect" href="object__uuid_8h.html" title=" " alt="" coords="283,95,393,121"/>
+<area shape="rect" href="object__name_8h.html" title=" " alt="" coords="5,95,124,121"/>
+<area shape="rect" href="object__body_8h.html" title=" " alt="" coords="148,95,259,121"/>
 <area shape="rect" title=" " alt="" coords="417,95,481,121"/>
-<area shape="rect" title=" " alt="" coords="161,169,236,196"/>
+<area shape="rect" title=" " alt="" coords="166,169,241,196"/>
+<area shape="rect" href="my__uuid_8h.html" title=" " alt="" coords="293,169,383,196"/>
+<area shape="rect" title=" " alt="" coords="185,244,280,271"/>
+<area shape="rect" title=" " alt="" coords="305,244,371,271"/>
+<area shape="rect" title=" " alt="" coords="396,244,467,271"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -128,6 +134,12 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread creation object Object containing all the information for a thread creation.  <a href="structthread__creation__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a59ac2fb591b30feb3786e5df38cace25"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__thread_8h.html#a59ac2fb591b30feb3786e5df38cace25">THREAD_ERROR</a>&#160;&#160;&#160;NULL</td></tr>
+<tr class="memdesc:a59ac2fb591b30feb3786e5df38cace25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error inside a thread object.  <a href="object__thread_8h.html#a59ac2fb591b30feb3786e5df38cace25">More...</a><br /></td></tr>
+<tr class="separator:a59ac2fb591b30feb3786e5df38cace25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a2be49e4dddf107b380ba10748317741d"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structthread__s.html">thread_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__thread_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a></td></tr>
@@ -136,7 +148,33 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a7ea83d021381cfce258ea6215263e426"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structthread__creation__s.html">thread_creation_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__thread_8h.html#a7ea83d021381cfce258ea6215263e426">thread_creation_t</a></td></tr>
 <tr class="memdesc:a7ea83d021381cfce258ea6215263e426"><td class="mdescLeft">&#160;</td><td class="mdescRight">Thread creation object Object containing all the information for a thread creation.  <a href="object__thread_8h.html#a7ea83d021381cfce258ea6215263e426">More...</a><br /></td></tr>
 <tr class="separator:a7ea83d021381cfce258ea6215263e426"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a4ecab8afb6ac4b3f4075989480d82602"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__thread_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__thread_8h.html#a4ecab8afb6ac4b3f4075989480d82602">thread_init</a> (<a class="el" href="object__thread_8h.html#a7ea83d021381cfce258ea6215263e426">thread_creation_t</a> content)</td></tr>
+<tr class="memdesc:a4ecab8afb6ac4b3f4075989480d82602"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init a new thread object.  <a href="object__thread_8h.html#a4ecab8afb6ac4b3f4075989480d82602">More...</a><br /></td></tr>
+<tr class="separator:a4ecab8afb6ac4b3f4075989480d82602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09763770f7ed31a8f14e25c6062b7989"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__thread_8h.html#a09763770f7ed31a8f14e25c6062b7989">thread_destroy</a> (<a class="el" href="object__thread_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a> *thread)</td></tr>
+<tr class="memdesc:a09763770f7ed31a8f14e25c6062b7989"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a thread object If the thread is THREAD_ERROR, do nothing.  <a href="object__thread_8h.html#a09763770f7ed31a8f14e25c6062b7989">More...</a><br /></td></tr>
+<tr class="separator:a09763770f7ed31a8f14e25c6062b7989"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a59ac2fb591b30feb3786e5df38cace25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59ac2fb591b30feb3786e5df38cace25">&#9670;&nbsp;</a></span>THREAD_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define THREAD_ERROR&#160;&#160;&#160;NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Error inside a thread object. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a7ea83d021381cfce258ea6215263e426"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7ea83d021381cfce258ea6215263e426">&#9670;&nbsp;</a></span>thread_creation_t</h2>
@@ -167,6 +205,60 @@ Typedefs</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Thread object. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a09763770f7ed31a8f14e25c6062b7989"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09763770f7ed31a8f14e25c6062b7989">&#9670;&nbsp;</a></span>thread_destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void thread_destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__thread_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a> *&#160;</td>
+          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destroy a thread object If the thread is THREAD_ERROR, do nothing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>Thread object to destroy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4ecab8afb6ac4b3f4075989480d82602"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ecab8afb6ac4b3f4075989480d82602">&#9670;&nbsp;</a></span>thread_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__thread_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a>* thread_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__thread_8h.html#a7ea83d021381cfce258ea6215263e426">thread_creation_t</a>&#160;</td>
+          <td class="paramname"><em>content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Init a new thread object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">content</td><td>Content of the new thread object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>thread_t* Newly created thread object </dd></dl>
 
 </div>
 </div>

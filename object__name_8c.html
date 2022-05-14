@@ -110,7 +110,7 @@ Include dependency graph for object_name.c:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aad501cf366c38f0ce88ac0da0d849393"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__name_8h.html#a7c53defcff0156d399a40b293cfa94b9">name_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__name_8c.html#aad501cf366c38f0ce88ac0da0d849393">name_init</a> (char *name_content)</td></tr>
-<tr class="memdesc:aad501cf366c38f0ce88ac0da0d849393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init a name object If the name_contet is too long compared to NAME_SIZE, return NAME_ERROR.  <a href="object__name_8c.html#aad501cf366c38f0ce88ac0da0d849393">More...</a><br /></td></tr>
+<tr class="memdesc:aad501cf366c38f0ce88ac0da0d849393"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init a name object.  <a href="object__name_8c.html#aad501cf366c38f0ce88ac0da0d849393">More...</a><br /></td></tr>
 <tr class="separator:aad501cf366c38f0ce88ac0da0d849393"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bf14b5c1159a184866399de7f36b4e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__name_8c.html#a2bf14b5c1159a184866399de7f36b4e3">name_destroy</a> (<a class="el" href="object__name_8h.html#a7c53defcff0156d399a40b293cfa94b9">name_t</a> name_to_destroy)</td></tr>
 <tr class="memdesc:a2bf14b5c1159a184866399de7f36b4e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a Name object If the name_to_destroy is NAME_ERROR, do nothing.  <a href="object__name_8c.html#a2bf14b5c1159a184866399de7f36b4e3">More...</a><br /></td></tr>
@@ -159,14 +159,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Init a name object If the name_contet is too long compared to NAME_SIZE, return NAME_ERROR. </p>
+<p>Init a name object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name_content</td><td>Content of the new name object </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>name_t The newly created name object </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>name_t The newly created name object If the name_content is too long compared to NAME_SIZE, return NAME_ERROR </dd></dl>
 
 </div>
 </div>

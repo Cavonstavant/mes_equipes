@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['status_253',['status',['../structuser__s.html#afc7d47ad763d508ce22c162f22cba47e',1,'user_s::status()'],['../structuser__creation__s.html#a28e8c05c01a78ddd5781beee19ef9b4d',1,'user_creation_s::status()']]]
+  ['participant_304',['participant',['../structconversation__s.html#ad8500606a3d3564ea331bb7dddfda413',1,'conversation_s']]],
+  ['participant_5fone_305',['participant_one',['../structconversation__creation__s.html#a2a8baebe5949ef8f4898ce15f6980d68',1,'conversation_creation_s']]],
+  ['participant_5ftwo_306',['participant_two',['../structconversation__creation__s.html#a5877913683f22ef6e0308ae3ea5cee72',1,'conversation_creation_s']]]
 ];

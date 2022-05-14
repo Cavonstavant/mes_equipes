@@ -1,6 +1,6 @@
 var structcomment__creation__s =
 [
-    [ "author", "structcomment__creation__s.html#a4ed36a5727ae76f50482ed655d1f0b7f", null ],
-    [ "body", "structcomment__creation__s.html#a898e9f2a0f4fdee1eb83f9b9424e460e", null ],
-    [ "thread", "structcomment__creation__s.html#a106ae4854046c936cd5c8045b12d5952", null ]
+    [ "author", "structcomment__creation__s.html#a4e66db7ec21a907bbefa1c267392ec81", null ],
+    [ "body", "structcomment__creation__s.html#a025be9b0c37198ae84f7234e513311c0", null ],
+    [ "thread", "structcomment__creation__s.html#a5b16d90fab04ded4422ef30004e9f374", null ]
 ];

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Mes équipes: objects/thread/include -&gt; name Relation</title>
+<title>Mes équipes: w_uuid_s Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,7 +64,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('dir_5ca645fcb9fab97975d756a86d658c5a.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('structw__uuid__s.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -82,13 +82,73 @@ $(document).ready(function(){initNavTree('dir_5ca645fcb9fab97975d756a86d658c5a.h
 </iframe>
 </div>
 
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="structw__uuid__s-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">w_uuid_s Struct Reference</div>  </div>
+</div><!--header-->
 <div class="contents">
-<h3>include &rarr; name Relation</h3><table class="dirtab"><tr class="dirtab"><th class="dirtab">File in objects/thread/include</th><th class="dirtab">Includes file in objects/name</th></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="object__thread_8h.html">object_thread.h</a></td><td class="dirtab"><a class="el" href="dir_363eeeeea33f21bdc839b514901f1b9b.html">include</a>&#160;/&#160;<a class="el" href="object__name_8h.html">object_name.h</a></td></tr></table></div><!-- contents -->
+
+<p>wrapper struct around uuid_t  
+ <a href="structw__uuid__s.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="my__uuid_8h_source.html">my_uuid.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:aa3ba519f4222da427777e96868db14d5"><td class="memItemLeft" align="right" valign="top">uuid_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structw__uuid__s.html#aa3ba519f4222da427777e96868db14d5">uuid</a></td></tr>
+<tr class="memdesc:aa3ba519f4222da427777e96868db14d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">uuid_t instance  <a href="structw__uuid__s.html#aa3ba519f4222da427777e96868db14d5">More...</a><br /></td></tr>
+<tr class="separator:aa3ba519f4222da427777e96868db14d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a396cbedd8af9ec15a0c0c7f37afeec79"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structw__uuid__s.html#a396cbedd8af9ec15a0c0c7f37afeec79">repr</a> [40]</td></tr>
+<tr class="memdesc:a396cbedd8af9ec15a0c0c7f37afeec79"><td class="mdescLeft">&#160;</td><td class="mdescRight">null terminated string representation of uuid_t  <a href="structw__uuid__s.html#a396cbedd8af9ec15a0c0c7f37afeec79">More...</a><br /></td></tr>
+<tr class="separator:a396cbedd8af9ec15a0c0c7f37afeec79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>wrapper struct around uuid_t </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a396cbedd8af9ec15a0c0c7f37afeec79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a396cbedd8af9ec15a0c0c7f37afeec79">&#9670;&nbsp;</a></span>repr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char w_uuid_s::repr[40]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>null terminated string representation of uuid_t </p>
+
+</div>
+</div>
+<a id="aa3ba519f4222da427777e96868db14d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3ba519f4222da427777e96868db14d5">&#9670;&nbsp;</a></span>uuid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uuid_t w_uuid_s::uuid</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>uuid_t instance </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>objects/uuid/uuid_wrapper/src/include/<a class="el" href="my__uuid_8h_source.html">my_uuid.h</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_645ec83fa4e243a732144956da80a200.html">objects</a></li><li class="navelem"><a class="el" href="dir_da6cf21d666cf4c4180e109b2ec823db.html">thread</a></li><li class="navelem"><a class="el" href="dir_5ca645fcb9fab97975d756a86d658c5a.html">include</a></li>
+    <li class="navelem"><a class="el" href="structw__uuid__s.html">w_uuid_s</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>

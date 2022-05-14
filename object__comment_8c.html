@@ -83,25 +83,97 @@ $(document).ready(function(){initNavTree('object__comment_8c.html',''); initResi
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">object_comment.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="object__comment_8h_source.html">object_comment.h</a>&quot;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for object_comment.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="object__comment_8c__incl.png" border="0" usemap="#objects_2comment_2src_2object__comment_8c" alt=""/></div>
 <map name="objects_2comment_2src_2object__comment_8c" id="objects_2comment_2src_2object__comment_8c">
-<area shape="rect" title=" " alt="" coords="115,5,274,47"/>
-<area shape="rect" href="object__comment_8h.html" title=" " alt="" coords="123,95,266,121"/>
-<area shape="rect" href="object__uuid_8h.html" title=" " alt="" coords="5,169,115,196"/>
-<area shape="rect" href="object__body_8h.html" title=" " alt="" coords="139,169,250,196"/>
-<area shape="rect" title=" " alt="" coords="275,169,339,196"/>
-<area shape="rect" title=" " alt="" coords="89,244,164,271"/>
+<area shape="rect" title=" " alt="" coords="181,5,340,47"/>
+<area shape="rect" href="object__comment_8h.html" title=" " alt="" coords="124,95,267,121"/>
+<area shape="rect" title=" " alt="" coords="291,95,361,121"/>
+<area shape="rect" href="object__uuid_8h.html" title=" " alt="" coords="141,169,250,196"/>
+<area shape="rect" href="object__body_8h.html" title=" " alt="" coords="5,169,116,196"/>
+<area shape="rect" title=" " alt="" coords="274,169,338,196"/>
+<area shape="rect" title=" " alt="" coords="38,244,113,271"/>
+<area shape="rect" href="my__uuid_8h.html" title=" " alt="" coords="150,244,241,271"/>
+<area shape="rect" title=" " alt="" coords="43,319,137,345"/>
+<area shape="rect" title=" " alt="" coords="162,319,229,345"/>
+<area shape="rect" title=" " alt="" coords="253,319,324,345"/>
 </map>
 </div>
-</div></div><!-- contents -->
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a8778dfd01cbf04e2201ad0473dbe5488"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__comment_8h.html#a231e6f7e5e699b6c27385e53b2217524">comment_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__comment_8c.html#a8778dfd01cbf04e2201ad0473dbe5488">comment_init</a> (<a class="el" href="object__comment_8h.html#a82fbda2130932bc4277a74148dd855c3">comment_creation_t</a> content)</td></tr>
+<tr class="memdesc:a8778dfd01cbf04e2201ad0473dbe5488"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init a comment object.  <a href="object__comment_8c.html#a8778dfd01cbf04e2201ad0473dbe5488">More...</a><br /></td></tr>
+<tr class="separator:a8778dfd01cbf04e2201ad0473dbe5488"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1bd9584c05836b8fc4bae613b65127b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__comment_8c.html#af1bd9584c05836b8fc4bae613b65127b">comment_destroy</a> (<a class="el" href="object__comment_8h.html#a231e6f7e5e699b6c27385e53b2217524">comment_t</a> *comment)</td></tr>
+<tr class="memdesc:af1bd9584c05836b8fc4bae613b65127b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a comment object If the comment is COMMENT_ERROR, do nothing.  <a href="object__comment_8c.html#af1bd9584c05836b8fc4bae613b65127b">More...</a><br /></td></tr>
+<tr class="separator:af1bd9584c05836b8fc4bae613b65127b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="af1bd9584c05836b8fc4bae613b65127b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1bd9584c05836b8fc4bae613b65127b">&#9670;&nbsp;</a></span>comment_destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void comment_destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__comment_8h.html#a231e6f7e5e699b6c27385e53b2217524">comment_t</a> *&#160;</td>
+          <td class="paramname"><em>comment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destroy a comment object If the comment is COMMENT_ERROR, do nothing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">comment</td><td>Comment object to destroy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8778dfd01cbf04e2201ad0473dbe5488"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8778dfd01cbf04e2201ad0473dbe5488">&#9670;&nbsp;</a></span>comment_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__comment_8h.html#a231e6f7e5e699b6c27385e53b2217524">comment_t</a>* comment_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__comment_8h.html#a82fbda2130932bc4277a74148dd855c3">comment_creation_t</a>&#160;</td>
+          <td class="paramname"><em>content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Init a comment object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">content</td><td>content of the comment object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>comment_t* Newly created content object </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

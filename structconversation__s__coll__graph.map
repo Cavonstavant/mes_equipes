@@ -1,0 +1,5 @@
+<map id="conversation_s" name="conversation_s">
+<area shape="rect" id="node1" title="Comment object." alt="" coords="5,213,125,240"/>
+<area shape="rect" id="node2" href="$structmy__uuid__s.html" title="Uuid object equivalent of a string To Refacto with issue #25." alt="" coords="19,95,111,121"/>
+<area shape="rect" id="node3" href="$structw__uuid__s.html" title="wrapper struct around uuid_t" alt="" coords="24,5,107,32"/>
+</map>

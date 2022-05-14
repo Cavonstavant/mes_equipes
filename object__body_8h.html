@@ -106,14 +106,16 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="object__body_8h__dep__incl.png" border="0" usemap="#objects_2body_2include_2object__body_8hdep" alt=""/></div>
 <map name="objects_2body_2include_2object__body_8hdep" id="objects_2body_2include_2object__body_8hdep">
-<area shape="rect" title=" " alt="" coords="321,5,477,47"/>
+<area shape="rect" title=" " alt="" coords="445,5,601,47"/>
 <area shape="rect" href="object__body_8c.html" title=" " alt="" coords="5,95,177,136"/>
 <area shape="rect" href="object__comment_8h.html" title=" " alt="" coords="202,95,389,136"/>
-<area shape="rect" href="object__message_8h.html" title=" " alt="" coords="413,95,596,136"/>
-<area shape="rect" href="object__thread_8h.html" title=" " alt="" coords="620,95,787,136"/>
+<area shape="rect" href="object__conversation_8h.html" title=" " alt="" coords="413,95,633,136"/>
+<area shape="rect" href="object__message_8h.html" title=" " alt="" coords="657,95,840,136"/>
+<area shape="rect" href="object__thread_8h.html" title=" " alt="" coords="864,95,1031,136"/>
 <area shape="rect" href="object__comment_8c.html" title=" " alt="" coords="216,184,375,225"/>
-<area shape="rect" href="object__message_8c.html" title=" " alt="" coords="427,184,582,225"/>
-<area shape="rect" href="object__thread_8c.html" title=" " alt="" coords="634,184,773,225"/>
+<area shape="rect" href="object__conversation_8c.html" title=" " alt="" coords="428,184,619,225"/>
+<area shape="rect" href="object__message_8c.html" title=" " alt="" coords="671,184,826,225"/>
+<area shape="rect" href="object__thread_8c.html" title=" " alt="" coords="878,184,1017,225"/>
 </map>
 </div>
 </div>
@@ -140,7 +142,7 @@ Typedefs</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a48a1d1932cdf056c860d8c35e661c81a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__body_8h.html#ae76459eee75ca162d91d057e2dd9f3d8">body_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__body_8h.html#a48a1d1932cdf056c860d8c35e661c81a">body_init</a> (char *body_content)</td></tr>
-<tr class="memdesc:a48a1d1932cdf056c860d8c35e661c81a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init a Body object If the body_content is too long compared to BODY_SIZE, return BODY_ERROR.  <a href="object__body_8h.html#a48a1d1932cdf056c860d8c35e661c81a">More...</a><br /></td></tr>
+<tr class="memdesc:a48a1d1932cdf056c860d8c35e661c81a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init a Body object.  <a href="object__body_8h.html#a48a1d1932cdf056c860d8c35e661c81a">More...</a><br /></td></tr>
 <tr class="separator:a48a1d1932cdf056c860d8c35e661c81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8047934d863367897ec90bb5562b3151"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__body_8h.html#a8047934d863367897ec90bb5562b3151">body_destroy</a> (<a class="el" href="object__body_8h.html#ae76459eee75ca162d91d057e2dd9f3d8">body_t</a> body_to_destroy)</td></tr>
 <tr class="memdesc:a8047934d863367897ec90bb5562b3151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a Body object If the body_to_destroy is BODY_ERROR, do nothing.  <a href="object__body_8h.html#a8047934d863367897ec90bb5562b3151">More...</a><br /></td></tr>
@@ -255,14 +257,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Init a Body object If the body_content is too long compared to BODY_SIZE, return BODY_ERROR. </p>
+<p>Init a Body object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">body_content</td><td>Content of the new body object </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>body_t The newly created body object </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>body_t The newly created body object If the body_content is too long compared to BODY_SIZE, return BODY_ERROR </dd></dl>
 
 </div>
 </div>

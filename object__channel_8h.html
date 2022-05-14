@@ -85,7 +85,9 @@ $(document).ready(function(){initNavTree('object__channel_8h.html',''); initResi
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">object_channel.h File Reference</div>  </div>
 </div><!--header-->
@@ -98,11 +100,15 @@ Include dependency graph for object_channel.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="object__channel_8h__incl.png" border="0" usemap="#objects_2channel_2include_2object__channel_8h" alt=""/></div>
 <map name="objects_2channel_2include_2object__channel_8h" id="objects_2channel_2include_2object__channel_8h">
-<area shape="rect" title=" " alt="" coords="111,5,286,47"/>
-<area shape="rect" href="object__uuid_8h.html" title=" " alt="" coords="5,95,115,121"/>
-<area shape="rect" href="object__name_8h.html" title=" " alt="" coords="139,95,258,121"/>
-<area shape="rect" href="object__description_8h.html" title=" " alt="" coords="282,95,435,121"/>
-<area shape="rect" title=" " alt="" coords="161,169,236,196"/>
+<area shape="rect" title=" " alt="" coords="137,5,312,47"/>
+<area shape="rect" href="object__uuid_8h.html" title=" " alt="" coords="326,95,435,121"/>
+<area shape="rect" href="object__name_8h.html" title=" " alt="" coords="5,95,124,121"/>
+<area shape="rect" href="object__description_8h.html" title=" " alt="" coords="148,95,301,121"/>
+<area shape="rect" title=" " alt="" coords="187,169,262,196"/>
+<area shape="rect" href="my__uuid_8h.html" title=" " alt="" coords="335,169,426,196"/>
+<area shape="rect" title=" " alt="" coords="228,244,323,271"/>
+<area shape="rect" title=" " alt="" coords="347,244,414,271"/>
+<area shape="rect" title=" " alt="" coords="439,244,509,271"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -126,6 +132,12 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Channel creation object Object containing all the information for a channel creation.  <a href="structchannel__creation__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a2c863cc82b198800472549fa3ce5ba68"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__channel_8h.html#a2c863cc82b198800472549fa3ce5ba68">CHANNEL_ERROR</a>&#160;&#160;&#160;NULL</td></tr>
+<tr class="memdesc:a2c863cc82b198800472549fa3ce5ba68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error inside a channel object.  <a href="object__channel_8h.html#a2c863cc82b198800472549fa3ce5ba68">More...</a><br /></td></tr>
+<tr class="separator:a2c863cc82b198800472549fa3ce5ba68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:aa2c062d2c6fa83f13b145dc4f80623fd"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structchannel__s.html">channel_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__channel_8h.html#aa2c062d2c6fa83f13b145dc4f80623fd">channel_t</a></td></tr>
@@ -134,7 +146,33 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a5c817119c0c70af8858d4dd08e0e3df7"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structchannel__creation__s.html">channel_creation_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__channel_8h.html#a5c817119c0c70af8858d4dd08e0e3df7">channel_creation_t</a></td></tr>
 <tr class="memdesc:a5c817119c0c70af8858d4dd08e0e3df7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Channel creation object Object containing all the information for a channel creation.  <a href="object__channel_8h.html#a5c817119c0c70af8858d4dd08e0e3df7">More...</a><br /></td></tr>
 <tr class="separator:a5c817119c0c70af8858d4dd08e0e3df7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:acb1d0a4fd6831a4a79cc0943c51e4308"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__channel_8h.html#aa2c062d2c6fa83f13b145dc4f80623fd">channel_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__channel_8h.html#acb1d0a4fd6831a4a79cc0943c51e4308">channel_init</a> (<a class="el" href="object__channel_8h.html#a5c817119c0c70af8858d4dd08e0e3df7">channel_creation_t</a> content)</td></tr>
+<tr class="memdesc:acb1d0a4fd6831a4a79cc0943c51e4308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init a Channel object.  <a href="object__channel_8h.html#acb1d0a4fd6831a4a79cc0943c51e4308">More...</a><br /></td></tr>
+<tr class="separator:acb1d0a4fd6831a4a79cc0943c51e4308"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7e93c006b66c9fa049a4233840cda05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__channel_8h.html#ad7e93c006b66c9fa049a4233840cda05">channel_destroy</a> (<a class="el" href="object__channel_8h.html#aa2c062d2c6fa83f13b145dc4f80623fd">channel_t</a> *channel)</td></tr>
+<tr class="memdesc:ad7e93c006b66c9fa049a4233840cda05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a channel object If the channel is CHANNEL_ERROR, do nothing.  <a href="object__channel_8h.html#ad7e93c006b66c9fa049a4233840cda05">More...</a><br /></td></tr>
+<tr class="separator:ad7e93c006b66c9fa049a4233840cda05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a2c863cc82b198800472549fa3ce5ba68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c863cc82b198800472549fa3ce5ba68">&#9670;&nbsp;</a></span>CHANNEL_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CHANNEL_ERROR&#160;&#160;&#160;NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Error inside a channel object. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a5c817119c0c70af8858d4dd08e0e3df7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5c817119c0c70af8858d4dd08e0e3df7">&#9670;&nbsp;</a></span>channel_creation_t</h2>
@@ -165,6 +203,60 @@ Typedefs</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Channel object. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ad7e93c006b66c9fa049a4233840cda05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7e93c006b66c9fa049a4233840cda05">&#9670;&nbsp;</a></span>channel_destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void channel_destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__channel_8h.html#aa2c062d2c6fa83f13b145dc4f80623fd">channel_t</a> *&#160;</td>
+          <td class="paramname"><em>channel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destroy a channel object If the channel is CHANNEL_ERROR, do nothing. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>Channel object to destroy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acb1d0a4fd6831a4a79cc0943c51e4308"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb1d0a4fd6831a4a79cc0943c51e4308">&#9670;&nbsp;</a></span>channel_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__channel_8h.html#aa2c062d2c6fa83f13b145dc4f80623fd">channel_t</a>* channel_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__channel_8h.html#a5c817119c0c70af8858d4dd08e0e3df7">channel_creation_t</a>&#160;</td>
+          <td class="paramname"><em>content</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Init a Channel object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">content</td><td>Content of the new Channel object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>channel_t* channel_t newly created </dd></dl>
 
 </div>
 </div>

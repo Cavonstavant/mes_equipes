@@ -138,7 +138,7 @@ Typedefs</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aeec1220fa1bdd2359531d4f936e70cef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__description_8h.html#aa41bbffc9ededb512782906ea65b2016">description_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__description_8h.html#aeec1220fa1bdd2359531d4f936e70cef">description_init</a> (char *description_content)</td></tr>
-<tr class="memdesc:aeec1220fa1bdd2359531d4f936e70cef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init the description object If the description_content is too long compared to description_size return DESCRIPTION_ERROR.  <a href="object__description_8h.html#aeec1220fa1bdd2359531d4f936e70cef">More...</a><br /></td></tr>
+<tr class="memdesc:aeec1220fa1bdd2359531d4f936e70cef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init the description object.  <a href="object__description_8h.html#aeec1220fa1bdd2359531d4f936e70cef">More...</a><br /></td></tr>
 <tr class="separator:aeec1220fa1bdd2359531d4f936e70cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4d9f3aa7fc0712ece8a0c79ccc066b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__description_8h.html#aa4d9f3aa7fc0712ece8a0c79ccc066b1">description_destroy</a> (<a class="el" href="object__description_8h.html#aa41bbffc9ededb512782906ea65b2016">description_t</a> description_to_destroy)</td></tr>
 <tr class="memdesc:aa4d9f3aa7fc0712ece8a0c79ccc066b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the description object If the description_to_destroy is equivalent to DESCRIPTION_ERROR do nothing.  <a href="object__description_8h.html#aa4d9f3aa7fc0712ece8a0c79ccc066b1">More...</a><br /></td></tr>
@@ -253,14 +253,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Init the description object If the description_content is too long compared to description_size return DESCRIPTION_ERROR. </p>
+<p>Init the description object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">description_content</td><td>Content of the new Description object </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>description_t Newly created Description object </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>description_t Newly created Description object If the description_content is too long compared to description_size return DESCRIPTION_ERROR </dd></dl>
 
 </div>
 </div>
