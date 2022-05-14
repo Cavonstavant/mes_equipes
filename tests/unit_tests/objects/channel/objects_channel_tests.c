@@ -15,9 +15,7 @@ Test(objects_my_channel, classic) {
         my_uuid_init(TEM_)
     });
 
-    if (my_channel == NULL)
-        cr_assert_eq(1, 2);
-    cr_assert_eq(2, 2);
+    cr_assert_not_null(my_channel);
 }
 
 Test(objects_my_channel, invalid_name) {
@@ -27,9 +25,7 @@ Test(objects_my_channel, invalid_name) {
         my_uuid_init(TEM_)
     });
 
-    if (my_channel != NULL)
-        cr_assert_eq(1, 2);
-    cr_assert_eq(2, 2);
+    cr_assert_null(my_channel);
 }
 
 Test(objects_my_channel, invalid_desc) {
@@ -39,9 +35,7 @@ Test(objects_my_channel, invalid_desc) {
         my_uuid_init(TEM_)
     });
 
-    if (my_channel != NULL)
-        cr_assert_eq(1, 2);
-    cr_assert_eq(2, 2);
+    cr_assert_null(my_channel);
 }
 
 Test(objects_my_channel, destroy_classic) {

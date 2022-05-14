@@ -17,9 +17,7 @@ Test(objects_body, classic) {
 Test(objects_body, to_long) {
     body_t body = body_init("MichelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllMichelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllMichelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllMichelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllMichelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllMichelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllMichelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllMichelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll");
 
-    if (body != NULL)
-        cr_assert_eq(1, 2);
-    cr_assert_eq(1, 1);
+    cr_assert_null(body);
 }
 
 Test(objects_body, empty) {

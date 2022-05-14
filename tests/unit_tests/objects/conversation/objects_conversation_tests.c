@@ -14,9 +14,7 @@ Test(objects_my_conversation, classic) {
         my_uuid_init(USR_)
     });
 
-    if (my_conversation == NULL)
-        cr_assert_eq(1, 2);
-    cr_assert_eq(2, 2);
+    cr_assert_not_null(my_conversation);
 }
 
 Test(objects_my_conversation, destroy) {
