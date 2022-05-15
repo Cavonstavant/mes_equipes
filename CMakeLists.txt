@@ -16,6 +16,12 @@ add_compile_options (
     "-std=gnu11" "-Werror" "-Wall" "-Wextra" "-Wpedantic" "-Wshadow" "-Wpointer-arith" "-Wattributes"
 )
 
+option(CODE_COVERAGE "Enable code coverage" OFF)
+if (CODE_COVERAGE)
+    add_compile_options("--coverage" "-fprofile-arcs" "-ftest-coverage")
+    add_link_options("--coverage" "-fprofile-arcs" "-ftest-coverage")
+endif()
+
 add_subdirectory(objects)
 add_subdirectory(client)
 add_subdirectory(server)
@@ -29,3 +35,11 @@ add_custom_target (fclean
     COMMAND make clean
     COMMAND rm -f ${PROJECT_NAME}_cli ${PROJECT_NAME}_server ${PROJECT_NAME}_objects
 )
+
+add_custom_target(tests_run
+    COMMAND cmake ../ -B tests_build -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug -DCODE_COVERAGE=ON
+    COMMAND cmake --build tests_build
+    COMMAND ctest --test_dir build --output-on-failure -T test -T coverage
+)
+
+include(Dart)
