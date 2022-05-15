@@ -1,6 +1,7 @@
 set (INCLUDE_BODY ${PROJECT_SOURCE_DIR}/objects/body/include)
 set (INCLUDE_CHANNEL ${PROJECT_SOURCE_DIR}/objects/channel/include)
 set (INCLUDE_COMMENT ${PROJECT_SOURCE_DIR}/objects/comment/include)
+set (INCLUDE_CONVERSATION ${PROJECT_SOURCE_DIR}/objects/conversation/include)
 set (INCLUDE_DESCRIPTION ${PROJECT_SOURCE_DIR}/objects/description/include)
 set (INCLUDE_MESSAGE ${PROJECT_SOURCE_DIR}/objects/message/include)
 set (INCLUDE_NAME ${PROJECT_SOURCE_DIR}/objects/name/include)
@@ -13,6 +14,7 @@ set (INCLUDE_UUID ${PROJECT_SOURCE_DIR}/objects/uuid/include)
 set (SRC_BODY ${PROJECT_SOURCE_DIR}/objects/body/src)
 set (SRC_CHANNEL ${PROJECT_SOURCE_DIR}/objects/channel/src)
 set (SRC_COMMENT ${PROJECT_SOURCE_DIR}/objects/comment/src)
+set (SRC_CONVERSATION ${PROJECT_SOURCE_DIR}/objects/conversation/src)
 set (SRC_DESCRIPTION ${PROJECT_SOURCE_DIR}/objects/description/src)
 set (SRC_MESSAGE ${PROJECT_SOURCE_DIR}/objects/message/src)
 set (SRC_NAME ${PROJECT_SOURCE_DIR}/objects/name/src)
@@ -28,6 +30,7 @@ set (SRC
     ${SRC_BODY}/object_body.c
     ${SRC_CHANNEL}/object_channel.c
     ${SRC_COMMENT}/object_comment.c
+    ${SRC_CONVERSATION}/object_conversation.c
     ${SRC_DESCRIPTION}/object_description.c
     ${SRC_MESSAGE}/object_message.c
     ${SRC_NAME}/object_name.c
@@ -40,10 +43,15 @@ set (SRC
 
 add_library(${TARGET} ${SRC})
 
+target_link_libraries(${TARGET}
+    PRIVATE ${PROJECT_NAME}_uuid_wrapper
+)
+
 target_include_directories(${TARGET}
     PUBLIC ${INCLUDE_BODY}
     PUBLIC ${INCLUDE_CHANNEL}
     PUBLIC ${INCLUDE_COMMENT}
+    PUBLIC ${INCLUDE_CONVERSATION}
     PUBLIC ${INCLUDE_DESCRIPTION}
     PUBLIC ${INCLUDE_MESSAGE}
     PUBLIC ${INCLUDE_NAME}
@@ -53,7 +61,6 @@ target_include_directories(${TARGET}
     PUBLIC ${INCLUDE_USER}
     PUBLIC ${INCLUDE_UUID}
     PRIVATE ${SRC_ROOT}
-    PRIVATE ${PROJECT_NAME}_uuid_wrapper
 )
 
 add_subdirectory(uuid/uuid_wrapper)

@@ -35,10 +35,10 @@ typedef char *body_t;
 
 ///
 /// \brief Init a Body object
-/// If the body_content is too long compared to BODY_SIZE, return BODY_ERROR
 ///
 /// \param body_content Content of the new body object
 /// \return body_t The newly created body object
+/// If the body_content is too long compared to BODY_SIZE, return BODY_ERROR
 ///
 body_t body_init(char *body_content);
 

@@ -15,12 +15,12 @@
     #include <string.h>
 
 /// \brief wrapper struct around uuid_t
-typedef struct my_uuid_s {
+typedef struct w_uuid_s {
     /// \brief uuid_t instance
     uuid_t uuid;
     /// \brief null terminated string representation of uuid_t
     char repr[40];
-} my_uuid_t;
+} w_uuid_t;
 
 /// \brief null terminated uuid prefixes for the teams subparts
 /// \note Each prefix is 4 characters long
@@ -58,16 +58,16 @@ static inline const char *get_prefix(my_uuid_prefix_t id)
 /// \param out The output uuid
 /// \param prefix The prefix to be inserted before the uuid
 /// \return 0 on success, -1 on failure
-int my_uuid_generate(my_uuid_t *out, my_uuid_prefix_t prefix);
+int my_uuid_generate(w_uuid_t *out, my_uuid_prefix_t prefix);
 
 /// \brief Copy one uuid from another
 /// \param dst The destination uuid
 /// \param src The source uuid
 /// \return 0 on success, -1 on failure
-int my_uuid_copy(my_uuid_t *dst, my_uuid_t *src);
+int my_uuid_copy(w_uuid_t *dst, w_uuid_t *src);
 
 /// \brief Displays a given uuid on a specific stream
-static inline void display_uuid(my_uuid_t *uuid, FILE *stream)
+static inline void display_uuid(w_uuid_t *uuid, FILE *stream)
 {
     fprintf(stream, "%s\n", uuid->repr);
 }
@@ -77,7 +77,7 @@ static inline void display_uuid(my_uuid_t *uuid, FILE *stream)
 /// \return Returns an integer less than, equal to, or greater than zero
 /// if uu1 is found,
 /// respectively, to be lexicographically less than, equal, or greater than uu2
-static inline int my_uuid_compare(my_uuid_t uu1, my_uuid_t uu2)
+static inline int my_uuid_compare(w_uuid_t uu1, w_uuid_t uu2)
 {
     if (strncmp(uu1.repr, uu2.repr, 4) != 0)
         return (strncmp(uu1.repr, uu2.repr, 4));
@@ -85,6 +85,6 @@ static inline int my_uuid_compare(my_uuid_t uu1, my_uuid_t uu2)
 }
 
 /// \brief get the my_uuid_prefix_t representation of a given uuid
-my_uuid_prefix_t my_uuid_get_prefix(my_uuid_t *uuid);
+my_uuid_prefix_t my_uuid_get_prefix(w_uuid_t *uuid);
 
 #endif /* MY_UUID_H */
