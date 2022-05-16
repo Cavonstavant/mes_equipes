@@ -74,4 +74,11 @@ thread_t *thread_init(thread_creation_t content);
 ///
 void thread_destroy(thread_t *thread);
 
+///
+/// \brief Dump a thread object
+///
+/// \param thread Thread object to print
+///
+void thread_dump(thread_t *thread);
+
 #endif /* !OBJECT_THREADS_H_ */
