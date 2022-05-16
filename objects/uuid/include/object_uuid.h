@@ -61,4 +61,11 @@ my_uuid_t *my_uuid_init(uuid_type_t uuid_content);
 ///
 void my_uuid_destroy(my_uuid_t *uuid_to_destroy);
 
+///
+/// \brief Dump a my_uuid object
+///
+/// \param uuid My_uuid object to print
+///
+void my_uuid_dump(my_uuid_t *uuid);
+
 #endif /* !OBJECT_UUID_H_ */
