@@ -19,7 +19,7 @@ Test(objects_name, dump, .init=cr_redirect_stdout) {
     name_t name = name_init("Michel");
 
     name_dump(name);
-    cr_assert_stdout_eq_str("Name object :\n\tContent :\n\t\tMichel\n");
+    cr_assert_stdout_eq_str("Name : Michel\n");
 }
 
 Test(objects_name, to_long) {

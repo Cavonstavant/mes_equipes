@@ -19,7 +19,7 @@ Test(objects_description, dump, .init=cr_redirect_stdout) {
     description_t description = description_init("Michel");
 
     description_dump(description);
-    cr_assert_stdout_eq_str("Description object :\n\tContent :\n\t\tMichel\n");
+    cr_assert_stdout_eq_str("Description : Michel\n");
 }
 
 Test(objects_description, to_long) {

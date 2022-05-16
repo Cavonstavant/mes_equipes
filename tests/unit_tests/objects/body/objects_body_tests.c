@@ -19,7 +19,7 @@ Test(objects_body, dump, .init=cr_redirect_stdout) {
     body_t body = body_init("Michel");
 
     body_dump(body);
-    cr_assert_stdout_eq_str("Body object :\n\tContent :\n\t\tMichel\n");
+    cr_assert_stdout_eq_str("Body : Michel\n");
 }
 
 Test(objects_body, to_long) {
