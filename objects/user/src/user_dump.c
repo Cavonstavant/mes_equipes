@@ -12,7 +12,7 @@
 
 void user_dump(user_t *user)
 {
-    printf("Channel :\n");
+    printf("User :\n");
     printf("\t");
     my_uuid_dump(user->uuid);
     printf("\t");
