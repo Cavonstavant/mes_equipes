@@ -1,4 +1,10 @@
 <map id="objects/conversation/include/object_conversation.h" name="objects/conversation/include/object_conversation.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,225,47"/>
-<area shape="rect" id="node2" href="$object__conversation_8c.html" title=" " alt="" coords="20,95,211,136"/>
+<area shape="rect" id="node1" title=" " alt="" coords="125,5,345,47"/>
+<area shape="rect" id="node2" href="$object__conversation_8c.html" title=" " alt="" coords="35,95,226,136"/>
+<area shape="rect" id="node3" href="$object__wrapper_8h.html" title=" " alt="" coords="250,95,427,136"/>
+<area shape="rect" id="node4" href="$lower__component__adding_8h.html" title=" " alt="" coords="5,184,211,225"/>
+<area shape="rect" id="node6" href="$upper__component__adding_8h.html" title=" " alt="" coords="235,184,442,225"/>
+<area shape="rect" id="node8" href="$object__wrapper_8c.html" title=" " alt="" coords="467,184,616,225"/>
+<area shape="rect" id="node5" href="$lower__component__adding_8c.html" title=" " alt="" coords="6,273,210,315"/>
+<area shape="rect" id="node7" href="$upper__component__adding_8c.html" title=" " alt="" coords="236,273,441,315"/>
 </map>

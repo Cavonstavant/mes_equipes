@@ -1,0 +1,12 @@
+<map id="object_wrapper_s" name="object_wrapper_s">
+<area shape="rect" id="node1" title="Wrapper object, containing all Objects instance." alt="" coords="306,317,442,344"/>
+<area shape="rect" id="node2" href="$structthread__s.html" title="Thread object." alt="" coords="5,228,84,255"/>
+<area shape="rect" id="node3" href="$structmy__uuid__s.html" title="Uuid object equivalent of a string To Refacto with issue #25." alt="" coords="328,95,420,121"/>
+<area shape="rect" id="node5" href="$structteam__s.html" title="Team object." alt="" coords="108,228,179,255"/>
+<area shape="rect" id="node6" href="$structcomment__s.html" title="Comment object." alt="" coords="203,228,302,255"/>
+<area shape="rect" id="node7" href="$structmessage__s.html" title="Message object." alt="" coords="327,228,421,255"/>
+<area shape="rect" id="node8" href="$structconversation__s.html" title="Comment object." alt="" coords="446,228,566,255"/>
+<area shape="rect" id="node9" href="$structuser__s.html" title="User object." alt="" coords="590,228,654,255"/>
+<area shape="rect" id="node10" href="$structchannel__s.html" title="Channel object." alt="" coords="679,228,765,255"/>
+<area shape="rect" id="node4" href="$structw__uuid__s.html" title="wrapper struct around uuid_t" alt="" coords="333,5,415,32"/>
+</map>
