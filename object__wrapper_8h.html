@@ -133,10 +133,11 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="object__wrapper_8h__dep__incl.png" border="0" usemap="#objects_2wrapper_2include_2object__wrapper_8hdep" alt=""/></div>
 <map name="objects_2wrapper_2include_2object__wrapper_8hdep" id="objects_2wrapper_2include_2object__wrapper_8hdep">
-<area shape="rect" title=" " alt="" coords="250,5,427,47"/>
+<area shape="rect" title=" " alt="" coords="353,5,530,47"/>
 <area shape="rect" href="lower__component__adding_8h.html" title=" " alt="" coords="5,95,211,136"/>
 <area shape="rect" href="upper__component__adding_8h.html" title=" " alt="" coords="235,95,442,136"/>
-<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="467,95,616,136"/>
+<area shape="rect" href="component__dump_8c.html" title=" " alt="" coords="467,95,621,136"/>
+<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="645,95,795,136"/>
 <area shape="rect" href="lower__component__adding_8c.html" title=" " alt="" coords="6,184,210,225"/>
 <area shape="rect" href="upper__component__adding_8c.html" title=" " alt="" coords="236,184,441,225"/>
 </map>
@@ -170,6 +171,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a8902841cdb34440c8a0ed33d73de8617"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#a8902841cdb34440c8a0ed33d73de8617">wrapper_destroy</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper)</td></tr>
 <tr class="memdesc:a8902841cdb34440c8a0ed33d73de8617"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a wrapper object If the wrapper object is WRAPPER_ERROR, do nothing.  <a href="object__wrapper_8h.html#a8902841cdb34440c8a0ed33d73de8617">More...</a><br /></td></tr>
 <tr class="separator:a8902841cdb34440c8a0ed33d73de8617"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fb57ac6863c207bb7a69e786c9befc3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#a8fb57ac6863c207bb7a69e786c9befc3">wrapper_dump</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper)</td></tr>
+<tr class="memdesc:a8fb57ac6863c207bb7a69e786c9befc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump all object in the wrapper.  <a href="object__wrapper_8h.html#a8fb57ac6863c207bb7a69e786c9befc3">More...</a><br /></td></tr>
+<tr class="separator:a8fb57ac6863c207bb7a69e786c9befc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ab0ec4a710f4b4953f192b0bd18b05c7b"></a>
@@ -226,6 +230,32 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">wrapper</td><td>Wrapper object to destroy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8fb57ac6863c207bb7a69e786c9befc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fb57ac6863c207bb7a69e786c9befc3">&#9670;&nbsp;</a></span>wrapper_dump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wrapper_dump </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *&#160;</td>
+          <td class="paramname"><em>wrapper</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dump all object in the wrapper. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapper</td><td>Wraper object to print </td></tr>
   </table>
   </dd>
 </dl>

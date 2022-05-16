@@ -5,5 +5,6 @@ var object__name_8h =
     [ "NAME_SIZE", "object__name_8h.html#a834e9a379307f869a10f4da078be5786", null ],
     [ "name_t", "object__name_8h.html#a7c53defcff0156d399a40b293cfa94b9", null ],
     [ "name_destroy", "object__name_8h.html#a2bf14b5c1159a184866399de7f36b4e3", null ],
+    [ "name_dump", "object__name_8h.html#af939986d925b08bc91fa2ebe05fb7129", null ],
     [ "name_init", "object__name_8h.html#aad501cf366c38f0ce88ac0da0d849393", null ]
 ];

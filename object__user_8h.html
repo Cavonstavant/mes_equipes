@@ -117,14 +117,16 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="object__user_8h__dep__incl.png" border="0" usemap="#objects_2user_2include_2object__user_8hdep" alt=""/></div>
 <map name="objects_2user_2include_2object__user_8hdep" id="objects_2user_2include_2object__user_8hdep">
-<area shape="rect" title=" " alt="" coords="164,5,316,47"/>
-<area shape="rect" href="object__user_8c.html" title=" " alt="" coords="57,95,225,136"/>
-<area shape="rect" href="object__wrapper_8h.html" title=" " alt="" coords="250,95,427,136"/>
-<area shape="rect" href="lower__component__adding_8h.html" title=" " alt="" coords="5,184,211,225"/>
-<area shape="rect" href="upper__component__adding_8h.html" title=" " alt="" coords="235,184,442,225"/>
-<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="467,184,616,225"/>
-<area shape="rect" href="lower__component__adding_8c.html" title=" " alt="" coords="6,273,210,315"/>
-<area shape="rect" href="upper__component__adding_8c.html" title=" " alt="" coords="236,273,441,315"/>
+<area shape="rect" title=" " alt="" coords="200,5,352,47"/>
+<area shape="rect" href="object__user_8c.html" title=" " alt="" coords="5,95,173,136"/>
+<area shape="rect" href="user__dump_8c.html" title=" " alt="" coords="198,95,354,136"/>
+<area shape="rect" href="object__wrapper_8h.html" title=" " alt="" coords="378,95,555,136"/>
+<area shape="rect" href="lower__component__adding_8h.html" title=" " alt="" coords="31,184,236,225"/>
+<area shape="rect" href="upper__component__adding_8h.html" title=" " alt="" coords="261,184,467,225"/>
+<area shape="rect" href="component__dump_8c.html" title=" " alt="" coords="492,184,647,225"/>
+<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="671,184,820,225"/>
+<area shape="rect" href="lower__component__adding_8c.html" title=" " alt="" coords="31,273,235,315"/>
+<area shape="rect" href="upper__component__adding_8c.html" title=" " alt="" coords="261,273,467,315"/>
 </map>
 </div>
 </div>
@@ -162,6 +164,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a9467e353a3e82acc085aee265c6a8159"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__user_8h.html#a9467e353a3e82acc085aee265c6a8159">user_destroy</a> (<a class="el" href="object__user_8h.html#aafaf9b42595b32c3a5ec11b913ba11a7">user_t</a> *user)</td></tr>
 <tr class="memdesc:a9467e353a3e82acc085aee265c6a8159"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a user object If the user is USER_ERROR, do nothing.  <a href="object__user_8h.html#a9467e353a3e82acc085aee265c6a8159">More...</a><br /></td></tr>
 <tr class="separator:a9467e353a3e82acc085aee265c6a8159"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e91506d12a329976a21f0d59dd204b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__user_8h.html#a5e91506d12a329976a21f0d59dd204b4">user_dump</a> (<a class="el" href="object__user_8h.html#aafaf9b42595b32c3a5ec11b913ba11a7">user_t</a> *user)</td></tr>
+<tr class="memdesc:a5e91506d12a329976a21f0d59dd204b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump a user object.  <a href="object__user_8h.html#a5e91506d12a329976a21f0d59dd204b4">More...</a><br /></td></tr>
+<tr class="separator:a5e91506d12a329976a21f0d59dd204b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a9576b52628d1d611d79bb7f6c165d520"></a>
@@ -234,6 +239,32 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">user</td><td>User object to destroy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5e91506d12a329976a21f0d59dd204b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e91506d12a329976a21f0d59dd204b4">&#9670;&nbsp;</a></span>user_dump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void user_dump </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__user_8h.html#aafaf9b42595b32c3a5ec11b913ba11a7">user_t</a> *&#160;</td>
+          <td class="paramname"><em>user</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dump a user object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">user</td><td>User object to print </td></tr>
   </table>
   </dd>
 </dl>

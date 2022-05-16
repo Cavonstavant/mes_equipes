@@ -116,12 +116,14 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="object__channel_8h__dep__incl.png" border="0" usemap="#objects_2channel_2include_2object__channel_8hdep" alt=""/></div>
 <map name="objects_2channel_2include_2object__channel_8hdep" id="objects_2channel_2include_2object__channel_8hdep">
-<area shape="rect" title=" " alt="" coords="158,5,333,47"/>
-<area shape="rect" href="object__channel_8c.html" title=" " alt="" coords="79,95,225,136"/>
-<area shape="rect" href="object__wrapper_8h.html" title=" " alt="" coords="250,95,427,136"/>
+<area shape="rect" title=" " alt="" coords="167,5,342,47"/>
+<area shape="rect" href="channel__dump_8c.html" title=" " alt="" coords="11,95,157,136"/>
+<area shape="rect" href="object__channel_8c.html" title=" " alt="" coords="181,95,328,136"/>
+<area shape="rect" href="object__wrapper_8h.html" title=" " alt="" coords="353,95,530,136"/>
 <area shape="rect" href="lower__component__adding_8h.html" title=" " alt="" coords="5,184,211,225"/>
 <area shape="rect" href="upper__component__adding_8h.html" title=" " alt="" coords="235,184,442,225"/>
-<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="467,184,616,225"/>
+<area shape="rect" href="component__dump_8c.html" title=" " alt="" coords="467,184,621,225"/>
+<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="645,184,795,225"/>
 <area shape="rect" href="lower__component__adding_8c.html" title=" " alt="" coords="6,273,210,315"/>
 <area shape="rect" href="upper__component__adding_8c.html" title=" " alt="" coords="236,273,441,315"/>
 </map>
@@ -161,6 +163,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ad7e93c006b66c9fa049a4233840cda05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__channel_8h.html#ad7e93c006b66c9fa049a4233840cda05">channel_destroy</a> (<a class="el" href="object__channel_8h.html#aa2c062d2c6fa83f13b145dc4f80623fd">channel_t</a> *channel)</td></tr>
 <tr class="memdesc:ad7e93c006b66c9fa049a4233840cda05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a channel object If the channel is CHANNEL_ERROR, do nothing.  <a href="object__channel_8h.html#ad7e93c006b66c9fa049a4233840cda05">More...</a><br /></td></tr>
 <tr class="separator:ad7e93c006b66c9fa049a4233840cda05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8283d68e904e80de72c2534b2ee67f12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__channel_8h.html#a8283d68e904e80de72c2534b2ee67f12">channel_dump</a> (<a class="el" href="object__channel_8h.html#aa2c062d2c6fa83f13b145dc4f80623fd">channel_t</a> *channel)</td></tr>
+<tr class="memdesc:a8283d68e904e80de72c2534b2ee67f12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump a channel object.  <a href="object__channel_8h.html#a8283d68e904e80de72c2534b2ee67f12">More...</a><br /></td></tr>
+<tr class="separator:a8283d68e904e80de72c2534b2ee67f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a2c863cc82b198800472549fa3ce5ba68"></a>
@@ -233,6 +238,32 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">channel</td><td>Channel object to destroy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8283d68e904e80de72c2534b2ee67f12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8283d68e904e80de72c2534b2ee67f12">&#9670;&nbsp;</a></span>channel_dump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void channel_dump </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__channel_8h.html#aa2c062d2c6fa83f13b145dc4f80623fd">channel_t</a> *&#160;</td>
+          <td class="paramname"><em>channel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dump a channel object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>Channel object to print </td></tr>
   </table>
   </dd>
 </dl>

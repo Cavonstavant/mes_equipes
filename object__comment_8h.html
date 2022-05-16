@@ -116,14 +116,16 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="object__comment_8h__dep__incl.png" border="0" usemap="#objects_2comment_2include_2object__comment_8hdep" alt=""/></div>
 <map name="objects_2comment_2include_2object__comment_8hdep" id="objects_2comment_2include_2object__comment_8hdep">
-<area shape="rect" title=" " alt="" coords="149,5,336,47"/>
-<area shape="rect" href="object__comment_8c.html" title=" " alt="" coords="67,95,226,136"/>
-<area shape="rect" href="object__wrapper_8h.html" title=" " alt="" coords="250,95,427,136"/>
-<area shape="rect" href="lower__component__adding_8h.html" title=" " alt="" coords="5,184,211,225"/>
-<area shape="rect" href="upper__component__adding_8h.html" title=" " alt="" coords="235,184,442,225"/>
-<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="467,184,616,225"/>
-<area shape="rect" href="lower__component__adding_8c.html" title=" " alt="" coords="6,273,210,315"/>
-<area shape="rect" href="upper__component__adding_8c.html" title=" " alt="" coords="236,273,441,315"/>
+<area shape="rect" title=" " alt="" coords="174,5,361,47"/>
+<area shape="rect" href="comment__dump_8c.html" title=" " alt="" coords="5,95,164,136"/>
+<area shape="rect" href="object__comment_8c.html" title=" " alt="" coords="188,95,347,136"/>
+<area shape="rect" href="object__wrapper_8h.html" title=" " alt="" coords="371,95,548,136"/>
+<area shape="rect" href="lower__component__adding_8h.html" title=" " alt="" coords="23,184,229,225"/>
+<area shape="rect" href="upper__component__adding_8h.html" title=" " alt="" coords="253,184,460,225"/>
+<area shape="rect" href="component__dump_8c.html" title=" " alt="" coords="485,184,639,225"/>
+<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="663,184,813,225"/>
+<area shape="rect" href="lower__component__adding_8c.html" title=" " alt="" coords="24,273,228,315"/>
+<area shape="rect" href="upper__component__adding_8c.html" title=" " alt="" coords="254,273,459,315"/>
 </map>
 </div>
 </div>
@@ -161,6 +163,9 @@ Functions</h2></td></tr>
 <tr class="memitem:af1bd9584c05836b8fc4bae613b65127b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__comment_8h.html#af1bd9584c05836b8fc4bae613b65127b">comment_destroy</a> (<a class="el" href="object__comment_8h.html#a231e6f7e5e699b6c27385e53b2217524">comment_t</a> *comment)</td></tr>
 <tr class="memdesc:af1bd9584c05836b8fc4bae613b65127b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a comment object If the comment is COMMENT_ERROR, do nothing.  <a href="object__comment_8h.html#af1bd9584c05836b8fc4bae613b65127b">More...</a><br /></td></tr>
 <tr class="separator:af1bd9584c05836b8fc4bae613b65127b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e498eec57656c4bb48e47fbae4d1db4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__comment_8h.html#a1e498eec57656c4bb48e47fbae4d1db4">comment_dump</a> (<a class="el" href="object__comment_8h.html#a231e6f7e5e699b6c27385e53b2217524">comment_t</a> *comment)</td></tr>
+<tr class="memdesc:a1e498eec57656c4bb48e47fbae4d1db4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump a comment object.  <a href="object__comment_8h.html#a1e498eec57656c4bb48e47fbae4d1db4">More...</a><br /></td></tr>
+<tr class="separator:a1e498eec57656c4bb48e47fbae4d1db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a2aea95f2502952859e89587822e3bb8d"></a>
@@ -233,6 +238,32 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">comment</td><td>Comment object to destroy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1e498eec57656c4bb48e47fbae4d1db4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e498eec57656c4bb48e47fbae4d1db4">&#9670;&nbsp;</a></span>comment_dump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void comment_dump </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__comment_8h.html#a231e6f7e5e699b6c27385e53b2217524">comment_t</a> *&#160;</td>
+          <td class="paramname"><em>comment</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dump a comment object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">comment</td><td>Comment object to display </td></tr>
   </table>
   </dd>
 </dl>

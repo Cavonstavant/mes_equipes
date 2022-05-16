@@ -6,5 +6,6 @@ var object__conversation_8h =
     [ "conversation_creation_t", "object__conversation_8h.html#a96ac69f460d36eb8cac2714a8bbbd4ce", null ],
     [ "conversation_t", "object__conversation_8h.html#a1e1d9af360fc54df2c33d9e2ee7bb3da", null ],
     [ "conversation_destroy", "object__conversation_8h.html#aef7ac78c7225ee9ab5945921ba7ebbb0", null ],
+    [ "conversation_dump", "object__conversation_8h.html#aca5cd4217c29d14531777870aa19de50", null ],
     [ "conversation_init", "object__conversation_8h.html#a9aad900137fef45f6d4101e9ace2b3aa", null ]
 ];

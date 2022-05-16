@@ -106,18 +106,22 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="object__description_8h__dep__incl.png" border="0" usemap="#objects_2description_2include_2object__description_8hdep" alt=""/></div>
 <map name="objects_2description_2include_2object__description_8hdep" id="objects_2description_2include_2object__description_8hdep">
-<area shape="rect" title=" " alt="" coords="267,5,475,47"/>
-<area shape="rect" href="object__channel_8h.html" title=" " alt="" coords="95,95,270,136"/>
-<area shape="rect" href="object__wrapper_8h.html" title=" " alt="" coords="250,184,427,225"/>
-<area shape="rect" href="object__description_8c.html" title=" " alt="" coords="345,95,524,136"/>
-<area shape="rect" href="object__team_8h.html" title=" " alt="" coords="549,95,707,136"/>
-<area shape="rect" href="object__channel_8c.html" title=" " alt="" coords="79,184,225,225"/>
+<area shape="rect" title=" " alt="" coords="401,5,609,47"/>
+<area shape="rect" href="object__channel_8h.html" title=" " alt="" coords="167,95,342,136"/>
+<area shape="rect" href="object__wrapper_8h.html" title=" " alt="" coords="353,184,530,225"/>
+<area shape="rect" href="description__dump_8c.html" title=" " alt="" coords="417,95,593,136"/>
+<area shape="rect" href="object__description_8c.html" title=" " alt="" coords="617,95,796,136"/>
+<area shape="rect" href="object__team_8h.html" title=" " alt="" coords="821,95,979,136"/>
+<area shape="rect" href="channel__dump_8c.html" title=" " alt="" coords="11,184,157,225"/>
+<area shape="rect" href="object__channel_8c.html" title=" " alt="" coords="181,184,328,225"/>
 <area shape="rect" href="lower__component__adding_8h.html" title=" " alt="" coords="5,273,211,315"/>
 <area shape="rect" href="upper__component__adding_8h.html" title=" " alt="" coords="235,273,442,315"/>
-<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="467,273,616,315"/>
+<area shape="rect" href="component__dump_8c.html" title=" " alt="" coords="467,273,621,315"/>
+<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="645,273,795,315"/>
 <area shape="rect" href="lower__component__adding_8c.html" title=" " alt="" coords="6,363,210,404"/>
 <area shape="rect" href="upper__component__adding_8c.html" title=" " alt="" coords="236,363,441,404"/>
-<area shape="rect" href="object__team_8c.html" title=" " alt="" coords="541,184,715,225"/>
+<area shape="rect" href="object__team_8c.html" title=" " alt="" coords="714,184,889,225"/>
+<area shape="rect" href="team__dump_8c.html" title=" " alt="" coords="913,184,1081,225"/>
 </map>
 </div>
 </div>
@@ -149,6 +153,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aa4d9f3aa7fc0712ece8a0c79ccc066b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__description_8h.html#aa4d9f3aa7fc0712ece8a0c79ccc066b1">description_destroy</a> (<a class="el" href="object__description_8h.html#aa41bbffc9ededb512782906ea65b2016">description_t</a> description_to_destroy)</td></tr>
 <tr class="memdesc:aa4d9f3aa7fc0712ece8a0c79ccc066b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the description object If the description_to_destroy is equivalent to DESCRIPTION_ERROR do nothing.  <a href="object__description_8h.html#aa4d9f3aa7fc0712ece8a0c79ccc066b1">More...</a><br /></td></tr>
 <tr class="separator:aa4d9f3aa7fc0712ece8a0c79ccc066b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18c5b6cff91af463a91b502e8d7bcc9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__description_8h.html#a18c5b6cff91af463a91b502e8d7bcc9c">description_dump</a> (<a class="el" href="object__description_8h.html#aa41bbffc9ededb512782906ea65b2016">description_t</a> desc)</td></tr>
+<tr class="memdesc:a18c5b6cff91af463a91b502e8d7bcc9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump a description object.  <a href="object__description_8h.html#a18c5b6cff91af463a91b502e8d7bcc9c">More...</a><br /></td></tr>
+<tr class="separator:a18c5b6cff91af463a91b502e8d7bcc9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a4965142ad70c33aa7b746701fd4bda9a"></a>
@@ -237,6 +244,32 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">description_to_destroy</td><td>Description object to destroy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a18c5b6cff91af463a91b502e8d7bcc9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18c5b6cff91af463a91b502e8d7bcc9c">&#9670;&nbsp;</a></span>description_dump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void description_dump </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__description_8h.html#aa41bbffc9ededb512782906ea65b2016">description_t</a>&#160;</td>
+          <td class="paramname"><em>desc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dump a description object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">desc</td><td>Description object to dump </td></tr>
   </table>
   </dd>
 </dl>

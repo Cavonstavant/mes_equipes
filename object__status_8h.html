@@ -106,16 +106,19 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="object__status_8h__dep__incl.png" border="0" usemap="#objects_2status_2include_2object__status_8hdep" alt=""/></div>
 <map name="objects_2status_2include_2object__status_8hdep" id="objects_2status_2include_2object__status_8hdep">
-<area shape="rect" title=" " alt="" coords="75,5,239,47"/>
+<area shape="rect" title=" " alt="" coords="151,5,315,47"/>
 <area shape="rect" href="object__status_8c.html" title=" " alt="" coords="5,95,141,136"/>
-<area shape="rect" href="object__user_8h.html" title=" " alt="" coords="165,95,317,136"/>
-<area shape="rect" href="object__user_8c.html" title=" " alt="" coords="59,184,227,225"/>
-<area shape="rect" href="object__wrapper_8h.html" title=" " alt="" coords="251,184,429,225"/>
-<area shape="rect" href="lower__component__adding_8h.html" title=" " alt="" coords="7,273,212,315"/>
-<area shape="rect" href="upper__component__adding_8h.html" title=" " alt="" coords="237,273,443,315"/>
-<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="468,273,617,315"/>
-<area shape="rect" href="lower__component__adding_8c.html" title=" " alt="" coords="7,363,211,404"/>
-<area shape="rect" href="upper__component__adding_8c.html" title=" " alt="" coords="237,363,443,404"/>
+<area shape="rect" href="status__dump_8c.html" title=" " alt="" coords="165,95,301,136"/>
+<area shape="rect" href="object__user_8h.html" title=" " alt="" coords="325,95,477,136"/>
+<area shape="rect" href="object__user_8c.html" title=" " alt="" coords="131,184,299,225"/>
+<area shape="rect" href="user__dump_8c.html" title=" " alt="" coords="323,184,479,225"/>
+<area shape="rect" href="object__wrapper_8h.html" title=" " alt="" coords="503,184,681,225"/>
+<area shape="rect" href="lower__component__adding_8h.html" title=" " alt="" coords="156,273,361,315"/>
+<area shape="rect" href="upper__component__adding_8h.html" title=" " alt="" coords="386,273,593,315"/>
+<area shape="rect" href="component__dump_8c.html" title=" " alt="" coords="617,273,772,315"/>
+<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="796,273,945,315"/>
+<area shape="rect" href="lower__component__adding_8c.html" title=" " alt="" coords="157,363,361,404"/>
+<area shape="rect" href="upper__component__adding_8c.html" title=" " alt="" coords="387,363,592,404"/>
 </map>
 </div>
 </div>
@@ -144,6 +147,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ad1f2058804b6d25cc3d34c036708baee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__status_8h.html#ad1f2058804b6d25cc3d34c036708baee">status_destroy</a> (<a class="el" href="object__status_8h.html#a1907f7bdf9168d8a969704df10f3cec3">status_t</a> status_to_destroy)</td></tr>
 <tr class="memdesc:ad1f2058804b6d25cc3d34c036708baee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a status object Do nothing.  <a href="object__status_8h.html#ad1f2058804b6d25cc3d34c036708baee">More...</a><br /></td></tr>
 <tr class="separator:ad1f2058804b6d25cc3d34c036708baee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff9b81e1e0983a1ff8c065477386d1f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__status_8h.html#aff9b81e1e0983a1ff8c065477386d1f5">status_dump</a> (<a class="el" href="object__status_8h.html#a1907f7bdf9168d8a969704df10f3cec3">status_t</a> status)</td></tr>
+<tr class="memdesc:aff9b81e1e0983a1ff8c065477386d1f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump a status object.  <a href="object__status_8h.html#aff9b81e1e0983a1ff8c065477386d1f5">More...</a><br /></td></tr>
+<tr class="separator:aff9b81e1e0983a1ff8c065477386d1f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a9fc595816a36e47d2b583afa775b3d4c"></a>
@@ -216,6 +222,32 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">status_to_destroy</td><td>Status object to destroy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aff9b81e1e0983a1ff8c065477386d1f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff9b81e1e0983a1ff8c065477386d1f5">&#9670;&nbsp;</a></span>status_dump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void status_dump </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__status_8h.html#a1907f7bdf9168d8a969704df10f3cec3">status_t</a>&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dump a status object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status</td><td>Status object to print </td></tr>
   </table>
   </dd>
 </dl>

@@ -118,12 +118,14 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="object__thread_8h__dep__incl.png" border="0" usemap="#objects_2thread_2include_2object__thread_8hdep" alt=""/></div>
 <map name="objects_2thread_2include_2object__thread_8hdep" id="objects_2thread_2include_2object__thread_8hdep">
-<area shape="rect" title=" " alt="" coords="163,5,330,47"/>
-<area shape="rect" href="object__thread_8c.html" title=" " alt="" coords="87,95,225,136"/>
-<area shape="rect" href="object__wrapper_8h.html" title=" " alt="" coords="250,95,427,136"/>
+<area shape="rect" title=" " alt="" coords="175,5,342,47"/>
+<area shape="rect" href="object__thread_8c.html" title=" " alt="" coords="27,95,165,136"/>
+<area shape="rect" href="thread__dump_8c.html" title=" " alt="" coords="189,95,328,136"/>
+<area shape="rect" href="object__wrapper_8h.html" title=" " alt="" coords="353,95,530,136"/>
 <area shape="rect" href="lower__component__adding_8h.html" title=" " alt="" coords="5,184,211,225"/>
 <area shape="rect" href="upper__component__adding_8h.html" title=" " alt="" coords="235,184,442,225"/>
-<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="467,184,616,225"/>
+<area shape="rect" href="component__dump_8c.html" title=" " alt="" coords="467,184,621,225"/>
+<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="645,184,795,225"/>
 <area shape="rect" href="lower__component__adding_8c.html" title=" " alt="" coords="6,273,210,315"/>
 <area shape="rect" href="upper__component__adding_8c.html" title=" " alt="" coords="236,273,441,315"/>
 </map>
@@ -163,6 +165,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a09763770f7ed31a8f14e25c6062b7989"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__thread_8h.html#a09763770f7ed31a8f14e25c6062b7989">thread_destroy</a> (<a class="el" href="object__thread_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a> *thread)</td></tr>
 <tr class="memdesc:a09763770f7ed31a8f14e25c6062b7989"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a thread object If the thread is THREAD_ERROR, do nothing.  <a href="object__thread_8h.html#a09763770f7ed31a8f14e25c6062b7989">More...</a><br /></td></tr>
 <tr class="separator:a09763770f7ed31a8f14e25c6062b7989"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e8cf5e70d1cd4cea4f184f75e22d642"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__thread_8h.html#a1e8cf5e70d1cd4cea4f184f75e22d642">thread_dump</a> (<a class="el" href="object__thread_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a> *thread)</td></tr>
+<tr class="memdesc:a1e8cf5e70d1cd4cea4f184f75e22d642"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump a thread object.  <a href="object__thread_8h.html#a1e8cf5e70d1cd4cea4f184f75e22d642">More...</a><br /></td></tr>
+<tr class="separator:a1e8cf5e70d1cd4cea4f184f75e22d642"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a59ac2fb591b30feb3786e5df38cace25"></a>
@@ -235,6 +240,32 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">thread</td><td>Thread object to destroy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1e8cf5e70d1cd4cea4f184f75e22d642"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e8cf5e70d1cd4cea4f184f75e22d642">&#9670;&nbsp;</a></span>thread_dump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void thread_dump </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__thread_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a> *&#160;</td>
+          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dump a thread object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>Thread object to print </td></tr>
   </table>
   </dd>
 </dl>

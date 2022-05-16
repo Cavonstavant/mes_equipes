@@ -5,5 +5,6 @@ var object__body_8h =
     [ "BODY_SIZE", "object__body_8h.html#a3170fd55c9e7f4a582647deab1b25aab", null ],
     [ "body_t", "object__body_8h.html#ae76459eee75ca162d91d057e2dd9f3d8", null ],
     [ "body_destroy", "object__body_8h.html#a8047934d863367897ec90bb5562b3151", null ],
+    [ "body_dump", "object__body_8h.html#a39e70ba2ee7d04f764d6f2dd0cdfde85", null ],
     [ "body_init", "object__body_8h.html#a48a1d1932cdf056c860d8c35e661c81a", null ]
 ];

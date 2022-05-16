@@ -116,14 +116,16 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="object__team_8h__dep__incl.png" border="0" usemap="#objects_2team_2include_2object__team_8hdep" alt=""/></div>
 <map name="objects_2team_2include_2object__team_8hdep" id="objects_2team_2include_2object__team_8hdep">
-<area shape="rect" title=" " alt="" coords="159,5,318,47"/>
-<area shape="rect" href="object__team_8c.html" title=" " alt="" coords="51,95,226,136"/>
-<area shape="rect" href="object__wrapper_8h.html" title=" " alt="" coords="250,95,427,136"/>
-<area shape="rect" href="lower__component__adding_8h.html" title=" " alt="" coords="5,184,211,225"/>
-<area shape="rect" href="upper__component__adding_8h.html" title=" " alt="" coords="235,184,442,225"/>
-<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="467,184,616,225"/>
-<area shape="rect" href="lower__component__adding_8c.html" title=" " alt="" coords="6,273,210,315"/>
-<area shape="rect" href="upper__component__adding_8c.html" title=" " alt="" coords="236,273,441,315"/>
+<area shape="rect" title=" " alt="" coords="209,5,368,47"/>
+<area shape="rect" href="object__team_8c.html" title=" " alt="" coords="5,95,180,136"/>
+<area shape="rect" href="team__dump_8c.html" title=" " alt="" coords="205,95,373,136"/>
+<area shape="rect" href="object__wrapper_8h.html" title=" " alt="" coords="397,95,575,136"/>
+<area shape="rect" href="lower__component__adding_8h.html" title=" " alt="" coords="50,184,255,225"/>
+<area shape="rect" href="upper__component__adding_8h.html" title=" " alt="" coords="280,184,487,225"/>
+<area shape="rect" href="component__dump_8c.html" title=" " alt="" coords="511,184,666,225"/>
+<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="690,184,839,225"/>
+<area shape="rect" href="lower__component__adding_8c.html" title=" " alt="" coords="51,273,255,315"/>
+<area shape="rect" href="upper__component__adding_8c.html" title=" " alt="" coords="281,273,486,315"/>
 </map>
 </div>
 </div>
@@ -161,6 +163,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a352440ae27d73e0370b5694ab24c8647"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__team_8h.html#a352440ae27d73e0370b5694ab24c8647">team_destroy</a> (<a class="el" href="object__team_8h.html#aaae062356783d193f58677fc3de7a946">team_t</a> *team)</td></tr>
 <tr class="memdesc:a352440ae27d73e0370b5694ab24c8647"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a team object If the team is TEAM_ERROR, do nothing.  <a href="object__team_8h.html#a352440ae27d73e0370b5694ab24c8647">More...</a><br /></td></tr>
 <tr class="separator:a352440ae27d73e0370b5694ab24c8647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0b9e7f4a4d49b36c63894455ef9ed59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__team_8h.html#af0b9e7f4a4d49b36c63894455ef9ed59">team_dump</a> (<a class="el" href="object__team_8h.html#aaae062356783d193f58677fc3de7a946">team_t</a> *team)</td></tr>
+<tr class="memdesc:af0b9e7f4a4d49b36c63894455ef9ed59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump a team object.  <a href="object__team_8h.html#af0b9e7f4a4d49b36c63894455ef9ed59">More...</a><br /></td></tr>
+<tr class="separator:af0b9e7f4a4d49b36c63894455ef9ed59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a48fea7549dd08d6a5d15c4adf44033e0"></a>
@@ -233,6 +238,32 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">team</td><td>Team object to destroy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af0b9e7f4a4d49b36c63894455ef9ed59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0b9e7f4a4d49b36c63894455ef9ed59">&#9670;&nbsp;</a></span>team_dump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void team_dump </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__team_8h.html#aaae062356783d193f58677fc3de7a946">team_t</a> *&#160;</td>
+          <td class="paramname"><em>team</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dump a team object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">team</td><td>Team object to print </td></tr>
   </table>
   </dd>
 </dl>

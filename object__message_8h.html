@@ -116,14 +116,16 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="object__message_8h__dep__incl.png" border="0" usemap="#objects_2message_2include_2object__message_8hdep" alt=""/></div>
 <map name="objects_2message_2include_2object__message_8hdep" id="objects_2message_2include_2object__message_8hdep">
-<area shape="rect" title=" " alt="" coords="151,5,334,47"/>
-<area shape="rect" href="object__message_8c.html" title=" " alt="" coords="71,95,225,136"/>
-<area shape="rect" href="object__wrapper_8h.html" title=" " alt="" coords="250,95,427,136"/>
-<area shape="rect" href="lower__component__adding_8h.html" title=" " alt="" coords="5,184,211,225"/>
-<area shape="rect" href="upper__component__adding_8h.html" title=" " alt="" coords="235,184,442,225"/>
-<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="467,184,616,225"/>
-<area shape="rect" href="lower__component__adding_8c.html" title=" " alt="" coords="6,273,210,315"/>
-<area shape="rect" href="upper__component__adding_8c.html" title=" " alt="" coords="236,273,441,315"/>
+<area shape="rect" title=" " alt="" coords="170,5,353,47"/>
+<area shape="rect" href="message__dump_8c.html" title=" " alt="" coords="5,95,160,136"/>
+<area shape="rect" href="object__message_8c.html" title=" " alt="" coords="184,95,339,136"/>
+<area shape="rect" href="object__wrapper_8h.html" title=" " alt="" coords="363,95,541,136"/>
+<area shape="rect" href="lower__component__adding_8h.html" title=" " alt="" coords="16,184,221,225"/>
+<area shape="rect" href="upper__component__adding_8h.html" title=" " alt="" coords="246,184,453,225"/>
+<area shape="rect" href="component__dump_8c.html" title=" " alt="" coords="477,184,632,225"/>
+<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="656,184,805,225"/>
+<area shape="rect" href="lower__component__adding_8c.html" title=" " alt="" coords="17,273,221,315"/>
+<area shape="rect" href="upper__component__adding_8c.html" title=" " alt="" coords="247,273,452,315"/>
 </map>
 </div>
 </div>
@@ -161,6 +163,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ae18df0064fb2e32942d0219be6fe7cf2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__message_8h.html#ae18df0064fb2e32942d0219be6fe7cf2">message_destroy</a> (<a class="el" href="object__message_8h.html#aa97dfcb9d4234ce2616da71acaab2ab2">message_t</a> *message)</td></tr>
 <tr class="memdesc:ae18df0064fb2e32942d0219be6fe7cf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a message object If the message is MESSAGE_ERROR, do nothing.  <a href="object__message_8h.html#ae18df0064fb2e32942d0219be6fe7cf2">More...</a><br /></td></tr>
 <tr class="separator:ae18df0064fb2e32942d0219be6fe7cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dde6f8da105815c6be6a39e35a93f4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__message_8h.html#a3dde6f8da105815c6be6a39e35a93f4e">message_dump</a> (<a class="el" href="object__message_8h.html#aa97dfcb9d4234ce2616da71acaab2ab2">message_t</a> *message)</td></tr>
+<tr class="memdesc:a3dde6f8da105815c6be6a39e35a93f4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump a message object.  <a href="object__message_8h.html#a3dde6f8da105815c6be6a39e35a93f4e">More...</a><br /></td></tr>
+<tr class="separator:a3dde6f8da105815c6be6a39e35a93f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a32358e5ff4a8bbea03adbeef3e53ad20"></a>
@@ -233,6 +238,32 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">message</td><td>Message object to destroy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3dde6f8da105815c6be6a39e35a93f4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dde6f8da105815c6be6a39e35a93f4e">&#9670;&nbsp;</a></span>message_dump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void message_dump </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__message_8h.html#aa97dfcb9d4234ce2616da71acaab2ab2">message_t</a> *&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dump a message object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Message object to print </td></tr>
   </table>
   </dd>
 </dl>

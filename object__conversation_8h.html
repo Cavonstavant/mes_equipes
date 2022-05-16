@@ -116,14 +116,16 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="object__conversation_8h__dep__incl.png" border="0" usemap="#objects_2conversation_2include_2object__conversation_8hdep" alt=""/></div>
 <map name="objects_2conversation_2include_2object__conversation_8hdep" id="objects_2conversation_2include_2object__conversation_8hdep">
-<area shape="rect" title=" " alt="" coords="125,5,345,47"/>
-<area shape="rect" href="object__conversation_8c.html" title=" " alt="" coords="35,95,226,136"/>
-<area shape="rect" href="object__wrapper_8h.html" title=" " alt="" coords="250,95,427,136"/>
-<area shape="rect" href="lower__component__adding_8h.html" title=" " alt="" coords="5,184,211,225"/>
-<area shape="rect" href="upper__component__adding_8h.html" title=" " alt="" coords="235,184,442,225"/>
-<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="467,184,616,225"/>
-<area shape="rect" href="lower__component__adding_8c.html" title=" " alt="" coords="6,273,210,315"/>
-<area shape="rect" href="upper__component__adding_8c.html" title=" " alt="" coords="236,273,441,315"/>
+<area shape="rect" title=" " alt="" coords="203,5,423,47"/>
+<area shape="rect" href="conversation__dump_8c.html" title=" " alt="" coords="5,95,193,136"/>
+<area shape="rect" href="object__conversation_8c.html" title=" " alt="" coords="217,95,408,136"/>
+<area shape="rect" href="object__wrapper_8h.html" title=" " alt="" coords="432,95,609,136"/>
+<area shape="rect" href="lower__component__adding_8h.html" title=" " alt="" coords="85,184,290,225"/>
+<area shape="rect" href="upper__component__adding_8h.html" title=" " alt="" coords="315,184,521,225"/>
+<area shape="rect" href="component__dump_8c.html" title=" " alt="" coords="546,184,701,225"/>
+<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="725,184,874,225"/>
+<area shape="rect" href="lower__component__adding_8c.html" title=" " alt="" coords="85,273,289,315"/>
+<area shape="rect" href="upper__component__adding_8c.html" title=" " alt="" coords="315,273,521,315"/>
 </map>
 </div>
 </div>
@@ -161,6 +163,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aef7ac78c7225ee9ab5945921ba7ebbb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__conversation_8h.html#aef7ac78c7225ee9ab5945921ba7ebbb0">conversation_destroy</a> (<a class="el" href="object__conversation_8h.html#a1e1d9af360fc54df2c33d9e2ee7bb3da">conversation_t</a> *conversation)</td></tr>
 <tr class="memdesc:aef7ac78c7225ee9ab5945921ba7ebbb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy a conversation object If the conversation is CONVERSATION_ERROR, do nothing.  <a href="object__conversation_8h.html#aef7ac78c7225ee9ab5945921ba7ebbb0">More...</a><br /></td></tr>
 <tr class="separator:aef7ac78c7225ee9ab5945921ba7ebbb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca5cd4217c29d14531777870aa19de50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__conversation_8h.html#aca5cd4217c29d14531777870aa19de50">conversation_dump</a> (<a class="el" href="object__conversation_8h.html#a1e1d9af360fc54df2c33d9e2ee7bb3da">conversation_t</a> *conversation)</td></tr>
+<tr class="memdesc:aca5cd4217c29d14531777870aa19de50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump a conversation object.  <a href="object__conversation_8h.html#aca5cd4217c29d14531777870aa19de50">More...</a><br /></td></tr>
+<tr class="separator:aca5cd4217c29d14531777870aa19de50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ac8982fd66d2b2391b4dc274121c8138d"></a>
@@ -233,6 +238,32 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">conversation</td><td>Conversation object to destroy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aca5cd4217c29d14531777870aa19de50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca5cd4217c29d14531777870aa19de50">&#9670;&nbsp;</a></span>conversation_dump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void conversation_dump </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__conversation_8h.html#a1e1d9af360fc54df2c33d9e2ee7bb3da">conversation_t</a> *&#160;</td>
+          <td class="paramname"><em>conversation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dump a conversation object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conversation</td><td>Conversation object to dump </td></tr>
   </table>
   </dd>
 </dl>

@@ -1,10 +1,12 @@
 <map id="objects/user/include/object_user.h" name="objects/user/include/object_user.h">
-<area shape="rect" id="node1" title=" " alt="" coords="164,5,316,47"/>
-<area shape="rect" id="node2" href="$object__user_8c.html" title=" " alt="" coords="57,95,225,136"/>
-<area shape="rect" id="node3" href="$object__wrapper_8h.html" title=" " alt="" coords="250,95,427,136"/>
-<area shape="rect" id="node4" href="$lower__component__adding_8h.html" title=" " alt="" coords="5,184,211,225"/>
-<area shape="rect" id="node6" href="$upper__component__adding_8h.html" title=" " alt="" coords="235,184,442,225"/>
-<area shape="rect" id="node8" href="$object__wrapper_8c.html" title=" " alt="" coords="467,184,616,225"/>
-<area shape="rect" id="node5" href="$lower__component__adding_8c.html" title=" " alt="" coords="6,273,210,315"/>
-<area shape="rect" id="node7" href="$upper__component__adding_8c.html" title=" " alt="" coords="236,273,441,315"/>
+<area shape="rect" id="node1" title=" " alt="" coords="200,5,352,47"/>
+<area shape="rect" id="node2" href="$object__user_8c.html" title=" " alt="" coords="5,95,173,136"/>
+<area shape="rect" id="node3" href="$user__dump_8c.html" title=" " alt="" coords="198,95,354,136"/>
+<area shape="rect" id="node4" href="$object__wrapper_8h.html" title=" " alt="" coords="378,95,555,136"/>
+<area shape="rect" id="node5" href="$lower__component__adding_8h.html" title=" " alt="" coords="31,184,236,225"/>
+<area shape="rect" id="node7" href="$upper__component__adding_8h.html" title=" " alt="" coords="261,184,467,225"/>
+<area shape="rect" id="node9" href="$component__dump_8c.html" title=" " alt="" coords="492,184,647,225"/>
+<area shape="rect" id="node10" href="$object__wrapper_8c.html" title=" " alt="" coords="671,184,820,225"/>
+<area shape="rect" id="node6" href="$lower__component__adding_8c.html" title=" " alt="" coords="31,273,235,315"/>
+<area shape="rect" id="node8" href="$upper__component__adding_8c.html" title=" " alt="" coords="261,273,467,315"/>
 </map>
