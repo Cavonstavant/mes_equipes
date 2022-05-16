@@ -14,10 +14,19 @@
     #include <sys/queue.h>
     #include <stdbool.h>
 
+/// \brief Represents a user from the application side
 typedef struct user_s {
+
+    /// The user's login
     char *username;
+
+    /// The user's password
     char *password;
+
+    /// True if the user is logged in false if not
     bool logged_in;
+
+    /// \brief A pointer to the next/prev user
     CIRCLEQ_ENTRY(user_s) users;
 } user_t;
 

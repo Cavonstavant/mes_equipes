@@ -23,15 +23,19 @@
     #include <errno.h>
     #include "net_utils/auth/user.h"
 
+    /// Defines the maximum connections allowed at the same time on a server
     #define LISTEN_BACKLOG 50
+
+    /// Defines the maximum size of a message
     #define MAX_MSG 55555
 
+    /// Defines the server status
     #define STOPPED false
     #define RUNNING true
 
 /// \brief Represents a client connection
 typedef struct peer_s {
-    /// A file descriptor for the socket.
+    /// A file descriptor for the socket
     int sock_fd;
 
     /// The address of the client
@@ -98,6 +102,8 @@ typedef struct tcp_server_s {
     void *arbitrary_data;
 } tcp_server_t;
 
+
+/// \brief DO NOT USE THIS FUNCTION, USE THE `TEAMS_LOG` MACRO INSTEAD
 static inline void log_error(int line,
     const char *file,
     const char *func,
@@ -106,6 +112,7 @@ static inline void log_error(int line,
     printf("%s:%d:%s():\n%s: %s\n", file, line, func, msg, strerror(errno));
 }
 
+    /// \brief Simple macro used to log a message
     #define TEAMS_LOG(msg) \
         do {log_error(__LINE__, __FILE__, __func__, msg);} while (0)
 
@@ -136,12 +143,16 @@ bool add_user_to_server(tcp_server_t *srv, char *username, char *password);
 
 /// \brief Update the read and write fd sets according to
 /// peer_t::pending_command of every peers connected
-/// \param srv The tcp server containing the peers and the w/r fd sets
+/// \param srv The tcp server containing the peers and the w/r/err fd sets
 void server_fill_fd_sets(tcp_server_t *srv);
 
-/// 
+/// \brief Wait for a client update
+/// \note This function is a wrapper around select()
+/// \param src The tcp server containing the peers and the w/r/err fd sets
 int server_wait(tcp_server_t *srv);
 
-bool server_manage_fd_update(tcp_server_t *srv);
+/// \brief Handle a client update
+/// \param srv The tcp server containing the peers and the w/r/err fd sets
+void server_manage_fd_update(tcp_server_t *srv);
 
 #endif //NET_UTILS_H

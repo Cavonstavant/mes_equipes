@@ -25,6 +25,10 @@ void display_start_message(struct sockaddr_in addr)
 {
     char *host_repr = malloc(sizeof(char) * 16);
 
+    if (host_repr == NULL){
+        TEAMS_LOG("malloc");
+        return;
+    }
     memset(host_repr, 0, sizeof(char) * 16);
     inet_ntop(AF_INET, &addr.sin_addr, host_repr, 16);
     printf("Server started on %s:%hu.\n", host_repr, ntohs(addr.sin_port));

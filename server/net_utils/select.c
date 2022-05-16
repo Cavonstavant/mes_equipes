@@ -5,6 +5,8 @@
 ** select
 */
 
+/// \file server/net_utils/select.c
+
 #include "net_utils.h"
 
 int server_wait(tcp_server_t *srv)
