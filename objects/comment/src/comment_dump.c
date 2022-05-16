@@ -17,14 +17,14 @@ void comment_dump(comment_t *comment)
     printf("Comment :\n");
     printf("\t");
     my_uuid_dump(comment->uuid);
-    printf("\t Parent : ");
+    printf("\tParent : ");
     my_uuid_dump(comment->thread);
-    printf("\t Author : ");
+    printf("\tAuthor : ");
     my_uuid_dump(comment->author);
     printf("\t");
     body_dump(comment->body);
-    printf("\t Time : ");
+    printf("\tTime : ");
     strftime(time_display, 20, "%Y-%m-%d %H:%M:%S", localtime(&comment->time));
-    print("%s\n", time_display);
+    printf("%s\n", time_display);
     fflush(NULL);
 }
