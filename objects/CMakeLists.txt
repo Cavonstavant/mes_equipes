@@ -33,6 +33,7 @@ set (TARGET ${PROJECT_NAME}_objects)
 set (SRC
     ${SRC_BODY}/object_body.c
     ${SRC_BODY}/body_dump.c
+    ${SRC_BODY}/body_setter.c
     ${SRC_CHANNEL}/object_channel.c
     ${SRC_CHANNEL}/channel_dump.c
     ${SRC_COMMENT}/object_comment.c

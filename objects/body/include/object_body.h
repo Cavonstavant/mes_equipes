@@ -57,4 +57,12 @@ void body_destroy(body_t body_to_destroy);
 ///
 void body_dump(body_t body);
 
+///
+/// \brief Edit the content of a body object
+///
+/// \param body Body object to edit
+/// \param body_content Content to replace into body object
+///
+void body_edit_content(body_t body, char *body_content);
+
 #endif /* !OBJECT_BODY_H_ */
