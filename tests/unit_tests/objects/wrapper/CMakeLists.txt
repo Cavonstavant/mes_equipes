@@ -4,6 +4,8 @@ set(SRC_ROOT ${PROJECT_SOURCE_DIR}/tests/unit_tests/objects/wrapper)
 set(SRC
     ${SRC_ROOT}/objects_wrapper_tests.c
     ${SRC_ROOT}/upper_component_adding_tests.c
+    ${SRC_ROOT}/lower_component_adding_tests.c
+    ${SRC_ROOT}/component_dump_tests.c
 )
 
 create_test(

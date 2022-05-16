@@ -6,12 +6,20 @@
 */
 
 #include <criterion/criterion.h>
+#include <criterion/redirect.h>
 #include "object_body.h"
 
 Test(objects_body, classic) {
     body_t body = body_init("Michel");
 
     cr_assert_str_eq(body, "Michel");
+}
+
+Test(objects_body, dump, .init=cr_redirect_stdout) {
+    body_t body = body_init("Michel");
+
+    body_dump(body);
+    cr_assert_stdout_eq_str("Body : Michel\n");
 }
 
 Test(objects_body, to_long) {

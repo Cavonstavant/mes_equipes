@@ -51,4 +51,11 @@ description_t description_init(char *description_content);
 ///
 void description_destroy(description_t description_to_destroy);
 
+///
+/// \brief Dump a description object
+///
+/// \param desc Description object to dump
+///
+void description_dump(description_t desc);
+
 #endif /* !OBJECT_DESCRIPTION_H_ */

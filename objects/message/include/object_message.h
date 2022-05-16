@@ -57,4 +57,11 @@ message_t *message_init(message_creation_t content);
 ///
 void message_destroy(message_t *message);
 
+///
+/// \brief Dump a message object
+///
+/// \param message Message object to print
+///
+void message_dump(message_t *message);
+
 #endif /* !OBJECT_MESSAGE_H_ */

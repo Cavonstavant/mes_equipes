@@ -50,4 +50,11 @@ name_t name_init(char *name_content);
 ///
 void name_destroy(name_t name_to_destroy);
 
+///
+/// \brief Dump a name object
+///
+/// \param name Name object to print
+///
+void name_dump(name_t name);
+
 #endif /* !OBJECT_NAME_H_ */

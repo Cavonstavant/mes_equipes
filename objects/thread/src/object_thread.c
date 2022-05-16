@@ -22,13 +22,13 @@ thread_t *thread_init(thread_creation_t content)
         return THREAD_ERROR;
     if ((new_thread->body = body_init(content.body)) == BODY_ERROR)
         return THREAD_ERROR;
-    if ((new_thread->comments = malloc(sizeof(my_uuid_t *) * 20))
+    if ((new_thread->comments = malloc(sizeof(my_uuid_t *)))
         == UUID_ERROR)
         return THREAD_ERROR;
     new_thread->author = content.author;
     new_thread->channel = content.channel;
     new_thread->date = time(NULL);
-    new_thread->comments[0] = NULL;
+    new_thread->comment_n = 0;
     return new_thread;
 }
 

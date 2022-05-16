@@ -6,12 +6,20 @@
 */
 
 #include <criterion/criterion.h>
+#include <criterion/redirect.h>
 #include "object_name.h"
 
 Test(objects_name, classic) {
     name_t name = name_init("Michel");
 
     cr_assert_str_eq(name, "Michel");
+}
+
+Test(objects_name, dump, .init=cr_redirect_stdout) {
+    name_t name = name_init("Michel");
+
+    name_dump(name);
+    cr_assert_stdout_eq_str("Name : Michel\n");
 }
 
 Test(objects_name, to_long) {
