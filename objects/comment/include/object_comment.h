@@ -65,4 +65,11 @@ comment_t *comment_init(comment_creation_t content);
 ///
 void comment_destroy(comment_t *comment);
 
+///
+/// \brief Dump a comment object
+///
+/// \param comment Comment object to display
+///
+void comment_dump(comment_t *comment);
+
 #endif /* !OBJECT_COMMENT_H_ */
