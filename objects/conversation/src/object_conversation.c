@@ -18,14 +18,15 @@ conversation_t *conversation_init(conversation_creation_t content)
         return CONVERSATION_ERROR;
     if ((new_conv->uuid = my_uuid_init(CON_)) == UUID_ERROR)
         return CONVERSATION_ERROR;
-    if ((new_conv->participant = malloc(sizeof(my_uuid_t *) * 10))
+    if ((new_conv->participant = malloc(sizeof(my_uuid_t *) * 2))
         == UUID_ERROR)
         return CONVERSATION_ERROR;
-    if ((new_conv->messages = malloc(sizeof(my_uuid_t *) * 250)) == UUID_ERROR)
+    if ((new_conv->messages = malloc(sizeof(my_uuid_t *))) == UUID_ERROR)
         return CONVERSATION_ERROR;
-    new_conv->messages[0] = NULL;
+    new_conv->n_message = 0;
     new_conv->participant[0] = content.participant_one;
     new_conv->participant[1] = content.participant_two;
+    new_conv->n_participant = 2;
     return new_conv;
 }
 

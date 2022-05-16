@@ -28,8 +28,12 @@ typedef struct conversation_s {
     my_uuid_t *uuid;
     /// Uuid of the attached thread
     my_uuid_t **participant;
+    /// Number of participant
+    int n_participant;
     /// Uuid of the attached user
     my_uuid_t **messages;
+    /// Number of message
+    int n_message;
 } conversation_t;
 
 ///
