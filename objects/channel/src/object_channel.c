@@ -26,7 +26,7 @@ channel_t *channel_init(channel_creation_t content)
         return CHANNEL_ERROR;
     if ((new_channel->threads = malloc(sizeof(my_uuid_t *))) == UUID_ERROR)
         return CHANNEL_ERROR;
-    new_channel->n_threads = 0;
+    new_channel->threads_n = 0;
     return new_channel;
 }
 

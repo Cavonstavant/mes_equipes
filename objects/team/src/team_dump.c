@@ -20,12 +20,12 @@ void team_dump(team_t *team)
     printf("\t");
     description_dump(team->description);
     printf("\tChannels :\n");
-    for (int i = 0; i < team->n_channel; i++) {
+    for (int i = 0; i < team->channel_n; i++) {
         printf("\t\t");
         my_uuid_dump(team->channels[i]);
     }
     printf("\tUsers :\n");
-    for (int i = 0; i < team->n_user; i++) {
+    for (int i = 0; i < team->user_n; i++) {
         printf("\t\t");
         my_uuid_dump(team->users[i]);
     }

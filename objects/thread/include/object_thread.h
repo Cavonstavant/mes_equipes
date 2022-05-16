@@ -40,7 +40,7 @@ typedef struct thread_s {
     /// Uuid list of the attached comments
     my_uuid_t **comments;
     /// Number of attached comment
-    int n_comment;
+    int comment_n;
 } thread_t;
 
 ///

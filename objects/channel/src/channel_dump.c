@@ -22,7 +22,7 @@ void channel_dump(channel_t *channel)
     printf("\tParent : ");
     my_uuid_dump(channel->team);
     printf("\tChild :\n");
-    for (int i = 0; i < channel->n_threads; i++) {
+    for (int i = 0; i < channel->threads_n; i++) {
         printf("\t\t");
         my_uuid_dump(channel->threads[i]);
     }

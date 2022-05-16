@@ -35,7 +35,7 @@ typedef struct channel_s {
     /// Uuid list of the attached threads
     my_uuid_t **threads;
     /// Number of attached threads
-    int n_threads;
+    int threads_n;
 } channel_t;
 
 ///

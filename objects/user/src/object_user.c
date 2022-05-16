@@ -25,8 +25,8 @@ user_t *user_init(user_creation_t content)
     if ((new_user->conversations = malloc(sizeof(my_uuid_t *)))
         == UUID_ERROR)
         return USER_ERROR;
-    new_user->n_team = 0;
-    new_user->n_conversation = 0;
+    new_user->team_n = 0;
+    new_user->conversation_n = 0;
     new_user->status = status_init(); /// NEED TO CHANGE STATUS STATE #24
     return new_user;
 }

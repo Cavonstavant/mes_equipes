@@ -27,8 +27,8 @@ team_t *team_init(team_creation_t content)
         return TEAM_ERROR;
     if ((new_team->users = malloc(sizeof(my_uuid_t *))) == UUID_ERROR)
         return TEAM_ERROR;
-    new_team->n_user = 0;
-    new_team->n_channel = 0;
+    new_team->user_n = 0;
+    new_team->channel_n = 0;
     return new_team;
 }
 

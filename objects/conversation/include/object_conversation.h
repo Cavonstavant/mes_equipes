@@ -29,11 +29,11 @@ typedef struct conversation_s {
     /// Uuid of the attached thread
     my_uuid_t **participant;
     /// Number of participant
-    int n_participant;
+    int participant_n;
     /// Uuid of the attached user
     my_uuid_t **messages;
     /// Number of message
-    int n_message;
+    int message_n;
 } conversation_t;
 
 ///

@@ -23,10 +23,10 @@ conversation_t *conversation_init(conversation_creation_t content)
         return CONVERSATION_ERROR;
     if ((new_conv->messages = malloc(sizeof(my_uuid_t *))) == UUID_ERROR)
         return CONVERSATION_ERROR;
-    new_conv->n_message = 0;
+    new_conv->message_n = 0;
     new_conv->participant[0] = content.participant_one;
     new_conv->participant[1] = content.participant_two;
-    new_conv->n_participant = 2;
+    new_conv->participant_n = 2;
     return new_conv;
 }
 

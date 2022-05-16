@@ -33,11 +33,11 @@ typedef struct team_s {
     /// Uuid list of the attached channels
     my_uuid_t **channels;
     /// Number of attached channels
-    int n_channel;
+    int channel_n;
     /// Uuid list of the authorized users
     my_uuid_t **users;
     /// Number of attached user
-    int n_user;
+    int user_n;
 } team_t;
 
 ///

@@ -28,7 +28,7 @@ thread_t *thread_init(thread_creation_t content)
     new_thread->author = content.author;
     new_thread->channel = content.channel;
     new_thread->date = time(NULL);
-    new_thread->n_comment = 0;
+    new_thread->comment_n = 0;
     return new_thread;
 }
 

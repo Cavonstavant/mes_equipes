@@ -33,11 +33,11 @@ typedef struct user_s {
     /// Uuid list of the attached teams
     my_uuid_t **teams;
     /// Number of attached team
-    int n_team;
+    int team_n;
     /// Uuid list of the attached conversation
     my_uuid_t **conversations;
     /// Number of attached conversation
-    int n_conversation;
+    int conversation_n;
 } user_t;
 
 ///

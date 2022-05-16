@@ -39,7 +39,7 @@ void thread_dump(thread_t *thread)
     body_dump(thread->body);
     thread_dump_time(thread);
     printf("\tComments :\n");
-    for (int i = 0; i < thread->n_comment; i++) {
+    for (int i = 0; i < thread->comment_n; i++) {
         printf("\t\t");
         my_uuid_dump(thread->comments[i]);
     }

@@ -16,13 +16,13 @@ void conversation_dump(conversation_t *conversation)
     printf("\t");
     my_uuid_dump(conversation->uuid);
     printf("\tParticipant :\n");
-    for (int i = 0; i < conversation->n_participant; i++) {
+    for (int i = 0; i < conversation->participant_n; i++) {
         printf("\t\t");
         my_uuid_dump(conversation->participant[i]);
     }
     fflush(NULL);
     printf("\tMessage :\n");
-    for (int i = 0; i < conversation->n_message; i++) {
+    for (int i = 0; i < conversation->message_n; i++) {
         printf("\t\t");
         my_uuid_dump(conversation->messages[i]);
     }
