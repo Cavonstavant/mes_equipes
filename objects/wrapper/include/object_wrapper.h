@@ -74,4 +74,12 @@ object_wrapper_t *wrapper_init(void);
 /// \param wrapper Wrapper object to destroy
 ///
 void wrapper_destroy(object_wrapper_t *wrapper);
+
+///
+/// \brief Dump all object in the wrapper
+///
+/// \param wrapper Wraper object to print
+///
+void wrapper_dump(object_wrapper_t *wrapper);
+
 #endif /* !OBJECT_WRAPPER_H_ */
