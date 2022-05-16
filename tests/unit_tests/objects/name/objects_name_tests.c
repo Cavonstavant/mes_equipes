@@ -17,9 +17,7 @@ Test(objects_name, classic) {
 Test(objects_name, to_long) {
     name_t name = name_init("Michelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll");
 
-    if (name != NULL)
-        cr_assert_eq(1, 2);
-    cr_assert_eq(1, 1);
+    cr_assert_null(name);
 }
 
 Test(objects_name, empty) {

@@ -15,9 +15,7 @@ Test(objects_my_comment, classic) {
         my_uuid_init(USR_)
     });
 
-    if (my_comment == NULL)
-        cr_assert_eq(1, 2);
-    cr_assert_eq(2, 2);
+    cr_assert_not_null(my_comment);
 }
 
 Test(objects_my_comment, invalid_body) {
@@ -27,9 +25,7 @@ Test(objects_my_comment, invalid_body) {
         my_uuid_init(USR_)
     });
 
-    if (my_comment != NULL)
-        cr_assert_eq(1, 2);
-    cr_assert_eq(2, 2);
+    cr_assert_null(my_comment);
 }
 
 Test(objects_my_comment, destroy_classic) {

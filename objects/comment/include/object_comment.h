@@ -53,7 +53,7 @@ typedef struct comment_creation_s {
 /// \brief Init a comment object
 ///
 /// \param content content of the comment object
-/// \return comment_t* Newly created content object
+/// \return comment_t* Newly created comment object
 ///
 comment_t *comment_init(comment_creation_t content);
 

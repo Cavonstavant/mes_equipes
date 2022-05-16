@@ -14,9 +14,7 @@ Test(objects_my_team, classic) {
         "My description"
     });
 
-    if (my_team == NULL)
-        cr_assert_eq(1, 2);
-    cr_assert_eq(2, 2);
+    cr_assert_not_null(my_team);
 }
 
 Test(objects_my_team, invalid_name) {
@@ -25,9 +23,7 @@ Test(objects_my_team, invalid_name) {
         "My_description"
     });
 
-    if (my_team != NULL)
-        cr_assert_eq(1, 2);
-    cr_assert_eq(2, 2);
+    cr_assert_null(my_team);
 }
 
 Test(objects_my_team, invalid_desc) {
@@ -36,9 +32,7 @@ Test(objects_my_team, invalid_desc) {
         "My descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy descriptionMy description"
     });
 
-    if (my_team != NULL)
-        cr_assert_eq(1, 2);
-    cr_assert_eq(2, 2);
+    cr_assert_null(my_team);
 }
 
 Test(objects_my_team, destroy_classic) {
