@@ -12,11 +12,12 @@
 
 void channel_dump(channel_t *channel)
 {
-    printf("Comment :\n");
+    printf("Channel :\n");
     printf("\t");
     my_uuid_dump(channel->uuid);
     printf("\t");
     name_dump(channel->name);
+    printf("\t");
     description_dump(channel->description);
     printf("\tParent : ");
     my_uuid_dump(channel->team);

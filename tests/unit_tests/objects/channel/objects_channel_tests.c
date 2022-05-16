@@ -18,6 +18,16 @@ Test(objects_my_channel, classic) {
     cr_assert_not_null(my_channel);
 }
 
+Test(objects_my_channel, dump) {
+    channel_t *my_channel = channel_init((channel_creation_t) {
+        "My_Channel",
+        "I'm a glorious channel",
+        my_uuid_init(TEM_)
+    });
+
+    channel_dump(my_channel); /// TO REFACTO WITH USERJOURNEY
+}
+
 Test(objects_my_channel, invalid_name) {
     channel_t *my_channel = channel_init((channel_creation_t) {
         "My_Channelllllllllllllllllllllllllllllllllllllll",
