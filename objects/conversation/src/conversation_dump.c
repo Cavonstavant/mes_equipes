@@ -12,7 +12,7 @@
 
 void conversation_dump(conversation_t *conversation)
 {
-    printf("Channel :\n");
+    printf("Conversation :\n");
     printf("\t");
     my_uuid_dump(conversation->uuid);
     printf("\tParticipant :\n");
