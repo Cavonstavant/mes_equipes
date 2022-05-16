@@ -32,8 +32,12 @@ typedef struct team_s {
     description_t description;
     /// Uuid list of the attached channels
     my_uuid_t **channels;
+    /// Number of attached channels
+    int n_channel;
     /// Uuid list of the authorized users
     my_uuid_t **users;
+    /// Number of attached user
+    int n_user;
 } team_t;
 
 ///
@@ -62,5 +66,12 @@ team_t *team_init(team_creation_t content);
 /// \param team Team object to destroy
 ///
 void team_destroy(team_t *team);
+
+///
+/// \brief Dump a team object
+///
+/// \param team Team object to print
+///
+void team_dump(team_t *team);
 
 #endif /* !OBJECT_TEAM_H_ */
