@@ -20,10 +20,10 @@ void conversation_dump(conversation_t *conversation)
         printf("\t\t");
         my_uuid_dump(conversation->participant[i]);
     }
-    fflush(NULL);
     printf("\tMessage :\n");
     for (int i = 0; i < conversation->message_n; i++) {
         printf("\t\t");
         my_uuid_dump(conversation->messages[i]);
     }
+    fflush(NULL);
 }
