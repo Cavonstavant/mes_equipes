@@ -53,8 +53,8 @@ void body_destroy(body_t body_to_destroy);
 ///
 /// \brief Dump a body object
 ///
-/// \param body_to_destroy Body object to print
+/// \param body Body object to print
 ///
-void body_dump(body_t body_to_destroy);
+void body_dump(body_t body);
 
 #endif /* !OBJECT_BODY_H_ */

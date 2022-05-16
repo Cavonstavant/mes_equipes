@@ -10,10 +10,10 @@
 #include "object_body.h"
 #include <stdio.h>
 
-void body_dump(body_t body_to_destroy)
+void body_dump(body_t body)
 {
     printf("Body object :\n");
     printf("\tContent :\n");
-    printf("\t\t%s\n", body_to_destroy);
+    printf("\t\t%s\n", body);
     fflush(NULL);
 }
