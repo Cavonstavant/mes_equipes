@@ -34,6 +34,7 @@ set (SRC
     ${SRC_BODY}/object_body.c
     ${SRC_BODY}/body_dump.c
     ${SRC_CHANNEL}/object_channel.c
+    ${SRC_CHANNEL}/channel_dump.c
     ${SRC_COMMENT}/object_comment.c
     ${SRC_COMMENT}/comment_dump.c
     ${SRC_CONVERSATION}/object_conversation.c
