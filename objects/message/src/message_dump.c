@@ -14,7 +14,7 @@ void message_dump(message_t *message)
 {
     char time_display[20];
 
-    printf("Comment :\n");
+    printf("Message :\n");
     printf("\t");
     my_uuid_dump(message->uuid);
     printf("\t");
