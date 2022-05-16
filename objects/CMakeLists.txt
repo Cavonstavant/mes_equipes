@@ -50,6 +50,7 @@ set (SRC
     ${SRC_TEAM}/object_team.c
     ${SRC_TEAM}/team_dump.c
     ${SRC_THREAD}/object_thread.c
+    ${SRC_THREAD}/thread_dump.c
     ${SRC_USER}/object_user.c
     ${SRC_UUID}/object_uuid.c
     ${SRC_UUID}/uuid_dump.c

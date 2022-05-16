@@ -39,6 +39,8 @@ typedef struct thread_s {
     time_t date;
     /// Uuid list of the attached comments
     my_uuid_t **comments;
+    /// Number of attached comment
+    int n_comment;
 } thread_t;
 
 ///
