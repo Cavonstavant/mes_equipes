@@ -12,8 +12,6 @@
 
 void name_dump(name_t name)
 {
-    printf("Name object :\n");
-    printf("\tContent :\n");
-    printf("\t\t%s\n", name);
+    printf("Name : %s\n", name);
     fflush(NULL);
 }

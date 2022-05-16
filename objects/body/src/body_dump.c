@@ -12,8 +12,6 @@
 
 void body_dump(body_t body)
 {
-    printf("Body object :\n");
-    printf("\tContent :\n");
-    printf("\t\t%s\n", body);
+    printf("Body : %s\n", body);
     fflush(NULL);
 }

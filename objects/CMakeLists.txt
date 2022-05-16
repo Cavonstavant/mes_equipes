@@ -42,6 +42,7 @@ set (SRC
     ${SRC_NAME}/object_name.c
     ${SRC_NAME}/name_dump.c
     ${SRC_STATUS}/object_status.c
+    ${SRC_STATUS}/status_dump.c
     ${SRC_TEAM}/object_team.c
     ${SRC_THREAD}/object_thread.c
     ${SRC_USER}/object_user.c

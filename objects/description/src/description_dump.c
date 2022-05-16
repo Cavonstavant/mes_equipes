@@ -12,8 +12,6 @@
 
 void description_dump(description_t desc)
 {
-    printf("Description object :\n");
-    printf("\tContent :\n");
-    printf("\t\t%s\n", desc);
+    printf("Description : %s\n", desc);
     fflush(NULL);
 }
