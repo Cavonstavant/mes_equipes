@@ -20,13 +20,13 @@ user_t *user_init(user_creation_t content)
         return USER_ERROR;
     if ((new_user->name = name_init(content.name)) == NAME_ERROR)
         return USER_ERROR;
-    if ((new_user->teams = malloc(sizeof(my_uuid_t *) * 40)) == UUID_ERROR)
+    if ((new_user->teams = malloc(sizeof(my_uuid_t *))) == UUID_ERROR)
         return USER_ERROR;
-    if ((new_user->conversation = malloc(sizeof(my_uuid_t *) * 40))
+    if ((new_user->conversations = malloc(sizeof(my_uuid_t *)))
         == UUID_ERROR)
         return USER_ERROR;
-    new_user->teams[0] = NULL;
-    new_user->conversation[0] = NULL;
+    new_user->n_team = 0;
+    new_user->n_conversation = 0;
     new_user->status = status_init(); /// NEED TO CHANGE STATUS STATE #24
     return new_user;
 }
@@ -39,6 +39,6 @@ void user_destroy(user_t *user)
     name_destroy(user->name);
     status_destroy(user->status);
     free(user->teams);
-    free(user->conversation);
+    free(user->conversations);
     free(user);
 }
