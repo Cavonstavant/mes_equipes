@@ -58,4 +58,12 @@ void description_destroy(description_t description_to_destroy);
 ///
 void description_dump(description_t desc);
 
+///
+/// \brief Edit the content of a description object
+///
+/// \param desc Description object to edit
+/// \param content Content to edit into the Description object
+///
+void description_edit_content(description_t desc, char *content);
+
 #endif /* !OBJECT_DESCRIPTION_H_ */

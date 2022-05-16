@@ -5,7 +5,7 @@
 ** body_setter
 */
 
-/// \file objects/body/src/object_body.c
+/// \file objects/body/src/body_setter.c
 
 #include "object_body.h"
 #include <string.h>

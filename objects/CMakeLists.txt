@@ -42,6 +42,7 @@ set (SRC
     ${SRC_CONVERSATION}/conversation_dump.c
     ${SRC_DESCRIPTION}/object_description.c
     ${SRC_DESCRIPTION}/description_dump.c
+    ${SRC_DESCRIPTION}/description_setter.c
     ${SRC_MESSAGE}/object_message.c
     ${SRC_MESSAGE}/message_dump.c
     ${SRC_NAME}/object_name.c
