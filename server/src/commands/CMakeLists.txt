@@ -5,7 +5,9 @@ set (SRC)
 
 set (TARGET ${PROJECT_NAME}_commands)
 
-add_library(${TARGET} ${SRC})
+add_library(${TARGET} ${SRC}
+    command_info.c
+)
 
 target_include_directories(${TARGET}
     PUBLIC ${INC_COMMANDS}
