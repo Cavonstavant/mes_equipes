@@ -1,0 +1,23 @@
+/*
+** EPITECH PROJECT, 2022
+** Project
+** File description:
+** uuid_setter
+*/
+
+/// \file objects/uuid/src/uuid_setter.c
+
+#include "object_uuid.h"
+
+void uuid_edit_content(my_uuid_t *uuid, char *content)
+{
+    w_uuid_parse_from_string(&uuid->uuid, content);
+}
+
+int find_uuid(my_uuid_t **list, int list_n, my_uuid_t *to_find)
+{
+    for (int i = 0; i < list_n; i++)
+        if (!strcmp(list[i]->uuid.repr, to_find->uuid.repr))
+            return i;
+    return -1;
+}

@@ -68,4 +68,22 @@ void my_uuid_destroy(my_uuid_t *uuid_to_destroy);
 ///
 void my_uuid_dump(my_uuid_t *uuid);
 
+///
+/// \brief Edit the content of a My uuid object
+///
+/// \param uuid My_uuid object to be edited
+/// \param content Content to replace in the my_uuid object
+///
+void uuid_edit_content(my_uuid_t *uuid, char *content);
+
+///
+/// \brief Find an uuid object into a uuid object list
+///
+/// \param list List of uuid object
+/// \param list_n Size of the uuid object list
+/// \param to_find Uuid to find in the list
+/// \return int Index of the matching uuid in the list
+///
+int find_uuid(my_uuid_t **list, int list_n, my_uuid_t *to_find);
+
 #endif /* !OBJECT_UUID_H_ */
