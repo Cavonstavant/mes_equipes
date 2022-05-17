@@ -15,9 +15,17 @@ Test(objects_my_comment, classic) {
         my_uuid_init(USR_)
     });
 
-    if (my_comment == NULL)
-        cr_assert_eq(1, 2);
-    cr_assert_eq(2, 2);
+    cr_assert_not_null(my_comment);
+}
+
+Test(objects_my_comment, dump) {
+    comment_t *my_comment = comment_init((comment_creation_t) {
+        "My_Comment",
+        my_uuid_init(TEM_),
+        my_uuid_init(USR_)
+    });
+
+    comment_dump(my_comment); /// USER JOURNEY TEST
 }
 
 Test(objects_my_comment, invalid_body) {
@@ -27,9 +35,7 @@ Test(objects_my_comment, invalid_body) {
         my_uuid_init(USR_)
     });
 
-    if (my_comment != NULL)
-        cr_assert_eq(1, 2);
-    cr_assert_eq(2, 2);
+    cr_assert_null(my_comment);
 }
 
 Test(objects_my_comment, destroy_classic) {

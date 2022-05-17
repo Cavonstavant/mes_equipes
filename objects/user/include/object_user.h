@@ -32,8 +32,12 @@ typedef struct user_s {
     status_t status;
     /// Uuid list of the attached teams
     my_uuid_t **teams;
+    /// Number of attached team
+    int team_n;
     /// Uuid list of the attached conversation
-    my_uuid_t **conversation;
+    my_uuid_t **conversations;
+    /// Number of attached conversation
+    int conversation_n;
 } user_t;
 
 ///
@@ -62,5 +66,12 @@ user_t *user_init(user_creation_t content);
 /// \param user User object to destroy
 ///
 void user_destroy(user_t *user);
+
+///
+/// \brief Dump a user object
+///
+/// \param user User object to print
+///
+void user_dump(user_t *user);
 
 #endif /* !OBJECT_USER_H_ */

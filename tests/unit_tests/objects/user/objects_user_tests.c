@@ -14,9 +14,16 @@ Test(objects_my_user, classic) {
         true
     });
 
-    if (my_user == NULL)
-        cr_assert_eq(1, 2);
-    cr_assert_eq(2, 2);
+    cr_assert_not_null(my_user);
+}
+
+Test(objects_my_user, dump) {
+    user_t *my_user = user_init((user_creation_t) {
+        "Michel",
+        true
+    });
+
+    user_dump(my_user); /// TO REFACTO WITH USER JOURNEY
 }
 
 Test(objects_my_user, invalid_name) {
@@ -25,9 +32,7 @@ Test(objects_my_user, invalid_name) {
         false
     });
 
-    if (my_user != NULL)
-        cr_assert_eq(1, 2);
-    cr_assert_eq(2, 2);
+    cr_assert_null(my_user);
 }
 
 Test(objects_my_user, destroy_classic) {

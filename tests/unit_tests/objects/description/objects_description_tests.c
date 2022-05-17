@@ -6,6 +6,7 @@
 */
 
 #include <criterion/criterion.h>
+#include <criterion/redirect.h>
 #include "object_description.h"
 
 Test(objects_description, classic) {
@@ -14,12 +15,17 @@ Test(objects_description, classic) {
     cr_assert_str_eq(description, "Michel");
 }
 
+Test(objects_description, dump, .init=cr_redirect_stdout) {
+    description_t description = description_init("Michel");
+
+    description_dump(description);
+    cr_assert_stdout_eq_str("Description : Michel\n");
+}
+
 Test(objects_description, to_long) {
     description_t description = description_init("MichelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllMichelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllMichelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllMichelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllMichelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllMichelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllMichelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllMichelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll");
 
-    if (description != NULL)
-        cr_assert_eq(1, 2);
-    cr_assert_eq(1, 1);
+    cr_assert_null(description);
 }
 
 Test(objects_description, empty) {

@@ -39,6 +39,8 @@ typedef struct thread_s {
     time_t date;
     /// Uuid list of the attached comments
     my_uuid_t **comments;
+    /// Number of attached comment
+    int comment_n;
 } thread_t;
 
 ///
@@ -71,5 +73,12 @@ thread_t *thread_init(thread_creation_t content);
 /// \param thread Thread object to destroy
 ///
 void thread_destroy(thread_t *thread);
+
+///
+/// \brief Dump a thread object
+///
+/// \param thread Thread object to print
+///
+void thread_dump(thread_t *thread);
 
 #endif /* !OBJECT_THREADS_H_ */
