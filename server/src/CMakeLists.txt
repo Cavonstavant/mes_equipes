@@ -15,7 +15,7 @@ add_executable(${TARGET} ${SRC})
 # )
 
 target_link_libraries(${TARGET}
-    PUBLIC ${PROJECT_NAME}_commands
+    PUBLIC ${TARGET}_commands
 )
 set_target_properties(${TARGET} PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}
