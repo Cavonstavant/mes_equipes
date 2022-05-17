@@ -21,7 +21,8 @@ void message_edit_body(message_t *message, char *body)
 
 void message_edit_time(message_t *message, char *time)
 {
-    (void) message;
-    (void) time;
-    /// IMPLEMENTING LATER
+    struct tm temp = {0};
+
+    strftime(time, strlen(time), "%Y-%b-%d %H:%M:%S", &temp);
+    message->time = mktime(&temp);
 }
