@@ -19,7 +19,7 @@ typedef struct w_uuid_s {
     /// \brief uuid_t instance
     uuid_t uuid;
     /// \brief null terminated string representation of uuid_t
-    char repr[40];
+    char repr[41];
 } w_uuid_t;
 
 /// \brief null terminated uuid prefixes for the teams subparts
