@@ -9,6 +9,8 @@
 
 #include "object_comment.h"
 
+char *strptime(const char *s, const char *format, struct tm *tm);
+
 void comment_edit_uuid(comment_t *comment, char *uuid)
 {
     my_uuid_edit_content(comment->uuid, uuid);
@@ -33,6 +35,7 @@ void comment_edit_time(comment_t *comment, char *time)
 {
     struct tm temp = {0};
 
-    strftime(time, strlen(time), "%Y-%b-%d %H:%M:%S", &temp);
+    strptime(time, "%Y-%m-%d %H:%M:%S", &temp);
+    temp.tm_hour -= 1;
     comment->time = mktime(&temp);
 }
