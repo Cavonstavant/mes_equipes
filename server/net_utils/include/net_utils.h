@@ -56,6 +56,12 @@ typedef struct peer_s {
     /// defaulted to false
     bool pending_write;
 
+    /// The buffer for the incoming message
+    char *input_buffer;
+
+    /// The buffer for the outcoming message
+    char *output_buffer;
+
     /// A pointer to the next/prev peer
     CIRCLEQ_ENTRY(peer_s) peers;
 } peer_t;
@@ -104,7 +110,7 @@ typedef struct tcp_server_s {
 
 
 /// \brief DO NOT USE THIS FUNCTION, USE THE `TEAMS_LOG` MACRO INSTEAD
-static inline void log_error(int line,
+static inline void _log_error(int line,
     const char *file,
     const char *func,
     const char *msg)
@@ -114,7 +120,7 @@ static inline void log_error(int line,
 
     /// \brief Simple macro used to log a message
     #define TEAMS_LOG(msg) \
-        do {log_error(__LINE__, __FILE__, __func__, msg);} while (0)
+        do {_log_error(__LINE__, __FILE__, __func__, msg);} while (0)
 
 /// \brief Creates a new client
 /// \param sock_fd The client file descriptor
