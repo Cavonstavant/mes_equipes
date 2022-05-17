@@ -13,11 +13,22 @@
     #include "object_uuid.h"
     #include "object_name.h"
     #include "object_description.h"
+    #include <stdbool.h>
 
     ///
     /// \brief Error inside a team object
     ///
     #define TEAM_ERROR NULL
+
+    ///
+    /// \brief Operation failed probably caused by a malloc
+    ///
+    #define OPERATION_FAILED false
+
+    ///
+    /// \brief Operation succeed
+    ///
+    #define OPERATION_SUCCESS true
 
 ///
 /// \brief Team object
@@ -73,5 +84,49 @@ void team_destroy(team_t *team);
 /// \param team Team object to print
 ///
 void team_dump(team_t *team);
+
+///
+/// \brief Edit the uuid of a team object
+///
+/// \param team Team object to edit
+/// \param uuid Uuid to change in the team object
+///
+void team_edit_uuid(team_t *team, char *uuid);
+
+///
+/// \brief Edit the name of a team object
+///
+/// \param team Team object to edit
+/// \param name Name to change in the team object
+///
+void team_edit_name(team_t *team, char *name);
+
+///
+/// \brief Edit the description of a team object
+///
+/// \param team Team object to edit
+/// \param description Description to change in the team object
+///
+void team_edit_description(team_t *team, char *description);
+
+///
+/// \brief Add a channel into the channels list of a team object
+///
+/// \param team Team object
+/// \param channel Uuid object to add in the list
+/// \return true When operation success
+/// \return false When operation failed
+///
+bool team_add_channel(team_t *team, my_uuid_t *channel);
+
+///
+/// \brief Add a user into the users list of a team object
+///
+/// \param team Team object
+/// \param user Uuid object to add in the list
+/// \return true When operation success
+/// \return false When operation failed
+///
+bool team_add_user(team_t *team, my_uuid_t *user);
 
 #endif /* !OBJECT_TEAM_H_ */
