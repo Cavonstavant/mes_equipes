@@ -43,6 +43,6 @@ bool team_add_user(team_t *team, my_uuid_t *user)
     if (team->users == NULL)
         return OPERATION_FAILED;
     team->users[team->user_n] = user;
-    team->channel_n += 1;
+    team->user_n += 1;
     return OPERATION_SUCCESS;
 }
