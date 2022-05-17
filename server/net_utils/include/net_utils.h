@@ -57,10 +57,10 @@ typedef struct peer_s {
     bool pending_write;
 
     /// The buffer for the incoming message
-    char *input_buffer;
+    char input_buffer[MAX_MSG];
 
     /// The buffer for the outcoming message
-    char *output_buffer;
+    char *output_buffer[MAX_MSG];
 
     /// A pointer to the next/prev peer
     CIRCLEQ_ENTRY(peer_s) peers;

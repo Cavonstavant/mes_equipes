@@ -12,9 +12,9 @@
 
     #include "net_utils.h"
 
-void server_accept_new_client(tcp_server_t *srv);
-void server_read_client(tcp_server_t *srv, peer_t *tmp);
-void server_write_client(tcp_server_t *srv, peer_t *tmp);
-void server_close_client(tcp_server_t *srv, peer_t *tmp);
+bool server_accept_new_client(tcp_server_t *srv);
+bool server_read_client(tcp_server_t *srv, peer_t *tmp);
+bool server_write_client(tcp_server_t *srv, peer_t *tmp);
+bool server_close_client(tcp_server_t *srv, peer_t *tmp);
 
 #endif /* FD_SETS_MANAGE_H */
