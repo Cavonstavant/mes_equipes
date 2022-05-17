@@ -32,6 +32,17 @@ Test(objects_my_message, invalid_body) {
     cr_assert_null(my_message);
 }
 
+Test(objects_my_message, setter) {
+    message_t *message = message_init((message_creation_t) {
+        "My_Comment"
+    });
+
+    message_edit_uuid(message, "CON_df2b5c45-c44b-4c93-8dfb-5c9c36640673");
+    message_edit_body(message, "Hey");
+    cr_assert_str_eq(message->uuid->uuid.repr, "CON_df2b5c45-c44b-4c93-8dfb-5c9c36640673");
+    cr_assert_str_eq(message->body, "Hey");
+}
+
 Test(objects_my_message, destroy_classic) {
     message_t *my_message = message_init((message_creation_t) {
         "My_Comment"
