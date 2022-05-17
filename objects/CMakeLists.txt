@@ -50,6 +50,7 @@ set (SRC
     ${SRC_NAME}/name_setter.c
     ${SRC_STATUS}/object_status.c
     ${SRC_STATUS}/status_dump.c
+    ${SRC_STATUS}/status_setter.c
     ${SRC_TEAM}/object_team.c
     ${SRC_TEAM}/team_dump.c
     ${SRC_THREAD}/object_thread.c
