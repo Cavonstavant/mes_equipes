@@ -128,4 +128,14 @@ bool user_add_team(user_t *user, my_uuid_t *team);
 ///
 bool user_add_conversation(user_t *user, my_uuid_t *conversation);
 
+///
+/// \brief Remove a team into the teams list of a user object
+///
+/// \param user User object
+/// \param team Uuid object to remove in the list
+/// \return true When operation success
+/// \return false When operation failed
+///
+bool user_remove_team(user_t *user, my_uuid_t *team);
+
 #endif /* !OBJECT_USER_H_ */
