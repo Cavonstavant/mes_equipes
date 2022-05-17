@@ -26,6 +26,5 @@ void message_edit_time(message_t *message, char *time)
     struct tm temp = {0};
 
     strptime(time, "%Y-%m-%d %H:%M:%S", &temp);
-    temp.tm_hour -= 1;
     message->time = mktime(&temp);
 }

@@ -36,6 +36,5 @@ void comment_edit_time(comment_t *comment, char *time)
     struct tm temp = {0};
 
     strptime(time, "%Y-%m-%d %H:%M:%S", &temp);
-    temp.tm_hour -= 1;
     comment->time = mktime(&temp);
 }

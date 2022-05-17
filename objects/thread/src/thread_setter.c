@@ -27,7 +27,6 @@ void thread_edit_time(thread_t *thread, char *time)
     struct tm temp = {0};
 
     strptime(time, "%Y-%m-%d %H:%M:%S", &temp);
-    temp.tm_hour -= 1;
     thread->date = mktime(&temp);
 }
 
