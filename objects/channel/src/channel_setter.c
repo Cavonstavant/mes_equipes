@@ -27,7 +27,8 @@ void channel_edit_parent(channel_t *channel, char *parent)
 
 bool channel_add_threads(channel_t *channel, my_uuid_t *thread)
 {
-    channel->threads = realloc(channel->threads, sizeof(my_uuid_t *) * (channel->threads_n + 2));
+    channel->threads = realloc(channel->threads,
+    sizeof(my_uuid_t *) * (channel->threads_n + 2));
     if (channel->threads == NULL)
         return OPERATION_FAILED;
     channel->threads[channel->threads_n] = thread;

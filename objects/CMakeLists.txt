@@ -41,6 +41,7 @@ set (SRC
     ${SRC_COMMENT}/comment_dump.c
     ${SRC_CONVERSATION}/object_conversation.c
     ${SRC_CONVERSATION}/conversation_dump.c
+    ${SRC_CONVERSATION}/conversation_setter.c
     ${SRC_DESCRIPTION}/object_description.c
     ${SRC_DESCRIPTION}/description_dump.c
     ${SRC_DESCRIPTION}/description_setter.c

@@ -113,7 +113,7 @@ void channel_edit_parent(channel_t *channel, char *parent);
 /// \brief Add a thread into the threads list of a channel object
 ///
 /// \param channel Channel object
-/// \param thread Thread object to add in the list
+/// \param thread Uuid object to add in the list
 /// \return true When operation success
 /// \return false When operation failed
 ///
