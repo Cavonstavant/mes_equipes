@@ -60,6 +60,7 @@ set (SRC
     ${SRC_TEAM}/team_setter.c
     ${SRC_THREAD}/object_thread.c
     ${SRC_THREAD}/thread_dump.c
+    ${SRC_THREAD}/thread_setter.c
     ${SRC_USER}/object_user.c
     ${SRC_USER}/user_dump.c
     ${SRC_UUID}/object_uuid.c
