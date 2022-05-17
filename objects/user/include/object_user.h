@@ -19,6 +19,16 @@
     ///
     #define USER_ERROR NULL
 
+    ///
+    /// \brief Operation failed probably caused by a malloc
+    ///
+    #define OPERATION_FAILED false
+
+    ///
+    /// \brief Operation succeed
+    ///
+    #define OPERATION_SUCCESS true
+
 ///
 /// \brief User object
 ///
@@ -73,5 +83,49 @@ void user_destroy(user_t *user);
 /// \param user User object to print
 ///
 void user_dump(user_t *user);
+
+///
+/// \brief Edit the uuid of a user
+///
+/// \param user Channel object to edit
+/// \param uuid Uuid to change in the user object
+///
+void user_edit_uuid(user_t *user, char *uuid);
+
+///
+/// \brief Edit the name of a user
+///
+/// \param user Channel object to edit
+/// \param name Name to change in the user object
+///
+void user_edit_name(user_t *user, char *name);
+
+///
+/// \brief Edit the status of a user
+///
+/// \param user Channel object to edit
+/// \param status Status to change in the user object
+///
+void user_edit_status(user_t *user, status_t status);
+
+///
+/// \brief Add a team into the teams list of a user object
+///
+/// \param user User object
+/// \param team Uuid object to add in the list
+/// \return true When operation success
+/// \return false When operation failed
+///
+bool user_add_team(user_t *user, my_uuid_t *team);
+
+///
+/// \brief Add a conversation into the conversations list of a user object
+///
+/// \param user User object
+/// \param conversation Uuid object to add in the list
+/// \return true When operation success
+/// \return false When operation failed
+///
+bool user_add_conversation(user_t *user, my_uuid_t *conversation);
 
 #endif /* !OBJECT_USER_H_ */

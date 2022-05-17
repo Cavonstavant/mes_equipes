@@ -63,6 +63,7 @@ set (SRC
     ${SRC_THREAD}/thread_setter.c
     ${SRC_USER}/object_user.c
     ${SRC_USER}/user_dump.c
+    ${SRC_USER}/user_setter.c
     ${SRC_UUID}/object_uuid.c
     ${SRC_UUID}/uuid_dump.c
     ${SRC_UUID}/uuid_setter.c
