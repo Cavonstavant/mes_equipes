@@ -7,7 +7,7 @@
 
 #include "net_utils.h"
 
-void server_close_client(tcp_server_t *srv, peer_t *tmp) {
+bool server_close_client(tcp_server_t *srv, peer_t *tmp) {
     (void) srv;
     (void) tmp;
 }

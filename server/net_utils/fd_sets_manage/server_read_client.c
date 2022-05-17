@@ -7,7 +7,8 @@
 
 #include "net_utils.h"
 
-void server_read_client(tcp_server_t *srv, peer_t *tmp)
+bool server_read_client(tcp_server_t *srv, peer_t *tmp)
+{
     (void) srv;
     (void) tmp;
 }
