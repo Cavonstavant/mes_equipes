@@ -63,6 +63,39 @@ Test(objects_my_team, setter) {
     cr_assert_str_eq(team->uuid->uuid.repr, "USR_df2b5c45-c44b-4c93-8dfb-5c9c36640673");
 }
 
+Test(objects_my_team, remove_error) {
+    team_t *team = team_init((team_creation_t) {
+        "My_Comment",
+        "My description"
+    });
+
+    team_add_user(team, my_uuid_init(CHA_));
+    team_remove_user(team, my_uuid_init(CHA_));
+    cr_assert_eq(team->user_n, 1);
+}
+
+Test(objects_my_team, remove_empty) {
+    team_t *team = team_init((team_creation_t) {
+        "My_Comment",
+        "My description"
+    });
+
+    team_remove_user(team, my_uuid_init(CHA_));
+    cr_assert_eq(team->user_n, 0);
+}
+
+Test(objects_my_team, remove) {
+    team_t *team = team_init((team_creation_t) {
+        "My_Comment",
+        "My description"
+    });
+    my_uuid_t *temp = my_uuid_init(CHA_);
+
+    team_add_user(team, temp);
+    team_remove_user(team, temp);
+    cr_assert_eq(team->user_n, 0);
+}
+
 Test(objects_my_team, destroy_classic) {
     team_t *my_team = team_init((team_creation_t) {
         "My_Comment",

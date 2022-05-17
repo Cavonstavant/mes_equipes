@@ -129,4 +129,14 @@ bool team_add_channel(team_t *team, my_uuid_t *channel);
 ///
 bool team_add_user(team_t *team, my_uuid_t *user);
 
+///
+/// \brief Remove a user into the users list of a team object
+///
+/// \param team Team object
+/// \param user Uuid object to remove in the list
+/// \return true When operation succeed
+/// \return false When operation failed
+///
+bool team_remove_user(team_t *team, my_uuid_t *user);
+
 #endif /* !OBJECT_TEAM_H_ */
