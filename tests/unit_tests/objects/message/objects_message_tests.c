@@ -13,9 +13,15 @@ Test(objects_my_message, classic) {
         "My_Comment"
     });
 
-    if (my_message == NULL)
-        cr_assert_eq(1, 2);
-    cr_assert_eq(2, 2);
+    cr_assert_not_null(my_message);
+}
+
+Test(objects_my_message, dump) {
+    message_t *my_message = message_init((message_creation_t) {
+        "My_message"
+    });
+
+    message_dump(my_message); /// TO REFACTO WITH USER JOURNEY
 }
 
 Test(objects_my_message, invalid_body) {
@@ -23,9 +29,7 @@ Test(objects_my_message, invalid_body) {
         "My_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_CommentMy_Comment"
     });
 
-    if (my_message != NULL)
-        cr_assert_eq(1, 2);
-    cr_assert_eq(2, 2);
+    cr_assert_null(my_message);
 }
 
 Test(objects_my_message, destroy_classic) {

@@ -34,6 +34,8 @@ typedef struct channel_s {
     my_uuid_t *team;
     /// Uuid list of the attached threads
     my_uuid_t **threads;
+    /// Number of attached threads
+    int threads_n;
 } channel_t;
 
 ///
@@ -64,5 +66,12 @@ channel_t *channel_init(channel_creation_t content);
 /// \param channel Channel object to destroy
 ///
 void channel_destroy(channel_t *channel);
+
+///
+/// \brief Dump a channel object
+///
+/// \param channel Channel object to print
+///
+void channel_dump(channel_t *channel);
 
 #endif /* !OBJECT_CHANNEL_H_ */

@@ -28,8 +28,12 @@ typedef struct conversation_s {
     my_uuid_t *uuid;
     /// Uuid of the attached thread
     my_uuid_t **participant;
+    /// Number of participant
+    int participant_n;
     /// Uuid of the attached user
     my_uuid_t **messages;
+    /// Number of message
+    int message_n;
 } conversation_t;
 
 ///
@@ -58,5 +62,12 @@ conversation_t *conversation_init(conversation_creation_t content);
 /// \param conversation Conversation object to destroy
 ///
 void conversation_destroy(conversation_t *conversation);
+
+///
+/// \brief Dump a conversation object
+///
+/// \param conversation Conversation object to dump
+///
+void conversation_dump(conversation_t *conversation);
 
 #endif /* !OBJECT_CONVERSATION_H_ */

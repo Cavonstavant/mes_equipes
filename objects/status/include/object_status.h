@@ -44,4 +44,11 @@ status_t status_init(void);
 ///
 void status_destroy(status_t status_to_destroy);
 
+///
+/// \brief Dump a status object
+///
+/// \param status Status object to print
+///
+void status_dump(status_t status);
+
 #endif /* !OBJECT_STATUS_H_ */

@@ -27,4 +27,8 @@ tests:
 	cmake --build ./build
 	cd ./build ; ctest
 
+user_journey:
+	cmake --build ./build
+	cd ./build ; ctest --verbose
+
 .PHONY: all clean fclean re tests

@@ -6,6 +6,7 @@
 */
 
 #include <criterion/criterion.h>
+#include <criterion/redirect.h>
 #include "object_body.h"
 
 Test(objects_body, classic) {
@@ -14,12 +15,17 @@ Test(objects_body, classic) {
     cr_assert_str_eq(body, "Michel");
 }
 
+Test(objects_body, dump, .init=cr_redirect_stdout) {
+    body_t body = body_init("Michel");
+
+    body_dump(body);
+    cr_assert_stdout_eq_str("Body : Michel\n");
+}
+
 Test(objects_body, to_long) {
     body_t body = body_init("MichelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllMichelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllMichelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllMichelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllMichelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllMichelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllMichelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllMichelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll");
 
-    if (body != NULL)
-        cr_assert_eq(1, 2);
-    cr_assert_eq(1, 1);
+    cr_assert_null(body);
 }
 
 Test(objects_body, empty) {

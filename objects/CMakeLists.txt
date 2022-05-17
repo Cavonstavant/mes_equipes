@@ -11,6 +11,8 @@ set (INCLUDE_THREAD ${PROJECT_SOURCE_DIR}/objects/thread/include)
 set (INCLUDE_USER ${PROJECT_SOURCE_DIR}/objects/user/include)
 set (INCLUDE_UUID ${PROJECT_SOURCE_DIR}/objects/uuid/include)
 
+set (INCLUDE_WRAPPER ${PROJECT_SOURCE_DIR}/objects/wrapper/include)
+
 set (SRC_BODY ${PROJECT_SOURCE_DIR}/objects/body/src)
 set (SRC_CHANNEL ${PROJECT_SOURCE_DIR}/objects/channel/src)
 set (SRC_COMMENT ${PROJECT_SOURCE_DIR}/objects/comment/src)
@@ -24,21 +26,39 @@ set (SRC_THREAD ${PROJECT_SOURCE_DIR}/objects/thread/src)
 set (SRC_USER ${PROJECT_SOURCE_DIR}/objects/user/src)
 set (SRC_UUID ${PROJECT_SOURCE_DIR}/objects/uuid/src)
 
+set (SRC_WRAPPER ${PROJECT_SOURCE_DIR}/objects/wrapper/src)
+
 set (TARGET ${PROJECT_NAME}_objects)
 
 set (SRC
     ${SRC_BODY}/object_body.c
+    ${SRC_BODY}/body_dump.c
     ${SRC_CHANNEL}/object_channel.c
+    ${SRC_CHANNEL}/channel_dump.c
     ${SRC_COMMENT}/object_comment.c
+    ${SRC_COMMENT}/comment_dump.c
     ${SRC_CONVERSATION}/object_conversation.c
+    ${SRC_CONVERSATION}/conversation_dump.c
     ${SRC_DESCRIPTION}/object_description.c
+    ${SRC_DESCRIPTION}/description_dump.c
     ${SRC_MESSAGE}/object_message.c
+    ${SRC_MESSAGE}/message_dump.c
     ${SRC_NAME}/object_name.c
+    ${SRC_NAME}/name_dump.c
     ${SRC_STATUS}/object_status.c
+    ${SRC_STATUS}/status_dump.c
     ${SRC_TEAM}/object_team.c
+    ${SRC_TEAM}/team_dump.c
     ${SRC_THREAD}/object_thread.c
+    ${SRC_THREAD}/thread_dump.c
     ${SRC_USER}/object_user.c
+    ${SRC_USER}/user_dump.c
     ${SRC_UUID}/object_uuid.c
+    ${SRC_UUID}/uuid_dump.c
+    ${SRC_WRAPPER}/object_wrapper.c
+    ${SRC_WRAPPER}/upper_component_adding.c
+    ${SRC_WRAPPER}/lower_component_adding.c
+    ${SRC_WRAPPER}/component_dump.c
 )
 
 add_library(${TARGET} ${SRC})
@@ -60,6 +80,7 @@ target_include_directories(${TARGET}
     PUBLIC ${INCLUDE_THREAD}
     PUBLIC ${INCLUDE_USER}
     PUBLIC ${INCLUDE_UUID}
+    PUBLIC ${INCLUDE_WRAPPER}
     PRIVATE ${SRC_ROOT}
 )
 

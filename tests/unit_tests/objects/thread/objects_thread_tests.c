@@ -16,9 +16,18 @@ Test(objects_my_thread, classic) {
         my_uuid_init(CHA_)
     });
 
-    if (my_thread == NULL)
-        cr_assert_eq(1, 2);
-    cr_assert_eq(2, 2);
+    cr_assert_not_null(my_thread);
+}
+
+Test(objects_my_thread, dump) {
+    thread_t *my_thread = thread_init((thread_creation_t) {
+        "My_Thread",
+        "My description",
+        my_uuid_init(USR_),
+        my_uuid_init(CHA_)
+    });
+
+    thread_dump(my_thread); /// TO REFACTO WITH USER JOURNEY
 }
 
 Test(objects_my_thread, invalid_name) {
@@ -29,9 +38,7 @@ Test(objects_my_thread, invalid_name) {
         my_uuid_init(CHA_)
     });
 
-    if (my_thread != NULL)
-        cr_assert_eq(1, 2);
-    cr_assert_eq(2, 2);
+    cr_assert_null(my_thread);
 }
 
 Test(objects_my_thread, invalid_desc) {
@@ -42,9 +49,7 @@ Test(objects_my_thread, invalid_desc) {
         my_uuid_init(CHA_)
     });
 
-    if (my_thread != NULL)
-        cr_assert_eq(1, 2);
-    cr_assert_eq(2, 2);
+    cr_assert_null(my_thread);
 }
 
 Test(objects_my_thread, destroy_classic) {
