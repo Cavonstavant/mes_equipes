@@ -72,4 +72,44 @@ void comment_destroy(comment_t *comment);
 ///
 void comment_dump(comment_t *comment);
 
+///
+/// \brief Edit the uuid of a comment object
+///
+/// \param comment Comment to edit
+/// \param uuid Uuid to change in the comment object
+///
+void comment_edit_uuid(comment_t *comment, char *uuid);
+
+///
+/// \brief Edit the parent of a comment object
+///
+/// \param comment Comment to edit
+/// \param parent Parent to change in the comment object
+///
+void comment_edit_parent(comment_t *comment, char *parent);
+
+///
+/// \brief Edit the author of a comment object
+///
+/// \param comment Comment to edit
+/// \param author Author to change in the comment object
+///
+void comment_edit_author(comment_t *comment, char *author);
+
+///
+/// \brief Edit the body of a comment object
+///
+/// \param comment Comment to edit
+/// \param body Body to change in the comment object
+///
+void comment_edit_body(comment_t *comment, char *body);
+
+///
+/// \brief Edit the time of a comment object
+///
+/// \param comment Comment to edit
+/// \param time Time to change in the comment object
+///
+void comment_edit_time(comment_t *comment, char *time);
+
 #endif /* !OBJECT_COMMENT_H_ */

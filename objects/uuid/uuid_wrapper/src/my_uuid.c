@@ -29,3 +29,13 @@ my_uuid_prefix_t my_uuid_get_prefix(w_uuid_t *uuid)
     }
     return (-1);
 }
+
+int w_uuid_parse_from_string(w_uuid_t *uuid, char *content)
+{
+    if (!content || !uuid)
+        return (-1);
+    if (uuid_parse(content + W_UUID_PREFIX_LEN, uuid->uuid) < 0)
+        return (-1);
+    strcpy(uuid->repr, content);
+    return (0);
+}

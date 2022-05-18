@@ -22,6 +22,13 @@ Test(objects_status, dump, .init=cr_redirect_stdout) {
     cr_assert_stdout_eq_str("Status : offline\n");
 }
 
+Test(objects_status, setter) {
+    status_t status = status_init();
+
+    status_edit_content(&status, ONLINE);
+    cr_assert_eq(status, ONLINE);
+}
+
 Test(objects_status, destroy_status) {
     status_t status = status_init();
 
