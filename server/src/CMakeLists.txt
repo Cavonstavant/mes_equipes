@@ -12,6 +12,7 @@ add_executable(${TARGET} ${SRC})
 # target_include_directories(${TARGET}_core
 #     PUBLIC ${INCLUDE_DIRS}
 #     PRIVATE ${SRC_ROOT}
+#     PRIVATE ${TARGET_NAME}_commands
 # )
 
 set_target_properties(${TARGET} PROPERTIES
