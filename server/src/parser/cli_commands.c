@@ -9,29 +9,30 @@
 
 #include "cli_commands.h"
 #include <stddef.h>
+#include <string.h>
 
 /// \brief List all available command
 static const cli_command_t commands[14] = {
-    {"/help", NULL, &help_command},
-    {"/login", {"", NULL}, &login_command},
-    {"/logout", NULL, &logout_command},
-    {"/users", NULL, &users_command},
-    {"/user", {"", NULL}, &user_command},
-    {"/send", {"", "", NULL}, &send_command},
-    {"/messages", {"", NULL}, &messages_command},
-    {"/subscribe", {"", NULL}, &subscribe_command},
-    {"/subscribed", {"", NULL}, &subscribed_command},
-    {"/unsubscribe", {"", NULL}, &unsubscribe_command},
-    {"/use", {"", NULL}, &use_command},
-    {"/create", {"", "", NULL}, &create_command},
-    {"/list", NULL, &list_command},
-    {"/info", NULL, &info_command}
+    {"/help", NULL, /*&help_command*/NULL},
+    {"/login", (char*[]){"", NULL}, /*&login_command*/NULL},
+    {"/logout", NULL, /*&logout_command*/NULL},
+    {"/users", NULL, /*&users_command*/NULL},
+    {"/user", (char*[]){"", NULL}, /*&user_command*/NULL},
+    {"/send", (char*[]){"", "", NULL}, /*&send_command*/NULL},
+    {"/messages", (char*[]){"", NULL}, /*&messages_command*/NULL},
+    {"/subscribe", (char*[]){"", NULL}, /*&subscribe_command*/NULL},
+    {"/subscribed", (char*[]){"", NULL}, /*&subscribed_command*/NULL},
+    {"/unsubscribe", (char*[]){"", NULL}, /*&unsubscribe_command*/NULL},
+    {"/use", (char*[]){"", NULL}, /*&use_command*/NULL},
+    {"/create", (char*[]){"", "", NULL}, /*&create_command*/NULL},
+    {"/list", NULL, /*&list_command*/NULL},
+    {"/info", NULL, /*&info_command*/NULL}
 };
 
 const cli_command_t *get_cli_command_by_name(char *command)
 {
     for (int i = 0; i < COMMAND_NUMBER; i++) {
-        if (strcmp(command, commands[i]) == 0)
+        if (strcmp(command, commands[i].name) == 0)
             return (&commands[i]);
     }
     return (NULL);

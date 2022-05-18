@@ -19,6 +19,12 @@ set_target_properties(${TARGET} PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}
 )
 
+target_link_libraries(${TARGET}
+    PRIVATE ${PROJECT_NAME}_parser
+)
+
+add_subdirectory(parser)
+
 # target_link_libraries(${TARGET}
 #     PRIVATE ${PROJECT_NAME}_commands
 # )

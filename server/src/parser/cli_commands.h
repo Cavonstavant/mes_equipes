@@ -36,23 +36,6 @@ void *users_command(void *);
 void *logout_command(void *);
 void *login_command(void *);
 
-/// \brief Get a command and split it in a array of char *
-/// to process the command.
-/// \param char * The command to be split.
-/// \return char ** The array of char * to be process.
-char **split_command(char *command);
-
-/// \brief This function check if arguments are valid, depending of the first
-/// element on the array.
-/// \param char ** Array of arguments which will be check.
-/// \return 0 if arguments are not good, 1 otherwise.
-int check_arguments(char **arguments);
-
-/// \brief This function call the function corresponding to the command.
-/// \param char ** Array of arguments which will be used to call the function.
-/// \return 0, or -1 if an error occurs.
-int call_command(char **arguments);
-
 /// \brief This function get the commands static const defined in cli_command.c.
 /// \return const cli_command_t * An array of available commands.
 const cli_command_t *get_cli_commands();
@@ -60,13 +43,5 @@ const cli_command_t *get_cli_commands();
 /// \brief This function get a cli_commands depending of it's name.
 /// \return const cli_command_t * Pointer to the corresponding cli_command.
 const cli_command_t *get_cli_command_by_name(char *command);
-
-/// \brief It get a command and an array of separators.
-/// It will split the command by using the separators as separator char.
-/// It will return an array of char * containing all arguments.
-/// \param char * The command to be split.
-/// \param char * The separators array.
-/// \return char ** An array of arguments.
-char **my_str_to_word_array(char *command, char *separators);
 
 #endif /* !PARSER_H_ */
