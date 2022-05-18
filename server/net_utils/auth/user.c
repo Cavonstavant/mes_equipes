@@ -25,14 +25,12 @@ user_t *create_user(char *username, char *password)
 
 enum authentification_e authenticate_user(struct users_head users,
 char *uname,
-char *passwd)
+char *passwd __attribute__((unused)))
 {
     user_t *user = NULL;
 
-    CIRCLEQ_FOREACH(user, &users, users) {
-        if (strcmp(user->username, uname) == 0 &&
-            strcmp(user->password, passwd) == 0)
-            return (true);
-    }
-    return (false);
+    CIRCLEQ_FOREACH(user, &users, users)
+        if (strcmp(user->username, uname) == 0)
+                return (AUTH_OK);
+    return (AUTH_USER_NOT_FOUND);
 }

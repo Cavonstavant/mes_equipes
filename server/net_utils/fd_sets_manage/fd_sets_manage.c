@@ -9,7 +9,6 @@
 
 #include "net_utils.h"
 #include "fd_set_manage.h"
-#include <sys/time.h>
 
 void server_fill_fd_sets(tcp_server_t *srv)
 {
