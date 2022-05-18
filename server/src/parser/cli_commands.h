@@ -44,4 +44,9 @@ const cli_command_t *get_cli_commands();
 /// \return const cli_command_t * Pointer to the corresponding cli_command.
 const cli_command_t *get_cli_command_by_name(char *command);
 
+
+cli_command_t *convert_command_to_structure(char *command);
+int call_command(cli_command_t *command);
+char **fill_command_arguments(char *command, char *name);
+
 #endif /* !PARSER_H_ */

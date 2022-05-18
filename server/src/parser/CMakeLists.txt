@@ -6,6 +6,9 @@ set(SRC
     ${SRC_PARSER}/cli_commands.h
     ${SRC_PARSER}/compute_command.c
     ${SRC_PARSER}/include/parser.h
+    ${SRC_PARSER}/call_command.c
+    ${SRC_PARSER}/convert_command_to_structure.c
+    ${SRC_PARSER}/fill_command_arguments.c
 )
 
 set(TARGET ${PROJECT_NAME}_parser)
