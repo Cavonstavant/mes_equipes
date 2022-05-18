@@ -41,9 +41,6 @@ typedef struct peer_s {
     /// The address of the client
     struct sockaddr_in peer_addr;
 
-    // A pointer to a generic data type.
-    void *data;
-
     /// Represents the state of an incoming message
     /// true if the transaction as been started but not finished
     /// false if the transaction has been finished or not started
@@ -104,8 +101,6 @@ typedef struct tcp_server_s {
     /// true == running / false == stopped
     bool state;
 
-    /// Arbitrary data to be stored inside the server
-    void *arbitrary_data;
 } tcp_server_t;
 
 
