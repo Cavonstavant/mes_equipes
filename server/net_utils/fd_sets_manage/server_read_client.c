@@ -7,6 +7,16 @@
 
 #include "net_utils.h"
 
+char *fetch_message(peer_t *peer)
+{
+    if (!peer)
+        return (NULL);
+    if (!peer->pending_read)
+        return (NULL);
+    peer->pending_read = false;
+    return (strdup(peer->output_buffer));
+}
+
 bool server_read_client(tcp_server_t *srv, peer_t *tmp)
 {
     if (!tmp && !srv)
@@ -22,5 +32,6 @@ bool server_read_client(tcp_server_t *srv, peer_t *tmp)
         TEAMS_LOG("Client disconnected");
         return (false);
     }
+    tmp->pending_read = true;
     return (true);
 }
