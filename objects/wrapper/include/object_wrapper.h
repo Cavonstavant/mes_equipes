@@ -25,6 +25,11 @@
     ///
     #define WRAPPER_ERROR NULL
 
+    ///
+    /// \brief Return value when no matching object is find
+    ///
+    #define OBJECT_NOT_FIND NULL
+
 ///
 /// \brief Wrapper object, containing all Objects instance
 ///
@@ -81,5 +86,15 @@ void wrapper_destroy(object_wrapper_t *wrapper);
 /// \param wrapper Wraper object to print
 ///
 void wrapper_dump(object_wrapper_t *wrapper);
+
+///
+/// \brief Cross all the channels list and try to find a matching channel
+///
+/// \param wrapper Wrapper object
+/// \param find Uuid to match in the list
+/// \return channel_t* Return an instance of the matching object
+/// Return OBJECT_TO_FIND when no matching object is find
+///
+channel_t *wrapper_find_channel(object_wrapper_t *wrapper, my_uuid_t *find);
 
 #endif /* !OBJECT_WRAPPER_H_ */
