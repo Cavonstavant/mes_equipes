@@ -57,4 +57,12 @@ void name_destroy(name_t name_to_destroy);
 ///
 void name_dump(name_t name);
 
+///
+/// \brief Edit the content of a name object
+///
+/// \param name Name object to edit
+/// \param content Content to edit into the Name object
+///
+void name_edit_content(name_t name, char *content);
+
 #endif /* !OBJECT_NAME_H_ */

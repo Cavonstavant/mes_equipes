@@ -13,11 +13,22 @@
     #include "object_uuid.h"
     #include "object_body.h"
     #include <time.h>
+    #include <stdbool.h>
 
     ///
     /// \brief Error inside a conversation object
     ///
     #define CONVERSATION_ERROR NULL
+
+    ///
+    /// \brief Operation failed probably caused by a malloc
+    ///
+    #define OPERATION_FAILED false
+
+    ///
+    /// \brief Operation succeed
+    ///
+    #define OPERATION_SUCCESS true
 
 ///
 /// \brief Comment object
@@ -69,5 +80,35 @@ void conversation_destroy(conversation_t *conversation);
 /// \param conversation Conversation object to dump
 ///
 void conversation_dump(conversation_t *conversation);
+
+///
+/// \brief Edit the content of a conversation object
+///
+/// \param conversation Conversation object to edit
+/// \param uuid Uuid to change in the conversation object
+///
+void conversation_edit_uuid(conversation_t *conversation, char *uuid);
+
+///
+/// \brief Add a user in the participant list of a conversation object
+///
+/// \param conversation Conversation object
+/// \param user Uuid object to add in the list
+/// \return true When operation success
+/// \return false When operation failed
+///
+bool conversation_add_participant(conversation_t *conversation,
+my_uuid_t *user);
+
+///
+/// \brief Add a message in the messages list of a conversation object
+///
+/// \param conversation Conversation object
+/// \param message Uuid object to add in the list
+/// \return true When operation success
+/// \return false When operation failed
+///
+bool conversation_add_message(conversation_t *conversation,
+my_uuid_t *message);
 
 #endif /* !OBJECT_CONVERSATION_H_ */
