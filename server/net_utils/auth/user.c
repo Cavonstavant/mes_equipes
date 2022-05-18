@@ -19,11 +19,13 @@ user_t *create_user(char *username, char *password)
         return (NULL);
     user->username = (username ? strdup(username) : NULL);
     user->password = (password ? strdup(password) : NULL);
-    user->logged_in = false;
+    user->logged_in = true;
     return (user);
 }
 
-bool authenticate_user(struct users_head users, char *uname, char *passwd)
+enum authentification_e authenticate_user(struct users_head users,
+char *uname,
+char *passwd)
 {
     user_t *user = NULL;
 

@@ -30,6 +30,18 @@ typedef struct user_s {
     CIRCLEQ_ENTRY(user_s) users;
 } user_t;
 
+/// \brief Represents the auth status
+enum authentification_e {
+    /// Authentication success
+    AUTH_OK,
+
+    /// Authentication failed
+    AUTH_FAILED,
+
+    /// User not found
+    AUTH_USER_NOT_FOUND,
+};
+
 /// \brief Initializes a circular queue of users
 CIRCLEQ_HEAD(users_head, user_s);
 
@@ -45,6 +57,8 @@ user_t *create_user(char *username, char *password);
 /// \param username the username of the user
 /// \param password the password of the user
 /// \return true or false depending on the authentication result
-bool authenticate_user(struct users_head users, char *uname, char *passwd);
+enum authentification_e authenticate_user(struct users_head users,
+char *uname,
+char *passwd);
 
 #endif /* USER_H */
