@@ -25,16 +25,17 @@ static void free_args(char **args)
 
 int compute_command(char *command)
 {
-    char **args = split_command(command);
+    int nb_args = check_command(command); // check command, return -1 or nb_args
+    char **args = NULL;
 
-    if (!args) {
+    if (nb_args < 0)
         return (-1);
-    }
-    if (check_arguments(args) == 0) {
+    args = split_command(command); // split in args, return NULL or args array
+    if (!args)
         return (-1);
-    }
     if (call_command(args) < 0) {
-        return (-1);
+        free_args(args);
+        return (-1); // call command, return -1 or 0
     }
     free_args(args);
     return (0);
