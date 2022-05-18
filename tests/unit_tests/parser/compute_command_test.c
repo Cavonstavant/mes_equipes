@@ -82,3 +82,10 @@ Test(compute_command, test11)
 
     cr_assert_eq(compute_command(strdup(cmd)), -1);
 }
+
+Test(compute_command, test12)
+{
+    char *cmd = "/login \"thomas";
+
+    cr_assert_eq(compute_command(strdup(cmd)), -1);
+}
