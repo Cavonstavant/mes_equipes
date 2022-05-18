@@ -14,11 +14,12 @@ add_executable(${TARGET} ${SRC})
 #     PRIVATE ${SRC_ROOT}
 # )
 
-target_link_libraries(${TARGET}
-    PRIVATE ${PROJECT_NAME}_commands
-)
 set_target_properties(${TARGET} PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}
 )
 
-add_subdirectory(commands)
+# target_link_libraries(${TARGET}
+#     PRIVATE ${PROJECT_NAME}_commands
+# )
+
+# add_subdirectory(commands)
