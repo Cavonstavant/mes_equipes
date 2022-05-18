@@ -87,7 +87,35 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="title">mes_equipes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>MicroDoux Equipes clone </p>
+<div class="textblock"><p><a href="https://github.com/Cavonstavant/mes_equipes/actions/workflows/cmake.yml"><object type="image/svg+xml" data="https://github.com/Cavonstavant/mes_equipes/actions/workflows/cmake.yml/badge.svg" style="pointer-events: none;">Build</object></a> <a href="https://github.com/Cavonstavant/mes_equipes/actions/workflows/doc_build.yml"><object type="image/svg+xml" data="https://github.com/Cavonstavant/mes_equipes/actions/workflows/doc_build.yml/badge.svg" style="pointer-events: none;">GH Pages deployment</object></a> <a href="https://github.com/Cavonstavant/mes_equipes/actions/workflows/mirroring.yml"><object type="image/svg+xml" data="https://github.com/Cavonstavant/mes_equipes/actions/workflows/mirroring.yml/badge.svg" style="pointer-events: none;">Mirroring</object></a> <a href="https://forthebadge.com"><object type="image/svg+xml" data="https://forthebadge.com/images/badges/works-on-my-machine.svg" style="pointer-events: none;">forthebadge</object></a> </p><blockquote class="doxtable">
+<p>MicroDoux Equipes clone </p>
+</blockquote>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Documentation</h1>
+<p>The documentation is currently hosted <a href="https://cavonstavant.github.io/mes_equipes/index.html">here</a>.</p>
+<blockquote class="doxtable">
+<p>Local documentation cna be generated using doxygen with running <code>doxygen</code> at the root of the repository. Use <code>xdg-open doc/build/html/index.html</code> to open it. </p>
+</blockquote>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Build</h1>
+<h2><a class="anchor" id="autotoc_md3"></a>
+Tools</h2>
+<pre class="fragment">- CMake &gt;= 3.17.0
+- C11
+</pre><h2><a class="anchor" id="autotoc_md4"></a>
+Building</h2>
+<p>On Linux:</p>
+<div class="fragment"><div class="line">git clone https://github.com/Cavonstavant/mes_equipes.git</div>
+<div class="line">cd mes_equipes/</div>
+<div class="line">cmake -B ./build -G &quot;Unix Makefiles&quot; -DCMAKE_BUILD_TYPE=Release</div>
+<div class="line">cmake --build ./build</div>
+</div><!-- fragment --><p>Building the tests:</p>
+<div class="fragment"><div class="line">cmake -B ./build-with-coverage -G &quot;Unix Makefiles&quot; -DCMAKE_BUILD_TYPE=Debug -DENABLE_CODE_COVERAGE=ON</div>
+<div class="line">cmake --build ./build-with-coverage</div>
+</div><!-- fragment --><p>Running the tests and get the coverage report:</p>
+<div class="fragment"><div class="line">./launch_tests.sh</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md5"></a>
+RFC Documentation is hosted &lt;a href="https://scrawny-quartz-4ac.notion.site/Mes-quipes-RFC-464eb5c7951c419791f116ff5fd37b57"&gt;here&lt;/a&gt;</h2>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->

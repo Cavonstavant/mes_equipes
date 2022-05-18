@@ -23,7 +23,14 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "Mes équipes", "index.html", [
-    [ "mes_equipes", "index.html", null ],
+    [ "mes_equipes", "index.html", [
+      [ "Documentation", "index.html#autotoc_md1", null ],
+      [ "Build", "index.html#autotoc_md2", [
+        [ "Tools", "index.html#autotoc_md3", null ],
+        [ "Building", "index.html#autotoc_md4", null ],
+        [ "RFC Documentation is hosted <a href=\"https://scrawny-quartz-4ac.notion.site/Mes-quipes-RFC-464eb5c7951c419791f116ff5fd37b57\">here</a>", "index.html#autotoc_md5", null ]
+      ] ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -50,7 +57,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"object__thread_8h.html"
+"object__team_8h.html#af97336114f31abc555bd6137d9f85ddf"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
