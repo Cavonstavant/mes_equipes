@@ -6,6 +6,7 @@ set(SRC
     ${SRC_ROOT}/upper_component_adding_tests.c
     ${SRC_ROOT}/lower_component_adding_tests.c
     ${SRC_ROOT}/component_dump_tests.c
+    ${SRC_ROOT}/upper_component_cmp.c
 )
 
 create_test(

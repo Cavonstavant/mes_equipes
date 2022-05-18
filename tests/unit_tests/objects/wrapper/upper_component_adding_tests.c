@@ -217,16 +217,3 @@ Test(objects_my_wrapper, add_channels) {
     wrapper_destroy(my_wrapper);
     cr_assert_eq(2, 2);
 }
-
-Test(objects_my_wrapper, cmp_channel) {
-    object_wrapper_t *my_wrapper = wrapper_init();
-
-    wrapper_adding_channel(my_wrapper, (channel_creation_t) {
-       "Title",
-       "Desc",
-       my_uuid_init(TEM_)
-
-    });
-    cr_assert_null(wrapper_find_channel(my_wrapper, my_uuid_init(TEM_)));
-    cr_assert_not_null(wrapper_find_channel(my_wrapper, my_wrapper->channels[0]->uuid));
-}
