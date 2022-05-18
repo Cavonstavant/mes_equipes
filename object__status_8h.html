@@ -106,19 +106,22 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="object__status_8h__dep__incl.png" border="0" usemap="#objects_2status_2include_2object__status_8hdep" alt=""/></div>
 <map name="objects_2status_2include_2object__status_8hdep" id="objects_2status_2include_2object__status_8hdep">
-<area shape="rect" title=" " alt="" coords="151,5,315,47"/>
+<area shape="rect" title=" " alt="" coords="231,5,395,47"/>
 <area shape="rect" href="object__status_8c.html" title=" " alt="" coords="5,95,141,136"/>
 <area shape="rect" href="status__dump_8c.html" title=" " alt="" coords="165,95,301,136"/>
-<area shape="rect" href="object__user_8h.html" title=" " alt="" coords="325,95,477,136"/>
-<area shape="rect" href="object__user_8c.html" title=" " alt="" coords="131,184,299,225"/>
-<area shape="rect" href="user__dump_8c.html" title=" " alt="" coords="323,184,479,225"/>
-<area shape="rect" href="object__wrapper_8h.html" title=" " alt="" coords="503,184,681,225"/>
-<area shape="rect" href="lower__component__adding_8h.html" title=" " alt="" coords="156,273,361,315"/>
-<area shape="rect" href="upper__component__adding_8h.html" title=" " alt="" coords="386,273,593,315"/>
-<area shape="rect" href="component__dump_8c.html" title=" " alt="" coords="617,273,772,315"/>
-<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="796,273,945,315"/>
-<area shape="rect" href="lower__component__adding_8c.html" title=" " alt="" coords="157,363,361,404"/>
-<area shape="rect" href="upper__component__adding_8c.html" title=" " alt="" coords="387,363,592,404"/>
+<area shape="rect" href="status__setter_8c.html" title=" " alt="" coords="325,95,461,136"/>
+<area shape="rect" href="object__user_8h.html" title=" " alt="" coords="485,95,637,136"/>
+<area shape="rect" href="object__user_8c.html" title=" " alt="" coords="111,184,279,225"/>
+<area shape="rect" href="user__dump_8c.html" title=" " alt="" coords="303,184,459,225"/>
+<area shape="rect" href="user__remove_8c.html" title=" " alt="" coords="483,184,639,225"/>
+<area shape="rect" href="user__setter_8c.html" title=" " alt="" coords="663,184,819,225"/>
+<area shape="rect" href="object__wrapper_8h.html" title=" " alt="" coords="843,184,1021,225"/>
+<area shape="rect" href="lower__component__adding_8h.html" title=" " alt="" coords="496,273,701,315"/>
+<area shape="rect" href="upper__component__adding_8h.html" title=" " alt="" coords="726,273,933,315"/>
+<area shape="rect" href="component__dump_8c.html" title=" " alt="" coords="957,273,1112,315"/>
+<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="1136,273,1285,315"/>
+<area shape="rect" href="lower__component__adding_8c.html" title=" " alt="" coords="497,363,701,404"/>
+<area shape="rect" href="upper__component__adding_8c.html" title=" " alt="" coords="727,363,932,404"/>
 </map>
 </div>
 </div>
@@ -150,6 +153,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aff9b81e1e0983a1ff8c065477386d1f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__status_8h.html#aff9b81e1e0983a1ff8c065477386d1f5">status_dump</a> (<a class="el" href="object__status_8h.html#a1907f7bdf9168d8a969704df10f3cec3">status_t</a> status)</td></tr>
 <tr class="memdesc:aff9b81e1e0983a1ff8c065477386d1f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump a status object.  <a href="object__status_8h.html#aff9b81e1e0983a1ff8c065477386d1f5">More...</a><br /></td></tr>
 <tr class="separator:aff9b81e1e0983a1ff8c065477386d1f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa07ac4cd8d1b1dce773b97a23cb0e728"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__status_8h.html#aa07ac4cd8d1b1dce773b97a23cb0e728">status_edit_content</a> (<a class="el" href="object__status_8h.html#a1907f7bdf9168d8a969704df10f3cec3">status_t</a> *status, bool content)</td></tr>
+<tr class="memdesc:aa07ac4cd8d1b1dce773b97a23cb0e728"><td class="mdescLeft">&#160;</td><td class="mdescRight">Edit the content of a status object.  <a href="object__status_8h.html#aa07ac4cd8d1b1dce773b97a23cb0e728">More...</a><br /></td></tr>
+<tr class="separator:aa07ac4cd8d1b1dce773b97a23cb0e728"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a9fc595816a36e47d2b583afa775b3d4c"></a>
@@ -248,6 +254,43 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">status</td><td>Status object to print </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa07ac4cd8d1b1dce773b97a23cb0e728"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa07ac4cd8d1b1dce773b97a23cb0e728">&#9670;&nbsp;</a></span>status_edit_content()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void status_edit_content </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__status_8h.html#a1907f7bdf9168d8a969704df10f3cec3">status_t</a> *&#160;</td>
+          <td class="paramname"><em>status</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>content</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Edit the content of a status object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status</td><td>Status object to edit </td></tr>
+    <tr><td class="paramname">content</td><td>Content to edit into the Status object </td></tr>
   </table>
   </dd>
 </dl>

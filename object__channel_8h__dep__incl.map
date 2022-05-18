@@ -1,12 +1,13 @@
 <map id="objects/channel/include/object_channel.h" name="objects/channel/include/object_channel.h">
-<area shape="rect" id="node1" title=" " alt="" coords="167,5,342,47"/>
-<area shape="rect" id="node2" href="$channel__dump_8c.html" title=" " alt="" coords="11,95,157,136"/>
-<area shape="rect" id="node3" href="$object__channel_8c.html" title=" " alt="" coords="181,95,328,136"/>
-<area shape="rect" id="node4" href="$object__wrapper_8h.html" title=" " alt="" coords="353,95,530,136"/>
-<area shape="rect" id="node5" href="$lower__component__adding_8h.html" title=" " alt="" coords="5,184,211,225"/>
-<area shape="rect" id="node7" href="$upper__component__adding_8h.html" title=" " alt="" coords="235,184,442,225"/>
-<area shape="rect" id="node9" href="$component__dump_8c.html" title=" " alt="" coords="467,184,621,225"/>
-<area shape="rect" id="node10" href="$object__wrapper_8c.html" title=" " alt="" coords="645,184,795,225"/>
-<area shape="rect" id="node6" href="$lower__component__adding_8c.html" title=" " alt="" coords="6,273,210,315"/>
-<area shape="rect" id="node8" href="$upper__component__adding_8c.html" title=" " alt="" coords="236,273,441,315"/>
+<area shape="rect" id="node1" title=" " alt="" coords="247,5,422,47"/>
+<area shape="rect" id="node2" href="$channel__dump_8c.html" title=" " alt="" coords="5,95,152,136"/>
+<area shape="rect" id="node3" href="$channel__setter_8c.html" title=" " alt="" coords="176,95,323,136"/>
+<area shape="rect" id="node4" href="$object__channel_8c.html" title=" " alt="" coords="347,95,493,136"/>
+<area shape="rect" id="node5" href="$object__wrapper_8h.html" title=" " alt="" coords="518,95,695,136"/>
+<area shape="rect" id="node6" href="$lower__component__adding_8h.html" title=" " alt="" coords="171,184,376,225"/>
+<area shape="rect" id="node8" href="$upper__component__adding_8h.html" title=" " alt="" coords="401,184,607,225"/>
+<area shape="rect" id="node10" href="$component__dump_8c.html" title=" " alt="" coords="632,184,787,225"/>
+<area shape="rect" id="node11" href="$object__wrapper_8c.html" title=" " alt="" coords="811,184,960,225"/>
+<area shape="rect" id="node7" href="$lower__component__adding_8c.html" title=" " alt="" coords="171,273,375,315"/>
+<area shape="rect" id="node9" href="$upper__component__adding_8c.html" title=" " alt="" coords="401,273,607,315"/>
 </map>

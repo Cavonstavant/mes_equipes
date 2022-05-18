@@ -95,15 +95,17 @@ $(document).ready(function(){initNavTree('object__channel_8h.html',''); initResi
 <div class="textblock"><code>#include &quot;<a class="el" href="object__uuid_8h_source.html">object_uuid.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="object__name_8h_source.html">object_name.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="object__description_8h_source.html">object_description.h</a>&quot;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for object_channel.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="object__channel_8h__incl.png" border="0" usemap="#objects_2channel_2include_2object__channel_8h" alt=""/></div>
 <map name="objects_2channel_2include_2object__channel_8h" id="objects_2channel_2include_2object__channel_8h">
-<area shape="rect" title=" " alt="" coords="137,5,312,47"/>
+<area shape="rect" title=" " alt="" coords="215,5,389,47"/>
 <area shape="rect" href="object__uuid_8h.html" title=" " alt="" coords="326,95,435,121"/>
 <area shape="rect" href="object__name_8h.html" title=" " alt="" coords="5,95,124,121"/>
 <area shape="rect" href="object__description_8h.html" title=" " alt="" coords="148,95,301,121"/>
+<area shape="rect" title=" " alt="" coords="459,95,542,121"/>
 <area shape="rect" title=" " alt="" coords="187,169,262,196"/>
 <area shape="rect" href="my__uuid_8h.html" title=" " alt="" coords="335,169,426,196"/>
 <area shape="rect" title=" " alt="" coords="228,244,323,271"/>
@@ -116,16 +118,17 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="object__channel_8h__dep__incl.png" border="0" usemap="#objects_2channel_2include_2object__channel_8hdep" alt=""/></div>
 <map name="objects_2channel_2include_2object__channel_8hdep" id="objects_2channel_2include_2object__channel_8hdep">
-<area shape="rect" title=" " alt="" coords="167,5,342,47"/>
-<area shape="rect" href="channel__dump_8c.html" title=" " alt="" coords="11,95,157,136"/>
-<area shape="rect" href="object__channel_8c.html" title=" " alt="" coords="181,95,328,136"/>
-<area shape="rect" href="object__wrapper_8h.html" title=" " alt="" coords="353,95,530,136"/>
-<area shape="rect" href="lower__component__adding_8h.html" title=" " alt="" coords="5,184,211,225"/>
-<area shape="rect" href="upper__component__adding_8h.html" title=" " alt="" coords="235,184,442,225"/>
-<area shape="rect" href="component__dump_8c.html" title=" " alt="" coords="467,184,621,225"/>
-<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="645,184,795,225"/>
-<area shape="rect" href="lower__component__adding_8c.html" title=" " alt="" coords="6,273,210,315"/>
-<area shape="rect" href="upper__component__adding_8c.html" title=" " alt="" coords="236,273,441,315"/>
+<area shape="rect" title=" " alt="" coords="247,5,422,47"/>
+<area shape="rect" href="channel__dump_8c.html" title=" " alt="" coords="5,95,152,136"/>
+<area shape="rect" href="channel__setter_8c.html" title=" " alt="" coords="176,95,323,136"/>
+<area shape="rect" href="object__channel_8c.html" title=" " alt="" coords="347,95,493,136"/>
+<area shape="rect" href="object__wrapper_8h.html" title=" " alt="" coords="518,95,695,136"/>
+<area shape="rect" href="lower__component__adding_8h.html" title=" " alt="" coords="171,184,376,225"/>
+<area shape="rect" href="upper__component__adding_8h.html" title=" " alt="" coords="401,184,607,225"/>
+<area shape="rect" href="component__dump_8c.html" title=" " alt="" coords="632,184,787,225"/>
+<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="811,184,960,225"/>
+<area shape="rect" href="lower__component__adding_8c.html" title=" " alt="" coords="171,273,375,315"/>
+<area shape="rect" href="upper__component__adding_8c.html" title=" " alt="" coords="401,273,607,315"/>
 </map>
 </div>
 </div>
@@ -145,6 +148,12 @@ Macros</h2></td></tr>
 <tr class="memitem:a2c863cc82b198800472549fa3ce5ba68"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__channel_8h.html#a2c863cc82b198800472549fa3ce5ba68">CHANNEL_ERROR</a>&#160;&#160;&#160;NULL</td></tr>
 <tr class="memdesc:a2c863cc82b198800472549fa3ce5ba68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error inside a channel object.  <a href="object__channel_8h.html#a2c863cc82b198800472549fa3ce5ba68">More...</a><br /></td></tr>
 <tr class="separator:a2c863cc82b198800472549fa3ce5ba68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae62206c179e37ac4cac0cfbb0617aa46"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__channel_8h.html#ae62206c179e37ac4cac0cfbb0617aa46">OPERATION_FAILED</a>&#160;&#160;&#160;false</td></tr>
+<tr class="memdesc:ae62206c179e37ac4cac0cfbb0617aa46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operation failed probably caused by a malloc.  <a href="object__channel_8h.html#ae62206c179e37ac4cac0cfbb0617aa46">More...</a><br /></td></tr>
+<tr class="separator:ae62206c179e37ac4cac0cfbb0617aa46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f31d803b49b806a4dbe38933fe3e970"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__channel_8h.html#a2f31d803b49b806a4dbe38933fe3e970">OPERATION_SUCCESS</a>&#160;&#160;&#160;true</td></tr>
+<tr class="memdesc:a2f31d803b49b806a4dbe38933fe3e970"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operation succeed.  <a href="object__channel_8h.html#a2f31d803b49b806a4dbe38933fe3e970">More...</a><br /></td></tr>
+<tr class="separator:a2f31d803b49b806a4dbe38933fe3e970"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -166,6 +175,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a8283d68e904e80de72c2534b2ee67f12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__channel_8h.html#a8283d68e904e80de72c2534b2ee67f12">channel_dump</a> (<a class="el" href="object__channel_8h.html#aa2c062d2c6fa83f13b145dc4f80623fd">channel_t</a> *channel)</td></tr>
 <tr class="memdesc:a8283d68e904e80de72c2534b2ee67f12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump a channel object.  <a href="object__channel_8h.html#a8283d68e904e80de72c2534b2ee67f12">More...</a><br /></td></tr>
 <tr class="separator:a8283d68e904e80de72c2534b2ee67f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48e03ff911d7dcdfb72235d5c897ff64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__channel_8h.html#a48e03ff911d7dcdfb72235d5c897ff64">channel_edit_uuid</a> (<a class="el" href="object__channel_8h.html#aa2c062d2c6fa83f13b145dc4f80623fd">channel_t</a> *channel, char *uuid)</td></tr>
+<tr class="memdesc:a48e03ff911d7dcdfb72235d5c897ff64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Edit the uuid of a channel.  <a href="object__channel_8h.html#a48e03ff911d7dcdfb72235d5c897ff64">More...</a><br /></td></tr>
+<tr class="separator:a48e03ff911d7dcdfb72235d5c897ff64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0a2b6dbe06321e314596ca444a6e293"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__channel_8h.html#ae0a2b6dbe06321e314596ca444a6e293">channel_edit_name</a> (<a class="el" href="object__channel_8h.html#aa2c062d2c6fa83f13b145dc4f80623fd">channel_t</a> *channel, char *name)</td></tr>
+<tr class="memdesc:ae0a2b6dbe06321e314596ca444a6e293"><td class="mdescLeft">&#160;</td><td class="mdescRight">Edit the name of a channel.  <a href="object__channel_8h.html#ae0a2b6dbe06321e314596ca444a6e293">More...</a><br /></td></tr>
+<tr class="separator:ae0a2b6dbe06321e314596ca444a6e293"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a19acbf35b5a3c93c2fe0eea3d89a69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__channel_8h.html#a8a19acbf35b5a3c93c2fe0eea3d89a69">channel_edit_parent</a> (<a class="el" href="object__channel_8h.html#aa2c062d2c6fa83f13b145dc4f80623fd">channel_t</a> *channel, char *parent)</td></tr>
+<tr class="memdesc:a8a19acbf35b5a3c93c2fe0eea3d89a69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Edit the parent of a channel.  <a href="object__channel_8h.html#a8a19acbf35b5a3c93c2fe0eea3d89a69">More...</a><br /></td></tr>
+<tr class="separator:a8a19acbf35b5a3c93c2fe0eea3d89a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab68b5fbf01ac96e790326e5f43bbbac2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__channel_8h.html#ab68b5fbf01ac96e790326e5f43bbbac2">channel_add_threads</a> (<a class="el" href="object__channel_8h.html#aa2c062d2c6fa83f13b145dc4f80623fd">channel_t</a> *channel, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *thread)</td></tr>
+<tr class="memdesc:ab68b5fbf01ac96e790326e5f43bbbac2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a thread into the threads list of a channel object.  <a href="object__channel_8h.html#ab68b5fbf01ac96e790326e5f43bbbac2">More...</a><br /></td></tr>
+<tr class="separator:ab68b5fbf01ac96e790326e5f43bbbac2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a2c863cc82b198800472549fa3ce5ba68"></a>
@@ -181,6 +202,38 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Error inside a channel object. </p>
+
+</div>
+</div>
+<a id="ae62206c179e37ac4cac0cfbb0617aa46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae62206c179e37ac4cac0cfbb0617aa46">&#9670;&nbsp;</a></span>OPERATION_FAILED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPERATION_FAILED&#160;&#160;&#160;false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Operation failed probably caused by a malloc. </p>
+
+</div>
+</div>
+<a id="a2f31d803b49b806a4dbe38933fe3e970"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f31d803b49b806a4dbe38933fe3e970">&#9670;&nbsp;</a></span>OPERATION_SUCCESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPERATION_SUCCESS&#160;&#160;&#160;true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Operation succeed. </p>
 
 </div>
 </div>
@@ -218,6 +271,46 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ab68b5fbf01ac96e790326e5f43bbbac2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab68b5fbf01ac96e790326e5f43bbbac2">&#9670;&nbsp;</a></span>channel_add_threads()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool channel_add_threads </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__channel_8h.html#aa2c062d2c6fa83f13b145dc4f80623fd">channel_t</a> *&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>thread</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a thread into the threads list of a channel object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>Channel object </td></tr>
+    <tr><td class="paramname">thread</td><td>Uuid object to add in the list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true When operation success </dd>
+<dd>
+false When operation failed </dd></dl>
+
+</div>
+</div>
 <a id="ad7e93c006b66c9fa049a4233840cda05"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad7e93c006b66c9fa049a4233840cda05">&#9670;&nbsp;</a></span>channel_destroy()</h2>
 
@@ -264,6 +357,117 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">channel</td><td>Channel object to print </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae0a2b6dbe06321e314596ca444a6e293"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0a2b6dbe06321e314596ca444a6e293">&#9670;&nbsp;</a></span>channel_edit_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void channel_edit_name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__channel_8h.html#aa2c062d2c6fa83f13b145dc4f80623fd">channel_t</a> *&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Edit the name of a channel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>Channel object to edit </td></tr>
+    <tr><td class="paramname">name</td><td>Name to change in the channel object </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8a19acbf35b5a3c93c2fe0eea3d89a69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a19acbf35b5a3c93c2fe0eea3d89a69">&#9670;&nbsp;</a></span>channel_edit_parent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void channel_edit_parent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__channel_8h.html#aa2c062d2c6fa83f13b145dc4f80623fd">channel_t</a> *&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>parent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Edit the parent of a channel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>Channel object to edit </td></tr>
+    <tr><td class="paramname">parent</td><td>Parent to change in the channel object </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a48e03ff911d7dcdfb72235d5c897ff64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48e03ff911d7dcdfb72235d5c897ff64">&#9670;&nbsp;</a></span>channel_edit_uuid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void channel_edit_uuid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__channel_8h.html#aa2c062d2c6fa83f13b145dc4f80623fd">channel_t</a> *&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>uuid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Edit the uuid of a channel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>Channel object to edit </td></tr>
+    <tr><td class="paramname">uuid</td><td>Uuid to change in the channel object </td></tr>
   </table>
   </dd>
 </dl>

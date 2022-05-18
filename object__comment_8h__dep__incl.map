@@ -1,12 +1,13 @@
 <map id="objects/comment/include/object_comment.h" name="objects/comment/include/object_comment.h">
-<area shape="rect" id="node1" title=" " alt="" coords="174,5,361,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="265,5,451,47"/>
 <area shape="rect" id="node2" href="$comment__dump_8c.html" title=" " alt="" coords="5,95,164,136"/>
-<area shape="rect" id="node3" href="$object__comment_8c.html" title=" " alt="" coords="188,95,347,136"/>
-<area shape="rect" id="node4" href="$object__wrapper_8h.html" title=" " alt="" coords="371,95,548,136"/>
-<area shape="rect" id="node5" href="$lower__component__adding_8h.html" title=" " alt="" coords="23,184,229,225"/>
-<area shape="rect" id="node7" href="$upper__component__adding_8h.html" title=" " alt="" coords="253,184,460,225"/>
-<area shape="rect" id="node9" href="$component__dump_8c.html" title=" " alt="" coords="485,184,639,225"/>
-<area shape="rect" id="node10" href="$object__wrapper_8c.html" title=" " alt="" coords="663,184,813,225"/>
-<area shape="rect" id="node6" href="$lower__component__adding_8c.html" title=" " alt="" coords="24,273,228,315"/>
-<area shape="rect" id="node8" href="$upper__component__adding_8c.html" title=" " alt="" coords="254,273,459,315"/>
+<area shape="rect" id="node3" href="$comment__setter_8c.html" title=" " alt="" coords="188,95,347,136"/>
+<area shape="rect" id="node4" href="$object__comment_8c.html" title=" " alt="" coords="371,95,529,136"/>
+<area shape="rect" id="node5" href="$object__wrapper_8h.html" title=" " alt="" coords="553,95,731,136"/>
+<area shape="rect" id="node6" href="$lower__component__adding_8h.html" title=" " alt="" coords="206,184,411,225"/>
+<area shape="rect" id="node8" href="$upper__component__adding_8h.html" title=" " alt="" coords="436,184,643,225"/>
+<area shape="rect" id="node10" href="$component__dump_8c.html" title=" " alt="" coords="667,184,822,225"/>
+<area shape="rect" id="node11" href="$object__wrapper_8c.html" title=" " alt="" coords="846,184,995,225"/>
+<area shape="rect" id="node7" href="$lower__component__adding_8c.html" title=" " alt="" coords="207,273,411,315"/>
+<area shape="rect" id="node9" href="$upper__component__adding_8c.html" title=" " alt="" coords="437,273,642,315"/>
 </map>

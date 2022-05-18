@@ -95,15 +95,17 @@ $(document).ready(function(){initNavTree('object__team_8h.html',''); initResizab
 <div class="textblock"><code>#include &quot;<a class="el" href="object__uuid_8h_source.html">object_uuid.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="object__name_8h_source.html">object_name.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="object__description_8h_source.html">object_description.h</a>&quot;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for object_team.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="object__team_8h__incl.png" border="0" usemap="#objects_2team_2include_2object__team_8h" alt=""/></div>
 <map name="objects_2team_2include_2object__team_8h" id="objects_2team_2include_2object__team_8h">
-<area shape="rect" title=" " alt="" coords="145,5,304,47"/>
+<area shape="rect" title=" " alt="" coords="223,5,381,47"/>
 <area shape="rect" href="object__uuid_8h.html" title=" " alt="" coords="326,95,435,121"/>
 <area shape="rect" href="object__name_8h.html" title=" " alt="" coords="5,95,124,121"/>
 <area shape="rect" href="object__description_8h.html" title=" " alt="" coords="148,95,301,121"/>
+<area shape="rect" title=" " alt="" coords="459,95,542,121"/>
 <area shape="rect" title=" " alt="" coords="187,169,262,196"/>
 <area shape="rect" href="my__uuid_8h.html" title=" " alt="" coords="335,169,426,196"/>
 <area shape="rect" title=" " alt="" coords="228,244,323,271"/>
@@ -116,16 +118,18 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="object__team_8h__dep__incl.png" border="0" usemap="#objects_2team_2include_2object__team_8hdep" alt=""/></div>
 <map name="objects_2team_2include_2object__team_8hdep" id="objects_2team_2include_2object__team_8hdep">
-<area shape="rect" title=" " alt="" coords="209,5,368,47"/>
+<area shape="rect" title=" " alt="" coords="401,5,560,47"/>
 <area shape="rect" href="object__team_8c.html" title=" " alt="" coords="5,95,180,136"/>
 <area shape="rect" href="team__dump_8c.html" title=" " alt="" coords="205,95,373,136"/>
-<area shape="rect" href="object__wrapper_8h.html" title=" " alt="" coords="397,95,575,136"/>
-<area shape="rect" href="lower__component__adding_8h.html" title=" " alt="" coords="50,184,255,225"/>
-<area shape="rect" href="upper__component__adding_8h.html" title=" " alt="" coords="280,184,487,225"/>
-<area shape="rect" href="component__dump_8c.html" title=" " alt="" coords="511,184,666,225"/>
-<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="690,184,839,225"/>
-<area shape="rect" href="lower__component__adding_8c.html" title=" " alt="" coords="51,273,255,315"/>
-<area shape="rect" href="upper__component__adding_8c.html" title=" " alt="" coords="281,273,486,315"/>
+<area shape="rect" href="team__remove_8c.html" title=" " alt="" coords="397,95,565,136"/>
+<area shape="rect" href="team__setter_8c.html" title=" " alt="" coords="589,95,757,136"/>
+<area shape="rect" href="object__wrapper_8h.html" title=" " alt="" coords="781,95,959,136"/>
+<area shape="rect" href="lower__component__adding_8h.html" title=" " alt="" coords="434,184,639,225"/>
+<area shape="rect" href="upper__component__adding_8h.html" title=" " alt="" coords="664,184,871,225"/>
+<area shape="rect" href="component__dump_8c.html" title=" " alt="" coords="895,184,1050,225"/>
+<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="1074,184,1223,225"/>
+<area shape="rect" href="lower__component__adding_8c.html" title=" " alt="" coords="435,273,639,315"/>
+<area shape="rect" href="upper__component__adding_8c.html" title=" " alt="" coords="665,273,870,315"/>
 </map>
 </div>
 </div>
@@ -145,6 +149,12 @@ Macros</h2></td></tr>
 <tr class="memitem:a48fea7549dd08d6a5d15c4adf44033e0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__team_8h.html#a48fea7549dd08d6a5d15c4adf44033e0">TEAM_ERROR</a>&#160;&#160;&#160;NULL</td></tr>
 <tr class="memdesc:a48fea7549dd08d6a5d15c4adf44033e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error inside a team object.  <a href="object__team_8h.html#a48fea7549dd08d6a5d15c4adf44033e0">More...</a><br /></td></tr>
 <tr class="separator:a48fea7549dd08d6a5d15c4adf44033e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae62206c179e37ac4cac0cfbb0617aa46"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__team_8h.html#ae62206c179e37ac4cac0cfbb0617aa46">OPERATION_FAILED</a>&#160;&#160;&#160;false</td></tr>
+<tr class="memdesc:ae62206c179e37ac4cac0cfbb0617aa46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operation failed probably caused by a malloc.  <a href="object__team_8h.html#ae62206c179e37ac4cac0cfbb0617aa46">More...</a><br /></td></tr>
+<tr class="separator:ae62206c179e37ac4cac0cfbb0617aa46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f31d803b49b806a4dbe38933fe3e970"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__team_8h.html#a2f31d803b49b806a4dbe38933fe3e970">OPERATION_SUCCESS</a>&#160;&#160;&#160;true</td></tr>
+<tr class="memdesc:a2f31d803b49b806a4dbe38933fe3e970"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operation succeed.  <a href="object__team_8h.html#a2f31d803b49b806a4dbe38933fe3e970">More...</a><br /></td></tr>
+<tr class="separator:a2f31d803b49b806a4dbe38933fe3e970"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -166,8 +176,58 @@ Functions</h2></td></tr>
 <tr class="memitem:af0b9e7f4a4d49b36c63894455ef9ed59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__team_8h.html#af0b9e7f4a4d49b36c63894455ef9ed59">team_dump</a> (<a class="el" href="object__team_8h.html#aaae062356783d193f58677fc3de7a946">team_t</a> *team)</td></tr>
 <tr class="memdesc:af0b9e7f4a4d49b36c63894455ef9ed59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump a team object.  <a href="object__team_8h.html#af0b9e7f4a4d49b36c63894455ef9ed59">More...</a><br /></td></tr>
 <tr class="separator:af0b9e7f4a4d49b36c63894455ef9ed59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdd8a45b989aea9cf3771c98b32efaa3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__team_8h.html#acdd8a45b989aea9cf3771c98b32efaa3">team_edit_uuid</a> (<a class="el" href="object__team_8h.html#aaae062356783d193f58677fc3de7a946">team_t</a> *team, char *uuid)</td></tr>
+<tr class="memdesc:acdd8a45b989aea9cf3771c98b32efaa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Edit the uuid of a team object.  <a href="object__team_8h.html#acdd8a45b989aea9cf3771c98b32efaa3">More...</a><br /></td></tr>
+<tr class="separator:acdd8a45b989aea9cf3771c98b32efaa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97df9ffb1677861e997ff75b9bfe42b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__team_8h.html#a97df9ffb1677861e997ff75b9bfe42b9">team_edit_name</a> (<a class="el" href="object__team_8h.html#aaae062356783d193f58677fc3de7a946">team_t</a> *team, char *name)</td></tr>
+<tr class="memdesc:a97df9ffb1677861e997ff75b9bfe42b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Edit the name of a team object.  <a href="object__team_8h.html#a97df9ffb1677861e997ff75b9bfe42b9">More...</a><br /></td></tr>
+<tr class="separator:a97df9ffb1677861e997ff75b9bfe42b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0d6d323f4a5d94867a927b0ac8d63ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__team_8h.html#ae0d6d323f4a5d94867a927b0ac8d63ef">team_edit_description</a> (<a class="el" href="object__team_8h.html#aaae062356783d193f58677fc3de7a946">team_t</a> *team, char *description)</td></tr>
+<tr class="memdesc:ae0d6d323f4a5d94867a927b0ac8d63ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Edit the description of a team object.  <a href="object__team_8h.html#ae0d6d323f4a5d94867a927b0ac8d63ef">More...</a><br /></td></tr>
+<tr class="separator:ae0d6d323f4a5d94867a927b0ac8d63ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09d255a64ff3b7c00abb92c47840fd68"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__team_8h.html#a09d255a64ff3b7c00abb92c47840fd68">team_add_channel</a> (<a class="el" href="object__team_8h.html#aaae062356783d193f58677fc3de7a946">team_t</a> *team, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *channel)</td></tr>
+<tr class="memdesc:a09d255a64ff3b7c00abb92c47840fd68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a channel into the channels list of a team object.  <a href="object__team_8h.html#a09d255a64ff3b7c00abb92c47840fd68">More...</a><br /></td></tr>
+<tr class="separator:a09d255a64ff3b7c00abb92c47840fd68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee2b2c1d7b16045e7827e5092ac00802"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__team_8h.html#aee2b2c1d7b16045e7827e5092ac00802">team_add_user</a> (<a class="el" href="object__team_8h.html#aaae062356783d193f58677fc3de7a946">team_t</a> *team, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *user)</td></tr>
+<tr class="memdesc:aee2b2c1d7b16045e7827e5092ac00802"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a user into the users list of a team object.  <a href="object__team_8h.html#aee2b2c1d7b16045e7827e5092ac00802">More...</a><br /></td></tr>
+<tr class="separator:aee2b2c1d7b16045e7827e5092ac00802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac824450449f202861b6b8afea94d3384"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__team_8h.html#ac824450449f202861b6b8afea94d3384">team_remove_user</a> (<a class="el" href="object__team_8h.html#aaae062356783d193f58677fc3de7a946">team_t</a> *team, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *user)</td></tr>
+<tr class="memdesc:ac824450449f202861b6b8afea94d3384"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a user into the users list of a team object.  <a href="object__team_8h.html#ac824450449f202861b6b8afea94d3384">More...</a><br /></td></tr>
+<tr class="separator:ac824450449f202861b6b8afea94d3384"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ae62206c179e37ac4cac0cfbb0617aa46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae62206c179e37ac4cac0cfbb0617aa46">&#9670;&nbsp;</a></span>OPERATION_FAILED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPERATION_FAILED&#160;&#160;&#160;false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Operation failed probably caused by a malloc. </p>
+
+</div>
+</div>
+<a id="a2f31d803b49b806a4dbe38933fe3e970"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f31d803b49b806a4dbe38933fe3e970">&#9670;&nbsp;</a></span>OPERATION_SUCCESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OPERATION_SUCCESS&#160;&#160;&#160;true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Operation succeed. </p>
+
+</div>
+</div>
 <a id="a48fea7549dd08d6a5d15c4adf44033e0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a48fea7549dd08d6a5d15c4adf44033e0">&#9670;&nbsp;</a></span>TEAM_ERROR</h2>
 
@@ -218,6 +278,86 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a09d255a64ff3b7c00abb92c47840fd68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09d255a64ff3b7c00abb92c47840fd68">&#9670;&nbsp;</a></span>team_add_channel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool team_add_channel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__team_8h.html#aaae062356783d193f58677fc3de7a946">team_t</a> *&#160;</td>
+          <td class="paramname"><em>team</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>channel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a channel into the channels list of a team object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">team</td><td>Team object </td></tr>
+    <tr><td class="paramname">channel</td><td>Uuid object to add in the list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true When operation success </dd>
+<dd>
+false When operation failed </dd></dl>
+
+</div>
+</div>
+<a id="aee2b2c1d7b16045e7827e5092ac00802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee2b2c1d7b16045e7827e5092ac00802">&#9670;&nbsp;</a></span>team_add_user()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool team_add_user </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__team_8h.html#aaae062356783d193f58677fc3de7a946">team_t</a> *&#160;</td>
+          <td class="paramname"><em>team</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>user</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a user into the users list of a team object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">team</td><td>Team object </td></tr>
+    <tr><td class="paramname">user</td><td>Uuid object to add in the list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true When operation success </dd>
+<dd>
+false When operation failed </dd></dl>
+
+</div>
+</div>
 <a id="a352440ae27d73e0370b5694ab24c8647"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a352440ae27d73e0370b5694ab24c8647">&#9670;&nbsp;</a></span>team_destroy()</h2>
 
@@ -270,6 +410,117 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ae0d6d323f4a5d94867a927b0ac8d63ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0d6d323f4a5d94867a927b0ac8d63ef">&#9670;&nbsp;</a></span>team_edit_description()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void team_edit_description </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__team_8h.html#aaae062356783d193f58677fc3de7a946">team_t</a> *&#160;</td>
+          <td class="paramname"><em>team</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>description</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Edit the description of a team object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">team</td><td>Team object to edit </td></tr>
+    <tr><td class="paramname">description</td><td>Description to change in the team object </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a97df9ffb1677861e997ff75b9bfe42b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97df9ffb1677861e997ff75b9bfe42b9">&#9670;&nbsp;</a></span>team_edit_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void team_edit_name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__team_8h.html#aaae062356783d193f58677fc3de7a946">team_t</a> *&#160;</td>
+          <td class="paramname"><em>team</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Edit the name of a team object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">team</td><td>Team object to edit </td></tr>
+    <tr><td class="paramname">name</td><td>Name to change in the team object </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acdd8a45b989aea9cf3771c98b32efaa3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdd8a45b989aea9cf3771c98b32efaa3">&#9670;&nbsp;</a></span>team_edit_uuid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void team_edit_uuid </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__team_8h.html#aaae062356783d193f58677fc3de7a946">team_t</a> *&#160;</td>
+          <td class="paramname"><em>team</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>uuid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Edit the uuid of a team object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">team</td><td>Team object to edit </td></tr>
+    <tr><td class="paramname">uuid</td><td>Uuid to change in the team object </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ad108e1d141b6cd05170b449b3165ab9c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad108e1d141b6cd05170b449b3165ab9c">&#9670;&nbsp;</a></span>team_init()</h2>
 
@@ -294,6 +545,46 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>team_t* Newly created Team object </dd></dl>
+
+</div>
+</div>
+<a id="ac824450449f202861b6b8afea94d3384"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac824450449f202861b6b8afea94d3384">&#9670;&nbsp;</a></span>team_remove_user()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool team_remove_user </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__team_8h.html#aaae062356783d193f58677fc3de7a946">team_t</a> *&#160;</td>
+          <td class="paramname"><em>team</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>user</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove a user into the users list of a team object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">team</td><td>Team object </td></tr>
+    <tr><td class="paramname">user</td><td>Uuid object to remove in the list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true When operation succeed </dd>
+<dd>
+false When operation failed </dd></dl>
 
 </div>
 </div>

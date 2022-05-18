@@ -112,6 +112,9 @@ Functions</h2></td></tr>
 <tr class="memitem:af8dc7d83ba7533cd15fd6e0174c67044"><td class="memItemLeft" align="right" valign="top"><a class="el" href="my__uuid_8h.html#a377719a9f8d7cdf0455b4a8fecb0cee4">my_uuid_prefix_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="my__uuid_8c.html#af8dc7d83ba7533cd15fd6e0174c67044">my_uuid_get_prefix</a> (<a class="el" href="my__uuid_8h.html#ad499adc0478db129d0aceb0d00617d06">w_uuid_t</a> *uuid)</td></tr>
 <tr class="memdesc:af8dc7d83ba7533cd15fd6e0174c67044"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the my_uuid_prefix_t representation of a given uuid  <a href="my__uuid_8c.html#af8dc7d83ba7533cd15fd6e0174c67044">More...</a><br /></td></tr>
 <tr class="separator:af8dc7d83ba7533cd15fd6e0174c67044"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47b61c7c6f0becd7c252b9ce45a47bf5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="my__uuid_8c.html#a47b61c7c6f0becd7c252b9ce45a47bf5">w_uuid_parse_from_string</a> (<a class="el" href="my__uuid_8h.html#ad499adc0478db129d0aceb0d00617d06">w_uuid_t</a> *uuid, char *content)</td></tr>
+<tr class="memdesc:a47b61c7c6f0becd7c252b9ce45a47bf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a string to a uuid wrapper.  <a href="my__uuid_8c.html#a47b61c7c6f0becd7c252b9ce45a47bf5">More...</a><br /></td></tr>
+<tr class="separator:a47b61c7c6f0becd7c252b9ce45a47bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a4c05dc63aa44bd3fdae6bd08c4c580fb"></a>
@@ -169,6 +172,45 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>get the my_uuid_prefix_t representation of a given uuid </p>
+
+</div>
+</div>
+<a id="a47b61c7c6f0becd7c252b9ce45a47bf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47b61c7c6f0becd7c252b9ce45a47bf5">&#9670;&nbsp;</a></span>w_uuid_parse_from_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int w_uuid_parse_from_string </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="my__uuid_8h.html#ad499adc0478db129d0aceb0d00617d06">w_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>uuid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>content</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convert a string to a uuid wrapper. </p>
+<dl class="section note"><dt>Note</dt><dd>This function is wrapper around uuid_parse </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uuid</td><td>pointer to a uuid wrapper </td></tr>
+    <tr><td class="paramname">string</td><td>the null terminated string representation of a uuid </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, -1 on failure </dd></dl>
 
 </div>
 </div>

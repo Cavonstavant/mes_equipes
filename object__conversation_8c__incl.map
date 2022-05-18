@@ -1,10 +1,11 @@
 <map id="objects/conversation/src/object_conversation.c" name="objects/conversation/src/object_conversation.c">
-<area shape="rect" id="node1" title=" " alt="" coords="171,5,361,47"/>
-<area shape="rect" id="node2" href="$object__conversation_8h.html" title=" " alt="" coords="113,95,278,121"/>
-<area shape="rect" id="node11" title=" " alt="" coords="303,95,373,121"/>
+<area shape="rect" id="node1" title=" " alt="" coords="225,5,416,47"/>
+<area shape="rect" id="node2" href="$object__conversation_8h.html" title=" " alt="" coords="167,95,333,121"/>
+<area shape="rect" id="node12" title=" " alt="" coords="357,95,428,121"/>
 <area shape="rect" id="node3" href="$object__uuid_8h.html" title=" " alt="" coords="141,169,250,196"/>
 <area shape="rect" id="node9" href="$object__body_8h.html" title=" " alt="" coords="5,169,116,196"/>
 <area shape="rect" id="node10" title=" " alt="" coords="274,169,338,196"/>
+<area shape="rect" id="node11" title=" " alt="" coords="362,169,445,196"/>
 <area shape="rect" id="node4" title=" " alt="" coords="38,244,113,271"/>
 <area shape="rect" id="node5" href="$my__uuid_8h.html" title=" " alt="" coords="150,244,241,271"/>
 <area shape="rect" id="node6" title=" " alt="" coords="43,319,137,345"/>

@@ -1,9 +1,10 @@
 <map id="objects/thread/include/object_thread.h" name="objects/thread/include/object_thread.h">
-<area shape="rect" id="node1" title=" " alt="" coords="187,5,353,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="255,5,421,47"/>
 <area shape="rect" id="node2" href="$object__uuid_8h.html" title=" " alt="" coords="283,95,393,121"/>
 <area shape="rect" id="node8" href="$object__name_8h.html" title=" " alt="" coords="5,95,124,121"/>
 <area shape="rect" id="node9" href="$object__body_8h.html" title=" " alt="" coords="148,95,259,121"/>
 <area shape="rect" id="node10" title=" " alt="" coords="417,95,481,121"/>
+<area shape="rect" id="node11" title=" " alt="" coords="505,95,587,121"/>
 <area shape="rect" id="node3" title=" " alt="" coords="166,169,241,196"/>
 <area shape="rect" id="node4" href="$my__uuid_8h.html" title=" " alt="" coords="293,169,383,196"/>
 <area shape="rect" id="node5" title=" " alt="" coords="185,244,280,271"/>

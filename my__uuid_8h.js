@@ -1,6 +1,7 @@
 var my__uuid_8h =
 [
     [ "w_uuid_s", "structw__uuid__s.html", "structw__uuid__s" ],
+    [ "W_UUID_PREFIX_LEN", "my__uuid_8h.html#a2966d4154239c820f3c1dea7c0ab5c53", null ],
     [ "my_uuid_prefix_t", "my__uuid_8h.html#a377719a9f8d7cdf0455b4a8fecb0cee4", null ],
     [ "w_uuid_t", "my__uuid_8h.html#ad499adc0478db129d0aceb0d00617d06", null ],
     [ "my_uuid_prefix_e", "my__uuid_8h.html#ad44929f66e293eb56915bc6c747ede18", [
@@ -16,5 +17,6 @@ var my__uuid_8h =
     [ "my_uuid_copy", "my__uuid_8h.html#a3ab6aad921ba37f94e7b8901d126d3b6", null ],
     [ "my_uuid_generate", "my__uuid_8h.html#a4c05dc63aa44bd3fdae6bd08c4c580fb", null ],
     [ "my_uuid_get_prefix", "my__uuid_8h.html#af8dc7d83ba7533cd15fd6e0174c67044", null ],
+    [ "w_uuid_parse_from_string", "my__uuid_8h.html#a47b61c7c6f0becd7c252b9ce45a47bf5", null ],
     [ "TEAMS_UUID_PREFIXES", "my__uuid_8h.html#ab0bd1cc703c62a541d8ed61605c49cd8", null ]
 ];
