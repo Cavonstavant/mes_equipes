@@ -10,33 +10,80 @@
 #include <stdio.h>
 #include "cli_commands.h"
 
-static void free_args(char **args)
+char *get_command_name(char *command)
 {
-    int index = 0;
+    char *name = NULL;
+    int i = 0;
 
-    if (args) {
-        while (args[index]) {
-            free(args[index]);
-            index++;
-        }
-        free(args);
+    while (command[i] && command[i] != ' ')
+        i++;
+    name = malloc(sizeof(char) * i);
+    if (!name)
+        return (NULL);
+    strncpy(name, command, i);
+    command = command + i;
+    return (name);
+}
+
+char **get_arguments(char *command, int arg_number)
+{
+    int j = 0;
+    char **args = malloc(sizeof(char *) * i);
+
+    if (!args)
+        return (NULL);
+    for (int i = 0; i < arg_number; i++) {
+        if (command[0] == ' ' && command[1] == '"')
+            command = command + 2;
+        else
+            return (NULL);
+        for (j = 0; command[j] && command[j] != '"'; j++);
+        if (!command[j])
+            return (NULL);
+        args[i] = malloc(sizeof(char) * j);
+        if (!args[i])
+            return (NULL);
+        strncpy(args[i], command, j);
+        command = command + j;
     }
+    return (args);
+}
+
+char **fill_command_arguments(char *command, char *name)
+{
+    char **args = NULL;
+    cli_command_t *cmd = get_cli_command_by_name(name);
+    int i = 0;
+
+    if (!cmd)
+        return (NULL);
+    for (i = 0; cmd.arguments && cmd.arguments[i]; i++);
+    if (i)
+        args = get_arguments(command, i);
+    return (args);
+}
+
+cli_command_t *convert_command_to_structure(char *command)
+{
+    cli_command_t *cli_command = {NULL, NULL, NULL};
+
+    if (!command)
+        return (NULL);
+    cli_command.name = get_command_name(command);
+    if (!cli_command.name)
+        return (NULL);
+    cli_command.arguments = fill_command_arguments(command, cli_command.name);
+    return (cli_command);
 }
 
 int compute_command(char *command)
 {
-    int nb_args = check_command(command); // check command, return -1 or nb_args
-    char **args = NULL;
+    cli_command_t *command = convert_command_to_structure(command);
 
-    if (nb_args < 0)
+    if (command == NULL)
         return (-1);
-    args = split_command(command); // split in args, return NULL or args array
-    if (!args)
-        return (-1);
-    if (call_command(args) < 0) {
-        free_args(args);
-        return (-1); // call command, return -1 or 0
-    }
-    free_args(args);
+    if (call_command(command) < 0)
+        return (-1)
+    free(command);
     return (0);
 }
