@@ -104,7 +104,8 @@ cli_command_t *convert_command_to_structure(char *command)
     cli_command->name = get_command_name(command);
     if (!cli_command->name)
         return (NULL);
-    cli_command->arguments = fill_command_arguments(command, cli_command->name);
+    cli_command->arguments =
+    fill_command_arguments(command, cli_command->name);
     return (cli_command);
 }
 
@@ -122,7 +123,6 @@ int call_command(cli_command_t *command)
         return (-1);
     return (0);
 }
-
 
 int compute_command(char *command)
 {
