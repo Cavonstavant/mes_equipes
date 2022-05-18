@@ -38,3 +38,5 @@ Running the tests and get the coverage report:
 ```bash
     ./launch_tests.sh
 ```
+
+### RFC Documentation is hosted [here](https://scrawny-quartz-4ac.notion.site/Mes-quipes-RFC-464eb5c7951c419791f116ff5fd37b57)
