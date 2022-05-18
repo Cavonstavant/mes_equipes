@@ -9,11 +9,11 @@
 
 bool client_set_output_buffer(peer_t *tmp, char const *message)
 {
-    if (!tmp || !buffer)
+    if (!tmp || !message)
         return (false);
-    if (strlen(buffer) > MAX_MSG)
+    if (strlen(message) > MAX_MSG)
         return (false);
-    strcpy(tmp->output_buffer, buffer);
+    strcpy(tmp->output_buffer, message);
     tmp->pending_write = true;
     return (true);
 }
