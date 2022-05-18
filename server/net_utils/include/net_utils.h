@@ -45,7 +45,7 @@ typedef struct peer_s {
     /// true if the transaction as been started but not finished
     /// false if the transaction has been finished or not started
     /// defaulted to false
-    bool pending_command;
+    bool pending_read;
 
     /// Represents the state of an outcoming message
     /// true if the transaction as been started but not finished
@@ -57,7 +57,7 @@ typedef struct peer_s {
     char input_buffer[MAX_MSG];
 
     /// The buffer for the outcoming message
-    char *output_buffer[MAX_MSG];
+    char output_buffer[MAX_MSG];
 
     /// A pointer to the next/prev peer
     CIRCLEQ_ENTRY(peer_s) peers;
@@ -105,7 +105,7 @@ typedef struct tcp_server_s {
 
 
 /// \brief DO NOT USE THIS FUNCTION, USE THE `TEAMS_LOG` MACRO INSTEAD
-static inline void _log_error(int line,
+static inline void __log_error(int line,
     const char *file,
     const char *func,
     const char *msg)
@@ -115,7 +115,7 @@ static inline void _log_error(int line,
 
     /// \brief Simple macro used to log a message
     #define TEAMS_LOG(msg) \
-        do {_log_error(__LINE__, __FILE__, __func__, msg);} while (0)
+        do {__log_error(__LINE__, strrchr(__FILE__, '/'), __func__, msg);} while (0)
 
 /// \brief Creates a new client
 /// \param sock_fd The client file descriptor
@@ -143,7 +143,7 @@ tcp_server_t *create_tcp_server(long port);
 bool add_user_to_server(tcp_server_t *srv, char *username, char *password);
 
 /// \brief Update the read and write fd sets according to
-/// peer_t::pending_command of every peers connected
+/// peer_t::pending_read of every peers connected
 /// \param srv The tcp server containing the peers and the w/r/err fd sets
 void server_fill_fd_sets(tcp_server_t *srv);
 
