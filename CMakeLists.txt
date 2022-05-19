@@ -13,7 +13,7 @@ endif()
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 add_compile_options (
-    "-std=gnu11" "-Werror" "-Wall" "-Wextra" "-Wpedantic" "-Wshadow" "-Wpointer-arith" "-Wattributes"
+   "-Werror" "-Wall" "-Wextra" "-Wpedantic" "-Wshadow" "-Wpointer-arith" "-Wattributes"
 )
 
 option(CODE_COVERAGE "Enable code coverage" OFF)
@@ -35,11 +35,3 @@ add_custom_target (fclean
     COMMAND make clean
     COMMAND rm -f ${PROJECT_NAME}_cli ${PROJECT_NAME}_server ${PROJECT_NAME}_objects
 )
-
-add_custom_target(tests_run
-    COMMAND cmake ../ -B tests_build -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug -DCODE_COVERAGE=ON
-    COMMAND cmake --build tests_build
-    COMMAND ctest --test_dir build --output-on-failure -T test -T coverage
-)
-
-include(Dart)
