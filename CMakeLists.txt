@@ -13,8 +13,14 @@ endif()
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 add_compile_options (
-    "-std=gnu11" "-Werror" "-Wall" "-Wextra" "-Wpedantic" "-Wshadow" "-Wpointer-arith" "-Wattributes"
+   "-Werror" "-Wall" "-Wextra" "-Wpedantic" "-Wshadow" "-Wpointer-arith" "-Wattributes"
 )
+
+option(CODE_COVERAGE "Enable code coverage" OFF)
+if (CODE_COVERAGE)
+    add_compile_options("--coverage" "-fprofile-arcs" "-ftest-coverage")
+    add_link_options("--coverage" "-fprofile-arcs" "-ftest-coverage")
+endif()
 
 add_subdirectory(objects)
 add_subdirectory(client)

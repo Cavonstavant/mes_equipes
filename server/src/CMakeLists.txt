@@ -15,6 +15,10 @@ add_executable(${TARGET} ${SRC})
 #     PRIVATE ${TARGET_NAME}_commands
 # )
 
+# target_link_directories(${TARGET}_core
+#     PRIVATE ${PROJECT_SOURCE_DIR}/server/net_utils
+# )
+
 set_target_properties(${TARGET} PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}
 )
