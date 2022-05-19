@@ -5,6 +5,8 @@
 ** server_write_client
 */
 
+/// \file server/net_utils/fd_sets_manage/server_write_client.c
+
 #include "net_utils.h"
 
 bool client_set_output_buffer(peer_t *tmp, char const *message)
@@ -17,7 +19,6 @@ bool client_set_output_buffer(peer_t *tmp, char const *message)
     tmp->pending_write = true;
     return (true);
 }
-
 
 bool server_write_client(tcp_server_t *srv, peer_t *tmp)
 {

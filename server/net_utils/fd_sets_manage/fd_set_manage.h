@@ -5,6 +5,8 @@
 ** fd_set_manage
 */
 
+/// \file server/net_utils/fd_set_manage.c
+
 #ifndef FD_SET_MANAGE_H
     #define FD_SET_MANAGE_H
 
@@ -41,7 +43,9 @@ bool server_close_client(tcp_server_t *srv, peer_t *tmp);
 bool client_set_output_buffer(peer_t *tmp, char const *message);
 
 /// \brief Fetch the last message from the peer_t::input_buffer
+/// \param tmp the peer to fetch the message from
 /// \return A pointer to the message, or NULL if there is no message
+/// \warning  The return pointer is allocated, you must free it
 char *fetch_message(peer_t *peer);
 
 #endif /* FD_SET_MANAGE_H */
