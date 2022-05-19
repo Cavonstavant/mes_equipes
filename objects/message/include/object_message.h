@@ -64,4 +64,28 @@ void message_destroy(message_t *message);
 ///
 void message_dump(message_t *message);
 
+///
+/// \brief Edit the uuid of a message object
+///
+/// \param message Message object to edit
+/// \param uuid Uuid to change in the message object
+///
+void message_edit_uuid(message_t *message, char *uuid);
+
+///
+/// \brief Edit the body of a message object
+///
+/// \param message Message object to edit
+/// \param body Body to change in the message object
+///
+void message_edit_body(message_t *message, char *body);
+
+///
+/// \brief Edit the time of a message object
+///
+/// \param message Message object to edit
+/// \param time Time to change in the message object
+///
+void message_edit_time(message_t *message, char *time);
+
 #endif /* !OBJECT_MESSAGE_H_ */

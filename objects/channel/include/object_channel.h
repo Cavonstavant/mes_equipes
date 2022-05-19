@@ -13,11 +13,22 @@
     #include "object_uuid.h"
     #include "object_name.h"
     #include "object_description.h"
+    #include <stdbool.h>
 
     ///
     /// \brief Error inside a channel object
     ///
     #define CHANNEL_ERROR NULL
+
+    ///
+    /// \brief Operation failed probably caused by a malloc
+    ///
+    #define OPERATION_FAILED false
+
+    ///
+    /// \brief Operation succeed
+    ///
+    #define OPERATION_SUCCESS true
 
 ///
 /// \brief Channel object
@@ -73,5 +84,39 @@ void channel_destroy(channel_t *channel);
 /// \param channel Channel object to print
 ///
 void channel_dump(channel_t *channel);
+
+///
+/// \brief Edit the uuid of a channel
+///
+/// \param channel Channel object to edit
+/// \param uuid Uuid to change in the channel object
+///
+void channel_edit_uuid(channel_t *channel, char *uuid);
+
+///
+/// \brief Edit the name of a channel
+///
+/// \param channel Channel object to edit
+/// \param name Name to change in the channel object
+///
+void channel_edit_name(channel_t *channel, char *name);
+
+///
+/// \brief Edit the parent of a channel
+///
+/// \param channel Channel object to edit
+/// \param parent Parent to change in the channel object
+///
+void channel_edit_parent(channel_t *channel, char *parent);
+
+///
+/// \brief Add a thread into the threads list of a channel object
+///
+/// \param channel Channel object
+/// \param thread Uuid object to add in the list
+/// \return true When operation success
+/// \return false When operation failed
+///
+bool channel_add_threads(channel_t *channel, my_uuid_t *thread);
 
 #endif /* !OBJECT_CHANNEL_H_ */

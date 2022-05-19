@@ -34,6 +34,13 @@ Test(objects_description, empty) {
     cr_assert_str_eq(description, "");
 }
 
+Test(objects_description, setter) {
+    description_t description = description_init("Michel");
+
+    description_edit_content(description, "Mich");
+    cr_assert_str_eq(description, "Mich");
+}
+
 Test(objects_description, destroy_classic) {
     description_t description = description_init("");
 

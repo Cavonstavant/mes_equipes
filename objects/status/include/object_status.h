@@ -51,4 +51,12 @@ void status_destroy(status_t status_to_destroy);
 ///
 void status_dump(status_t status);
 
+///
+/// \brief Edit the content of a status object
+///
+/// \param status Status object to edit
+/// \param content Content to edit into the Status object
+///
+void status_edit_content(status_t *status, bool content);
+
 #endif /* !OBJECT_STATUS_H_ */
