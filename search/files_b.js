@@ -1,8 +1,11 @@
 var searchData=
 [
-  ['team_5fdump_2ec_375',['team_dump.c',['../team__dump_8c.html',1,'']]],
-  ['team_5fremove_2ec_376',['team_remove.c',['../team__remove_8c.html',1,'']]],
-  ['team_5fsetter_2ec_377',['team_setter.c',['../team__setter_8c.html',1,'']]],
-  ['thread_5fdump_2ec_378',['thread_dump.c',['../thread__dump_8c.html',1,'']]],
-  ['thread_5fsetter_2ec_379',['thread_setter.c',['../thread__setter_8c.html',1,'']]]
+  ['select_2ec_444',['select.c',['../select_8c.html',1,'']]],
+  ['server_5faccept_5fnew_5fclient_2ec_445',['server_accept_new_client.c',['../server__accept__new__client_8c.html',1,'']]],
+  ['server_5fclose_5fclient_2ec_446',['server_close_client.c',['../server__close__client_8c.html',1,'']]],
+  ['server_5fread_5fclient_2ec_447',['server_read_client.c',['../server__read__client_8c.html',1,'']]],
+  ['server_5fwrite_5fclient_2ec_448',['server_write_client.c',['../server__write__client_8c.html',1,'']]],
+  ['split_5fcommand_2ec_449',['split_command.c',['../split__command_8c.html',1,'']]],
+  ['status_5fdump_2ec_450',['status_dump.c',['../status__dump_8c.html',1,'']]],
+  ['status_5fsetter_2ec_451',['status_setter.c',['../status__setter_8c.html',1,'']]]
 ];

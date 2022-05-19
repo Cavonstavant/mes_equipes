@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['cha_5f_558',['CHA_',['../object__uuid_8h.html#a8ff88fae822fe28a02f7fa750e1e6f7ba03975003823bba8ada322f9a4d54f9a9',1,'object_uuid.h']]],
-  ['com_5f_559',['COM_',['../object__uuid_8h.html#a8ff88fae822fe28a02f7fa750e1e6f7bac14a62e99bda6e852fa91a5ccd08ef16',1,'object_uuid.h']]],
-  ['con_5f_560',['CON_',['../object__uuid_8h.html#a8ff88fae822fe28a02f7fa750e1e6f7baf61efd22400c1e3f38c24e09a4e997b4',1,'object_uuid.h']]]
+  ['auth_5ffailed_678',['AUTH_FAILED',['../user_8h.html#ab561e831e5fa5fa9956c5a3e972e4464a9162819d7f96227130b611c236fb1a57',1,'user.h']]],
+  ['auth_5fok_679',['AUTH_OK',['../user_8h.html#ab561e831e5fa5fa9956c5a3e972e4464ad5d16a09eadbecfd085039b378f8a88d',1,'user.h']]],
+  ['auth_5fuser_5fnot_5ffound_680',['AUTH_USER_NOT_FOUND',['../user_8h.html#ab561e831e5fa5fa9956c5a3e972e4464ac599c6bac41d011c1a8e5bad4fecbdee',1,'user.h']]]
 ];

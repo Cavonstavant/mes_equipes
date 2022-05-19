@@ -1,6 +1,13 @@
 var searchData=
 [
-  ['user_5fn_529',['user_n',['../structteam__s.html#a8d1c15664d239a5cb8527a21d3af8a83',1,'team_s::user_n()'],['../structobject__wrapper__s.html#a0f9ff2a5db0f0cf40d37251a4788371a',1,'object_wrapper_s::user_n()']]],
-  ['users_530',['users',['../structteam__s.html#ad36bff1d1d6a968e5b9bd6920c911f08',1,'team_s::users()'],['../structobject__wrapper__s.html#adfbb25021f9da4de4dd48168b7a95fca',1,'object_wrapper_s::users()']]],
-  ['uuid_531',['uuid',['../structchannel__s.html#a24b1f36cd315ad7bdc43219b255bb7b0',1,'channel_s::uuid()'],['../structcomment__s.html#a01540827bf8cadd03a12fd3da414c98f',1,'comment_s::uuid()'],['../structconversation__s.html#a68e30776d21c255f74de4b1633fa9f04',1,'conversation_s::uuid()'],['../structmessage__s.html#a1ee1f40d76cfecdb2400ab4f370fce41',1,'message_s::uuid()'],['../structteam__s.html#a8f57f7b32b0e78b51aea4e4db861e954',1,'team_s::uuid()'],['../structthread__s.html#a775e95b63985643955a805c97dbe1f41',1,'thread_s::uuid()'],['../structuser__s.html#ac56ad928a84ba10032bf3c225dd271e6',1,'user_s::uuid()'],['../structmy__uuid__s.html#af96773fe85303fa5015adecb505ea775',1,'my_uuid_s::uuid()'],['../structw__uuid__s.html#aa3ba519f4222da427777e96868db14d5',1,'w_uuid_s::uuid()']]]
+  ['participant_617',['participant',['../structconversation__s.html#ad8500606a3d3564ea331bb7dddfda413',1,'conversation_s']]],
+  ['participant_5fn_618',['participant_n',['../structconversation__s.html#af8ecd0fe775c2eff6b67060179cf70e0',1,'conversation_s']]],
+  ['participant_5fone_619',['participant_one',['../structconversation__creation__s.html#a2a8baebe5949ef8f4898ce15f6980d68',1,'conversation_creation_s']]],
+  ['participant_5ftwo_620',['participant_two',['../structconversation__creation__s.html#a5877913683f22ef6e0308ae3ea5cee72',1,'conversation_creation_s']]],
+  ['password_621',['password',['../structuser__s.html#a88e9a2390314d3c12ce315495df1c0eb',1,'user_s']]],
+  ['peer_5faddr_622',['peer_addr',['../structpeer__s.html#a2a62e8014e955878f051918f281d8a81',1,'peer_s']]],
+  ['peers_5fhead_623',['peers_head',['../structtcp__server__s.html#a0d59f19422ec00b2eef7543121650374',1,'tcp_server_s']]],
+  ['pending_5fread_624',['pending_read',['../structpeer__s.html#af93e7ad8335e4f21e1a5a30d7758f664',1,'peer_s']]],
+  ['pending_5fwrite_625',['pending_write',['../structpeer__s.html#a08a7d2ae66fa013bd2d5222701f239d2',1,'peer_s']]],
+  ['port_626',['port',['../structtcp__server__s.html#a22aaf4ad2668794749671e82c998508f',1,'tcp_server_s']]]
 ];

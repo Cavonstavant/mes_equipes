@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['split_5fcommand_2ec_372',['split_command.c',['../split__command_8c.html',1,'']]],
-  ['status_5fdump_2ec_373',['status_dump.c',['../status__dump_8c.html',1,'']]],
-  ['status_5fsetter_2ec_374',['status_setter.c',['../status__setter_8c.html',1,'']]]
+  ['readme_2emd_442',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['remove_5funused_5fsockets_2ec_443',['remove_unused_sockets.c',['../remove__unused__sockets_8c.html',1,'']]]
 ];
