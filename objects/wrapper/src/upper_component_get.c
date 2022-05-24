@@ -27,6 +27,16 @@ team_t *wrapper_find_team(object_wrapper_t *wrapper, my_uuid_t *find)
     return OBJECT_NOT_FIND;
 }
 
+conversation_t *wrapper_find_conversation(object_wrapper_t *wrapper,
+my_uuid_t *find)
+{
+    for (int i = 0; i < wrapper->conversation_n; i++) {
+        if (my_uuid_cmp(wrapper->conversations[i]->uuid, find))
+            return wrapper->conversations[i];
+    }
+    return OBJECT_NOT_FIND;
+}
+
 channel_t *wrapper_find_channel(object_wrapper_t *wrapper, my_uuid_t *find)
 {
     for (int i = 0; i < wrapper->channel_n; i++) {

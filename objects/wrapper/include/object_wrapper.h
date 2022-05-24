@@ -117,4 +117,16 @@ user_t *wrapper_find_user(object_wrapper_t *wrapper, my_uuid_t *find);
 ///
 team_t *wrapper_find_team(object_wrapper_t *wrapper, my_uuid_t *find);
 
+///
+/// \brief Cross all the conversations list and try to find
+/// a matching conversation
+///
+/// \param wrapper Wrapper object
+/// \param find Uuid to match in the list
+/// \return conversation_t* Return an instance of the matching object
+/// Return OBJECT_TO_FIND when no matching object is find
+///
+conversation_t *wrapper_find_conversation(object_wrapper_t *wrapper,
+my_uuid_t *find);
+
 #endif /* !OBJECT_WRAPPER_H_ */
