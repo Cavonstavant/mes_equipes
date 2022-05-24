@@ -37,7 +37,7 @@ const cli_command_t *get_cli_command_by_name(char *command)
     return (NULL);
 }
 
-const cli_command_t *get_cli_commands()
+const cli_command_t *get_cli_commands(void)
 {
     return (commands);
 }

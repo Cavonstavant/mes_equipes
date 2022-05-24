@@ -12,13 +12,19 @@ add_executable(${TARGET} ${SRC})
 # target_include_directories(${TARGET}_core
 #     PUBLIC ${INCLUDE_DIRS}
 #     PRIVATE ${SRC_ROOT}
+#     PRIVATE ${TARGET_NAME}_commands
 # )
 
-target_link_libraries(${TARGET}
-    PRIVATE ${PROJECT_NAME}_commands
-)
+# target_link_directories(${TARGET}_core
+#     PRIVATE ${PROJECT_SOURCE_DIR}/server/net_utils
+# )
+
 set_target_properties(${TARGET} PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}
 )
 
-add_subdirectory(commands)
+# target_link_libraries(${TARGET}
+#     PRIVATE ${PROJECT_NAME}_commands
+# )
+
+# add_subdirectory(commands)

@@ -19,12 +19,14 @@ typedef struct w_uuid_s {
     /// \brief uuid_t instance
     uuid_t uuid;
     /// \brief null terminated string representation of uuid_t
-    char repr[40];
+    char repr[41];
 } w_uuid_t;
 
 /// \brief null terminated uuid prefixes for the teams subparts
 /// \note Each prefix is 4 characters long
 extern const char *TEAMS_UUID_PREFIXES[];
+
+    #define W_UUID_PREFIX_LEN 4
 
 typedef enum my_uuid_prefix_e {
     /// \brief Team UUID
@@ -86,5 +88,12 @@ static inline int my_uuid_compare(w_uuid_t uu1, w_uuid_t uu2)
 
 /// \brief get the my_uuid_prefix_t representation of a given uuid
 my_uuid_prefix_t my_uuid_get_prefix(w_uuid_t *uuid);
+
+/// \brief Convert a string to a uuid wrapper
+/// \note This function is wrapper around uuid_parse
+/// \param uuid pointer to a uuid wrapper
+/// \param string the null terminated string representation of a uuid
+/// \return 0 on success, -1 on failure
+int w_uuid_parse_from_string(w_uuid_t *uuid, char *content);
 
 #endif /* MY_UUID_H */

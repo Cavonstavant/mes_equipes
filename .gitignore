@@ -59,6 +59,7 @@ dkms.conf
 
 # Build specific
 build
+build-with-coverage
 Testing
 myteams_server
 myteams_cli
