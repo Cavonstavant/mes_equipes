@@ -34,6 +34,13 @@ Test(objects_body, empty) {
     cr_assert_str_eq(body, "");
 }
 
+Test(objects_body, setter) {
+    body_t body = body_init("Michel");
+
+    body_edit_content(body, "Mich");
+    cr_assert_str_eq(body, "Mich");
+}
+
 Test(objects_body, destroy_classic) {
     body_t body = body_init("");
 

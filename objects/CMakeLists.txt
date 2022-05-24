@@ -33,32 +33,49 @@ set (TARGET ${PROJECT_NAME}_objects)
 set (SRC
     ${SRC_BODY}/object_body.c
     ${SRC_BODY}/body_dump.c
+    ${SRC_BODY}/body_setter.c
     ${SRC_CHANNEL}/object_channel.c
     ${SRC_CHANNEL}/channel_dump.c
+    ${SRC_CHANNEL}/channel_setter.c
     ${SRC_COMMENT}/object_comment.c
     ${SRC_COMMENT}/comment_dump.c
+    ${SRC_COMMENT}/comment_setter.c
     ${SRC_CONVERSATION}/object_conversation.c
     ${SRC_CONVERSATION}/conversation_dump.c
+    ${SRC_CONVERSATION}/conversation_setter.c
     ${SRC_DESCRIPTION}/object_description.c
     ${SRC_DESCRIPTION}/description_dump.c
+    ${SRC_DESCRIPTION}/description_setter.c
     ${SRC_MESSAGE}/object_message.c
     ${SRC_MESSAGE}/message_dump.c
+    ${SRC_MESSAGE}/message_setter.c
     ${SRC_NAME}/object_name.c
     ${SRC_NAME}/name_dump.c
+    ${SRC_NAME}/name_setter.c
     ${SRC_STATUS}/object_status.c
     ${SRC_STATUS}/status_dump.c
+    ${SRC_STATUS}/status_setter.c
     ${SRC_TEAM}/object_team.c
     ${SRC_TEAM}/team_dump.c
+    ${SRC_TEAM}/team_setter.c
+    ${SRC_TEAM}/team_remove.c
     ${SRC_THREAD}/object_thread.c
     ${SRC_THREAD}/thread_dump.c
+    ${SRC_THREAD}/thread_setter.c
     ${SRC_USER}/object_user.c
     ${SRC_USER}/user_dump.c
+    ${SRC_USER}/user_setter.c
+    ${SRC_USER}/user_remove.c
     ${SRC_UUID}/object_uuid.c
     ${SRC_UUID}/uuid_dump.c
+    ${SRC_UUID}/uuid_setter.c
+    ${SRC_UUID}/uuid_cmp.c
     ${SRC_WRAPPER}/object_wrapper.c
     ${SRC_WRAPPER}/upper_component_adding.c
     ${SRC_WRAPPER}/lower_component_adding.c
     ${SRC_WRAPPER}/component_dump.c
+    ${SRC_WRAPPER}/upper_component_get.c
+    ${SRC_WRAPPER}/lower_component_get.c
 )
 
 add_library(${TARGET} ${SRC})

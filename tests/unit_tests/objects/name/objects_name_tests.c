@@ -34,6 +34,13 @@ Test(objects_name, empty) {
     cr_assert_str_eq(name, "");
 }
 
+Test(objects_name, setter) {
+    name_t name = name_init("Michel");
+
+    name_edit_content(name, "Mich");
+    cr_assert_str_eq(name, "Mich");
+}
+
 Test(objects_name, destroy_classic) {
     name_t name = name_init("");
 

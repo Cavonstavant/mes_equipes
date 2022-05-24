@@ -27,7 +27,8 @@ user_t *user_init(user_creation_t content)
         return USER_ERROR;
     new_user->team_n = 0;
     new_user->conversation_n = 0;
-    new_user->status = status_init(); /// NEED TO CHANGE STATUS STATE #24
+    new_user->status = status_init();
+    status_edit_content(&new_user->status, content.status);
     return new_user;
 }
 
