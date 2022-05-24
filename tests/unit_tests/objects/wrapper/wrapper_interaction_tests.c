@@ -66,3 +66,29 @@ Test(objects_my_wrapper, interaction_thread) {
     cr_assert_eq(temp, true);
     cr_assert_eq(my_wrapper->thread_n, 1);
 }
+
+Test(objects_my_wrapper, interaction_channel) {
+    object_wrapper_t *my_wrapper = wrapper_init();
+
+    bool temp = wrapper_new_channel_to_team(my_wrapper, (channel_creation_t) {
+        "Chan",
+       "Desc",
+       my_uuid_init(TEM_)
+    }, my_uuid_init(TEM_));
+
+    cr_assert_eq(temp, false);
+
+    wrapper_adding_team(my_wrapper, (team_creation_t) {
+        "My_team",
+        "Desc"
+    });
+
+    temp = wrapper_new_channel_to_team(my_wrapper, (channel_creation_t) {
+        "Chan",
+       "Desc",
+       my_uuid_init(TEM_)
+    },  my_wrapper->teams[0]->uuid);
+
+    cr_assert_eq(temp, true);
+    cr_assert_eq(my_wrapper->channel_n, 1);
+}
