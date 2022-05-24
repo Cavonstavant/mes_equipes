@@ -107,4 +107,14 @@ channel_t *wrapper_find_channel(object_wrapper_t *wrapper, my_uuid_t *find);
 ///
 user_t *wrapper_find_user(object_wrapper_t *wrapper, my_uuid_t *find);
 
+///
+/// \brief Cross all the teams list and try to find a matching team
+///
+/// \param wrapper Wrapper object
+/// \param find Uuid to match in the list
+/// \return team_t* Return an instance of the matching object
+/// Return OBJECT_TO_FIND when no matching object is find
+///
+team_t *wrapper_find_team(object_wrapper_t *wrapper, my_uuid_t *find);
+
 #endif /* !OBJECT_WRAPPER_H_ */

@@ -33,3 +33,15 @@ Test(objects_my_wrapper, cmp_user) {
     cr_assert_null(wrapper_find_user(my_wrapper, my_uuid_init(TEM_)));
     cr_assert_not_null(wrapper_find_user(my_wrapper, my_wrapper->users[0]->uuid));
 }
+
+Test(objects_my_wrapper, cmp_team) {
+    object_wrapper_t *my_wrapper = wrapper_init();
+
+    wrapper_adding_team(my_wrapper, (team_creation_t) {
+       "Title",
+       "Desc"
+
+    });
+    cr_assert_null(wrapper_find_team(my_wrapper, my_uuid_init(TEM_)));
+    cr_assert_not_null(wrapper_find_team(my_wrapper, my_wrapper->teams[0]->uuid));
+}
