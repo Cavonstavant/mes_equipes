@@ -30,6 +30,16 @@
     ///
     #define OBJECT_NOT_FOUND NULL
 
+    ///
+    /// \brief Return value when the operation succeed
+    ///
+    #define OPERATION_SUCCEED true
+
+    ///
+    /// \brief Return value when the operation failed
+    ///
+    #define OPERATION_FAILED false
+
 ///
 /// \brief Wrapper object, containing all Objects instance
 ///
