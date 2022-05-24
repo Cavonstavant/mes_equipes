@@ -205,4 +205,18 @@ thread_creation_t content, my_uuid_t *channel_uuid);
 bool wrapper_new_channel_to_team(object_wrapper_t *wrapper,
 channel_creation_t content, my_uuid_t *team_uuid);
 
+///
+/// \brief Create a new Conversation object and link it with two existing user
+///
+/// \param wrapper Wrapper object
+/// \param content Conversation content
+/// \param first_uuid First uuid user to link
+/// \param second_uuid Second uuid user to link
+/// \return true Operation succeed
+/// \return false Operation failed
+///
+bool wrapper_new_conversation_to_user(object_wrapper_t *wrapper,
+conversation_creation_t content, my_uuid_t *first_uuid,
+my_uuid_t *second_uuid);
+
 #endif /* !OBJECT_WRAPPER_H_ */

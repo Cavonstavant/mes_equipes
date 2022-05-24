@@ -58,3 +58,25 @@ channel_creation_t content, my_uuid_t *team_uuid)
         return OPERATION_FAILED;
     return OPERATION_SUCCEED;
 }
+
+bool wrapper_new_conversation_to_user(object_wrapper_t *wrapper,
+conversation_creation_t content, my_uuid_t *first_uuid, my_uuid_t *second_uuid)
+{
+    user_t *first_user = NULL;
+    user_t *second_user = NULL;
+
+    if ((first_user = wrapper_find_user(wrapper, first_uuid)) == NULL)
+        return OPERATION_FAILED;
+    if ((second_user = wrapper_find_user(wrapper, second_uuid)) == NULL)
+    content.participant_one = first_user->uuid;
+    content.participant_two = second_user->uuid;
+    if (!wrapper_adding_conversation(wrapper, content))
+        return OPERATION_FAILED;
+    if (!user_add_conversation(first_user, 
+    wrapper->conversations[wrapper->conversation_n - 1]->uuid))
+        return OPERATION_FAILED;
+    if (!user_add_conversation(second_user, 
+    wrapper->conversations[wrapper->conversation_n - 1]->uuid))
+        return OPERATION_FAILED;
+    return OPERATION_SUCCEED;
+}
