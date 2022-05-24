@@ -139,4 +139,14 @@ my_uuid_t *find);
 ///
 thread_t *wrapper_find_thread(object_wrapper_t *wrapper, my_uuid_t *find);
 
+///
+/// \brief Cross all the messages list and try to find a matching message
+///
+/// \param wrapper Wrapper object
+/// \param find Uuid to match in the list
+/// \return message_t* Return an instance of the matching object
+/// Return OBJECT_TO_FIND when no matching object is find
+///
+message_t *wrapper_find_message(object_wrapper_t *wrapper, my_uuid_t *find);
+
 #endif /* !OBJECT_WRAPPER_H_ */
