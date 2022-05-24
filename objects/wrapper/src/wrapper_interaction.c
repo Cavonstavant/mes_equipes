@@ -80,3 +80,18 @@ conversation_creation_t content, my_uuid_t *first_uuid, my_uuid_t *second_uuid)
         return OPERATION_FAILED;
     return OPERATION_SUCCEED;
 }
+
+bool wrapper_new_message_to_conversation(object_wrapper_t *wrapper,
+message_creation_t content, my_uuid_t *conv_uuid)
+{
+    conversation_t *conv = NULL;
+
+    if ((conv = wrapper_find_conversation(wrapper, conv_uuid)) == NULL)
+        return OPERATION_FAILED;
+    if (!wrapper_adding_message(wrapper, content))
+        return OPERATION_FAILED;
+    if (!conversation_add_message(conv,
+    wrapper->messages[wrapper->message_n - 1]->uuid))
+        return OPERATION_FAILED;
+    return OPERATION_SUCCEED;
+}

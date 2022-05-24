@@ -219,4 +219,16 @@ bool wrapper_new_conversation_to_user(object_wrapper_t *wrapper,
 conversation_creation_t content, my_uuid_t *first_uuid,
 my_uuid_t *second_uuid);
 
+///
+/// \brief Create a new message object and link it with an existing conv
+///
+/// \param wrapper Wrapper object
+/// \param content Message content 
+/// \param team_uuid Uuid conv to link
+/// \return true Operation succeed
+/// \return false Operation failed
+///
+bool wrapper_new_message_to_conversation(object_wrapper_t *wrapper,
+message_creation_t content, my_uuid_t *conv_uuid);
+
 #endif /* !OBJECT_WRAPPER_H_ */
