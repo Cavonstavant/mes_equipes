@@ -121,3 +121,25 @@ Test(objects_my_wrapper, interaction_conversation) {
     cr_assert_eq(temp, true);
     cr_assert_eq(my_wrapper->conversation_n, 1);
 }
+
+Test(objects_my_wrapper, interaction_message) {
+    object_wrapper_t *my_wrapper = wrapper_init();
+
+    bool temp = wrapper_new_message_to_conversation(my_wrapper, (message_creation_t) {
+        "Chan"
+    }, my_uuid_init(TEM_));
+
+    cr_assert_eq(temp, false);
+
+    wrapper_adding_conversation(my_wrapper, (conversation_creation_t) {
+        my_uuid_init(TEM_),
+       my_uuid_init(TEM_)
+    });
+
+    temp = wrapper_new_message_to_conversation(my_wrapper, (message_creation_t) {
+        "Chan"
+    },  my_wrapper->conversations[0]->uuid);
+
+    cr_assert_eq(temp, true);
+    cr_assert_eq(my_wrapper->message_n, 1);
+}
