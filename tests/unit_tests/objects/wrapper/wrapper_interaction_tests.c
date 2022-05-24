@@ -243,6 +243,11 @@ Test(objects_my_wrapper, user_journey_interaction) {
         my_wrapper->users[1]->uuid,
         my_uuid_init(TEM_)
     },  my_wrapper->threads[1]->uuid);
+
+    bool temp = wrapper_user_join_conversation(my_wrapper, my_wrapper->users[0]->uuid, my_wrapper->conversations[1]->uuid);
+
+    cr_assert_eq(temp, true);
+
     printf("\n\n\n\n\n-----USER JOURNEY------\n");
     fflush(NULL);
     wrapper_dump(my_wrapper);
