@@ -21,34 +21,34 @@ typedef struct retcodes_s {
     char **params;
 } retcodes_t;
 
-const retcodes_t retcode[] = {
-    {.repr = "200 Success\n", .code = 200, .params = 0},
-    {.repr = "201 Successfully connected to existing used: %s\n", .code = 201, .params = 0},
-    {.repr = "202 Successfully connected, new user created with username: %s\n", .code = 202, .params = 0},
-    {.repr = "203 Successfully disconnected as user: %s\n", .code = 203, .params = 0},
-    {.repr = "310 No requested data found, empty relation\n", .code = 310, .params = 0},
-    {.repr = "311 Reqested UUID: %s not found\n", .code = 311, .params = 0},
-    {.repr = "312 Requested username: %s not found\n", .code = 312, .params = 0},
-    {.repr = "320 Invalid action: Data already exist\n", .code = 320, .params = 0},
-    {.repr = "321 Invalid action: Already subscribed to %s\n", .code = 321, .params = 0},
-    {.repr = "322 Invalid action: Not subscribed to %s\n", .code = 322, .params = 0},
-    {.repr = "401 Invalid requested action, please login\n", .code = 400, .params = 0},
-    {.repr = "500 Syntax error\n", .code = 500, .params = 0},
-    {.repr = "501 Format error: Invalid UUID\n", .code = 501, .params = 0},
-    {.repr = "502 Format error: body too long\n", .code = 502, .params = 0},
-    {.repr = "503 Format error: name too long\n", .code = 503, .params = 0},
-    {.repr = "504 Format error: description too long\n", .code = 504, .params = 0},
-    {.repr = "510 Syntax error: Wrong number of arguments\n", .code = 510, .params = 0},
-    {.repr = "520 Syntax error: Invalid format\n", .code = 520, .params = 0},
-    {.repr = "530 Syntax error: Command not found\n", .code = 530, .params = 0},
-    {.repr = "540 Syntax error: Not implemented\n", .code = 540, .params = 0},
+static const retcodes_t retcode[] = {
+    {.repr = "200 Success\n", .code = 200, .params = NULL},
+    {.repr = "201 Successfully connected to existing used: %s\n", .code = 201, .params = NULL},
+    {.repr = "202 Successfully connected, new user created with username: %s\n", .code = 202, .params = NULL},
+    {.repr = "203 Successfully disconnected as user: %s\n", .code = 203, .params = NULL},
+    {.repr = "310 No requested data found, empty relation\n", .code = 310, .params = NULL},
+    {.repr = "311 Reqested UUID: %s not found\n", .code = 311, .params = NULL},
+    {.repr = "312 Requested username: %s not found\n", .code = 312, .params = NULL},
+    {.repr = "320 Invalid action: Data already exist\n", .code = 320, .params = NULL},
+    {.repr = "321 Invalid action: Already subscribed to %s\n", .code = 321, .params = NULL},
+    {.repr = "322 Invalid action: Not subscribed to %s\n", .code = 322, .params = NULL},
+    {.repr = "401 Invalid requested action, please login\n", .code = 400, .params = NULL},
+    {.repr = "500 Syntax error\n", .code = 500, .params = NULL},
+    {.repr = "501 Format error: Invalid UUID\n", .code = 501, .params = NULL},
+    {.repr = "502 Format error: body too long\n", .code = 502, .params = NULL},
+    {.repr = "503 Format error: name too long\n", .code = 503, .params = NULL},
+    {.repr = "504 Format error: description too long\n", .code = 504, .params = NULL},
+    {.repr = "510 Syntax error: Wrong number of arguments\n", .code = 510, .params = NULL},
+    {.repr = "520 Syntax error: Invalid format\n", .code = 520, .params = NULL},
+    {.repr = "530 Syntax error: Command not found\n", .code = 530, .params = NULL},
+    {.repr = "540 Syntax error: Not implemented\n", .code = 540, .params = NULL},
     {0, 0, 0}
 };
 
 /// \brief Get a retcodes_t structure depending on the code passed as parameter.
 /// \param int The code to be send.
 /// \return A new instance of retcodes_t.
-static inline retcodes_t *get_copy_repcodes_by_code(int code) {
+static inline retcodes_t *create_new_repcode(int code) {
     retcodes_t *retcode = (retcodes_t *) malloc(sizeof(retcodes_t));
 
     if (!retcode)
