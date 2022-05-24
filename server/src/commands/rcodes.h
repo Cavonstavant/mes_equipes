@@ -40,6 +40,9 @@ const retcodes_t retcode[] = {
     {0, 0, 0}
 };
 
+/// \brief Get a retcodes_t structure depending on the code passed as parameter.
+/// \param int The code to be send.
+/// \return A new instance of retcodes_t.
 static inline retcodes_t *get_copy_repcodes_by_code(int code) {
     retcodes_t *retcode = (retcodes_t *) malloc(sizeof(retcodes_t));
 
