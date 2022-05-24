@@ -243,4 +243,16 @@ message_creation_t content, my_uuid_t *conv_uuid);
 bool wrapper_user_join_conversation(object_wrapper_t *wrapper,
 my_uuid_t *user_uuid, my_uuid_t *conversation_uuid);
 
+///
+/// \brief Add a user into a team
+///
+/// \param wrapper Wrapper object
+/// \param user_uuid User uuid
+/// \param team_uuid Team uuid
+/// \return true Operation succeed
+/// \return false Operation failed
+///
+bool wrapper_user_join_team(object_wrapper_t *wrapper,
+my_uuid_t *user_uuid, my_uuid_t *team_uuid);
+
 #endif /* !OBJECT_WRAPPER_H_ */
