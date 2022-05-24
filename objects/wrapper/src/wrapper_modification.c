@@ -44,3 +44,20 @@ my_uuid_t *user_uuid, my_uuid_t *team_uuid)
         return OPERATION_FAILED;
     return OPERATION_SUCCEED;
 }
+
+bool wrapper_user_leave_team(object_wrapper_t *wrapper,
+my_uuid_t *user_uuid, my_uuid_t *team_uuid)
+{
+    user_t *user = NULL;
+    team_t *team = NULL;
+
+    if ((user = wrapper_find_user(wrapper, user_uuid)) == NULL)
+        return OPERATION_FAILED;
+    if ((team = wrapper_find_team(wrapper, team_uuid)) == NULL)
+        return OPERATION_FAILED;
+    if (!user_remove_team(user, team->uuid))
+        return OPERATION_FAILED;
+    if (!team_remove_user(team, user->uuid))
+        return OPERATION_FAILED;
+    return OPERATION_SUCCEED;
+}

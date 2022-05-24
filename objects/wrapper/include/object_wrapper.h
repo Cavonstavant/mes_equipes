@@ -255,4 +255,16 @@ my_uuid_t *user_uuid, my_uuid_t *conversation_uuid);
 bool wrapper_user_join_team(object_wrapper_t *wrapper,
 my_uuid_t *user_uuid, my_uuid_t *team_uuid);
 
+///
+/// \brief Remove a user from a team
+///
+/// \param wrapper Wrapper object
+/// \param user_uuid User uuid
+/// \param team_uuid Team uuid
+/// \return true Operation succeed
+/// \return false Operation failed
+///
+bool wrapper_user_leave_team(object_wrapper_t *wrapper,
+my_uuid_t *user_uuid, my_uuid_t *team_uuid);
+
 #endif /* !OBJECT_WRAPPER_H_ */
