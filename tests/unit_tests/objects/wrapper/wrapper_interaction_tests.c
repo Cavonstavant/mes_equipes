@@ -248,6 +248,10 @@ Test(objects_my_wrapper, user_journey_interaction) {
 
     cr_assert_eq(temp, true);
 
+    temp = wrapper_user_join_team(my_wrapper, my_wrapper->users[0]->uuid, my_wrapper->teams[0]->uuid);
+
+    cr_assert_eq(temp, true);
+
     printf("\n\n\n\n\n-----USER JOURNEY------\n");
     fflush(NULL);
     wrapper_dump(my_wrapper);
