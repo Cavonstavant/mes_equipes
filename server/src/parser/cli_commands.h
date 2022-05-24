@@ -7,8 +7,8 @@
 
 /// \file server/src/cli_commands.h
 
-#ifndef PARSER_H_
-    #define PARSER_H_
+#ifndef CLI_COMMANDS_H_
+    #define CLI_COMMANDS_H_
 
     #define COMMAND_NUMBER 14
 /// \brief structure to store available client command.

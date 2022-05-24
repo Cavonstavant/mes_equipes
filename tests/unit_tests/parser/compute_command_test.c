@@ -7,6 +7,7 @@
 
 #include <criterion/criterion.h>
 #include "parser.h"
+#include "cli_commands.h"
 
 Test(compute_command, test01)
 {
@@ -88,4 +89,20 @@ Test(compute_command, test12)
     char *cmd = "/login \"thomas";
 
     cr_assert_eq(compute_command(strdup(cmd)), -1);
+}
+
+Test(compute_command, test13)
+{
+    char *cmd = "/help ";
+
+    cr_assert_eq(compute_command(strdup(cmd)), 0);
+}
+
+Test(convert_command_to_structure, test14)
+{
+    char *cmd = strdup("/login \"thomas\"");
+    cli_command_t *cli = convert_command_to_structure(cmd);
+
+    cr_assert_str_eq(cli->name, "/login");
+    cr_assert_str_eq(cli->arguments[0], "thomas");
 }

@@ -10,3 +10,8 @@ create_test(
     TEST_SRC ${SRC}
     TEST_DEPS ${PROJECT_NAME}_parser
 )
+
+target_include_directories(
+    parser_tests
+    PRIVATE ${PROJECT_SOURCE_DIR}/server/src/parser
+)
