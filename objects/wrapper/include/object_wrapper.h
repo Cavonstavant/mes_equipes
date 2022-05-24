@@ -129,4 +129,14 @@ team_t *wrapper_find_team(object_wrapper_t *wrapper, my_uuid_t *find);
 conversation_t *wrapper_find_conversation(object_wrapper_t *wrapper,
 my_uuid_t *find);
 
+///
+/// \brief Cross all the threads list and try to find a matching thread
+///
+/// \param wrapper Wrapper object
+/// \param find Uuid to match in the list
+/// \return thread_t* Return an instance of the matching object
+/// Return OBJECT_TO_FIND when no matching object is find
+///
+thread_t *wrapper_find_thread(object_wrapper_t *wrapper, my_uuid_t *find);
+
 #endif /* !OBJECT_WRAPPER_H_ */

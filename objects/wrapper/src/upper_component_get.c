@@ -37,6 +37,15 @@ my_uuid_t *find)
     return OBJECT_NOT_FIND;
 }
 
+thread_t *wrapper_find_thread(object_wrapper_t *wrapper, my_uuid_t *find)
+{
+    for (int i = 0; i < wrapper->thread_n; i++) {
+        if (my_uuid_cmp(wrapper->threads[i]->uuid, find))
+            return wrapper->threads[i];
+    }
+    return OBJECT_NOT_FIND;
+}
+
 channel_t *wrapper_find_channel(object_wrapper_t *wrapper, my_uuid_t *find)
 {
     for (int i = 0; i < wrapper->channel_n; i++) {
