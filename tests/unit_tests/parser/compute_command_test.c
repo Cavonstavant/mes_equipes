@@ -9,11 +9,6 @@
 #include "parser.h"
 #include "cli_commands.h"
 
-Test(compute_command, test01)
-{
-    cr_assert_eq(1, 1);
-}
-
 Test(compute_command, test02)
 {
     char *cmd = "/login \"thomas\"";
