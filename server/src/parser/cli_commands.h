@@ -41,12 +41,24 @@ void *login_command(void *);
 const cli_command_t *get_cli_commands();
 
 /// \brief This function get a cli_commands depending of it's name.
+/// \param char * The called command to find the structure corresponding of the correct structure.
 /// \return const cli_command_t * Pointer to the corresponding cli_command.
 const cli_command_t *get_cli_command_by_name(char *command);
 
-
+/// \brief This function get a command, and parse it to fill a structure.
+/// \param char *command to be convert in structure.
+/// \return A cli_command_t * structure to be used after.
 cli_command_t *convert_command_to_structure(char *command);
+
+/// \brief This function call the function store on the structure passed as parameter.
+/// \param cli_command_t The structure which contains the function to be call.
+/// \return 0, or -1 if an error occurs.
 int call_command(cli_command_t *command);
+
+/// \brief This function fill the arguments of the called command in a array of char *.
+/// \param char *The command to be parse.
+/// \param char *The name of the called command.
+/// \return A array of char * which contains all arguments if it's OK, or NULL if an error occurs.
 char **fill_command_arguments(char *command, char *name);
 
 #endif /* !PARSER_H_ */
