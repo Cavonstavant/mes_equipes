@@ -45,3 +45,15 @@ Test(objects_my_wrapper, cmp_team) {
     cr_assert_null(wrapper_find_team(my_wrapper, my_uuid_init(TEM_)));
     cr_assert_not_null(wrapper_find_team(my_wrapper, my_wrapper->teams[0]->uuid));
 }
+
+Test(objects_my_wrapper, cmp_conversation) {
+    object_wrapper_t *my_wrapper = wrapper_init();
+
+    wrapper_adding_conversation(my_wrapper, (conversation_creation_t) {
+       my_uuid_init(TEM_),
+       my_uuid_init(TEM_)
+
+    });
+    cr_assert_null(wrapper_find_conversation(my_wrapper, my_uuid_init(TEM_)));
+    cr_assert_not_null(wrapper_find_conversation(my_wrapper, my_wrapper->conversations[0]->uuid));
+}
