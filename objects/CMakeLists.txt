@@ -69,10 +69,13 @@ set (SRC
     ${SRC_UUID}/object_uuid.c
     ${SRC_UUID}/uuid_dump.c
     ${SRC_UUID}/uuid_setter.c
+    ${SRC_UUID}/uuid_cmp.c
     ${SRC_WRAPPER}/object_wrapper.c
     ${SRC_WRAPPER}/upper_component_adding.c
     ${SRC_WRAPPER}/lower_component_adding.c
     ${SRC_WRAPPER}/component_dump.c
+    ${SRC_WRAPPER}/upper_component_get.c
+    ${SRC_WRAPPER}/lower_component_get.c
 )
 
 add_library(${TARGET} ${SRC})
