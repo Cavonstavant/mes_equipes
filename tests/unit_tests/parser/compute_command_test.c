@@ -98,11 +98,38 @@ Test(compute_command, test13)
     cr_assert_eq(compute_command(strdup(cmd)), 0);
 }
 
-Test(convert_command_to_structure, test14)
+Test(compute_command, test14)
+{
+    char *cmd = "/send \"thomas\" \"salut\"";
+
+    cr_assert_eq(compute_command(strdup(cmd)), 0);
+}
+
+Test(convert_command_to_structure, test15)
 {
     char *cmd = strdup("/login \"thomas\"");
     cli_command_t *cli = convert_command_to_structure(cmd);
 
     cr_assert_str_eq(cli->name, "/login");
     cr_assert_str_eq(cli->arguments[0], "thomas");
+}
+
+Test(compute_command, test16)
+{
+    char *cmd = NULL;
+
+    cr_assert_eq(compute_command(cmd), -1);
+}
+
+Test(get_cli_commands, test17)
+{
+    const cli_command_t *commands = get_cli_commands();
+
+    cr_assert(commands != NULL);
+}
+
+Test(fill_command_arguments, test18)
+{
+    char **ret = fill_command_arguments(NULL, "/login");
+    cr_assert(ret == NULL);
 }
