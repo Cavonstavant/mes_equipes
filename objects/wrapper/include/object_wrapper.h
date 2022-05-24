@@ -181,4 +181,16 @@ comment_t *wrapper_find_comment(object_wrapper_t *wrapper, my_uuid_t *find);
 bool wrapper_new_comment_to_thread(object_wrapper_t *wrapper,
 comment_creation_t content, my_uuid_t *thread_uuid);
 
+///
+/// \brief Create a new thread object and link it with an existing channel
+///
+/// \param wrapper Wrapper object
+/// \param content Thread content 
+/// \param thread_uuid Uuid channel to link
+/// \return true Operation succeed
+/// \return false Operation failed
+///
+bool wrapper_new_thread_to_channel(object_wrapper_t *wrapper,
+thread_creation_t content, my_uuid_t *channel_uuid);
+
 #endif /* !OBJECT_WRAPPER_H_ */
