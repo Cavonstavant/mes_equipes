@@ -8,6 +8,7 @@ set(SRC
     ${SRC_ROOT}/component_dump_tests.c
     ${SRC_ROOT}/upper_component_get_tests.c
     ${SRC_ROOT}/lower_component_get_tests.c
+    ${SRC_ROOT}/wrapper_interaction_tests.c
 )
 
 create_test(

@@ -169,4 +169,16 @@ message_t *wrapper_find_message(object_wrapper_t *wrapper, my_uuid_t *find);
 ///
 comment_t *wrapper_find_comment(object_wrapper_t *wrapper, my_uuid_t *find);
 
+///
+/// \brief Create a new comment object and link it with an existing thread
+///
+/// \param wrapper Wrapper object
+/// \param content Comment content 
+/// \param thread_uuid Uuid thread to link
+/// \return true Operation succeed
+/// \return false Operation failed
+///
+bool wrapper_new_comment_to_thread(object_wrapper_t *wrapper,
+comment_creation_t content, my_uuid_t *thread_uuid);
+
 #endif /* !OBJECT_WRAPPER_H_ */
