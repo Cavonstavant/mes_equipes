@@ -5,11 +5,16 @@
 ** rcodes
 */
 
+/// \file server/src/commands/rcodes.h
+
 #ifndef RCODES_H_
     #define RCODES_H_
 
     #include <stdlib.h>
 
+/// \brief The retcodes_s structure contains the representation of the return
+/// code as char *, an int which represent the return code, and a array of
+/// char * which contains the arguments to be used.
 typedef struct retcodes_s {
     char *repr;
     int code;
