@@ -92,3 +92,32 @@ Test(objects_my_wrapper, interaction_channel) {
     cr_assert_eq(temp, true);
     cr_assert_eq(my_wrapper->channel_n, 1);
 }
+
+Test(objects_my_wrapper, interaction_conversation) {
+    object_wrapper_t *my_wrapper = wrapper_init();
+
+    bool temp = wrapper_new_conversation_to_user(my_wrapper, (conversation_creation_t) {
+        my_uuid_init(USR_),
+        my_uuid_init(USR_)
+    }, my_uuid_init(TEM_), my_uuid_init(TEM_));
+
+    cr_assert_eq(temp, false);
+
+    wrapper_adding_user(my_wrapper, (user_creation_t) {
+        "Constant",
+        true
+    });
+
+    wrapper_adding_user(my_wrapper, (user_creation_t) {
+        "Constant",
+        true
+    });
+
+    temp = wrapper_new_conversation_to_user(my_wrapper, (conversation_creation_t) {
+       my_uuid_init(USR_),
+        my_uuid_init(USR_)
+    },  my_wrapper->users[0]->uuid, my_wrapper->users[1]->uuid);
+
+    cr_assert_eq(temp, true);
+    cr_assert_eq(my_wrapper->conversation_n, 1);
+}
