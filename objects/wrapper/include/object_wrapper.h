@@ -25,6 +25,11 @@
     ///
     #define WRAPPER_ERROR NULL
 
+    ///
+    /// \brief Return value when no matching object is find
+    ///
+    #define OBJECT_NOT_FOUND NULL
+
 ///
 /// \brief Wrapper object, containing all Objects instance
 ///
@@ -81,5 +86,77 @@ void wrapper_destroy(object_wrapper_t *wrapper);
 /// \param wrapper Wraper object to print
 ///
 void wrapper_dump(object_wrapper_t *wrapper);
+
+///
+/// \brief Cross all the channels list and try to find a matching channel
+///
+/// \param wrapper Wrapper object
+/// \param find Uuid to match in the list
+/// \return channel_t* Return an instance of the matching object
+/// Return OBJECT_TO_FIND when no matching object is find
+///
+channel_t *wrapper_find_channel(object_wrapper_t *wrapper, my_uuid_t *find);
+
+///
+/// \brief Cross all the users list and try to find a matching user
+///
+/// \param wrapper Wrapper object
+/// \param find Uuid to match in the list
+/// \return user_t* Return an instance of the matching object
+/// Return OBJECT_TO_FIND when no matching object is find
+///
+user_t *wrapper_find_user(object_wrapper_t *wrapper, my_uuid_t *find);
+
+///
+/// \brief Cross all the teams list and try to find a matching team
+///
+/// \param wrapper Wrapper object
+/// \param find Uuid to match in the list
+/// \return team_t* Return an instance of the matching object
+/// Return OBJECT_TO_FIND when no matching object is find
+///
+team_t *wrapper_find_team(object_wrapper_t *wrapper, my_uuid_t *find);
+
+///
+/// \brief Cross all the conversations list and try to find
+/// a matching conversation
+///
+/// \param wrapper Wrapper object
+/// \param find Uuid to match in the list
+/// \return conversation_t* Return an instance of the matching object
+/// Return OBJECT_TO_FIND when no matching object is find
+///
+conversation_t *wrapper_find_conversation(object_wrapper_t *wrapper,
+my_uuid_t *find);
+
+///
+/// \brief Cross all the threads list and try to find a matching thread
+///
+/// \param wrapper Wrapper object
+/// \param find Uuid to match in the list
+/// \return thread_t* Return an instance of the matching object
+/// Return OBJECT_TO_FIND when no matching object is find
+///
+thread_t *wrapper_find_thread(object_wrapper_t *wrapper, my_uuid_t *find);
+
+///
+/// \brief Cross all the messages list and try to find a matching message
+///
+/// \param wrapper Wrapper object
+/// \param find Uuid to match in the list
+/// \return message_t* Return an instance of the matching object
+/// Return OBJECT_TO_FIND when no matching object is find
+///
+message_t *wrapper_find_message(object_wrapper_t *wrapper, my_uuid_t *find);
+
+///
+/// \brief Cross all the comments list and try to find a matching comment
+///
+/// \param wrapper Wrapper object
+/// \param find Uuid to match in the list
+/// \return comment_t* Return an instance of the matching object
+/// Return OBJECT_TO_FIND when no matching object is find
+///
+comment_t *wrapper_find_comment(object_wrapper_t *wrapper, my_uuid_t *find);
 
 #endif /* !OBJECT_WRAPPER_H_ */

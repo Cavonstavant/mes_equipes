@@ -51,6 +51,21 @@ Test(objects_my_uuid, find_error) {
     cr_assert_eq(my_uuid_find(my_uuid, 2, uuid), -1);
 }
 
+Test(objects_my_uuid, cmp_good) {
+    my_uuid_t *first = my_uuid_init(COM_);
+    my_uuid_t *second = my_uuid_init(COM_);
+
+    my_uuid_edit_content(second, first->uuid.repr);
+    cr_assert_eq(my_uuid_cmp(first, second), true);
+}
+
+Test(objects_my_uuid, cmp_false) {
+    my_uuid_t *first = my_uuid_init(COM_);
+    my_uuid_t *second = my_uuid_init(COM_);
+
+    cr_assert_eq(my_uuid_cmp(first, second), false);
+}
+
 Test(objects_my_uuid, destroy_classic) {
     my_uuid_t *my_uuid = my_uuid_init(COM_);
 
