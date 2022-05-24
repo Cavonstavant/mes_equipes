@@ -42,3 +42,19 @@ thread_creation_t content, my_uuid_t *channel_uuid)
         return OPERATION_FAILED;
     return OPERATION_SUCCEED;
 }
+
+bool wrapper_new_channel_to_team(object_wrapper_t *wrapper,
+channel_creation_t content, my_uuid_t *team_uuid)
+{
+    team_t *team = NULL;
+
+    if ((team = wrapper_find_team(wrapper, team_uuid)) == NULL)
+        return OPERATION_FAILED;
+    content.team = team->uuid;
+    if (!wrapper_adding_channel(wrapper, content))
+        return OPERATION_FAILED;
+    if (!team_add_channel(team,
+    wrapper->channels[wrapper->channel_n - 1]->uuid))
+        return OPERATION_FAILED;
+    return OPERATION_SUCCEED;
+}

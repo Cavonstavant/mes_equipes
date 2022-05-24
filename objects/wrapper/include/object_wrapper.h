@@ -186,11 +186,23 @@ comment_creation_t content, my_uuid_t *thread_uuid);
 ///
 /// \param wrapper Wrapper object
 /// \param content Thread content 
-/// \param thread_uuid Uuid channel to link
+/// \param channel_uuid Uuid channel to link
 /// \return true Operation succeed
 /// \return false Operation failed
 ///
 bool wrapper_new_thread_to_channel(object_wrapper_t *wrapper,
 thread_creation_t content, my_uuid_t *channel_uuid);
+
+///
+/// \brief Create a new channel object and link it with an existing team
+///
+/// \param wrapper Wrapper object
+/// \param content Channel content 
+/// \param team_uuid Uuid team to link
+/// \return true Operation succeed
+/// \return false Operation failed
+///
+bool wrapper_new_channel_to_team(object_wrapper_t *wrapper,
+channel_creation_t content, my_uuid_t *team_uuid);
 
 #endif /* !OBJECT_WRAPPER_H_ */
