@@ -28,7 +28,7 @@
     ///
     /// \brief Return value when no matching object is find
     ///
-    #define OBJECT_NOT_FIND NULL
+    #define OBJECT_NOT_FOUND NULL
 
 ///
 /// \brief Wrapper object, containing all Objects instance

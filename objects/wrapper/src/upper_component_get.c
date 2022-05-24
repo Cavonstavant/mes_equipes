@@ -15,7 +15,7 @@ user_t *wrapper_find_user(object_wrapper_t *wrapper, my_uuid_t *find)
         if (my_uuid_cmp(wrapper->users[i]->uuid, find))
             return wrapper->users[i];
     }
-    return OBJECT_NOT_FIND;
+    return OBJECT_NOT_FOUND;
 }
 
 team_t *wrapper_find_team(object_wrapper_t *wrapper, my_uuid_t *find)
@@ -24,7 +24,7 @@ team_t *wrapper_find_team(object_wrapper_t *wrapper, my_uuid_t *find)
         if (my_uuid_cmp(wrapper->teams[i]->uuid, find))
             return wrapper->teams[i];
     }
-    return OBJECT_NOT_FIND;
+    return OBJECT_NOT_FOUND;
 }
 
 conversation_t *wrapper_find_conversation(object_wrapper_t *wrapper,
@@ -34,7 +34,7 @@ my_uuid_t *find)
         if (my_uuid_cmp(wrapper->conversations[i]->uuid, find))
             return wrapper->conversations[i];
     }
-    return OBJECT_NOT_FIND;
+    return OBJECT_NOT_FOUND;
 }
 
 thread_t *wrapper_find_thread(object_wrapper_t *wrapper, my_uuid_t *find)
@@ -43,7 +43,7 @@ thread_t *wrapper_find_thread(object_wrapper_t *wrapper, my_uuid_t *find)
         if (my_uuid_cmp(wrapper->threads[i]->uuid, find))
             return wrapper->threads[i];
     }
-    return OBJECT_NOT_FIND;
+    return OBJECT_NOT_FOUND;
 }
 
 channel_t *wrapper_find_channel(object_wrapper_t *wrapper, my_uuid_t *find)
@@ -52,5 +52,5 @@ channel_t *wrapper_find_channel(object_wrapper_t *wrapper, my_uuid_t *find)
         if (my_uuid_cmp(wrapper->channels[i]->uuid, find))
             return wrapper->channels[i];
     }
-    return OBJECT_NOT_FIND;
+    return OBJECT_NOT_FOUND;
 }

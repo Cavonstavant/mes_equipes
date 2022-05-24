@@ -15,7 +15,7 @@ message_t *wrapper_find_message(object_wrapper_t *wrapper, my_uuid_t *find)
         if (my_uuid_cmp(wrapper->messages[i]->uuid, find))
             return wrapper->messages[i];
     }
-    return OBJECT_NOT_FIND;
+    return OBJECT_NOT_FOUND;
 }
 
 comment_t *wrapper_find_comment(object_wrapper_t *wrapper, my_uuid_t *find)
@@ -24,5 +24,5 @@ comment_t *wrapper_find_comment(object_wrapper_t *wrapper, my_uuid_t *find)
         if (my_uuid_cmp(wrapper->comments[i]->uuid, find))
             return wrapper->comments[i];
     }
-    return OBJECT_NOT_FIND;
+    return OBJECT_NOT_FOUND;
 }
