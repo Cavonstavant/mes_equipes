@@ -9,6 +9,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+/// \brief Skip the beginning of the command until a ' ' is found.
+/// \param char *The command to be skip.
+/// \return The command without the command name.
 static char *skip_command(char *command)
 {
     int i = 0;
@@ -21,6 +24,12 @@ static char *skip_command(char *command)
     return (command);
 }
 
+/// \brief Fill the command arguments in the structure, according to the
+/// corresponding command.
+/// \param char *The command which point at the beginning of the argument.
+/// \param int The number of argument the command need.
+/// \param char **The array to be fill, it will be return at the end.
+/// \return The array of argument, or NULL if an error occurs.
 static char **fill_arguments(char *command, int arg_number, char **args)
 {
     int arg_len = 0;
@@ -45,6 +54,10 @@ static char **fill_arguments(char *command, int arg_number, char **args)
     return (args);
 }
 
+/// \brief Skip the command name and get all arguments from the command.
+/// \param char *The command to be parse.
+/// \param int The number of arguments the command need.
+/// \return The array of argument.
 static char **get_arguments(char *command, int arg_number)
 {
     char **args = NULL;

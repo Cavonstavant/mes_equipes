@@ -9,6 +9,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+/// \brief Get the command name from the command.
+/// \param char *The command.
+/// \return char *The command name.
 static char *get_command_name(char *command)
 {
     char *name = NULL;
