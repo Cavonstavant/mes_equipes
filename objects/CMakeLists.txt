@@ -77,6 +77,7 @@ set (SRC
     ${SRC_WRAPPER}/upper_component_get.c
     ${SRC_WRAPPER}/lower_component_get.c
     ${SRC_WRAPPER}/wrapper_interaction.c
+    ${SRC_WRAPPER}/wrapper_modification.c
 )
 
 add_library(${TARGET} ${SRC})

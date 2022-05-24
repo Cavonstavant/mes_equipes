@@ -231,4 +231,16 @@ my_uuid_t *second_uuid);
 bool wrapper_new_message_to_conversation(object_wrapper_t *wrapper,
 message_creation_t content, my_uuid_t *conv_uuid);
 
+///
+/// \brief Add a user into a conversation
+///
+/// \param wrapper Wrapper object
+/// \param user_uuid User uuid
+/// \param conversation_uuid Conversation uuid
+/// \return true Operation succeed
+/// \return false Operation failed
+///
+bool wrapper_user_join_conversation(object_wrapper_t *wrapper,
+my_uuid_t *user_uuid, my_uuid_t *conversation_uuid);
+
 #endif /* !OBJECT_WRAPPER_H_ */
