@@ -8,7 +8,7 @@
 #include <stdio.h>
 
 /// Need to change printf to function that will print in the correct client
-void *help_command(void *arg)
+void *command_help(void *arg)
 {
     printf("==========HELP==========\n");
     printf("/help: show help.\n");

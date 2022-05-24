@@ -4,11 +4,10 @@ set (SRC_COMMANDS ${PROJECT_SOURCE_DIR}/server/src/commands)
 set (TARGET ${PROJECT_NAME}_commands)
 
 set (SRC
-    command_info.c
+    command_help.c
 )
 
 add_library(${TARGET} ${SRC})
-
 
 # target_include_directories(${TARGET}
 #     PUBLIC ${INC_COMMANDS}
