@@ -1,12 +1,12 @@
 <map id="objects/user/include/object_user.h" name="objects/user/include/object_user.h">
 <area shape="rect" id="node1" title=" " alt="" coords="127,5,279,47"/>
 <area shape="rect" id="node2" href="$object__uuid_8h.html" title=" " alt="" coords="149,95,258,121"/>
-<area shape="rect" id="node8" href="$object__name_8h.html" title=" " alt="" coords="5,95,124,121"/>
-<area shape="rect" id="node9" href="$object__status_8h.html" title=" " alt="" coords="283,95,404,121"/>
+<area shape="rect" id="node9" href="$object__name_8h.html" title=" " alt="" coords="5,95,124,121"/>
+<area shape="rect" id="node10" href="$object__status_8h.html" title=" " alt="" coords="283,95,404,121"/>
 <area shape="rect" id="node3" title=" " alt="" coords="43,169,118,196"/>
-<area shape="rect" id="node4" href="$my__uuid_8h.html" title=" " alt="" coords="158,169,249,196"/>
-<area shape="rect" id="node5" title=" " alt="" coords="51,244,145,271"/>
-<area shape="rect" id="node6" title=" " alt="" coords="170,244,237,271"/>
-<area shape="rect" id="node7" title=" " alt="" coords="261,244,332,271"/>
-<area shape="rect" id="node10" title=" " alt="" coords="302,169,385,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="287,169,370,196"/>
+<area shape="rect" id="node5" href="$my__uuid_8h.html" title=" " alt="" coords="158,169,249,196"/>
+<area shape="rect" id="node6" title=" " alt="" coords="51,244,145,271"/>
+<area shape="rect" id="node7" title=" " alt="" coords="170,244,237,271"/>
+<area shape="rect" id="node8" title=" " alt="" coords="261,244,332,271"/>
 </map>

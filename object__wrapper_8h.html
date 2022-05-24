@@ -117,8 +117,8 @@ Include dependency graph for object_wrapper.h:</div>
 <area shape="rect" href="object__thread_8h.html" title=" " alt="" coords="552,95,674,121"/>
 <area shape="rect" href="object__user_8h.html" title=" " alt="" coords="419,95,527,121"/>
 <area shape="rect" href="object__uuid_8h.html" title=" " alt="" coords="642,169,752,196"/>
+<area shape="rect" title=" " alt="" coords="505,244,588,271"/>
 <area shape="rect" href="object__name_8h.html" title=" " alt="" coords="303,169,422,196"/>
-<area shape="rect" title=" " alt="" coords="465,244,548,271"/>
 <area shape="rect" href="my__uuid_8h.html" title=" " alt="" coords="652,244,742,271"/>
 <area shape="rect" title=" " alt="" coords="544,319,639,345"/>
 <area shape="rect" title=" " alt="" coords="664,319,730,345"/>
@@ -133,11 +133,13 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="object__wrapper_8h__dep__incl.png" border="0" usemap="#objects_2wrapper_2include_2object__wrapper_8hdep" alt=""/></div>
 <map name="objects_2wrapper_2include_2object__wrapper_8hdep" id="objects_2wrapper_2include_2object__wrapper_8hdep">
-<area shape="rect" title=" " alt="" coords="353,5,530,47"/>
+<area shape="rect" title=" " alt="" coords="551,5,729,47"/>
 <area shape="rect" href="lower__component__adding_8h.html" title=" " alt="" coords="5,95,211,136"/>
 <area shape="rect" href="upper__component__adding_8h.html" title=" " alt="" coords="235,95,442,136"/>
 <area shape="rect" href="component__dump_8c.html" title=" " alt="" coords="467,95,621,136"/>
-<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="645,95,795,136"/>
+<area shape="rect" href="lower__component__get_8c.html" title=" " alt="" coords="645,95,827,136"/>
+<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="851,95,1000,136"/>
+<area shape="rect" href="upper__component__get_8c.html" title=" " alt="" coords="1025,95,1207,136"/>
 <area shape="rect" href="lower__component__adding_8c.html" title=" " alt="" coords="6,184,210,225"/>
 <area shape="rect" href="upper__component__adding_8c.html" title=" " alt="" coords="236,184,441,225"/>
 </map>
@@ -156,6 +158,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ab0ec4a710f4b4953f192b0bd18b05c7b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#ab0ec4a710f4b4953f192b0bd18b05c7b">WRAPPER_ERROR</a>&#160;&#160;&#160;NULL</td></tr>
 <tr class="memdesc:ab0ec4a710f4b4953f192b0bd18b05c7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error inside a Wrapper object.  <a href="object__wrapper_8h.html#ab0ec4a710f4b4953f192b0bd18b05c7b">More...</a><br /></td></tr>
 <tr class="separator:ab0ec4a710f4b4953f192b0bd18b05c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a782c7747c8361138c526fa34d6e5ef1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#a782c7747c8361138c526fa34d6e5ef1e">OBJECT_NOT_FOUND</a>&#160;&#160;&#160;NULL</td></tr>
+<tr class="memdesc:a782c7747c8361138c526fa34d6e5ef1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return value when no matching object is find.  <a href="object__wrapper_8h.html#a782c7747c8361138c526fa34d6e5ef1e">More...</a><br /></td></tr>
+<tr class="separator:a782c7747c8361138c526fa34d6e5ef1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -174,8 +179,45 @@ Functions</h2></td></tr>
 <tr class="memitem:a8fb57ac6863c207bb7a69e786c9befc3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#a8fb57ac6863c207bb7a69e786c9befc3">wrapper_dump</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper)</td></tr>
 <tr class="memdesc:a8fb57ac6863c207bb7a69e786c9befc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dump all object in the wrapper.  <a href="object__wrapper_8h.html#a8fb57ac6863c207bb7a69e786c9befc3">More...</a><br /></td></tr>
 <tr class="separator:a8fb57ac6863c207bb7a69e786c9befc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dda922be7c8f6929fbe8d7b8754de50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__channel_8h.html#aa2c062d2c6fa83f13b145dc4f80623fd">channel_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#a8dda922be7c8f6929fbe8d7b8754de50">wrapper_find_channel</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *find)</td></tr>
+<tr class="memdesc:a8dda922be7c8f6929fbe8d7b8754de50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cross all the channels list and try to find a matching channel.  <a href="object__wrapper_8h.html#a8dda922be7c8f6929fbe8d7b8754de50">More...</a><br /></td></tr>
+<tr class="separator:a8dda922be7c8f6929fbe8d7b8754de50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a865ad6b22a7392e756b8a2b266d377aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="user_8h.html#aafaf9b42595b32c3a5ec11b913ba11a7">user_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#a865ad6b22a7392e756b8a2b266d377aa">wrapper_find_user</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *find)</td></tr>
+<tr class="memdesc:a865ad6b22a7392e756b8a2b266d377aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cross all the users list and try to find a matching user.  <a href="object__wrapper_8h.html#a865ad6b22a7392e756b8a2b266d377aa">More...</a><br /></td></tr>
+<tr class="separator:a865ad6b22a7392e756b8a2b266d377aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3109168448d44f9dd303740aac7a8e32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__team_8h.html#aaae062356783d193f58677fc3de7a946">team_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#a3109168448d44f9dd303740aac7a8e32">wrapper_find_team</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *find)</td></tr>
+<tr class="memdesc:a3109168448d44f9dd303740aac7a8e32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cross all the teams list and try to find a matching team.  <a href="object__wrapper_8h.html#a3109168448d44f9dd303740aac7a8e32">More...</a><br /></td></tr>
+<tr class="separator:a3109168448d44f9dd303740aac7a8e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36781096d0fa7e88250cb7745ea33b36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__conversation_8h.html#a1e1d9af360fc54df2c33d9e2ee7bb3da">conversation_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#a36781096d0fa7e88250cb7745ea33b36">wrapper_find_conversation</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *find)</td></tr>
+<tr class="memdesc:a36781096d0fa7e88250cb7745ea33b36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cross all the conversations list and try to find a matching conversation.  <a href="object__wrapper_8h.html#a36781096d0fa7e88250cb7745ea33b36">More...</a><br /></td></tr>
+<tr class="separator:a36781096d0fa7e88250cb7745ea33b36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72e48f3911bd23c369d4d77cbe2c3962"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__thread_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#a72e48f3911bd23c369d4d77cbe2c3962">wrapper_find_thread</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *find)</td></tr>
+<tr class="memdesc:a72e48f3911bd23c369d4d77cbe2c3962"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cross all the threads list and try to find a matching thread.  <a href="object__wrapper_8h.html#a72e48f3911bd23c369d4d77cbe2c3962">More...</a><br /></td></tr>
+<tr class="separator:a72e48f3911bd23c369d4d77cbe2c3962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4338beca5117101f08acd1a9b9ee7dcd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__message_8h.html#aa97dfcb9d4234ce2616da71acaab2ab2">message_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#a4338beca5117101f08acd1a9b9ee7dcd">wrapper_find_message</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *find)</td></tr>
+<tr class="memdesc:a4338beca5117101f08acd1a9b9ee7dcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cross all the messages list and try to find a matching message.  <a href="object__wrapper_8h.html#a4338beca5117101f08acd1a9b9ee7dcd">More...</a><br /></td></tr>
+<tr class="separator:a4338beca5117101f08acd1a9b9ee7dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac11b75be84e6820d0e27b971d900208c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__comment_8h.html#a231e6f7e5e699b6c27385e53b2217524">comment_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#ac11b75be84e6820d0e27b971d900208c">wrapper_find_comment</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *find)</td></tr>
+<tr class="memdesc:ac11b75be84e6820d0e27b971d900208c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cross all the comments list and try to find a matching comment.  <a href="object__wrapper_8h.html#ac11b75be84e6820d0e27b971d900208c">More...</a><br /></td></tr>
+<tr class="separator:ac11b75be84e6820d0e27b971d900208c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a782c7747c8361138c526fa34d6e5ef1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a782c7747c8361138c526fa34d6e5ef1e">&#9670;&nbsp;</a></span>OBJECT_NOT_FOUND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OBJECT_NOT_FOUND&#160;&#160;&#160;NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return value when no matching object is find. </p>
+
+</div>
+</div>
 <a id="ab0ec4a710f4b4953f192b0bd18b05c7b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab0ec4a710f4b4953f192b0bd18b05c7b">&#9670;&nbsp;</a></span>WRAPPER_ERROR</h2>
 
@@ -259,6 +301,272 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a8dda922be7c8f6929fbe8d7b8754de50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dda922be7c8f6929fbe8d7b8754de50">&#9670;&nbsp;</a></span>wrapper_find_channel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__channel_8h.html#aa2c062d2c6fa83f13b145dc4f80623fd">channel_t</a>* wrapper_find_channel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *&#160;</td>
+          <td class="paramname"><em>wrapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>find</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cross all the channels list and try to find a matching channel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapper</td><td>Wrapper object </td></tr>
+    <tr><td class="paramname">find</td><td>Uuid to match in the list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>channel_t* Return an instance of the matching object Return OBJECT_TO_FIND when no matching object is find </dd></dl>
+
+</div>
+</div>
+<a id="ac11b75be84e6820d0e27b971d900208c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac11b75be84e6820d0e27b971d900208c">&#9670;&nbsp;</a></span>wrapper_find_comment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__comment_8h.html#a231e6f7e5e699b6c27385e53b2217524">comment_t</a>* wrapper_find_comment </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *&#160;</td>
+          <td class="paramname"><em>wrapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>find</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cross all the comments list and try to find a matching comment. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapper</td><td>Wrapper object </td></tr>
+    <tr><td class="paramname">find</td><td>Uuid to match in the list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>comment_t* Return an instance of the matching object Return OBJECT_TO_FIND when no matching object is find </dd></dl>
+
+</div>
+</div>
+<a id="a36781096d0fa7e88250cb7745ea33b36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36781096d0fa7e88250cb7745ea33b36">&#9670;&nbsp;</a></span>wrapper_find_conversation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__conversation_8h.html#a1e1d9af360fc54df2c33d9e2ee7bb3da">conversation_t</a>* wrapper_find_conversation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *&#160;</td>
+          <td class="paramname"><em>wrapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>find</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cross all the conversations list and try to find a matching conversation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapper</td><td>Wrapper object </td></tr>
+    <tr><td class="paramname">find</td><td>Uuid to match in the list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>conversation_t* Return an instance of the matching object Return OBJECT_TO_FIND when no matching object is find </dd></dl>
+
+</div>
+</div>
+<a id="a4338beca5117101f08acd1a9b9ee7dcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4338beca5117101f08acd1a9b9ee7dcd">&#9670;&nbsp;</a></span>wrapper_find_message()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__message_8h.html#aa97dfcb9d4234ce2616da71acaab2ab2">message_t</a>* wrapper_find_message </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *&#160;</td>
+          <td class="paramname"><em>wrapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>find</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cross all the messages list and try to find a matching message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapper</td><td>Wrapper object </td></tr>
+    <tr><td class="paramname">find</td><td>Uuid to match in the list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>message_t* Return an instance of the matching object Return OBJECT_TO_FIND when no matching object is find </dd></dl>
+
+</div>
+</div>
+<a id="a3109168448d44f9dd303740aac7a8e32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3109168448d44f9dd303740aac7a8e32">&#9670;&nbsp;</a></span>wrapper_find_team()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__team_8h.html#aaae062356783d193f58677fc3de7a946">team_t</a>* wrapper_find_team </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *&#160;</td>
+          <td class="paramname"><em>wrapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>find</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cross all the teams list and try to find a matching team. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapper</td><td>Wrapper object </td></tr>
+    <tr><td class="paramname">find</td><td>Uuid to match in the list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>team_t* Return an instance of the matching object Return OBJECT_TO_FIND when no matching object is find </dd></dl>
+
+</div>
+</div>
+<a id="a72e48f3911bd23c369d4d77cbe2c3962"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72e48f3911bd23c369d4d77cbe2c3962">&#9670;&nbsp;</a></span>wrapper_find_thread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__thread_8h.html#a2be49e4dddf107b380ba10748317741d">thread_t</a>* wrapper_find_thread </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *&#160;</td>
+          <td class="paramname"><em>wrapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>find</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cross all the threads list and try to find a matching thread. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapper</td><td>Wrapper object </td></tr>
+    <tr><td class="paramname">find</td><td>Uuid to match in the list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>thread_t* Return an instance of the matching object Return OBJECT_TO_FIND when no matching object is find </dd></dl>
+
+</div>
+</div>
+<a id="a865ad6b22a7392e756b8a2b266d377aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a865ad6b22a7392e756b8a2b266d377aa">&#9670;&nbsp;</a></span>wrapper_find_user()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="user_8h.html#aafaf9b42595b32c3a5ec11b913ba11a7">user_t</a>* wrapper_find_user </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *&#160;</td>
+          <td class="paramname"><em>wrapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>find</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cross all the users list and try to find a matching user. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapper</td><td>Wrapper object </td></tr>
+    <tr><td class="paramname">find</td><td>Uuid to match in the list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>user_t* Return an instance of the matching object Return OBJECT_TO_FIND when no matching object is find </dd></dl>
 
 </div>
 </div>

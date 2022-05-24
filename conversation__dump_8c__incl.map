@@ -1,13 +1,13 @@
 <map id="objects/conversation/src/conversation_dump.c" name="objects/conversation/src/conversation_dump.c">
-<area shape="rect" id="node1" title=" " alt="" coords="300,5,488,47"/>
-<area shape="rect" id="node2" href="$object__conversation_8h.html" title=" " alt="" coords="223,95,389,121"/>
-<area shape="rect" id="node7" title=" " alt="" coords="401,319,467,345"/>
+<area shape="rect" id="node1" title=" " alt="" coords="263,5,451,47"/>
+<area shape="rect" id="node2" href="$object__conversation_8h.html" title=" " alt="" coords="205,95,370,121"/>
+<area shape="rect" id="node8" title=" " alt="" coords="346,319,413,345"/>
 <area shape="rect" id="node3" href="$object__uuid_8h.html" title=" " alt="" coords="141,169,250,196"/>
-<area shape="rect" id="node9" href="$object__body_8h.html" title=" " alt="" coords="5,169,116,196"/>
-<area shape="rect" id="node10" title=" " alt="" coords="274,169,338,196"/>
-<area shape="rect" id="node11" title=" " alt="" coords="362,169,445,196"/>
-<area shape="rect" id="node4" title=" " alt="" coords="81,244,155,271"/>
-<area shape="rect" id="node5" href="$my__uuid_8h.html" title=" " alt="" coords="193,244,283,271"/>
-<area shape="rect" id="node6" title=" " alt="" coords="137,319,232,345"/>
-<area shape="rect" id="node8" title=" " alt="" coords="256,319,327,345"/>
+<area shape="rect" id="node5" title=" " alt="" coords="255,244,338,271"/>
+<area shape="rect" id="node10" href="$object__body_8h.html" title=" " alt="" coords="5,169,116,196"/>
+<area shape="rect" id="node11" title=" " alt="" coords="325,169,389,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="38,244,113,271"/>
+<area shape="rect" id="node6" href="$my__uuid_8h.html" title=" " alt="" coords="141,244,231,271"/>
+<area shape="rect" id="node7" title=" " alt="" coords="85,319,180,345"/>
+<area shape="rect" id="node9" title=" " alt="" coords="204,319,275,345"/>
 </map>

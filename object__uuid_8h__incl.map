@@ -1,8 +1,9 @@
 <map id="objects/uuid/include/object_uuid.h" name="objects/uuid/include/object_uuid.h">
-<area shape="rect" id="node1" title=" " alt="" coords="29,5,181,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="14,95,89,121"/>
-<area shape="rect" id="node3" href="$my__uuid_8h.html" title=" " alt="" coords="113,95,203,121"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,169,100,196"/>
-<area shape="rect" id="node5" title=" " alt="" coords="125,169,191,196"/>
-<area shape="rect" id="node6" title=" " alt="" coords="216,169,287,196"/>
+<area shape="rect" id="node1" title=" " alt="" coords="69,5,221,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,80,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="104,95,187,121"/>
+<area shape="rect" id="node4" href="$my__uuid_8h.html" title=" " alt="" coords="211,95,301,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="103,169,198,196"/>
+<area shape="rect" id="node6" title=" " alt="" coords="223,169,289,196"/>
+<area shape="rect" id="node7" title=" " alt="" coords="314,169,385,196"/>
 </map>

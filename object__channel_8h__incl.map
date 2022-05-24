@@ -1,12 +1,12 @@
 <map id="objects/channel/include/object_channel.h" name="objects/channel/include/object_channel.h">
 <area shape="rect" id="node1" title=" " alt="" coords="215,5,389,47"/>
 <area shape="rect" id="node2" href="$object__uuid_8h.html" title=" " alt="" coords="326,95,435,121"/>
-<area shape="rect" id="node8" href="$object__name_8h.html" title=" " alt="" coords="5,95,124,121"/>
-<area shape="rect" id="node9" href="$object__description_8h.html" title=" " alt="" coords="148,95,301,121"/>
-<area shape="rect" id="node10" title=" " alt="" coords="459,95,542,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="431,169,514,196"/>
+<area shape="rect" id="node9" href="$object__name_8h.html" title=" " alt="" coords="5,95,124,121"/>
+<area shape="rect" id="node10" href="$object__description_8h.html" title=" " alt="" coords="148,95,301,121"/>
 <area shape="rect" id="node3" title=" " alt="" coords="187,169,262,196"/>
-<area shape="rect" id="node4" href="$my__uuid_8h.html" title=" " alt="" coords="335,169,426,196"/>
-<area shape="rect" id="node5" title=" " alt="" coords="228,244,323,271"/>
-<area shape="rect" id="node6" title=" " alt="" coords="347,244,414,271"/>
-<area shape="rect" id="node7" title=" " alt="" coords="439,244,509,271"/>
+<area shape="rect" id="node5" href="$my__uuid_8h.html" title=" " alt="" coords="317,169,407,196"/>
+<area shape="rect" id="node6" title=" " alt="" coords="209,244,304,271"/>
+<area shape="rect" id="node7" title=" " alt="" coords="329,244,395,271"/>
+<area shape="rect" id="node8" title=" " alt="" coords="420,244,491,271"/>
 </map>
