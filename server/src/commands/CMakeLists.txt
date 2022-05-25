@@ -5,6 +5,7 @@ set (TARGET ${PROJECT_NAME}_commands)
 
 set (SRC
     ${INC_COMMANDS}/rcodes.h
+    ${SRC_COMMANDS}/print_retcode.c
 )
 
 add_library(${TARGET} ${SRC})

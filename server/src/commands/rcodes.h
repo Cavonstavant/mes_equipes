@@ -12,6 +12,7 @@
 
     #include <stdlib.h>
     #include <string.h>
+    #include <stdio.h>
 
 /// \brief The retcodes_s structure contains the representation of the return
 /// code as char *, an int which represent the return code, and a array of
@@ -62,6 +63,18 @@ static inline retcodes_t *create_new_repcode(int code) {
     }
     free(retcode);
     return NULL;
+}
+
+/// \brief Print the message code depending on the code passed as parameter.
+/// \param int The return code value.
+/// \param char **Arguments to be passed to the retcodes_t structure if it is
+/// necessary.
+static inline void print_retcode(int code, char **args)
+{
+    retcodes_t *retcode = create_new_repcode(code);
+
+    printf(retcode->repr);
+    free(retcode);
 }
 
 #endif /* !RCODES_H_ */
