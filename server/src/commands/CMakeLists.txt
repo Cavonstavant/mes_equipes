@@ -3,11 +3,18 @@ set (SRC_COMMANDS ${PROJECT_SOURCE_DIR}/server/src/commands)
 
 set (TARGET ${PROJECT_NAME}_commands)
 
-# set (SRC)
+set (SRC
+    ${INC_COMMANDS}/rcodes.h
+)
 
-# add_library(${TARGET} ${SRC})
+add_library(${TARGET} ${SRC})
 
-# target_include_directories(${TARGET}
-#     PUBLIC ${INC_COMMANDS}
-#     PRIVATE ${SRC_COMMANDS}
-# )
+target_include_directories(${TARGET}
+    PUBLIC ${INC_COMMANDS}
+    PRIVATE ${SRC_COMMANDS}
+)
+
+set_target_properties(${TARGET}
+    PROPERTIES
+    LINKER_LANGUAGE  C
+)
