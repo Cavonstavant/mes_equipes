@@ -170,3 +170,24 @@ Test(compute_command, test23)
 
     cr_assert_eq(compute_command(strdup(cmd)), 0);
 }
+
+Test(compute_command, test24)
+{
+    char *cmd = "";
+
+    cr_assert_eq(compute_command(strdup(cmd)), -1);
+}
+
+Test(compute_command, test25)
+{
+    char *cmd = "               apzoigjzishbjgajfjlq              ziogehiqdfg";
+
+    cr_assert_eq(compute_command(strdup(cmd)), -1);
+}
+
+Test(compute_command, test26)
+{
+    char *cmd = "            /eporhksojjesk \"fuhrhtidt\"";
+
+    cr_assert_eq(compute_command(strdup(cmd)), -1);
+}

@@ -78,8 +78,10 @@ char **fill_command_arguments(char *command, char *name)
     const cli_command_t *cmd = get_cli_command_by_name(name);
     int i = 0;
 
-    if (!cmd)
+    if (!cmd) {
+        // print_retcode(530);
         return (NULL);
+    }
     for (i = 0; cmd->arguments && cmd->arguments[i]; i++);
     if (i)
         args = get_arguments(command, i);

@@ -23,7 +23,9 @@ int call_command(cli_command_t *command)
         return (-1);
     for (i = 0; cmd->arguments && cmd->arguments[i]; i++);
     for (j = 0; command->arguments && command->arguments[j]; j++);
-    if (j != i)
+    if (j != i) {
+        // print_retcode(510);
         return (-1);
+    }
     return (0);
 }

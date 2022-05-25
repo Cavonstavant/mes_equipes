@@ -25,12 +25,12 @@ set_target_properties(${TARGET} PROPERTIES
 
 target_link_libraries(${TARGET}
     PRIVATE ${PROJECT_NAME}_parser
+    PRIVATE ${PROJECT_NAME}_commands
 )
 
 add_subdirectory(parser)
+add_subdirectory(commands)
 
 # target_link_libraries(${TARGET}
 #     PRIVATE ${PROJECT_NAME}_commands
 # )
-
-# add_subdirectory(commands)

@@ -7,7 +7,6 @@ set(SRC
     ${SRC_PARSER}/call_command.c
     ${SRC_PARSER}/convert_command_to_structure.c
     ${SRC_PARSER}/fill_command_arguments.c
-    ${SRC_PARSER}/print_retcode.c
     ${SRC_PARSER}/cli_commands.h
     ${INC_PARSER}/parser.h
 )
