@@ -1,4 +1,6 @@
 <map id="objects/wrapper/include/lower_component_adding.h" name="objects/wrapper/include/lower_component_adding.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,211,47"/>
-<area shape="rect" id="node2" href="$lower__component__adding_8c.html" title=" " alt="" coords="6,95,210,136"/>
+<area shape="rect" id="node1" title=" " alt="" coords="214,5,419,47"/>
+<area shape="rect" id="node2" href="$lower__component__adding_8c.html" title=" " alt="" coords="5,95,209,136"/>
+<area shape="rect" id="node3" href="$wrapper__interaction_8c.html" title=" " alt="" coords="233,95,400,136"/>
+<area shape="rect" id="node4" href="$wrapper__modification_8c.html" title=" " alt="" coords="425,95,603,136"/>
 </map>

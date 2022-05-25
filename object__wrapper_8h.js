@@ -2,6 +2,8 @@ var object__wrapper_8h =
 [
     [ "object_wrapper_s", "structobject__wrapper__s.html", "structobject__wrapper__s" ],
     [ "OBJECT_NOT_FOUND", "object__wrapper_8h.html#a782c7747c8361138c526fa34d6e5ef1e", null ],
+    [ "OPERATION_FAILED", "object__wrapper_8h.html#ae62206c179e37ac4cac0cfbb0617aa46", null ],
+    [ "OPERATION_SUCCEED", "object__wrapper_8h.html#a07ca1ab9a02de164ecfab9522a5f4e9a", null ],
     [ "WRAPPER_ERROR", "object__wrapper_8h.html#ab0ec4a710f4b4953f192b0bd18b05c7b", null ],
     [ "object_wrapper_t", "object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1", null ],
     [ "wrapper_destroy", "object__wrapper_8h.html#a8902841cdb34440c8a0ed33d73de8617", null ],
@@ -13,5 +15,13 @@ var object__wrapper_8h =
     [ "wrapper_find_team", "object__wrapper_8h.html#a3109168448d44f9dd303740aac7a8e32", null ],
     [ "wrapper_find_thread", "object__wrapper_8h.html#a72e48f3911bd23c369d4d77cbe2c3962", null ],
     [ "wrapper_find_user", "object__wrapper_8h.html#a865ad6b22a7392e756b8a2b266d377aa", null ],
-    [ "wrapper_init", "object__wrapper_8h.html#af807050dcaae29c499a7f543d811487e", null ]
+    [ "wrapper_init", "object__wrapper_8h.html#af807050dcaae29c499a7f543d811487e", null ],
+    [ "wrapper_new_channel_to_team", "object__wrapper_8h.html#aa88858860e58e5979aedfcd715631698", null ],
+    [ "wrapper_new_comment_to_thread", "object__wrapper_8h.html#a01b358da7950ad391deae94f6a92b310", null ],
+    [ "wrapper_new_conversation_to_user", "object__wrapper_8h.html#a7987bc063bfad5028c1538fc6ca17d06", null ],
+    [ "wrapper_new_message_to_conversation", "object__wrapper_8h.html#a0065f6e70b13dcf6016f84d50f5e9454", null ],
+    [ "wrapper_new_thread_to_channel", "object__wrapper_8h.html#a0a2824fd5594f8fc6c6b9a91e8dbb2a0", null ],
+    [ "wrapper_user_join_conversation", "object__wrapper_8h.html#a8f83211d0256781fe2fbcaa9b623eb48", null ],
+    [ "wrapper_user_join_team", "object__wrapper_8h.html#a174a50b6e273411c8b1b32d6241e0996", null ],
+    [ "wrapper_user_leave_team", "object__wrapper_8h.html#a3429224808d12a1195d0235bc8f8b762", null ]
 ];
