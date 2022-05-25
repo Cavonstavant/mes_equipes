@@ -12,6 +12,7 @@ var annotated_dup =
     [ "my_uuid_s", "structmy__uuid__s.html", "structmy__uuid__s" ],
     [ "object_wrapper_s", "structobject__wrapper__s.html", "structobject__wrapper__s" ],
     [ "peer_s", "structpeer__s.html", "structpeer__s" ],
+    [ "retcodes_s", "structretcodes__s.html", "structretcodes__s" ],
     [ "tcp_server_s", "structtcp__server__s.html", "structtcp__server__s" ],
     [ "team_creation_s", "structteam__creation__s.html", "structteam__creation__s" ],
     [ "team_s", "structteam__s.html", "structteam__s" ],

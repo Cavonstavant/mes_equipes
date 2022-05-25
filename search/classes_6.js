@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['w_5fuuid_5fs_397',['w_uuid_s',['../structw__uuid__s.html',1,'']]]
+  ['user_5fcreation_5fs_401',['user_creation_s',['../structuser__creation__s.html',1,'']]],
+  ['user_5fs_402',['user_s',['../structuser__s.html',1,'']]]
 ];
