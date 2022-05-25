@@ -13,3 +13,8 @@ target_include_directories(${TARGET}
     PUBLIC ${INC_COMMANDS}
     PRIVATE ${SRC_COMMANDS}
 )
+
+set_target_properties(${TARGET}
+    PROPERTIES
+    LINKER_LANGUAGE  C
+)
