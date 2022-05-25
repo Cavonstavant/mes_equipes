@@ -11,6 +11,8 @@
     #define RCODES_H_
 
     #include <stdlib.h>
+    #include <string.h>
+    #include <stdio.h>
 
 /// \brief The retcodes_s structure contains the representation of the return
 /// code as char *, an int which represent the return code, and a array of
@@ -21,7 +23,7 @@ typedef struct retcodes_s {
     char **params;
 } retcodes_t;
 
-static const retcodes_t retcode[] = {
+static const retcodes_t retcodes[] = {
     {.repr = "200 Success\n", .code = 200, .params = NULL},
     {.repr = "201 Successfully connected to existing used: %s\n", .code = 201, .params = NULL},
     {.repr = "202 Successfully connected, new user created with username: %s\n", .code = 202, .params = NULL},
@@ -53,12 +55,26 @@ static inline retcodes_t *create_new_repcode(int code) {
 
     if (!retcode)
         return NULL;
-    for (int i = 0; retcode[i].repr; i++) {
-        if (retcode[i].code == code)
+    for (int i = 0; retcodes[i].repr; i++) {
+        if (retcodes[i].code == code) {
+            memcpy(retcode, &retcodes[i], sizeof(retcodes_t));
             return retcode;
+        }
     }
     free(retcode);
     return NULL;
+}
+
+/// \brief Print the message code depending on the code passed as parameter.
+/// \param int The return code value.
+/// \param char **Arguments to be passed to the retcodes_t structure if it is
+/// necessary.
+static inline void print_retcode(int code, char **args)
+{
+    retcodes_t *retcode = create_new_repcode(code);
+
+    printf(retcode->repr);
+    free(retcode);
 }
 
 #endif /* !RCODES_H_ */
