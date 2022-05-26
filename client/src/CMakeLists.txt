@@ -15,15 +15,17 @@ add_executable(${TARGET} ${SRC})
 #     PRIVATE ${SRC_DIR}
 # )
 
-target_include_directories(${TARGET}
-    PUBLIC ${PROJECT_SOURCE_DIR}/libs
-)
-
 target_link_directories(${TARGET}
     PUBLIC ${PROJECT_SOURCE_DIR}/libs
 )
 
-target_link_libraries(${TARGET} myteams)
+target_link_libraries(${TARGET} 
+    PUBLIC myteams
+)
+
+target_include_directories(${TARGET}
+    PUBLIC ${PROJECT_SOURCE_DIR}/libs
+)
 
 set_target_properties(${TARGET} PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}
