@@ -4,6 +4,7 @@ set (SRC_COMMANDS ${PROJECT_SOURCE_DIR}/server/src/commands)
 set (TARGET ${PROJECT_NAME}_commands)
 
 set (SRC
+    ${SRC_COMMANDS}/command_user.c
     ${INC_COMMANDS}/rcodes.h
 )
 
