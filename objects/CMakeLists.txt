@@ -69,16 +69,26 @@ set (SRC
     ${SRC_UUID}/object_uuid.c
     ${SRC_UUID}/uuid_dump.c
     ${SRC_UUID}/uuid_setter.c
+    ${SRC_UUID}/uuid_cmp.c
     ${SRC_WRAPPER}/object_wrapper.c
     ${SRC_WRAPPER}/upper_component_adding.c
     ${SRC_WRAPPER}/lower_component_adding.c
     ${SRC_WRAPPER}/component_dump.c
+    ${SRC_WRAPPER}/upper_component_get.c
+    ${SRC_WRAPPER}/lower_component_get.c
+    ${SRC_WRAPPER}/wrapper_interaction.c
+    ${SRC_WRAPPER}/wrapper_modification.c
 )
 
 add_library(${TARGET} ${SRC})
 
+target_link_directories(${TARGET}
+    PUBLIC ${PROJECT_SOURCE_DIR}/libs
+)
+
 target_link_libraries(${TARGET}
     PRIVATE ${PROJECT_NAME}_uuid_wrapper
+    PUBLIC myteams
 )
 
 target_include_directories(${TARGET}
@@ -95,6 +105,7 @@ target_include_directories(${TARGET}
     PUBLIC ${INCLUDE_USER}
     PUBLIC ${INCLUDE_UUID}
     PUBLIC ${INCLUDE_WRAPPER}
+    PUBLIC ${PROJECT_SOURCE_DIR}/libs
     PRIVATE ${SRC_ROOT}
 )
 

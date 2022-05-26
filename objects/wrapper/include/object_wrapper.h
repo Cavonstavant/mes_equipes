@@ -25,6 +25,21 @@
     ///
     #define WRAPPER_ERROR NULL
 
+    ///
+    /// \brief Return value when no matching object is find
+    ///
+    #define OBJECT_NOT_FOUND NULL
+
+    ///
+    /// \brief Return value when the operation succeed
+    ///
+    #define OPERATION_SUCCEED true
+
+    ///
+    /// \brief Return value when the operation failed
+    ///
+    #define OPERATION_FAILED false
+
 ///
 /// \brief Wrapper object, containing all Objects instance
 ///
@@ -81,5 +96,175 @@ void wrapper_destroy(object_wrapper_t *wrapper);
 /// \param wrapper Wraper object to print
 ///
 void wrapper_dump(object_wrapper_t *wrapper);
+
+///
+/// \brief Cross all the channels list and try to find a matching channel
+///
+/// \param wrapper Wrapper object
+/// \param find Uuid to match in the list
+/// \return channel_t* Return an instance of the matching object
+/// Return OBJECT_TO_FIND when no matching object is find
+///
+channel_t *wrapper_find_channel(object_wrapper_t *wrapper, my_uuid_t *find);
+
+///
+/// \brief Cross all the users list and try to find a matching user
+///
+/// \param wrapper Wrapper object
+/// \param find Uuid to match in the list
+/// \return user_t* Return an instance of the matching object
+/// Return OBJECT_TO_FIND when no matching object is find
+///
+user_t *wrapper_find_user(object_wrapper_t *wrapper, my_uuid_t *find);
+
+///
+/// \brief Cross all the teams list and try to find a matching team
+///
+/// \param wrapper Wrapper object
+/// \param find Uuid to match in the list
+/// \return team_t* Return an instance of the matching object
+/// Return OBJECT_TO_FIND when no matching object is find
+///
+team_t *wrapper_find_team(object_wrapper_t *wrapper, my_uuid_t *find);
+
+///
+/// \brief Cross all the conversations list and try to find
+/// a matching conversation
+///
+/// \param wrapper Wrapper object
+/// \param find Uuid to match in the list
+/// \return conversation_t* Return an instance of the matching object
+/// Return OBJECT_TO_FIND when no matching object is find
+///
+conversation_t *wrapper_find_conversation(object_wrapper_t *wrapper,
+my_uuid_t *find);
+
+///
+/// \brief Cross all the threads list and try to find a matching thread
+///
+/// \param wrapper Wrapper object
+/// \param find Uuid to match in the list
+/// \return thread_t* Return an instance of the matching object
+/// Return OBJECT_TO_FIND when no matching object is find
+///
+thread_t *wrapper_find_thread(object_wrapper_t *wrapper, my_uuid_t *find);
+
+///
+/// \brief Cross all the messages list and try to find a matching message
+///
+/// \param wrapper Wrapper object
+/// \param find Uuid to match in the list
+/// \return message_t* Return an instance of the matching object
+/// Return OBJECT_TO_FIND when no matching object is find
+///
+message_t *wrapper_find_message(object_wrapper_t *wrapper, my_uuid_t *find);
+
+///
+/// \brief Cross all the comments list and try to find a matching comment
+///
+/// \param wrapper Wrapper object
+/// \param find Uuid to match in the list
+/// \return comment_t* Return an instance of the matching object
+/// Return OBJECT_TO_FIND when no matching object is find
+///
+comment_t *wrapper_find_comment(object_wrapper_t *wrapper, my_uuid_t *find);
+
+///
+/// \brief Create a new comment object and link it with an existing thread
+///
+/// \param wrapper Wrapper object
+/// \param content Comment content 
+/// \param thread_uuid Uuid thread to link
+/// \return true Operation succeed
+/// \return false Operation failed
+///
+bool wrapper_new_comment_to_thread(object_wrapper_t *wrapper,
+comment_creation_t content, my_uuid_t *thread_uuid);
+
+///
+/// \brief Create a new thread object and link it with an existing channel
+///
+/// \param wrapper Wrapper object
+/// \param content Thread content 
+/// \param channel_uuid Uuid channel to link
+/// \return true Operation succeed
+/// \return false Operation failed
+///
+bool wrapper_new_thread_to_channel(object_wrapper_t *wrapper,
+thread_creation_t content, my_uuid_t *channel_uuid);
+
+///
+/// \brief Create a new channel object and link it with an existing team
+///
+/// \param wrapper Wrapper object
+/// \param content Channel content 
+/// \param team_uuid Uuid team to link
+/// \return true Operation succeed
+/// \return false Operation failed
+///
+bool wrapper_new_channel_to_team(object_wrapper_t *wrapper,
+channel_creation_t content, my_uuid_t *team_uuid);
+
+///
+/// \brief Create a new Conversation object and link it with two existing user
+///
+/// \param wrapper Wrapper object
+/// \param content Conversation content
+/// \param first_uuid First uuid user to link
+/// \param second_uuid Second uuid user to link
+/// \return true Operation succeed
+/// \return false Operation failed
+///
+bool wrapper_new_conversation_to_user(object_wrapper_t *wrapper,
+conversation_creation_t content, my_uuid_t *first_uuid,
+my_uuid_t *second_uuid);
+
+///
+/// \brief Create a new message object and link it with an existing conv
+///
+/// \param wrapper Wrapper object
+/// \param content Message content 
+/// \param team_uuid Uuid conv to link
+/// \return true Operation succeed
+/// \return false Operation failed
+///
+bool wrapper_new_message_to_conversation(object_wrapper_t *wrapper,
+message_creation_t content, my_uuid_t *conv_uuid);
+
+///
+/// \brief Add a user into a conversation
+///
+/// \param wrapper Wrapper object
+/// \param user_uuid User uuid
+/// \param conversation_uuid Conversation uuid
+/// \return true Operation succeed
+/// \return false Operation failed
+///
+bool wrapper_user_join_conversation(object_wrapper_t *wrapper,
+my_uuid_t *user_uuid, my_uuid_t *conversation_uuid);
+
+///
+/// \brief Add a user into a team
+///
+/// \param wrapper Wrapper object
+/// \param user_uuid User uuid
+/// \param team_uuid Team uuid
+/// \return true Operation succeed
+/// \return false Operation failed
+///
+bool wrapper_user_join_team(object_wrapper_t *wrapper,
+my_uuid_t *user_uuid, my_uuid_t *team_uuid);
+
+///
+/// \brief Remove a user from a team
+///
+/// \param wrapper Wrapper object
+/// \param user_uuid User uuid
+/// \param team_uuid Team uuid
+/// \return true Operation succeed
+/// \return false Operation failed
+///
+bool wrapper_user_leave_team(object_wrapper_t *wrapper,
+my_uuid_t *user_uuid, my_uuid_t *team_uuid);
 
 #endif /* !OBJECT_WRAPPER_H_ */

@@ -19,12 +19,21 @@ add_executable(${TARGET} ${SRC})
 #     PRIVATE ${PROJECT_SOURCE_DIR}/server/net_utils
 # )
 
+target_include_directories(${TARGET}
+    PUBLIC ${PROJECT_SOURCE_DIR}/libs
+)
+
+target_link_directories(${TARGET}
+    PUBLIC ${PROJECT_SOURCE_DIR}/libs
+)
+
 set_target_properties(${TARGET} PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}
 )
 
-# target_link_libraries(${TARGET}
-#     PRIVATE ${PROJECT_NAME}_commands
-# )
+target_link_libraries(${TARGET}
+    PRIVATE ${PROJECT_NAME}_commands
+    PUBLIC myteams
+)
 
-# add_subdirectory(commands)
+add_subdirectory(commands)
