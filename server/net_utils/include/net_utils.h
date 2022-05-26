@@ -158,4 +158,12 @@ int server_wait(tcp_server_t *srv);
 /// \return true if a new connection was instanciated false otherwise
 bool server_manage_fd_update(tcp_server_t *srv);
 
+/// \brief Retrieve the last added peer to the server
+/// \param srv the tcp server containing the peers
+static inline peer_t *fetch_last_added_peer(tcp_server_t *srv) {
+    if (!srv || !srv->peers_head)
+        return NULL;
+    return CIRCLEQ_LAST(srv->peers_head);
+}
+
 #endif //NET_UTILS_H
