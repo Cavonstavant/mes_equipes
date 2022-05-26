@@ -23,7 +23,7 @@ target_link_libraries(${TARGET_NAME} ${TARGET_NAME}_auth)
 target_include_directories(${TARGET_NAME}
      PUBLIC ${INCLUDE_ROOT}
      PRIVATE ${SRC_ROOT}
-     PRIVATE ${SRC_ROOT}/fd_sets_manage
+     PUBLIC ${SRC_ROOT}/fd_sets_manage
 )
 
 add_subdirectory(auth)

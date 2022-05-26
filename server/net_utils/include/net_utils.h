@@ -115,7 +115,8 @@ static inline void __log_error(int line,
 
     /// \brief Simple macro used to log a message
     #define TEAMS_LOG(msg) \
-        do {__log_error(__LINE__, strrchr(__FILE__, '/'), __func__, msg);} while (0)
+        do {__log_error(__LINE__, \
+strrchr(__FILE__, '/'), __func__, msg);} while (0)
 
 /// \brief Creates a new client
 /// \param sock_fd The client file descriptor
@@ -154,6 +155,7 @@ int server_wait(tcp_server_t *srv);
 
 /// \brief Handle a client update
 /// \param srv The tcp server containing the peers and the w/r/err fd sets
-void server_manage_fd_update(tcp_server_t *srv);
+/// \return true if a new connection was instanciated false otherwise
+bool server_manage_fd_update(tcp_server_t *srv);
 
 #endif //NET_UTILS_H
