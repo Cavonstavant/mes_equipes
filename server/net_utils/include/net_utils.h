@@ -41,6 +41,11 @@ typedef struct peer_s {
     /// The address of the client
     struct sockaddr_in peer_addr;
 
+    /// Indicates if the client is connected
+    /// This filed is usefull for any wrapper that needs to know if the client
+    /// is still connected or not
+    bool connected;
+
     /// Represents the state of an incoming message
     /// true if the transaction as been started but not finished
     /// false if the transaction has been finished or not started
@@ -92,11 +97,6 @@ typedef struct tcp_server_s {
     /// The collection of errored file descriptor set
     fd_set err_fds;
 
-    /// Sockets to be removed after read failed
-    /// sockets_to_be_removed[i] == true if the socket at index <b>i</b> is
-    ///to be removed
-    int sockets_to_be_removed[FD_SETSIZE];
-
     /// The state of the server
     /// true == running / false == stopped
     bool state;
@@ -110,24 +110,18 @@ static inline void __log_error(int line,
     const char *func,
     const char *msg)
 {
-    printf("%s:%d:%s():\n%s: %s\n", file, line, func, msg, strerror(errno));
+    printf("%s:%d:%s():\n\t%s: %s\n", file, line, func, msg, strerror(errno));
 }
 
     /// \brief Simple macro used to log a message
     #define TEAMS_LOG(msg) \
         do {__log_error(__LINE__, \
-strrchr(__FILE__, '/'), __func__, msg);} while (0)
+strrchr(__FILE__, '/') + 1, __func__, msg);} while (0)
 
 /// \brief Creates a new client
 /// \param sock_fd The client file descriptor
 /// \param peer_addr The client address informations
 peer_t *new_peer(int fd, struct sockaddr_in addr);
-
-/// \brief remove a peer from the collection of peers
-/// \param peers the head of the collection of peers created with CIRCLEQ_INIT
-/// \param tbr to be removed peers with <b>tbr[peer->sock_fd] == 1</b>
-void remove_unused_sockets(struct peers_head *peers, int tbr[FD_SETSIZE]);
-
 
 /// \brief Util function to display currently connected clients
 void display_clients(struct peers_head *peers_head);
@@ -160,10 +154,11 @@ bool server_manage_fd_update(tcp_server_t *srv);
 
 /// \brief Retrieve the last added peer to the server
 /// \param srv the tcp server containing the peers
-static inline peer_t *fetch_last_added_peer(tcp_server_t *srv) {
-    if (!srv || !srv->peers_head)
+static inline peer_t *fetch_last_added_peer(tcp_server_t *srv)
+{
+    if (!srv)
         return NULL;
-    return CIRCLEQ_LAST(srv->peers_head);
+    return CIRCLEQ_FIRST(&srv->peers_head);
 }
 
 #endif //NET_UTILS_H
