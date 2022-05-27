@@ -6,6 +6,7 @@
 */
 
 #include "rcodes.h"
+#include <stdbool.h>
 
 void *command_login(void *arg)
 {
