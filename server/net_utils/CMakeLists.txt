@@ -8,7 +8,6 @@ add_subdirectory(fd_sets_manage)
 set (SRC
      ${SRC_ROOT}/display_utils.c
      ${SRC_ROOT}/tcp_server.c
-     ${SRC_ROOT}/remove_unused_sockets.c
      ${SRC_ROOT}/peer.c
      ${SRC_ROOT}/select.c
      ${INCLUDE_ROOT}/net_utils.h
