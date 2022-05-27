@@ -39,7 +39,8 @@ typedef struct teams_server_s {
     /// Represents the state of the server (running 1, stopped 0)
     bool state;
 
-    CIRCLEQ_ENTRY(teams_client_head) clients;
+    /// The collection of clients
+    struct teams_client_head clients;
 } teams_server_t;
 
 /// \brief creates a new teams server
@@ -59,5 +60,9 @@ void teams_server_stop(teams_server_t *self);
 /// the validation on of the parser.
 /// A new client is then added to the application side
 void teams_server_add_user(teams_server_t *self, peer_t *new_peer);
+
+/// \brief Remove any disconnected peer from the list of clients
+/// \param self the teams server containing the collection of clients
+void remove_disconnected_clients(teams_server_t *self);
 
 #endif /* MY_TEAMS_SERVER_H */
