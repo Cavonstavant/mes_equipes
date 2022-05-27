@@ -9,7 +9,7 @@
 
 #include "net_utils.h"
 
-static void bind_and_listen_on_socket(tcp_server_t *srv, long port)
+static bool bind_and_listen_on_socket(tcp_server_t *srv, long port)
 {
     srv->sock_fd = socket(PF_INET, SOCK_STREAM, 0);
     if (srv->sock_fd < 0)
@@ -19,10 +19,15 @@ static void bind_and_listen_on_socket(tcp_server_t *srv, long port)
     srv->self.sin_port = htons(port);
     srv->self.sin_addr.s_addr = htonl(INADDR_ANY);
     if (bind(srv->sock_fd, (struct sockaddr *) &srv->self,
-        sizeof(struct sockaddr)) < 0)
+        sizeof(struct sockaddr)) < 0){
         TEAMS_LOG("bind");
-    if (listen(srv->sock_fd, LISTEN_BACKLOG) < 0)
+        return false;
+    }
+    if (listen(srv->sock_fd, LISTEN_BACKLOG) < 0) {
         TEAMS_LOG("listen");
+        return false;
+    }
+    return true;
 }
 
 bool add_user_to_server(tcp_server_t *srv, char *username, char *password)
@@ -43,15 +48,16 @@ tcp_server_t *create_tcp_server(long port)
     if (!server)
         TEAMS_LOG("malloc");
     server->port = htons(port);
-    bind_and_listen_on_socket(server, port);
+    if (!bind_and_listen_on_socket(server, port)) {
+        free(server);
+        return (NULL);
+    }
     FD_ZERO(&server->read_fds);
     FD_ZERO(&server->write_fds);
     FD_SET(server->sock_fd, &server->read_fds);
     FD_SET(server->sock_fd, &server->write_fds);
     CIRCLEQ_INIT(&server->peers_head);
     CIRCLEQ_INIT(&server->users_head);
-    memset(server->sockets_to_be_removed, 0,
-        sizeof(server->sockets_to_be_removed));
     server->state = true;
     return (server);
 }
