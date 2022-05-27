@@ -25,6 +25,8 @@ int main(int ac, char **av)
         return 0;
     }
     server = create_new_server(atol(av[1]), "my_teams.bak");
+    if (!server)
+        return 84;
     server->state = true;
     server->run(server);
     return (0);
