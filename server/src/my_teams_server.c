@@ -27,7 +27,18 @@ void teams_server_run(teams_server_t *self)
 
 void teams_server_stop(teams_server_t *self)
 {
-    (void) self;
+    teams_client_t *client = NULL;
+    teams_client_t *tmp = NULL;
+
+    if (!self)
+        return;
+    CIRCLEQ_FOREACH(client, &self->clients, clients) {
+        tmp = client;
+        client = CIRCLEQ_NEXT(client, clients);
+        CIRCLEQ_REMOVE(&self->clients, tmp, clients);
+        free(tmp->network_client);
+        free(tmp);
+    }
 }
 
 static void init_teams_server_methods(teams_server_t *new_server)
