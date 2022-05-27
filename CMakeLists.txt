@@ -20,12 +20,12 @@ option(CODE_COVERAGE "Enable code coverage" OFF)
 if (CODE_COVERAGE)
     add_compile_options("--coverage" "-fprofile-arcs" "-ftest-coverage")
     add_link_options("--coverage" "-fprofile-arcs" "-ftest-coverage")
+    add_subdirectory(tests)
 endif()
 
 add_subdirectory(objects)
 add_subdirectory(client)
 add_subdirectory(server)
-add_subdirectory(tests)
 
 add_custom_target (re
     COMMAND make clean && make
