@@ -24,7 +24,8 @@ typedef struct teams_server_s {
     /// Runs the server, waits on new connection an process incoming messages
     void (*run)(struct teams_server_s *self);
 
-    /// Stop the server and create a backup file
+    /// Stop the server, create a backup file and
+    /// destroy all associated ressources
     void (*stop)(struct teams_server_s *self);
 
     /// Save the server status into the pathname given when instanciated
@@ -51,7 +52,10 @@ teams_server_t *create_new_server(long port, char *save_pathname);
 /// \copydoc server_run
 void teams_server_run(teams_server_t *self);
 
-/// \copydoc server_stop
+/// \brief Stop the server, create a backup file and
+/// destroy all associated ressources
+/// \todo create a backup file in a known format
+/// \todo destroy application side ressources
 void teams_server_stop(teams_server_t *self);
 
 /// \brief create a user and adds it to the list of clients
