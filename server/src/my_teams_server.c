@@ -14,16 +14,14 @@
 void teams_server_run(teams_server_t *self)
 {
     tcp_server_t *network_srv = self->network_server;
-    teams_client_t *tmp = NULL;
 
     server_fill_fd_sets(network_srv);
     while (self->state) {
         server_wait(network_srv);
         if (server_manage_fd_update(network_srv))
             self->add_user(self, fetch_last_added_peer(self->network_server));
-        CIRCLEQ_FOREACH(tmp, self, clients)
-            if (tmp->network_client->pending_read)
-                printf("%s", fetch_message(tmp->network_client));
+        server_fill_fd_sets(network_srv);
+        remove_disconnected_clients(self);
     }
 }
 
@@ -32,7 +30,7 @@ void teams_server_stop(teams_server_t *self)
     (void) self;
 }
 
-static void init_teams_server_methods(teams_client_t *srv)
+static void init_teams_server_methods(teams_server_t *new_server)
 {
     new_server->run = teams_server_run;
     new_server->stop = teams_server_stop;
@@ -53,6 +51,11 @@ teams_server_t *create_new_server(long port, char *save_pathname)
         return NULL;
     }
     new_server->network_server = create_tcp_server(port);
+    if (!new_server->network_server) {
+        free(new_server->save_pathname);
+        return NULL;
+    }
+    CIRCLEQ_INIT(&new_server->clients);
     init_teams_server_methods(new_server);
     return new_server;
 }
