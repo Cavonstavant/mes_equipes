@@ -12,9 +12,11 @@
 static bool bind_and_listen_on_socket(tcp_server_t *srv, long port)
 {
     srv->sock_fd = socket(PF_INET, SOCK_STREAM, 0);
-    if (srv->sock_fd < 0)
+    if (srv->sock_fd < 0){
         TEAMS_LOG("socket");
-    bzero(&srv->self, sizeof(srv->self));
+        return false;
+    }
+    memset(srv->self, 0, sizeof(srv->self));
     srv->self.sin_family = AF_INET;
     srv->self.sin_port = htons(port);
     srv->self.sin_addr.s_addr = htonl(INADDR_ANY);
