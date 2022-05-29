@@ -3,6 +3,8 @@ set (SRC_ROOT ${PROJECT_SOURCE_DIR}/client/client_net_utils)
 
 set (SRC
     ${SRC_ROOT}/client_utils.c
+    ${SRC_ROOT}/send_message.c
+    ${SRC_ROOT}/fetch_message.c
     ${INCLUDE_ROOT}/client_utils.h
 )
 
