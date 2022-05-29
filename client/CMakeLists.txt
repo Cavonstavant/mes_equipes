@@ -1,1 +1,2 @@
 add_subdirectory(src)
+add_subdirectory(client_net_utils)
