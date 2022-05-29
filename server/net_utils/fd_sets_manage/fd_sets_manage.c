@@ -16,6 +16,7 @@ void server_fill_fd_sets(tcp_server_t *srv)
 
     FD_ZERO(&srv->read_fds);
     FD_ZERO(&srv->write_fds);
+    FD_ZERO(&srv->err_fds);
     CIRCLEQ_FOREACH(tmp, &srv->peers_head, peers) {
         if (!tmp->pending_read)
             FD_SET(tmp->sock_fd, &srv->read_fds);
