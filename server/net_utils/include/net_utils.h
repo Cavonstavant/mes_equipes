@@ -29,13 +29,9 @@
     /// Defines the maximum size of a message
     #define MAX_MSG 55555
 
-    /// Defines the server status
-    #define STOPPED false
-    #define RUNNING true
-
 /// \brief Represents a client connection
 typedef struct peer_s {
-    /// A file descriptor for the socket
+    /// The file descriptor for the socket
     int sock_fd;
 
     /// The address of the client
@@ -50,7 +46,7 @@ typedef struct peer_s {
     /// true if the transaction as been started but not finished
     /// false if the transaction has been finished or not started
     /// defaulted to false
-    bool pending_read;
+    ssize_t pending_read;
 
     /// Represents the state of an outcoming message
     /// true if the transaction as been started but not finished
