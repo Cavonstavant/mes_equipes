@@ -41,6 +41,7 @@ void teams_server_stop(teams_server_t *self)
     }
 }
 
+/// \brief Just as the name says
 static void init_teams_server_methods(teams_server_t *new_server)
 {
     new_server->run = teams_server_run;
@@ -51,7 +52,6 @@ static void init_teams_server_methods(teams_server_t *new_server)
 teams_server_t *create_new_server(long port, char *save_pathname)
 {
     teams_server_t *new_server = malloc(sizeof(teams_server_t));
-    (void) save_pathname;
 
     if (!new_server) {
         TEAMS_LOG("malloc: Failed to create new tcp server");
