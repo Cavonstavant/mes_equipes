@@ -17,16 +17,6 @@ add_executable(${TARGET} ${SRC})
 
 add_library(${TARGET}_core ${SRC_CORE})
 
-# target_include_directories(${TARGET}_core
-#     PUBLIC ${INCLUDE_DIRS}
-#     PRIVATE ${SRC_ROOT}
-#     PRIVATE ${TARGET_NAME}_commands
-# )
-
-# target_link_directories(${TARGET}_core
-#     PRIVATE ${PROJECT_SOURCE_DIR}/server/net_utils
-# )
-
 target_include_directories(${TARGET}_core
     PUBLIC ${PROJECT_SOURCE_DIR}/libs
     PUBLIC ${INCLUDE_DIRS}

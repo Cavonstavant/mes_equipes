@@ -10,20 +10,6 @@
 #include "my_teams_server.h"
 #include "fd_set_manage.h"
 
-/*void teams_server_run(teams_server_t *self)
-{
-    tcp_server_t *network_srv = self->network_server;
-
-    server_fill_fd_sets(network_srv);
-    while (self->state) {
-        server_wait(network_srv);
-        if (server_manage_fd_update(network_srv))
-            self->add_user(self, fetch_last_added_peer(self->network_server));
-        server_fill_fd_sets(network_srv);
-        remove_disconnected_clients(self);
-    }
-}*/
-
 teams_server_t *create_new_server(long port)
 {
     teams_server_t *new_server = malloc(sizeof(teams_server_t));

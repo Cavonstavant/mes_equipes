@@ -29,7 +29,10 @@
 typedef struct user_list_s {
     /// Uuid of the user object
     my_uuid_t *user_uuid;
-    /// peer_t *user_peer;
+    /// Peer of the network client
+    peer_t *user_peer;
+    /// State of the client
+    bool is_auth;
 } user_list_t;
 
 ///
@@ -75,5 +78,14 @@ void destroy_server_data(server_data_t *server_data);
 /// \param server_data The server data info
 ///
 void server_loop(server_data_t *server_data);
+
+///
+/// \brief Add a new user to the server data
+///
+/// \param server_data Server data info
+/// \return true When operation success
+/// \return false When operation failed
+///
+bool server_add_user(server_data_t *server_data);
 
 #endif /* !SERVER_H_ */
