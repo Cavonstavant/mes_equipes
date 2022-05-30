@@ -88,4 +88,11 @@ void server_loop(server_data_t *server_data);
 ///
 bool server_add_user(server_data_t *server_data);
 
+///
+/// \brief Cross all the peer_t list and get pending read
+///
+/// \param server_data Server data
+///
+void process_command_inspection(server_data_t *server_data);
+
 #endif /* !SERVER_H_ */
