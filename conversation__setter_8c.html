@@ -122,6 +122,9 @@ Functions</h2></td></tr>
 <tr class="memitem:acec8f3cdb6078f3df49c54a247a02b24"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conversation__setter_8c.html#acec8f3cdb6078f3df49c54a247a02b24">conversation_add_message</a> (<a class="el" href="object__conversation_8h.html#a1e1d9af360fc54df2c33d9e2ee7bb3da">conversation_t</a> *conversation, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *message)</td></tr>
 <tr class="memdesc:acec8f3cdb6078f3df49c54a247a02b24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a message in the messages list of a conversation object.  <a href="conversation__setter_8c.html#acec8f3cdb6078f3df49c54a247a02b24">More...</a><br /></td></tr>
 <tr class="separator:acec8f3cdb6078f3df49c54a247a02b24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aace695b2d86a13e278f882e3c8cfcdff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="conversation__setter_8c.html#aace695b2d86a13e278f882e3c8cfcdff">conversation_have_user</a> (<a class="el" href="object__conversation_8h.html#a1e1d9af360fc54df2c33d9e2ee7bb3da">conversation_t</a> *conv, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *user)</td></tr>
+<tr class="memdesc:aace695b2d86a13e278f882e3c8cfcdff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cross all the participant list and see if a user is inside.  <a href="conversation__setter_8c.html#aace695b2d86a13e278f882e3c8cfcdff">More...</a><br /></td></tr>
+<tr class="separator:aace695b2d86a13e278f882e3c8cfcdff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="acec8f3cdb6078f3df49c54a247a02b24"></a>
@@ -238,6 +241,46 @@ false When operation failed </dd></dl>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="aace695b2d86a13e278f882e3c8cfcdff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aace695b2d86a13e278f882e3c8cfcdff">&#9670;&nbsp;</a></span>conversation_have_user()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool conversation_have_user </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__conversation_8h.html#a1e1d9af360fc54df2c33d9e2ee7bb3da">conversation_t</a> *&#160;</td>
+          <td class="paramname"><em>conv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>user</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cross all the participant list and see if a user is inside. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conv</td><td>Conversation object </td></tr>
+    <tr><td class="paramname">user</td><td>Uuid of the user to search </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the user is find </dd>
+<dd>
+false if the user is not find </dd></dl>
 
 </div>
 </div>

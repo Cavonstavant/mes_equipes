@@ -2,6 +2,7 @@ var annotated_dup =
 [
     [ "channel_creation_s", "structchannel__creation__s.html", "structchannel__creation__s" ],
     [ "channel_s", "structchannel__s.html", "structchannel__s" ],
+    [ "child_list_s", "structchild__list__s.html", "structchild__list__s" ],
     [ "cli_command_s", "structcli__command__s.html", "structcli__command__s" ],
     [ "comment_creation_s", "structcomment__creation__s.html", "structcomment__creation__s" ],
     [ "comment_s", "structcomment__s.html", "structcomment__s" ],

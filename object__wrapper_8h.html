@@ -133,15 +133,19 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="object__wrapper_8h__dep__incl.png" border="0" usemap="#objects_2wrapper_2include_2object__wrapper_8hdep" alt=""/></div>
 <map name="objects_2wrapper_2include_2object__wrapper_8hdep" id="objects_2wrapper_2include_2object__wrapper_8hdep">
-<area shape="rect" title=" " alt="" coords="596,5,773,47"/>
+<area shape="rect" title=" " alt="" coords="923,5,1100,47"/>
 <area shape="rect" href="lower__component__adding_8h.html" title=" " alt="" coords="102,95,307,136"/>
 <area shape="rect" href="wrapper__interaction_8c.html" title=" " alt="" coords="233,184,400,225"/>
 <area shape="rect" href="wrapper__modification_8c.html" title=" " alt="" coords="425,184,603,225"/>
 <area shape="rect" href="upper__component__adding_8h.html" title=" " alt="" coords="383,95,589,136"/>
 <area shape="rect" href="component__dump_8c.html" title=" " alt="" coords="665,95,819,136"/>
-<area shape="rect" href="lower__component__get_8c.html" title=" " alt="" coords="843,95,1025,136"/>
-<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="1049,95,1198,136"/>
-<area shape="rect" href="upper__component__get_8c.html" title=" " alt="" coords="1223,95,1405,136"/>
+<area shape="rect" href="find__by__name_8c.html" title=" " alt="" coords="843,95,993,136"/>
+<area shape="rect" href="get__associated__team_8c.html" title=" " alt="" coords="1017,95,1193,136"/>
+<area shape="rect" href="get__child__list_8c.html" title=" " alt="" coords="1217,95,1366,136"/>
+<area shape="rect" href="lower__component__get_8c.html" title=" " alt="" coords="1390,95,1571,136"/>
+<area shape="rect" href="object__wrapper_8c.html" title=" " alt="" coords="1595,95,1745,136"/>
+<area shape="rect" href="upper__component__get_8c.html" title=" " alt="" coords="1769,95,1952,136"/>
+<area shape="rect" href="user__and__team__relation_8c.html" title=" " alt="" coords="1977,95,2171,136"/>
 <area shape="rect" href="lower__component__adding_8c.html" title=" " alt="" coords="5,184,209,225"/>
 <area shape="rect" href="upper__component__adding_8c.html" title=" " alt="" coords="627,184,833,225"/>
 </map>
@@ -153,6 +157,9 @@ This graph shows which files directly or indirectly include this file:</div>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structobject__wrapper__s.html">object_wrapper_s</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper object, containing all Objects instance.  <a href="structobject__wrapper__s.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structchild__list__s.html">child_list_s</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Child list object containing all informations about a child list.  <a href="structchild__list__s.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -175,6 +182,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a0225214bd36d91c9dd77932140cd48f1"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structobject__wrapper__s.html">object_wrapper_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a></td></tr>
 <tr class="memdesc:a0225214bd36d91c9dd77932140cd48f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper object, containing all Objects instance.  <a href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">More...</a><br /></td></tr>
 <tr class="separator:a0225214bd36d91c9dd77932140cd48f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d2c21d98832c4172c87ae394a2ea23a"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structchild__list__s.html">child_list_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#a6d2c21d98832c4172c87ae394a2ea23a">child_list_t</a></td></tr>
+<tr class="memdesc:a6d2c21d98832c4172c87ae394a2ea23a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Child list object containing all informations about a child list.  <a href="object__wrapper_8h.html#a6d2c21d98832c4172c87ae394a2ea23a">More...</a><br /></td></tr>
+<tr class="separator:a6d2c21d98832c4172c87ae394a2ea23a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -232,6 +242,45 @@ Functions</h2></td></tr>
 <tr class="memitem:a3429224808d12a1195d0235bc8f8b762"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#a3429224808d12a1195d0235bc8f8b762">wrapper_user_leave_team</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *user_uuid, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *team_uuid)</td></tr>
 <tr class="memdesc:a3429224808d12a1195d0235bc8f8b762"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a user from a team.  <a href="object__wrapper_8h.html#a3429224808d12a1195d0235bc8f8b762">More...</a><br /></td></tr>
 <tr class="separator:a3429224808d12a1195d0235bc8f8b762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78cea58ff1a8babccf52f3ed75c4b8f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#a78cea58ff1a8babccf52f3ed75c4b8f3">find_channel_by_name</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper, char *name)</td></tr>
+<tr class="memdesc:a78cea58ff1a8babccf52f3ed75c4b8f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a matching channel by his name inside the wrapper list.  <a href="object__wrapper_8h.html#a78cea58ff1a8babccf52f3ed75c4b8f3">More...</a><br /></td></tr>
+<tr class="separator:a78cea58ff1a8babccf52f3ed75c4b8f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e584dca5a8ff7d518936e00d67a0157"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#a7e584dca5a8ff7d518936e00d67a0157">find_team_by_name</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper, char *name)</td></tr>
+<tr class="memdesc:a7e584dca5a8ff7d518936e00d67a0157"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a matching team by his name inside the wrapper list.  <a href="object__wrapper_8h.html#a7e584dca5a8ff7d518936e00d67a0157">More...</a><br /></td></tr>
+<tr class="separator:a7e584dca5a8ff7d518936e00d67a0157"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e8afbb18faffefb51a1358c0c46ba2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#a2e8afbb18faffefb51a1358c0c46ba2b">find_thread_by_name</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper, char *name)</td></tr>
+<tr class="memdesc:a2e8afbb18faffefb51a1358c0c46ba2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a matching thread by his name inside the wrapper list.  <a href="object__wrapper_8h.html#a2e8afbb18faffefb51a1358c0c46ba2b">More...</a><br /></td></tr>
+<tr class="separator:a2e8afbb18faffefb51a1358c0c46ba2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cbb1e420e21486fb8778ef21b888aa6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#a6cbb1e420e21486fb8778ef21b888aa6">find_user_by_name</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper, char *name)</td></tr>
+<tr class="memdesc:a6cbb1e420e21486fb8778ef21b888aa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a matching user by his name inside the wrapper list.  <a href="object__wrapper_8h.html#a6cbb1e420e21486fb8778ef21b888aa6">More...</a><br /></td></tr>
+<tr class="separator:a6cbb1e420e21486fb8778ef21b888aa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a7a2118447a02a48be78784e2de558b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__wrapper_8h.html#a6d2c21d98832c4172c87ae394a2ea23a">child_list_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#a1a7a2118447a02a48be78784e2de558b">get_channel_child_list</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *channel_uuid)</td></tr>
+<tr class="memdesc:a1a7a2118447a02a48be78784e2de558b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the channel child list.  <a href="object__wrapper_8h.html#a1a7a2118447a02a48be78784e2de558b">More...</a><br /></td></tr>
+<tr class="separator:a1a7a2118447a02a48be78784e2de558b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34e65d0c6810bd1f5bd1537e32d18550"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__wrapper_8h.html#a6d2c21d98832c4172c87ae394a2ea23a">child_list_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#a34e65d0c6810bd1f5bd1537e32d18550">get_conversation_child_list</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *conversation_uuid)</td></tr>
+<tr class="memdesc:a34e65d0c6810bd1f5bd1537e32d18550"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the conversation child list.  <a href="object__wrapper_8h.html#a34e65d0c6810bd1f5bd1537e32d18550">More...</a><br /></td></tr>
+<tr class="separator:a34e65d0c6810bd1f5bd1537e32d18550"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac18f0fe12968aceb5b4be6e0a609c5f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__wrapper_8h.html#a6d2c21d98832c4172c87ae394a2ea23a">child_list_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#ac18f0fe12968aceb5b4be6e0a609c5f4">get_team_child_list</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *team_uuid)</td></tr>
+<tr class="memdesc:ac18f0fe12968aceb5b4be6e0a609c5f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the team child list.  <a href="object__wrapper_8h.html#ac18f0fe12968aceb5b4be6e0a609c5f4">More...</a><br /></td></tr>
+<tr class="separator:ac18f0fe12968aceb5b4be6e0a609c5f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae87a2f6715be794359fe3cbb997079e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__wrapper_8h.html#a6d2c21d98832c4172c87ae394a2ea23a">child_list_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#ae87a2f6715be794359fe3cbb997079e9">get_thread_child_list</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *thread_uuid)</td></tr>
+<tr class="memdesc:ae87a2f6715be794359fe3cbb997079e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the thread child list.  <a href="object__wrapper_8h.html#ae87a2f6715be794359fe3cbb997079e9">More...</a><br /></td></tr>
+<tr class="separator:ae87a2f6715be794359fe3cbb997079e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab37468305a98bfcc5fe7efb8c8c1d78d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__wrapper_8h.html#a6d2c21d98832c4172c87ae394a2ea23a">child_list_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#ab37468305a98bfcc5fe7efb8c8c1d78d">get_subscribed_team_of_user</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *user_uuid)</td></tr>
+<tr class="memdesc:ab37468305a98bfcc5fe7efb8c8c1d78d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the subscribed team of user object.  <a href="object__wrapper_8h.html#ab37468305a98bfcc5fe7efb8c8c1d78d">More...</a><br /></td></tr>
+<tr class="separator:ab37468305a98bfcc5fe7efb8c8c1d78d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aaa594e8a4ccf63e4b275218aebf84d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__wrapper_8h.html#a6d2c21d98832c4172c87ae394a2ea23a">child_list_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#a8aaa594e8a4ccf63e4b275218aebf84d">get_subscribed_user_of_team</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *team_uuid)</td></tr>
+<tr class="memdesc:a8aaa594e8a4ccf63e4b275218aebf84d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the subscribed user of team object.  <a href="object__wrapper_8h.html#a8aaa594e8a4ccf63e4b275218aebf84d">More...</a><br /></td></tr>
+<tr class="separator:a8aaa594e8a4ccf63e4b275218aebf84d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a216fbe339d3adf563d8c62f4f5595c7f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#a216fbe339d3adf563d8c62f4f5595c7f">user_is_sub_to_team</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *user_uuid, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *team_uuid)</td></tr>
+<tr class="memdesc:a216fbe339d3adf563d8c62f4f5595c7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tell if a user is sub to a team.  <a href="object__wrapper_8h.html#a216fbe339d3adf563d8c62f4f5595c7f">More...</a><br /></td></tr>
+<tr class="separator:a216fbe339d3adf563d8c62f4f5595c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b3924d2737fa057288b5274480971b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#a7b3924d2737fa057288b5274480971b6">get_associated_team_channel</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *channel_uuid)</td></tr>
+<tr class="memdesc:a7b3924d2737fa057288b5274480971b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the associated team of a channel.  <a href="object__wrapper_8h.html#a7b3924d2737fa057288b5274480971b6">More...</a><br /></td></tr>
+<tr class="separator:a7b3924d2737fa057288b5274480971b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab234454068645fd9e456633c0a67cf59"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__wrapper_8h.html#ab234454068645fd9e456633c0a67cf59">get_associated_team_thread</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *thread_uuid)</td></tr>
+<tr class="memdesc:ab234454068645fd9e456633c0a67cf59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the associated team thread object.  <a href="object__wrapper_8h.html#ab234454068645fd9e456633c0a67cf59">More...</a><br /></td></tr>
+<tr class="separator:ab234454068645fd9e456633c0a67cf59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a782c7747c8361138c526fa34d6e5ef1e"></a>
@@ -299,6 +348,22 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Typedef Documentation</h2>
+<a id="a6d2c21d98832c4172c87ae394a2ea23a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d2c21d98832c4172c87ae394a2ea23a">&#9670;&nbsp;</a></span>child_list_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structchild__list__s.html">child_list_s</a> <a class="el" href="object__wrapper_8h.html#a6d2c21d98832c4172c87ae394a2ea23a">child_list_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Child list object containing all informations about a child list. </p>
+
+</div>
+</div>
 <a id="a0225214bd36d91c9dd77932140cd48f1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0225214bd36d91c9dd77932140cd48f1">&#9670;&nbsp;</a></span>object_wrapper_t</h2>
 
@@ -316,6 +381,509 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a78cea58ff1a8babccf52f3ed75c4b8f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78cea58ff1a8babccf52f3ed75c4b8f3">&#9670;&nbsp;</a></span>find_channel_by_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a>* find_channel_by_name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *&#160;</td>
+          <td class="paramname"><em>wrapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Find a matching channel by his name inside the wrapper list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapper</td><td>Wrapper object </td></tr>
+    <tr><td class="paramname">name</td><td>Name to match </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>my_uuid_t* Uuid of the founded object, NULL otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a7e584dca5a8ff7d518936e00d67a0157"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e584dca5a8ff7d518936e00d67a0157">&#9670;&nbsp;</a></span>find_team_by_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a>* find_team_by_name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *&#160;</td>
+          <td class="paramname"><em>wrapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Find a matching team by his name inside the wrapper list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapper</td><td>Wrapper object </td></tr>
+    <tr><td class="paramname">name</td><td>Name to match </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>my_uuid_t* Uuid of the founded object, NULL otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a2e8afbb18faffefb51a1358c0c46ba2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e8afbb18faffefb51a1358c0c46ba2b">&#9670;&nbsp;</a></span>find_thread_by_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a>* find_thread_by_name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *&#160;</td>
+          <td class="paramname"><em>wrapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Find a matching thread by his name inside the wrapper list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapper</td><td>Wrapper object </td></tr>
+    <tr><td class="paramname">name</td><td>Name to match </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>my_uuid_t* Uuid of the founded object, NULL otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a6cbb1e420e21486fb8778ef21b888aa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cbb1e420e21486fb8778ef21b888aa6">&#9670;&nbsp;</a></span>find_user_by_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a>* find_user_by_name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *&#160;</td>
+          <td class="paramname"><em>wrapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Find a matching user by his name inside the wrapper list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapper</td><td>Wrapper object </td></tr>
+    <tr><td class="paramname">name</td><td>Name to match </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>my_uuid_t* Uuid of the founded object, NULL otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a7b3924d2737fa057288b5274480971b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b3924d2737fa057288b5274480971b6">&#9670;&nbsp;</a></span>get_associated_team_channel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a>* get_associated_team_channel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *&#160;</td>
+          <td class="paramname"><em>wrapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>channel_uuid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the associated team of a channel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapper</td><td>Wrapper object </td></tr>
+    <tr><td class="paramname">channel_uuid</td><td>Uuid of the channel </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>my_uuid_t* Uuid of the team, NULL otherwise </dd></dl>
+
+</div>
+</div>
+<a id="ab234454068645fd9e456633c0a67cf59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab234454068645fd9e456633c0a67cf59">&#9670;&nbsp;</a></span>get_associated_team_thread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a>* get_associated_team_thread </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *&#160;</td>
+          <td class="paramname"><em>wrapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>thread_uuid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the associated team thread object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapper</td><td>Wrapper object </td></tr>
+    <tr><td class="paramname">thread_uuid</td><td>Uuid of the thread </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>my_uuid_t* Uuid of the team, NULL otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a1a7a2118447a02a48be78784e2de558b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a7a2118447a02a48be78784e2de558b">&#9670;&nbsp;</a></span>get_channel_child_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__wrapper_8h.html#a6d2c21d98832c4172c87ae394a2ea23a">child_list_t</a> get_channel_child_list </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *&#160;</td>
+          <td class="paramname"><em>wrapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>channel_uuid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the channel child list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapper</td><td>Wrapper object </td></tr>
+    <tr><td class="paramname">channel_uuid</td><td>Uuid of the channel </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>child_list_t Child_list object </dd></dl>
+
+</div>
+</div>
+<a id="a34e65d0c6810bd1f5bd1537e32d18550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34e65d0c6810bd1f5bd1537e32d18550">&#9670;&nbsp;</a></span>get_conversation_child_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__wrapper_8h.html#a6d2c21d98832c4172c87ae394a2ea23a">child_list_t</a> get_conversation_child_list </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *&#160;</td>
+          <td class="paramname"><em>wrapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>conversation_uuid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the conversation child list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapper</td><td>Wrapper object </td></tr>
+    <tr><td class="paramname">conversation_uuid</td><td>Uuid of the conversation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>child_list_t Child_list object </dd></dl>
+
+</div>
+</div>
+<a id="ab37468305a98bfcc5fe7efb8c8c1d78d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab37468305a98bfcc5fe7efb8c8c1d78d">&#9670;&nbsp;</a></span>get_subscribed_team_of_user()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__wrapper_8h.html#a6d2c21d98832c4172c87ae394a2ea23a">child_list_t</a> get_subscribed_team_of_user </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *&#160;</td>
+          <td class="paramname"><em>wrapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>user_uuid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the subscribed team of user object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapper</td><td>Wrapper object </td></tr>
+    <tr><td class="paramname">user_uuid</td><td>Uuid of the user </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>child_list_t List of the uuid team and his size </dd></dl>
+
+</div>
+</div>
+<a id="a8aaa594e8a4ccf63e4b275218aebf84d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8aaa594e8a4ccf63e4b275218aebf84d">&#9670;&nbsp;</a></span>get_subscribed_user_of_team()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__wrapper_8h.html#a6d2c21d98832c4172c87ae394a2ea23a">child_list_t</a> get_subscribed_user_of_team </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *&#160;</td>
+          <td class="paramname"><em>wrapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>team_uuid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the subscribed user of team object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapper</td><td>Wrapper object </td></tr>
+    <tr><td class="paramname">user_uuid</td><td>Uuid of the team </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>child_list_t List of the uuid team and his size </dd></dl>
+
+</div>
+</div>
+<a id="ac18f0fe12968aceb5b4be6e0a609c5f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac18f0fe12968aceb5b4be6e0a609c5f4">&#9670;&nbsp;</a></span>get_team_child_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__wrapper_8h.html#a6d2c21d98832c4172c87ae394a2ea23a">child_list_t</a> get_team_child_list </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *&#160;</td>
+          <td class="paramname"><em>wrapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>team_uuid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the team child list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapper</td><td>Wrapper object </td></tr>
+    <tr><td class="paramname">team_uuid</td><td>Uuid of the team </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>child_list_t Child_list object </dd></dl>
+
+</div>
+</div>
+<a id="ae87a2f6715be794359fe3cbb997079e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae87a2f6715be794359fe3cbb997079e9">&#9670;&nbsp;</a></span>get_thread_child_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__wrapper_8h.html#a6d2c21d98832c4172c87ae394a2ea23a">child_list_t</a> get_thread_child_list </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *&#160;</td>
+          <td class="paramname"><em>wrapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>thread_uuid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the thread child list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapper</td><td>Wrapper object </td></tr>
+    <tr><td class="paramname">thread_uuid</td><td>Uuid of the thread </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>child_list_t Child_list object </dd></dl>
+
+</div>
+</div>
+<a id="a216fbe339d3adf563d8c62f4f5595c7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a216fbe339d3adf563d8c62f4f5595c7f">&#9670;&nbsp;</a></span>user_is_sub_to_team()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool user_is_sub_to_team </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *&#160;</td>
+          <td class="paramname"><em>wrapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>user_uuid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>team_uuid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tell if a user is sub to a team. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapper</td><td>Wrapper object </td></tr>
+    <tr><td class="paramname">user_uuid</td><td>Uuid of the user </td></tr>
+    <tr><td class="paramname">team_uuid</td><td>Uuid of the team </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true If the user is sub </dd>
+<dd>
+false If the user is not sub </dd></dl>
+
+</div>
+</div>
 <a id="a8902841cdb34440c8a0ed33d73de8617"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8902841cdb34440c8a0ed33d73de8617">&#9670;&nbsp;</a></span>wrapper_destroy()</h2>
 

@@ -1,0 +1,5 @@
+<map id="child_list_s" name="child_list_s">
+<area shape="rect" id="node1" title="Child list object containing all informations about a child list." alt="" coords="5,184,100,211"/>
+<area shape="rect" id="node2" href="$structmy__uuid__s.html" title="Uuid object equivalent of a string To Refacto with issue #25." alt="" coords="7,95,99,121"/>
+<area shape="rect" id="node3" href="$structw__uuid__s.html" title="wrapper struct around uuid_t" alt="" coords="11,5,94,32"/>
+</map>

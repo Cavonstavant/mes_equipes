@@ -12,5 +12,6 @@ var object__conversation_8h =
     [ "conversation_destroy", "object__conversation_8h.html#aef7ac78c7225ee9ab5945921ba7ebbb0", null ],
     [ "conversation_dump", "object__conversation_8h.html#aca5cd4217c29d14531777870aa19de50", null ],
     [ "conversation_edit_uuid", "object__conversation_8h.html#ab184b072eec3e6cd8433bd1a61512942", null ],
+    [ "conversation_have_user", "object__conversation_8h.html#aace695b2d86a13e278f882e3c8cfcdff", null ],
     [ "conversation_init", "object__conversation_8h.html#a9aad900137fef45f6d4101e9ace2b3aa", null ]
 ];
