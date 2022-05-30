@@ -99,7 +99,6 @@ typedef struct tcp_server_s {
 
 } tcp_server_t;
 
-
 /// \brief DO NOT USE THIS FUNCTION, USE THE `TEAMS_LOG` MACRO INSTEAD
 static inline void __log_error(int line,
     const char *file,
