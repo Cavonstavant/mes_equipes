@@ -353,4 +353,14 @@ my_uuid_t *team_uuid);
 child_list_t get_thread_child_list(object_wrapper_t *wrapper,
 my_uuid_t *thread_uuid);
 
+///
+/// \brief Get the subscribed team of user object
+///
+/// \param wrapper Wrapper object
+/// \param user_uuid Uuid of the user
+/// \return child_list_t List of the uuid team and his size
+///
+child_list_t get_subscribed_team_of_user(object_wrapper_t *wrapper,
+my_uuid_t *user_uuid);
+
 #endif /* !OBJECT_WRAPPER_H_ */

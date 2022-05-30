@@ -80,6 +80,7 @@ set (SRC
     ${SRC_WRAPPER}/wrapper_modification.c
     ${SRC_WRAPPER}/find_by_name.c
     ${SRC_WRAPPER}/get_child_list.c
+    ${SRC_WRAPPER}/user_and_team_relation.c
 )
 
 add_library(${TARGET} ${SRC})
