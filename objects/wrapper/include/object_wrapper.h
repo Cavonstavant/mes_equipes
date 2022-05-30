@@ -333,4 +333,14 @@ my_uuid_t *channel_uuid);
 child_list_t get_conversation_child_list(object_wrapper_t *wrapper,
 my_uuid_t *conversation_uuid);
 
+///
+/// \brief Get the team child list
+///
+/// \param wrapper Wrapper object
+/// \param team_uuid Uuid of the team
+/// \return child_list_t Child_list object
+///
+child_list_t get_team_child_list(object_wrapper_t *wrapper,
+my_uuid_t *team_uuid);
+
 #endif /* !OBJECT_WRAPPER_H_ */

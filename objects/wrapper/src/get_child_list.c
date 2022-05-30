@@ -41,3 +41,19 @@ my_uuid_t *conversation_uuid)
     res.size = conversation->message_n;
     return res;
 }
+
+child_list_t get_team_child_list(object_wrapper_t *wrapper,
+my_uuid_t *team_uuid)
+{
+    team_t *team = wrapper_find_team(wrapper, team_uuid);
+    child_list_t res;
+
+    if (team == OBJECT_NOT_FOUND)
+        return (child_list_t) {
+            OBJECT_NOT_FOUND,
+            -1
+        };
+    res.list = team->channels;
+    res.size = team->channel_n;
+    return res;
+}
