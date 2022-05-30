@@ -343,4 +343,14 @@ my_uuid_t *conversation_uuid);
 child_list_t get_team_child_list(object_wrapper_t *wrapper,
 my_uuid_t *team_uuid);
 
+///
+/// \brief Get the thread child list
+///
+/// \param wrapper Wrapper object
+/// \param thread_uuid Uuid of the thread
+/// \return child_list_t Child_list object
+///
+child_list_t get_thread_child_list(object_wrapper_t *wrapper,
+my_uuid_t *thread_uuid);
+
 #endif /* !OBJECT_WRAPPER_H_ */

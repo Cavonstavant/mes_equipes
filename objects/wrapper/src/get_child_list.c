@@ -57,3 +57,19 @@ my_uuid_t *team_uuid)
     res.size = team->channel_n;
     return res;
 }
+
+child_list_t get_thread_child_list(object_wrapper_t *wrapper,
+my_uuid_t *thread_uuid)
+{
+    thread_t *thread = wrapper_find_thread(wrapper, thread_uuid);
+    child_list_t res;
+
+    if (thread == OBJECT_NOT_FOUND)
+        return (child_list_t) {
+            OBJECT_NOT_FOUND,
+            -1
+        };
+    res.list = thread->comments;
+    res.size = thread->comment_n;
+    return res;
+}
