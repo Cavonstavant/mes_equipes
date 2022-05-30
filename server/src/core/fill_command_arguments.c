@@ -5,6 +5,8 @@
 ** fill_command_arguments
 */
 
+/// \file server/src/core/fill_command_arguments.c
+
 #include "cli_commands.h"
 #include <stdlib.h>
 #include <string.h>

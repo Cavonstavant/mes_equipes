@@ -5,7 +5,7 @@
 ** call_command
 */
 
-/// \file server/applicatif/call_command.c
+/// \file server/src/core/call_command.c
 
 #include "cli_commands.h"
 

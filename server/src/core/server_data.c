@@ -5,7 +5,7 @@
 ** server_data
 */
 
-/// \file server/src/server_data.c
+/// \file server/src/core/server_data.c
 
 #include "server.h"
 #include <stdlib.h>

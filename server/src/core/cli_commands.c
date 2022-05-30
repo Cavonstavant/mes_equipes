@@ -5,7 +5,7 @@
 ** cli_commands
 */
 
-/// \file server/applicatif/cli_commands.c
+/// \file server/src/core/cli_commands.c
 
 #include "cli_commands.h"
 #include <stddef.h>

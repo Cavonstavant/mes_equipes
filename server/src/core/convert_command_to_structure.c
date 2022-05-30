@@ -5,6 +5,8 @@
 ** convert_command_to_structure
 */
 
+/// \file server/src/core/convert_command_to_structure.c
+
 #include "cli_commands.h"
 #include <stdlib.h>
 #include <string.h>

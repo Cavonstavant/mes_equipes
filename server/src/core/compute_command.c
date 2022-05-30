@@ -5,7 +5,7 @@
 ** compute_command
 */
 
-/// \file server/src/parser/compute_command.c
+/// \file server/src/core/compute_command.c
 
 #include <stdlib.h>
 #include "cli_commands.h"

@@ -5,7 +5,7 @@
 ** my_teams_server
 */
 
-/// \file server/src/my_teams_server.c
+/// \file server/src/core/my_teams_server.c
 
 #include "my_teams_server.h"
 #include "fd_set_manage.h"
