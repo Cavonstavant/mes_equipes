@@ -19,7 +19,7 @@ target_link_directories(${TARGET}
     PUBLIC ${PROJECT_SOURCE_DIR}/libs
 )
 
-target_link_libraries(${TARGET} 
+target_link_libraries(${TARGET}
     PUBLIC myteams
 )
 

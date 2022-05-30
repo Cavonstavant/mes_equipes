@@ -5,6 +5,8 @@
 ** client_wrapper
 */
 
+/// \file server/src/client_wrapper.c
+
 #include "client_wrapper.h"
 #include "my_teams_server.h"
 

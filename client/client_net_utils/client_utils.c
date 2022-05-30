@@ -5,6 +5,8 @@
 ** client_utils
 */
 
+/// \file client/client_net_utils/client_utils.h
+
 #include "client_utils.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -40,5 +42,8 @@ client_net_server_t *create_net_server(const char *ip, long port)
         return NULL;
     }
     bind_socket(new_server, port);
+    FD_ZERO(new_server->read_fds);
+    FD_ZERO(new_server->write_fds);
+    FD_ZERO(new_server->err_fds);
     return new_server;
 }

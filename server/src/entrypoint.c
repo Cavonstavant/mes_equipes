@@ -5,6 +5,8 @@
 ** entrypoint
 */
 
+/// \file server/src/entrypoint.c
+
 #include <stdio.h>
 #include <string.h>
 #include "my_teams_server.h"
