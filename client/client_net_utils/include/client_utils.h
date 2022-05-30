@@ -5,7 +5,7 @@
 ** include_utils
 */
 
-/// \file client/client_net_utils/include
+/// \file client/client_net_utils/include/client_utils.h
 
 #ifndef INCLUDE_UTILS_H
     #define INCLUDE_UTILS_H
@@ -73,6 +73,8 @@ strrchr(__FILE__, '/') + 1, __func__, msg);} while (0)
 /// \brief Create a new mes_équipes TM. server object to connect to
 /// \param ip The dotted, null terminated string repr. of the server ip
 /// \param port The port to connect the mes_équipes client to
+/// \return A pointer to the mes_équipes TM. server object or
+/// NULL if the instanciation as failed
 client_net_server_t *create_net_server(const char *ip, long port);
 
 /// \brief Send a message to the mes_équipes server conforming to RFC

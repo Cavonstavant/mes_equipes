@@ -9,7 +9,7 @@
 
 #include "net_utils.h"
 
-/// \brief just as the function name says
+/// \brief bind the socket to the port
 static bool bind_and_listen_on_socket(tcp_server_t *srv, long port)
 {
     srv->sock_fd = socket(PF_INET, SOCK_STREAM, 0);

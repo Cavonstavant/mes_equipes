@@ -5,7 +5,7 @@
 ** my_teams_server
 */
 
-/// \file server/src/include
+/// \file server/src/include/my_teams_server.h
 
 #ifndef MY_TEAMS_SERVER_H
     #define MY_TEAMS_SERVER_H
