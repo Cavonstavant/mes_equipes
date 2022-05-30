@@ -373,4 +373,16 @@ my_uuid_t *user_uuid);
 child_list_t get_subscribed_user_of_team(object_wrapper_t *wrapper,
 my_uuid_t *team_uuid);
 
+///
+/// \brief Tell if a user is sub to a team
+///
+/// \param wrapper Wrapper object
+/// \param user_uuid Uuid of the user
+/// \param team_uuid Uuid of the team
+/// \return true If the user is sub
+/// \return false If the user is not sub
+///
+bool user_is_sub_to_team(object_wrapper_t *wrapper,
+my_uuid_t *user_uuid, my_uuid_t *team_uuid);
+
 #endif /* !OBJECT_WRAPPER_H_ */

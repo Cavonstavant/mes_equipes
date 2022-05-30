@@ -40,3 +40,17 @@ my_uuid_t *team_uuid)
         team->user_n
     };
 }
+
+bool user_is_sub_to_team(object_wrapper_t *wrapper,
+my_uuid_t *user_uuid, my_uuid_t *team_uuid)
+{
+    team_t *team = wrapper_find_team(wrapper, team_uuid);
+    user_t *user = wrapper_find_user(wrapper, user_uuid);
+
+    if (team == OBJECT_NOT_FOUND || user == OBJECT_NOT_FOUND)
+        return false;
+    for (int i = 0; i < team->user_n; i++)
+        if (my_uuid_cmp(team->users[i], user->uuid))
+            return true;
+    return false;
+}
