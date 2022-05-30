@@ -75,6 +75,16 @@ typedef struct object_wrapper_s {
 } object_wrapper_t;
 
 ///
+/// \brief Child list object containing all informations about a child list
+///
+typedef struct child_list_s {
+    /// List of uuid_t
+    my_uuid_t **list;
+    /// Size of the list 
+    int size;
+} child_list_t;
+
+///
 /// \brief Create a new wrapper object
 /// Init all the object lists
 ///
@@ -302,5 +312,15 @@ my_uuid_t *find_thread_by_name(object_wrapper_t *wrapper, char *name);
 /// \return my_uuid_t* Uuid of the founded object, NULL otherwise
 ///
 my_uuid_t *find_user_by_name(object_wrapper_t *wrapper, char *name);
+
+///
+/// \brief Get the channel child list
+///
+/// \param wrapper Wrapper object
+/// \param channel_uuid Uuid of the channel
+/// \return child_list_t Child_list object
+///
+child_list_t get_channel_child_list(object_wrapper_t *wrapper,
+my_uuid_t *channel_uuid);
 
 #endif /* !OBJECT_WRAPPER_H_ */
