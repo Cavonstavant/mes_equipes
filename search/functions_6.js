@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['help_5fcommand_631',['help_command',['../cli__commands_8h.html#a30172ea84ad31c60ddeef8a1a2ec3020',1,'cli_commands.h']]]
+  ['init_5fserver_5fdata_642',['init_server_data',['../server_8h.html#a8ddd1a38aa9f92503f2abe27c7d8e2c0',1,'init_server_data(long port):&#160;server_data.c'],['../server__data_8c.html#a8ddd1a38aa9f92503f2abe27c7d8e2c0',1,'init_server_data(long port):&#160;server_data.c']]]
 ];

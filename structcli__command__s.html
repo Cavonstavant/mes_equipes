@@ -104,9 +104,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a129498503329d8916faec5648d5ce144"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcli__command__s.html#a129498503329d8916faec5648d5ce144">arguments</a></td></tr>
 <tr class="memdesc:a129498503329d8916faec5648d5ce144"><td class="mdescLeft">&#160;</td><td class="mdescRight">char ** Arguments for the command.  <a href="structcli__command__s.html#a129498503329d8916faec5648d5ce144">More...</a><br /></td></tr>
 <tr class="separator:a129498503329d8916faec5648d5ce144"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8d7d0f1fc9e2726f5a977f517e857b3"><td class="memItemLeft" align="right" valign="top">void *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcli__command__s.html#ad8d7d0f1fc9e2726f5a977f517e857b3">function</a> )(void *)</td></tr>
-<tr class="memdesc:ad8d7d0f1fc9e2726f5a977f517e857b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">void * Function to call.  <a href="structcli__command__s.html#ad8d7d0f1fc9e2726f5a977f517e857b3">More...</a><br /></td></tr>
-<tr class="separator:ad8d7d0f1fc9e2726f5a977f517e857b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59c4fe97f81c871877d2498a719ad319"><td class="memItemLeft" align="right" valign="top">bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcli__command__s.html#a59c4fe97f81c871877d2498a719ad319">function</a> )(struct <a class="el" href="structcli__command__s.html">cli_command_s</a> *, <a class="el" href="server_8h.html#ae3ed3ed33e0e04d42a57b1afda4c0c86">user_list_t</a> *, <a class="el" href="server_8h.html#a9ca54fdf642f42b1f7fbdf968d0d4295">server_data_t</a> *)</td></tr>
+<tr class="memdesc:a59c4fe97f81c871877d2498a719ad319"><td class="mdescLeft">&#160;</td><td class="mdescRight">void * Function to call.  <a href="structcli__command__s.html#a59c4fe97f81c871877d2498a719ad319">More...</a><br /></td></tr>
+<tr class="separator:a59c4fe97f81c871877d2498a719ad319"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>structure to store available client command. </p>
@@ -127,14 +127,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ad8d7d0f1fc9e2726f5a977f517e857b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8d7d0f1fc9e2726f5a977f517e857b3">&#9670;&nbsp;</a></span>function</h2>
+<a id="a59c4fe97f81c871877d2498a719ad319"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59c4fe97f81c871877d2498a719ad319">&#9670;&nbsp;</a></span>function</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void*(* cli_command_s::function) (void *)</td>
+          <td class="memname">bool(* cli_command_s::function) (struct <a class="el" href="structcli__command__s.html">cli_command_s</a> *, <a class="el" href="server_8h.html#ae3ed3ed33e0e04d42a57b1afda4c0c86">user_list_t</a> *, <a class="el" href="server_8h.html#a9ca54fdf642f42b1f7fbdf968d0d4295">server_data_t</a> *)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -160,7 +160,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>server/src/parser/<a class="el" href="cli__commands_8h_source.html">cli_commands.h</a></li>
+<li>server/src/core/include/<a class="el" href="cli__commands_8h_source.html">cli_commands.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

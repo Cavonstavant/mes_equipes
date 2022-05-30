@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['list_5fcommand_634',['list_command',['../cli__commands_8h.html#aa84871d39b18cf6c3307c4368e59094c',1,'cli_commands.h']]],
-  ['login_5fcommand_635',['login_command',['../cli__commands_8h.html#a770438158f74cb2b5b2ba1fbe91c2c9a',1,'cli_commands.h']]],
-  ['logout_5fcommand_636',['logout_command',['../cli__commands_8h.html#a0717e5271a388b23c7bda4b7d9d5224a',1,'cli_commands.h']]]
+  ['name_5fdestroy_659',['name_destroy',['../object__name_8h.html#a2bf14b5c1159a184866399de7f36b4e3',1,'name_destroy(name_t name_to_destroy):&#160;object_name.c'],['../object__name_8c.html#a2bf14b5c1159a184866399de7f36b4e3',1,'name_destroy(name_t name_to_destroy):&#160;object_name.c']]],
+  ['name_5fdump_660',['name_dump',['../object__name_8h.html#af939986d925b08bc91fa2ebe05fb7129',1,'name_dump(name_t name):&#160;name_dump.c'],['../name__dump_8c.html#af939986d925b08bc91fa2ebe05fb7129',1,'name_dump(name_t name):&#160;name_dump.c']]],
+  ['name_5fedit_5fcontent_661',['name_edit_content',['../object__name_8h.html#ad5fb836587d0ba600c4b7037f07aa62e',1,'name_edit_content(name_t name, char *content):&#160;name_setter.c'],['../name__setter_8c.html#ad5fb836587d0ba600c4b7037f07aa62e',1,'name_edit_content(name_t name, char *content):&#160;name_setter.c']]],
+  ['name_5finit_662',['name_init',['../object__name_8h.html#aad501cf366c38f0ce88ac0da0d849393',1,'name_init(char *name_content):&#160;object_name.c'],['../object__name_8c.html#aad501cf366c38f0ce88ac0da0d849393',1,'name_init(char *name_content):&#160;object_name.c']]],
+  ['new_5fpeer_663',['new_peer',['../net__utils_8h.html#a1839494efffd5329b4f02eca0b6e897c',1,'new_peer(int fd, struct sockaddr_in addr):&#160;peer.c'],['../peer_8c.html#a1839494efffd5329b4f02eca0b6e897c',1,'new_peer(int fd, struct sockaddr_in addr):&#160;peer.c']]]
 ];

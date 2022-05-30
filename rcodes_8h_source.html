@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Mes équipes: server/src/commands/rcodes.h Source File</title>
+<title>Mes équipes: server/src/core/include/rcodes.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -109,53 +109,94 @@ $(document).ready(function(){initNavTree('rcodes_8h_source.html',''); initResiza
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;} <a class="code" href="rcodes_8h.html#ae0a70c38c430b9e5fe49c76c88d02103">retcodes_t</a>;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="structretcodes__s.html">retcodes_t</a> retcodes[] = {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {.<a class="code" href="structretcodes__s.html#acfdfb56ec5b6345a480ab970dd1a01f2">repr</a> = <span class="stringliteral">&quot;200 Success\n&quot;</span>, .code = 200, .params = NULL},</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {.repr = <span class="stringliteral">&quot;201 Successfully connected to existing used: %s\n&quot;</span>, .code = 201, .params = NULL},</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {.repr = <span class="stringliteral">&quot;202 Successfully connected, new user created with username: %s\n&quot;</span>, .code = 202, .params = NULL},</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {.repr = <span class="stringliteral">&quot;203 Successfully disconnected as user: %s\n&quot;</span>, .code = 203, .params = NULL},</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {.repr = <span class="stringliteral">&quot;310 No requested data found, empty relation\n&quot;</span>, .code = 310, .params = NULL},</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {.repr = <span class="stringliteral">&quot;311 Reqested UUID: %s not found\n&quot;</span>, .code = 311, .params = NULL},</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {.repr = <span class="stringliteral">&quot;312 Requested username: %s not found\n&quot;</span>, .code = 312, .params = NULL},</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {.repr = <span class="stringliteral">&quot;320 Invalid action: Data already exist\n&quot;</span>, .code = 320, .params = NULL},</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {.repr = <span class="stringliteral">&quot;321 Invalid action: Already subscribed to %s\n&quot;</span>, .code = 321, .params = NULL},</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {.repr = <span class="stringliteral">&quot;322 Invalid action: Not subscribed to %s\n&quot;</span>, .code = 322, .params = NULL},</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {.repr = <span class="stringliteral">&quot;401 Invalid requested action, please login\n&quot;</span>, .code = 400, .params = NULL},</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {.repr = <span class="stringliteral">&quot;500 Syntax error\n&quot;</span>, .code = 500, .params = NULL},</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {.repr = <span class="stringliteral">&quot;501 Format error: Invalid UUID\n&quot;</span>, .code = 501, .params = NULL},</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {.repr = <span class="stringliteral">&quot;502 Format error: body too long\n&quot;</span>, .code = 502, .params = NULL},</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {.repr = <span class="stringliteral">&quot;503 Format error: name too long\n&quot;</span>, .code = 503, .params = NULL},</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {.repr = <span class="stringliteral">&quot;504 Format error: description too long\n&quot;</span>, .code = 504, .params = NULL},</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {.repr = <span class="stringliteral">&quot;510 Syntax error: Wrong number of arguments\n&quot;</span>, .code = 510, .params = NULL},</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {.repr = <span class="stringliteral">&quot;520 Syntax error: Invalid format\n&quot;</span>, .code = 520, .params = NULL},</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {.repr = <span class="stringliteral">&quot;530 Syntax error: Command not found\n&quot;</span>, .code = 530, .params = NULL},</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {.repr = <span class="stringliteral">&quot;540 Syntax error: Not implemented\n&quot;</span>, .code = 540, .params = NULL},</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {0, 0, 0}</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="structretcodes__s.html">retcodes_t</a> *create_new_repcode(<span class="keywordtype">int</span> code) {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="structretcodes__s.html">retcodes_t</a> *retcode = (<a class="code" href="structretcodes__s.html">retcodes_t</a> *) malloc(<span class="keyword">sizeof</span>(<a class="code" href="structretcodes__s.html">retcodes_t</a>));</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">if</span> (!retcode)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; retcodes[i].<a class="code" href="structretcodes__s.html#acfdfb56ec5b6345a480ab970dd1a01f2">repr</a>; i++) {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">if</span> (retcodes[i].code == code) {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            memcpy(retcode, &amp;retcodes[i], <span class="keyword">sizeof</span>(<a class="code" href="structretcodes__s.html">retcodes_t</a>));</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">return</span> retcode;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    free(retcode);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> print_retcode(<span class="keywordtype">int</span> code, <span class="keywordtype">char</span> **args)</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;{</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="structretcodes__s.html">retcodes_t</a> *retcode = create_new_repcode(code);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    printf(retcode-&gt;<a class="code" href="structretcodes__s.html#acfdfb56ec5b6345a480ab970dd1a01f2">repr</a>);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    free(retcode);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !RCODES_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {.<a class="code" href="structretcodes__s.html#acfdfb56ec5b6345a480ab970dd1a01f2">repr</a> = <span class="stringliteral">&quot;200 Success\n&quot;</span>,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    .code = 200,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    .params = NULL},</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {.repr = <span class="stringliteral">&quot;201 Successfully connected to existing used: %s\n&quot;</span>,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    .code = 201,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    .params = NULL},</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {.repr =</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="stringliteral">&quot;202 Successfully connected, new user created with username: %s\n&quot;</span>,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    .code = 202,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    .params = NULL},</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {.repr = <span class="stringliteral">&quot;203 Successfully disconnected as user: %s\n&quot;</span>,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    .code = 203,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    .params = NULL},</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {.repr = <span class="stringliteral">&quot;310 No requested data found, empty relation\n&quot;</span>,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    .code = 310,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    .params = NULL},</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {.repr = <span class="stringliteral">&quot;311 Reqested UUID: %s not found\n&quot;</span>,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    .code = 311,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    .params = NULL},</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {.repr = <span class="stringliteral">&quot;312 Requested username: %s not found\n&quot;</span>,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    .code = 312,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    .params = NULL},</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {.repr = <span class="stringliteral">&quot;320 Invalid action: Data already exist\n&quot;</span>,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    .code = 320,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    .params = NULL},</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {.repr = <span class="stringliteral">&quot;321 Invalid action: Already subscribed to %s\n&quot;</span>,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    .code = 321,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    .params = NULL},</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {.repr = <span class="stringliteral">&quot;322 Invalid action: Not subscribed to %s\n&quot;</span>,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    .code = 322,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    .params = NULL},</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {.repr = <span class="stringliteral">&quot;401 Invalid requested action, please login\n&quot;</span>,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    .code = 400,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    .params = NULL},</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {.repr = <span class="stringliteral">&quot;500 Syntax error\n&quot;</span>,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    .code = 500,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    .params = NULL},</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {.repr = <span class="stringliteral">&quot;501 Format error: Invalid UUID\n&quot;</span>,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    .code = 501,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    .params = NULL},</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    {.repr = <span class="stringliteral">&quot;502 Format error: body too long\n&quot;</span>,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    .code = 502,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    .params = NULL},</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {.repr = <span class="stringliteral">&quot;503 Format error: name too long\n&quot;</span>,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    .code = 503,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    .params = NULL},</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {.repr = <span class="stringliteral">&quot;504 Format error: description too long\n&quot;</span>,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    .code = 504,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    .params = NULL},</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {.repr = <span class="stringliteral">&quot;510 Syntax error: Wrong number of arguments\n&quot;</span>,</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    .code = 510,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    .params = NULL},</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    {.repr = <span class="stringliteral">&quot;520 Syntax error: Invalid format\n&quot;</span>,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    .code = 520,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    .params = NULL},</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {.repr = <span class="stringliteral">&quot;530 Syntax error: Command not found\n&quot;</span>,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    .code = 530,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    .params = NULL},</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {.repr = <span class="stringliteral">&quot;540 Syntax error: Not implemented\n&quot;</span>,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    .code = 540,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    .params = NULL},</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {0, 0, 0}</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;};</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="structretcodes__s.html">retcodes_t</a> *create_new_repcode(<span class="keywordtype">int</span> code) {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="structretcodes__s.html">retcodes_t</a> *retcode = (<a class="code" href="structretcodes__s.html">retcodes_t</a> *) malloc(<span class="keyword">sizeof</span>(<a class="code" href="structretcodes__s.html">retcodes_t</a>));</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">if</span> (!retcode)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; retcodes[i].<a class="code" href="structretcodes__s.html#acfdfb56ec5b6345a480ab970dd1a01f2">repr</a>; i++) {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">if</span> (retcodes[i].code == code) {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            memcpy(retcode, &amp;retcodes[i], <span class="keyword">sizeof</span>(<a class="code" href="structretcodes__s.html">retcodes_t</a>));</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordflow">return</span> retcode;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    free(retcode);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> print_retcode(<span class="keywordtype">int</span> code, <span class="keywordtype">char</span> **args)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;{</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="structretcodes__s.html">retcodes_t</a> *retcode = create_new_repcode(code);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    printf(retcode-&gt;<a class="code" href="structretcodes__s.html#acfdfb56ec5b6345a480ab970dd1a01f2">repr</a>);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    free(retcode);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !RCODES_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="astructretcodes__s_html"><div class="ttname"><a href="structretcodes__s.html">retcodes_s</a></div><div class="ttdoc">The retcodes_s structure contains the representation of the return code as char *,...</div><div class="ttdef"><b>Definition:</b> rcodes.h:20</div></div>
@@ -166,7 +207,7 @@ $(document).ready(function(){initNavTree('rcodes_8h_source.html',''); initResiza
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a class="el" href="dir_a063914ab482288b7b0e1b2fca86158c.html">src</a></li><li class="navelem"><a class="el" href="dir_3143f4346e9106ba3ae227e7090d6e7d.html">commands</a></li><li class="navelem"><a class="el" href="rcodes_8h.html">rcodes.h</a></li>
+    <li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a class="el" href="dir_a063914ab482288b7b0e1b2fca86158c.html">src</a></li><li class="navelem"><a class="el" href="dir_c3857364c203a53bd803276bd5255ca3.html">core</a></li><li class="navelem"><a class="el" href="dir_ce6d84cd91432015f835066a929fbf3b.html">include</a></li><li class="navelem"><a class="el" href="rcodes_8h.html">rcodes.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>

@@ -1,7 +1,8 @@
-<map id="server/src/parser/cli_commands.h" name="server/src/parser/cli_commands.h">
-<area shape="rect" id="node1" title=" " alt="" coords="293,5,444,47"/>
-<area shape="rect" id="node2" href="$call__command_8c.html" title=" " alt="" coords="5,95,164,136"/>
-<area shape="rect" id="node3" href="$check__command_8c.html" title=" " alt="" coords="189,95,362,136"/>
-<area shape="rect" id="node4" href="$cli__commands_8c.html" title=" " alt="" coords="387,95,537,136"/>
-<area shape="rect" id="node5" href="$compute__command_8c.html" title=" " alt="" coords="562,95,754,136"/>
+<map id="server/src/core/include/cli_commands.h" name="server/src/core/include/cli_commands.h">
+<area shape="rect" id="node1" title=" " alt="" coords="341,5,511,47"/>
+<area shape="rect" id="node2" href="$call__command_8c.html" title=" " alt="" coords="5,95,151,136"/>
+<area shape="rect" id="node3" href="$cli__commands_8c.html" title=" " alt="" coords="175,95,312,136"/>
+<area shape="rect" id="node4" href="$compute__command_8c.html" title=" " alt="" coords="337,95,515,136"/>
+<area shape="rect" id="node5" href="$convert__command__to__structure_8c.html" title=" " alt="" coords="540,95,731,136"/>
+<area shape="rect" id="node6" href="$fill__command__arguments_8c.html" title=" " alt="" coords="755,95,937,136"/>
 </map>

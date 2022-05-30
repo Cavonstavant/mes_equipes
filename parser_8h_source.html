@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Mes équipes: server/src/parser/include/parser.h Source File</title>
+<title>Mes équipes: server/src/core/include/parser.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -94,19 +94,22 @@ $(document).ready(function(){initNavTree('parser_8h_source.html',''); initResiza
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">** parser</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef PARSER_H_</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">    #define PARSER_H_</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">int</span> <a class="code" href="parser_8h.html#a2e923d7f4cd28e7ce706aedc40626418">compute_command</a>(<span class="keywordtype">char</span> *command);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !PARSER_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef PARSER_H_</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">    #define PARSER_H_</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">int</span> <a class="code" href="parser_8h.html#a0b47a7378336cdb5aaee417f01488b1e">compute_command</a>(<span class="keywordtype">char</span> *command, <a class="code" href="structuser__list__s.html">user_list_t</a> *, <a class="code" href="structserver__data__s.html">server_data_t</a> *);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !PARSER_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aparser_8h_html_a2e923d7f4cd28e7ce706aedc40626418"><div class="ttname"><a href="parser_8h.html#a2e923d7f4cd28e7ce706aedc40626418">compute_command</a></div><div class="ttdeci">int compute_command(char *command)</div><div class="ttdoc">Compute the command if it's ok.</div><div class="ttdef"><b>Definition:</b> compute_command.c:26</div></div>
+<div class="ttc" id="aparser_8h_html_a0b47a7378336cdb5aaee417f01488b1e"><div class="ttname"><a href="parser_8h.html#a0b47a7378336cdb5aaee417f01488b1e">compute_command</a></div><div class="ttdeci">int compute_command(char *command, user_list_t *, server_data_t *)</div><div class="ttdoc">Compute the command if it's ok.</div><div class="ttdef"><b>Definition:</b> compute_command.c:60</div></div>
+<div class="ttc" id="astructserver__data__s_html"><div class="ttname"><a href="structserver__data__s.html">server_data_s</a></div><div class="ttdoc">Major data for the server.</div><div class="ttdef"><b>Definition:</b> server.h:41</div></div>
+<div class="ttc" id="astructuser__list__s_html"><div class="ttname"><a href="structuser__list__s.html">user_list_s</a></div><div class="ttdoc">Node of a user list.</div><div class="ttdef"><b>Definition:</b> server.h:29</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a class="el" href="dir_a063914ab482288b7b0e1b2fca86158c.html">src</a></li><li class="navelem"><a class="el" href="dir_0d2bd8aef9a1d5e03f22ed5477f85ed5.html">parser</a></li><li class="navelem"><a class="el" href="dir_f029f33be702d86df4ba05da1b97e8e7.html">include</a></li><li class="navelem"><a class="el" href="parser_8h.html">parser.h</a></li>
+    <li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a class="el" href="dir_a063914ab482288b7b0e1b2fca86158c.html">src</a></li><li class="navelem"><a class="el" href="dir_c3857364c203a53bd803276bd5255ca3.html">core</a></li><li class="navelem"><a class="el" href="dir_ce6d84cd91432015f835066a929fbf3b.html">include</a></li><li class="navelem"><a class="el" href="parser_8h.html">parser.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>

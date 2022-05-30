@@ -1,7 +1,13 @@
-<map id="server/include/my_teams_server.h" name="server/include/my_teams_server.h">
-<area shape="rect" id="node1" title=" " alt="" coords="195,5,381,47"/>
-<area shape="rect" id="node2" href="$server_8h.html" title=" " alt="" coords="108,102,279,129"/>
-<area shape="rect" id="node5" href="$my__teams__server_8c.html" title=" " alt="" coords="303,95,462,136"/>
-<area shape="rect" id="node3" href="$server__data_8c.html" title=" " alt="" coords="5,184,184,211"/>
-<area shape="rect" id="node4" href="$server__run_8c.html" title=" " alt="" coords="208,184,379,211"/>
+<map id="server/src/core/include/my_teams_server.h" name="server/src/core/include/my_teams_server.h">
+<area shape="rect" id="node1" title=" " alt="" coords="621,5,791,47"/>
+<area shape="rect" id="node2" href="$server_8h.html" title=" " alt="" coords="532,95,701,136"/>
+<area shape="rect" id="node11" href="$my__teams__server_8c.html" title=" " alt="" coords="725,95,868,136"/>
+<area shape="rect" id="node3" href="$cli__commands_8h.html" title=" " alt="" coords="341,184,511,225"/>
+<area shape="rect" id="node9" href="$server__data_8c.html" title=" " alt="" coords="535,184,698,225"/>
+<area shape="rect" id="node10" href="$server__run_8c.html" title=" " alt="" coords="722,184,885,225"/>
+<area shape="rect" id="node4" href="$call__command_8c.html" title=" " alt="" coords="5,273,151,315"/>
+<area shape="rect" id="node5" href="$cli__commands_8c.html" title=" " alt="" coords="175,273,312,315"/>
+<area shape="rect" id="node6" href="$compute__command_8c.html" title=" " alt="" coords="337,273,515,315"/>
+<area shape="rect" id="node7" href="$convert__command__to__structure_8c.html" title=" " alt="" coords="540,273,731,315"/>
+<area shape="rect" id="node8" href="$fill__command__arguments_8c.html" title=" " alt="" coords="755,273,937,315"/>
 </map>

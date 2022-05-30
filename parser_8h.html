@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Mes équipes: server/src/parser/include/parser.h File Reference</title>
+<title>Mes équipes: server/src/core/include/parser.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -94,13 +94,13 @@ $(document).ready(function(){initNavTree('parser_8h.html',''); initResizable(); 
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2e923d7f4cd28e7ce706aedc40626418"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8h.html#a2e923d7f4cd28e7ce706aedc40626418">compute_command</a> (char *command)</td></tr>
-<tr class="memdesc:a2e923d7f4cd28e7ce706aedc40626418"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the command if it's ok.  <a href="parser_8h.html#a2e923d7f4cd28e7ce706aedc40626418">More...</a><br /></td></tr>
-<tr class="separator:a2e923d7f4cd28e7ce706aedc40626418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b47a7378336cdb5aaee417f01488b1e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="parser_8h.html#a0b47a7378336cdb5aaee417f01488b1e">compute_command</a> (char *command, <a class="el" href="server_8h.html#ae3ed3ed33e0e04d42a57b1afda4c0c86">user_list_t</a> *, <a class="el" href="server_8h.html#a9ca54fdf642f42b1f7fbdf968d0d4295">server_data_t</a> *)</td></tr>
+<tr class="memdesc:a0b47a7378336cdb5aaee417f01488b1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the command if it's ok.  <a href="parser_8h.html#a0b47a7378336cdb5aaee417f01488b1e">More...</a><br /></td></tr>
+<tr class="separator:a0b47a7378336cdb5aaee417f01488b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a2e923d7f4cd28e7ce706aedc40626418"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e923d7f4cd28e7ce706aedc40626418">&#9670;&nbsp;</a></span>compute_command()</h2>
+<a id="a0b47a7378336cdb5aaee417f01488b1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b47a7378336cdb5aaee417f01488b1e">&#9670;&nbsp;</a></span>compute_command()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -109,8 +109,24 @@ Functions</h2></td></tr>
           <td class="memname">int compute_command </td>
           <td>(</td>
           <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>command</em></td><td>)</td>
+          <td class="paramname"><em>command</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="server_8h.html#ae3ed3ed33e0e04d42a57b1afda4c0c86">user_list_t</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="server_8h.html#a9ca54fdf642f42b1f7fbdf968d0d4295">server_data_t</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -119,6 +135,8 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">char</td><td>* Command to be call. </td></tr>
+    <tr><td class="paramname">user_list_t</td><td>* List of all known users. </td></tr>
+    <tr><td class="paramname">server_data_t</td><td>* All data from the server to be update by the command. </td></tr>
   </table>
   </dd>
 </dl>
@@ -131,7 +149,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a class="el" href="dir_a063914ab482288b7b0e1b2fca86158c.html">src</a></li><li class="navelem"><a class="el" href="dir_0d2bd8aef9a1d5e03f22ed5477f85ed5.html">parser</a></li><li class="navelem"><a class="el" href="dir_f029f33be702d86df4ba05da1b97e8e7.html">include</a></li><li class="navelem"><a class="el" href="parser_8h.html">parser.h</a></li>
+    <li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a class="el" href="dir_a063914ab482288b7b0e1b2fca86158c.html">src</a></li><li class="navelem"><a class="el" href="dir_c3857364c203a53bd803276bd5255ca3.html">core</a></li><li class="navelem"><a class="el" href="dir_ce6d84cd91432015f835066a929fbf3b.html">include</a></li><li class="navelem"><a class="el" href="parser_8h.html">parser.h</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
