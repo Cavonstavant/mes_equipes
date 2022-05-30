@@ -18,6 +18,7 @@
     #include <stdbool.h>
     #include <stdio.h>
     #include <errno.h>
+    #include <string.h>
 
     /// Defines the maximum size of a message
     #define MAX_MSG 55555
@@ -41,11 +42,19 @@ typedef struct server_s {
     bool pending_write;
 
     /// The buffer to read from the server
-    char read_buffer[MAX_MSG];
+    char input_buffer[MAX_MSG];
 
     /// The buffer to write to the server
     char output_buffer[MAX_MSG];
 
+    /// The fd set containing the sock fd of the mes_équipe server
+    fd_set read_fds;
+
+    /// The fd set containing the sock fd of the mes_équipe server
+    fd_set write_fds;
+
+    /// The fd set containing the sock fd of the mes_équipe server
+    fd_set err_fds;
 } client_net_server_t;
 
 static inline void __log_error(int line,

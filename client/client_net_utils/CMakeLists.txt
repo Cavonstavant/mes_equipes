@@ -5,6 +5,7 @@ set (SRC
     ${SRC_ROOT}/client_utils.c
     ${SRC_ROOT}/send_message.c
     ${SRC_ROOT}/fetch_message.c
+    ${SRC_ROOT}/update_server.c
     ${INCLUDE_ROOT}/client_utils.h
 )
 

@@ -19,7 +19,7 @@ char *fetch_message(client_net_server_t *server)
     if (!server)
         return NULL;
     server->pending_read = true;
-    read_size = read(server->sock_fd, server->pending_read, MAX_MSG);
+    read_size = read(server->sock_fd, server->input_buffer, MAX_MSG);
     if (read_size < 0) {
         TEAMS_LOG("Internal Server Error: read\n");
         return NULL;
@@ -28,6 +28,6 @@ char *fetch_message(client_net_server_t *server)
         TEAMS_LOG("Connection to the server lost\n");
         return NULL;
     }
-    msg = strndup(server->read_buffer, strlen(server->read_buffer));
+    msg = strndup(server->input_buffer, strlen(server->input_buffer));
     return msg;
 }

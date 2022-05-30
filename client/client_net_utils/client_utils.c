@@ -22,7 +22,7 @@ static bool bind_socket(client_net_server_t *srv, long port)
     }
     srv->srv_addr.sin_family = AF_INET;
     srv->srv_addr.sin_port = htons(port);
-    if (bind(srv->sock_fd, (struct sockaddr *) &srv->self,
+    if (bind(srv->sock_fd, (struct sockaddr *) &srv->srv_addr,
         sizeof(struct sockaddr)) < 0){
         TEAMS_LOG("bind\n");
         return false;
@@ -33,17 +33,18 @@ static bool bind_socket(client_net_server_t *srv, long port)
 client_net_server_t *create_net_server(const char *ip, long port)
 {
     client_net_server_t *new_server;
+    int pton_return = 0;
 
     if (!(new_server = malloc(sizeof(client_net_server_t *))))
         return NULL;
-    new_server->srv_addr.sin_addr = inet_addr(ip);
-    if (new_server->srv_addr.sin_addr == INADDR_NONE) {
-        TEAMS_LOG("inet_addr: Invalid server ip provided\n");
+    pton_return = inet_pton(AF_INET, ip, &new_server->srv_addr.sin_addr);
+    if (pton_return <= 0) {
+        TEAMS_LOG("inet_pton: Invalid ip address provided\n");
         return NULL;
     }
     bind_socket(new_server, port);
-    FD_ZERO(new_server->read_fds);
-    FD_ZERO(new_server->write_fds);
-    FD_ZERO(new_server->err_fds);
+    FD_ZERO(&new_server->read_fds);
+    FD_ZERO(&new_server->write_fds);
+    FD_ZERO(&new_server->err_fds);
     return new_server;
 }
