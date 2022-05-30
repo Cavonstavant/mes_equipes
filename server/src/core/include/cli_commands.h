@@ -10,6 +10,8 @@
 #ifndef CLI_COMMANDS_H_
     #define CLI_COMMANDS_H_
 
+    #include "server.h"
+
     /// \brief The number of command available.
     #define COMMAND_NUMBER 14
 
@@ -20,7 +22,7 @@ typedef struct cli_command_s {
     /// \brief char ** Arguments for the command.
     char **arguments;
     /// \brief void * Function to call.
-    bool (*function)(cli_command_t *, user_list_t *, server_data_t *);
+    bool (*function)(struct cli_command_s *, user_list_t *, server_data_t *);
 } cli_command_t;
 
 bool command_help(cli_command_t *, user_list_t *, server_data_t *);

@@ -13,20 +13,20 @@
 
 /// \brief List all available command
 static const cli_command_t commands[14] = {
-    {"/help", NULL, &command_help},
-    {"/login", (char *[]){"", NULL}, &command_login},
-    {"/logout", NULL, &command_logout},
-    {"/users", NULL, &command_users},
-    {"/user", (char *[]){"", NULL}, &command_user},
-    {"/send", (char *[]){"", "", NULL}, &command_send},
-    {"/messages", (char *[]){"", NULL}, &command_messages},
-    {"/subscribe", (char *[]){"", NULL}, &command_subscribe},
-    {"/subscribed", (char *[]){"", NULL}, &command_subscribed},
-    {"/unsubscribe", (char *[]){"", NULL}, &command_unsubscribed},
-    {"/use", (char *[]){"", NULL}, &command_use},
-    {"/create", (char *[]){"", "", NULL}, &command_create},
-    {"/list", NULL, &command_list},
-    {"/info", NULL, &command_info}
+    {"/help", NULL, NULL/*&command_help*/},
+    {"/login", (char *[]){"", NULL}, NULL/*&command_login*/},
+    {"/logout", NULL, NULL/*&command_logout*/},
+    {"/users", NULL, NULL/*&command_users*/},
+    {"/user", (char *[]){"", NULL}, NULL/*&command_user*/},
+    {"/send", (char *[]){"", "", NULL}, NULL/*&command_send*/},
+    {"/messages", (char *[]){"", NULL}, NULL/*&command_messages*/},
+    {"/subscribe", (char *[]){"", NULL}, NULL/*&command_subscribe*/},
+    {"/subscribed", (char *[]){"", NULL}, NULL/*&command_subscribed*/},
+    {"/unsubscribe", (char *[]){"", NULL}, NULL/*&command_unsubscribe*/},
+    {"/use", (char *[]){"", NULL}, NULL/*&command_use*/},
+    {"/create", (char *[]){"", "", NULL}, NULL/*&command_create*/},
+    {"/list", NULL, NULL/*&command_list*/},
+    {"/info", NULL, NULL/*&command_info*/}
 };
 
 const cli_command_t *get_cli_command_by_name(char *command)
