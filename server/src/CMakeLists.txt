@@ -5,6 +5,8 @@ set (TARGET ${PROJECT_NAME}_server)
 
 set (SRC
     ${SRC_ROOT}/entrypoint.c
+    ${SRC_ROOT}/server_run.c
+    ${SRC_ROOT}/server_data.c
 )
 
 add_executable(${TARGET} ${SRC})

@@ -9,7 +9,8 @@
 
 int main(int ac, char **av)
 {
-    (void)av;
-    (void)ac;
+    (void) ac;
+    (void) av;
+    server_run(100);
     return (0);
 }

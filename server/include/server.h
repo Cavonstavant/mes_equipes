@@ -12,6 +12,10 @@
 
     #include "object_wrapper.h"
 
+    #define SUCCESS 0
+
+    #define FAILED 84
+
 ///
 /// \brief Node of a user list
 ///
@@ -32,5 +36,28 @@ typedef struct server_data_s {
     /// Size of the list
     size_t active_user_n;
 } server_data_t;
+
+///
+/// \brief Init and run the server
+///
+/// \param port Port of the server
+/// \return int Return code
+///
+int server_run(int port);
+
+///
+/// \brief Init the server data structure
+///
+/// \param port Port to setup the serveur
+/// \return server_data_t* Newly created server_data
+///
+server_data_t *init_server_data(long port);
+
+///
+/// \brief Destroy the server_data
+///
+/// \param server_data Server_data to destroy
+///
+void destroy_server_data(server_data_t *server_data);
 
 #endif /* !SERVER_H_ */
