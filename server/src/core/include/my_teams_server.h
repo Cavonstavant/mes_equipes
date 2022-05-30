@@ -26,7 +26,7 @@ typedef struct teams_server_s {
 
 /// \brief creates a new teams server
 /// \param port The port the server will listen to
-/// The newly created server
+/// \return The newly created server
 teams_server_t *create_new_server(long port);
 
 #endif /* MY_TEAMS_SERVER_H */
