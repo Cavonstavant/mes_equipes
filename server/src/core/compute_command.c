@@ -67,6 +67,7 @@ server_data_t *server_data)
         return (-1);
     }
     if (call_command(cmd, users, server_data) < 0) {
+        // print_retcode(520);
         return (-1);
     }
     free(command);
