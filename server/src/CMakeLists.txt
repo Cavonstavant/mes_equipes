@@ -1,27 +1,13 @@
-set (INCLUDE_ROOT ${PROJECT_SOURCE_DIR}/server/src/include)
+set (INCLUDE_DIRS ${PROJECT_SOURCE_DIR}/server/include)
 set (SRC_ROOT ${PROJECT_SOURCE_DIR}/server/src)
 
-set (CORE_TARGET ${PROJECT_NAME}_server_core)
-
-add_library(${CORE_TARGET}
-    ${SRC_ROOT}/my_teams_server.c
-    ${INCLUDE_ROOT}/my_teams_server.h
-    ${INCLUDE_ROOT}/client_wrapper.h
-    ${SRC_ROOT}/client_wrapper.c
-)
-
-target_include_directories(${CORE_TARGET}
-    PUBLIC ${INCLUDE_ROOT}
-    PRIVATE ${SRC_ROOT}
-)
-
-target_link_libraries(${CORE_TARGET}
-    PUBLIC net_utils
-    PUBLIC ${PROJECT_NAME}_commands
-    PUBLIC myteams
-)
-
 set (TARGET ${PROJECT_NAME}_server)
+
+set (SRC_CORE
+    ${SRC_ROOT}/server_run.c
+    ${SRC_ROOT}/server_data.c
+    ${SRC_ROOT}/my_teams_server.c
+)
 
 set (SRC
     ${SRC_ROOT}/entrypoint.c
@@ -29,12 +15,10 @@ set (SRC
 
 add_executable(${TARGET} ${SRC})
 
-target_link_libraries(${TARGET}
-    PUBLIC ${CORE_TARGET}
-)
+add_library(${TARGET}_core ${SRC_CORE})
 
 # target_include_directories(${TARGET}_core
-#     PUBLIC ${INCLUDE_ROOT}
+#     PUBLIC ${INCLUDE_DIRS}
 #     PRIVATE ${SRC_ROOT}
 #     PRIVATE ${TARGET_NAME}_commands
 # )
@@ -45,6 +29,9 @@ target_link_libraries(${TARGET}
 
 target_include_directories(${TARGET}_core
     PUBLIC ${PROJECT_SOURCE_DIR}/libs
+    PUBLIC ${INCLUDE_DIRS}
+    PRIVATE ${PROJECT_SOURCE_DIR}/objects
+    PRIVATE ${SRC_ROOT}
 )
 
 target_link_directories(${TARGET}_core
@@ -53,6 +40,17 @@ target_link_directories(${TARGET}_core
 
 set_target_properties(${TARGET} PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}
+)
+
+target_link_libraries(${TARGET}_core
+    PRIVATE ${PROJECT_NAME}_commands
+    PRIVATE ${PROJECT_NAME}_objects
+    PRIVATE net_utils
+    PUBLIC myteams
+)
+
+target_link_libraries(${TARGET}
+    PRIVATE ${TARGET}_core
 )
 
 add_subdirectory(commands)
