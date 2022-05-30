@@ -323,4 +323,14 @@ my_uuid_t *find_user_by_name(object_wrapper_t *wrapper, char *name);
 child_list_t get_channel_child_list(object_wrapper_t *wrapper,
 my_uuid_t *channel_uuid);
 
+///
+/// \brief Get the conversation child list
+///
+/// \param wrapper Wrapper object
+/// \param conversation_uuid Uuid of the conversation
+/// \return child_list_t Child_list object
+///
+child_list_t get_conversation_child_list(object_wrapper_t *wrapper,
+my_uuid_t *conversation_uuid);
+
 #endif /* !OBJECT_WRAPPER_H_ */
