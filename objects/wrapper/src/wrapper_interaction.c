@@ -72,10 +72,10 @@ conversation_creation_t content, my_uuid_t *first_uuid, my_uuid_t *second_uuid)
     content.participant_two = second_user->uuid;
     if (!wrapper_adding_conversation(wrapper, content))
         return OPERATION_FAILED;
-    if (!user_add_conversation(first_user, 
+    if (!user_add_conversation(first_user,
     wrapper->conversations[wrapper->conversation_n - 1]->uuid))
         return OPERATION_FAILED;
-    if (!user_add_conversation(second_user, 
+    if (!user_add_conversation(second_user,
     wrapper->conversations[wrapper->conversation_n - 1]->uuid))
         return OPERATION_FAILED;
     return OPERATION_SUCCEED;

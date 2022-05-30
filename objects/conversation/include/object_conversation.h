@@ -33,7 +33,6 @@
 ///
 /// \brief Comment object
 ///
-///
 typedef struct conversation_s {
     /// Uuid of the conversation
     my_uuid_t *uuid;
@@ -110,5 +109,15 @@ my_uuid_t *user);
 ///
 bool conversation_add_message(conversation_t *conversation,
 my_uuid_t *message);
+
+///
+/// \brief Cross all the participant list and see if a user is inside
+///
+/// \param conv Conversation object
+/// \param user Uuid of the user to search
+/// \return true if the user is find
+/// \return false if the user is not find
+///
+bool conversation_have_user(conversation_t *conv, my_uuid_t *user);
 
 #endif /* !OBJECT_CONVERSATION_H_ */
