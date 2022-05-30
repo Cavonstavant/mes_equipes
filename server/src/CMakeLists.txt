@@ -7,6 +7,7 @@ set (SRC
     ${SRC_ROOT}/entrypoint.c
     ${SRC_ROOT}/server_run.c
     ${SRC_ROOT}/server_data.c
+    ${SRC_ROOT}/my_teams_server.c
 )
 
 add_executable(${TARGET} ${SRC})
@@ -39,6 +40,7 @@ set_target_properties(${TARGET} PROPERTIES
 target_link_libraries(${TARGET}
     PRIVATE ${PROJECT_NAME}_commands
     PRIVATE ${PROJECT_NAME}_objects
+    PRIVATE net_utils
     PUBLIC myteams
 )
 

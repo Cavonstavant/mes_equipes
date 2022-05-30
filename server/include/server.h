@@ -11,6 +11,7 @@
     #define SERVER_H_
 
     #include "object_wrapper.h"
+    #include "my_teams_server.h"
 
     #define SUCCESS 0
 
@@ -31,6 +32,8 @@ typedef struct user_list_s {
 typedef struct server_data_s {
     /// Object wrapper of the Object lib
     object_wrapper_t *wrapper;
+    /// Network instance of NetUtils
+    teams_server_t *server;
     /// List of all the active users
     user_list_t **active_users;
     /// Size of the list
@@ -59,5 +62,12 @@ server_data_t *init_server_data(long port);
 /// \param server_data Server_data to destroy
 ///
 void destroy_server_data(server_data_t *server_data);
+
+///
+/// \brief The server global loop
+///
+/// \param server_data The server data info
+///
+void server_loop(server_data_t *server_data);
 
 #endif /* !SERVER_H_ */
