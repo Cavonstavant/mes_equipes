@@ -24,3 +24,19 @@ my_uuid_t *user_uuid)
         user->team_n
     };
 }
+
+child_list_t get_subscribed_user_of_team(object_wrapper_t *wrapper,
+my_uuid_t *team_uuid)
+{
+    team_t *team = wrapper_find_team(wrapper, team_uuid);
+
+    if (team == OBJECT_NOT_FOUND)
+        return (child_list_t) {
+            OBJECT_NOT_FOUND,
+            -1
+        };
+    return (child_list_t) {
+        team->users,
+        team->user_n
+    };
+}
