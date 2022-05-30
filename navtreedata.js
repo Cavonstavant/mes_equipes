@@ -31,7 +31,6 @@ var NAVTREE =
         [ "RFC Documentation is hosted <a href=\"https://scrawny-quartz-4ac.notion.site/Mes-quipes-RFC-464eb5c7951c419791f116ff5fd37b57\">here</a>", "index.html#autotoc_md5", null ]
       ] ]
     ] ],
-    [ "Todo List", "todo.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -59,9 +58,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"my__teams__server_8c.html",
-"object__wrapper_8c.html#af807050dcaae29c499a7f543d811487e",
-"upper__component__adding_8h.html"
+"my__uuid_8c.html#a4c05dc63aa44bd3fdae6bd08c4c580fb",
+"object__wrapper_8h.html#a36781096d0fa7e88250cb7745ea33b36",
+"upper__component__adding_8h.html#accb4d6f357680d469d0efdf3a1bb6e8b"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -7,6 +7,5 @@ var structtcp__server__s =
     [ "self", "structtcp__server__s.html#adf97476cd4023a42c6a1e370d36361d6", null ],
     [ "sock_fd", "structtcp__server__s.html#a739e5321330a4ce09c923277938895d5", null ],
     [ "state", "structtcp__server__s.html#a5e158eb89ca952c3347a0b1885e353c2", null ],
-    [ "users_head", "structtcp__server__s.html#a44f4b5317618dbda55098a184616c716", null ],
     [ "write_fds", "structtcp__server__s.html#aa79a90bb4b65f66e21ffaabb409bc6a9", null ]
 ];

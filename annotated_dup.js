@@ -14,15 +14,16 @@ var annotated_dup =
     [ "object_wrapper_s", "structobject__wrapper__s.html", "structobject__wrapper__s" ],
     [ "peer_s", "structpeer__s.html", "structpeer__s" ],
     [ "retcodes_s", "structretcodes__s.html", "structretcodes__s" ],
+    [ "server_data_s", "structserver__data__s.html", "structserver__data__s" ],
     [ "server_s", "structserver__s.html", "structserver__s" ],
     [ "tcp_server_s", "structtcp__server__s.html", "structtcp__server__s" ],
     [ "team_creation_s", "structteam__creation__s.html", "structteam__creation__s" ],
     [ "team_s", "structteam__s.html", "structteam__s" ],
-    [ "teams_client_s", "structteams__client__s.html", "structteams__client__s" ],
     [ "teams_server_s", "structteams__server__s.html", "structteams__server__s" ],
     [ "thread_creation_s", "structthread__creation__s.html", "structthread__creation__s" ],
     [ "thread_s", "structthread__s.html", "structthread__s" ],
     [ "user_creation_s", "structuser__creation__s.html", "structuser__creation__s" ],
+    [ "user_list_s", "structuser__list__s.html", "structuser__list__s" ],
     [ "user_s", "structuser__s.html", "structuser__s" ],
     [ "w_uuid_s", "structw__uuid__s.html", "structw__uuid__s" ]
 ];

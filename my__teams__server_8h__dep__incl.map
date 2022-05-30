@@ -1,6 +1,7 @@
-<map id="server/src/include/my_teams_server.h" name="server/src/include/my_teams_server.h">
-<area shape="rect" id="node1" title=" " alt="" coords="233,5,387,47"/>
-<area shape="rect" id="node2" href="$client__wrapper_8c.html" title=" " alt="" coords="5,102,201,129"/>
-<area shape="rect" id="node3" href="$server_2src_2entrypoint_8c.html" title=" " alt="" coords="226,102,394,129"/>
-<area shape="rect" id="node4" href="$my__teams__server_8c.html" title=" " alt="" coords="419,95,577,136"/>
+<map id="server/include/my_teams_server.h" name="server/include/my_teams_server.h">
+<area shape="rect" id="node1" title=" " alt="" coords="195,5,381,47"/>
+<area shape="rect" id="node2" href="$server_8h.html" title=" " alt="" coords="108,102,279,129"/>
+<area shape="rect" id="node5" href="$my__teams__server_8c.html" title=" " alt="" coords="303,95,462,136"/>
+<area shape="rect" id="node3" href="$server__data_8c.html" title=" " alt="" coords="5,184,184,211"/>
+<area shape="rect" id="node4" href="$server__run_8c.html" title=" " alt="" coords="208,184,379,211"/>
 </map>

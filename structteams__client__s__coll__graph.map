@@ -1,4 +1,0 @@
-<map id="teams_client_s" name="teams_client_s">
-<area shape="rect" id="node1" title="Teams core wrapper around both network and application representation of an user." alt="" coords="5,95,125,121"/>
-<area shape="rect" id="node2" href="$structpeer__s.html" title="Represents a client connection." alt="" coords="33,5,98,32"/>
-</map>

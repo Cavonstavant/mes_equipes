@@ -1,19 +1,17 @@
 var searchData=
 [
-  ['call_5fcommand_2ec_474',['call_command.c',['../call__command_8c.html',1,'']]],
-  ['channel_5fdump_2ec_475',['channel_dump.c',['../channel__dump_8c.html',1,'']]],
-  ['channel_5fsetter_2ec_476',['channel_setter.c',['../channel__setter_8c.html',1,'']]],
-  ['check_5fcommand_2ec_477',['check_command.c',['../check__command_8c.html',1,'']]],
-  ['cli_5fcommands_2ec_478',['cli_commands.c',['../cli__commands_8c.html',1,'']]],
-  ['cli_5fcommands_2eh_479',['cli_commands.h',['../cli__commands_8h.html',1,'']]],
-  ['client_5futils_2ec_480',['client_utils.c',['../client__utils_8c.html',1,'']]],
-  ['client_5futils_2eh_481',['client_utils.h',['../client__utils_8h.html',1,'']]],
-  ['client_5fwrapper_2ec_482',['client_wrapper.c',['../client__wrapper_8c.html',1,'']]],
-  ['client_5fwrapper_2eh_483',['client_wrapper.h',['../client__wrapper_8h.html',1,'']]],
-  ['comment_5fdump_2ec_484',['comment_dump.c',['../comment__dump_8c.html',1,'']]],
-  ['comment_5fsetter_2ec_485',['comment_setter.c',['../comment__setter_8c.html',1,'']]],
-  ['component_5fdump_2ec_486',['component_dump.c',['../component__dump_8c.html',1,'']]],
-  ['compute_5fcommand_2ec_487',['compute_command.c',['../compute__command_8c.html',1,'']]],
-  ['conversation_5fdump_2ec_488',['conversation_dump.c',['../conversation__dump_8c.html',1,'']]],
-  ['conversation_5fsetter_2ec_489',['conversation_setter.c',['../conversation__setter_8c.html',1,'']]]
+  ['call_5fcommand_2ec_466',['call_command.c',['../call__command_8c.html',1,'']]],
+  ['channel_5fdump_2ec_467',['channel_dump.c',['../channel__dump_8c.html',1,'']]],
+  ['channel_5fsetter_2ec_468',['channel_setter.c',['../channel__setter_8c.html',1,'']]],
+  ['check_5fcommand_2ec_469',['check_command.c',['../check__command_8c.html',1,'']]],
+  ['cli_5fcommands_2ec_470',['cli_commands.c',['../cli__commands_8c.html',1,'']]],
+  ['cli_5fcommands_2eh_471',['cli_commands.h',['../cli__commands_8h.html',1,'']]],
+  ['client_5futils_2ec_472',['client_utils.c',['../client__utils_8c.html',1,'']]],
+  ['client_5futils_2eh_473',['client_utils.h',['../client__utils_8h.html',1,'']]],
+  ['comment_5fdump_2ec_474',['comment_dump.c',['../comment__dump_8c.html',1,'']]],
+  ['comment_5fsetter_2ec_475',['comment_setter.c',['../comment__setter_8c.html',1,'']]],
+  ['component_5fdump_2ec_476',['component_dump.c',['../component__dump_8c.html',1,'']]],
+  ['compute_5fcommand_2ec_477',['compute_command.c',['../compute__command_8c.html',1,'']]],
+  ['conversation_5fdump_2ec_478',['conversation_dump.c',['../conversation__dump_8c.html',1,'']]],
+  ['conversation_5fsetter_2ec_479',['conversation_setter.c',['../conversation__setter_8c.html',1,'']]]
 ];
