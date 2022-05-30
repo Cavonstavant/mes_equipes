@@ -5,6 +5,8 @@
 ** command_send
 */
 
+/// \file server/src/commands/command_send.c
+
 #include "rcodes.h"
 
 void *command_send(void *args)
@@ -15,7 +17,9 @@ void *command_send(void *args)
 
     if (!user_login)
         print_retcode(401, cmd_args);
-    if (!find_uuid(uuid))
+    else if (!find_uuid(uuid))
         print_retcode(311, uuid);
+    else
+        print_retcode(200, cmd_args);
     return NULL;
 }
