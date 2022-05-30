@@ -11,7 +11,6 @@ set (SRC
      ${SRC_ROOT}/peer.c
      ${SRC_ROOT}/select.c
      ${INCLUDE_ROOT}/net_utils.h
-     ${INCLUDE_ROOT}/net_utils/auth/user.h
      ${SRC_FD_SET_MANAGE}
 )
 

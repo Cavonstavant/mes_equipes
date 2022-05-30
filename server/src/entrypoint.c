@@ -9,7 +9,8 @@
 
 #include <stdio.h>
 #include <string.h>
-#include "server.h"
+#include <stdlib.h>
+#include "entrypoint.h"
 
 static const char *usage = "USAGE: %s port\n\n\tport is the port \
 number on which the server socket listens.\n";
