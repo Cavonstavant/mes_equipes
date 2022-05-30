@@ -5,7 +5,7 @@
 ** entrypoint
 */
 
-/// \file server/include/entrypoint.h
+/// \file server/src/core/include/entrypoint.h
 
 #ifndef ENTRYPOINT_H_
     #define ENTRYPOINT_H_

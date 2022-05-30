@@ -24,4 +24,8 @@ target_include_directories(${TARGET_NAME}
      PUBLIC ${SRC_ROOT}/fd_sets_manage
 )
 
+set_property(
+     TARGET ${TARGET_NAME} PROPERTY POSITION_INDEPENDENT_CODE ON
+)
+
 #add_subdirectory(auth)

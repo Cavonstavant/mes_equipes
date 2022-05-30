@@ -17,3 +17,7 @@ target_include_directories(${TARGET}
 target_link_libraries(${TARGET}
     PRIVATE uuid
 )
+
+set_property(
+     TARGET ${TARGET} PROPERTY POSITION_INDEPENDENT_CODE ON
+)
