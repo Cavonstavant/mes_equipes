@@ -100,9 +100,10 @@ Collaboration diagram for user_list_s:</div>
 <div class="dyncontent">
 <div class="center"><img src="structuser__list__s__coll__graph.png" border="0" usemap="#user__list__s_coll__map" alt="Collaboration graph"/></div>
 <map name="user__list__s_coll__map" id="user__list__s_coll__map">
-<area shape="rect" title="Node of a user list." alt="" coords="6,184,97,211"/>
-<area shape="rect" href="structmy__uuid__s.html" title="Uuid object equivalent of a string To Refacto with issue #25." alt="" coords="5,95,97,121"/>
-<area shape="rect" href="structw__uuid__s.html" title="wrapper struct around uuid_t" alt="" coords="10,5,93,32"/>
+<area shape="rect" title="Node of a user list." alt="" coords="43,184,134,211"/>
+<area shape="rect" href="structpeer__s.html" title="Represents a client connection." alt="" coords="5,95,71,121"/>
+<area shape="rect" href="structmy__uuid__s.html" title="Uuid object equivalent of a string To Refacto with issue #25." alt="" coords="95,95,187,121"/>
+<area shape="rect" href="structw__uuid__s.html" title="wrapper struct around uuid_t" alt="" coords="99,5,182,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -111,10 +112,48 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:af0c52fe94ced0b3a471923da41ab9d1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuser__list__s.html#af0c52fe94ced0b3a471923da41ab9d1d">user_uuid</a></td></tr>
 <tr class="memdesc:af0c52fe94ced0b3a471923da41ab9d1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uuid of the user object.  <a href="structuser__list__s.html#af0c52fe94ced0b3a471923da41ab9d1d">More...</a><br /></td></tr>
 <tr class="separator:af0c52fe94ced0b3a471923da41ab9d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac37fdf73b7411ae1cd902cf2785bfa4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="net__utils_8h.html#acc9845866a71c0f25f82e81e19b72ca3">peer_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuser__list__s.html#ac37fdf73b7411ae1cd902cf2785bfa4d">user_peer</a></td></tr>
+<tr class="memdesc:ac37fdf73b7411ae1cd902cf2785bfa4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Peer of the network client.  <a href="structuser__list__s.html#ac37fdf73b7411ae1cd902cf2785bfa4d">More...</a><br /></td></tr>
+<tr class="separator:ac37fdf73b7411ae1cd902cf2785bfa4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dc085684eab0d8a5db44185939376c6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuser__list__s.html#a1dc085684eab0d8a5db44185939376c6">is_auth</a></td></tr>
+<tr class="memdesc:a1dc085684eab0d8a5db44185939376c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">State of the client.  <a href="structuser__list__s.html#a1dc085684eab0d8a5db44185939376c6">More...</a><br /></td></tr>
+<tr class="separator:a1dc085684eab0d8a5db44185939376c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Node of a user list. </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a1dc085684eab0d8a5db44185939376c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dc085684eab0d8a5db44185939376c6">&#9670;&nbsp;</a></span>is_auth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool user_list_s::is_auth</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>State of the client. </p>
+
+</div>
+</div>
+<a id="ac37fdf73b7411ae1cd902cf2785bfa4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac37fdf73b7411ae1cd902cf2785bfa4d">&#9670;&nbsp;</a></span>user_peer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="net__utils_8h.html#acc9845866a71c0f25f82e81e19b72ca3">peer_t</a>* user_list_s::user_peer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Peer of the network client. </p>
+
+</div>
+</div>
 <a id="af0c52fe94ced0b3a471923da41ab9d1d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af0c52fe94ced0b3a471923da41ab9d1d">&#9670;&nbsp;</a></span>user_uuid</h2>
 

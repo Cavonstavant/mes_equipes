@@ -186,6 +186,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ae405a83b0797e9fc1dda01330bd62def"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_8h.html#ae405a83b0797e9fc1dda01330bd62def">server_loop</a> (<a class="el" href="server_8h.html#a9ca54fdf642f42b1f7fbdf968d0d4295">server_data_t</a> *server_data)</td></tr>
 <tr class="memdesc:ae405a83b0797e9fc1dda01330bd62def"><td class="mdescLeft">&#160;</td><td class="mdescRight">The server global loop.  <a href="server_8h.html#ae405a83b0797e9fc1dda01330bd62def">More...</a><br /></td></tr>
 <tr class="separator:ae405a83b0797e9fc1dda01330bd62def"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c943adc8b62b20ef7461ebdc740a7e2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_8h.html#a1c943adc8b62b20ef7461ebdc740a7e2">server_add_user</a> (<a class="el" href="server_8h.html#a9ca54fdf642f42b1f7fbdf968d0d4295">server_data_t</a> *server_data)</td></tr>
+<tr class="memdesc:a1c943adc8b62b20ef7461ebdc740a7e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new user to the server data.  <a href="server_8h.html#a1c943adc8b62b20ef7461ebdc740a7e2">More...</a><br /></td></tr>
+<tr class="separator:a1c943adc8b62b20ef7461ebdc740a7e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6360e60bd1ab7f8bf6e49cc7d97a9ab8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_8h.html#a6360e60bd1ab7f8bf6e49cc7d97a9ab8">process_command_inspection</a> (<a class="el" href="server_8h.html#a9ca54fdf642f42b1f7fbdf968d0d4295">server_data_t</a> *server_data)</td></tr>
+<tr class="memdesc:a6360e60bd1ab7f8bf6e49cc7d97a9ab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cross all the peer_t list and get pending read.  <a href="server_8h.html#a6360e60bd1ab7f8bf6e49cc7d97a9ab8">More...</a><br /></td></tr>
+<tr class="separator:a6360e60bd1ab7f8bf6e49cc7d97a9ab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a681680feae4df4182d532564c42fa1fc"></a>
@@ -277,8 +283,6 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>Destroy server_t</p>
-<p>FREE CONTENT</p>
 
 </div>
 </div>
@@ -306,6 +310,62 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>server_data_t* Newly created server_data </dd></dl>
+
+</div>
+</div>
+<a id="a6360e60bd1ab7f8bf6e49cc7d97a9ab8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6360e60bd1ab7f8bf6e49cc7d97a9ab8">&#9670;&nbsp;</a></span>process_command_inspection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void process_command_inspection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="server_8h.html#a9ca54fdf642f42b1f7fbdf968d0d4295">server_data_t</a> *&#160;</td>
+          <td class="paramname"><em>server_data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cross all the peer_t list and get pending read. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">server_data</td><td>Server data </td></tr>
+  </table>
+  </dd>
+</dl>
+<p>CALL PARSER</p>
+
+</div>
+</div>
+<a id="a1c943adc8b62b20ef7461ebdc740a7e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c943adc8b62b20ef7461ebdc740a7e2">&#9670;&nbsp;</a></span>server_add_user()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool server_add_user </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="server_8h.html#a9ca54fdf642f42b1f7fbdf968d0d4295">server_data_t</a> *&#160;</td>
+          <td class="paramname"><em>server_data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a new user to the server data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">server_data</td><td>Server data info </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true When operation success </dd>
+<dd>
+false When operation failed </dd></dl>
 
 </div>
 </div>
@@ -359,7 +419,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int Return code </dd></dl>
-<p>CALL THE NETWORK LOOP AND PARSER :)</p>
 
 </div>
 </div>
