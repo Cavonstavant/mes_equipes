@@ -106,11 +106,13 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:adce567be2c1ab70e50f6bb43d9acf67f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpeer__s.html#adce567be2c1ab70e50f6bb43d9acf67f">sock_fd</a></td></tr>
-<tr class="memdesc:adce567be2c1ab70e50f6bb43d9acf67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">A file descriptor for the socket.  <a href="structpeer__s.html#adce567be2c1ab70e50f6bb43d9acf67f">More...</a><br /></td></tr>
+<tr class="memdesc:adce567be2c1ab70e50f6bb43d9acf67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The file descriptor for the socket.  <a href="structpeer__s.html#adce567be2c1ab70e50f6bb43d9acf67f">More...</a><br /></td></tr>
 <tr class="separator:adce567be2c1ab70e50f6bb43d9acf67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a62e8014e955878f051918f281d8a81"><td class="memItemLeft" align="right" valign="top">struct sockaddr_in&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpeer__s.html#a2a62e8014e955878f051918f281d8a81">peer_addr</a></td></tr>
 <tr class="memdesc:a2a62e8014e955878f051918f281d8a81"><td class="mdescLeft">&#160;</td><td class="mdescRight">The address of the client.  <a href="structpeer__s.html#a2a62e8014e955878f051918f281d8a81">More...</a><br /></td></tr>
 <tr class="separator:a2a62e8014e955878f051918f281d8a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f7d8bd6359f23bbd56ae2e8e5983d08"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpeer__s.html#a1f7d8bd6359f23bbd56ae2e8e5983d08">connected</a></td></tr>
+<tr class="separator:a1f7d8bd6359f23bbd56ae2e8e5983d08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af93e7ad8335e4f21e1a5a30d7758f664"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpeer__s.html#af93e7ad8335e4f21e1a5a30d7758f664">pending_read</a></td></tr>
 <tr class="separator:af93e7ad8335e4f21e1a5a30d7758f664"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08a7d2ae66fa013bd2d5222701f239d2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpeer__s.html#a08a7d2ae66fa013bd2d5222701f239d2">pending_write</a></td></tr>
@@ -146,6 +148,21 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a1f7d8bd6359f23bbd56ae2e8e5983d08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f7d8bd6359f23bbd56ae2e8e5983d08">&#9670;&nbsp;</a></span>connected</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool peer_s::connected</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Indicates if the client is connected This filed is usefull for any wrapper that needs to know if the client is still connected or not </p>
+
+</div>
+</div>
 <a id="a45c37ca0e2af1945af1bbc6e3571cf9c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a45c37ca0e2af1945af1bbc6e3571cf9c">&#9670;&nbsp;</a></span>input_buffer</h2>
 
@@ -236,7 +253,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>A file descriptor for the socket. </p>
+<p>The file descriptor for the socket. </p>
 
 </div>
 </div>

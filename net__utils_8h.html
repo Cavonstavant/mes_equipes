@@ -129,18 +129,22 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="net__utils_8h__dep__incl.png" border="0" usemap="#server_2net__utils_2include_2net__utils_8hdep" alt=""/></div>
 <map name="server_2net__utils_2include_2net__utils_8hdep" id="server_2net__utils_2include_2net__utils_8hdep">
-<area shape="rect" title=" " alt="" coords="804,5,979,47"/>
+<area shape="rect" title=" " alt="" coords="637,5,812,47"/>
 <area shape="rect" href="display__utils_8c.html" title=" " alt="" coords="5,102,180,143"/>
-<area shape="rect" href="fd__set__manage_8h.html" title=" " alt="" coords="205,95,365,151"/>
-<area shape="rect" href="fd__sets__manage_8c.html" title=" " alt="" coords="260,199,427,255"/>
-<area shape="rect" href="server__accept__new__client_8c.html" title=" " alt="" coords="440,95,601,151"/>
-<area shape="rect" href="server__close__client_8c.html" title=" " alt="" coords="625,95,787,151"/>
-<area shape="rect" href="server__read__client_8c.html" title=" " alt="" coords="811,95,972,151"/>
-<area shape="rect" href="server__write__client_8c.html" title=" " alt="" coords="996,95,1157,151"/>
-<area shape="rect" href="peer_8c.html" title=" " alt="" coords="1181,109,1348,136"/>
-<area shape="rect" href="remove__unused__sockets_8c.html" title=" " alt="" coords="1372,102,1549,143"/>
-<area shape="rect" href="select_8c.html" title=" " alt="" coords="1573,109,1751,136"/>
-<area shape="rect" href="tcp__server_8c.html" title=" " alt="" coords="1775,102,1922,143"/>
+<area shape="rect" href="fd__set__manage_8h.html" title=" " alt="" coords="255,95,415,151"/>
+<area shape="rect" href="fd__sets__manage_8c.html" title=" " alt="" coords="117,199,284,255"/>
+<area shape="rect" href="server__read__client_8c.html" title=" " alt="" coords="360,199,521,255"/>
+<area shape="rect" href="server__accept__new__client_8c.html" title=" " alt="" coords="704,95,865,151"/>
+<area shape="rect" href="server__close__client_8c.html" title=" " alt="" coords="889,95,1051,151"/>
+<area shape="rect" href="server__write__client_8c.html" title=" " alt="" coords="1075,95,1236,151"/>
+<area shape="rect" href="peer_8c.html" title=" " alt="" coords="1260,109,1427,136"/>
+<area shape="rect" href="select_8c.html" title=" " alt="" coords="1451,109,1628,136"/>
+<area shape="rect" href="tcp__server_8c.html" title=" " alt="" coords="1653,102,1799,143"/>
+<area shape="rect" href="client__wrapper_8h.html" title=" " alt="" coords="491,102,628,143"/>
+<area shape="rect" href="my__teams__server_8h.html" title=" " alt="" coords="647,206,802,247"/>
+<area shape="rect" href="my__teams__server_8c.html" title=" " alt="" coords="387,303,545,344"/>
+<area shape="rect" href="client__wrapper_8c.html" title=" " alt="" coords="569,310,765,337"/>
+<area shape="rect" href="server_2src_2entrypoint_8c.html" title=" " alt="" coords="790,310,958,337"/>
 </map>
 </div>
 </div>
@@ -163,12 +167,7 @@ Macros</h2></td></tr>
 <tr class="memitem:aa24597a54a085c6c2c33b64138f09eff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="net__utils_8h.html#aa24597a54a085c6c2c33b64138f09eff">MAX_MSG</a>&#160;&#160;&#160;55555</td></tr>
 <tr class="memdesc:aa24597a54a085c6c2c33b64138f09eff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the maximum size of a message.  <a href="net__utils_8h.html#aa24597a54a085c6c2c33b64138f09eff">More...</a><br /></td></tr>
 <tr class="separator:aa24597a54a085c6c2c33b64138f09eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae888d76ec9e058aa47eeaaa7917a470d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="net__utils_8h.html#ae888d76ec9e058aa47eeaaa7917a470d">STOPPED</a>&#160;&#160;&#160;false</td></tr>
-<tr class="memdesc:ae888d76ec9e058aa47eeaaa7917a470d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the server status.  <a href="net__utils_8h.html#ae888d76ec9e058aa47eeaaa7917a470d">More...</a><br /></td></tr>
-<tr class="separator:ae888d76ec9e058aa47eeaaa7917a470d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fb7181d994ee98e735494be55809708"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="net__utils_8h.html#a6fb7181d994ee98e735494be55809708">RUNNING</a>&#160;&#160;&#160;true</td></tr>
-<tr class="separator:a6fb7181d994ee98e735494be55809708"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b2781cb26c170039ce2be4a72b1d521"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="net__utils_8h.html#a8b2781cb26c170039ce2be4a72b1d521">TEAMS_LOG</a>(msg)&#160;&#160;&#160;do {__log_error(__LINE__, strrchr(__FILE__, '/'), __func__, msg);} while (0)</td></tr>
+<tr class="memitem:a8b2781cb26c170039ce2be4a72b1d521"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="net__utils_8h.html#a8b2781cb26c170039ce2be4a72b1d521">TEAMS_LOG</a>(msg)</td></tr>
 <tr class="memdesc:a8b2781cb26c170039ce2be4a72b1d521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple macro used to log a message.  <a href="net__utils_8h.html#a8b2781cb26c170039ce2be4a72b1d521">More...</a><br /></td></tr>
 <tr class="separator:a8b2781cb26c170039ce2be4a72b1d521"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -189,9 +188,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a1839494efffd5329b4f02eca0b6e897c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="net__utils_8h.html#acc9845866a71c0f25f82e81e19b72ca3">peer_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="net__utils_8h.html#a1839494efffd5329b4f02eca0b6e897c">new_peer</a> (int fd, struct sockaddr_in addr)</td></tr>
 <tr class="memdesc:a1839494efffd5329b4f02eca0b6e897c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new client.  <a href="net__utils_8h.html#a1839494efffd5329b4f02eca0b6e897c">More...</a><br /></td></tr>
 <tr class="separator:a1839494efffd5329b4f02eca0b6e897c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0f13c8859099d2519c5165a9fae291b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="net__utils_8h.html#ad0f13c8859099d2519c5165a9fae291b">remove_unused_sockets</a> (struct peers_head *peers, int tbr[FD_SETSIZE])</td></tr>
-<tr class="memdesc:ad0f13c8859099d2519c5165a9fae291b"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove a peer from the collection of peers  <a href="net__utils_8h.html#ad0f13c8859099d2519c5165a9fae291b">More...</a><br /></td></tr>
-<tr class="separator:ad0f13c8859099d2519c5165a9fae291b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcdf908c14229f34e063c18c04b347ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="net__utils_8h.html#afcdf908c14229f34e063c18c04b347ff">display_clients</a> (struct peers_head *peers_head)</td></tr>
 <tr class="memdesc:afcdf908c14229f34e063c18c04b347ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Util function to display currently connected clients.  <a href="net__utils_8h.html#afcdf908c14229f34e063c18c04b347ff">More...</a><br /></td></tr>
 <tr class="separator:afcdf908c14229f34e063c18c04b347ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -207,9 +203,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a431c7f1bff79211086953f8c17cfdf88"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="net__utils_8h.html#a431c7f1bff79211086953f8c17cfdf88">server_wait</a> (<a class="el" href="net__utils_8h.html#af3d2eea012f708b8bf5a6e6a73a955b4">tcp_server_t</a> *srv)</td></tr>
 <tr class="memdesc:a431c7f1bff79211086953f8c17cfdf88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for a client update.  <a href="net__utils_8h.html#a431c7f1bff79211086953f8c17cfdf88">More...</a><br /></td></tr>
 <tr class="separator:a431c7f1bff79211086953f8c17cfdf88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d837afaffaa1b13fded1b0b0f66a4f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="net__utils_8h.html#a4d837afaffaa1b13fded1b0b0f66a4f1">server_manage_fd_update</a> (<a class="el" href="net__utils_8h.html#af3d2eea012f708b8bf5a6e6a73a955b4">tcp_server_t</a> *srv)</td></tr>
-<tr class="memdesc:a4d837afaffaa1b13fded1b0b0f66a4f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle a client update.  <a href="net__utils_8h.html#a4d837afaffaa1b13fded1b0b0f66a4f1">More...</a><br /></td></tr>
-<tr class="separator:a4d837afaffaa1b13fded1b0b0f66a4f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e8c9d2dffcfc79ac0b5ec9f2164c60a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="net__utils_8h.html#a3e8c9d2dffcfc79ac0b5ec9f2164c60a">server_manage_fd_update</a> (<a class="el" href="net__utils_8h.html#af3d2eea012f708b8bf5a6e6a73a955b4">tcp_server_t</a> *srv)</td></tr>
+<tr class="memdesc:a3e8c9d2dffcfc79ac0b5ec9f2164c60a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle a client update.  <a href="net__utils_8h.html#a3e8c9d2dffcfc79ac0b5ec9f2164c60a">More...</a><br /></td></tr>
+<tr class="separator:a3e8c9d2dffcfc79ac0b5ec9f2164c60a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a848750161824c5aa011ed0442ec0863c"></a>
@@ -244,36 +240,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6fb7181d994ee98e735494be55809708"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6fb7181d994ee98e735494be55809708">&#9670;&nbsp;</a></span>RUNNING</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define RUNNING&#160;&#160;&#160;true</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae888d76ec9e058aa47eeaaa7917a470d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae888d76ec9e058aa47eeaaa7917a470d">&#9670;&nbsp;</a></span>STOPPED</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define STOPPED&#160;&#160;&#160;false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Defines the server status. </p>
-
-</div>
-</div>
 <a id="a8b2781cb26c170039ce2be4a72b1d521"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8b2781cb26c170039ce2be4a72b1d521">&#9670;&nbsp;</a></span>TEAMS_LOG</h2>
 
@@ -285,11 +251,13 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">msg</td><td>)</td>
-          <td>&#160;&#160;&#160;do {__log_error(__LINE__, strrchr(__FILE__, '/'), __func__, msg);} while (0)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<b>Value:</b><div class="fragment"><div class="line">        <span class="keywordflow">do</span> {__log_error(__LINE__, \</div>
+<div class="line">strrchr(__FILE__, <span class="charliteral">&#39;/&#39;</span>) + 1, __func__, msg);} <span class="keywordflow">while</span> (0)</div>
+</div><!-- fragment -->
 <p>Simple macro used to log a message. </p>
 
 </div>
@@ -486,43 +454,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad0f13c8859099d2519c5165a9fae291b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0f13c8859099d2519c5165a9fae291b">&#9670;&nbsp;</a></span>remove_unused_sockets()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void remove_unused_sockets </td>
-          <td>(</td>
-          <td class="paramtype">struct peers_head *&#160;</td>
-          <td class="paramname"><em>peers</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>tbr</em>[FD_SETSIZE]&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>remove a peer from the collection of peers </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">peers</td><td>the head of the collection of peers created with CIRCLEQ_INIT </td></tr>
-    <tr><td class="paramname">tbr</td><td>to be removed peers with <b>tbr[peer-&gt;sock_fd] == 1</b> </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="add3f589883b7ecc94c2aebd3c322cbce"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#add3f589883b7ecc94c2aebd3c322cbce">&#9670;&nbsp;</a></span>server_fill_fd_sets()</h2>
 
@@ -549,14 +480,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4d837afaffaa1b13fded1b0b0f66a4f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d837afaffaa1b13fded1b0b0f66a4f1">&#9670;&nbsp;</a></span>server_manage_fd_update()</h2>
+<a id="a3e8c9d2dffcfc79ac0b5ec9f2164c60a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e8c9d2dffcfc79ac0b5ec9f2164c60a">&#9670;&nbsp;</a></span>server_manage_fd_update()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void server_manage_fd_update </td>
+          <td class="memname">bool server_manage_fd_update </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="net__utils_8h.html#af3d2eea012f708b8bf5a6e6a73a955b4">tcp_server_t</a> *&#160;</td>
           <td class="paramname"><em>srv</em></td><td>)</td>
@@ -572,6 +503,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>true if a new connection was instanciated false otherwise </dd></dl>
 
 </div>
 </div>

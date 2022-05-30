@@ -1,6 +1,7 @@
 var structpeer__s =
 [
     [ "CIRCLEQ_ENTRY", "structpeer__s.html#a284c9324bc703285f60abaaddf9a3293", null ],
+    [ "connected", "structpeer__s.html#a1f7d8bd6359f23bbd56ae2e8e5983d08", null ],
     [ "input_buffer", "structpeer__s.html#a45c37ca0e2af1945af1bbc6e3571cf9c", null ],
     [ "output_buffer", "structpeer__s.html#ade6327bebcfabd2d2bc67893854d657e", null ],
     [ "peer_addr", "structpeer__s.html#a2a62e8014e955878f051918f281d8a81", null ],

@@ -122,8 +122,6 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a1585c86e0cb1e6648c7a103391ce8045"><td class="memItemLeft" align="right" valign="top">fd_set&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtcp__server__s.html#a1585c86e0cb1e6648c7a103391ce8045">err_fds</a></td></tr>
 <tr class="memdesc:a1585c86e0cb1e6648c7a103391ce8045"><td class="mdescLeft">&#160;</td><td class="mdescRight">The collection of errored file descriptor set.  <a href="structtcp__server__s.html#a1585c86e0cb1e6648c7a103391ce8045">More...</a><br /></td></tr>
 <tr class="separator:a1585c86e0cb1e6648c7a103391ce8045"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01d90144a8485111f1fffb15619580f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtcp__server__s.html#a01d90144a8485111f1fffb15619580f7">sockets_to_be_removed</a> [FD_SETSIZE]</td></tr>
-<tr class="separator:a01d90144a8485111f1fffb15619580f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e158eb89ca952c3347a0b1885e353c2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtcp__server__s.html#a5e158eb89ca952c3347a0b1885e353c2">state</a></td></tr>
 <tr class="separator:a5e158eb89ca952c3347a0b1885e353c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -223,21 +221,6 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The file descriptor of the server socket. </p>
-
-</div>
-</div>
-<a id="a01d90144a8485111f1fffb15619580f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01d90144a8485111f1fffb15619580f7">&#9670;&nbsp;</a></span>sockets_to_be_removed</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int tcp_server_s::sockets_to_be_removed[FD_SETSIZE]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Sockets to be removed after read failed sockets_to_be_removed[i] == true if the socket at index <b>i</b> is to be removed </p>
 
 </div>
 </div>

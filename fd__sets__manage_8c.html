@@ -119,9 +119,9 @@ Functions</h2></td></tr>
 <tr class="memitem:add3f589883b7ecc94c2aebd3c322cbce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fd__sets__manage_8c.html#add3f589883b7ecc94c2aebd3c322cbce">server_fill_fd_sets</a> (<a class="el" href="net__utils_8h.html#af3d2eea012f708b8bf5a6e6a73a955b4">tcp_server_t</a> *srv)</td></tr>
 <tr class="memdesc:add3f589883b7ecc94c2aebd3c322cbce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the read and write fd sets according to <a class="el" href="structpeer__s.html#af93e7ad8335e4f21e1a5a30d7758f664">peer_t::pending_read</a> of every peers connected.  <a href="fd__sets__manage_8c.html#add3f589883b7ecc94c2aebd3c322cbce">More...</a><br /></td></tr>
 <tr class="separator:add3f589883b7ecc94c2aebd3c322cbce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d837afaffaa1b13fded1b0b0f66a4f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fd__sets__manage_8c.html#a4d837afaffaa1b13fded1b0b0f66a4f1">server_manage_fd_update</a> (<a class="el" href="net__utils_8h.html#af3d2eea012f708b8bf5a6e6a73a955b4">tcp_server_t</a> *srv)</td></tr>
-<tr class="memdesc:a4d837afaffaa1b13fded1b0b0f66a4f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle a client update.  <a href="fd__sets__manage_8c.html#a4d837afaffaa1b13fded1b0b0f66a4f1">More...</a><br /></td></tr>
-<tr class="separator:a4d837afaffaa1b13fded1b0b0f66a4f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e8c9d2dffcfc79ac0b5ec9f2164c60a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fd__sets__manage_8c.html#a3e8c9d2dffcfc79ac0b5ec9f2164c60a">server_manage_fd_update</a> (<a class="el" href="net__utils_8h.html#af3d2eea012f708b8bf5a6e6a73a955b4">tcp_server_t</a> *srv)</td></tr>
+<tr class="memdesc:a3e8c9d2dffcfc79ac0b5ec9f2164c60a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle a client update.  <a href="fd__sets__manage_8c.html#a3e8c9d2dffcfc79ac0b5ec9f2164c60a">More...</a><br /></td></tr>
+<tr class="separator:a3e8c9d2dffcfc79ac0b5ec9f2164c60a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="add3f589883b7ecc94c2aebd3c322cbce"></a>
@@ -150,14 +150,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4d837afaffaa1b13fded1b0b0f66a4f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d837afaffaa1b13fded1b0b0f66a4f1">&#9670;&nbsp;</a></span>server_manage_fd_update()</h2>
+<a id="a3e8c9d2dffcfc79ac0b5ec9f2164c60a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e8c9d2dffcfc79ac0b5ec9f2164c60a">&#9670;&nbsp;</a></span>server_manage_fd_update()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void server_manage_fd_update </td>
+          <td class="memname">bool server_manage_fd_update </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="net__utils_8h.html#af3d2eea012f708b8bf5a6e6a73a955b4">tcp_server_t</a> *&#160;</td>
           <td class="paramname"><em>srv</em></td><td>)</td>
@@ -173,6 +173,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>true if a new connection was instanciated false otherwise </dd></dl>
 
 </div>
 </div>
