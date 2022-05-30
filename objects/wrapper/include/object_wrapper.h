@@ -75,6 +75,16 @@ typedef struct object_wrapper_s {
 } object_wrapper_t;
 
 ///
+/// \brief Child list object containing all informations about a child list
+///
+typedef struct child_list_s {
+    /// List of uuid_t
+    my_uuid_t **list;
+    /// Size of the list 
+    int size;
+} child_list_t;
+
+///
 /// \brief Create a new wrapper object
 /// Init all the object lists
 ///
@@ -266,5 +276,133 @@ my_uuid_t *user_uuid, my_uuid_t *team_uuid);
 ///
 bool wrapper_user_leave_team(object_wrapper_t *wrapper,
 my_uuid_t *user_uuid, my_uuid_t *team_uuid);
+
+///
+/// \brief Find a matching channel by his name inside the wrapper list
+///
+/// \param wrapper Wrapper object
+/// \param name Name to match
+/// \return my_uuid_t* Uuid of the founded object, NULL otherwise
+///
+my_uuid_t *find_channel_by_name(object_wrapper_t *wrapper, char *name);
+
+///
+/// \brief Find a matching team by his name inside the wrapper list
+///
+/// \param wrapper Wrapper object
+/// \param name Name to match
+/// \return my_uuid_t* Uuid of the founded object, NULL otherwise
+///
+my_uuid_t *find_team_by_name(object_wrapper_t *wrapper, char *name);
+
+///
+/// \brief Find a matching thread by his name inside the wrapper list
+///
+/// \param wrapper Wrapper object
+/// \param name Name to match
+/// \return my_uuid_t* Uuid of the founded object, NULL otherwise
+///
+my_uuid_t *find_thread_by_name(object_wrapper_t *wrapper, char *name);
+
+///
+/// \brief Find a matching user by his name inside the wrapper list
+///
+/// \param wrapper Wrapper object
+/// \param name Name to match
+/// \return my_uuid_t* Uuid of the founded object, NULL otherwise
+///
+my_uuid_t *find_user_by_name(object_wrapper_t *wrapper, char *name);
+
+///
+/// \brief Get the channel child list
+///
+/// \param wrapper Wrapper object
+/// \param channel_uuid Uuid of the channel
+/// \return child_list_t Child_list object
+///
+child_list_t get_channel_child_list(object_wrapper_t *wrapper,
+my_uuid_t *channel_uuid);
+
+///
+/// \brief Get the conversation child list
+///
+/// \param wrapper Wrapper object
+/// \param conversation_uuid Uuid of the conversation
+/// \return child_list_t Child_list object
+///
+child_list_t get_conversation_child_list(object_wrapper_t *wrapper,
+my_uuid_t *conversation_uuid);
+
+///
+/// \brief Get the team child list
+///
+/// \param wrapper Wrapper object
+/// \param team_uuid Uuid of the team
+/// \return child_list_t Child_list object
+///
+child_list_t get_team_child_list(object_wrapper_t *wrapper,
+my_uuid_t *team_uuid);
+
+///
+/// \brief Get the thread child list
+///
+/// \param wrapper Wrapper object
+/// \param thread_uuid Uuid of the thread
+/// \return child_list_t Child_list object
+///
+child_list_t get_thread_child_list(object_wrapper_t *wrapper,
+my_uuid_t *thread_uuid);
+
+///
+/// \brief Get the subscribed team of user object
+///
+/// \param wrapper Wrapper object
+/// \param user_uuid Uuid of the user
+/// \return child_list_t List of the uuid team and his size
+///
+child_list_t get_subscribed_team_of_user(object_wrapper_t *wrapper,
+my_uuid_t *user_uuid);
+
+///
+/// \brief Get the subscribed user of team object
+///
+/// \param wrapper Wrapper object
+/// \param user_uuid Uuid of the team
+/// \return child_list_t List of the uuid team and his size
+///
+child_list_t get_subscribed_user_of_team(object_wrapper_t *wrapper,
+my_uuid_t *team_uuid);
+
+///
+/// \brief Tell if a user is sub to a team
+///
+/// \param wrapper Wrapper object
+/// \param user_uuid Uuid of the user
+/// \param team_uuid Uuid of the team
+/// \return true If the user is sub
+/// \return false If the user is not sub
+///
+bool user_is_sub_to_team(object_wrapper_t *wrapper,
+my_uuid_t *user_uuid, my_uuid_t *team_uuid);
+
+///
+/// \brief Get the associated team of a channel
+///
+/// \param wrapper Wrapper object
+/// \param channel_uuid Uuid of the channel
+/// \return my_uuid_t* Uuid of the team, NULL otherwise
+///
+my_uuid_t *get_associated_team_channel(object_wrapper_t *wrapper,
+my_uuid_t *channel_uuid);
+
+///
+/// \brief Get the associated team thread object
+///
+/// \param wrapper Wrapper object
+/// \param thread_uuid Uuid of the thread
+/// \return my_uuid_t* Uuid of the team, NULL otherwise
+///
+my_uuid_t *get_associated_team_thread(object_wrapper_t *wrapper,
+my_uuid_t *thread_uuid);
 
 #endif /* !OBJECT_WRAPPER_H_ */

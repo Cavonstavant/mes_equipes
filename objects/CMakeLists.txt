@@ -78,12 +78,21 @@ set (SRC
     ${SRC_WRAPPER}/lower_component_get.c
     ${SRC_WRAPPER}/wrapper_interaction.c
     ${SRC_WRAPPER}/wrapper_modification.c
+    ${SRC_WRAPPER}/find_by_name.c
+    ${SRC_WRAPPER}/get_child_list.c
+    ${SRC_WRAPPER}/user_and_team_relation.c
+    ${SRC_WRAPPER}/get_associated_team.c
 )
 
 add_library(${TARGET} ${SRC})
 
+target_link_directories(${TARGET}
+    PUBLIC ${PROJECT_SOURCE_DIR}/libs
+)
+
 target_link_libraries(${TARGET}
     PRIVATE ${PROJECT_NAME}_uuid_wrapper
+    PUBLIC myteams
 )
 
 target_include_directories(${TARGET}
@@ -100,6 +109,7 @@ target_include_directories(${TARGET}
     PUBLIC ${INCLUDE_USER}
     PUBLIC ${INCLUDE_UUID}
     PUBLIC ${INCLUDE_WRAPPER}
+    PUBLIC ${PROJECT_SOURCE_DIR}/libs
     PRIVATE ${SRC_ROOT}
 )
 
