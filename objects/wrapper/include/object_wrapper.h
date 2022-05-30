@@ -395,4 +395,14 @@ my_uuid_t *user_uuid, my_uuid_t *team_uuid);
 my_uuid_t *get_associated_team_channel(object_wrapper_t *wrapper,
 my_uuid_t *channel_uuid);
 
+///
+/// \brief Get the associated team thread object
+///
+/// \param wrapper Wrapper object
+/// \param thread_uuid Uuid of the thread
+/// \return my_uuid_t* Uuid of the team, NULL otherwise
+///
+my_uuid_t *get_associated_team_thread(object_wrapper_t *wrapper,
+my_uuid_t *thread_uuid);
+
 #endif /* !OBJECT_WRAPPER_H_ */

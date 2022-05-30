@@ -33,7 +33,6 @@
 ///
 /// \brief Comment object
 ///
-///
 typedef struct conversation_s {
     /// Uuid of the conversation
     my_uuid_t *uuid;
