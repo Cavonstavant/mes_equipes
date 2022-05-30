@@ -5,6 +5,8 @@
 ** call_command
 */
 
+/// \file server/applicatif/call_command.c
+
 #include "cli_commands.h"
 
 /// /!\ This function doesn't call the function actually, because the function

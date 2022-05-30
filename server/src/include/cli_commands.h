@@ -5,12 +5,13 @@
 ** parser
 */
 
-/// \file server/src/cli_commands.h
+/// \file server/applicatif/cli_commands.h
 
 #ifndef CLI_COMMANDS_H_
     #define CLI_COMMANDS_H_
 
     #define COMMAND_NUMBER 14
+
 /// \brief structure to store available client command.
 typedef struct cli_command_s {
     /// \brief char * The name of the command.
@@ -53,7 +54,7 @@ cli_command_t *convert_command_to_structure(char *command);
 /// \brief This function call the function store on the structure passed as parameter.
 /// \param cli_command_t The structure which contains the function to be call.
 /// \return 0, or -1 if an error occurs.
-int call_command(cli_command_t *command);
+int call_command(cli_command_t *command, user_list_t *, server_data_t *);
 
 /// \brief This function fill the arguments of the called command in a array of char *.
 /// \param char *The command to be parse.
