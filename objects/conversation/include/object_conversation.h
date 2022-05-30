@@ -115,7 +115,7 @@ my_uuid_t *message);
 ///
 /// \param conv Conversation object
 /// \param user Uuid of the user to search
-/// \return true if the user if find
+/// \return true if the user is find
 /// \return false if the user is not find
 ///
 bool conversation_have_user(conversation_t *conv, my_uuid_t *user);
