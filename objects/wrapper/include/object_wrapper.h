@@ -385,4 +385,14 @@ my_uuid_t *team_uuid);
 bool user_is_sub_to_team(object_wrapper_t *wrapper,
 my_uuid_t *user_uuid, my_uuid_t *team_uuid);
 
+///
+/// \brief Get the associated team of a channel
+///
+/// \param wrapper Wrapper object
+/// \param channel_uuid Uuid of the channel
+/// \return my_uuid_t* Uuid of the team, NULL otherwise
+///
+my_uuid_t *get_associated_team_channel(object_wrapper_t *wrapper,
+my_uuid_t *channel_uuid);
+
 #endif /* !OBJECT_WRAPPER_H_ */

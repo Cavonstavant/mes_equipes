@@ -81,6 +81,7 @@ set (SRC
     ${SRC_WRAPPER}/find_by_name.c
     ${SRC_WRAPPER}/get_child_list.c
     ${SRC_WRAPPER}/user_and_team_relation.c
+    ${SRC_WRAPPER}/get_associated_team.c
 )
 
 add_library(${TARGET} ${SRC})
