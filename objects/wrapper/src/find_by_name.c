@@ -24,3 +24,11 @@ my_uuid_t *find_team_by_name(object_wrapper_t *wrapper, char *name)
             return wrapper->teams[i]->uuid;
     return OBJECT_NOT_FOUND;
 }
+
+my_uuid_t *find_thread_by_name(object_wrapper_t *wrapper, char *name)
+{
+    for (int i = 0; i < wrapper->thread_n; i++)
+        if (strcmp(wrapper->threads[i]->name, name) == 0)
+            return wrapper->threads[i]->uuid;
+    return OBJECT_NOT_FOUND;
+}
