@@ -40,3 +40,17 @@ my_uuid_t *find_user_by_name(object_wrapper_t *wrapper, char *name)
             return wrapper->users[i]->uuid;
     return OBJECT_NOT_FOUND;
 }
+
+my_uuid_t *find_conv_by_participant(object_wrapper_t *wrapper,
+my_uuid_t *first, my_uuid_t *second)
+{
+    conversation_t *conv = NULL;
+
+    for (int i = 0; i < wrapper->conversation_n; i++) {
+        conv = wrapper->conversations[i];
+        if (conversation_have_user(conv, first) &&
+            conversation_have_user(conv, second))
+            return conv->uuid;
+    }
+    return OBJECT_NOT_FOUND;
+}
