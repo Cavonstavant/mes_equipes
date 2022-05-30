@@ -294,4 +294,13 @@ my_uuid_t *find_team_by_name(object_wrapper_t *wrapper, char *name);
 ///
 my_uuid_t *find_thread_by_name(object_wrapper_t *wrapper, char *name);
 
+///
+/// \brief Find a matching user by his name inside the wrapper list
+///
+/// \param wrapper Wrapper object
+/// \param name Name to match
+/// \return my_uuid_t* Uuid of the founded object, NULL otherwise
+///
+my_uuid_t *find_user_by_name(object_wrapper_t *wrapper, char *name);
+
 #endif /* !OBJECT_WRAPPER_H_ */

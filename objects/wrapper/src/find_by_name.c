@@ -32,3 +32,11 @@ my_uuid_t *find_thread_by_name(object_wrapper_t *wrapper, char *name)
             return wrapper->threads[i]->uuid;
     return OBJECT_NOT_FOUND;
 }
+
+my_uuid_t *find_user_by_name(object_wrapper_t *wrapper, char *name)
+{
+    for (int i = 0; i < wrapper->user_n; i++)
+        if (strcmp(wrapper->users[i]->name, name) == 0)
+            return wrapper->users[i]->uuid;
+    return OBJECT_NOT_FOUND;
+}
