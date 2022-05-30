@@ -5,7 +5,7 @@
 ** my_teams_server
 */
 
-/// \file server/src/include/my_teams_server.h
+/// \file server/include/my_teams_server.h
 
 #ifndef MY_TEAMS_SERVER_H
     #define MY_TEAMS_SERVER_H
@@ -26,6 +26,7 @@ typedef struct teams_server_s {
 
 /// \brief creates a new teams server
 /// \param port The port the server will listen to
+/// The newly created server
 teams_server_t *create_new_server(long port);
 
 #endif /* MY_TEAMS_SERVER_H */

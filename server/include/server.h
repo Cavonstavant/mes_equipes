@@ -13,8 +13,14 @@
     #include "object_wrapper.h"
     #include "my_teams_server.h"
 
+    ///
+    /// \brief Return value when operation success
+    ///
     #define SUCCESS 0
 
+    ///
+    /// \brief Return value when operation failed
+    ///
     #define FAILED 84
 
 ///
