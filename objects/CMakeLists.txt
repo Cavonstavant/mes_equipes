@@ -10,6 +10,9 @@ set (INCLUDE_TEAM ${PROJECT_SOURCE_DIR}/objects/team/include)
 set (INCLUDE_THREAD ${PROJECT_SOURCE_DIR}/objects/thread/include)
 set (INCLUDE_USER ${PROJECT_SOURCE_DIR}/objects/user/include)
 set (INCLUDE_UUID ${PROJECT_SOURCE_DIR}/objects/uuid/include)
+set (INCLUDE_UUID_WRAPPER
+    ${PROJECT_SOURCE_DIR}/objects/uuid/uuid_wrapper/src/include
+)
 
 set (INCLUDE_WRAPPER ${PROJECT_SOURCE_DIR}/objects/wrapper/include)
 
@@ -109,8 +112,13 @@ target_include_directories(${TARGET}
     PUBLIC ${INCLUDE_USER}
     PUBLIC ${INCLUDE_UUID}
     PUBLIC ${INCLUDE_WRAPPER}
+    PUBLIC ${INCLUDE_UUID_WRAPPER}
     PUBLIC ${PROJECT_SOURCE_DIR}/libs
     PRIVATE ${SRC_ROOT}
 )
 
 add_subdirectory(uuid/uuid_wrapper)
+
+set_property(
+     TARGET ${TARGET} PROPERTY POSITION_INDEPENDENT_CODE ON
+)

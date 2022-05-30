@@ -18,5 +18,6 @@ peer_t *new_peer(int fd, struct sockaddr_in addr)
     bzero(new_peer, sizeof(peer_t));
     new_peer->sock_fd = fd;
     new_peer->peer_addr = addr;
+    new_peer->connected = true;
     return (new_peer);
 }
