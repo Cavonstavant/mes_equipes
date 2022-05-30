@@ -22,4 +22,4 @@ function (create_test)
 endfunction()
 
 add_subdirectory(objects)
-add_subdirectory(core)
+# add_subdirectory(core)
