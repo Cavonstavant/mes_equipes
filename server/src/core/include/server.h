@@ -5,7 +5,7 @@
 ** server
 */
 
-/// \file server/include/server.h
+/// \file server/src/core/include/server.h
 
 #ifndef SERVER_H_
     #define SERVER_H_

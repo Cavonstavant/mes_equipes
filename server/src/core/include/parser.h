@@ -5,7 +5,7 @@
 ** parser
 */
 
-/// \file server/src/parser/include/parser.h
+/// \file server/src/core/include/parser.h
 
 #ifndef PARSER_H_
     #define PARSER_H_
