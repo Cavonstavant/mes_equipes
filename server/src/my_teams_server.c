@@ -41,7 +41,7 @@ void teams_server_stop(teams_server_t *self)
     }
 }
 
-/// \brief Just as the name says
+/// \brief init the teams server methods
 static void init_teams_server_methods(teams_server_t *new_server)
 {
     new_server->run = teams_server_run;

@@ -12,7 +12,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-/// \brief juste as the function name says
+/// \brief bind the srv socket ot a file descriptor
 static bool bind_socket(client_net_server_t *srv, long port)
 {
     srv->sock_fd = socket(PF_INET, SOCK_STREAM, 0);
