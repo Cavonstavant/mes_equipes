@@ -1,4 +1,4 @@
-set (INCLUDE_DIRS ${PROJECT_SOURCE_DIR}/server/src/include)
+set (INCLUDE_DIRS ${PROJECT_SOURCE_DIR}/server/include)
 set (SRC_ROOT ${PROJECT_SOURCE_DIR}/server/src)
 
 set (TARGET ${PROJECT_NAME}_server)
@@ -21,6 +21,9 @@ add_executable(${TARGET} ${SRC})
 
 target_include_directories(${TARGET}
     PUBLIC ${PROJECT_SOURCE_DIR}/libs
+    PUBLIC ${INCLUDE_DIRS}
+    PRIVATE ${PROJECT_SOURCE_DIR}/objects
+    PRIVATE ${SRC_ROOT}
 )
 
 target_link_directories(${TARGET}
@@ -33,6 +36,7 @@ set_target_properties(${TARGET} PROPERTIES
 
 target_link_libraries(${TARGET}
     PRIVATE ${PROJECT_NAME}_commands
+    PRIVATE ${PROJECT_NAME}_objects
     PUBLIC myteams
 )
 
