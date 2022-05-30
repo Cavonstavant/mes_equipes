@@ -21,9 +21,8 @@ bool server_accept_new_client(tcp_server_t *srv);
 /// fills the peer_t::input_buffer
 /// \param srv The server
 /// \param tmp The peer
-/// \return > 0 if the message was read, -1 if an error occured,
-/// 0 if the client disconnected
-ssize_t server_read_client(tcp_server_t *srv, peer_t *tmp);
+/// \return true if the message was read, false otherwise
+bool server_read_client(tcp_server_t *srv, peer_t *tmp);
 
 /// \brief Writes a message to a client,
 /// uses the peer_t::output_buffer

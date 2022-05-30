@@ -17,7 +17,7 @@ static bool bind_and_listen_on_socket(tcp_server_t *srv, long port)
         TEAMS_LOG("socket");
         return false;
     }
-    memset(srv->self, 0, sizeof(srv->self));
+    memset(&srv->self, 0, sizeof(srv->self));
     srv->self.sin_family = AF_INET;
     srv->self.sin_port = htons(port);
     srv->self.sin_addr.s_addr = htonl(INADDR_ANY);
