@@ -69,6 +69,7 @@ void server_loop(server_data_t *server_data)
         if (server_manage_fd_update(network_server))
             server_add_user(server_data);
         process_command_inspection(server_data);
+        remove_disconnected_user(server_data, TO_LOGOUT);
         server_fill_fd_sets(network_server);
         server_data->server->state = running;
     }
