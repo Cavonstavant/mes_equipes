@@ -28,7 +28,6 @@ bool server_read_client(tcp_server_t *srv, peer_t *tmp);
 /// uses the peer_t::output_buffer
 /// \param srv The server
 /// \param tmp The peer
-
 bool server_write_client(tcp_server_t *srv, peer_t *tmp);
 
 /// \brief Closes a connection to a client
