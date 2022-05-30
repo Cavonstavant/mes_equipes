@@ -138,7 +138,7 @@ Test(compute_command, test18)
 Test(convert_command_to_structure, test19)
 {
     char *cmd = strdup("/login \"thomas\"");
-    cli_command_t *cli = convert_command_to_structure(cmd);
+    cli_command_t *cli = convert_command_to_structure(cmd, NULL);
 
     cr_assert_str_eq(cli->name, "/login");
     cr_assert_str_eq(cli->arguments[0], "thomas");
@@ -160,7 +160,7 @@ Test(get_cli_commands, test21)
 
 Test(fill_command_arguments, test22)
 {
-    char **ret = fill_command_arguments(NULL, "/login");
+    char **ret = fill_command_arguments(NULL, "/login", NULL);
     cr_assert(ret == NULL);
 }
 

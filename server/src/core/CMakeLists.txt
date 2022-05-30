@@ -12,6 +12,7 @@ set(SRC
     ${SRC_ROOT}/my_teams_server.c
     ${SRC_ROOT}/server_data.c
     ${SRC_ROOT}/server_run.c
+    ${SRC_ROOT}/auth_command.c
 
     ${INC_ROOT}/cli_commands.h
     ${INC_ROOT}/entrypoint.h

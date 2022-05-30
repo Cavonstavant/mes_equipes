@@ -95,4 +95,14 @@ bool server_add_user(server_data_t *server_data);
 ///
 void process_command_inspection(server_data_t *server_data);
 
+///
+/// \brief Get the user list by peer object
+///
+/// \param server_data Server data info
+/// \param peer Peer to match
+/// \return user_list_t* User list matched, NULL otherwise
+///
+user_list_t *get_user_list_by_peer(server_data_t *server_data,
+peer_t *peer);
+
 #endif /* !SERVER_H_ */
