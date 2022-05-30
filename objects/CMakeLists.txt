@@ -118,3 +118,7 @@ target_include_directories(${TARGET}
 )
 
 add_subdirectory(uuid/uuid_wrapper)
+
+set_property(
+     TARGET ${TARGET} PROPERTY POSITION_INDEPENDENT_CODE ON
+)
