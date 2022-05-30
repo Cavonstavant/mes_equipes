@@ -57,7 +57,8 @@ static char *format_command(char *command)
     return format_arguments(command, cmd_i, new_cmd_i);
 }
 
-int compute_command(char *command)
+int compute_command(char *command, user_list_t *users,
+server_data_t *server_data)
 {
     char *tmp = format_command(command);
     cli_command_t *cmd = convert_command_to_structure(tmp);
@@ -65,7 +66,7 @@ int compute_command(char *command)
     if (cmd == NULL) {
         return (-1);
     }
-    if (call_command(cmd) < 0) {
+    if (call_command(cmd, users, server_data) < 0) {
         return (-1);
     }
     free(command);

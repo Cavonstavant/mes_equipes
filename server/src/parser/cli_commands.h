@@ -18,23 +18,23 @@ typedef struct cli_command_s {
     /// \brief char ** Arguments for the command.
     char **arguments;
     /// \brief void * Function to call.
-    void *(*function)(void *);
+    bool (*function)(cli_command_t *, user_list_t *, server_data_t *);
 } cli_command_t;
 
-void *help_command(void *);
-void *info_command(void *);
-void *list_command(void *);
-void *create_command(void *);
-void *use_command(void *);
-void *unsubscribe_command(void *);
-void *subscribe_command(void *);
-void *subscribed_command(void *);
-void *messages_command(void *);
-void *send_command(void *);
-void *user_command(void *);
-void *users_command(void *);
-void *logout_command(void *);
-void *login_command(void *);
+bool command_help(cli_command_t *, user_list_t *, server_data_t *);
+bool command_info(cli_command_t *, user_list_t *, server_data_t *);
+bool command_list(cli_command_t *, user_list_t *, server_data_t *);
+bool command_create(cli_command_t *, user_list_t *, server_data_t *);
+bool command_use(cli_command_t *, user_list_t *, server_data_t *);
+bool command_unsubscribe(cli_command_t *, user_list_t *, server_data_t *);
+bool command_subscribe(cli_command_t *, user_list_t *, server_data_t *);
+bool command_subscribed(cli_command_t *, user_list_t *, server_data_t *);
+bool command_messages(cli_command_t *, user_list_t *, server_data_t *);
+bool command_send(cli_command_t *, user_list_t *, server_data_t *);
+bool command_user(cli_command_t *, user_list_t *, server_data_t *);
+bool command_users(cli_command_t *, user_list_t *, server_data_t *);
+bool command_logout(cli_command_t *, user_list_t *, server_data_t *);
+bool command_login(cli_command_t *, user_list_t *, server_data_t *);
 
 /// \brief This function get the commands static const defined in cli_command.c.
 /// \return const cli_command_t * An array of available commands.

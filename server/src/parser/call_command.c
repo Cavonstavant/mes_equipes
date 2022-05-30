@@ -13,7 +13,8 @@
 /// must be contains the arguments of the command, and an object to be use
 /// to ask a write on the client.
 
-int call_command(cli_command_t *command)
+int call_command(cli_command_t *command, user_list_t *users,
+server_data_t *server_data)
 {
     const cli_command_t *cmd = get_cli_command_by_name(command->name);
     int i = 0;
@@ -27,5 +28,6 @@ int call_command(cli_command_t *command)
         // print_retcode(510);
         return (-1);
     }
+    cmd->function(command, users, server_data);
     return (0);
 }
