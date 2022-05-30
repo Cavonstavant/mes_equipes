@@ -22,4 +22,4 @@ function (create_test)
 endfunction()
 
 add_subdirectory(objects)
-add_subdirectory(parser)
+add_subdirectory(core)
