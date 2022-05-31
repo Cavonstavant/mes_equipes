@@ -112,15 +112,18 @@ static inline retcodes_t *create_new_repcode(int code) {
 /// \param int The return code value.
 /// \param char **Arguments to be passed to the retcodes_t structure if it is
 /// necessary.
-static inline void print_retcode(int code, char **args, peer_t *peer)
+static inline void print_retcode(int code, char *arg, peer_t *peer)
 {
     retcodes_t *retcode = create_new_repcode(code);
-    char *command = malloc(sizeof(char) * 100000); // MALLOC WITH PARAM
+    char *command = malloc(sizeof(char) * ((arg) ? strlen(arg) +
+    strlen(retcode->repr) - 2 : strlen(retcode->repr)));
 
     if (command == NULL)
         return;
-    (void) args;
-    sprintf(command, retcode->repr); // ADD PARAM
+    if (arg)
+        sprintf(command, retcode->repr, arg);
+    else
+        sprintf(command, retcode->repr);
     client_set_output_buffer(peer, command);
     free(command);
     free(retcode);
