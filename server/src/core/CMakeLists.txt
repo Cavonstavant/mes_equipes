@@ -32,7 +32,7 @@ target_include_directories(${TARGET}
 )
 
 target_link_directories(${TARGET}
-    PUBLIC ${PROJECT_SOURCE_DIR}/libs
+    PUBLIC ${PROJECT_SOURCE_DIR}/libs/myteams
 )
 
 target_link_libraries(${TARGET}

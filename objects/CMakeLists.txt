@@ -90,7 +90,7 @@ set (SRC
 add_library(${TARGET} ${SRC})
 
 target_link_directories(${TARGET}
-    PUBLIC ${PROJECT_SOURCE_DIR}/libs
+    PUBLIC ${PROJECT_SOURCE_DIR}/libs/myteams
 )
 
 target_link_libraries(${TARGET}
@@ -113,7 +113,7 @@ target_include_directories(${TARGET}
     PUBLIC ${INCLUDE_UUID}
     PUBLIC ${INCLUDE_WRAPPER}
     PUBLIC ${INCLUDE_UUID_WRAPPER}
-    PUBLIC ${PROJECT_SOURCE_DIR}/libs
+    PUBLIC ${PROJECT_SOURCE_DIR}/libs/myteams
     PRIVATE ${SRC_ROOT}
 )
 
