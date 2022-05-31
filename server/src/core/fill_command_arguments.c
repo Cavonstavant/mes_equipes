@@ -46,9 +46,8 @@ static char **fill_arguments(char *command, int arg_number, char **args)
         if (!command[arg_len])
             return (NULL);
         args[i] = malloc(sizeof(char) * (arg_len + 1));
-        if (!args[i])
-            return (NULL);
         strncpy(args[i], command, arg_len);
+        args[i][arg_len] = '\0';
         command = command + arg_len + 1;
     }
     if (command[0])

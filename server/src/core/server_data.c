@@ -54,7 +54,6 @@ bool server_add_user(server_data_t *server_data)
 
 void server_remove_user(server_data_t *server_data, user_list_t *user_info)
 {
-    /// Change state of the user in the uuid object
     if (user_info->user_peer->pending_write == true)
         return;
     CIRCLEQ_REMOVE(&server_data->server->network_server->peers_head,
