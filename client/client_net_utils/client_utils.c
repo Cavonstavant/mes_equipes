@@ -36,7 +36,7 @@ client_net_server_t *create_net_server(const char *ip, long port)
     client_net_server_t *new_server;
     int pton_return = 0;
 
-    if (!(new_server = malloc(sizeof(client_net_server_t *))))
+    if (!(new_server = malloc(sizeof(client_net_server_t))))
         return NULL;
     pton_return = inet_pton(AF_INET, ip, &new_server->srv_addr.sin_addr);
     if (pton_return <= 0) {
