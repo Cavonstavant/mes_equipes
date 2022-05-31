@@ -114,19 +114,49 @@ Include dependency graph for send_message.c:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a127ac5f64d0135860c4cd700ed51afab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="send__message_8c.html#a127ac5f64d0135860c4cd700ed51afab">send_message</a> (<a class="el" href="client__utils_8h.html#a8a31d3f91a9f1270050b2e05923c00a2">client_net_server_t</a> *server, const char *msg)</td></tr>
-<tr class="memdesc:a127ac5f64d0135860c4cd700ed51afab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a message to the mes_équipes server conforming to RFC.  <a href="send__message_8c.html#a127ac5f64d0135860c4cd700ed51afab">More...</a><br /></td></tr>
-<tr class="separator:a127ac5f64d0135860c4cd700ed51afab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a209ac115fb574176b09520e3a1602825"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="send__message_8c.html#a209ac115fb574176b09520e3a1602825">set_output_buffer</a> (<a class="el" href="client__utils_8h.html#a8a31d3f91a9f1270050b2e05923c00a2">client_net_server_t</a> *server, const char *msg)</td></tr>
+<tr class="separator:a209ac115fb574176b09520e3a1602825"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c1e93f72b6356d92171fb825e17aae0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="send__message_8c.html#a6c1e93f72b6356d92171fb825e17aae0">send_message</a> (<a class="el" href="client__utils_8h.html#a8a31d3f91a9f1270050b2e05923c00a2">client_net_server_t</a> *server)</td></tr>
+<tr class="memdesc:a6c1e93f72b6356d92171fb825e17aae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a message to the mes_équipes server conforming to RFC.  <a href="send__message_8c.html#a6c1e93f72b6356d92171fb825e17aae0">More...</a><br /></td></tr>
+<tr class="separator:a6c1e93f72b6356d92171fb825e17aae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a127ac5f64d0135860c4cd700ed51afab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a127ac5f64d0135860c4cd700ed51afab">&#9670;&nbsp;</a></span>send_message()</h2>
+<a id="a6c1e93f72b6356d92171fb825e17aae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c1e93f72b6356d92171fb825e17aae0">&#9670;&nbsp;</a></span>send_message()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool send_message </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="client__utils_8h.html#a8a31d3f91a9f1270050b2e05923c00a2">client_net_server_t</a> *&#160;</td>
+          <td class="paramname"><em>server</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Send a message to the mes_équipes server conforming to RFC. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">server</td><td>The server to the message to </td></tr>
+    <tr><td class="paramname">msg</td><td>the null terminated, RFC conformed message </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the message was sent, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a209ac115fb574176b09520e3a1602825"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a209ac115fb574176b09520e3a1602825">&#9670;&nbsp;</a></span>set_output_buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_output_buffer </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="client__utils_8h.html#a8a31d3f91a9f1270050b2e05923c00a2">client_net_server_t</a> *&#160;</td>
           <td class="paramname"><em>server</em>, </td>
@@ -144,16 +174,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Send a message to the mes_équipes server conforming to RFC. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">server</td><td>The server to the message to </td></tr>
-    <tr><td class="paramname">msg</td><td>the null terminated, RFC conformed message </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the message was sent, false otherwise </dd></dl>
 
 </div>
 </div>

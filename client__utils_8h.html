@@ -123,11 +123,18 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="client__utils_8h__dep__incl.png" border="0" usemap="#client_2client__net__utils_2include_2client__utils_8hdep" alt=""/></div>
 <map name="client_2client__net__utils_2include_2client__utils_8hdep" id="client_2client__net__utils_2include_2client__utils_8hdep">
-<area shape="rect" title=" " alt="" coords="283,5,444,47"/>
+<area shape="rect" title=" " alt="" coords="553,5,715,47"/>
 <area shape="rect" href="client__utils_8c.html" title=" " alt="" coords="5,95,167,136"/>
 <area shape="rect" href="fetch__message_8c.html" title=" " alt="" coords="191,95,352,136"/>
-<area shape="rect" href="send__message_8c.html" title=" " alt="" coords="376,95,537,136"/>
-<area shape="rect" href="update__server_8c.html" title=" " alt="" coords="561,95,723,136"/>
+<area shape="rect" href="internals_8h.html" title=" " alt="" coords="376,95,537,136"/>
+<area shape="rect" href="update__client_8c.html" title=" " alt="" coords="495,184,656,225"/>
+<area shape="rect" href="send__message_8c.html" title=" " alt="" coords="613,95,775,136"/>
+<area shape="rect" href="client_2src_2entrypoint_8c.html" title=" " alt="" coords="691,191,854,218"/>
+<area shape="rect" href="teams__client_8h.html" title=" " alt="" coords="901,95,1033,136"/>
+<area shape="rect" href="run__teams__client_8c.html" title=" " alt="" coords="878,184,1033,225"/>
+<area shape="rect" href="manage__fd__sets_8c.html" title=" " alt="" coords="309,184,471,225"/>
+<area shape="rect" href="stop__teams__client_8c.html" title=" " alt="" coords="1057,184,1219,225"/>
+<area shape="rect" href="teams__client_8c.html" title=" " alt="" coords="1243,191,1423,218"/>
 </map>
 </div>
 </div>
@@ -159,15 +166,17 @@ Functions</h2></td></tr>
 <tr class="memitem:a986aac3fabf3da548bbd880233d6d6ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="client__utils_8h.html#a8a31d3f91a9f1270050b2e05923c00a2">client_net_server_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client__utils_8h.html#a986aac3fabf3da548bbd880233d6d6ab">create_net_server</a> (const char *ip, long port)</td></tr>
 <tr class="memdesc:a986aac3fabf3da548bbd880233d6d6ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new mes_équipes TM. server object to connect to.  <a href="client__utils_8h.html#a986aac3fabf3da548bbd880233d6d6ab">More...</a><br /></td></tr>
 <tr class="separator:a986aac3fabf3da548bbd880233d6d6ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a127ac5f64d0135860c4cd700ed51afab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client__utils_8h.html#a127ac5f64d0135860c4cd700ed51afab">send_message</a> (<a class="el" href="client__utils_8h.html#a8a31d3f91a9f1270050b2e05923c00a2">client_net_server_t</a> *server, const char *msg)</td></tr>
-<tr class="memdesc:a127ac5f64d0135860c4cd700ed51afab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a message to the mes_équipes server conforming to RFC.  <a href="client__utils_8h.html#a127ac5f64d0135860c4cd700ed51afab">More...</a><br /></td></tr>
-<tr class="separator:a127ac5f64d0135860c4cd700ed51afab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c1e93f72b6356d92171fb825e17aae0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client__utils_8h.html#a6c1e93f72b6356d92171fb825e17aae0">send_message</a> (<a class="el" href="client__utils_8h.html#a8a31d3f91a9f1270050b2e05923c00a2">client_net_server_t</a> *server)</td></tr>
+<tr class="memdesc:a6c1e93f72b6356d92171fb825e17aae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a message to the mes_équipes server conforming to RFC.  <a href="client__utils_8h.html#a6c1e93f72b6356d92171fb825e17aae0">More...</a><br /></td></tr>
+<tr class="separator:a6c1e93f72b6356d92171fb825e17aae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a209ac115fb574176b09520e3a1602825"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client__utils_8h.html#a209ac115fb574176b09520e3a1602825">set_output_buffer</a> (<a class="el" href="client__utils_8h.html#a8a31d3f91a9f1270050b2e05923c00a2">client_net_server_t</a> *server, const char *msg)</td></tr>
+<tr class="separator:a209ac115fb574176b09520e3a1602825"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7189f074e7b6a2568dd54ac3263532ae"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client__utils_8h.html#a7189f074e7b6a2568dd54ac3263532ae">fetch_message</a> (<a class="el" href="client__utils_8h.html#a8a31d3f91a9f1270050b2e05923c00a2">client_net_server_t</a> *server)</td></tr>
 <tr class="memdesc:a7189f074e7b6a2568dd54ac3263532ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the last message recieved from the server.  <a href="client__utils_8h.html#a7189f074e7b6a2568dd54ac3263532ae">More...</a><br /></td></tr>
 <tr class="separator:a7189f074e7b6a2568dd54ac3263532ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e97e4f738cff0f8f4cf7b851233b875"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client__utils_8h.html#a4e97e4f738cff0f8f4cf7b851233b875">update_server</a> (<a class="el" href="client__utils_8h.html#a8a31d3f91a9f1270050b2e05923c00a2">client_net_server_t</a> *server)</td></tr>
-<tr class="memdesc:a4e97e4f738cff0f8f4cf7b851233b875"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the network server by recieving and/or sending messages.  <a href="client__utils_8h.html#a4e97e4f738cff0f8f4cf7b851233b875">More...</a><br /></td></tr>
-<tr class="separator:a4e97e4f738cff0f8f4cf7b851233b875"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aef5bca400df71b0617cee413992b3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client__utils_8h.html#a9aef5bca400df71b0617cee413992b3e">update_client</a> (<a class="el" href="client__utils_8h.html#a8a31d3f91a9f1270050b2e05923c00a2">client_net_server_t</a> *server)</td></tr>
+<tr class="memdesc:a9aef5bca400df71b0617cee413992b3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the mes_équipes client by sending and receiving messages.  <a href="client__utils_8h.html#a9aef5bca400df71b0617cee413992b3e">More...</a><br /></td></tr>
+<tr class="separator:a9aef5bca400df71b0617cee413992b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="aa24597a54a085c6c2c33b64138f09eff"></a>
@@ -284,14 +293,42 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a127ac5f64d0135860c4cd700ed51afab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a127ac5f64d0135860c4cd700ed51afab">&#9670;&nbsp;</a></span>send_message()</h2>
+<a id="a6c1e93f72b6356d92171fb825e17aae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c1e93f72b6356d92171fb825e17aae0">&#9670;&nbsp;</a></span>send_message()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool send_message </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="client__utils_8h.html#a8a31d3f91a9f1270050b2e05923c00a2">client_net_server_t</a> *&#160;</td>
+          <td class="paramname"><em>server</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Send a message to the mes_équipes server conforming to RFC. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">server</td><td>The server to the message to </td></tr>
+    <tr><td class="paramname">msg</td><td>the null terminated, RFC conformed message </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the message was sent, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a209ac115fb574176b09520e3a1602825"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a209ac115fb574176b09520e3a1602825">&#9670;&nbsp;</a></span>set_output_buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_output_buffer </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="client__utils_8h.html#a8a31d3f91a9f1270050b2e05923c00a2">client_net_server_t</a> *&#160;</td>
           <td class="paramname"><em>server</em>, </td>
@@ -310,26 +347,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Send a message to the mes_équipes server conforming to RFC. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">server</td><td>The server to the message to </td></tr>
-    <tr><td class="paramname">msg</td><td>the null terminated, RFC conformed message </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the message was sent, false otherwise </dd></dl>
-
 </div>
 </div>
-<a id="a4e97e4f738cff0f8f4cf7b851233b875"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e97e4f738cff0f8f4cf7b851233b875">&#9670;&nbsp;</a></span>update_server()</h2>
+<a id="a9aef5bca400df71b0617cee413992b3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aef5bca400df71b0617cee413992b3e">&#9670;&nbsp;</a></span>update_client()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void update_server </td>
+          <td class="memname">void update_client </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="client__utils_8h.html#a8a31d3f91a9f1270050b2e05923c00a2">client_net_server_t</a> *&#160;</td>
           <td class="paramname"><em>server</em></td><td>)</td>
@@ -338,7 +365,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Update the network server by recieving and/or sending messages. </p>
+<p>Update the mes_équipes client by sending and receiving messages. </p>
 
 </div>
 </div>

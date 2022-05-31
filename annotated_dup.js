@@ -19,6 +19,7 @@ var annotated_dup =
     [ "tcp_server_s", "structtcp__server__s.html", "structtcp__server__s" ],
     [ "team_creation_s", "structteam__creation__s.html", "structteam__creation__s" ],
     [ "team_s", "structteam__s.html", "structteam__s" ],
+    [ "teams_client_s", "structteams__client__s.html", "structteams__client__s" ],
     [ "teams_server_s", "structteams__server__s.html", "structteams__server__s" ],
     [ "thread_creation_s", "structthread__creation__s.html", "structthread__creation__s" ],
     [ "thread_s", "structthread__s.html", "structthread__s" ],

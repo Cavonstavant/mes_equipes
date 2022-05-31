@@ -1,4 +1,15 @@
 <map id="client/src/entrypoint.c" name="client/src/entrypoint.c">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,168,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="53,80,120,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="215,5,377,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,229,72,256"/>
+<area shape="rect" id="node3" title=" " alt="" coords="202,80,273,107"/>
+<area shape="rect" id="node4" href="$teams__client_8h.html" title=" " alt="" coords="297,80,415,107"/>
+<area shape="rect" id="node5" href="$client__utils_8h.html" title=" " alt="" coords="401,155,506,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="97,229,199,256"/>
+<area shape="rect" id="node7" title=" " alt="" coords="224,229,323,256"/>
+<area shape="rect" id="node8" title=" " alt="" coords="347,229,443,256"/>
+<area shape="rect" id="node9" title=" " alt="" coords="467,229,559,256"/>
+<area shape="rect" id="node10" title=" " alt="" coords="583,229,683,256"/>
+<area shape="rect" id="node11" title=" " alt="" coords="707,229,789,256"/>
+<area shape="rect" id="node12" title=" " alt="" coords="814,229,882,256"/>
+<area shape="rect" id="node13" title=" " alt="" coords="906,229,977,256"/>
 </map>

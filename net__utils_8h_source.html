@@ -153,41 +153,43 @@ $(document).ready(function(){initNavTree('net__utils_8h_source.html',''); initRe
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;} <a class="code" href="net__utils_8h.html#af3d2eea012f708b8bf5a6e6a73a955b4">tcp_server_t</a>;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> __log_error(<span class="keywordtype">int</span> line,</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *file,</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *func,</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *msg)</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;{</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    printf(<span class="stringliteral">&quot;%s:%d:%s():\n\t%s: %s\n&quot;</span>, file, line, func, msg, strerror(errno));</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="net__utils_8h.html#a8b2781cb26c170039ce2be4a72b1d521">  109</a></span>&#160;<span class="preprocessor">    #define TEAMS_LOG(msg) \</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">        do {__log_error(__LINE__, \</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">strrchr(__FILE__, &#39;/&#39;) + 1, __func__, msg);} while (0)</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<a class="code" href="structpeer__s.html">peer_t</a> *<a class="code" href="net__utils_8h.html#a1839494efffd5329b4f02eca0b6e897c">new_peer</a>(<span class="keywordtype">int</span> fd, <span class="keyword">struct</span> sockaddr_in addr);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keywordtype">void</span> <a class="code" href="net__utils_8h.html#afcdf908c14229f34e063c18c04b347ff">display_clients</a>(<span class="keyword">struct</span> peers_head *peers_head);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<a class="code" href="structtcp__server__s.html">tcp_server_t</a> *<a class="code" href="net__utils_8h.html#a6fcbd9d35101cd9be1fe5585720bbf23">create_tcp_server</a>(<span class="keywordtype">long</span> port);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="net__utils_8h.html#a7ac2470fea90278e1221a55c26aed4c4">add_user_to_server</a>(<a class="code" href="structtcp__server__s.html">tcp_server_t</a> *srv, <span class="keywordtype">char</span> *username, <span class="keywordtype">char</span> *password);</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="keywordtype">void</span> <a class="code" href="net__utils_8h.html#add3f589883b7ecc94c2aebd3c322cbce">server_fill_fd_sets</a>(<a class="code" href="structtcp__server__s.html">tcp_server_t</a> *srv);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="keywordtype">int</span> <a class="code" href="net__utils_8h.html#a431c7f1bff79211086953f8c17cfdf88">server_wait</a>(<a class="code" href="structtcp__server__s.html">tcp_server_t</a> *srv);</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="net__utils_8h.html#a3e8c9d2dffcfc79ac0b5ec9f2164c60a">server_manage_fd_update</a>(<a class="code" href="structtcp__server__s.html">tcp_server_t</a> *srv);</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="structpeer__s.html">peer_t</a> *fetch_last_added_peer(<a class="code" href="structtcp__server__s.html">tcp_server_t</a> *srv)</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;{</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">if</span> (!srv)</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">return</span> CIRCLEQ_FIRST(&amp;srv-&gt;<a class="code" href="structtcp__server__s.html#a0d59f19422ec00b2eef7543121650374">peers_head</a>);</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="preprocessor">#endif //NET_UTILS_H</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> __log_error(<span class="keywordtype">int</span> line __attribute__((unused)),</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *file __attribute__((unused)),</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *func __attribute__((unused)),</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *msg __attribute__((unused)))</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">char</span> *errmsg = strerror(errno);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">if</span> (strcmp(errmsg, <span class="stringliteral">&quot;Success&quot;</span>) == 0)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        printf(<span class="stringliteral">&quot;%s:%d:%s():\n\t%s: %s\n&quot;</span>, file, line, func, msg, errmsg);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="net__utils_8h.html#a8b2781cb26c170039ce2be4a72b1d521">  111</a></span>&#160;<span class="preprocessor">    #define TEAMS_LOG(msg) \</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">        do {__log_error(__LINE__, \</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">strrchr(__FILE__, &#39;/&#39;) + 1, __func__, msg);} while (0)</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<a class="code" href="structpeer__s.html">peer_t</a> *<a class="code" href="net__utils_8h.html#a1839494efffd5329b4f02eca0b6e897c">new_peer</a>(<span class="keywordtype">int</span> fd, <span class="keyword">struct</span> sockaddr_in addr);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keywordtype">void</span> <a class="code" href="net__utils_8h.html#afcdf908c14229f34e063c18c04b347ff">display_clients</a>(<span class="keyword">struct</span> peers_head *peers_head);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<a class="code" href="structtcp__server__s.html">tcp_server_t</a> *<a class="code" href="net__utils_8h.html#a6fcbd9d35101cd9be1fe5585720bbf23">create_tcp_server</a>(<span class="keywordtype">long</span> port);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="net__utils_8h.html#a7ac2470fea90278e1221a55c26aed4c4">add_user_to_server</a>(<a class="code" href="structtcp__server__s.html">tcp_server_t</a> *srv, <span class="keywordtype">char</span> *username, <span class="keywordtype">char</span> *password);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keywordtype">void</span> <a class="code" href="net__utils_8h.html#add3f589883b7ecc94c2aebd3c322cbce">server_fill_fd_sets</a>(<a class="code" href="structtcp__server__s.html">tcp_server_t</a> *srv);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="keywordtype">int</span> <a class="code" href="net__utils_8h.html#a431c7f1bff79211086953f8c17cfdf88">server_wait</a>(<a class="code" href="structtcp__server__s.html">tcp_server_t</a> *srv);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="net__utils_8h.html#a3e8c9d2dffcfc79ac0b5ec9f2164c60a">server_manage_fd_update</a>(<a class="code" href="structtcp__server__s.html">tcp_server_t</a> *srv);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="structpeer__s.html">peer_t</a> *fetch_last_added_peer(<a class="code" href="structtcp__server__s.html">tcp_server_t</a> *srv)</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;{</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">if</span> (!srv)</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">return</span> CIRCLEQ_FIRST(&amp;srv-&gt;<a class="code" href="structtcp__server__s.html#a0d59f19422ec00b2eef7543121650374">peers_head</a>);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;}</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="preprocessor">#endif //NET_UTILS_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="anet__utils_8h_html_a7ac2470fea90278e1221a55c26aed4c4"><div class="ttname"><a href="net__utils_8h.html#a7ac2470fea90278e1221a55c26aed4c4">add_user_to_server</a></div><div class="ttdeci">bool add_user_to_server(tcp_server_t *srv, char *username, char *password)</div><div class="ttdoc">Add a user to the server.</div></div>
