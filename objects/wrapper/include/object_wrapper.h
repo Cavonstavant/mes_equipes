@@ -80,7 +80,7 @@ typedef struct object_wrapper_s {
 typedef struct child_list_s {
     /// List of uuid_t
     my_uuid_t **list;
-    /// Size of the list 
+    /// Size of the list
     int size;
 } child_list_t;
 
@@ -183,7 +183,7 @@ comment_t *wrapper_find_comment(object_wrapper_t *wrapper, my_uuid_t *find);
 /// \brief Create a new comment object and link it with an existing thread
 ///
 /// \param wrapper Wrapper object
-/// \param content Comment content 
+/// \param content Comment content
 /// \param thread_uuid Uuid thread to link
 /// \return true Operation succeed
 /// \return false Operation failed
@@ -195,7 +195,7 @@ comment_creation_t content, my_uuid_t *thread_uuid);
 /// \brief Create a new thread object and link it with an existing channel
 ///
 /// \param wrapper Wrapper object
-/// \param content Thread content 
+/// \param content Thread content
 /// \param channel_uuid Uuid channel to link
 /// \return true Operation succeed
 /// \return false Operation failed
@@ -207,7 +207,7 @@ thread_creation_t content, my_uuid_t *channel_uuid);
 /// \brief Create a new channel object and link it with an existing team
 ///
 /// \param wrapper Wrapper object
-/// \param content Channel content 
+/// \param content Channel content
 /// \param team_uuid Uuid team to link
 /// \return true Operation succeed
 /// \return false Operation failed
@@ -233,7 +233,7 @@ my_uuid_t *second_uuid);
 /// \brief Create a new message object and link it with an existing conv
 ///
 /// \param wrapper Wrapper object
-/// \param content Message content 
+/// \param content Message content
 /// \param team_uuid Uuid conv to link
 /// \return true Operation succeed
 /// \return false Operation failed

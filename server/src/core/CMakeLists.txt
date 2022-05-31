@@ -31,7 +31,9 @@ target_include_directories(${TARGET}
     PRIVATE ${SRC_ROOT}
 )
 
-find_library(MYTEAMS_LIB myteams)
+# target_link_directories(${TARGET}
+#     PUBLIC ${PROJECT_SOURCE_DIR}/libs/myteams
+# )
 
 # target_link_directories(${TARGET}
 #     PUBLIC ${PROJECT_SOURCE_DIR}/libs/myteams
