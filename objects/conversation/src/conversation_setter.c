@@ -38,3 +38,11 @@ my_uuid_t *message)
     conversation->message_n += 1;
     return OPERATION_SUCCESS;
 }
+
+bool conversation_have_user(conversation_t *conv, my_uuid_t *user)
+{
+    for (int i = 0; i < conv->participant_n; i++)
+        if (my_uuid_cmp(conv->participant[i], user))
+            return true;
+    return false;
+}

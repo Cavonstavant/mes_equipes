@@ -110,4 +110,12 @@ int my_uuid_find(my_uuid_t **list, int list_n, my_uuid_t *to_find);
 ///
 bool my_uuid_cmp(my_uuid_t *first, my_uuid_t *second);
 
+///
+/// \brief Creare a uuid from a string
+///
+/// \param repr String uuid
+/// \return my_uuid_t* Newly created uuid
+///
+my_uuid_t *my_uuid_from_string(char *repr);
+
 #endif /* !OBJECT_UUID_H_ */

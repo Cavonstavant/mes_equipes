@@ -21,7 +21,6 @@
     #include <stdbool.h>
     #include <unistd.h>
     #include <errno.h>
-    #include "net_utils/auth/user.h"
 
     /// Defines the maximum connections allowed at the same time on a server
     #define LISTEN_BACKLOG 50
@@ -80,9 +79,6 @@ typedef struct tcp_server_s {
 
     /// The collection of clients (network side)
     struct peers_head peers_head;
-
-    /// The collection of users (application side)
-    struct users_head users_head;
 
     /// The collection of file descriptor set that are ready to be read
     fd_set read_fds;
