@@ -44,5 +44,5 @@ jobs:
 
     - uses: codecov/codecov-action@v2
       with:
-        files: build/coverage.xml build/branches_coverage.xml
+        files: coverage.xml branches_coverage.xml
         fail_ci_if_error: true
