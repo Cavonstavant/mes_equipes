@@ -39,10 +39,10 @@ jobs:
         cmake -B ./build -DCODE_COVERAGE=ON
         cmake --build ./build
         ctest --output-on-failure --test-dir build
-        gcovr --exclude tests/ --branches --json --output build/branches_coverage.json
-        gcovr --exclude tests/ --add-tracefile build/branches_coverage.json --json --output build/coverage.json
+        gcovr --exclude tests/ --branches --xml --output branches_coverage.xml
+        gcovr --exclude tests/ --xml --output coverage.xml
 
     - uses: codecov/codecov-action@v2
       with:
-        files: build/coverage.json
+        files: ./coverage.xml,./branches_coverage.xml
         fail_ci_if_error: true
