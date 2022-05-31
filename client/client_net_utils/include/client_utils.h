@@ -55,14 +55,24 @@ typedef struct server_s {
 
     /// The fd set containing the sock fd of the mes_équipe server
     fd_set err_fds;
+
+    /// Runs a connected client by sending and
+    /// receiving messages to the associated server
+    int (*run)(struct server_s *);
+
+    /// Stop a connected client and destroy all associated ressources
+    void (*stop)(struct server_s *);
 } client_net_server_t;
 
-static inline void __log_error(int line,
-    const char *file,
-    const char *func,
-    const char *msg)
+static inline void __log_error(int line __attribute__((unused)),
+    const char *file __attribute__((unused)),
+    const char *func __attribute__((unused)),
+    const char *msg __attribute__((unused)))
 {
-    printf("%s:%d:%s():\n\t%s: %s\n", file, line, func, msg, strerror(errno));
+    char *errmsg = strerror(errno);
+
+    if (strcmp(errmsg, "Success") == 0)
+        printf("%s:%d:%s():\n\t%s: %s\n", file, line, func, msg, errmsg);
 }
 
     /// \brief Simple macro used to log a message
@@ -81,12 +91,14 @@ client_net_server_t *create_net_server(const char *ip, long port);
 /// \param server The server to the message to
 /// \param msg the null terminated, RFC conformed message
 /// \return true if the message was sent, false otherwise
-bool send_message(client_net_server_t *server, const char *msg);
+bool send_message(client_net_server_t *server);
+
+void set_output_buffer(client_net_server_t *server, const char *msg);
 
 /// \brief Retrieve the last message recieved from the server
 char *fetch_message(client_net_server_t *server);
 
-/// \brief Update the network server by recieving and/or sending messages
-void update_server(client_net_server_t *server);
+/// \brief Update the mes_équipes client by sending and receiving messages
+void update_client(client_net_server_t *server);
 
 #endif /* INCLUDE_UTILS_H */
