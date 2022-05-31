@@ -18,7 +18,7 @@ char *fetch_message(client_net_server_t *server)
 
     if (!server)
         return NULL;
-    server->pending_read = true;
+    server->pending_read = false;
     read_size = read(server->sock_fd, server->input_buffer, MAX_MSG);
     if (read_size < 0) {
         TEAMS_LOG("Internal Server Error: read\n");
