@@ -85,6 +85,7 @@ set (SRC
     ${SRC_WRAPPER}/get_child_list.c
     ${SRC_WRAPPER}/user_and_team_relation.c
     ${SRC_WRAPPER}/get_associated_team.c
+    ${SRC_WRAPPER}/pack_wrapper_to_json.c
 )
 
 add_library(${TARGET} ${SRC})
@@ -122,3 +123,10 @@ add_subdirectory(uuid/uuid_wrapper)
 set_property(
      TARGET ${TARGET} PROPERTY POSITION_INDEPENDENT_CODE ON
 )
+
+
+# add_executable(a.out ${PROJECT_SOURCE_DIR}/objects/main.c)
+
+# target_link_libraries(a.out
+#     PUBLIC ${TARGET}
+# )
