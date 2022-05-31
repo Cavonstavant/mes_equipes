@@ -193,7 +193,7 @@ $(document).ready(function(){initNavTree('rcodes_8h_source.html',''); initResiza
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;{</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="structretcodes__s.html">retcodes_t</a> *retcode = create_new_repcode(code);</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">char</span> *command = malloc(<span class="keyword">sizeof</span>(<span class="keywordtype">char</span>) * ((arg) ? strlen(arg) +</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    strlen(retcode-&gt;<a class="code" href="structretcodes__s.html#acfdfb56ec5b6345a480ab970dd1a01f2">repr</a>) - 2 : strlen(retcode-&gt;<a class="code" href="structretcodes__s.html#acfdfb56ec5b6345a480ab970dd1a01f2">repr</a>)));</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    strlen(retcode-&gt;<a class="code" href="structretcodes__s.html#acfdfb56ec5b6345a480ab970dd1a01f2">repr</a>) - 1 : strlen(retcode-&gt;<a class="code" href="structretcodes__s.html#acfdfb56ec5b6345a480ab970dd1a01f2">repr</a>)));</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">if</span> (command == NULL)</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">return</span>;</div>
