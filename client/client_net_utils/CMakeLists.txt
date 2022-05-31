@@ -11,7 +11,7 @@ set (SRC
     ${INCLUDE_ROOT}/client_utils.h
 )
 
-add_library(${PROJECT_NAME}_client_net_utils SHARED
+add_library(${PROJECT_NAME}_client_net_utils
     ${SRC}
 )
 
