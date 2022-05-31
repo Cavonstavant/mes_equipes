@@ -15,7 +15,7 @@ bool send_message(client_net_server_t *server, const char *msg)
 {
     if (!server || !msg)
         return false;
-    if (!server->pending_write)
+    if (server->pending_write)
         return false;
     if (strlen(msg) == 0)
         return false;

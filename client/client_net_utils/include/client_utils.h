@@ -64,12 +64,15 @@ typedef struct server_s {
     void (*stop)(struct server_s *);
 } client_net_server_t;
 
-static inline void __log_error(int line,
-    const char *file,
-    const char *func,
-    const char *msg)
+static inline void __log_error(int line __attribute__((unused)),
+    const char *file __attribute__((unused)),
+    const char *func __attribute__((unused)),
+    const char *msg __attribute__((unused)))
 {
-    printf("%s:%d:%s():\n\t%s: %s\n", file, line, func, msg, strerror(errno));
+    char *errmsg = strerror(errno);
+
+    if (strcmp(errmsg, "Success") == 0)
+        printf("%s:%d:%s():\n\t%s: %s\n", file, line, func, msg, errmsg);
 }
 
     /// \brief Simple macro used to log a message

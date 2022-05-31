@@ -25,4 +25,6 @@ void update_client(client_net_server_t *server)
         TEAMS_LOG("Internal Server Error: Failed to connect\n");
         server->connected = false;
     }
+    printf("server->pending_read: %d\n", server->pending_read);
+    printf("server->pending_write: %d\n", server->pending_write);
 }
