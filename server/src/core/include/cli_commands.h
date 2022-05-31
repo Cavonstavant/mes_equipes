@@ -54,7 +54,7 @@ const cli_command_t *get_cli_command_by_name(char *command);
 /// \brief This function get a command, and parse it to fill a structure.
 /// \param char *command to be convert in structure.
 /// \return A cli_command_t * structure to be used after.
-cli_command_t *convert_command_to_structure(char *command);
+cli_command_t *convert_command_to_structure(char *command, user_list_t *users);
 
 /// \brief This function call the function store on the structure passed as
 /// parameter.
@@ -68,6 +68,6 @@ int call_command(cli_command_t *command, user_list_t *, server_data_t *);
 /// \param char *The name of the called command.
 /// \return A array of char * which contains all arguments if it's OK, or NULL
 /// if an error occurs.
-char **fill_command_arguments(char *command, char *name);
+char **fill_command_arguments(char *command, char *name, user_list_t *users);
 
 #endif /* !PARSER_H_ */

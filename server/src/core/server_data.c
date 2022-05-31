@@ -40,6 +40,8 @@ bool server_add_user(server_data_t *server_data)
         return FAILED;
     new_user->user_uuid = NULL;
     new_user->is_auth = false;
+    new_user->disconnected = CONNECTED;
+    new_user->loc = NULL;
     new_user->user_peer =
     fetch_last_added_peer(server_data->server->network_server);
     server_data->active_users = realloc(server_data->active_users,
@@ -51,13 +53,34 @@ bool server_add_user(server_data_t *server_data)
     return SUCCESS;
 }
 
+void server_remove_user(server_data_t *server_data, user_list_t *user_info)
+{
+    if (user_info->user_peer->pending_write == true)
+        return;
+    CIRCLEQ_REMOVE(&server_data->server->network_server->peers_head,
+    user_info->user_peer, peers);
+    close(user_info->user_peer->sock_fd);
+    free(user_info->user_peer);
+    user_info->disconnected = LOGOUT;
+}
+
+void remove_disconnected_user(server_data_t *server_data, user_state_t comp)
+{
+    for (size_t i = 0; i < server_data->active_user_n; i++) {
+        if (server_data->active_users[i]->disconnected == comp)
+            server_remove_user(server_data, server_data->active_users[i]);
+    }
+}
+
 void destroy_server_data(server_data_t *server_data)
 {
     if (server_data == NULL)
         return;
     wrapper_destroy(server_data->wrapper);
+    remove_disconnected_user(server_data, CONNECTED);
     for (size_t i = 0; i < server_data->active_user_n; i++) {
-        free(server_data->active_users[i]->user_peer);
+        if (server_data->active_users[i]->loc != NULL)
+            my_uuid_destroy(server_data->active_users[i]->loc);
         free(server_data->active_users[i]);
     }
     free(server_data->active_users);
