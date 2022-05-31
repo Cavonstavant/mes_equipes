@@ -28,7 +28,7 @@ set (SRC_TEAM ${PROJECT_SOURCE_DIR}/objects/team/src)
 set (SRC_THREAD ${PROJECT_SOURCE_DIR}/objects/thread/src)
 set (SRC_USER ${PROJECT_SOURCE_DIR}/objects/user/src)
 set (SRC_UUID ${PROJECT_SOURCE_DIR}/objects/uuid/src)
-
+set (SRC_PACK_WRAPPER ${PROJECT_SOURCE_DIR}/objects/wrapper/src/packer_wrapper)
 set (SRC_WRAPPER ${PROJECT_SOURCE_DIR}/objects/wrapper/src)
 
 set (TARGET ${PROJECT_NAME}_objects)
@@ -85,7 +85,15 @@ set (SRC
     ${SRC_WRAPPER}/get_child_list.c
     ${SRC_WRAPPER}/user_and_team_relation.c
     ${SRC_WRAPPER}/get_associated_team.c
-    ${SRC_WRAPPER}/pack_wrapper_to_json.c
+    ${SRC_PACK_WRAPPER}/pack_wrapper_to_json.c
+    ${SRC_PACK_WRAPPER}/pack_channel_to_json.c
+    ${SRC_PACK_WRAPPER}/pack_comment_to_json.c
+    ${SRC_PACK_WRAPPER}/pack_conversation_to_json.c
+    ${SRC_PACK_WRAPPER}/pack_message_to_json.c
+    ${SRC_PACK_WRAPPER}/pack_team_to_json.c
+    ${SRC_PACK_WRAPPER}/pack_thread_to_json.c
+    ${SRC_PACK_WRAPPER}/pack_user_to_json.c
+    ${SRC_PACK_WRAPPER}/pack_wrapper_to_json.c
 )
 
 add_library(${TARGET} ${SRC})
