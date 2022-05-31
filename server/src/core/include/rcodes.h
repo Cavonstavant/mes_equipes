@@ -57,7 +57,7 @@ static const retcodes_t retcodes[] = {
     .code = 322,
     .params = NULL},
     {.repr = "401 Invalid requested action, please login\n",
-    .code = 400,
+    .code = 401,
     .params = NULL},
     {.repr = "500 Syntax error\n",
     .code = 500,
@@ -115,7 +115,7 @@ static inline retcodes_t *create_new_repcode(int code) {
 static inline void print_retcode(int code, char **args, peer_t *peer)
 {
     retcodes_t *retcode = create_new_repcode(code);
-    char *command = malloc(sizeof(char) * 1000); // MALLOC WITH PARAM
+    char *command = malloc(sizeof(char) * 100000); // MALLOC WITH PARAM
 
     if (command == NULL)
         return;

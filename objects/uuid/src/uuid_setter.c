@@ -21,3 +21,11 @@ int my_uuid_find(my_uuid_t **list, int list_n, my_uuid_t *to_find)
             return i;
     return -1;
 }
+
+my_uuid_t *my_uuid_from_string(char *repr)
+{
+    my_uuid_t *uuid = my_uuid_init(TEM_);
+
+    my_uuid_edit_content(uuid, repr);
+    return uuid;
+}

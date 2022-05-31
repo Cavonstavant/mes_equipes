@@ -13,6 +13,8 @@ set(SRC
     ${SRC_ROOT}/server_data.c
     ${SRC_ROOT}/server_run.c
     ${SRC_ROOT}/auth_command.c
+    ${SRC_ROOT}/subscribe_command.c
+    ${SRC_ROOT}/create_command.c
 
     ${INC_ROOT}/cli_commands.h
     ${INC_ROOT}/entrypoint.h

@@ -47,10 +47,11 @@ user_list_t *user_info, server_data_t *server_data)
             user_name,
             true
         }) == false)
-            return false;
+            return true;
         print_retcode(202, (char *[]){user_name}, user_info->user_peer);
         user_info->user_uuid =
         find_user_by_name(server_data->wrapper, user_name);
+        server_event_user_created(user_info->user_uuid->uuid.repr, user_name);
     }
     user_info->is_auth = true;
     server_event_user_logged_in(user_info->user_uuid->uuid.repr);
