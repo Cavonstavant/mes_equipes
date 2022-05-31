@@ -91,7 +91,9 @@ client_net_server_t *create_net_server(const char *ip, long port);
 /// \param server The server to the message to
 /// \param msg the null terminated, RFC conformed message
 /// \return true if the message was sent, false otherwise
-bool send_message(client_net_server_t *server, const char *msg);
+bool send_message(client_net_server_t *server);
+
+void set_output_buffer(client_net_server_t *server, const char *msg);
 
 /// \brief Retrieve the last message recieved from the server
 char *fetch_message(client_net_server_t *server);

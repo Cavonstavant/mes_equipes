@@ -37,7 +37,7 @@ static void send_message_to_server(client_net_server_t *server)
         server->connected = false;
         return;
     }
-    send_message(server, msg);
+    set_output_buffer(server, msg);
     free(msg);
 }
 
