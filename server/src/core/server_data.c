@@ -41,6 +41,7 @@ bool server_add_user(server_data_t *server_data)
     new_user->user_uuid = NULL;
     new_user->is_auth = false;
     new_user->disconnected = CONNECTED;
+    new_user->loc = NULL;
     new_user->user_peer =
     fetch_last_added_peer(server_data->server->network_server);
     server_data->active_users = realloc(server_data->active_users,
@@ -78,6 +79,8 @@ void destroy_server_data(server_data_t *server_data)
     wrapper_destroy(server_data->wrapper);
     remove_disconnected_user(server_data, CONNECTED);
     for (size_t i = 0; i < server_data->active_user_n; i++) {
+        if (server_data->active_users[i]->loc != NULL)
+            my_uuid_destroy(server_data->active_users[i]->loc);
         free(server_data->active_users[i]);
     }
     free(server_data->active_users);

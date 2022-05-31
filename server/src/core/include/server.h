@@ -41,6 +41,8 @@ typedef struct user_list_s {
     bool is_auth;
     /// Login status
     user_state_t disconnected;
+    /// Localisation of user
+    my_uuid_t *loc;
 } user_list_t;
 
 ///

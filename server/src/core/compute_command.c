@@ -72,10 +72,12 @@ server_data_t *server_data)
         return (-1);
     }
     free(cmd->name);
-    for (int i = 0; cmd->arguments[i]; i++) {
-        free(cmd->arguments[i]);
+    if (cmd->arguments) {
+        for (int i = 0; cmd->arguments[i]; i++) {
+            free(cmd->arguments[i]);
+        }
+        free(cmd->arguments);
     }
-    free(cmd->arguments);
     free(cmd);
     free(command);
     return (0);
