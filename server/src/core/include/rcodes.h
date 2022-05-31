@@ -111,11 +111,13 @@ static inline retcodes_t *create_new_repcode(int code) {
 /// \param int The return code value.
 /// \param char **Arguments to be passed to the retcodes_t structure if it is
 /// necessary.
-static inline void print_retcode(int code, char **args)
+static inline void print_retcode(int code, char *argument)
 {
     retcodes_t *retcode = create_new_repcode(code);
+    char *message = malloc(sizeof(char) * (((argument) ? strlen(argument) : 0) + strlen(retcode->repr)));
 
-    printf(retcode->repr);
+    sprintf(message, retcode->repr, argument);
+    free(message);
     free(retcode);
 }
 
