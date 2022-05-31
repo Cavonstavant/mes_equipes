@@ -13,6 +13,7 @@
     #include <stdlib.h>
     #include <string.h>
     #include <stdio.h>
+    #include "fd_set_manage.h"
 
 /// \brief The retcodes_s structure contains the representation of the return
 /// code as char *, an int which represent the return code, and a array of
@@ -56,7 +57,7 @@ static const retcodes_t retcodes[] = {
     .code = 322,
     .params = NULL},
     {.repr = "401 Invalid requested action, please login\n",
-    .code = 400,
+    .code = 401,
     .params = NULL},
     {.repr = "500 Syntax error\n",
     .code = 500,
@@ -111,13 +112,19 @@ static inline retcodes_t *create_new_repcode(int code) {
 /// \param int The return code value.
 /// \param char **Arguments to be passed to the retcodes_t structure if it is
 /// necessary.
-static inline void print_retcode(int code, char *argument)
+static inline void print_retcode(int code, char *arg, peer_t *peer)
 {
     retcodes_t *retcode = create_new_repcode(code);
-    char *message = malloc(sizeof(char) * (((argument) ? strlen(argument) : 0) + strlen(retcode->repr)));
+    char *command = malloc(sizeof(char) * ((arg) ? strlen(arg) + strlen(retcode->repr) - 2 : strlen(retcode->repr)));
 
-    sprintf(message, retcode->repr, argument);
-    free(message);
+    if (command == NULL)
+        return;
+    if (arg)
+        sprintf(command, retcode->repr, arg);
+    else
+        sprintf(command, retcode->repr);
+    client_set_output_buffer(peer, command);
+    free(command);
     free(retcode);
 }
 
