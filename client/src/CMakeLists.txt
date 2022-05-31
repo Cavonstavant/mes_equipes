@@ -22,9 +22,13 @@ add_library(${CORE_TARGET} ${CORE_SRC})
 #     PUBLIC ${PROJECT_SOURCE_DIR}/libs/myteams
 # )
 
+# target_compile_options(${CORE_TARGET} PUBLIC "-L libs/myteams")
+
+find_library(MYTEAMS_LIB myteams)
+
 target_link_libraries(${CORE_TARGET}
     PUBLIC ${PROJECT_NAME}_client_net_utils
-    PRIVATE myteams
+    PUBLIC "${MYTEAMS_LIB}"
 )
 
 target_include_directories(${CORE_TARGET}
