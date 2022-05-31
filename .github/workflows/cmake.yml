@@ -44,5 +44,5 @@ jobs:
 
     - uses: codecov/codecov-action@v2
       with:
-        path: build/coverage.json
-        fail_if_ci_error: true
+        files: build/coverage.json
+        fail_ci_if_error: true
