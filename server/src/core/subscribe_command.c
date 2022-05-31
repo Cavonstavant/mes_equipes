@@ -26,7 +26,7 @@ user_list_t *user, server_data_t *serv_data)
     }
     if (user_is_sub_to_team(serv_data->wrapper, user->user_uuid,
     team) == true) {
-        print_retcode(321, (char *[]){team->uuid.repr}, user->user_peer);
+        print_retcode(321, team->uuid.repr, user->user_peer);
         return true;
     }
     wrapper_user_join_team(serv_data->wrapper, user->user_uuid,
@@ -51,7 +51,7 @@ user_list_t *user, server_data_t *serv_data)
     }
     if (user_is_sub_to_team(serv_data->wrapper, user->user_uuid,
     team) == false) {
-        print_retcode(322, (char *[]){team->uuid.repr}, user->user_peer);
+        print_retcode(322, team->uuid.repr, user->user_peer);
         return true;
     }
     wrapper_user_leave_team(serv_data->wrapper, user->user_uuid, team);
