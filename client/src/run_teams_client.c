@@ -18,6 +18,8 @@ static void print_message(client_net_server_t *server)
         if (!(msg = fetch_message(server)))
             return;
         printf("%s\n", msg);
+        if (strncmp(msg, "203", 3) == 0)
+            exit(0);
         free(msg);
     }
 }
@@ -33,10 +35,6 @@ static void send_message_to_server(client_net_server_t *server)
     getline_size = getline(&msg, &msg_size, stdin);
     if (getline_size == -1)
         return;
-    if (strcmp(msg, "exit\n") == 0){
-        server->connected = false;
-        return;
-    }
     set_output_buffer(server, msg);
     free(msg);
 }

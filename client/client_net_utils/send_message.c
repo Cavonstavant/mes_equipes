@@ -25,11 +25,10 @@ bool send_message(client_net_server_t *server)
 {
     if (!server)
         return false;
-    if (server->pending_write)
-        return false;
     if (server->connected)
         write(server->sock_fd,
-            server->output_buffer,
-            strlen(server->output_buffer));
+        server->output_buffer,
+        strlen(server->output_buffer));
+    server->pending_write = false;
     return true;
 }
