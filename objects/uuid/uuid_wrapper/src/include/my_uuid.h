@@ -8,7 +8,7 @@
 /// \file src/include/my_uuid.h
 
 #ifndef MY_UUID_H
-#define MY_UUID_H
+    #define MY_UUID_H
 
     #include <uuid/uuid.h>
     #include <stdio.h>
