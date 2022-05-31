@@ -115,7 +115,8 @@ static inline retcodes_t *create_new_repcode(int code) {
 static inline void print_retcode(int code, char *arg, peer_t *peer)
 {
     retcodes_t *retcode = create_new_repcode(code);
-    char *command = malloc(sizeof(char) * ((arg) ? strlen(arg) + strlen(retcode->repr) - 2 : strlen(retcode->repr)));
+    char *command = malloc(sizeof(char) * ((arg) ? strlen(arg) +
+    strlen(retcode->repr) - 2 : strlen(retcode->repr)));
 
     if (command == NULL)
         return;
