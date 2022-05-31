@@ -18,8 +18,8 @@ var cli__commands_8h =
     [ "command_use", "cli__commands_8h.html#ad46b728f27fc98ebb3c5a6135574dd2b", null ],
     [ "command_user", "cli__commands_8h.html#a17f70368c042d534f8f147c0142cba76", null ],
     [ "command_users", "cli__commands_8h.html#a516a0ed8cde2517d498974891e03e228", null ],
-    [ "convert_command_to_structure", "cli__commands_8h.html#af4756d2e8e4e08b7d3b82fcc0544de13", null ],
-    [ "fill_command_arguments", "cli__commands_8h.html#a06c649b228e9fd8d7efa9a9d1d8577d6", null ],
+    [ "convert_command_to_structure", "cli__commands_8h.html#a6c43fbfe6e6eb748fde7b100c811b5d5", null ],
+    [ "fill_command_arguments", "cli__commands_8h.html#a7c77d57583ecaadc230d090f50f7392d", null ],
     [ "get_cli_command_by_name", "cli__commands_8h.html#a3be87adad64eb43e3778c5559034e754", null ],
     [ "get_cli_commands", "cli__commands_8h.html#ac9744b15a63eff3572f1ffdb0c8f7040", null ]
 ];

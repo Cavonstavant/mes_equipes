@@ -1,5 +1,5 @@
 <map id="user_list_s" name="user_list_s">
-<area shape="rect" id="node1" title="Node of a user list." alt="" coords="43,184,134,211"/>
+<area shape="rect" id="node1" title="Node of a user list." alt="" coords="43,199,134,225"/>
 <area shape="rect" id="node2" href="$structpeer__s.html" title="Represents a client connection." alt="" coords="5,95,71,121"/>
 <area shape="rect" id="node3" href="$structmy__uuid__s.html" title="Uuid object equivalent of a string To Refacto with issue #25." alt="" coords="95,95,187,121"/>
 <area shape="rect" id="node4" href="$structw__uuid__s.html" title="wrapper struct around uuid_t" alt="" coords="99,5,182,32"/>

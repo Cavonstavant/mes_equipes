@@ -139,6 +139,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a1c943adc8b62b20ef7461ebdc740a7e2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server__data_8c.html#a1c943adc8b62b20ef7461ebdc740a7e2">server_add_user</a> (<a class="el" href="server_8h.html#a9ca54fdf642f42b1f7fbdf968d0d4295">server_data_t</a> *server_data)</td></tr>
 <tr class="memdesc:a1c943adc8b62b20ef7461ebdc740a7e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new user to the server data.  <a href="server__data_8c.html#a1c943adc8b62b20ef7461ebdc740a7e2">More...</a><br /></td></tr>
 <tr class="separator:a1c943adc8b62b20ef7461ebdc740a7e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6782d8c95b0306b87958cb50796b9ee1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server__data_8c.html#a6782d8c95b0306b87958cb50796b9ee1">server_remove_user</a> (<a class="el" href="server_8h.html#a9ca54fdf642f42b1f7fbdf968d0d4295">server_data_t</a> *server_data, <a class="el" href="server_8h.html#ae3ed3ed33e0e04d42a57b1afda4c0c86">user_list_t</a> *user_info)</td></tr>
+<tr class="memdesc:a6782d8c95b0306b87958cb50796b9ee1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a user from the connection list.  <a href="server__data_8c.html#a6782d8c95b0306b87958cb50796b9ee1">More...</a><br /></td></tr>
+<tr class="separator:a6782d8c95b0306b87958cb50796b9ee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26446a77f6c267950aae6b4d2b4f2b59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server__data_8c.html#a26446a77f6c267950aae6b4d2b4f2b59">remove_disconnected_user</a> (<a class="el" href="server_8h.html#a9ca54fdf642f42b1f7fbdf968d0d4295">server_data_t</a> *server_data, <a class="el" href="server_8h.html#a7ee9da92889c2fd4c8dd451611b0a099">user_state_t</a> comp)</td></tr>
+<tr class="memdesc:a26446a77f6c267950aae6b4d2b4f2b59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove all the disconnected user.  <a href="server__data_8c.html#a26446a77f6c267950aae6b4d2b4f2b59">More...</a><br /></td></tr>
+<tr class="separator:a26446a77f6c267950aae6b4d2b4f2b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9dab07f1baccba21d21ca4bed5adfc03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server__data_8c.html#a9dab07f1baccba21d21ca4bed5adfc03">destroy_server_data</a> (<a class="el" href="server_8h.html#a9ca54fdf642f42b1f7fbdf968d0d4295">server_data_t</a> *server_data)</td></tr>
 <tr class="memdesc:a9dab07f1baccba21d21ca4bed5adfc03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the server_data.  <a href="server__data_8c.html#a9dab07f1baccba21d21ca4bed5adfc03">More...</a><br /></td></tr>
 <tr class="separator:a9dab07f1baccba21d21ca4bed5adfc03"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -197,6 +203,43 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a26446a77f6c267950aae6b4d2b4f2b59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26446a77f6c267950aae6b4d2b4f2b59">&#9670;&nbsp;</a></span>remove_disconnected_user()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void remove_disconnected_user </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="server_8h.html#a9ca54fdf642f42b1f7fbdf968d0d4295">server_data_t</a> *&#160;</td>
+          <td class="paramname"><em>server_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="server_8h.html#a7ee9da92889c2fd4c8dd451611b0a099">user_state_t</a>&#160;</td>
+          <td class="paramname"><em>comp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove all the disconnected user. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">server_data</td><td>Server data info </td></tr>
+    <tr><td class="paramname">comp</td><td>Value to compare the state connexion </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a1c943adc8b62b20ef7461ebdc740a7e2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1c943adc8b62b20ef7461ebdc740a7e2">&#9670;&nbsp;</a></span>server_add_user()</h2>
 
@@ -223,6 +266,43 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>true When operation success </dd>
 <dd>
 false When operation failed </dd></dl>
+
+</div>
+</div>
+<a id="a6782d8c95b0306b87958cb50796b9ee1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6782d8c95b0306b87958cb50796b9ee1">&#9670;&nbsp;</a></span>server_remove_user()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void server_remove_user </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="server_8h.html#a9ca54fdf642f42b1f7fbdf968d0d4295">server_data_t</a> *&#160;</td>
+          <td class="paramname"><em>server_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="server_8h.html#ae3ed3ed33e0e04d42a57b1afda4c0c86">user_list_t</a> *&#160;</td>
+          <td class="paramname"><em>user_info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove a user from the connection list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">server_data</td><td>Server data info </td></tr>
+    <tr><td class="paramname">user_info</td><td>User info </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

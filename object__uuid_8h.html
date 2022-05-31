@@ -233,6 +233,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a31cfaff799ed2f26f31bf05ba5aa609e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__uuid_8h.html#a31cfaff799ed2f26f31bf05ba5aa609e">my_uuid_cmp</a> (<a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *first, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *second)</td></tr>
 <tr class="memdesc:a31cfaff799ed2f26f31bf05ba5aa609e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two uuid object.  <a href="object__uuid_8h.html#a31cfaff799ed2f26f31bf05ba5aa609e">More...</a><br /></td></tr>
 <tr class="separator:a31cfaff799ed2f26f31bf05ba5aa609e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d8de83f919781813b043d6e6bb99e23"><td class="memItemLeft" align="right" valign="top"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="object__uuid_8h.html#a1d8de83f919781813b043d6e6bb99e23">my_uuid_from_string</a> (char *repr)</td></tr>
+<tr class="memdesc:a1d8de83f919781813b043d6e6bb99e23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creare a uuid from a string.  <a href="object__uuid_8h.html#a1d8de83f919781813b043d6e6bb99e23">More...</a><br /></td></tr>
+<tr class="separator:a1d8de83f919781813b043d6e6bb99e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a5721cd75e5247d90e9033368ee5e6312"></a>
@@ -521,6 +524,33 @@ false When the two uuid are not the same </dd></dl>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int Index of the matching uuid in the list </dd></dl>
+
+</div>
+</div>
+<a id="a1d8de83f919781813b043d6e6bb99e23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d8de83f919781813b043d6e6bb99e23">&#9670;&nbsp;</a></span>my_uuid_from_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a>* my_uuid_from_string </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>repr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creare a uuid from a string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">repr</td><td>String uuid </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>my_uuid_t* Newly created uuid </dd></dl>
 
 </div>
 </div>

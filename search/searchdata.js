@@ -2,12 +2,12 @@ var indexSectionsWithContent =
 {
   0: "abcdefgilmnoprstuw",
   1: "cmoprstuw",
-  2: "bcdefglmnoprstuw",
-  3: "abcdfgimnpstuw",
+  2: "abcdefglmnoprstuw",
+  3: "abcdfgimnprstuw",
   4: "abcdefilmnoprstuw",
   5: "bcdmnoprstuw",
   6: "mu",
-  7: "cdmtu",
+  7: "cdlmtu",
   8: "bcdflmnostuw",
   9: "m"
 };
