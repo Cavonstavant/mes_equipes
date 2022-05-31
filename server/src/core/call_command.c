@@ -18,7 +18,8 @@ static int get_nb_arguments(char **args)
     return (i);
 }
 
-static bool check_arguments_validity(const cli_command_t *cmd, cli_command_t *command,
+static bool check_arguments_validity(const cli_command_t *cmd,
+cli_command_t *command,
 user_list_t *users)
 {
     int i = get_nb_arguments(cmd->arguments);

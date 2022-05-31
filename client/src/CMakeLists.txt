@@ -18,9 +18,9 @@ set (SRC
 
 add_library(${CORE_TARGET} ${CORE_SRC})
 
-target_link_directories(${CORE_TARGET}
-    PUBLIC ${PROJECT_SOURCE_DIR}/libs/myteams
-)
+# target_link_directories(${CORE_TARGET}
+#     PUBLIC ${PROJECT_SOURCE_DIR}/libs/myteams
+# )
 
 target_link_libraries(${CORE_TARGET}
     PUBLIC ${PROJECT_NAME}_client_net_utils
