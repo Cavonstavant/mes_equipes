@@ -41,6 +41,8 @@ jobs:
         ctest --output-on-failure --test-dir build
         gcovr --exclude tests/ --branches --xml --output branches_coverage.xml
         gcovr --exclude tests/ --xml --output coverage.xml
+        echo "::debug:: Directory listing"
+        ls -l
 
     - uses: codecov/codecov-action@v2
       with:
