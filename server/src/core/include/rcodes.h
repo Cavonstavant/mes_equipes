@@ -93,7 +93,8 @@ static const retcodes_t retcodes[] = {
 /// parameter.
 /// \param int The code to be send.
 /// \return A new instance of retcodes_t.
-static inline retcodes_t *create_new_repcode(int code) {
+static inline retcodes_t *create_new_repcode(int code)
+{
     retcodes_t *retcode = (retcodes_t *) malloc(sizeof(retcodes_t));
 
     if (!retcode)
