@@ -16,7 +16,7 @@ bool command_logout(cli_command_t *command,
 user_list_t *user_info, server_data_t *server_data)
 {
     (void) command;
-    print_retcode(203, NULL, user_info->user_peer);
+    print_retcode(203, "Michel", user_info->user_peer);
     user_info->disconnected = TO_LOGOUT;
     if (user_info->is_auth)
         server_event_user_logged_out(user_info->user_uuid->uuid.repr);
