@@ -9,9 +9,21 @@
 
 #include "client_utils.h"
 #include "internals.h"
+#include <fcntl.h>
+
+static bool check_for_disconnection(client_net_server_t *server)
+{
+    if (!(fcntl(server->sock_fd, F_GETFD) != -1 || errno != EBADF)) {
+        server->connected = false;
+        return (true);
+    }
+    return (false);
+}
 
 void update_client(client_net_server_t *server)
 {
+    if (check_for_disconnection(server))
+        return;
     fill_fd_sets(server);
     if (select(FD_SETSIZE, &server->read_fds,
         &server->write_fds, NULL, NULL) == -1){

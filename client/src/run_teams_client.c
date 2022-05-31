@@ -14,7 +14,7 @@ static void print_message(client_net_server_t *server)
 {
     char *msg = NULL;
 
-    if (server->pending_read) {
+    if (server->pending_read && server->connected) {
         if (!(msg = fetch_message(server)))
             return;
         printf("%s\n", msg);
@@ -30,6 +30,8 @@ static void send_message_to_server(client_net_server_t *server)
     ssize_t getline_size = 0;
     size_t msg_size = 0;
 
+    if (!server->connected)
+        return;
     printf("> ");
     fflush(stdin);
     getline_size = getline(&msg, &msg_size, stdin);
