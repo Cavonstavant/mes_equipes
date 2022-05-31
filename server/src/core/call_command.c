@@ -8,6 +8,7 @@
 /// \file server/src/core/call_command.c
 
 #include "cli_commands.h"
+#include "rcodes.h"
 
 /// /!\ This function doesn't call the function actually, because the function
 /// are not implemented yet.
@@ -22,12 +23,13 @@ server_data_t *server_data)
     int i = 0;
     int j = 0;
 
-    if (!cmd)
+    if (!cmd) {
         return (-1);
+    }
     for (i = 0; cmd->arguments && cmd->arguments[i]; i++);
     for (j = 0; command->arguments && command->arguments[j]; j++);
     if (j != i) {
-        // print_retcode(510);
+        print_retcode(510, NULL, users->user_peer);
         return (-1);
     }
     cmd->function(command, users, server_data);

@@ -23,6 +23,12 @@
     ///
     #define FAILED 84
 
+typedef enum user_state_e {
+    CONNECTED,
+    TO_LOGOUT,
+    LOGOUT
+} user_state_t;
+
 ///
 /// \brief Node of a user list
 ///
@@ -33,6 +39,10 @@ typedef struct user_list_s {
     peer_t *user_peer;
     /// State of the client
     bool is_auth;
+    /// Login status
+    user_state_t disconnected;
+    /// Localisation of user
+    my_uuid_t *loc;
 } user_list_t;
 
 ///
@@ -94,5 +104,31 @@ bool server_add_user(server_data_t *server_data);
 /// \param server_data Server data
 ///
 void process_command_inspection(server_data_t *server_data);
+
+///
+/// \brief Get the user list by peer object
+///
+/// \param server_data Server data info
+/// \param peer Peer to match
+/// \return user_list_t* User list matched, NULL otherwise
+///
+user_list_t *get_user_list_by_peer(server_data_t *server_data,
+peer_t *peer);
+
+///
+/// \brief Remove a user from the connection list
+///
+/// \param server_data Server data info
+/// \param user_info User info
+///
+void server_remove_user(server_data_t *server_data, user_list_t *user_info);
+
+///
+/// \brief Remove all the disconnected user
+///
+/// \param server_data Server data info
+/// \param comp Value to compare the state connexion
+///
+void remove_disconnected_user(server_data_t *server_data, user_state_t comp);
 
 #endif /* !SERVER_H_ */

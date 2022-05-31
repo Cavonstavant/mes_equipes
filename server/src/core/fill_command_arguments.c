@@ -8,6 +8,7 @@
 /// \file server/src/core/fill_command_arguments.c
 
 #include "cli_commands.h"
+#include "rcodes.h"
 #include <stdlib.h>
 #include <string.h>
 
@@ -45,9 +46,8 @@ static char **fill_arguments(char *command, int arg_number, char **args)
         if (!command[arg_len])
             return (NULL);
         args[i] = malloc(sizeof(char) * (arg_len + 1));
-        if (!args[i])
-            return (NULL);
         strncpy(args[i], command, arg_len);
+        args[i][arg_len] = '\0';
         command = command + arg_len + 1;
     }
     if (command[0])
@@ -74,14 +74,14 @@ static char **get_arguments(char *command, int arg_number)
     return (args);
 }
 
-char **fill_command_arguments(char *command, char *name)
+char **fill_command_arguments(char *command, char *name, user_list_t *users)
 {
     char **args = NULL;
     const cli_command_t *cmd = get_cli_command_by_name(name);
     int i = 0;
 
     if (!cmd) {
-        // print_retcode(530);
+        print_retcode(530, NULL, users->user_peer);
         return (NULL);
     }
     for (i = 0; cmd->arguments && cmd->arguments[i]; i++);
