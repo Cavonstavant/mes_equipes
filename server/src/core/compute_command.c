@@ -11,37 +11,37 @@
 #include "cli_commands.h"
 #include "rcodes.h"
 
+static void add_char(char *command, int index, char c)
+{
+    command = realloc(command, sizeof(char) * (index + 2));
+    command[index] = c;
+    command[index + 1] = '\0';
+}
+
 /// \brief Format the flexible argument part of the command to strict
 /// argument format.
 /// \param char * The flexible command.
 /// \param int The index in the flexible command.
 /// \param int The index in the strict command.
 /// \return char * The strict command.
-static char *format_arguments(char *command, char *new_command, int cmd_i, int new_cmd_i)
+static char *format_arguments(char *command, char *new_command, int cmd_i,
+int new_cmd_i)
 {
     int copy = 0;
     char c = 0;
 
     for (; command[cmd_i]; cmd_i++) {
         c = command[cmd_i];
-        if (c == '"' && copy) {
-            new_command = realloc(new_command, sizeof(char) * (new_cmd_i + 2));
-            new_command[new_cmd_i] = '"';
-            new_command[new_cmd_i + 1] = '\0';
-        }
-        if (c == '"' && !copy) {
-            new_command = realloc(new_command, sizeof(char) * (new_cmd_i + 2));
-            new_command[new_cmd_i] = ' ';
-            new_command[new_cmd_i + 1] = '\0';
-        }
+        if (c == '"' && copy)
+            add_char(new_command, new_cmd_i, '"');
+        if (c == '"' && !copy)
+            add_char(new_command, new_cmd_i, ' ');
         if (c == '"') {
             copy = (copy) ? 0 : 1;
             new_cmd_i++;
         }
         if (copy) {
-            new_command = realloc(new_command, sizeof(char) * (new_cmd_i + 2));
-            new_command[new_cmd_i] = c;
-            new_command[new_cmd_i + 1] = '\0';
+            add_char(new_command, new_cmd_i, c);
             new_cmd_i++;
         }
     }
