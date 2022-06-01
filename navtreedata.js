@@ -60,7 +60,7 @@ var NAVTREEINDEX =
 "annotated.html",
 "my__teams__server_8c.html",
 "object__wrapper_8h.html#a07ca1ab9a02de164ecfab9522a5f4e9a",
-"structw__uuid__s.html"
+"structuser__s.html#ad97265ae90c46c3638dab62c127bb048"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

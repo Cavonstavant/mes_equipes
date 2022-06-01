@@ -11,5 +11,6 @@ var dir_c3857364c203a53bd803276bd5255ca3 =
     [ "my_teams_server.c", "my__teams__server_8c.html", "my__teams__server_8c" ],
     [ "server_data.c", "server__data_8c.html", "server__data_8c" ],
     [ "server_run.c", "server__run_8c.html", "server__run_8c" ],
-    [ "subscribe_command.c", "subscribe__command_8c.html", "subscribe__command_8c" ]
+    [ "subscribe_command.c", "subscribe__command_8c.html", "subscribe__command_8c" ],
+    [ "use_command.c", "use__command_8c.html", "use__command_8c" ]
 ];

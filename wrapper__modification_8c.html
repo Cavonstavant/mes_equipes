@@ -135,8 +135,108 @@ Functions</h2></td></tr>
 <tr class="memitem:a3429224808d12a1195d0235bc8f8b762"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wrapper__modification_8c.html#a3429224808d12a1195d0235bc8f8b762">wrapper_user_leave_team</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *user_uuid, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *team_uuid)</td></tr>
 <tr class="memdesc:a3429224808d12a1195d0235bc8f8b762"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a user from a team.  <a href="wrapper__modification_8c.html#a3429224808d12a1195d0235bc8f8b762">More...</a><br /></td></tr>
 <tr class="separator:a3429224808d12a1195d0235bc8f8b762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeba233d727c46648896b612495b5d580"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wrapper__modification_8c.html#aeba233d727c46648896b612495b5d580">wrapper_find_channel_tm</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *chan, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *team)</td></tr>
+<tr class="memdesc:aeba233d727c46648896b612495b5d580"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a channel inside a team.  <a href="wrapper__modification_8c.html#aeba233d727c46648896b612495b5d580">More...</a><br /></td></tr>
+<tr class="separator:aeba233d727c46648896b612495b5d580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6f5688e5a0392af80bcfd8dd60d5d0d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wrapper__modification_8c.html#aa6f5688e5a0392af80bcfd8dd60d5d0d">wrapper_find_thread_tm</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *thread, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *chan)</td></tr>
+<tr class="memdesc:aa6f5688e5a0392af80bcfd8dd60d5d0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find a thread inside a team.  <a href="wrapper__modification_8c.html#aa6f5688e5a0392af80bcfd8dd60d5d0d">More...</a><br /></td></tr>
+<tr class="separator:aa6f5688e5a0392af80bcfd8dd60d5d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="aeba233d727c46648896b612495b5d580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeba233d727c46648896b612495b5d580">&#9670;&nbsp;</a></span>wrapper_find_channel_tm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wrapper_find_channel_tm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *&#160;</td>
+          <td class="paramname"><em>wrapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>chan</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>team</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Find a channel inside a team. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapper</td><td>Wrapper object </td></tr>
+    <tr><td class="paramname">chan</td><td>Channel uuid </td></tr>
+    <tr><td class="paramname">team</td><td>Team uuid </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true When channel is found </dd>
+<dd>
+false When channel is not found </dd></dl>
+
+</div>
+</div>
+<a id="aa6f5688e5a0392af80bcfd8dd60d5d0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6f5688e5a0392af80bcfd8dd60d5d0d">&#9670;&nbsp;</a></span>wrapper_find_thread_tm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wrapper_find_thread_tm </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *&#160;</td>
+          <td class="paramname"><em>wrapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>thread</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>chan</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Find a thread inside a team. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wrapper</td><td>Wrapper object </td></tr>
+    <tr><td class="paramname">thread</td><td>Thread uuid </td></tr>
+    <tr><td class="paramname">chan</td><td>Channel uuid (Parent) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true When thread is found </dd>
+<dd>
+false When thread is not found </dd></dl>
+
+</div>
+</div>
 <a id="a8f83211d0256781fe2fbcaa9b623eb48"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8f83211d0256781fe2fbcaa9b623eb48">&#9670;&nbsp;</a></span>wrapper_user_join_conversation()</h2>
 
