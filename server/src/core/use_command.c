@@ -97,9 +97,13 @@ user_list_t *user, bool print)
 static bool command_go_next(char *uuid, user_list_t *user,
 server_data_t *serv, bool print)
 {
-    my_uuid_prefix_t type =
-    my_uuid_get_prefix(&(my_uuid_from_string(uuid)->uuid));
+    my_uuid_prefix_t type;
 
+    if (!my_uuid_from_string(uuid)) {
+        print_retcode(501, NULL, user->user_peer);
+        return false;
+    }
+    type = my_uuid_get_prefix(&(my_uuid_from_string(uuid)->uuid));
     if (type == MY_UUID_PREFIX_TEAM)
         return command_go_team(my_uuid_from_string(uuid),
         serv, user, print);
