@@ -23,6 +23,7 @@ static bool check_for_disconnection(client_net_server_t *server)
     return (false);
 }
 
+/// Get the user input via getline
 static void get_user_input(client_net_server_t *server)
 {
     char *msg = NULL;
@@ -31,7 +32,6 @@ static void get_user_input(client_net_server_t *server)
 
     if (!server->connected)
         return;
-
     getline_size = getline(&msg, &msg_size, stdin);
     if (getline_size == -1)
         return;
