@@ -31,18 +31,8 @@ target_include_directories(${TARGET}
     PRIVATE ${SRC_ROOT}
 )
 
-# target_link_directories(${TARGET}
-#     PUBLIC ${PROJECT_SOURCE_DIR}/libs/myteams
-# )
-
-# target_link_directories(${TARGET}
-#     PUBLIC ${PROJECT_SOURCE_DIR}/libs/myteams
-# )
-
-# target_compile_options(${TARGET} PUBLIC "-L libs/myteams")
-
 target_link_libraries(${TARGET}
     PRIVATE ${PROJECT_NAME}_objects
     PRIVATE net_utils
-    PUBLIC "${MYTEAMS_LIB}"
+    PUBLIC myteams_api
 )

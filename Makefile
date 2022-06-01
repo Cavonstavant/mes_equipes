@@ -13,18 +13,21 @@ $(NAME):
 
 clean:
 	cmake . && make clean
+	rm -rf libs/
 
 fclean:
 	cmake . && make fclean
 
 re:
 	cmake . && make re
+	rm -rf libs/
 
 all:
 	cmake . && make
+	rm -rf libs/
 
 tests:
-	cmake -B ./build-with-coverage -G  
+	cmake -B ./build-with-coverage -G
 	"Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug -DENABLE_CODE_COVERAGE=ON
 	cmake --build ./build-with-coverage
 	cd ./build-with-coverage ; ctest

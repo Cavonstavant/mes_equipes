@@ -64,20 +64,20 @@ typedef struct server_s {
     void (*stop)(struct server_s *);
 } client_net_server_t;
 
-static inline void __log_error(int line __attribute__((unused)),
+static inline void log_error(int line __attribute__((unused)),
     const char *file __attribute__((unused)),
     const char *func __attribute__((unused)),
     const char *msg __attribute__((unused)))
 {
     char *errmsg = strerror(errno);
 
-    if (strcmp(errmsg, "Success") == 0)
+    if (strncmp(errmsg, "Success", 7) != 0)
         printf("%s:%d:%s():\n\t%s: %s\n", file, line, func, msg, errmsg);
 }
 
     /// \brief Simple macro used to log a message
     #define TEAMS_LOG(msg) \
-        do {__log_error(__LINE__, \
+        do {log_error(__LINE__, \
 strrchr(__FILE__, '/') + 1, __func__, msg);} while (0)
 
 /// \brief Create a new mes_équipes TM. server object to connect to
