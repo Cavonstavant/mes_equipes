@@ -27,7 +27,8 @@ user_list_t *user, server_data_t *data)
     wrapper_user_join_team(data->wrapper, user->user_uuid, team);
     server_event_user_subscribed(team->uuid.repr + 4,
     user->user_uuid->uuid.repr + 4);
-    return print_retcode(200, NULL, user->user_peer, true);
+    return print_retcode(219, cretcodes((char *[]) {user->user_uuid->uuid.repr,
+    team->uuid.repr, NULL}), user->user_peer, true);
 }
 
 bool command_unsubscribe(cli_command_t *cmd,
@@ -46,5 +47,6 @@ user_list_t *user, server_data_t *data)
     wrapper_user_leave_team(data->wrapper, user->user_uuid, team);
     server_event_user_unsubscribed(user->user_uuid->uuid.repr + 4,
     team->uuid.repr + 4);
-    return print_retcode(200, NULL, user->user_peer, true);
+    return print_retcode(220, cretcodes((char *[]) {user->user_uuid->uuid.repr,
+    team->uuid.repr, NULL}), user->user_peer, true);
 }
