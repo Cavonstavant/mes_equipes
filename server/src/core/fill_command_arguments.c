@@ -38,8 +38,10 @@ static char **fill_arguments(char *command, int arg_number, char **args)
     int arg_len = 0;
 
     for (int i = 0; i < arg_number; i++) {
-        if (command[0] != ' ' || command[1] != '"')
-            return (NULL);
+        if (command[0] != ' ' || command[1] != '"' || command[2] == '\n') {
+            args[i] = NULL;
+            return args;
+        }
         command = command + 2;
         for (arg_len = 0; command[arg_len] && command[arg_len] != '"';
         arg_len++);
@@ -50,10 +52,8 @@ static char **fill_arguments(char *command, int arg_number, char **args)
         args[i][arg_len] = '\0';
         command = command + arg_len + 1;
     }
-    if (command[0])
-        return (NULL);
     args[arg_number] = NULL;
-    return (args);
+    return ((command[0]) ? NULL : args);
 }
 
 /// \brief Skip the command name and get all arguments from the command.
@@ -64,7 +64,8 @@ static char **get_arguments(char *command, int arg_number)
 {
     char **args = NULL;
 
-    command = skip_command(command);
+    if (strncmp(command, "/use", 4) != 0)
+        command = skip_command(command);
     if (!command)
         return (NULL);
     args = malloc(sizeof(char *) * (arg_number + 1));

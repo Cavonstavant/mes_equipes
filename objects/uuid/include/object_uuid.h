@@ -88,7 +88,7 @@ void my_uuid_dump(my_uuid_t *uuid);
 /// \param uuid My_uuid object to be edited
 /// \param content Content to replace in the my_uuid object
 ///
-void my_uuid_edit_content(my_uuid_t *uuid, char *content);
+int my_uuid_edit_content(my_uuid_t *uuid, char *content);
 
 ///
 /// \brief Find an uuid object into a uuid object list
