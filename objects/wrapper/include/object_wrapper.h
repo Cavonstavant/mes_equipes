@@ -429,4 +429,40 @@ my_uuid_t *team);
 bool wrapper_find_thread_tm(object_wrapper_t *wrapper, my_uuid_t *thread,
 my_uuid_t *chan);
 
+///
+/// \brief Find a channel inside a team by his name 
+///
+/// \param wrapper Wrapper object
+/// \param name Name to search
+/// \param team Team uuid
+/// \return my_uuid_t* Uuid of the founded object
+///
+static inline my_uuid_t *find_channel_by_name_exc(object_wrapper_t *wrapper,
+char *name, my_uuid_t *team)
+{
+   for (int i = 0; i < wrapper->channel_n; i++)
+        if (strcmp(wrapper->channels[i]->name, name) == 0 &&
+            my_uuid_cmp(team, wrapper->channels[i]->team))
+            return wrapper->channels[i]->uuid;
+    return OBJECT_NOT_FOUND; 
+}
+
+///
+/// \brief Find a thread inside a team by his name 
+///
+/// \param wrapper Wrapper object
+/// \param name Name to search
+/// \param chan Chan uuid
+/// \return my_uuid_t* Uuid of the founded object
+///
+static inline my_uuid_t *find_thread_by_name_exc(object_wrapper_t *wrapper,
+char *name, my_uuid_t *chan)
+{
+    for (int i = 0; i < wrapper->thread_n; i++)
+        if (strcmp(wrapper->threads[i]->name, name) == 0 &&
+            my_uuid_cmp(chan, wrapper->threads[i]->channel))
+            return wrapper->threads[i]->uuid;
+    return OBJECT_NOT_FOUND;
+}
+
 #endif /* !OBJECT_WRAPPER_H_ */
