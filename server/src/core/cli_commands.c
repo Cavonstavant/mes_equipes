@@ -23,7 +23,7 @@ static const cli_command_t commands[14] = {
     {"/subscribe", (char *[]){"", NULL}, &command_subscribe},
     {"/subscribed", (char *[]){"", NULL}, NULL/*&command_subscribed*/},
     {"/unsubscribe", (char *[]){"", NULL}, &command_unsubscribe},
-    {"/use", (char *[]){"", NULL}, NULL/*&command_use*/},
+    {"/use", (char *[]){"", NULL}, &command_use},
     {"/create", (char *[]){"", "", NULL}, &command_create},
     {"/list", NULL, NULL/*&command_list*/},
     {"/info", NULL, NULL/*&command_info*/}

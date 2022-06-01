@@ -61,3 +61,24 @@ my_uuid_t *user_uuid, my_uuid_t *team_uuid)
         return OPERATION_FAILED;
     return OPERATION_SUCCEED;
 }
+
+bool wrapper_find_channel_tm(object_wrapper_t *wrapper, my_uuid_t *chan,
+my_uuid_t *team)
+{
+    if (!wrapper_find_channel(wrapper, chan))
+        return false;
+    if (!my_uuid_cmp(get_associated_team_channel(wrapper, chan), team))
+        return false;
+    return true;
+}
+
+bool wrapper_find_thread_tm(object_wrapper_t *wrapper, my_uuid_t *thread,
+my_uuid_t *chan)
+{
+    if (!wrapper_find_thread(wrapper, thread))
+        return false;
+    if (!my_uuid_cmp(get_associated_team_thread(wrapper, chan),
+        get_associated_team_channel(wrapper, chan)))
+        return false;
+    return true;
+}

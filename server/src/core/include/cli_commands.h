@@ -11,6 +11,7 @@
     #define CLI_COMMANDS_H_
 
     #include "server.h"
+    #include "rcodes.h"
 
     /// \brief The number of command available.
     #define COMMAND_NUMBER 14
@@ -69,5 +70,21 @@ int call_command(cli_command_t *command, user_list_t *, server_data_t *);
 /// \return A array of char * which contains all arguments if it's OK, or NULL
 /// if an error occurs.
 char **fill_command_arguments(char *command, char *name, user_list_t *users);
+
+///
+/// \brief Reset the localisation of an user
+///
+/// \param user User info
+/// \param print Last command of use
+/// \return true When operation succeed
+/// \return false When operation failed
+///
+static inline bool command_use_empty(user_list_t *user, bool print)
+{
+    user->loc = NULL;
+    if (print)
+        print_retcode(200, NULL, user->user_peer);
+    return true;
+}
 
 #endif /* !PARSER_H_ */

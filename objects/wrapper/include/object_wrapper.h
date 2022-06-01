@@ -405,4 +405,28 @@ my_uuid_t *channel_uuid);
 my_uuid_t *get_associated_team_thread(object_wrapper_t *wrapper,
 my_uuid_t *thread_uuid);
 
+///
+/// \brief Find a channel inside a team
+///
+/// \param wrapper Wrapper object
+/// \param chan Channel uuid
+/// \param team Team uuid
+/// \return true When channel is found
+/// \return false When channel is not found
+///
+bool wrapper_find_channel_tm(object_wrapper_t *wrapper, my_uuid_t *chan,
+my_uuid_t *team);
+
+///
+/// \brief Find a thread inside a team
+///
+/// \param wrapper Wrapper object
+/// \param thread Thread uuid
+/// \param chan Channel uuid (Parent)
+/// \return true When thread is found
+/// \return false When thread is not found
+///
+bool wrapper_find_thread_tm(object_wrapper_t *wrapper, my_uuid_t *thread,
+my_uuid_t *chan);
+
 #endif /* !OBJECT_WRAPPER_H_ */
