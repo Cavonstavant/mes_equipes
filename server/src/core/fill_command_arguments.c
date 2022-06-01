@@ -64,7 +64,8 @@ static char **get_arguments(char *command, int arg_number)
 {
     char **args = NULL;
 
-    command = skip_command(command);
+    if (strncmp(command, "/use", 4) != 0)
+        command = skip_command(command);
     if (!command)
         return (NULL);
     args = malloc(sizeof(char *) * (arg_number + 1));
