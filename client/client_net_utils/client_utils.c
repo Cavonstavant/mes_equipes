@@ -36,14 +36,17 @@ client_net_server_t *create_net_server(const char *ip, long port)
     client_net_server_t *new_server;
     int pton_return = 0;
 
-    if (!(new_server = malloc(sizeof(client_net_server_t *))))
+    if (!(new_server = malloc(sizeof(client_net_server_t))))
         return NULL;
     pton_return = inet_pton(AF_INET, ip, &new_server->srv_addr.sin_addr);
     if (pton_return <= 0) {
         TEAMS_LOG("inet_pton: Invalid ip address provided\n");
         return NULL;
     }
-    connect_socket(new_server, port);
+    if (!connect_socket(new_server, port)){
+        free(new_server);
+        return NULL;
+    }
     FD_ZERO(&new_server->read_fds);
     FD_ZERO(&new_server->write_fds);
     FD_ZERO(&new_server->err_fds);
