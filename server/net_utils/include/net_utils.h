@@ -96,7 +96,7 @@ typedef struct tcp_server_s {
 } tcp_server_t;
 
 /// \brief DO NOT USE THIS FUNCTION, USE THE `TEAMS_LOG` MACRO INSTEAD
-static inline void __log_error(int line __attribute__((unused)),
+static inline void log_error(int line __attribute__((unused)),
     const char *file __attribute__((unused)),
     const char *func __attribute__((unused)),
     const char *msg __attribute__((unused)))
@@ -109,7 +109,7 @@ static inline void __log_error(int line __attribute__((unused)),
 
     /// \brief Simple macro used to log a message
     #define TEAMS_LOG(msg) \
-        do {__log_error(__LINE__, \
+        do {log_error(__LINE__, \
 strrchr(__FILE__, '/') + 1, __func__, msg);} while (0)
 
 /// \brief Creates a new client
