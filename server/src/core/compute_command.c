@@ -17,26 +17,36 @@
 /// \param int The index in the flexible command.
 /// \param int The index in the strict command.
 /// \return char * The strict command.
-static char *format_arguments(char *command, int cmd_i, int new_cmd_i)
+static char *format_arguments(char *command, char *new_command, int cmd_i, int new_cmd_i)
 {
     int copy = 0;
+    char c = 0;
 
     for (; command[cmd_i]; cmd_i++) {
-        if (command[cmd_i] == '"' && copy)
-            command[new_cmd_i] = '"';
-        else if (command[cmd_i] == '"' && !copy)
-            command[new_cmd_i] = ' ';
-        if (command[cmd_i] == '"') {
+        c = command[cmd_i];
+        if (c == '"' && copy) {
+            new_command = realloc(new_command, sizeof(char) * (new_cmd_i + 2));
+            new_command[new_cmd_i] = '"';
+            new_command[new_cmd_i + 1] = '\0';
+        }
+        if (c == '"' && !copy) {
+            new_command = realloc(new_command, sizeof(char) * (new_cmd_i + 2));
+            new_command[new_cmd_i] = ' ';
+            new_command[new_cmd_i + 1] = '\0';
+        }
+        if (c == '"') {
             copy = (copy) ? 0 : 1;
             new_cmd_i++;
         }
         if (copy) {
-            command[new_cmd_i] = command[cmd_i];
+            new_command = realloc(new_command, sizeof(char) * (new_cmd_i + 2));
+            new_command[new_cmd_i] = c;
+            new_command[new_cmd_i + 1] = '\0';
             new_cmd_i++;
         }
     }
     command[new_cmd_i] = '\0';
-    return command;
+    return new_command;
 }
 
 /// \brief Format the command from flexible command format to strict
@@ -47,15 +57,18 @@ static char *format_command(char *command)
 {
     int cmd_i = 0;
     int new_cmd_i = 0;
+    char *new_command = NULL;
 
     if (!command)
         return NULL;
     for (; command[cmd_i] && command[cmd_i] != '/'; cmd_i++);
     for (; command[cmd_i] && command[cmd_i] != ' '; cmd_i++) {
-        command[new_cmd_i] = command[cmd_i];
+        new_command = realloc(new_command, (new_cmd_i + 2) * sizeof(char));
+        new_command[new_cmd_i] = command[cmd_i];
+        new_command[new_cmd_i + 1] = '\0';
         new_cmd_i++;
     }
-    return format_arguments(command, cmd_i, new_cmd_i);
+    return format_arguments(command, new_command, cmd_i, new_cmd_i);
 }
 
 int compute_command(char *command, user_list_t *users,
@@ -80,5 +93,6 @@ server_data_t *server_data)
     }
     free(cmd);
     free(command);
+    free(tmp);
     return (0);
 }
