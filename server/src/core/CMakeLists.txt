@@ -16,6 +16,7 @@ set(SRC
     ${SRC_ROOT}/subscribe_command.c
     ${SRC_ROOT}/create_command.c
     ${SRC_ROOT}/use_command.c
+    ${SRC_ROOT}/send_command.c
 
     ${INC_ROOT}/cli_commands.h
     ${INC_ROOT}/entrypoint.h

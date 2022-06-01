@@ -21,6 +21,9 @@ typedef struct teams_client_s {
 
     /// Stop a connected client and destroy all associated ressources
     void (*stop)(struct teams_client_s *);
+
+    /// Display prompt
+    bool prompt_display;
 } teams_client_t;
 
 /// \brief Initializes the teams client with the given ip and port
