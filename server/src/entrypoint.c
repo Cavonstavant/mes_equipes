@@ -21,7 +21,7 @@ int main(int ac, char **av)
         printf(usage, av[0]);
         return 84;
     }
-    if (ac == 2 && strcmp("--help", av[1]) == 0){
+    if (ac == 2 && (strcmp("--help", av[1]) | strcmp("-h", av[1])) == 0){
         printf(usage, av[0]);
         return 0;
     }

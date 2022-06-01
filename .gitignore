@@ -54,6 +54,7 @@ dkms.conf
 # IDE files
 *.vscode
 *.idea
+.gdb_history
 
 
 # Build specific

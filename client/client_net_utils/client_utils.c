@@ -13,18 +13,19 @@
 #include <string.h>
 
 /// \brief bind the srv socket to a file descriptor
-static bool bind_socket(client_net_server_t *srv, long port)
+static bool connect_socket(client_net_server_t *srv, long port)
 {
     srv->sock_fd = socket(PF_INET, SOCK_STREAM, 0);
     if (srv->sock_fd < 0){
-        TEAMS_LOG("bind");
+        TEAMS_LOG("socket");
         return false;
     }
     srv->srv_addr.sin_family = AF_INET;
     srv->srv_addr.sin_port = htons(port);
-    if (bind(srv->sock_fd, (struct sockaddr *) &srv->srv_addr,
-        sizeof(struct sockaddr)) < 0){
-        TEAMS_LOG("bind\n");
+    if (connect(srv->sock_fd,
+        (struct sockaddr *)&srv->srv_addr,
+        sizeof(srv->srv_addr)) < 0){
+        TEAMS_LOG("connect\n");
         return false;
     }
     return true;
@@ -42,9 +43,11 @@ client_net_server_t *create_net_server(const char *ip, long port)
         TEAMS_LOG("inet_pton: Invalid ip address provided\n");
         return NULL;
     }
-    bind_socket(new_server, port);
+    connect_socket(new_server, port);
     FD_ZERO(&new_server->read_fds);
     FD_ZERO(&new_server->write_fds);
     FD_ZERO(&new_server->err_fds);
+    FD_SET(new_server->sock_fd, &new_server->read_fds);
+    FD_SET(new_server->sock_fd, &new_server->write_fds);
     return new_server;
 }

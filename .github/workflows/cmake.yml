@@ -38,15 +38,11 @@ jobs:
       run: |
         cmake -B ./build -DCODE_COVERAGE=ON
         cmake --build ./build
-        ctest -T test --output-on-failure --test-dir build
-
-    # - name: Collect coverage files
-    #   run: |
-    #     find build -iname "*.gcno" -exec cp {} . \;
-    #     find build -iname "*.gcda" -exec cp {} . \;
-    #     gcovr . --exclude tests/ --xml --output-file coverage.xml
+        ctest --output-on-failure --test-dir build
+        gcovr --exclude tests/ --branches --xml --output branches_coverage.xml
+        gcovr --exclude tests/ --xml --output coverage.xml
 
     - uses: codecov/codecov-action@v2
       with:
-        gcov: true
-        gcov_ignore: ./tests
+        files: ./coverage.xml,./branches_coverage.xml
+        fail_ci_if_error: true

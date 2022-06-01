@@ -12,7 +12,7 @@
 #include "parser.h"
 #include <signal.h>
 
-static bool running = true;
+static volatile bool running = true;
 
 ///
 /// \brief Catch the sigint signal

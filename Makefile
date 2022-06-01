@@ -24,7 +24,8 @@ all:
 	cmake . && make
 
 tests:
-	cmake -B ./build-with-coverage -G  "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug -DENABLE_CODE_COVERAGE=ON
+	cmake -B ./build-with-coverage -G  
+	"Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug -DENABLE_CODE_COVERAGE=ON
 	cmake --build ./build-with-coverage
 	cd ./build-with-coverage ; ctest
 	mkdir coverage-report

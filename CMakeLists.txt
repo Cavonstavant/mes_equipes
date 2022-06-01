@@ -11,6 +11,7 @@ if(NOT DEFINED CMAKE_SUPPRESS_DEVELOPER_WARNINGS)
 endif()
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+list(APPEND CMAKE_PREFIX_PATH ${CMAKE_CURRENT_SOURCE_DIR}/libs/myteams)
 
 add_compile_options (
    "-Werror" "-Wall" "-Wextra" "-Wpedantic" "-Wshadow" "-Wpointer-arith" "-Wattributes"
@@ -23,10 +24,6 @@ if (CODE_COVERAGE)
     add_subdirectory(tests)
 endif()
 
-add_subdirectory(objects)
-add_subdirectory(client)
-add_subdirectory(server)
-
 add_custom_target (re
     COMMAND make clean && make
 )
@@ -35,3 +32,17 @@ add_custom_target (fclean
     COMMAND make clean
     COMMAND rm -f ${PROJECT_NAME}_cli ${PROJECT_NAME}_server ${PROJECT_NAME}_objects
 )
+
+set (LIBS_PATH ${PROJECT_SOURCE_DIR}/libs)
+
+add_library(myteams SHARED IMPORTED)
+
+set_target_properties(myteams PROPERTIES
+    INTERFACE_INCLUDE_DIRECTORIES ${PROJECT_SOURCE_DIR}/libs/myteams
+    IMPORTED_NO_SONAME ON
+    IMPORTED_LOCATION ${PROJECT_SOURCE_DIR}/libs/myteams/libmyteams.so
+)
+
+add_subdirectory(objects)
+add_subdirectory(client)
+add_subdirectory(server)

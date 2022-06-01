@@ -1,0 +1,12 @@
+coverage:
+  status:
+    patch:
+      default: false
+    project:
+      default: false
+parser:
+  branch_detection:
+    conditional: yes
+    loop: yes
+    method: no
+    macro: no
