@@ -15,6 +15,7 @@ set(SRC
     ${SRC_ROOT}/auth_command.c
     ${SRC_ROOT}/subscribe_command.c
     ${SRC_ROOT}/create_command.c
+    ${SRC_ROOT}/use_command.c
 
     ${INC_ROOT}/cli_commands.h
     ${INC_ROOT}/entrypoint.h
@@ -31,18 +32,8 @@ target_include_directories(${TARGET}
     PRIVATE ${SRC_ROOT}
 )
 
-# target_link_directories(${TARGET}
-#     PUBLIC ${PROJECT_SOURCE_DIR}/libs/myteams
-# )
-
-# target_link_directories(${TARGET}
-#     PUBLIC ${PROJECT_SOURCE_DIR}/libs/myteams
-# )
-
-# target_compile_options(${TARGET} PUBLIC "-L libs/myteams")
-
 target_link_libraries(${TARGET}
     PRIVATE ${PROJECT_NAME}_objects
     PRIVATE net_utils
-    PUBLIC "${MYTEAMS_LIB}"
+    PUBLIC myteams_api
 )

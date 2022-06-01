@@ -36,5 +36,6 @@ bool server_read_client(tcp_server_t *srv, peer_t *tmp)
         server_close_client(srv, tmp);
         return false;
     }
+    tmp->input_buffer[read_size] = '\0';
     return true;
 }

@@ -20,7 +20,7 @@ static char *get_command_name(char *command)
     char *name = NULL;
     int i = 0;
 
-    while (command[i] && command[i] != ' ')
+    while (command[i] && command[i] != ' ' && command[i] != '\n')
         i++;
     name = malloc(sizeof(char) * (i + 1));
     if (!name)

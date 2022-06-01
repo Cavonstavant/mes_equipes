@@ -105,12 +105,6 @@ set (SRC
 
 add_library(${TARGET} ${SRC})
 
-# target_link_directories(${TARGET}
-#     PUBLIC ${PROJECT_SOURCE_DIR}/libs/myteams
-# )
-
-# target_compile_options(${TARGET} PUBLIC "-L libs/myteams")
-
 target_link_libraries(${TARGET}
     PRIVATE ${PROJECT_NAME}_uuid_wrapper
 )
@@ -130,7 +124,6 @@ target_include_directories(${TARGET}
     PUBLIC ${INCLUDE_UUID}
     PUBLIC ${INCLUDE_WRAPPER}
     PUBLIC ${INCLUDE_UUID_WRAPPER}
-    PUBLIC ${PROJECT_SOURCE_DIR}/libs/myteams
     PRIVATE ${SRC_ROOT}
 )
 
@@ -141,8 +134,8 @@ set_property(
 )
 
 
-add_executable(a.out ${PROJECT_SOURCE_DIR}/objects/main.c)
+# add_executable(a.out ${PROJECT_SOURCE_DIR}/objects/main.c)
 
-target_link_libraries(a.out
-    PUBLIC ${TARGET}
-)
+# target_link_libraries(a.out
+#     PUBLIC ${TARGET}
+# )

@@ -35,9 +35,9 @@ add_custom_target (fclean
 
 set (LIBS_PATH ${PROJECT_SOURCE_DIR}/libs)
 
-add_library(myteams SHARED IMPORTED)
+add_library(myteams_api SHARED IMPORTED)
 
-set_target_properties(myteams PROPERTIES
+set_target_properties(myteams_api PROPERTIES
     INTERFACE_INCLUDE_DIRECTORIES ${PROJECT_SOURCE_DIR}/libs/myteams
     IMPORTED_NO_SONAME ON
     IMPORTED_LOCATION ${PROJECT_SOURCE_DIR}/libs/myteams/libmyteams.so
