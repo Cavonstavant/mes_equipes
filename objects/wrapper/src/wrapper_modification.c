@@ -77,7 +77,9 @@ my_uuid_t *chan)
 {
     if (!wrapper_find_thread(wrapper, thread))
         return false;
-    if (!my_uuid_cmp(get_associated_team_thread(wrapper, chan),
+    if (!get_associated_team_thread(wrapper, thread))
+        return false;
+    if (!my_uuid_cmp(get_associated_team_thread(wrapper, thread),
         get_associated_team_channel(wrapper, chan)))
         return false;
     return true;
