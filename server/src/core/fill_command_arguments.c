@@ -64,7 +64,7 @@ static char **get_arguments(char *command, int arg_number)
 {
     char **args = NULL;
 
-    if (strncmp(command, "/use", 4) != 0)
+    if (strcmp(command, "/use\n") != 0)
         command = skip_command(command);
     if (!command)
         return (NULL);
