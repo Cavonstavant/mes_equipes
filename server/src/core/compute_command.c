@@ -11,11 +11,12 @@
 #include "cli_commands.h"
 #include "rcodes.h"
 
-static void add_char(char *command, int index, char c)
+static char *add_char(char *command, int index, char c)
 {
     command = realloc(command, sizeof(char) * (index + 2));
     command[index] = c;
     command[index + 1] = '\0';
+    return command;
 }
 
 /// \brief Format the flexible argument part of the command to strict
@@ -33,15 +34,15 @@ int new_cmd_i)
     for (; command[cmd_i]; cmd_i++) {
         c = command[cmd_i];
         if (c == '"' && copy)
-            add_char(new_command, new_cmd_i, '"');
+            new_command = add_char(new_command, new_cmd_i, '"');
         if (c == '"' && !copy)
-            add_char(new_command, new_cmd_i, ' ');
+            new_command = add_char(new_command, new_cmd_i, ' ');
         if (c == '"') {
             copy = (copy) ? 0 : 1;
             new_cmd_i++;
         }
         if (copy) {
-            add_char(new_command, new_cmd_i, c);
+            new_command = add_char(new_command, new_cmd_i, c);
             new_cmd_i++;
         }
     }
@@ -92,7 +93,7 @@ server_data_t *server_data)
         free(cmd->arguments);
     }
     free(cmd);
-    free(command);
-    free(tmp);
+    // free(command);
+    // free(tmp);
     return (0);
 }
