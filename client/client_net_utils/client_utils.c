@@ -43,7 +43,10 @@ client_net_server_t *create_net_server(const char *ip, long port)
         TEAMS_LOG("inet_pton: Invalid ip address provided\n");
         return NULL;
     }
-    connect_socket(new_server, port);
+    if (!connect_socket(new_server, port)){
+        free(new_server);
+        return NULL;
+    }
     FD_ZERO(&new_server->read_fds);
     FD_ZERO(&new_server->write_fds);
     FD_ZERO(&new_server->err_fds);
