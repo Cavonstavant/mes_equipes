@@ -37,8 +37,8 @@ server_data_t *serv)
     }
     print_retcode(200, NULL, user->user_peer);
     server_event_team_created(find_team_by_name(serv->wrapper,
-    arguments[0])->uuid.repr, arguments[0],
-    user->user_uuid->uuid.repr);
+    arguments[0])->uuid.repr + 4, arguments[0],
+    user->user_uuid->uuid.repr + 4);
     return true;
 }
 
@@ -67,9 +67,9 @@ server_data_t *serv)
         return true;
     }
     print_retcode(200, NULL, user->user_peer);
-    server_event_channel_created(user->loc->uuid.repr,
+    server_event_channel_created(user->loc->uuid.repr + 4,
     find_channel_by_name_exc(serv->wrapper, arguments[0],
-    user->loc)->uuid.repr, arguments[0]);
+    user->loc)->uuid.repr + 4, arguments[0]);
     return true;
 }
 
@@ -99,9 +99,9 @@ server_data_t *serv)
         return true;
     }
     print_retcode(200, NULL, user->user_peer);
-    server_event_thread_created(user->loc->uuid.repr,
+    server_event_thread_created(user->loc->uuid.repr + 4,
     find_thread_by_name_exc(serv->wrapper, arguments[0],
-    user->loc)->uuid.repr, user->user_uuid->uuid.repr,
+    user->loc)->uuid.repr + 4, user->user_uuid->uuid.repr + 4,
     arguments[0], arguments[1]);
     return true;
 }
@@ -127,8 +127,8 @@ server_data_t *serv)
         return true;
     }
     print_retcode(200, NULL, user->user_peer);
-    server_event_reply_created(user->loc->uuid.repr,
-    user->user_uuid->uuid.repr, arguments[0]);
+    server_event_reply_created(user->loc->uuid.repr + 4,
+    user->user_uuid->uuid.repr + 4, arguments[0]);
     return true;
 }
 
