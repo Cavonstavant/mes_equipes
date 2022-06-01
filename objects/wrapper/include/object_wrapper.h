@@ -465,4 +465,21 @@ char *name, my_uuid_t *chan)
     return OBJECT_NOT_FOUND;
 }
 
+///
+/// \brief Find a uuid without a prefix
+///
+/// \param wrapper Wrapper object 
+/// \param repr Uuid base
+/// \return char* Prefix match
+///
+char *find_a_uuid(object_wrapper_t *wrapper, char *repr);
+
+///
+/// \brief Creare a uuid from a string without prefix
+///
+/// \param repr String uuid
+/// \return my_uuid_t* Newly created uuid
+///
+my_uuid_t *my_uuid_fstring(char *repr, object_wrapper_t *wrapper);
+
 #endif /* !OBJECT_WRAPPER_H_ */

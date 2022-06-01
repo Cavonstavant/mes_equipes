@@ -111,6 +111,16 @@ int my_uuid_find(my_uuid_t **list, int list_n, my_uuid_t *to_find);
 bool my_uuid_cmp(my_uuid_t *first, my_uuid_t *second);
 
 ///
+/// \brief Compare a uuid object and a string
+///
+/// \param first First uuid object
+/// \param second Second uuid object
+/// \return true When the two uuid are the same
+/// \return false When the two uuid are not the same
+///
+bool my_uuid_cmp_not(my_uuid_t *first, char *second);
+
+///
 /// \brief Creare a uuid from a string
 ///
 /// \param repr String uuid
