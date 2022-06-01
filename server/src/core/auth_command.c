@@ -40,6 +40,7 @@ user_list_t *user_info, server_data_t *server_data)
     my_uuid_t *user_uuid = find_user_by_name(server_data->wrapper, uname);
 
     if (user_uuid != OBJECT_NOT_FOUND) {
+        wrapper_find_user(server_data->wrapper, user_uuid)->status = true;
         print_retcode(201, uname, user_info->user_peer, true);
         user_info->user_uuid = user_uuid;
     } else {
