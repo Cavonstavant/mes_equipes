@@ -26,6 +26,7 @@ teams_client_t *teams_client_create(const char *ip, long port)
         return NULL;
     init_client_methods(client);
     client->net_srv->connected = true;
+    client->prompt_display = true;
     return client;
 }
 

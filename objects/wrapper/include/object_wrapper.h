@@ -482,4 +482,15 @@ char *find_a_uuid(object_wrapper_t *wrapper, char *repr);
 ///
 my_uuid_t *my_uuid_fstring(char *repr, object_wrapper_t *wrapper);
 
+///
+/// \brief Find a conv by his participant
+///
+/// \param wrapper Wrapper object
+/// \param first First user uuid
+/// \param second Second user uuid
+/// \return my_uuid_t* Uuid of the founded conv
+///
+my_uuid_t *find_conv_by_participant(object_wrapper_t *wrapper,
+my_uuid_t *first, my_uuid_t *second);
+
 #endif /* !OBJECT_WRAPPER_H_ */

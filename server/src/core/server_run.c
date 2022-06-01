@@ -12,7 +12,7 @@
 #include "parser.h"
 #include <signal.h>
 
-static volatile bool running = true;
+volatile bool *server_state = NULL;
 
 ///
 /// \brief Catch the sigint signal
@@ -21,7 +21,7 @@ static volatile bool running = true;
 ///
 void sigint_handler(int var)
 {
-    running = false;
+    *server_state = false;
     (void) var;
 }
 
@@ -63,6 +63,7 @@ void server_loop(server_data_t *server_data)
     tcp_server_t *network_server = server_data->server->network_server;
 
     server_fill_fd_sets(network_server);
+    server_state = &server_data->server->state;
     while (server_data->server->state) {
         if (server_wait(network_server) == -1)
             break;
@@ -71,6 +72,5 @@ void server_loop(server_data_t *server_data)
         process_command_inspection(server_data);
         remove_disconnected_user(server_data, TO_LOGOUT);
         server_fill_fd_sets(network_server);
-        server_data->server->state = running;
     }
 }
