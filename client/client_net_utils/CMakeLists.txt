@@ -7,7 +7,7 @@ set (SRC
     ${SRC_ROOT}/fetch_message.c
     ${SRC_ROOT}/update_client.c
     ${SRC_ROOT}/manage_fd_sets.c
-    ${SRC_ROOT}/internals.h
+    ${INCLUDE_ROOT}/internals.h
     ${INCLUDE_ROOT}/client_utils.h
 )
 
