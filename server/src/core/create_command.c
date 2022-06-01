@@ -24,22 +24,21 @@
 static bool command_create_team(char **arguments, user_list_t *user,
 server_data_t *serv)
 {
-    if (find_team_by_name(serv->wrapper, arguments[0])) {
-        print_retcode(320, NULL, user->user_peer);
-        return true;
-    }
+    my_uuid_t *new = NULL;
+
+    if (find_team_by_name(serv->wrapper, arguments[0]))
+        return print_retcode(320, NULL, user->user_peer, true);
     if (wrapper_adding_team(serv->wrapper, (team_creation_t) {
         arguments[0],
         arguments[1]
     }) == false) {
-        print_retcode(503, NULL, user->user_peer);
-        return true;
+        return print_retcode(503, NULL, user->user_peer, true);
     }
-    print_retcode(200, NULL, user->user_peer);
-    server_event_team_created(find_team_by_name(serv->wrapper,
-    arguments[0])->uuid.repr + 4, arguments[0],
+    new = find_team_by_name(serv->wrapper, arguments[0]);
+    server_event_team_created(new->uuid.repr + 4, arguments[0],
     user->user_uuid->uuid.repr + 4);
-    return true;
+    return print_retcode(215, cretcodes((char *[]){new->uuid.repr,
+        arguments[0], arguments[1], NULL}), user->user_peer, true);
 }
 
 ///
@@ -54,23 +53,19 @@ server_data_t *serv)
 static bool command_create_chan(char **arguments, user_list_t *user,
 server_data_t *serv)
 {
-    if (find_channel_by_name_exc(serv->wrapper, arguments[0], user->loc)) {
-        print_retcode(320, NULL, user->user_peer);
-        return true;
-    }
+    if (find_channel_by_name_exc(serv->wrapper, arguments[0], user->loc))
+        return print_retcode(320, NULL, user->user_peer, true);
     if (!wrapper_new_channel_to_team(serv->wrapper, (channel_creation_t) {
         arguments[0],
         arguments[1],
         user->loc
     }, user->loc)) {
-        print_retcode(503, NULL, user->user_peer);
-        return true;
+        return print_retcode(503, NULL, user->user_peer, true);
     }
-    print_retcode(200, NULL, user->user_peer);
     server_event_channel_created(user->loc->uuid.repr + 4,
     find_channel_by_name_exc(serv->wrapper, arguments[0],
     user->loc)->uuid.repr + 4, arguments[0]);
-    return true;
+    return print_retcode(200, NULL, user->user_peer, true);
 }
 
 ///
@@ -85,25 +80,21 @@ server_data_t *serv)
 static bool command_create_thread(char **arguments, user_list_t *user,
 server_data_t *serv)
 {
-    if (find_thread_by_name_exc(serv->wrapper, arguments[0], user->loc)) {
-        print_retcode(320, NULL, user->user_peer);
-        return true;
-    }
+    if (find_thread_by_name_exc(serv->wrapper, arguments[0], user->loc))
+        return print_retcode(320, NULL, user->user_peer, true);
     if (!wrapper_new_thread_to_channel(serv->wrapper, (thread_creation_t) {
         arguments[0],
         arguments[1],
         user->user_uuid,
         user->loc
     }, user->loc)) {
-        print_retcode(503, NULL, user->user_peer);
-        return true;
+        return print_retcode(503, NULL, user->user_peer, true);
     }
-    print_retcode(200, NULL, user->user_peer);
     server_event_thread_created(user->loc->uuid.repr + 4,
     find_thread_by_name_exc(serv->wrapper, arguments[0],
     user->loc)->uuid.repr + 4, user->user_uuid->uuid.repr + 4,
     arguments[0], arguments[1]);
-    return true;
+    return print_retcode(200, NULL, user->user_peer, true);
 }
 
 ///
@@ -123,13 +114,11 @@ server_data_t *serv)
         user->loc,
         user->user_uuid
     }, user->loc)) {
-        print_retcode(503, NULL, user->user_peer);
-        return true;
+        return print_retcode(503, NULL, user->user_peer, true);
     }
-    print_retcode(200, NULL, user->user_peer);
     server_event_reply_created(user->loc->uuid.repr + 4,
     user->user_uuid->uuid.repr + 4, arguments[0]);
-    return true;
+    return print_retcode(200, NULL, user->user_peer, true);
 }
 
 bool command_create(cli_command_t *command,
@@ -137,10 +126,8 @@ user_list_t *user, server_data_t *serv)
 {
     my_uuid_prefix_t type = my_uuid_get_prefix(&user->loc->uuid);
 
-    if (!user->is_auth) {
-        print_retcode(401, NULL, user->user_peer);
-        return true;
-    }
+    if (!user->is_auth)
+        return print_retcode(401, NULL, user->user_peer, true);
     if (user->loc == NULL)
         return command_create_team(command->arguments, user, serv);
     if (type == MY_UUID_PREFIX_TEAM)

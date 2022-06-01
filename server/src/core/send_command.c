@@ -30,8 +30,7 @@ server_data_t *server)
         user->user_uuid,
         send
     }, user->user_uuid, send)) {
-        print_retcode(503, NULL, user->user_peer);
-        return false;
+        return print_retcode(503, NULL, user->user_peer, false);
     }
     return true;
 }
@@ -41,21 +40,16 @@ user_list_t *user, server_data_t *server)
 {
     my_uuid_t *send = my_uuid_fstring(command->arguments[0], server->wrapper);
 
-    if (!user->is_auth) {
-        print_retcode(401, NULL, user->user_peer);
-        return true;
-    }
+    if (!user->is_auth)
+        return print_retcode(401, NULL, user->user_peer, true);
     if (!command_create_conv(user, send, server))
         return false;
     if (!wrapper_new_message_to_conversation(server->wrapper,
     (message_creation_t) {
         command->arguments[1]
-    }, find_conv_by_participant(server->wrapper, user->user_uuid, send))) {
-        print_retcode(503, NULL, user->user_peer);
-        return false;
-    }
-    print_retcode(200, NULL, user->user_peer);
+    }, find_conv_by_participant(server->wrapper, user->user_uuid, send)))
+        return print_retcode(503, NULL, user->user_peer, false);
     server_event_private_message_sended(user->user_uuid->uuid.repr + 4,
     send->uuid.repr + 4, command->arguments[1]);
-    return true;
+    return print_retcode(200, NULL, user->user_peer, true);
 }

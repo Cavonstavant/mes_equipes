@@ -16,7 +16,7 @@ bool command_logout(cli_command_t *command,
 user_list_t *user_info, server_data_t *server_data)
 {
     (void) command;
-    print_retcode(203, "Michel", user_info->user_peer);
+    print_retcode(203, "Michel", user_info->user_peer, true);
     user_info->disconnected = TO_LOGOUT;
     if (user_info->is_auth)
         server_event_user_logged_out(user_info->user_uuid->uuid.repr + 4);
@@ -40,7 +40,7 @@ user_list_t *user_info, server_data_t *server_data)
     my_uuid_t *user_uuid = find_user_by_name(server_data->wrapper, uname);
 
     if (user_uuid != OBJECT_NOT_FOUND) {
-        print_retcode(201, uname, user_info->user_peer);
+        print_retcode(201, uname, user_info->user_peer, true);
         user_info->user_uuid = user_uuid;
     } else {
         if (wrapper_adding_user(server_data->wrapper, (user_creation_t) {
@@ -48,7 +48,7 @@ user_list_t *user_info, server_data_t *server_data)
             true
         }) == false)
             return true;
-        print_retcode(202, uname, user_info->user_peer);
+        print_retcode(202, uname, user_info->user_peer, true);
         user_info->user_uuid =
         find_user_by_name(server_data->wrapper, uname);
         server_event_user_created(user_info->user_uuid->uuid.repr + 4, uname);
