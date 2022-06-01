@@ -78,9 +78,8 @@ server_data_t *server_data)
     char *tmp = format_command(command);
     cli_command_t *cmd = convert_command_to_structure(tmp, users);
 
-    if (cmd == NULL) {
+    if (cmd == NULL)
         return (-1);
-    }
     if (call_command(cmd, users, server_data) < 0) {
         print_retcode(520, NULL, users->user_peer);
         return (-1);
@@ -93,7 +92,7 @@ server_data_t *server_data)
         free(cmd->arguments);
     }
     free(cmd);
-    // free(command);
-    // free(tmp);
+    free(command);
+    free(tmp);
     return (0);
 }
