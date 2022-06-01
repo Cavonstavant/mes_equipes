@@ -111,6 +111,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a31cfaff799ed2f26f31bf05ba5aa609e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uuid__cmp_8c.html#a31cfaff799ed2f26f31bf05ba5aa609e">my_uuid_cmp</a> (<a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *first, <a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *second)</td></tr>
 <tr class="memdesc:a31cfaff799ed2f26f31bf05ba5aa609e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare two uuid object.  <a href="uuid__cmp_8c.html#a31cfaff799ed2f26f31bf05ba5aa609e">More...</a><br /></td></tr>
 <tr class="separator:a31cfaff799ed2f26f31bf05ba5aa609e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8f17d5572956b3c681c39bf26a8431c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uuid__cmp_8c.html#ad8f17d5572956b3c681c39bf26a8431c">my_uuid_cmp_not</a> (<a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *first, char *second)</td></tr>
+<tr class="memdesc:ad8f17d5572956b3c681c39bf26a8431c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compare a uuid object and a string.  <a href="uuid__cmp_8c.html#ad8f17d5572956b3c681c39bf26a8431c">More...</a><br /></td></tr>
+<tr class="separator:ad8f17d5572956b3c681c39bf26a8431c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a31cfaff799ed2f26f31bf05ba5aa609e"></a>
@@ -140,6 +143,46 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Compare two uuid object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">first</td><td>First uuid object </td></tr>
+    <tr><td class="paramname">second</td><td>Second uuid object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true When the two uuid are the same </dd>
+<dd>
+false When the two uuid are not the same </dd></dl>
+
+</div>
+</div>
+<a id="ad8f17d5572956b3c681c39bf26a8431c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8f17d5572956b3c681c39bf26a8431c">&#9670;&nbsp;</a></span>my_uuid_cmp_not()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool my_uuid_cmp_not </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="object__uuid_8h.html#a17268e9fbb3abfa8d2089c1193b2cda1">my_uuid_t</a> *&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>second</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compare a uuid object and a string. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">first</td><td>First uuid object </td></tr>

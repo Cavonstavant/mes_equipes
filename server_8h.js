@@ -20,5 +20,6 @@ var server_8h =
     [ "server_add_user", "server_8h.html#a1c943adc8b62b20ef7461ebdc740a7e2", null ],
     [ "server_loop", "server_8h.html#ae405a83b0797e9fc1dda01330bd62def", null ],
     [ "server_remove_user", "server_8h.html#a6782d8c95b0306b87958cb50796b9ee1", null ],
-    [ "server_run", "server_8h.html#ab2536b90bd9adb4ce11716e28d99ec48", null ]
+    [ "server_run", "server_8h.html#ab2536b90bd9adb4ce11716e28d99ec48", null ],
+    [ "server_state", "server_8h.html#ac53e2d316cf20221cf6500764b3c640c", null ]
 ];

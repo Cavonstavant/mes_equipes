@@ -16,6 +16,7 @@ var object__uuid_8h =
       [ "DMS_", "object__uuid_8h.html#a8ff88fae822fe28a02f7fa750e1e6f7ba43df15d110a87c1c8d391c11e5fa1766", null ]
     ] ],
     [ "my_uuid_cmp", "object__uuid_8h.html#a31cfaff799ed2f26f31bf05ba5aa609e", null ],
+    [ "my_uuid_cmp_not", "object__uuid_8h.html#ad8f17d5572956b3c681c39bf26a8431c", null ],
     [ "my_uuid_destroy", "object__uuid_8h.html#af5cdb8ff5704f6bb830b654edd0e7b7e", null ],
     [ "my_uuid_dump", "object__uuid_8h.html#a6adabe21722534cdc09e59d8d1baefb3", null ],
     [ "my_uuid_edit_content", "object__uuid_8h.html#a5fd1b382818bbb2f9e8aabc3e5ad5a0c", null ],

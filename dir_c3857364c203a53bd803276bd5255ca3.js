@@ -9,6 +9,7 @@ var dir_c3857364c203a53bd803276bd5255ca3 =
     [ "create_command.c", "create__command_8c.html", "create__command_8c" ],
     [ "fill_command_arguments.c", "fill__command__arguments_8c.html", "fill__command__arguments_8c" ],
     [ "my_teams_server.c", "my__teams__server_8c.html", "my__teams__server_8c" ],
+    [ "send_command.c", "send__command_8c.html", "send__command_8c" ],
     [ "server_data.c", "server__data_8c.html", "server__data_8c" ],
     [ "server_run.c", "server__run_8c.html", "server__run_8c" ],
     [ "subscribe_command.c", "subscribe__command_8c.html", "subscribe__command_8c" ],
