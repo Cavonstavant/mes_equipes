@@ -13,7 +13,7 @@
 
 /// \brief List all available command
 static const cli_command_t commands[14] = {
-    {"/help", NULL, NULL/*&command_help*/},
+    {"/help", NULL, &command_help},
     {"/login", (char *[]){"", NULL}, &command_login},
     {"/logout", NULL, &command_logout},
     {"/users", NULL, NULL/*&command_users*/},

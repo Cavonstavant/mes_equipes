@@ -19,7 +19,7 @@ user_list_t *user, server_data_t *data)
     if (!user->is_auth)
         return print_retcode(401, NULL, user->user_peer, true);
     if (wrapper_find_team(data->wrapper, team) == OBJECT_NOT_FOUND)
-        return print_retcode(311, NULL, user->user_peer, true);
+        return print_retcode(311, team->uuid.repr, user->user_peer, true);
     if (user_is_sub_to_team(data->wrapper, user->user_uuid,
     team) == true) {
         return print_retcode(321, team->uuid.repr, user->user_peer, true);
@@ -39,7 +39,7 @@ user_list_t *user, server_data_t *data)
     if (!user->is_auth)
         return print_retcode(401, NULL, user->user_peer, true);
     if (wrapper_find_team(data->wrapper, team) == OBJECT_NOT_FOUND)
-        return print_retcode(311, NULL, user->user_peer, true);
+        return print_retcode(311, team->uuid.repr, user->user_peer, true);
     if (user_is_sub_to_team(data->wrapper, user->user_uuid,
     team) == false) {
         return print_retcode(322, team->uuid.repr + 4, user->user_peer, true);
