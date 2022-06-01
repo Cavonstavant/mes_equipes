@@ -5,16 +5,16 @@
 ** pack_message_to_json
 */
 
-#include "packer_json.h"
+#include "pack_json.h"
 
 static void message_to_json(message_t *message, FILE *file)
 {
     char time_display[20];
 
-    fprintf(file, "{\"UUID\":\"%s\",", message->uuid->uuid.repr);
-    fprintf(file, "\"Body\":\"%s\",", message->body);
+    fprintf(file, "{\"MES_UUID\":\"%s\",", message->uuid->uuid.repr);
+    fprintf(file, "\"MES_Body\":\"%s\",", message->body);
     strftime(time_display, 20, "%Y-%m-%d %H:%M:%S", localtime(&message->time));
-    fprintf(file, "\"Time\":\"%s\"}", time_display);
+    fprintf(file, "\"MES_Time\":\"%s\"}", time_display);
 }
 
 void pack_wrapper_to_json_message(object_wrapper_t *wrapper, FILE *file)

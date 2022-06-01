@@ -6,7 +6,7 @@
 */
 
 #include <stdbool.h>
-#include "packer_json.h"
+#include "pack_json.h"
 
 bool pack_wrapper_to_json(object_wrapper_t *wrapper)
 {

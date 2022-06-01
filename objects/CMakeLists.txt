@@ -28,7 +28,8 @@ set (SRC_TEAM ${PROJECT_SOURCE_DIR}/objects/team/src)
 set (SRC_THREAD ${PROJECT_SOURCE_DIR}/objects/thread/src)
 set (SRC_USER ${PROJECT_SOURCE_DIR}/objects/user/src)
 set (SRC_UUID ${PROJECT_SOURCE_DIR}/objects/uuid/src)
-set (SRC_PACK_WRAPPER ${PROJECT_SOURCE_DIR}/objects/wrapper/src/packer_wrapper)
+set (SRC_PACK_WRAPPER ${PROJECT_SOURCE_DIR}/objects/wrapper/src/pack_wrapper)
+set (SRC_UNPACK_WRAPPER ${PROJECT_SOURCE_DIR}/objects/wrapper/src/unpack_wrapper)
 set (SRC_WRAPPER ${PROJECT_SOURCE_DIR}/objects/wrapper/src)
 
 set (TARGET ${PROJECT_NAME}_objects)
@@ -94,6 +95,12 @@ set (SRC
     ${SRC_PACK_WRAPPER}/pack_thread_to_json.c
     ${SRC_PACK_WRAPPER}/pack_user_to_json.c
     ${SRC_PACK_WRAPPER}/pack_wrapper_to_json.c
+    ${SRC_UNPACK_WRAPPER}/unpack_json_to_wrapper.c
+    ${SRC_UNPACK_WRAPPER}/find_str.c
+    ${SRC_UNPACK_WRAPPER}/readfile.c
+    ${SRC_UNPACK_WRAPPER}/get_balise.c
+    ${SRC_UNPACK_WRAPPER}/unpack_json_to_wrapper_channel.c
+    ${SRC_UNPACK_WRAPPER}/unpack_json_to_wrapper_team.c
 )
 
 add_library(${TARGET} ${SRC})
@@ -133,8 +140,8 @@ set_property(
 )
 
 
-# add_executable(a.out ${PROJECT_SOURCE_DIR}/objects/main.c)
+add_executable(a.out ${PROJECT_SOURCE_DIR}/objects/main.c)
 
-# target_link_libraries(a.out
-#     PUBLIC ${TARGET}
-# )
+target_link_libraries(a.out
+    PUBLIC ${TARGET}
+)

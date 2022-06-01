@@ -5,22 +5,22 @@
 ** pack_thread_to_json
 */
 
-#include "packer_json.h"
+#include "pack_json.h"
 
 static void thread_to_json(thread_t *thread, FILE *file)
 {
     char time_display[20];
 
-    fprintf(file, "{\"UUID\":\"%s\",", thread->uuid->uuid.repr);
-    fprintf(file, "\"Parent\":\"%s\",", thread->channel->uuid.repr);
-    fprintf(file, "\"Author\":\"%s\",", thread->author->uuid.repr);
-    fprintf(file, "\"Name\":\"%s\",", thread->name);
-    fprintf(file, "\"Body\":\"%s\",", thread->body);
+    fprintf(file, "{\"THR_UUID\":\"%s\",", thread->uuid->uuid.repr);
+    fprintf(file, "\"THR_Parent\":\"%s\",", thread->channel->uuid.repr);
+    fprintf(file, "\"THR_Author\":\"%s\",", thread->author->uuid.repr);
+    fprintf(file, "\"THR_Name\":\"%s\",", thread->name);
+    fprintf(file, "\"THR_Body\":\"%s\",", thread->body);
     strftime(time_display, 20, "%Y-%m-%d %H:%M:%S", localtime(&thread->date));
-    fprintf(file, "\"Time\":\"%s\",", time_display);
-    fprintf(file, "\"Comments\":[");
+    fprintf(file, "\"THR_Time\":\"%s\",", time_display);
+    fprintf(file, "\"THR_Comments\":[");
     for (int i = 0; i < thread->comment_n; i++) {
-        fprintf(file, "{\"UUID\":\"%s\"}", thread->comments[i]->uuid.repr);
+        fprintf(file, "{\"THR_COM_UUID\":\"%s\"}", thread->comments[i]->uuid.repr);
         if (i + 1 < thread->comment_n)
             fprintf(file, ",");
     }

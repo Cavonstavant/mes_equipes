@@ -5,17 +5,19 @@
 ** pack_channel_to_json
 */
 
-#include "packer_json.h"
+#include "pack_json.h"
 
 static void channel_to_json(channel_t *channel, FILE *file)
 {
-    fprintf(file, "{\"UUID\":\"%s\",", channel->uuid->uuid.repr);
-    fprintf(file, "\"Name\":\"%s\",", channel->name);
-    fprintf(file, "\"Description\":\"%s\",", channel->description);
-    fprintf(file, "\"Parent\":\"%s\",", channel->team->uuid.repr);
-    fprintf(file, "\"Child\":[");
+    fprintf(file, "{\"CHA_UUID\":\"%s\",", channel->uuid->uuid.repr);
+    fprintf(file, "\"CHA_Name\":\"%s\",", channel->name);
+    fprintf(file, "\"CHA_Description\":\"%s\",", channel->description);
+    fprintf(file, "\"CHA_Parent\":\"%s\",", channel->team->uuid.repr);
+    fprintf(file, "\"CHA_Child number\":%i,\"CHA_Child\":[", channel->threads_n);
     for (int i = 0; i < channel->threads_n; i++) {
-        fprintf(file, "{\"UUID\":\"%s\"},", channel->threads[i]->uuid.repr);
+        fprintf(file, "{\"CHA_CHI_UUID\":\"%s\"}", channel->threads[i]->uuid.repr);
+        if (i + 1 < channel->threads_n)
+            fprintf(file, ",");
     }
     fprintf(file, "]}");
 }

@@ -5,18 +5,18 @@
 ** pack_comment_to_json
 */
 
-#include "packer_json.h"
+#include "pack_json.h"
 
 static void comment_to_json(comment_t *comment, FILE *file)
 {
     char time_display[20];
 
-    fprintf(file, "{\"UUID\":\"%s\",", comment->uuid->uuid.repr);
-    fprintf(file, "\"Parent\":\"%s\",", comment->thread->uuid.repr);
-    fprintf(file, "\"Author\":\"%s\",", comment->author->uuid.repr);
-    fprintf(file, "\"Body\":\"%s\",", comment->body);
+    fprintf(file, "{\"COM_UUID\":\"%s\",", comment->uuid->uuid.repr);
+    fprintf(file, "\"COM_Parent\":\"%s\",", comment->thread->uuid.repr);
+    fprintf(file, "\"COM_Author\":\"%s\",", comment->author->uuid.repr);
+    fprintf(file, "\"COM_Body\":\"%s\",", comment->body);
     strftime(time_display, 20, "%Y-%m-%d %H:%M:%S", localtime(&comment->time));
-    fprintf(file, "\"Time\":\"%s\"}", time_display);
+    fprintf(file, "\"COM_Time\":\"%s\"}", time_display);
 }
 
 void pack_wrapper_to_json_comment(object_wrapper_t *wrapper, FILE *file)

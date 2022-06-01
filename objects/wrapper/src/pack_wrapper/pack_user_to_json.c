@@ -5,17 +5,17 @@
 ** pack_user_to_json
 */
 
-#include "packer_json.h"
+#include "pack_json.h"
 
 static void user_to_json(user_t *user, FILE *file)
 {
-    fprintf(file, "{\"UUID\":\"%s\",", user->uuid->uuid.repr);
-    fprintf(file, "\"Name\":\"%s\",", user->name);
-    fprintf(file, "\"Status\":\"%s\",",
+    fprintf(file, "{\"USR_UUID\":\"%s\",", user->uuid->uuid.repr);
+    fprintf(file, "\"USR_Name\":\"%s\",", user->name);
+    fprintf(file, "\"USR_Status\":\"%s\",",
     ((user->status == ONLINE) ? "online" : "offline"));
-    fprintf(file, "\"Teams\":[");
+    fprintf(file, "\"USR_Teams\":[");
     for (int i = 0; i < user->team_n; i++) {
-        fprintf(file, "{\"UUID\":\"%s\"}", user->teams[i]->uuid.repr);
+        fprintf(file, "{\"USR_TEA_UUID\":\"%s\"}", user->teams[i]->uuid.repr);
         if (i + 1 < user->team_n)
             fprintf(file, ",");
     }
