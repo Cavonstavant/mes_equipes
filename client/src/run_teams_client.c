@@ -26,17 +26,17 @@ static void print_message(client_net_server_t *server)
 
 static void send_message_to_server(client_net_server_t *server)
 {
-    char *msg = NULL;
-    ssize_t getline_size = 0;
-    size_t msg_size = 0;
-
+    //char *msg = NULL;
+    //ssize_t getline_size = 0;
+    //size_t msg_size = 0;
+    (void) server;
     printf("> ");
     fflush(stdin);
-    getline_size = getline(&msg, &msg_size, stdin);
+    /*getline_size = getline(&msg, &msg_size, stdin);
     if (getline_size == -1)
         return;
     set_output_buffer(server, msg);
-    free(msg);
+    free(msg);*/
 }
 
 void run_teams_client(teams_client_t *server)
