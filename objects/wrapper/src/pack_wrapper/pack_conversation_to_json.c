@@ -5,19 +5,27 @@
 ** pack_conversation_to_json
 */
 
+/// \file objects/wrapper/src/pack_wrapper/pack_conversation_to_json.c
+/// \brief Pack a conversation into a json file
+
 #include "pack_json.h"
 
+/// \brief Pack a conversation into a json file
+/// \param conversation The conversation to pack
+/// \param file The file to write the conversation into
 static void conversation_to_json(conversation_t *conversation, FILE *file)
 {
     fprintf(file, "{\"CON_UUID\":\"%s\",", conversation->uuid->uuid.repr);
-    fprintf(file, "\"CON_Participants number\":%i,\"CON_Participants\":[", conversation->participant_n);
+    fprintf(file, "\"CON_Participants number\":%i,\"CON_Participants\":[",
+    conversation->participant_n);
     for (int i = 0; i < conversation->participant_n; i++) {
         fprintf(file, "{\"CON_PAR_UUID\":\"%s\"}",
         conversation->participant[i]->uuid.repr);
         if (i + 1 < conversation->participant_n)
             fprintf(file, ",");
     }
-    fprintf(file, "],\"CON_Messages number\":%i,\"CON_Messages\":[", conversation->message_n);
+    fprintf(file, "],\"CON_Messages number\":%i,\"CON_Messages\":[",
+    conversation->message_n);
     for (int i = 0; i < conversation->message_n; i++) {
         fprintf(file, "{\"CON_MES_UUID\":\"%s\"}",
         conversation->messages[i]->uuid.repr);

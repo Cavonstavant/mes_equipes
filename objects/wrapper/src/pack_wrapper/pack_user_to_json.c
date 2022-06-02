@@ -5,8 +5,14 @@
 ** pack_user_to_json
 */
 
+/// \file objects/wrapper/src/pack_wrapper/pack_user_to_json.c
+/// \brief Pack a user into a json file
+
 #include "pack_json.h"
 
+/// \brief Pack a user into a json file
+/// \param user The user to pack
+/// \param file The file to write the user into
 static void user_to_json(user_t *user, FILE *file)
 {
     fprintf(file, "{\"USR_UUID\":\"%s\",", user->uuid->uuid.repr);

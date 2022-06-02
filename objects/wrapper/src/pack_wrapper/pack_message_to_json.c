@@ -5,8 +5,14 @@
 ** pack_message_to_json
 */
 
+/// \file objects/wrapper/src/pack_wrapper/pack_message_to_json.c7
+/// \brief Pack a message into a json file
+
 #include "pack_json.h"
 
+/// \brief Pack a message into a json file
+/// \param message The message to pack
+/// \param file The file to write the message into
 static void message_to_json(message_t *message, FILE *file)
 {
     char time_display[20];

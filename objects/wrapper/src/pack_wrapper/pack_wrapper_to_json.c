@@ -5,6 +5,9 @@
 ** pack_wrapper_to_json
 */
 
+/// \file objects/wrapper/src/pack_wrapper/pack_wrapper_to_json.c
+/// \brief Pack a wrapper into a json file
+
 #include <stdbool.h>
 #include "pack_json.h"
 

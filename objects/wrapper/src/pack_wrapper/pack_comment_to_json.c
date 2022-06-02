@@ -5,8 +5,13 @@
 ** pack_comment_to_json
 */
 
+/// \file objects/wrapper/src/pack_wrapper/pack_comment_to_json.c
+/// \brief Pack a comment into a json file
 #include "pack_json.h"
 
+/// \brief Pack a comment into a json file
+/// \param comment The comment to pack
+/// \param file The file to write the comment into
 static void comment_to_json(comment_t *comment, FILE *file)
 {
     char time_display[20];
