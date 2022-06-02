@@ -1,15 +1,8 @@
 /*
 ** EPITECH PROJECT, 2022
-**
-** File description:
-** callback_204
-*/
-
-/*
-** EPITECH PROJECT, 2022
 ** mes_equipes
 ** File description:
-** callback_202
+** callback_204
 */
 
 #include "teams_responses.h"
