@@ -19,7 +19,7 @@ void client_201_response_callback(void *data)
     response->data.data.user_info_data.user_uuid =
         strtok(response->message, ":");
     response->data.data.user_info_data.user_name = strtok(NULL, ":");
-    client_event_logged_in(response->data.data.user_info_data.user_uuid,
+    client_event_logged_in(response->data.data.user_info_data.user_uuid + 4,
         response->data.data.user_info_data.user_name);
     fflush(NULL);
 }
