@@ -24,7 +24,7 @@
 static bool command_go_team(my_uuid_t *uuid, server_data_t *serv,
 user_list_t *user, bool print)
 {
-    if (!wrapper_find_team(serv->wrapper, uuid))
+    if (!uuid || !wrapper_find_team(serv->wrapper, uuid))
         return print_retcode(311, cretcodes((char *[]) {
         "/use", uuid->uuid.repr, NULL}), user->user_peer, false);
     if (!user_is_sub_to_team(serv->wrapper, user->user_uuid, uuid))
@@ -48,7 +48,7 @@ user_list_t *user, bool print)
 static bool command_go_to_chan(my_uuid_t *uuid, server_data_t *serv,
 user_list_t *user, bool print)
 {
-    if (!wrapper_find_channel_tm(serv->wrapper, uuid, user->loc))
+    if (!uuid || !wrapper_find_channel_tm(serv->wrapper, uuid, user->loc))
         return print_retcode(311, cretcodes((char *[]) {
         "/use", uuid->uuid.repr, NULL}), user->user_peer, false);
     user->loc = uuid;
@@ -70,7 +70,7 @@ user_list_t *user, bool print)
 static bool command_go_to_thread(my_uuid_t *uuid, server_data_t *serv,
 user_list_t *user, bool print)
 {
-    if  (!wrapper_find_thread_tm(serv->wrapper, uuid, user->loc))
+    if  (!uuid || !wrapper_find_thread_tm(serv->wrapper, uuid, user->loc))
         return print_retcode(311, cretcodes((char *[]) {
         "/use", uuid->uuid.repr, NULL}), user->user_peer, false);
     user->loc = uuid;
