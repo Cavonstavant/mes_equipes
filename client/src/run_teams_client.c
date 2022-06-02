@@ -43,8 +43,7 @@ static void print_message(client_net_server_t *server, teams_client_t *serv)
 {
     char *msg = NULL;
 
-    if (server->pending_read && server->connected)
-    {
+    if (server->pending_read && server->connected){
         if (!(msg = fetch_message(server)))
             exit(0);
         serv->prompt_display = true;
