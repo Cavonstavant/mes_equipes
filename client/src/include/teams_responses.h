@@ -187,7 +187,7 @@ static const server_response_t server_response_template[] = {
                 .status = 0
             }
         },
-        .callback = default_response_callback
+        .callback = client_204_response_callback
     },
     {
         .code = 206,
