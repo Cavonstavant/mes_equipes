@@ -5,6 +5,9 @@
 ** find_str
 */
 
+/// \file objects/wrapper/src/unpack_wrapper/find_str.c
+/// \brief Find a string in a json file
+
 #include <string.h>
 
 int find_str(char *file, char *to_find)

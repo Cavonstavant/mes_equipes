@@ -5,6 +5,9 @@
 ** unpack_json_to_wrapper
 */
 
+/// \file objects/wrapper/src/unpack_wrapper/unpack_json_to_wrapper.c
+/// \brief Unpack a json file into a wrapper
+
 #include "pack_json.h"
 #include <stdlib.h>
 #include <fcntl.h>
@@ -12,6 +15,9 @@
 #include "object_uuid.h"
 #include "unpack_json.h"
 
+/// \brief Open a file
+/// \param path The path of the file
+/// \return The file descriptor, -1 if an error occured
 static int my_open(char *path)
 {
     int fd = 0;

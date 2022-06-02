@@ -5,52 +5,65 @@
 ** unpack_json_to_wrapper_channel
 */
 
+/// \file objects/wrapper/src/unpack_wrapper/unpack_json_to_wrapper_channel.c
+/// \brief Unpack a json file into a wrapper
+
 #include "unpack_json.h"
 #include "upper_component_adding.h"
 #include "lower_component_adding.h"
 #include <stdlib.h>
 
-static bool fill_child(object_wrapper_t *wrapper, char *file, int index, int channel_nb)
+/// \brief Fill a child of a channel with the data from a json file
+/// \param wrap The wrapper to fill
+/// \param file The json file
+/// \param n The index of the child
+/// \param c_nb The number of the channel to skip
+static bool fill_child(object_wrapper_t *wrap, char *file, int n, int c_nb)
 {
-    int nb_child = get_balise_number(file + index, channel_nb, "\"CHA_Child number\":");
+    int nb_child = get_balise_number(file + n, c_nb, "\"CHA_Child number\":");
     char *child = NULL;
     int nbr = 0;
 
     if (nb_child < 0)
         return false;
-    for (int i = 0; i <= channel_nb; i++) {
-        nbr = find_str(file + index, "\"CHA_Child\":");
+    for (int i = 0; i <= c_nb; i++) {
+        nbr = find_str(file + n, "\"CHA_Child\":");
         if (nbr < 0)
             return false;
-        index += nbr;
+        n += nbr;
     }
     for (int i = 0; i < nb_child; i++) {
-        child = get_balise_content(file + index, i, "\"CHA_CHI_UUID\":");
+        child = get_balise_content(file + n, i, "\"CHA_CHI_UUID\":");
         if (!child)
             return false;
-        channel_add_threads(wrapper->channels[channel_nb], my_uuid_from_string(child));
+        channel_add_threads(wrap->channels[c_nb], my_uuid_from_string(child));
         free(child);
     }
     return true;
 }
 
-static bool create_new_channel(object_wrapper_t *wrapper, char *file, int channel_nb)
+/// \brief Create a channel from a json file
+/// \param wrap The wrapper to fill
+/// \param file The json file
+/// \param c_nb The number of the channel to create
+/// \return true if the channel was created, false otherwise
+static bool create_new_channel(object_wrapper_t *wrap, char *file, int c_nb)
 {
-    int index = find_str(file, "\"Channels\":");
-    char *name = get_balise_content(file + index, channel_nb, "\"CHA_Name\":");
-    char *desc = get_balise_content(file + index, channel_nb, "\"CHA_Description\":");
-    char *my_uuid = get_balise_content(file + index, channel_nb, "\"CHA_UUID\":");
-    char *parent = get_balise_content(file + index, channel_nb, "\"CHA_Parent\":");
+    int idx = find_str(file, "\"Channels\":");
+    char *name = get_balise_content(file + idx, c_nb, "\"CHA_Name\":");
+    char *desc = get_balise_content(file + idx, c_nb, "\"CHA_Description\":");
+    char *my_uuid = get_balise_content(file + idx, c_nb, "\"CHA_UUID\":");
+    char *parent = get_balise_content(file + idx, c_nb, "\"CHA_Parent\":");
 
     if (!name || !desc || !my_uuid || !parent)
         return false;
-    if (wrapper_adding_channel(wrapper, (channel_creation_t){
+    if (wrap_adding_channel(wrap, (channel_creation_t) {
         name, desc, my_uuid_from_string(parent)
     }) == false)
         return false;
-    if (fill_child(wrapper, file, index, channel_nb) == false)
+    if (fill_child(wrap, file, idx, c_nb) == false)
         return false;
-    channel_edit_uuid(wrapper->channels[channel_nb], my_uuid);
+    channel_edit_uuid(wrap->channels[c_nb], my_uuid);
     free(name);
     free(desc);
     free(my_uuid);

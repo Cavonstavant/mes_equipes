@@ -5,6 +5,9 @@
 ** readfile
 */
 
+/// \file objects/wrapper/src/unpack_wrapper/readfile.c
+/// \brief Read a file
+
 #include <sys/stat.h>
 #include <stdlib.h>
 #include <unistd.h>
