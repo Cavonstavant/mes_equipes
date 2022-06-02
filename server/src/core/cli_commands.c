@@ -17,7 +17,7 @@ static const cli_command_t commands[14] = {
     {"/login", (char *[]){"", NULL}, &command_login},
     {"/logout", NULL, &command_logout},
     {"/users", NULL, &command_users},
-    {"/user", (char *[]){"", NULL}, NULL/*&command_user*/},
+    {"/user", (char *[]){"", NULL}, &command_user},
     {"/send", (char *[]){"", "", NULL}, &command_send},
     {"/messages", (char *[]){"", NULL}, NULL/*&command_messages*/},
     {"/subscribe", (char *[]){"", NULL}, &command_subscribe},

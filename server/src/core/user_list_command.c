@@ -34,3 +34,18 @@ user_list_t *user, server_data_t *data)
     free(args);
     return true;
 }
+
+bool command_user(cli_command_t *cmd,
+user_list_t *user, server_data_t *data)
+{
+    user_t *users = NULL;
+
+    if (!user->is_auth)
+        return print_retcode(401, NULL, user->user_peer, false);
+    users = wrapper_find_user(data->wrapper,
+    my_uuid_fstring(cmd->arguments[0], data->wrapper));
+    if (!user)
+        return print_retcode(311, cmd->arguments[0], user->user_peer, false);
+    return print_retcode(211, cretcodes((char *[]) {users->uuid->uuid.repr,
+    users->name, ((users->status) ? "1" : "0"), NULL}), user->user_peer, true);
+}
