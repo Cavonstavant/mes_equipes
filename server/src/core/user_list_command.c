@@ -45,7 +45,8 @@ user_list_t *user, server_data_t *data)
     users = wrapper_find_user(data->wrapper,
     my_uuid_fstring(cmd->arguments[0], data->wrapper));
     if (!user)
-        return print_retcode(311, cmd->arguments[0], user->user_peer, false);
+        return print_retcode(311, cretcodes((char *[]) {
+        cmd->name, cmd->arguments[0], NULL}), user->user_peer, false);
     return print_retcode(211, cretcodes((char *[]) {users->uuid->uuid.repr,
     users->name, ((users->status) ? "1" : "0"), NULL}), user->user_peer, true);
 }
