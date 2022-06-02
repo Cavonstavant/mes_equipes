@@ -112,4 +112,12 @@ void comment_edit_body(comment_t *comment, char *body);
 ///
 void comment_edit_time(comment_t *comment, char *time);
 
+///
+/// \brief Return the time creation in string format
+///
+/// \param comment Comment object
+/// \return char* Time in string format
+///
+char *comment_get_time(comment_t *comment);
+
 #endif /* !OBJECT_COMMENT_H_ */

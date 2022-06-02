@@ -83,7 +83,7 @@ static inline bool command_use_empty(user_list_t *user, bool print)
 {
     user->loc = NULL;
     if (print)
-        print_retcode(200, NULL, user->user_peer);
+        print_retcode(200, NULL, user->user_peer, true);
     return true;
 }
 

@@ -9,6 +9,18 @@
 
 #include "object_comment.h"
 #include <stdio.h>
+#include <stdlib.h>
+
+char *comment_get_time(comment_t *comment)
+{
+    char *time_display = malloc(sizeof(char) * 21);
+
+    if (time_display == NULL)
+        return NULL;
+    time_display[0] = '\0';
+    strftime(time_display, 20, "%Y-%m-%d %H:%M:%S", localtime(&comment->time));
+    return time_display;
+}
 
 void comment_dump(comment_t *comment)
 {

@@ -159,4 +159,12 @@ void thread_edit_time(thread_t *thread, char *time);
 ///
 bool thread_add_comment(thread_t *thread, my_uuid_t *comment);
 
+///
+/// \brief Return the time creation in string format
+///
+/// \param thread Thread object
+/// \return char* Time in string format
+///
+char *thread_get_time(thread_t *thread);
+
 #endif /* !OBJECT_THREADS_H_ */

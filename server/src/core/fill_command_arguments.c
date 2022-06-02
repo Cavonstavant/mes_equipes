@@ -64,7 +64,7 @@ static char **get_arguments(char *command, int arg_number)
 {
     char **args = NULL;
 
-    if (strncmp(command, "/use", 4) != 0)
+    if (strcmp(command, "/use\n") != 0)
         command = skip_command(command);
     if (!command)
         return (NULL);
@@ -82,7 +82,7 @@ char **fill_command_arguments(char *command, char *name, user_list_t *users)
     int i = 0;
 
     if (!cmd) {
-        print_retcode(530, NULL, users->user_peer);
+        print_retcode(530, NULL, users->user_peer, false);
         return (NULL);
     }
     for (i = 0; cmd->arguments && cmd->arguments[i]; i++);

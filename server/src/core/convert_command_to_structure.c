@@ -40,12 +40,12 @@ cli_command_t *convert_command_to_structure(char *command, user_list_t *users)
     cli_command->arguments = NULL;
     cli_command->function = NULL;
     if (!command) {
-        print_retcode(500, NULL, users->user_peer);
+        print_retcode(500, NULL, users->user_peer, false);
         return (NULL);
     }
     cli_command->name = get_command_name(command);
     if (!cli_command->name) {
-        print_retcode(500, NULL, users->user_peer);
+        print_retcode(500, NULL, users->user_peer, false);
         return (NULL);
     }
     cli_command->arguments =

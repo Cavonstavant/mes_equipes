@@ -9,6 +9,7 @@
 
 #include "object_thread.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 ///
 /// \brief Dump the thread time
@@ -22,6 +23,17 @@ static void thread_dump_time(thread_t *thread)
     printf("\tTime : ");
     strftime(time_display, 20, "%Y-%m-%d %H:%M:%S", localtime(&thread->date));
     printf("%s\n", time_display);
+}
+
+char *thread_get_time(thread_t *thread)
+{
+    char *time_display = malloc(sizeof(char) * 21);
+
+    if (time_display == NULL)
+        return NULL;
+    time_display[0] = '\0';
+    strftime(time_display, 20, "%Y-%m-%d %H:%M:%S", localtime(&thread->date));
+    return time_display;
 }
 
 void thread_dump(thread_t *thread)
