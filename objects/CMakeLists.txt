@@ -101,6 +101,11 @@ set (SRC
     ${SRC_UNPACK_WRAPPER}/get_balise.c
     ${SRC_UNPACK_WRAPPER}/unpack_json_to_wrapper_channel.c
     ${SRC_UNPACK_WRAPPER}/unpack_json_to_wrapper_team.c
+    ${SRC_UNPACK_WRAPPER}/unpack_json_to_wrapper_user.c
+    ${SRC_UNPACK_WRAPPER}/unpack_json_to_wrapper_comment.c
+    ${SRC_UNPACK_WRAPPER}/unpack_json_to_wrapper_conversation.c
+    ${SRC_UNPACK_WRAPPER}/unpack_json_to_wrapper_message.c
+    ${SRC_UNPACK_WRAPPER}/unpack_json_to_wrapper_thread.c
     ${SRC_WRAPPER}/uuid_find_prefix.c
 )
 

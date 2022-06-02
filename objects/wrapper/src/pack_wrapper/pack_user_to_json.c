@@ -13,7 +13,7 @@ static void user_to_json(user_t *user, FILE *file)
     fprintf(file, "\"USR_Name\":\"%s\",", user->name);
     fprintf(file, "\"USR_Status\":\"%s\",",
     ((user->status == ONLINE) ? "online" : "offline"));
-    fprintf(file, "\"USR_Teams\":[");
+    fprintf(file, "\"USR_Team number\":%i,\"USR_Teams\":[", user->team_n);
     for (int i = 0; i < user->team_n; i++) {
         fprintf(file, "{\"USR_TEA_UUID\":\"%s\"}", user->teams[i]->uuid.repr);
         if (i + 1 < user->team_n)

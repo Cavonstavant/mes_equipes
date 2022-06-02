@@ -10,12 +10,18 @@
 
 int get_balise_number(char *file, int channel_nb, char *balise)
 {
-    int nbr = 0;
-    int index = find_str(file, balise);
+    int index = 0;
+    int nbr = find_str(file, balise);
 
+    if (nbr < 0)
+        return -1;
     for (int i = 0; i < channel_nb; i++) {
-        index += find_str(file + index, balise);
+        index += nbr;
+        nbr = find_str(file + index, balise);
+        if (nbr < 0)
+            return -1;
     }
+    index += nbr;
     nbr = atoi(file + index);
     return nbr;
 }

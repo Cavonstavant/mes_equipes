@@ -14,7 +14,7 @@ char *readfile(int fd)
     char *content = NULL;
     struct stat s;
 
-    if (fstat(fd, &s) < 0)
+    if (fd < 0 || fstat(fd, &s) < 0)
         return NULL;
     content = malloc(sizeof(char) * (s.st_size + 1));
     if (!content)

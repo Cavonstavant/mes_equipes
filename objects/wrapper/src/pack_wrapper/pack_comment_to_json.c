@@ -22,7 +22,7 @@ static void comment_to_json(comment_t *comment, FILE *file)
 void pack_wrapper_to_json_comment(object_wrapper_t *wrapper, FILE *file)
 {
     fprintf(file, "],\"Comment number\":%i,\"Comments\":[",
-    wrapper->channel_n);
+    wrapper->comment_n);
     for (int i = 0; i < wrapper->comment_n; i++) {
         comment_to_json(wrapper->comments[i], file);
         if (i + 1 < wrapper->comment_n)

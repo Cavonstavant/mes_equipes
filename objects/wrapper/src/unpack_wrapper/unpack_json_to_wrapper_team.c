@@ -10,71 +10,85 @@
 #include "lower_component_adding.h"
 #include <stdlib.h>
 
-static void fill_channels(object_wrapper_t *wrapper, char *file, int index, int channel_nb)
+static bool fill_channels(object_wrapper_t *wrapper, char *file, int index, int channel_nb)
 {
     int channel_nbr = get_balise_number(file + index, channel_nb, "\"TEA_Channel number\":");
-    char **channels = malloc(sizeof(char *) * (channel_nbr + 1));
+    char *channels = NULL;
+    int nbr = 0;
 
-    if (!channels)
-        return;
-    index += find_str(file + index, "\"TEA_Channels\":");
-    for (int i = 0; i < channel_nb; i++)
-        index += find_str(file + index, "\"TEA_Channels\":");
-    for (int i = 0; i < channel_nbr; i++)
-        channels[i] = get_balise_content(file + index, i, "\"TEA_CHA_UUID\":");
-    channels[channel_nbr] = NULL;
-    for (int i = 0; i < channel_nbr; i++)
-        team_add_channel(wrapper->teams[channel_nbr],
-        my_uuid_from_string(channels[i]));
-    for (int i = 0; channels[i]; i++)
-        free(channels[i]);
-    free(channels);
+    if (channel_nbr < 0)
+        return false;
+    for (int i = 0; i <= channel_nb; i++) {
+        nbr = find_str(file + index, "\"TEA_Channels\":");
+        if (nbr < 0)
+            return false;
+        index += nbr;
+    }
+    for (int i = 0; i < channel_nbr; i++) {
+        channels = get_balise_content(file + index, i, "\"TEA_CHA_UUID\":");
+        if (!channels)
+            return false;
+        team_add_channel(wrapper->teams[channel_nb], my_uuid_from_string(channels));
+        free(channels);
+    }
+    return true;
 }
 
-static void fill_users(object_wrapper_t *wrapper, char *file, int index, int channel_nb)
+static bool fill_users(object_wrapper_t *wrapper, char *file, int index, int channel_nb)
 {
     int user_nbr = get_balise_number(file + index, channel_nb, "\"TEA_User number\":");
-    char **users = NULL;
+    char *users = NULL;
+    int nbr = 0;
 
-    if (!users)
-        return;
-    index += find_str(file + index, "\"TEA_Users\":");
-    for (int i = 0; i < channel_nb; i++)
-        index += find_str(file + index, "\"TEA_Users\":");
-    for (int i = 0; i < user_nbr; i++)
-        users[i] = get_balise_content(file + index, i, "\"\":");
-    users[user_nbr] = NULL;
-    for (int i = 0; i < user_nbr; i++)
-        team_add_channel(wrapper->teams[user_nbr],
-        my_uuid_from_string(users[i]));
-    for (int i = 0; users[i]; i++)
-        free(users[i]);
-    free(users);
+    if (user_nbr < 0)
+        return false;
+    for (int i = 0; i <= channel_nb; i++) {
+        nbr = find_str(file + index, "\"TEA_Users\":");
+        if (nbr < 0)
+            return false;
+        index += nbr;
+    }
+    for (int i = 0; i < user_nbr; i++) {
+        users = get_balise_content(file + index, i, "\"TEA_USR_UUID\":");
+        if (!users)
+            return false;
+        team_add_user(wrapper->teams[channel_nb], my_uuid_from_string(users));
+        free(users);
+    }
+    return true;
 }
 
-static void create_new_team(object_wrapper_t *wrapper, char *file, int channel_nb)
+static bool create_new_team(object_wrapper_t *wrapper, char *file, int channel_nb)
 {
     int index = find_str(file, "\"Teams\":");
     char *name = get_balise_content(file + index, channel_nb, "\"TEA_Name\":");
     char *uuid = get_balise_content(file + index, channel_nb, "\"TEA_UUID\":");
     char *desc = get_balise_content(file + index, channel_nb, "\"TEA_Description\":");
 
-    fill_channels(wrapper, file, index, channel_nb);
-    fill_users(wrapper, file, index, channel_nb);
-    wrapper_adding_team(wrapper, (team_creation_t) {
-        name, desc
-    });
+    if (!name || !uuid || !desc)
+        return false;
+    if (!wrapper_adding_team(wrapper, (team_creation_t) {name, desc}))
+        return false;
     team_edit_uuid(wrapper->teams[channel_nb], uuid);
+    if (!fill_channels(wrapper, file, index, channel_nb))
+        return false;
+    if (!fill_users(wrapper, file, index, channel_nb))
+        return false;
     free(name);
     free(uuid);
     free(desc);
+    return true;
 }
 
-void unpack_json_to_wrapper_team(object_wrapper_t *wrapper, char *file)
+bool unpack_json_to_wrapper_team(object_wrapper_t *wrapper, char *file)
 {
     int channel_nbr = get_balise_number(file, 0, "\"Team number\":");
 
+    if (channel_nbr < 0)
+        return false;
     for (int i = 0; i < channel_nbr; i++) {
-        create_new_team(wrapper, file, i);
+        if (!create_new_team(wrapper, file, i))
+            return false;
     }
+    return true;
 }

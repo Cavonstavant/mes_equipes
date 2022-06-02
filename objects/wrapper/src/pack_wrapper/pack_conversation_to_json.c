@@ -19,7 +19,7 @@ static void conversation_to_json(conversation_t *conversation, FILE *file)
     }
     fprintf(file, "],\"CON_Messages number\":%i,\"CON_Messages\":[", conversation->message_n);
     for (int i = 0; i < conversation->message_n; i++) {
-        fprintf(file, "{\"CON_MES_UUID\":\"%s\"},",
+        fprintf(file, "{\"CON_MES_UUID\":\"%s\"}",
         conversation->messages[i]->uuid.repr);
         if (i + 1 < conversation->message_n)
             fprintf(file, ",");
