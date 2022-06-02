@@ -16,10 +16,14 @@ bool command_logout(cli_command_t *command,
 user_list_t *user_info, server_data_t *server_data)
 {
     (void) command;
-    print_retcode(203, "Michel", user_info->user_peer, true);
     user_info->disconnected = TO_LOGOUT;
-    if (user_info->is_auth)
+    if (user_info->is_auth) {
+        print_retcode(203, wrapper_find_user(server_data->wrapper,
+        user_info->user_uuid)->name, user_info->user_peer, true);
         server_event_user_logged_out(user_info->user_uuid->uuid.repr + 4);
+    } else {
+        print_retcode(203, "NONE", user_info->user_peer, true);
+    }
     for (size_t i = 0; i < server_data->active_user_n; i++) {
         if (server_data->active_users[i]->disconnected == CONNECTED &&
             server_data->active_users[i]->is_auth && my_uuid_cmp(

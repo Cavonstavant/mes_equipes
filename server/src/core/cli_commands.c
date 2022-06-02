@@ -26,7 +26,7 @@ static const cli_command_t commands[14] = {
     {"/use", (char *[]){"", "", "", NULL}, &command_use},
     {"/create", (char *[]){"", "", NULL}, &command_create},
     {"/list", NULL, &command_list},
-    {"/info", NULL, NULL/*&command_info*/}
+    {"/info", NULL, &command_info}
 };
 
 const cli_command_t *get_cli_command_by_name(char *command)
