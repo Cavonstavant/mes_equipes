@@ -140,14 +140,14 @@ Include dependency graph for auth_command.c:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a789b1160eef5e82d4e68a8299e8c9faa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="auth__command_8c.html#a789b1160eef5e82d4e68a8299e8c9faa">command_logout</a> (<a class="el" href="cli__commands_8h.html#aad57a9a9f24b943a80700aa407287a6e">cli_command_t</a> *command, <a class="el" href="server_8h.html#ae3ed3ed33e0e04d42a57b1afda4c0c86">user_list_t</a> *user_info, <a class="el" href="server_8h.html#a9ca54fdf642f42b1f7fbdf968d0d4295">server_data_t</a> *server_data)</td></tr>
-<tr class="separator:a789b1160eef5e82d4e68a8299e8c9faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a797eab189429b92b44d06db731b46ab6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="auth__command_8c.html#a797eab189429b92b44d06db731b46ab6">command_login</a> (<a class="el" href="cli__commands_8h.html#aad57a9a9f24b943a80700aa407287a6e">cli_command_t</a> *command, <a class="el" href="server_8h.html#ae3ed3ed33e0e04d42a57b1afda4c0c86">user_list_t</a> *user_info, <a class="el" href="server_8h.html#a9ca54fdf642f42b1f7fbdf968d0d4295">server_data_t</a> *server_data)</td></tr>
-<tr class="separator:a797eab189429b92b44d06db731b46ab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d91663c531a10edea7901f7cf745f79"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="auth__command_8c.html#a4d91663c531a10edea7901f7cf745f79">command_logout</a> (<a class="el" href="cli__commands_8h.html#aad57a9a9f24b943a80700aa407287a6e">cli_command_t</a> *command, <a class="el" href="server_8h.html#ae3ed3ed33e0e04d42a57b1afda4c0c86">user_list_t</a> *user, <a class="el" href="server_8h.html#a9ca54fdf642f42b1f7fbdf968d0d4295">server_data_t</a> *server_data)</td></tr>
+<tr class="separator:a4d91663c531a10edea7901f7cf745f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe9ca3a38bec0771eb52bd087d110941"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="auth__command_8c.html#afe9ca3a38bec0771eb52bd087d110941">command_login</a> (<a class="el" href="cli__commands_8h.html#aad57a9a9f24b943a80700aa407287a6e">cli_command_t</a> *command, <a class="el" href="server_8h.html#ae3ed3ed33e0e04d42a57b1afda4c0c86">user_list_t</a> *user, <a class="el" href="server_8h.html#a9ca54fdf642f42b1f7fbdf968d0d4295">server_data_t</a> *server_data)</td></tr>
+<tr class="separator:afe9ca3a38bec0771eb52bd087d110941"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a797eab189429b92b44d06db731b46ab6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a797eab189429b92b44d06db731b46ab6">&#9670;&nbsp;</a></span>command_login()</h2>
+<a id="afe9ca3a38bec0771eb52bd087d110941"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe9ca3a38bec0771eb52bd087d110941">&#9670;&nbsp;</a></span>command_login()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -162,7 +162,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="server_8h.html#ae3ed3ed33e0e04d42a57b1afda4c0c86">user_list_t</a> *&#160;</td>
-          <td class="paramname"><em>user_info</em>, </td>
+          <td class="paramname"><em>user</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -180,8 +180,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a789b1160eef5e82d4e68a8299e8c9faa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a789b1160eef5e82d4e68a8299e8c9faa">&#9670;&nbsp;</a></span>command_logout()</h2>
+<a id="a4d91663c531a10edea7901f7cf745f79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d91663c531a10edea7901f7cf745f79">&#9670;&nbsp;</a></span>command_logout()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -196,7 +196,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="server_8h.html#ae3ed3ed33e0e04d42a57b1afda4c0c86">user_list_t</a> *&#160;</td>
-          <td class="paramname"><em>user_info</em>, </td>
+          <td class="paramname"><em>user</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>

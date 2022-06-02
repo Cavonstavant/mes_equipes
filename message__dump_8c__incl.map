@@ -1,7 +1,8 @@
 <map id="objects/message/src/message_dump.c" name="objects/message/src/message_dump.c">
-<area shape="rect" id="node1" title=" " alt="" coords="207,5,362,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="298,5,453,47"/>
 <area shape="rect" id="node2" href="$object__message_8h.html" title=" " alt="" coords="161,95,301,121"/>
 <area shape="rect" id="node8" title=" " alt="" coords="342,319,409,345"/>
+<area shape="rect" id="node12" title=" " alt="" coords="413,95,484,121"/>
 <area shape="rect" id="node3" href="$object__uuid_8h.html" title=" " alt="" coords="141,169,250,196"/>
 <area shape="rect" id="node10" href="$object__body_8h.html" title=" " alt="" coords="5,169,116,196"/>
 <area shape="rect" id="node11" title=" " alt="" coords="274,169,338,196"/>

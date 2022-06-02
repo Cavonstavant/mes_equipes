@@ -13,5 +13,6 @@ var object__thread_8h =
     [ "thread_edit_body", "object__thread_8h.html#af72d1e4883f87fc89767673fc79b2043", null ],
     [ "thread_edit_name", "object__thread_8h.html#a1e550f9bfe95372177228a12e690ea31", null ],
     [ "thread_edit_time", "object__thread_8h.html#a2323185b39cc236a1189d5bdfbb8f151", null ],
+    [ "thread_get_time", "object__thread_8h.html#ad67daa61571cb1a7ad488b5f6b9bc4f8", null ],
     [ "thread_init", "object__thread_8h.html#a4ecab8afb6ac4b3f4075989480d82602", null ]
 ];

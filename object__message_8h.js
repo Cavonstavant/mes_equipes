@@ -10,5 +10,6 @@ var object__message_8h =
     [ "message_edit_body", "object__message_8h.html#a89abf0c5075d90052a000d73dcfb5243", null ],
     [ "message_edit_time", "object__message_8h.html#a68a6bc99c96c5e3bb6ae07ff39afdf9d", null ],
     [ "message_edit_uuid", "object__message_8h.html#a6b7f2e97f8e710d3a30d99c1d564e39e", null ],
+    [ "message_get_time", "object__message_8h.html#aadc8feb9f7793ff6308a4852d4a783c8", null ],
     [ "message_init", "object__message_8h.html#a94f1e310f8cbcf1857165a80159f065b", null ]
 ];

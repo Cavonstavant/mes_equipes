@@ -12,5 +12,6 @@ var object__comment_8h =
     [ "comment_edit_parent", "object__comment_8h.html#ab63861e6736470befd57b45d05fad6ba", null ],
     [ "comment_edit_time", "object__comment_8h.html#aa1e5af95ff34f304d43c81738dae5769", null ],
     [ "comment_edit_uuid", "object__comment_8h.html#a9fb66ed207289d12873f36826cb4f73b", null ],
+    [ "comment_get_time", "object__comment_8h.html#a4097a43b8b53ceb7a66e5775db1fb7ee", null ],
     [ "comment_init", "object__comment_8h.html#a8778dfd01cbf04e2201ad0473dbe5488", null ]
 ];

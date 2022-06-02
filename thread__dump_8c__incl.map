@@ -1,7 +1,8 @@
 <map id="objects/thread/src/thread_dump.c" name="objects/thread/src/thread_dump.c">
-<area shape="rect" id="node1" title=" " alt="" coords="385,5,523,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="499,5,638,47"/>
 <area shape="rect" id="node2" href="$object__thread_8h.html" title=" " alt="" coords="323,95,446,121"/>
 <area shape="rect" id="node8" title=" " alt="" coords="489,319,555,345"/>
+<area shape="rect" id="node13" title=" " alt="" coords="607,95,677,121"/>
 <area shape="rect" id="node3" href="$object__uuid_8h.html" title=" " alt="" coords="283,169,393,196"/>
 <area shape="rect" id="node5" title=" " alt="" coords="398,244,481,271"/>
 <area shape="rect" id="node10" href="$object__name_8h.html" title=" " alt="" coords="5,169,124,196"/>

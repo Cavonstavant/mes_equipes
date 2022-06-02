@@ -1,17 +1,11 @@
 var searchData=
 [
-  ['update_5fclient_2ec_603',['update_client.c',['../update__client_8c.html',1,'']]],
-  ['upper_5fcomponent_5fadding_2ec_604',['upper_component_adding.c',['../upper__component__adding_8c.html',1,'']]],
-  ['upper_5fcomponent_5fadding_2eh_605',['upper_component_adding.h',['../upper__component__adding_8h.html',1,'']]],
-  ['upper_5fcomponent_5fget_2ec_606',['upper_component_get.c',['../upper__component__get_8c.html',1,'']]],
-  ['use_5fcommand_2ec_607',['use_command.c',['../use__command_8c.html',1,'']]],
-  ['user_5fand_5fteam_5frelation_2ec_608',['user_and_team_relation.c',['../user__and__team__relation_8c.html',1,'']]],
-  ['user_5fdump_2ec_609',['user_dump.c',['../user__dump_8c.html',1,'']]],
-  ['user_5fremove_2ec_610',['user_remove.c',['../user__remove_8c.html',1,'']]],
-  ['user_5fsetter_2ec_611',['user_setter.c',['../user__setter_8c.html',1,'']]],
-  ['uuid_5fcmp_2ec_612',['uuid_cmp.c',['../uuid__cmp_8c.html',1,'']]],
-  ['uuid_5fdump_2ec_613',['uuid_dump.c',['../uuid__dump_8c.html',1,'']]],
-  ['uuid_5ffind_5fprefix_2ec_614',['uuid_find_prefix.c',['../uuid__find__prefix_8c.html',1,'']]],
-  ['uuid_5fprefixes_2ec_615',['uuid_prefixes.c',['../uuid__prefixes_8c.html',1,'']]],
-  ['uuid_5fsetter_2ec_616',['uuid_setter.c',['../uuid__setter_8c.html',1,'']]]
+  ['tcp_5fserver_2ec_605',['tcp_server.c',['../tcp__server_8c.html',1,'']]],
+  ['team_5fdump_2ec_606',['team_dump.c',['../team__dump_8c.html',1,'']]],
+  ['team_5fremove_2ec_607',['team_remove.c',['../team__remove_8c.html',1,'']]],
+  ['team_5fsetter_2ec_608',['team_setter.c',['../team__setter_8c.html',1,'']]],
+  ['teams_5fclient_2ec_609',['teams_client.c',['../teams__client_8c.html',1,'']]],
+  ['teams_5fclient_2eh_610',['teams_client.h',['../teams__client_8h.html',1,'']]],
+  ['thread_5fdump_2ec_611',['thread_dump.c',['../thread__dump_8c.html',1,'']]],
+  ['thread_5fsetter_2ec_612',['thread_setter.c',['../thread__setter_8c.html',1,'']]]
 ];
