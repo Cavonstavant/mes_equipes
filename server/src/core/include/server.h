@@ -23,6 +23,8 @@
     ///
     #define FAILED 84
 
+extern volatile bool *server_state;
+
 typedef enum user_state_e {
     CONNECTED,
     TO_LOGOUT,

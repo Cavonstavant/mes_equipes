@@ -99,19 +99,20 @@ server_data_t *serv, bool print)
 {
     my_uuid_prefix_t type;
 
-    if (!my_uuid_from_string(uuid)) {
+    if (!my_uuid_fstring(uuid, serv->wrapper)) {
         print_retcode(501, NULL, user->user_peer);
         return false;
     }
-    type = my_uuid_get_prefix(&(my_uuid_from_string(uuid)->uuid));
+    type = my_uuid_get_prefix(&(my_uuid_fstring(uuid,
+    serv->wrapper)->uuid));
     if (type == MY_UUID_PREFIX_TEAM)
-        return command_go_team(my_uuid_from_string(uuid),
+        return command_go_team(my_uuid_fstring(uuid, serv->wrapper),
         serv, user, print);
     if (type == MY_UUID_PREFIX_CHANNEL)
-        return command_go_to_chan(my_uuid_from_string(uuid),
+        return command_go_to_chan(my_uuid_fstring(uuid, serv->wrapper),
         serv, user, print);
     if (type == MY_UUID_PREFIX_THREAD)
-        return command_go_to_thread(my_uuid_from_string(uuid),
+        return command_go_to_thread(my_uuid_fstring(uuid, serv->wrapper),
         serv, user, print);
     print_retcode(501, NULL, user->user_peer);
     return false;
@@ -122,8 +123,6 @@ user_list_t *user, server_data_t *server_data)
 {
     int command_number = 0;
 
-    if (command->arguments == NULL)
-        printf("HAAAAAA\n");
     for (; command->arguments[command_number] != NULL; command_number++);
     if (!user->is_auth) {
         print_retcode(401, NULL, user->user_peer);

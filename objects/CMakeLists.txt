@@ -101,6 +101,7 @@ set (SRC
     ${SRC_UNPACK_WRAPPER}/get_balise.c
     ${SRC_UNPACK_WRAPPER}/unpack_json_to_wrapper_channel.c
     ${SRC_UNPACK_WRAPPER}/unpack_json_to_wrapper_team.c
+    ${SRC_WRAPPER}/uuid_find_prefix.c
 )
 
 add_library(${TARGET} ${SRC})
