@@ -57,7 +57,7 @@ static bool create_new_channel(object_wrapper_t *wrap, char *file, int c_nb)
 
     if (!name || !desc || !my_uuid || !parent)
         return false;
-    if (wrap_adding_channel(wrap, (channel_creation_t) {
+    if (wrapper_adding_channel(wrap, (channel_creation_t) {
         name, desc, my_uuid_from_string(parent)
     }) == false)
         return false;
