@@ -7,21 +7,48 @@
 
 #include "client_utils.h"
 #include "teams_client.h"
+#include "teams_responses.h"
 #include <stdio.h>
 #include <stdlib.h>
+
+static int get_code_from_response(char *response)
+{
+    char *tmp, *code;
+    int code_int;
+
+    if (!(tmp = strdup(response)))
+        return -1;
+    if (!(code = strtok(tmp, " ")))
+        return -1;
+    code_int = atoi(code);
+    return code_int;
+}
+
+static void manage_response(char *msg, char *previous_command)
+{
+    server_response_t *response = NULL;
+    int code = -1;
+    code = get_code_from_response(msg);
+
+    (void)previous_command;
+    if (code == 203)
+        exit(0);
+    if (!(response = create_response_from_code(code)))
+        return;
+    response->message = msg;
+    response->callback(response);
+}
 
 static void print_message(client_net_server_t *server, teams_client_t *serv)
 {
     char *msg = NULL;
 
-    if (server->pending_read && server->connected) {
+    if (server->pending_read && server->connected)
+    {
         if (!(msg = fetch_message(server)))
             exit(0);
-        printf("%s", msg);
-        fflush(NULL);
         serv->prompt_display = true;
-        if (strncmp(msg, "203", 3) == 0)
-            exit(0);
+        manage_response(msg, NULL);
         free(msg);
     }
 }
@@ -30,8 +57,10 @@ void run_teams_client(teams_client_t *server)
 {
     client_net_server_t *net_server = server->net_srv;
 
-    while (net_server->connected) {
-        if (!net_server->connected){
+    while (net_server->connected)
+    {
+        if (!net_server->connected)
+        {
             printf("Connection to the server lost\n");
             break;
         }
