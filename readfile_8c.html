@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Mes équipes: server/net_utils/fd_sets_manage -&gt; include Relation</title>
+<title>Mes équipes: objects/wrapper/src/unpack_wrapper/readfile.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,7 +64,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('dir_ac8c44daf8496a8fffc93f5c0fb05983.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('readfile_8c.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -82,13 +82,73 @@ $(document).ready(function(){initNavTree('dir_ac8c44daf8496a8fffc93f5c0fb05983.h
 </iframe>
 </div>
 
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle">
+<div class="title">readfile.c File Reference</div>  </div>
+</div><!--header-->
 <div class="contents">
-<h3>fd_sets_manage &rarr; include Relation</h3><table class="dirtab"><tr class="dirtab"><th class="dirtab">File in server/net_utils/fd_sets_manage</th><th class="dirtab">Includes file in server/net_utils/include</th></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="fd__set__manage_8h.html">fd_set_manage.h</a></td><td class="dirtab"><a class="el" href="net__utils_8h.html">net_utils.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="fd__sets__manage_8c.html">fd_sets_manage.c</a></td><td class="dirtab"><a class="el" href="net__utils_8h.html">net_utils.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="server__accept__new__client_8c.html">server_accept_new_client.c</a></td><td class="dirtab"><a class="el" href="net__utils_8h.html">net_utils.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="server__close__client_8c.html">server_close_client.c</a></td><td class="dirtab"><a class="el" href="net__utils_8h.html">net_utils.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="server__read__client_8c.html">server_read_client.c</a></td><td class="dirtab"><a class="el" href="net__utils_8h.html">net_utils.h</a></td></tr><tr class="dirtab"><td class="dirtab"><a class="el" href="server__write__client_8c.html">server_write_client.c</a></td><td class="dirtab"><a class="el" href="net__utils_8h.html">net_utils.h</a></td></tr></table></div><!-- contents -->
+
+<p>Read a file.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;sys/stat.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for readfile.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="readfile_8c__incl.png" border="0" usemap="#objects_2wrapper_2src_2unpack__wrapper_2readfile_8c" alt=""/></div>
+<map name="objects_2wrapper_2src_2unpack__wrapper_2readfile_8c" id="objects_2wrapper_2src_2unpack__wrapper_2readfile_8c">
+<area shape="rect" title="Read a file." alt="" coords="52,5,249,47"/>
+<area shape="rect" title=" " alt="" coords="5,95,91,121"/>
+<area shape="rect" title=" " alt="" coords="115,95,186,121"/>
+<area shape="rect" title=" " alt="" coords="211,95,285,121"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a52cbcd785077d48c306260f0e60bae5a"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="readfile_8c.html#a52cbcd785077d48c306260f0e60bae5a">readfile</a> (int fd)</td></tr>
+<tr class="memdesc:a52cbcd785077d48c306260f0e60bae5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a file.  <a href="readfile_8c.html#a52cbcd785077d48c306260f0e60bae5a">More...</a><br /></td></tr>
+<tr class="separator:a52cbcd785077d48c306260f0e60bae5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Read a file. </p>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a52cbcd785077d48c306260f0e60bae5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52cbcd785077d48c306260f0e60bae5a">&#9670;&nbsp;</a></span>readfile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* readfile </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read a file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>The file descriptor to read from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The file content </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_41e1742e44e2de38b3bc91f993fed282.html">server</a></li><li class="navelem"><a class="el" href="dir_b5b0cda83612e6539a216f655a5c352f.html">net_utils</a></li><li class="navelem"><a class="el" href="dir_ac8c44daf8496a8fffc93f5c0fb05983.html">fd_sets_manage</a></li>
+    <li class="navelem"><a class="el" href="dir_645ec83fa4e243a732144956da80a200.html">objects</a></li><li class="navelem"><a class="el" href="dir_5abb86097540a7370156125b54789737.html">wrapper</a></li><li class="navelem"><a class="el" href="dir_6ddd6a60bd8ca1fda3158fcd48a8d032.html">src</a></li><li class="navelem"><a class="el" href="dir_11bc7ebef1fe61c2d44079dae1a945bd.html">unpack_wrapper</a></li><li class="navelem"><a class="el" href="readfile_8c.html">readfile.c</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>

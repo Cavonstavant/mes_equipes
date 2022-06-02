@@ -1,6 +1,13 @@
 <map id="objects/wrapper/include/lower_component_adding.h" name="objects/wrapper/include/lower_component_adding.h">
-<area shape="rect" id="node1" title=" " alt="" coords="214,5,419,47"/>
-<area shape="rect" id="node2" href="$lower__component__adding_8c.html" title=" " alt="" coords="5,95,209,136"/>
-<area shape="rect" id="node3" href="$wrapper__interaction_8c.html" title=" " alt="" coords="233,95,400,136"/>
-<area shape="rect" id="node4" href="$wrapper__modification_8c.html" title=" " alt="" coords="425,95,603,136"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1083,5,1289,47"/>
+<area shape="rect" id="node2" href="$lower__component__adding_8c.html" title=" " alt="" coords="5,102,209,143"/>
+<area shape="rect" id="node3" href="$unpack__json__to__wrapper__channel_8c.html" title="Unpack a json file into a wrapper." alt="" coords="234,95,439,151"/>
+<area shape="rect" id="node4" href="$unpack__json__to__wrapper__comment_8c.html" title="Unpack a json file into a wrapper." alt="" coords="463,95,679,151"/>
+<area shape="rect" id="node5" href="$unpack__json__to__wrapper__conversation_8c.html" title=" " alt="" coords="704,95,943,151"/>
+<area shape="rect" id="node6" href="$unpack__json__to__wrapper__message_8c.html" title="Unpack a json file into a wrapper message." alt="" coords="967,95,1181,151"/>
+<area shape="rect" id="node7" href="$unpack__json__to__wrapper__team_8c.html" title="Unpack a json file into a wrapper." alt="" coords="1205,95,1393,151"/>
+<area shape="rect" id="node8" href="$unpack__json__to__wrapper__thread_8c.html" title="Unpack a json file into a wrapper." alt="" coords="1417,95,1613,151"/>
+<area shape="rect" id="node9" href="$unpack__json__to__wrapper__user_8c.html" title="Unpack a json file into a wrapper." alt="" coords="1638,95,1822,151"/>
+<area shape="rect" id="node10" href="$wrapper__interaction_8c.html" title=" " alt="" coords="1847,102,2013,143"/>
+<area shape="rect" id="node11" href="$wrapper__modification_8c.html" title=" " alt="" coords="2038,102,2217,143"/>
 </map>
