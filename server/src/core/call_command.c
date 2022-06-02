@@ -31,10 +31,8 @@ user_list_t *users)
         return (true);
     if (strcmp(command->name, "/create") == 0)
         return (true);
-    if (j != i) {
-        print_retcode(510, NULL, users->user_peer);
-        return (false);
-    }
+    if (j != i)
+        return print_retcode(510, NULL, users->user_peer, false);
     return (true);
 }
 

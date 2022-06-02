@@ -28,20 +28,71 @@ static const retcodes_t retcodes[] = {
     {.repr = "200 Success\n",
     .code = 200,
     .params = NULL},
-    {.repr = "201 Successfully connected to existing used: %s\n",
+    {.repr = "201 Successfully connected to existing user:%s",
     .code = 201,
     .params = NULL},
     {.repr =
-    "202 Successfully connected, new user created with username: %s\n",
+    "202 Successfully connected, new user created with username:%s",
     .code = 202,
     .params = NULL},
-    {.repr = "203 Successfully disconnected as user: %s\n",
+    {.repr = "203 Successfully disconnected as user:%s",
     .code = 203,
+    .params = NULL},
+    {.repr = "204 %s",
+    .code = 204,
+    .params = NULL},
+    {.repr = "206 %s",
+    .code = 206,
+    .params = NULL},
+    {.repr = "207 %s",
+    .code = 207,
+    .params = NULL},
+    {.repr = "208 %s",
+    .code = 208,
+    .params = NULL},
+    {.repr = "209 %s",
+    .code = 209,
+    .params = NULL},
+    {.repr = "210 %s",
+    .code = 210,
+    .params = NULL},
+    {.repr = "211 %s",
+    .code = 211,
+    .params = NULL},
+    {.repr = "212 %s",
+    .code = 212,
+    .params = NULL},
+    {.repr = "213 %s",
+    .code = 213,
+    .params = NULL},
+    {.repr = "214 %s",
+    .code = 214,
+    .params = NULL},
+    {.repr = "215 %s",
+    .code = 215,
+    .params = NULL},
+    {.repr = "216 %s",
+    .code = 216,
+    .params = NULL},
+    {.repr = "217 %s",
+    .code = 217,
+    .params = NULL},
+    {.repr = "218 %s",
+    .code = 218,
+    .params = NULL},
+    {.repr = "219 %s",
+    .code = 219,
+    .params = NULL},
+    {.repr = "220 %s",
+    .code = 220,
+    .params = NULL},
+    {.repr = "221 %s",
+    .code = 221,
     .params = NULL},
     {.repr = "310 No requested data found, empty relation\n",
     .code = 310,
     .params = NULL},
-    {.repr = "311 Reqested UUID: %s not found\n",
+    {.repr = "311 %s",
     .code = 311,
     .params = NULL},
     {.repr = "312 Requested username: %s not found\n",
@@ -113,14 +164,14 @@ static inline retcodes_t *create_new_repcode(int code)
 /// \param int The return code value.
 /// \param char **Arguments to be passed to the retcodes_t structure if it is
 /// necessary.
-static inline void print_retcode(int code, char *arg, peer_t *peer)
+static inline bool print_retcode(int code, char *arg, peer_t *peer, bool res)
 {
     retcodes_t *retcode = create_new_repcode(code);
     char *command = malloc(sizeof(char) * ((arg) ? strlen(arg) +
     strlen(retcode->repr) - 1 : strlen(retcode->repr) + 1));
 
     if (command == NULL)
-        return;
+        return res;
     if (arg)
         sprintf(command, retcode->repr, arg);
     else
@@ -128,6 +179,36 @@ static inline void print_retcode(int code, char *arg, peer_t *peer)
     client_set_output_buffer(peer, command);
     free(command);
     free(retcode);
+    return res;
+}
+
+///
+/// \brief Compute all the rcodes args to a char *
+///
+/// \param param Args to compute
+/// \return char* Newly created string
+///
+static inline char *cretcodes(char **param)
+{
+    int size = 0;
+    char *res = NULL;
+    int total_size = 0;
+
+    for (; param[size] != NULL; size++);
+    for (int i = 0; i < size; i++)
+        total_size += strlen(param[i]);
+    res = malloc(sizeof(char) * (total_size + 2 * size));
+    if (res == NULL)
+        return NULL;
+    res[0] = '\0';
+    for (int i = 0; i < size - 1; i++) {
+        strcat(res, param[i]);
+        res[strlen(res) + 1] = '\0';
+        res[strlen(res)] = ':';
+    }
+    strcat(res, param[size - 1]);
+    strcat(res, "\n");
+    return res;
 }
 
 #endif /* !RCODES_H_ */
