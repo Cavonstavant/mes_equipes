@@ -10,6 +10,7 @@ set (CORE_SRC
     ${SRC_DIR}/run_teams_client.c
     ${SRC_DIR}/stop_teams_client.c
     ${INCLUDE_DIR}/teams_client.h
+    ${INCLUDE_DIR}/teams_responses.h
 )
 
 set (SRC
