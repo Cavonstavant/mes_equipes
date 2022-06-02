@@ -4,6 +4,7 @@ set (SRC_DIR ${PROJECT_SOURCE_DIR}/client/src)
 set (TARGET ${PROJECT_NAME}_cli)
 set (CORE_TARGET ${PROJECT_NAME}_cli_core)
 
+add_subdirectory(server_responses_callbacks)
 
 set (CORE_SRC
     ${SRC_DIR}/teams_client.c
@@ -11,6 +12,7 @@ set (CORE_SRC
     ${SRC_DIR}/stop_teams_client.c
     ${INCLUDE_DIR}/teams_client.h
     ${INCLUDE_DIR}/teams_responses.h
+    ${CALLBACKS_SRC}
 )
 
 set (SRC
