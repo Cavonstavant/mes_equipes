@@ -88,4 +88,12 @@ void message_edit_body(message_t *message, char *body);
 ///
 void message_edit_time(message_t *message, char *time);
 
+///
+/// \brief Get the time creation of the message in string format
+///
+/// \param message Message object
+/// \return char* Time in string
+///
+char *message_get_time(message_t *message);
+
 #endif /* !OBJECT_MESSAGE_H_ */

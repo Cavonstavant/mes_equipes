@@ -23,7 +23,7 @@ user_list_t *user, server_data_t *data)
         return print_retcode(310, NULL, user->user_peer, false);
     args = malloc(sizeof(char *) * (data->wrapper->user_n * 3 + 1));
     if (args == NULL)
-        return args;
+        return false;
     for (int i = 0; i < data->wrapper->user_n; i++) {
         args[i * 3] = data->wrapper->users[i]->uuid->uuid.repr;
         args[i * 3 + 1] = data->wrapper->users[i]->name;
