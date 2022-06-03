@@ -26,6 +26,8 @@ server_data_t *serv)
 {
     my_uuid_t *new = NULL;
 
+    if (!arguments || !arguments[0] || !arguments[1])
+        return false;
     if (find_team_by_name(serv->wrapper, arguments[0]))
         return print_retcode(320, NULL, user->user_peer, true);
     if (wrapper_adding_team(serv->wrapper, (team_creation_t) {
@@ -55,6 +57,8 @@ server_data_t *serv)
 {
     my_uuid_t *new = NULL;
 
+    if (!arguments || !arguments[0] || !arguments[1])
+        return false;
     if (find_channel_by_name_exc(serv->wrapper, arguments[0], user->loc))
         return print_retcode(320, NULL, user->user_peer, true);
     if (!wrapper_new_channel_to_team(serv->wrapper, (channel_creation_t) {
@@ -85,6 +89,8 @@ server_data_t *serv)
 {
     thread_t *new = NULL;
 
+    if (!arguments || !arguments[0] || !arguments[1])
+        return false;
     if (find_thread_by_name_exc(serv->wrapper, arguments[0], user->loc))
         return print_retcode(320, NULL, user->user_peer, true);
     if (!wrapper_new_thread_to_channel(serv->wrapper, (thread_creation_t) {
@@ -119,6 +125,8 @@ server_data_t *serv)
 {
     comment_t *new = NULL;
 
+    if (!arguments || !arguments[0])
+        return false;
     if (!wrapper_new_comment_to_thread(serv->wrapper, (comment_creation_t) {
         arguments[0],
         user->loc,
