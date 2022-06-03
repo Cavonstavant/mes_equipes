@@ -36,7 +36,7 @@ void run_teams_client(teams_client_t *server)
     client_net_server_t *net_server = server->net_srv;
 
     while (net_server->connected) {
-        if (!net_server->connected){
+        if (!net_server->connected) {
             printf("Connection to the server lost\n");
             break;
         }

@@ -16,7 +16,7 @@
 static bool bind_and_listen_on_socket(tcp_server_t *srv, long port)
 {
     srv->sock_fd = socket(PF_INET, SOCK_STREAM, 0);
-    if (srv->sock_fd < 0){
+    if (srv->sock_fd < 0) {
         TEAMS_LOG("socket");
         return false;
     }
@@ -25,7 +25,7 @@ static bool bind_and_listen_on_socket(tcp_server_t *srv, long port)
     srv->self.sin_port = htons(port);
     srv->self.sin_addr.s_addr = htonl(INADDR_ANY);
     if (bind(srv->sock_fd, (struct sockaddr *) &srv->self,
-        sizeof(struct sockaddr)) < 0){
+        sizeof(struct sockaddr)) < 0) {
         TEAMS_LOG("bind");
         return false;
     }

@@ -25,7 +25,7 @@ void display_start_message(struct sockaddr_in addr)
 {
     char *host_repr = malloc(sizeof(char) * 16);
 
-    if (host_repr == NULL){
+    if (host_repr == NULL) {
         TEAMS_LOG("malloc");
         return;
     }
