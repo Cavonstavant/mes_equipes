@@ -42,7 +42,6 @@ static void call_api(server_response_t *res)
         res->data.data.thread_response_data.thread_body);
 }
 
-
 void client_214_response_callback(void *data)
 {
     server_response_t *response = (server_response_t *)data;
