@@ -22,7 +22,7 @@ static void thread_to_json(thread_t *thread, FILE *file)
     fprintf(file, "\"THR_Author\":\"%s\",", thread->author->uuid.repr);
     fprintf(file, "\"THR_Name\":\"%s\",", thread->name);
     fprintf(file, "\"THR_Body\":\"%s\",", thread->body);
-    strftime(time_display, 20, "%Y-%m-%d %H:%M:%S", localtime(&thread->date));
+    strftime(time_display, 20, "%Y-%m-%d %H-%M-%S", localtime(&thread->date));
     fprintf(file, "\"THR_Time\":\"%s\",", time_display);
     fprintf(file, "\"THR_Comment number\":%i,\"THR_Comments\":[",
     thread->comment_n);

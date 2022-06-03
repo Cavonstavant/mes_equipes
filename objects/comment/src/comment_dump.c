@@ -18,7 +18,7 @@ char *comment_get_time(comment_t *comment)
     if (time_display == NULL)
         return NULL;
     time_display[0] = '\0';
-    strftime(time_display, 20, "%Y-%m-%d %H:%M:%S", localtime(&comment->time));
+    strftime(time_display, 20, "%Y-%m-%d %H-%M-%S", localtime(&comment->time));
     return time_display;
 }
 
@@ -36,7 +36,7 @@ void comment_dump(comment_t *comment)
     printf("\t");
     body_dump(comment->body);
     printf("\tTime : ");
-    strftime(time_display, 20, "%Y-%m-%d %H:%M:%S", localtime(&comment->time));
+    strftime(time_display, 20, "%Y-%m-%d %H-%M-%S", localtime(&comment->time));
     printf("%s\n", time_display);
     fflush(NULL);
 }

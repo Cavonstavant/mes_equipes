@@ -17,7 +17,7 @@ char *message_get_time(message_t *message)
 
     if (time_display == NULL)
         return NULL;
-    strftime(time_display, 20, "%Y-%m-%d %H:%M:%S", localtime(&message->time));
+    strftime(time_display, 20, "%Y-%m-%d %H-%M-%S", localtime(&message->time));
     return time_display;
 }
 
@@ -31,7 +31,7 @@ void message_dump(message_t *message)
     printf("\t");
     body_dump(message->body);
     printf("\tTime : ");
-    strftime(time_display, 20, "%Y-%m-%d %H:%M:%S", localtime(&message->time));
+    strftime(time_display, 20, "%Y-%m-%d %H-%M-%S", localtime(&message->time));
     printf("%s\n", time_display);
     fflush(NULL);
 }
