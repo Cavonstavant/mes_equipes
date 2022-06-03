@@ -126,15 +126,15 @@ Include dependency graph for pack_wrapper_to_json.c:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8ae9a500462d0789461074397a4e2291"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pack__wrapper__to__json_8c.html#a8ae9a500462d0789461074397a4e2291">pack_wrapper_to_json</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper)</td></tr>
-<tr class="memdesc:a8ae9a500462d0789461074397a4e2291"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pack a wrapper into a json file.  <a href="pack__wrapper__to__json_8c.html#a8ae9a500462d0789461074397a4e2291">More...</a><br /></td></tr>
-<tr class="separator:a8ae9a500462d0789461074397a4e2291"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55e3426c8a28201e3d5c6a543c329e0e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pack__wrapper__to__json_8c.html#a55e3426c8a28201e3d5c6a543c329e0e">pack_wrapper_to_json</a> (<a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *wrapper, char *path)</td></tr>
+<tr class="memdesc:a55e3426c8a28201e3d5c6a543c329e0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pack a wrapper into a json file.  <a href="pack__wrapper__to__json_8c.html#a55e3426c8a28201e3d5c6a543c329e0e">More...</a><br /></td></tr>
+<tr class="separator:a55e3426c8a28201e3d5c6a543c329e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Pack a wrapper into a json file. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a8ae9a500462d0789461074397a4e2291"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ae9a500462d0789461074397a4e2291">&#9670;&nbsp;</a></span>pack_wrapper_to_json()</h2>
+<a id="a55e3426c8a28201e3d5c6a543c329e0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55e3426c8a28201e3d5c6a543c329e0e">&#9670;&nbsp;</a></span>pack_wrapper_to_json()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -143,8 +143,18 @@ Functions</h2></td></tr>
           <td class="memname">bool pack_wrapper_to_json </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="object__wrapper_8h.html#a0225214bd36d91c9dd77932140cd48f1">object_wrapper_t</a> *&#160;</td>
-          <td class="paramname"><em>wrapper</em></td><td>)</td>
+          <td class="paramname"><em>wrapper</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -153,6 +163,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">wrapper</td><td>The wrapper to pack </td></tr>
+    <tr><td class="paramname">path</td><td>The path to the json file </td></tr>
   </table>
   </dd>
 </dl>
