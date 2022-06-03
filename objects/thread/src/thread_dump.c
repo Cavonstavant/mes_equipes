@@ -11,11 +11,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-///
 /// \brief Dump the thread time
-///
 /// \param thread Thread object to print
-///
 static void thread_dump_time(thread_t *thread)
 {
     char time_display[20];
