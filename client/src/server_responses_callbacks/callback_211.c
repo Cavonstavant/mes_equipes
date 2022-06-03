@@ -34,7 +34,6 @@ static void call_api(server_response_t *res)
         res->data.data.user_info_data.status);
 }
 
-
 void client_211_response_callback(void *data)
 {
     server_response_t *response = (server_response_t *)data;
