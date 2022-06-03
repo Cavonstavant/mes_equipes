@@ -52,6 +52,7 @@ server_data_t *server_data)
     }
     if (check_arguments_validity(cmd, command, users) == false)
         return (-1);
-    cmd->function(command, users, server_data);
+    if (!cmd->function(command, users, server_data))
+        return (-1);
     return (0);
 }
