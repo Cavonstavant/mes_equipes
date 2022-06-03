@@ -20,29 +20,19 @@
     #include "object_user.h"
     #include <stddef.h>
 
-    ///
     /// \brief Error inside a Wrapper object
-    ///
     #define WRAPPER_ERROR NULL
 
-    ///
     /// \brief Return value when no matching object is find
-    ///
     #define OBJECT_NOT_FOUND NULL
 
-    ///
     /// \brief Return value when the operation succeed
-    ///
     #define OPERATION_SUCCEED true
 
-    ///
     /// \brief Return value when the operation failed
-    ///
     #define OPERATION_FAILED false
 
-///
 /// \brief Wrapper object, containing all Objects instance
-///
 typedef struct object_wrapper_s {
     /// List of all the channel
     channel_t **channels;
@@ -74,9 +64,7 @@ typedef struct object_wrapper_s {
     int user_n;
 } object_wrapper_t;
 
-///
 /// \brief Child list object containing all informations about a child list
-///
 typedef struct child_list_s {
     /// List of uuid_t
     my_uuid_t **list;
@@ -84,359 +72,257 @@ typedef struct child_list_s {
     int size;
 } child_list_t;
 
-///
 /// \brief Create a new wrapper object
 /// Init all the object lists
-///
 /// \return object_wrapper_t* Newly created wrapper
-///
 object_wrapper_t *wrapper_init(void);
 
-///
 /// \brief Destroy a wrapper object
 /// If the wrapper object is WRAPPER_ERROR, do nothing
-///
 /// \param wrapper Wrapper object to destroy
-///
 void wrapper_destroy(object_wrapper_t *wrapper);
 
-///
 /// \brief Dump all object in the wrapper
-///
 /// \param wrapper Wraper object to print
-///
 void wrapper_dump(object_wrapper_t *wrapper);
 
-///
 /// \brief Cross all the channels list and try to find a matching channel
-///
 /// \param wrapper Wrapper object
 /// \param find Uuid to match in the list
 /// \return channel_t* Return an instance of the matching object
 /// Return OBJECT_TO_FIND when no matching object is find
-///
 channel_t *wrapper_find_channel(object_wrapper_t *wrapper, my_uuid_t *find);
 
-///
 /// \brief Cross all the users list and try to find a matching user
-///
 /// \param wrapper Wrapper object
 /// \param find Uuid to match in the list
 /// \return user_t* Return an instance of the matching object
 /// Return OBJECT_TO_FIND when no matching object is find
-///
 user_t *wrapper_find_user(object_wrapper_t *wrapper, my_uuid_t *find);
 
-///
 /// \brief Cross all the teams list and try to find a matching team
-///
 /// \param wrapper Wrapper object
 /// \param find Uuid to match in the list
 /// \return team_t* Return an instance of the matching object
 /// Return OBJECT_TO_FIND when no matching object is find
-///
 team_t *wrapper_find_team(object_wrapper_t *wrapper, my_uuid_t *find);
 
-///
 /// \brief Cross all the conversations list and try to find
 /// a matching conversation
-///
 /// \param wrapper Wrapper object
 /// \param find Uuid to match in the list
 /// \return conversation_t* Return an instance of the matching object
 /// Return OBJECT_TO_FIND when no matching object is find
-///
 conversation_t *wrapper_find_conversation(object_wrapper_t *wrapper,
 my_uuid_t *find);
 
-///
 /// \brief Cross all the threads list and try to find a matching thread
-///
 /// \param wrapper Wrapper object
 /// \param find Uuid to match in the list
 /// \return thread_t* Return an instance of the matching object
 /// Return OBJECT_TO_FIND when no matching object is find
-///
 thread_t *wrapper_find_thread(object_wrapper_t *wrapper, my_uuid_t *find);
 
-///
 /// \brief Cross all the messages list and try to find a matching message
-///
 /// \param wrapper Wrapper object
 /// \param find Uuid to match in the list
 /// \return message_t* Return an instance of the matching object
 /// Return OBJECT_TO_FIND when no matching object is find
-///
 message_t *wrapper_find_message(object_wrapper_t *wrapper, my_uuid_t *find);
 
-///
 /// \brief Cross all the comments list and try to find a matching comment
-///
 /// \param wrapper Wrapper object
 /// \param find Uuid to match in the list
 /// \return comment_t* Return an instance of the matching object
 /// Return OBJECT_TO_FIND when no matching object is find
-///
 comment_t *wrapper_find_comment(object_wrapper_t *wrapper, my_uuid_t *find);
 
-///
 /// \brief Create a new comment object and link it with an existing thread
-///
 /// \param wrapper Wrapper object
 /// \param content Comment content
 /// \param thread_uuid Uuid thread to link
 /// \return true Operation succeed
 /// \return false Operation failed
-///
 bool wrapper_new_comment_to_thread(object_wrapper_t *wrapper,
 comment_creation_t content, my_uuid_t *thread_uuid);
 
-///
 /// \brief Create a new thread object and link it with an existing channel
-///
 /// \param wrapper Wrapper object
 /// \param content Thread content
 /// \param channel_uuid Uuid channel to link
 /// \return true Operation succeed
 /// \return false Operation failed
-///
 bool wrapper_new_thread_to_channel(object_wrapper_t *wrapper,
 thread_creation_t content, my_uuid_t *channel_uuid);
 
-///
 /// \brief Create a new channel object and link it with an existing team
-///
 /// \param wrapper Wrapper object
 /// \param content Channel content
 /// \param team_uuid Uuid team to link
 /// \return true Operation succeed
 /// \return false Operation failed
-///
 bool wrapper_new_channel_to_team(object_wrapper_t *wrapper,
 channel_creation_t content, my_uuid_t *team_uuid);
 
-///
 /// \brief Create a new Conversation object and link it with two existing user
-///
 /// \param wrapper Wrapper object
 /// \param content Conversation content
 /// \param first_uuid First uuid user to link
 /// \param second_uuid Second uuid user to link
 /// \return true Operation succeed
 /// \return false Operation failed
-///
 bool wrapper_new_conversation_to_user(object_wrapper_t *wrapper,
 conversation_creation_t content, my_uuid_t *first_uuid,
 my_uuid_t *second_uuid);
 
-///
 /// \brief Create a new message object and link it with an existing conv
-///
 /// \param wrapper Wrapper object
 /// \param content Message content
 /// \param team_uuid Uuid conv to link
 /// \return true Operation succeed
 /// \return false Operation failed
-///
 bool wrapper_new_message_to_conversation(object_wrapper_t *wrapper,
 message_creation_t content, my_uuid_t *conv_uuid);
 
-///
 /// \brief Add a user into a conversation
-///
 /// \param wrapper Wrapper object
 /// \param user_uuid User uuid
 /// \param conversation_uuid Conversation uuid
 /// \return true Operation succeed
 /// \return false Operation failed
-///
 bool wrapper_user_join_conversation(object_wrapper_t *wrapper,
 my_uuid_t *user_uuid, my_uuid_t *conversation_uuid);
 
-///
 /// \brief Add a user into a team
-///
 /// \param wrapper Wrapper object
 /// \param user_uuid User uuid
 /// \param team_uuid Team uuid
 /// \return true Operation succeed
 /// \return false Operation failed
-///
 bool wrapper_user_join_team(object_wrapper_t *wrapper,
 my_uuid_t *user_uuid, my_uuid_t *team_uuid);
 
-///
 /// \brief Remove a user from a team
-///
 /// \param wrapper Wrapper object
 /// \param user_uuid User uuid
 /// \param team_uuid Team uuid
 /// \return true Operation succeed
 /// \return false Operation failed
-///
 bool wrapper_user_leave_team(object_wrapper_t *wrapper,
 my_uuid_t *user_uuid, my_uuid_t *team_uuid);
 
-///
 /// \brief Find a matching channel by his name inside the wrapper list
-///
 /// \param wrapper Wrapper object
 /// \param name Name to match
 /// \return my_uuid_t* Uuid of the founded object, NULL otherwise
-///
 my_uuid_t *find_channel_by_name(object_wrapper_t *wrapper, char *name);
 
-///
 /// \brief Find a matching team by his name inside the wrapper list
-///
 /// \param wrapper Wrapper object
 /// \param name Name to match
 /// \return my_uuid_t* Uuid of the founded object, NULL otherwise
-///
 my_uuid_t *find_team_by_name(object_wrapper_t *wrapper, char *name);
 
-///
 /// \brief Find a matching thread by his name inside the wrapper list
-///
 /// \param wrapper Wrapper object
 /// \param name Name to match
 /// \return my_uuid_t* Uuid of the founded object, NULL otherwise
-///
 my_uuid_t *find_thread_by_name(object_wrapper_t *wrapper, char *name);
 
-///
 /// \brief Find a matching user by his name inside the wrapper list
-///
 /// \param wrapper Wrapper object
 /// \param name Name to match
 /// \return my_uuid_t* Uuid of the founded object, NULL otherwise
-///
 my_uuid_t *find_user_by_name(object_wrapper_t *wrapper, char *name);
 
-///
 /// \brief Get the channel child list
-///
 /// \param wrapper Wrapper object
 /// \param channel_uuid Uuid of the channel
 /// \return child_list_t Child_list object
-///
 child_list_t get_channel_child_list(object_wrapper_t *wrapper,
 my_uuid_t *channel_uuid);
 
-///
 /// \brief Get the conversation child list
-///
 /// \param wrapper Wrapper object
 /// \param conversation_uuid Uuid of the conversation
 /// \return child_list_t Child_list object
-///
 child_list_t get_conversation_child_list(object_wrapper_t *wrapper,
 my_uuid_t *conversation_uuid);
 
-///
 /// \brief Get the team child list
-///
 /// \param wrapper Wrapper object
 /// \param team_uuid Uuid of the team
 /// \return child_list_t Child_list object
-///
 child_list_t get_team_child_list(object_wrapper_t *wrapper,
 my_uuid_t *team_uuid);
 
-///
 /// \brief Get the thread child list
-///
 /// \param wrapper Wrapper object
 /// \param thread_uuid Uuid of the thread
 /// \return child_list_t Child_list object
-///
 child_list_t get_thread_child_list(object_wrapper_t *wrapper,
 my_uuid_t *thread_uuid);
 
-///
 /// \brief Get the subscribed team of user object
-///
 /// \param wrapper Wrapper object
 /// \param user_uuid Uuid of the user
 /// \return child_list_t List of the uuid team and his size
-///
 child_list_t get_subscribed_team_of_user(object_wrapper_t *wrapper,
 my_uuid_t *user_uuid);
 
-///
 /// \brief Get the subscribed user of team object
-///
 /// \param wrapper Wrapper object
 /// \param user_uuid Uuid of the team
 /// \return child_list_t List of the uuid team and his size
-///
 child_list_t get_subscribed_user_of_team(object_wrapper_t *wrapper,
 my_uuid_t *team_uuid);
 
-///
 /// \brief Tell if a user is sub to a team
-///
 /// \param wrapper Wrapper object
 /// \param user_uuid Uuid of the user
 /// \param team_uuid Uuid of the team
 /// \return true If the user is sub
 /// \return false If the user is not sub
-///
 bool user_is_sub_to_team(object_wrapper_t *wrapper,
 my_uuid_t *user_uuid, my_uuid_t *team_uuid);
 
-///
 /// \brief Get the associated team of a channel
-///
 /// \param wrapper Wrapper object
 /// \param channel_uuid Uuid of the channel
 /// \return my_uuid_t* Uuid of the team, NULL otherwise
-///
 my_uuid_t *get_associated_team_channel(object_wrapper_t *wrapper,
 my_uuid_t *channel_uuid);
 
-///
 /// \brief Get the associated team thread object
-///
 /// \param wrapper Wrapper object
 /// \param thread_uuid Uuid of the thread
 /// \return my_uuid_t* Uuid of the team, NULL otherwise
-///
 my_uuid_t *get_associated_team_thread(object_wrapper_t *wrapper,
 my_uuid_t *thread_uuid);
 
-///
 /// \brief Find a channel inside a team
-///
 /// \param wrapper Wrapper object
 /// \param chan Channel uuid
 /// \param team Team uuid
 /// \return true When channel is found
 /// \return false When channel is not found
-///
 bool wrapper_find_channel_tm(object_wrapper_t *wrapper, my_uuid_t *chan,
 my_uuid_t *team);
 
-///
 /// \brief Find a thread inside a team
-///
 /// \param wrapper Wrapper object
 /// \param thread Thread uuid
 /// \param chan Channel uuid (Parent)
 /// \return true When thread is found
 /// \return false When thread is not found
-///
 bool wrapper_find_thread_tm(object_wrapper_t *wrapper, my_uuid_t *thread,
 my_uuid_t *chan);
 
-///
-/// \brief Find a channel inside a team by his name 
-///
+/// \brief Find a channel inside a team by his name
 /// \param wrapper Wrapper object
 /// \param name Name to search
 /// \param team Team uuid
 /// \return my_uuid_t* Uuid of the founded object
-///
 static inline my_uuid_t *find_channel_by_name_exc(object_wrapper_t *wrapper,
 char *name, my_uuid_t *team)
 {
@@ -444,17 +330,14 @@ char *name, my_uuid_t *team)
         if (strcmp(wrapper->channels[i]->name, name) == 0 &&
             my_uuid_cmp(team, wrapper->channels[i]->team))
             return wrapper->channels[i]->uuid;
-    return OBJECT_NOT_FOUND; 
+    return OBJECT_NOT_FOUND;
 }
 
-///
-/// \brief Find a thread inside a team by his name 
-///
+/// \brief Find a thread inside a team by his name
 /// \param wrapper Wrapper object
 /// \param name Name to search
 /// \param chan Chan uuid
 /// \return my_uuid_t* Uuid of the founded object
-///
 static inline my_uuid_t *find_thread_by_name_exc(object_wrapper_t *wrapper,
 char *name, my_uuid_t *chan)
 {
@@ -465,31 +348,22 @@ char *name, my_uuid_t *chan)
     return OBJECT_NOT_FOUND;
 }
 
-///
 /// \brief Find a uuid without a prefix
-///
-/// \param wrapper Wrapper object 
+/// \param wrapper Wrapper object
 /// \param repr Uuid base
 /// \return char* Prefix match
-///
 char *find_a_uuid(object_wrapper_t *wrapper, char *repr);
 
-///
 /// \brief Creare a uuid from a string without prefix
-///
 /// \param repr String uuid
 /// \return my_uuid_t* Newly created uuid
-///
 my_uuid_t *my_uuid_fstring(char *repr, object_wrapper_t *wrapper);
 
-///
 /// \brief Find a conv by his participant
-///
 /// \param wrapper Wrapper object
 /// \param first First user uuid
 /// \param second Second user uuid
 /// \return my_uuid_t* Uuid of the founded conv
-///
 my_uuid_t *find_conv_by_participant(object_wrapper_t *wrapper,
 my_uuid_t *first, my_uuid_t *second);
 

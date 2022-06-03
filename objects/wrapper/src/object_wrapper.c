@@ -10,12 +10,9 @@
 #include "object_wrapper.h"
 #include <stdlib.h>
 
-///
 /// \brief Init all the object lists
-///
 /// \param wrapper Current wrapper object
 /// \return object_wrapper_t* Newly filled wrapper object
-///
 static object_wrapper_t *wrapper_init_content(object_wrapper_t *wrapper)
 {
     if ((wrapper->conversations = malloc(sizeof(conversation_t *)))
@@ -58,11 +55,8 @@ object_wrapper_t *wrapper_init(void)
     return wrapper;
 }
 
-///
 /// \brief Destroy all the content of a wrapper object
-///
 /// \param wrapper Wrapper object to destroy
-///
 static void wrapper_destroy_content(object_wrapper_t *wrapper)
 {
     for (int i = 0; i < wrapper->team_n; i++)
