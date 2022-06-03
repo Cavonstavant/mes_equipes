@@ -5,21 +5,16 @@
 ** uuid_prefixes
 */
 
+/// \file objects/uuid/uuid_wrapper/src/uuid_prefixes.c
+
 #include "my_uuid.h"
 
 const char *TEAMS_UUID_PREFIXES[] = {
-    /// \brief Team UUID
     "TEM_",
-    /// \brief Channel UUID
     "CHA_",
-    /// \brief Thread UUID
     "THR_",
-    /// \brief Comment UUID
     "COM_",
-    /// \brief User UUID
     "USR_",
-    /// \brief Conversation UUID
     "CON_",
-    /// \brief Direct Message UUID
     "DMS_",
 };

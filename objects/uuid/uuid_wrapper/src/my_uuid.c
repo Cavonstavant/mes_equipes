@@ -5,6 +5,8 @@
 ** uuid_wrapper
 */
 
+/// \file objects/uuid/uuid_wrapper/src/my_uuid.c
+
 #include "my_uuid.h"
 #include <string.h>
 
