@@ -5,22 +5,19 @@
 ** create_command
 */
 
-/// \file server/src/create_command.c
+/// \file server/src/core/create_command.c
 
 #include "cli_commands.h"
 #include "rcodes.h"
 #include "logging_server.h"
 #include "upper_component_adding.h"
 
-///
 /// \brief Create a new team
-///
 /// \param arguments Arguments for the creation
 /// \param user User info
 /// \param serv Server info
 /// \return true When operation succeed
 /// \return false When operation failed
-///
 static bool command_create_team(char **arguments, user_list_t *user,
 server_data_t *serv)
 {
@@ -43,15 +40,12 @@ server_data_t *serv)
     arguments[0], arguments[1], NULL}), user->user_peer, true);
 }
 
-///
 /// \brief Create a new chan
-///
 /// \param arguments Arguments for the creation
 /// \param user User info
 /// \param serv Server info
 /// \return true When operation succeed
 /// \return false When operation failed
-///
 static bool command_create_chan(char **arguments, user_list_t *user,
 server_data_t *serv)
 {
@@ -75,15 +69,12 @@ server_data_t *serv)
     arguments[0], arguments[1], NULL}), user->user_peer, true);
 }
 
-///
 /// \brief Create a new thread
-///
 /// \param arguments Arguments for the creation
 /// \param user User info
 /// \param serv Server info
 /// \return true When operation succeed
 /// \return false When operation failed
-///
 static bool command_create_thread(char **arguments, user_list_t *user,
 server_data_t *serv)
 {
@@ -94,14 +85,11 @@ server_data_t *serv)
     if (find_thread_by_name_exc(serv->wrapper, arguments[0], user->loc))
         return print_retcode(320, NULL, user->user_peer, true);
     if (!wrapper_new_thread_to_channel(serv->wrapper, (thread_creation_t) {
-        arguments[0],
-        arguments[1],
-        user->user_uuid,
-        user->loc
+        arguments[0], arguments[1], user->user_uuid, user->loc
     }, user->loc)) {
         return print_retcode(503, NULL, user->user_peer, true);
     }
-    new = wrapper_find_thread(serv->wrapper, 
+    new = wrapper_find_thread(serv->wrapper,
     find_thread_by_name_exc(serv->wrapper, arguments[0], user->loc));
     server_event_thread_created(user->loc->uuid.repr + 4,
     new->uuid->uuid.repr + 4, user->user_uuid->uuid.repr + 4,
@@ -111,15 +99,12 @@ server_data_t *serv)
     arguments[1], NULL}), user->user_peer, true);
 }
 
-///
 /// \brief Create a new reply
-///
 /// \param arguments Arguments for the creation
 /// \param user User info
 /// \param serv Server info
 /// \return true When operation succeed
 /// \return false When operation failed
-///
 static bool command_create_reply(char **arguments, user_list_t *user,
 server_data_t *serv)
 {
