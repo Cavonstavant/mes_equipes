@@ -19,11 +19,18 @@
 /// code as char *, an int which represent the return code, and a array of
 /// char * which contains the arguments to be used.
 typedef struct retcodes_s {
+
+    /// \brief char * The name of the return code.
     char *repr;
+
+    /// \brief int The return code.
     int code;
+
+    /// \brief char ** The arguments of the return code.
     char **params;
 } retcodes_t;
 
+/// \brief The retcodes_s structure contains the representation of the return
 static const retcodes_t retcodes[] = {
     {.repr = "200 Success\n",
     .code = 200,
@@ -182,12 +189,9 @@ static inline bool print_retcode(int code, char *arg, peer_t *peer, bool res)
     return res;
 }
 
-///
 /// \brief Compute all the rcodes args to a char *
-///
 /// \param param Args to compute
 /// \return char* Newly created string
-///
 static inline char *cretcodes(char **param)
 {
     int size = 0;

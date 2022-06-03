@@ -26,25 +26,108 @@ typedef struct cli_command_s {
     bool (*function)(struct cli_command_s *, user_list_t *, server_data_t *);
 } cli_command_t;
 
+/// \brief The help command.
+/// \param cli_command The command to call.
+/// \param user_list The list of users.
+/// \param server_data The server data.
+/// \return true if the command is valid, false otherwise.
 bool command_help(cli_command_t *, user_list_t *, server_data_t *);
+
+/// \brief The info command.
+/// \param cli_command The command to call.
+/// \param user_list The list of users.
+/// \param server_data The server data.
+/// \return true if the command is valid, false otherwise.
 bool command_info(cli_command_t *, user_list_t *, server_data_t *);
+
+/// \brief The list command.
+/// \param cli_command The command to call.
+/// \param user_list The list of users.
+/// \param server_data The server data.
+/// \return true if the command is valid, false otherwise.
 bool command_list(cli_command_t *, user_list_t *, server_data_t *);
+
+/// \brief The create command.
+/// \param cli_command The command to call.
+/// \param user_list The list of users.
+/// \param server_data The server data.
+/// \return true if the command is valid, false otherwise.
 bool command_create(cli_command_t *, user_list_t *, server_data_t *);
+
+/// \brief The use command.
+/// \param cli_command The command to call.
+/// \param user_list The list of users.
+/// \param server_data The server data.
+/// \return true if the command is valid, false otherwise.
 bool command_use(cli_command_t *, user_list_t *, server_data_t *);
+
+/// \brief The unsubscribe command.
+/// \param cli_command The command to call.
+/// \param user_list The list of users.
+/// \param server_data The server data.
+/// \return true if the command is valid, false otherwise.
 bool command_unsubscribe(cli_command_t *, user_list_t *, server_data_t *);
+
+/// \brief The subscribe command.
+/// \param cli_command The command to call.
+/// \param user_list The list of users.
+/// \param server_data The server data.
+/// \return true if the command is valid, false otherwise.
 bool command_subscribe(cli_command_t *, user_list_t *, server_data_t *);
+
+/// \brief The subscribed command.
+/// \param cli_command The command to call.
+/// \param user_list The list of users.
+/// \param server_data The server data.
+/// \return true if the command is valid, false otherwise.
 bool command_subscribed(cli_command_t *, user_list_t *, server_data_t *);
+
+/// \brief The messages command.
+/// \param cli_command The command to call.
+/// \param user_list The list of users.
+/// \param server_data The server data.
+/// \return true if the command is valid, false otherwise.
 bool command_messages(cli_command_t *, user_list_t *, server_data_t *);
+
+/// \brief The send command.
+/// \param cli_command The command to call.
+/// \param user_list The list of users.
+/// \param server_data The server data.
+/// \return true if the command is valid, false otherwise.
 bool command_send(cli_command_t *, user_list_t *, server_data_t *);
+
+/// \brief The user command.
+/// \param cli_command The command to call.
+/// \param user_list The list of users.
+/// \param server_data The server data.
+/// \return true if the command is valid, false otherwise.
 bool command_user(cli_command_t *, user_list_t *, server_data_t *);
+
+/// \brief The users command.
+/// \param cli_command The command to call.
+/// \param user_list The list of users.
+/// \param server_data The server data.
+/// \return true if the command is valid, false otherwise.
 bool command_users(cli_command_t *, user_list_t *, server_data_t *);
+
+/// \brief The logout command.
+/// \param cli_command The command to call.
+/// \param user_list The list of users.
+/// \param server_data The server data.
+/// \return true if the command is valid, false otherwise.
 bool command_logout(cli_command_t *, user_list_t *, server_data_t *);
+
+/// \brief The login command.
+/// \param cli_command The command to call.
+/// \param user_list The list of users.
+/// \param server_data The server data.
+/// \return true if the command is valid, false otherwise.
 bool command_login(cli_command_t *, user_list_t *, server_data_t *);
 
 /// \brief This function get the commands static const defined in
 /// cli_command.c.
 /// \return const cli_command_t * An array of available commands.
-const cli_command_t *get_cli_commands();
+const cli_command_t *get_cli_commands(void);
 
 /// \brief This function get a cli_commands depending of it's name.
 /// \param char * The called command to find the structure corresponding of the
@@ -71,14 +154,11 @@ int call_command(cli_command_t *command, user_list_t *, server_data_t *);
 /// if an error occurs.
 char **fill_command_arguments(char *command, char *name, user_list_t *users);
 
-///
 /// \brief Reset the localisation of an user
-///
 /// \param user User info
 /// \param print Last command of use
 /// \return true When operation succeed
 /// \return false When operation failed
-///
 static inline bool command_use_empty(user_list_t *user, bool print)
 {
     user->loc = NULL;
