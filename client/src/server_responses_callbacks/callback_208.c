@@ -14,12 +14,14 @@ static void update_response_data(server_response_t *resp, char *msg)
 {
     if (!resp)
         return;
-    if (!(resp->data.data.thread_response_data.thread_uuid = strtok(msg, ":")))
+    if (!(resp->data.data.thread_response_data.thread_uuid
+        = strtok(msg, ":")))
         return;
-    if (!(resp->data.data.thread_response_data.user_uuid = strtok(msg, ":")))
+    if (!(resp->data.data.thread_response_data.user_uuid
+        = strtok(NULL, ":")))
         return;
     if (!(resp->data.data.thread_response_data.creation_time
-        = strtok(msg, ":")))
+        = strtok(NULL, ":")))
         return;
     if (!(resp->data.data.thread_response_data.thread_title
         = strtok(NULL, ":")))
