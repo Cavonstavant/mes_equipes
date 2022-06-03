@@ -338,7 +338,7 @@ static const server_response_t server_response_template[] = {
                 .creation_time = NULL
             }
         },
-        .callback = default_response_callback
+        .callback = client_216_response_callback
     },
     {
         .code = 217,
@@ -351,7 +351,8 @@ static const server_response_t server_response_template[] = {
                 .thread_body = NULL,
                 .creation_time = NULL
             }
-        }
+        },
+        .callback = client_217_response_callback
     },
     {
         .code = 218,
@@ -364,7 +365,7 @@ static const server_response_t server_response_template[] = {
                 .thread_uuid = NULL
             }
         },
-        .callback = default_response_callback
+        .callback = client_218_response_callback
     },
     {
         .code = 219,
