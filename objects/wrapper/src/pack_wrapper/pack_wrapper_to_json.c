@@ -11,9 +11,9 @@
 #include <stdbool.h>
 #include "pack_json.h"
 
-bool pack_wrapper_to_json(object_wrapper_t *wrapper)
+bool pack_wrapper_to_json(object_wrapper_t *wrapper, char *path)
 {
-    FILE *file = fopen("server.json", "w+");
+    FILE *file = fopen(path, "w+");
 
     if (!file || !wrapper)
         return false;

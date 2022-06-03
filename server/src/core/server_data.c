@@ -7,6 +7,7 @@
 
 /// \file server/src/core/server_data.c
 
+#include "unpack_json.h"
 #include "server.h"
 #include <stdlib.h>
 
@@ -14,10 +15,11 @@ server_data_t *init_server_data(long port)
 {
     server_data_t *server_data = malloc(sizeof(server_data_t) * 1);
 
-    (void) port;
     if (server_data == NULL)
         return NULL;
-    server_data->wrapper = wrapper_init();
+    server_data->wrapper = unpack_json_to_wrapper("saves/server.json");
+    if (server_data->wrapper == NULL)
+        server_data->wrapper = wrapper_init();
     if (server_data->wrapper == NULL)
         return NULL;
     server_data->active_users = malloc(sizeof(user_list_t *) * 1);
@@ -60,7 +62,10 @@ void server_remove_user(server_data_t *server_data, user_list_t *user_info)
     CIRCLEQ_REMOVE(&server_data->server->network_server->peers_head,
     user_info->user_peer, peers);
     close(user_info->user_peer->sock_fd);
-    free(user_info->user_peer);
+    if (user_info->user_peer != NULL) {
+        free(user_info->user_peer);
+        user_info->user_peer = NULL;
+    }
     user_info->disconnected = LOGOUT;
 }
 

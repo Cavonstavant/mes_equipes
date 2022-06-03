@@ -8,6 +8,7 @@
 /// \file objects/wrapper/src/unpack_wrapper/unpack_json_to_wrapper_user.c
 /// \brief Unpack a json file into a wrapper
 
+#include "logging_server.h"
 #include "unpack_json.h"
 #include "upper_component_adding.h"
 #include "lower_component_adding.h"
@@ -53,12 +54,14 @@ static bool create_new_user(object_wrapper_t *wrapper, char *file, int occ)
     char *uuid = get_balise_content(file + index, occ, "\"USR_UUID\":");
     char *name = get_balise_content(file + index, occ, "\"USR_Name\":");
     char *status = get_balise_content(file + index, occ, "\"USR_Status\":");
-    bool s = (strcmp(status, "online") == 0) ? true : false;
+    bool s = false;
 
     if (!uuid || !name || !status)
         return false;
     if (!wrapper_adding_user(wrapper, (user_creation_t) {name, s}))
         return false;
+    server_event_user_loaded(wrapper->users[occ]->uuid->uuid.repr + 4,
+    wrapper->users[occ]->name);
     user_edit_uuid(wrapper->users[occ], uuid);
     if (!fill_teams(wrapper, file, index, occ))
         return false;
