@@ -11,17 +11,19 @@
 
 static void update_response_data(server_response_t *resp, char *msg)
 {
+    char *status = NULL;
+
     if (!resp)
         return;
     if (!(resp->data.data.user_info_data.user_uuid
         = strtok(msg, ":")))
         return;
     if (!(resp->data.data.user_info_data.user_name
-        = strtok(msg, ":")))
+        = strtok(NULL, ":")))
         return;
-    if (!(resp->data.data.user_info_data.status
-        = atoi(strtok(NULL, ":"))))
+    if (!(status = strtok(NULL, ":")))
         return;
+    resp->data.data.user_info_data.status = atoi(status);
 }
 
 static void call_api(server_response_t *res)

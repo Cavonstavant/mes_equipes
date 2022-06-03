@@ -25,15 +25,19 @@ static int get_code_from_response(char *response)
     return code_int;
 }
 
-static void manage_response(char *msg, char *previous_command)
+static void manage_response(char *msg)
 {
     server_response_t *response = NULL;
     int code = -1;
     code = get_code_from_response(msg);
-    (void)previous_command;
     if (!(response = create_response_from_code(code)))
         return;
     response->message = msg;
+    if (code >= 300){
+        printf("\033[0;4mError:\n\t\033[0m");
+        printf("\033[1;31m%s\033[0m\n", msg);
+    } else
+        printf("\033[0;4mServer answer:\033[0m\n\t\033[1;32m%s\033[0m\n", msg);
     response->callback(response);
     if (code == 203)
         exit(0);
@@ -47,7 +51,7 @@ static void print_message(client_net_server_t *server, teams_client_t *serv)
         if (!(msg = fetch_message(server)))
             exit(0);
         serv->prompt_display = true;
-        manage_response(msg, NULL);
+        manage_response(msg);
         free(msg);
     }
 }

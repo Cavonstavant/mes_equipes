@@ -17,7 +17,7 @@ static void update_response_data(server_response_t *resp, char *msg)
         = strtok(msg, ":")))
         return;
     if (!(resp->data.data.subscribe_data.team_uuid
-        = strtok(msg, ":")))
+        = strtok(NULL, ":")))
         return;
 }
 

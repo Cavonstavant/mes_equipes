@@ -42,8 +42,9 @@ user_list_t *user, server_data_t *data)
 
     if (!user->is_auth)
         return print_retcode(401, NULL, user->user_peer, false);
-    users = wrapper_find_user(data->wrapper,
-    my_uuid_fstring(cmd->arguments[0], data->wrapper));
+    if (my_uuid_fstring(cmd->arguments[0], data->wrapper))
+        users = wrapper_find_user(data->wrapper,
+            my_uuid_fstring(cmd->arguments[0], data->wrapper));
     if (!users)
         return print_retcode(311, cretcodes((char *[]) {
         cmd->name, cmd->arguments[0], NULL}), user->user_peer, false);

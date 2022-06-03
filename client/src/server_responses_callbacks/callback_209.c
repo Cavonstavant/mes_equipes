@@ -17,10 +17,10 @@ static void update_response_data(server_response_t *resp, char *msg)
         = strtok(msg, ":")))
         return;
     if (!(resp->data.data.message_response_data.sender_uuid
-        = strtok(msg, ":")))
+        = strtok(NULL, ":")))
         return;
     if (!(resp->data.data.message_response_data.creation_time
-        = strtok(msg, ":")))
+        = strtok(NULL, ":")))
         return;
     if (!(resp->data.data.message_response_data.message_body
         = strtok(NULL, ":")))
@@ -29,12 +29,18 @@ static void update_response_data(server_response_t *resp, char *msg)
 
 static void call_api(server_response_t *res)
 {
+    struct tm temp = {0};
+
     if (!res)
         return;
+    strptime(
+        res->data.data.message_response_data.creation_time,
+        "%Y-%m-%d %H-%M-%S",
+        &temp);
     client_thread_print_replies(
         res->data.data.message_response_data.thread_uuid + 4,
         res->data.data.message_response_data.sender_uuid + 4,
-        strtol(res->data.data.message_response_data.creation_time, NULL, 10),
+        mktime(&temp),
         res->data.data.message_response_data.message_body);
 }
 

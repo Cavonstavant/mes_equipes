@@ -56,7 +56,7 @@ Test(objects_my_comment, setter) {
     cr_assert_str_eq(comment->thread->uuid.repr, "USR_df2b5c45-c44b-4c93-8dfb-5c9c36640673");
     cr_assert_str_eq(comment->author->uuid.repr, "USR_df2b5c45-c44b-4c93-8dfb-5c9c36640673");
     cr_assert_str_eq(comment->body, "A");
-    strftime(time_display, 20, "%Y-%m-%d %H:%M:%S", localtime(&comment->time));
+    strftime(time_display, 20, "%Y-%m-%d %H-%M-%S", localtime(&comment->time));
     //cr_assert_str_eq(time_display, "2022-05-17 18:21:14");
 }
 

@@ -17,7 +17,7 @@ static void update_response_data(server_response_t *resp, char *msg)
         = strtok(msg, ":")))
         return;
     if (!(resp->data.data.team_response_data.team_name
-        = strtok(msg, ":")))
+        = strtok(NULL, ":")))
         return;
     if (!(resp->data.data.team_response_data.team_description
         = strtok(NULL, ":")))

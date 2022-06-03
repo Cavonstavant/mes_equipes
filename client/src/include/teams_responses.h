@@ -10,6 +10,8 @@
 #ifndef TEAMS_RESPONSES_H_
     #define TEAMS_RESPONSES_H_
 
+    #define _XOPEN_SOURCE
+
     #include <stdlib.h>
     #include <stdbool.h>
     #include <string.h>
@@ -65,6 +67,7 @@ struct error_bad_relational_state_s {
     char *ctx;
     char *msg;
 };
+
 /// @}
 
 /// Only one type of data is allowed to be returned by a response.
@@ -376,7 +379,7 @@ static const server_response_t server_response_template[] = {
                 .team_uuid = NULL,
             }
         },
-        .callback = default_response_callback
+        .callback = client_219_response_callback
     },
     {
         .code = 220,
@@ -387,7 +390,7 @@ static const server_response_t server_response_template[] = {
                 .team_uuid = NULL,
             }
         },
-        .callback = default_response_callback
+        .callback = client_220_response_callback
     },
     {
         .code = 221,
@@ -409,7 +412,7 @@ static const server_response_t server_response_template[] = {
                 .status = 0
             }
         },
-        .callback = default_response_callback
+        .callback = client_311_response_callback
     },
     {
         .code = 312,
