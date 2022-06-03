@@ -7,6 +7,8 @@
 
 /// \file server/src/core/server_data.c
 
+#include "pack_json.h"
+#include "unpack_json.h"
 #include "server.h"
 #include <stdlib.h>
 
@@ -14,10 +16,11 @@ server_data_t *init_server_data(long port)
 {
     server_data_t *server_data = malloc(sizeof(server_data_t) * 1);
 
-    (void) port;
     if (server_data == NULL)
         return NULL;
-    server_data->wrapper = wrapper_init();
+    server_data->wrapper = unpack_json_to_wrapper("saves/server.json");
+    if (server_data->wrapper == NULL)
+        server_data->wrapper = wrapper_init();
     if (server_data->wrapper == NULL)
         return NULL;
     server_data->active_users = malloc(sizeof(user_list_t *) * 1);
@@ -29,6 +32,7 @@ server_data_t *init_server_data(long port)
     if (server_data->server == NULL)
         return NULL;
     server_data->server->state = true;
+    pack_wrapper_to_json(server_data->wrapper, "saves/server.json");
     return server_data;
 }
 

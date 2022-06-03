@@ -15,8 +15,9 @@
 
 /// \brief Pack a wrapper into a json file
 /// \param wrapper The wrapper to pack
+/// \param path The path to the json file
 /// \return true if the wrapper has been successfully packed, false otherwise
-bool pack_wrapper_to_json(object_wrapper_t *wrapper);
+bool pack_wrapper_to_json(object_wrapper_t *wrapper, char *path);
 /// \brief Pack a channel into a json file
 /// \param wrapper The wrapper to pack
 /// \param file The file to write the channel into
