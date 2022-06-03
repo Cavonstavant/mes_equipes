@@ -62,7 +62,10 @@ void server_remove_user(server_data_t *server_data, user_list_t *user_info)
     CIRCLEQ_REMOVE(&server_data->server->network_server->peers_head,
     user_info->user_peer, peers);
     close(user_info->user_peer->sock_fd);
-    free(user_info->user_peer);
+    if (user_info->user_peer != NULL) {
+        free(user_info->user_peer);
+        user_info->user_peer = NULL;
+    }
     user_info->disconnected = LOGOUT;
 }
 
