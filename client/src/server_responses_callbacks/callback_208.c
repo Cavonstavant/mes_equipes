@@ -35,7 +35,7 @@ static void call_api(server_response_t *res)
         return;
     client_print_thread(res->data.data.thread_response_data.thread_uuid + 4,
         res->data.data.thread_response_data.user_uuid + 4,
-        res->data.data.thread_response_data.creation_time,
+        strtol(res->data.data.thread_response_data.creation_time, NULL, 10),
         res->data.data.thread_response_data.thread_title,
         res->data.data.thread_response_data.thread_body);
 }
