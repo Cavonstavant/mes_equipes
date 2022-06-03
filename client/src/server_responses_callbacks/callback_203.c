@@ -15,6 +15,7 @@ void client_203_response_callback(void *data)
 
     if (!response || !response->message)
         return;
+    // printf("message : %s\n", response->message);
     response->message = strchr(response->message, ' ') + 1;
     response->data.data.user_info_data.user_uuid =
         strtok(response->message, ":");

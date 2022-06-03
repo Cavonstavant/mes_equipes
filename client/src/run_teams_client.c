@@ -10,6 +10,7 @@
 #include "teams_responses.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 static int get_code_from_response(char *response)
 {
@@ -29,7 +30,6 @@ static void manage_response(char *msg, char *previous_command)
     server_response_t *response = NULL;
     int code = -1;
     code = get_code_from_response(msg);
-
     (void)previous_command;
     if (!(response = create_response_from_code(code)))
         return;
