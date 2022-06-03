@@ -13,10 +13,10 @@ static void update_response_data(server_response_t *resp, char *msg)
 {
     if (!resp)
         return;
-    if (!(resp->data.data.channel_response_data.channel_name
+    if (!(resp->data.data.channel_response_data.channel_uuid
         = strtok(msg, ":")))
         return;
-    if (!(resp->data.data.channel_response_data.channel_uuid
+    if (!(resp->data.data.channel_response_data.channel_name
         = strtok(msg, ":")))
         return;
     if (!(resp->data.data.channel_response_data.team_description
@@ -28,7 +28,7 @@ static void call_api(server_response_t *res)
 {
     if (!res)
         return;
-    client_print_team(
+    client_print_channel(
         res->data.data.channel_response_data.channel_uuid + 4,
         res->data.data.channel_response_data.channel_name,
         res->data.data.channel_response_data.team_description);

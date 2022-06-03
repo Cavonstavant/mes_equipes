@@ -312,7 +312,7 @@ static const server_response_t server_response_template[] = {
                 .creation_time = NULL
             }
         },
-        .callback = default_response_callback
+        .callback = client_214_response_callback
     },
     {
         .code = 215,
