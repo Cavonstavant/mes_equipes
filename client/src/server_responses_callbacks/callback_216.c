@@ -29,7 +29,7 @@ static void call_api(server_response_t *res)
     if (!res)
         return;
     client_print_channel_created(
-        res->data.data.channel_response_data.channel_uuid + 4
+        res->data.data.channel_response_data.channel_uuid + 4,
         res->data.data.channel_response_data.channel_name,
         res->data.data.channel_response_data.channel_description);
 }
