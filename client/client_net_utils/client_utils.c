@@ -13,6 +13,9 @@
 #include <string.h>
 
 /// \brief bind the srv socket to a file descriptor
+/// \param server the server
+/// \param port the port
+/// \return true if the bind is successful, false otherwise
 static bool connect_socket(client_net_server_t *srv, long port)
 {
     srv->sock_fd = socket(PF_INET, SOCK_STREAM, 0);

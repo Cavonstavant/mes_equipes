@@ -5,11 +5,16 @@
 ** run_teams_client
 */
 
+/// \file client/src/run_teams_client.c
+
 #include "client_utils.h"
 #include "teams_client.h"
 #include <stdio.h>
 #include <stdlib.h>
 
+/// \brief Prints the usage of the client
+/// \param server the client net server
+/// \param serv the teams client
 static void print_message(client_net_server_t *server, teams_client_t *serv)
 {
     char *msg = NULL;

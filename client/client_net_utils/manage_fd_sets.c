@@ -5,6 +5,8 @@
 ** manage_fd_sets
 */
 
+/// \file client/client_net_utils/manage_fd_sets.c
+
 #include "internals.h"
 
 void fill_fd_sets(client_net_server_t *server)
