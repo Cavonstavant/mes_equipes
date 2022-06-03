@@ -10,6 +10,9 @@
 #include "net_utils.h"
 
 /// \brief bind the socket to the port
+/// \param srv the server to update
+/// \param port the port to bind
+/// \return true if the bind is successful, false otherwise
 static bool bind_and_listen_on_socket(tcp_server_t *srv, long port)
 {
     srv->sock_fd = socket(PF_INET, SOCK_STREAM, 0);

@@ -5,6 +5,8 @@
 ** server_accept_new_client
 */
 
+/// \file server/net_utils/fd_sets_manage/server_accept_new_client.c
+
 #include "net_utils.h"
 
 /// \brief accepts a new client and returns the new peer
