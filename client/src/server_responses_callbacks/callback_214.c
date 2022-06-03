@@ -53,7 +53,7 @@ void client_214_response_callback(void *data)
     update_response_data(response, response->message);
     call_api(response);
     update_response_data(response, NULL);
-    while (response->data.data.thread_response_data.channel_uuid
+    while (response->data.data.thread_response_data.thread_uuid
         && response->message) {
         call_api(response);
         fflush(NULL);
