@@ -13,10 +13,10 @@ static void update_response_data(server_response_t *resp, char *msg)
 {
     if (!resp)
         return;
-    if (!(resp->data.data.user_info_data.user_uuid
+    if (!(resp->data.data.subscribe_data.user_uuid
         = strtok(msg, ":")))
         return;
-    if (!(resp->data.data.user_info_data.team_uuid
+    if (!(resp->data.data.subscribe_data.team_uuid
         = strtok(msg, ":")))
         return;
 }
@@ -26,8 +26,8 @@ static void call_api(server_response_t *res)
     if (!res)
         return;
     client_print_unsubscribed(
-        res->data.data.user_info_data.user_uuid + 4,
-        res->data.data.user_info_data.team_uuid + 4);
+        res->data.data.subscribe_data.user_uuid + 4,
+        res->data.data.subscribe_data.team_uuid + 4);
 }
 
 void client_220_response_callback(void *data)
@@ -40,7 +40,7 @@ void client_220_response_callback(void *data)
     update_response_data(response, response->message);
     call_api(response);
     update_response_data(response, NULL);
-    while (response->data.data.user_info_data.user_uuid
+    while (response->data.data.subscribe_data.user_uuid
         && response->message) {
         call_api(response);
         fflush(NULL);
