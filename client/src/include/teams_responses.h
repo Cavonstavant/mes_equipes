@@ -258,7 +258,7 @@ static const server_response_t server_response_template[] = {
                 .thread_uuid = NULL
             }
         },
-        .callback = default_response_callback
+        .callback = client_210_response_callback
     },
     {
         .code = 211,
@@ -271,7 +271,7 @@ static const server_response_t server_response_template[] = {
                 .status = 0
             }
         },
-        .callback = default_response_callback
+        .callback = client_211_response_callback
     },
     {
         .code = 212,
