@@ -18,10 +18,10 @@ set (CALLBACKS_SRC
     # ${CALLBACK_ROOT}/callback_216.c
     # ${CALLBACK_ROOT}/callback_217.c
     # ${CALLBACK_ROOT}/callback_218.c
-    # ${CALLBACK_ROOT}/callback_219.c
-    # ${CALLBACK_ROOT}/callback_220.c
+    ${CALLBACK_ROOT}/callback_219.c
+    ${CALLBACK_ROOT}/callback_220.c
     # ${CALLBACK_ROOT}/callback_311.c
-    # ${CALLBACK_ROOT}/callback_321.c
-    # ${CALLBACK_ROOT}/callback_401.c
+    ${CALLBACK_ROOT}/callback_320.c
+    ${CALLBACK_ROOT}/callback_401.c
     PARENT_SCOPE
 )
