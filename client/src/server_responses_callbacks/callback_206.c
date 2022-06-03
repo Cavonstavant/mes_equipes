@@ -9,17 +9,17 @@
 #include "logging_client.h"
 #include <stdio.h>
 
-static void update_response_data(server_response_t *response, char *msg)
+static void update_response_data(server_response_t *resp, char *msg)
 {
-    if (!response)
+    if (!resp)
         return;
-    response->data.data.team_response_data.team_uuid = strtok(msg, ":");
-    if (!response->data.data.team_response_data.team_uuid)
+    resp->data.data.team_response_data.team_uuid = strtok(msg, ":");
+    if (!resp->data.data.team_response_data.team_uuid)
         return;
-    response->data.data.team_response_data.team_name = strtok(NULL, ":");
-    if (!response->data.data.team_response_data.team_name)
+    resp->data.data.team_response_data.team_name = strtok(NULL, ":");
+    if (!resp->data.data.team_response_data.team_name)
         return;
-    response->data.data.team_response_data.team_description = strtok(NULL, ":");
+    resp->data.data.team_response_data.team_description = strtok(NULL, ":");
 }
 
 void client_206_response_callback(void *data)

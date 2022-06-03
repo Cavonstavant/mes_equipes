@@ -9,17 +9,18 @@
 #include "logging_client.h"
 #include <stdio.h>
 
-static void update_response_data(server_response_t *response, char *msg)
+static void update_response_data(server_response_t *resp, char *msg)
 {
-    if (!response)
+    if (!resp)
         return;
-    response->data.data.channel_response_data.channel_uuid = strtok(msg, ":");
-    if (!response->data.data.channel_response_data.channel_uuid)
+    resp->data.data.channel_response_data.channel_uuid = strtok(msg, ":");
+    if (!resp->data.data.channel_response_data.channel_uuid)
         return;
-    response->data.data.channel_response_data.channel_name = strtok(NULL, ":");
-    if (!response->data.data.channel_response_data.channel_name)
+    resp->data.data.channel_response_data.channel_name = strtok(NULL, ":");
+    if (!resp->data.data.channel_response_data.channel_name)
         return;
-    response->data.data.channel_response_data.channel_description = strtok(NULL, ":");
+    resp->data.data.channel_response_data.channel_description =
+        strtok(NULL, ":");
 }
 
 void client_207_response_callback(void *data)
@@ -30,13 +31,13 @@ void client_207_response_callback(void *data)
         return;
     resp->message = strchr(resp->message, ' ') + 1;
     update_response_data(resp, resp->message);
-    client_print_teams(resp->data.data.channel_response_data.channel_uuid + 4,
+    client_print_channel(resp->data.data.channel_response_data.channel_uuid + 4,
         resp->data.data.channel_response_data.channel_name,
         resp->data.data.channel_response_data.channel_description);
     update_response_data(resp, NULL);
     while (resp->data.data.channel_response_data.channel_uuid
         && resp->message) {
-        client_print_teams(
+        client_print_channel(
             resp->data.data.channel_response_data.channel_uuid + 4,
             resp->data.data.channel_response_data.channel_name,
             resp->data.data.channel_response_data.channel_description);
