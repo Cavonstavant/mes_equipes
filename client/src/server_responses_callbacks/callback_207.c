@@ -38,7 +38,7 @@ void client_207_response_callback(void *data)
     update_response_data(resp, NULL);
     while (resp->data.data.channel_response_data.channel_uuid
         && resp->message) {
-        client_print_channel(
+        client_team_print_channels(
             resp->data.data.channel_response_data.channel_uuid + 4,
             resp->data.data.channel_response_data.channel_name,
             resp->data.data.channel_response_data.channel_description);

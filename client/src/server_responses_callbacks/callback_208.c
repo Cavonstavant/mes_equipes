@@ -33,7 +33,8 @@ static void call_api(server_response_t *res)
 {
     if (!res)
         return;
-    client_print_thread(res->data.data.thread_response_data.thread_uuid + 4,
+    client_channel_print_threads(
+        res->data.data.thread_response_data.thread_uuid + 4,
         res->data.data.thread_response_data.user_uuid + 4,
         strtol(res->data.data.thread_response_data.creation_time, NULL, 10),
         res->data.data.thread_response_data.thread_title,
