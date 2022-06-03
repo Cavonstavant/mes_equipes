@@ -28,7 +28,8 @@ set (SRC_TEAM ${PROJECT_SOURCE_DIR}/objects/team/src)
 set (SRC_THREAD ${PROJECT_SOURCE_DIR}/objects/thread/src)
 set (SRC_USER ${PROJECT_SOURCE_DIR}/objects/user/src)
 set (SRC_UUID ${PROJECT_SOURCE_DIR}/objects/uuid/src)
-
+set (SRC_PACK_WRAPPER ${PROJECT_SOURCE_DIR}/objects/wrapper/src/pack_wrapper)
+set (SRC_UNPACK_WRAPPER ${PROJECT_SOURCE_DIR}/objects/wrapper/src/unpack_wrapper)
 set (SRC_WRAPPER ${PROJECT_SOURCE_DIR}/objects/wrapper/src)
 
 set (TARGET ${PROJECT_NAME}_objects)
@@ -85,6 +86,26 @@ set (SRC
     ${SRC_WRAPPER}/get_child_list.c
     ${SRC_WRAPPER}/user_and_team_relation.c
     ${SRC_WRAPPER}/get_associated_team.c
+    ${SRC_PACK_WRAPPER}/pack_wrapper_to_json.c
+    ${SRC_PACK_WRAPPER}/pack_channel_to_json.c
+    ${SRC_PACK_WRAPPER}/pack_comment_to_json.c
+    ${SRC_PACK_WRAPPER}/pack_conversation_to_json.c
+    ${SRC_PACK_WRAPPER}/pack_message_to_json.c
+    ${SRC_PACK_WRAPPER}/pack_team_to_json.c
+    ${SRC_PACK_WRAPPER}/pack_thread_to_json.c
+    ${SRC_PACK_WRAPPER}/pack_user_to_json.c
+    ${SRC_PACK_WRAPPER}/pack_wrapper_to_json.c
+    ${SRC_UNPACK_WRAPPER}/unpack_json_to_wrapper.c
+    ${SRC_UNPACK_WRAPPER}/find_str.c
+    ${SRC_UNPACK_WRAPPER}/readfile.c
+    ${SRC_UNPACK_WRAPPER}/get_balise.c
+    ${SRC_UNPACK_WRAPPER}/unpack_json_to_wrapper_channel.c
+    ${SRC_UNPACK_WRAPPER}/unpack_json_to_wrapper_team.c
+    ${SRC_UNPACK_WRAPPER}/unpack_json_to_wrapper_user.c
+    ${SRC_UNPACK_WRAPPER}/unpack_json_to_wrapper_comment.c
+    ${SRC_UNPACK_WRAPPER}/unpack_json_to_wrapper_conversation.c
+    ${SRC_UNPACK_WRAPPER}/unpack_json_to_wrapper_message.c
+    ${SRC_UNPACK_WRAPPER}/unpack_json_to_wrapper_thread.c
     ${SRC_WRAPPER}/uuid_find_prefix.c
 )
 
@@ -115,5 +136,12 @@ target_include_directories(${TARGET}
 add_subdirectory(uuid/uuid_wrapper)
 
 set_property(
-    TARGET ${TARGET} PROPERTY POSITION_INDEPENDENT_CODE ON
+     TARGET ${TARGET} PROPERTY POSITION_INDEPENDENT_CODE ON
 )
+
+
+# add_executable(a.out ${PROJECT_SOURCE_DIR}/objects/main.c)
+
+# target_link_libraries(a.out
+#     PUBLIC ${TARGET}
+# )

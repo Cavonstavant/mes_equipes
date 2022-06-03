@@ -44,13 +44,13 @@ user_list_t *user, server_data_t *server_data)
 
     if (user_uuid != OBJECT_NOT_FOUND) {
         wrapper_find_user(server_data->wrapper, user_uuid)->status = true;
+        user->user_uuid = user_uuid;
         print_retcode(201, cretcodes((char *[]) {
         user->user_uuid->uuid.repr, uname, NULL}), user->user_peer, true);
-        user->user_uuid = user_uuid;
     } else {
         if (wrapper_adding_user(server_data->wrapper, (user_creation_t) {uname,
         true}) == false)
-            return true;
+            return false;
         user->user_uuid = find_user_by_name(server_data->wrapper, uname);
         print_retcode(202, cretcodes((char *[]) {user->user_uuid->uuid.repr,
         uname, NULL}), user->user_peer, true);
