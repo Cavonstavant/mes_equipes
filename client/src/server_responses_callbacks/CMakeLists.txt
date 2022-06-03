@@ -7,7 +7,7 @@ set (CALLBACKS_SRC
     ${CALLBACK_ROOT}/callback_204.c
     ${CALLBACK_ROOT}/callback_206.c
     ${CALLBACK_ROOT}/callback_207.c
-    # ${CALLBACK_ROOT}/callback_208.c
+    ${CALLBACK_ROOT}/callback_208.c
     # ${CALLBACK_ROOT}/callback_209.c
     # ${CALLBACK_ROOT}/callback_210.c
     # ${CALLBACK_ROOT}/callback_211.c
