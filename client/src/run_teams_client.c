@@ -31,12 +31,12 @@ static void manage_response(char *msg, char *previous_command)
     code = get_code_from_response(msg);
 
     (void)previous_command;
-    if (code == 203)
-        exit(0);
     if (!(response = create_response_from_code(code)))
         return;
     response->message = msg;
     response->callback(response);
+    if (code == 203)
+        exit(0);
 }
 
 static void print_message(client_net_server_t *server, teams_client_t *serv)
