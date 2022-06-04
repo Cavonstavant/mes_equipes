@@ -36,8 +36,8 @@ server_data_t *serv)
     new = find_team_by_name(serv->wrapper, arguments[0]);
     server_event_team_created(new->uuid.repr + 4, arguments[0],
     user->user_uuid->uuid.repr + 4);
-    send_users_event_team(serv, (int []) {605, user->user_peer->sock_fd}, (char *[]) {
-    new->uuid.repr + 4, arguments[0], arguments[1], NULL});
+    send_users_event_team(serv, (int []) {605, user->user_peer->sock_fd},
+    (char *[]) {new->uuid.repr + 4, arguments[0], arguments[1], NULL});
     return print_retcode(215, cretcodes((char *[]) {new->uuid.repr,
     arguments[0], arguments[1], NULL}), user->user_peer, true);
 }
@@ -61,12 +61,14 @@ server_data_t *serv)
         arguments[0],
         arguments[1],
         user->loc
-    }, user->loc)) {
+    }, user->loc))
         return print_retcode(503, NULL, user->user_peer, true);
-    }
     new = find_channel_by_name_exc(serv->wrapper, arguments[0], user->loc);
     server_event_channel_created(user->loc->uuid.repr + 4,
     new->uuid.repr + 4, arguments[0]);
+    send_users_event_create(serv, user->loc,
+    (int []) {606, user->user_peer->sock_fd}, (char *[]) {
+    new->uuid.repr + 4, arguments[0], arguments[1], NULL});
     return print_retcode(216, cretcodes((char *[]) {new->uuid.repr,
     arguments[0], arguments[1], NULL}), user->user_peer, true);
 }

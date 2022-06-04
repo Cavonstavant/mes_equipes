@@ -39,6 +39,10 @@ static void call_api(server_response_t *res)
         res->data.data.channel_response_data.channel_uuid + 4,
         res->data.data.channel_response_data.channel_name,
         res->data.data.channel_response_data.channel_description);
+    client_event_channel_created(
+        res->data.data.channel_response_data.channel_uuid + 4,
+        res->data.data.channel_response_data.channel_name,
+        res->data.data.channel_response_data.channel_description);
 }
 
 void client_216_response_callback(void *data)
