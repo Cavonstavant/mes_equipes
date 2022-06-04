@@ -46,8 +46,8 @@ static void call_api(server_response_t *res)
     strptime(res->data.data.thread_response_data.creation_time,
         "%Y-%m-%d %H-%M-%S", &temp);
     client_event_thread_created(
-        res->data.data.thread_response_data.thread_uuid,
-        res->data.data.thread_response_data.user_uuid,
+        res->data.data.thread_response_data.thread_uuid + 4,
+        res->data.data.thread_response_data.user_uuid + 4,
         mktime(&temp),
         res->data.data.thread_response_data.thread_title,
         res->data.data.thread_response_data.thread_body);

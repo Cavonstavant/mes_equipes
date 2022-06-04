@@ -36,6 +36,8 @@ server_data_t *serv)
     new = find_team_by_name(serv->wrapper, arguments[0]);
     server_event_team_created(new->uuid.repr + 4, arguments[0],
     user->user_uuid->uuid.repr + 4);
+    send_users_event_team(serv, (int []) {605, user->user_peer->sock_fd},
+    (char *[]) {new->uuid.repr + 4, arguments[0], arguments[1], NULL});
     return print_retcode(215, cretcodes((char *[]) {new->uuid.repr,
     arguments[0], arguments[1], NULL}), user->user_peer, true);
 }
@@ -59,12 +61,14 @@ server_data_t *serv)
         arguments[0],
         arguments[1],
         user->loc
-    }, user->loc)) {
+    }, user->loc))
         return print_retcode(503, NULL, user->user_peer, true);
-    }
     new = find_channel_by_name_exc(serv->wrapper, arguments[0], user->loc);
     server_event_channel_created(user->loc->uuid.repr + 4,
     new->uuid.repr + 4, arguments[0]);
+    send_users_event_create(serv, user->loc,
+    (int []) {606, user->user_peer->sock_fd}, (char *[]) {
+    new->uuid.repr + 4, arguments[0], arguments[1], NULL});
     return print_retcode(216, cretcodes((char *[]) {new->uuid.repr,
     arguments[0], arguments[1], NULL}), user->user_peer, true);
 }
@@ -79,24 +83,25 @@ static bool command_create_thread(char **arguments, user_list_t *user,
 server_data_t *serv)
 {
     thread_t *new = NULL;
+    char **res = NULL;
 
     if (!arguments || !arguments[0] || !arguments[1])
         return false;
     if (find_thread_by_name_exc(serv->wrapper, arguments[0], user->loc))
         return print_retcode(320, NULL, user->user_peer, true);
     if (!wrapper_new_thread_to_channel(serv->wrapper, (thread_creation_t) {
-        arguments[0], arguments[1], user->user_uuid, user->loc
-    }, user->loc)) {
+    arguments[0], arguments[1], user->user_uuid, user->loc}, user->loc))
         return print_retcode(503, NULL, user->user_peer, true);
-    }
     new = wrapper_find_thread(serv->wrapper,
     find_thread_by_name_exc(serv->wrapper, arguments[0], user->loc));
     server_event_thread_created(user->loc->uuid.repr + 4,
     new->uuid->uuid.repr + 4, user->user_uuid->uuid.repr + 4,
     arguments[0], arguments[1]);
-    return print_retcode(217, cretcodes((char *[]) {new->uuid->uuid.repr,
-    user->user_uuid->uuid.repr, thread_get_time(new), arguments[0],
-    arguments[1], NULL}), user->user_peer, true);
+    res = (char *[]) {new->uuid->uuid.repr, user->user_uuid->uuid.repr,
+    thread_get_time(new), arguments[0], arguments[1], NULL};
+    send_users_event_create(serv, user->loc,
+    (int []) {607, user->user_peer->sock_fd}, res);
+    return print_retcode(217, cretcodes(res), user->user_peer, true);
 }
 
 /// \brief Create a new reply
@@ -113,15 +118,16 @@ server_data_t *serv)
     if (!arguments || !arguments[0])
         return false;
     if (!wrapper_new_comment_to_thread(serv->wrapper, (comment_creation_t) {
-        arguments[0],
-        user->loc,
-        user->user_uuid
-    }, user->loc)) {
+    arguments[0], user->loc, user->user_uuid}, user->loc))
         return print_retcode(503, NULL, user->user_peer, true);
-    }
     new = serv->wrapper->comments[serv->wrapper->comment_n - 1];
     server_event_reply_created(user->loc->uuid.repr + 4,
     user->user_uuid->uuid.repr + 4, arguments[0]);
+    send_users_event_create(serv, user->loc,
+    (int []) {604, user->user_peer->sock_fd}, (char *[]) {
+    get_associated_team_thread(serv->wrapper, user->loc)->uuid.repr + 4,
+    user->loc->uuid.repr + 4, user->user_uuid->uuid.repr + 4,
+    arguments[0], NULL});
     return print_retcode(218, cretcodes((char *[]) {new->thread->uuid.repr,
     new->author->uuid.repr, comment_get_time(new), arguments[0], NULL}),
     user->user_peer, true);
