@@ -68,6 +68,7 @@ conversation_creation_t content, my_uuid_t *first_uuid, my_uuid_t *second_uuid)
     if ((first_user = wrapper_find_user(wrapper, first_uuid)) == NULL)
         return OPERATION_FAILED;
     if ((second_user = wrapper_find_user(wrapper, second_uuid)) == NULL)
+        return OPERATION_FAILED;
     content.participant_one = first_user->uuid;
     content.participant_two = second_user->uuid;
     if (!wrapper_adding_conversation(wrapper, content))

@@ -52,7 +52,7 @@ static void manage_response(char *msg)
     if (!(response = create_response_from_code(code)))
         return;
     response->message = msg;
-    if (code >= 300){
+    if (code >= 300) {
         printf("\033[0;4mError:\n\t\033[0m");
         printf("\033[1;31m%s\033[0m\n\n", msg);
     } else

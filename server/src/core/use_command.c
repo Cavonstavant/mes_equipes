@@ -61,7 +61,7 @@ user_list_t *user, bool print)
 static bool command_go_to_thread(my_uuid_t *uuid, server_data_t *serv,
 user_list_t *user, bool print)
 {
-    if  (!uuid || !wrapper_find_thread_tm(serv->wrapper, uuid, user->loc))
+    if (!uuid || !wrapper_find_thread_tm(serv->wrapper, uuid, user->loc))
         return print_retcode(311, cretcodes((char *[]) {
         "/use THR", uuid->uuid.repr, NULL}), user->user_peer, false);
     user->loc = uuid;
