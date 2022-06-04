@@ -31,6 +31,14 @@ static int get_code_from_response(char *response)
     return code_int;
 }
 
+/// \brief Display a syntax error
+/// \param msg The response from the server
+static void print_syntax_error(char *msg)
+{
+    printf("\033[0;4mError:\n\t\033[0m");
+    printf("\033[1;31m%s\033[0m", msg);
+}
+
 /// \brief Management of the response from the server.
 /// \param msg The response from the server and callbacks.
 static void manage_response(char *msg)
@@ -39,13 +47,14 @@ static void manage_response(char *msg)
     int code = -1;
 
     code = get_code_from_response(msg);
+    if (code >= 500)
+        print_syntax_error(msg);
     if (!(response = create_response_from_code(code)))
         return;
     response->message = msg;
-    response->message[strlen(response->message) - 1] = '\0';
     if (code >= 300){
         printf("\033[0;4mError:\n\t\033[0m");
-        printf("\033[1;31m%s\033[0m\n", msg);
+        printf("\033[1;31m%s\033[0m\n\n", msg);
     } else
         printf("\033[0;4mServer answer:\033[0m\n\t\033[1;32m%s\033[0m\n\n",
         msg);
