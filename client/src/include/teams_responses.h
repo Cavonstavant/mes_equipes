@@ -239,15 +239,15 @@ void client_604_response_callback(void *data);
 
 /// \brief The 605 client response callback.
 /// \param data The data of the response.
-// void client_605_response_callback(void *data);
+void client_605_response_callback(void *data);
 
 /// \brief The 606 client response callback.
 /// \param data The data of the response.
-// void client_606_response_callback(void *data);
+void client_606_response_callback(void *data);
 
 /// \brief The 607 client response callback.
 /// \param data The data of the response.
-// void client_607_response_callback(void *data);
+void client_607_response_callback(void *data);
 
 /// Template for all the responses
 static const server_response_t server_response_template[] = {
@@ -622,44 +622,42 @@ static const server_response_t server_response_template[] = {
     {
         .code = 605,
         .data = {
-            .type = EVENT_DATA,
-            .data.event_data = {
-                .user_uuid = NULL,
-                .user_name = NULL,
-                .event_message = NULL,
+            .type  = TEAM_RESPONSE_DATA,
+            .data.team_response_data = {
                 .team_uuid = NULL,
-                .thread_uuid = NULL,
+                .team_name = NULL,
+                .team_description = NULL,
+                .creation_time = NULL
             }
         },
-        .callback = default_response_callback
+        .callback = client_605_response_callback
     },
     {
         .code = 606,
         .data = {
-            .type = EVENT_DATA,
-            .data.event_data = {
-                .user_uuid = NULL,
-                .user_name = NULL,
-                .event_message = NULL,
-                .team_uuid = NULL,
-                .thread_uuid = NULL,
+            .type = CHANNEL_RESPONSE_DATA,
+            .data.channel_response_data = {
+                .channel_uuid = NULL,
+                .channel_name = NULL,
+                .channel_description = NULL,
+                .creation_time = NULL
             }
         },
-        .callback = default_response_callback
+        .callback = client_606_response_callback
     },
     {
         .code = 607,
         .data = {
-            .type = EVENT_DATA,
-            .data.event_data = {
-                .user_uuid = NULL,
-                .user_name = NULL,
-                .event_message = NULL,
-                .team_uuid = NULL,
+            .type = THREAD_RESPONSE_DATA,
+            .data.thread_response_data = {
                 .thread_uuid = NULL,
+                .user_uuid = NULL,
+                .thread_title = NULL,
+                .thread_body = NULL,
+                .creation_time = NULL
             }
         },
-        .callback = default_response_callback
+        .callback = client_607_response_callback
     }
 };
 
