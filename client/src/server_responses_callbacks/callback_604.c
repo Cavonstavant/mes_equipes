@@ -5,7 +5,7 @@
 ** callback_220
 */
 
-/// \file client/src/server_responses_callbacks/callback_601.c
+/// \file client/src/server_responses_callbacks/callback_604.c
 
 #include "teams_responses.h"
 #include "logging_client.h"
@@ -18,10 +18,16 @@ static void update_response_data(server_response_t *resp, char *msg)
 {
     if (!resp)
         return;
-    if (!(resp->data.data.event_data.user_uuid
+    if (!(resp->data.data.event_data.team_uuid
         = strtok(msg, ":")))
         return;
-    if (!(resp->data.data.event_data.user_name
+    if (!(resp->data.data.event_data.thread_uuid
+        = strtok(NULL, ":")))
+        return;
+    if (!(resp->data.data.event_data.user_uuid
+        = strtok(NULL, ":")))
+        return;
+    if (!(resp->data.data.event_data.event_message
         = strtok(NULL, ":")))
         return;
 }
@@ -32,12 +38,14 @@ static void call_api(server_response_t *res)
 {
     if (!res)
         return;
-    client_event_private_message_received(
+    client_event_thread_reply_received(
+        res->data.data.event_data.team_uuid + 4,
+        res->data.data.event_data.thread_uuid + 4,
         res->data.data.event_data.user_uuid + 4,
         res->data.data.event_data.event_message);
 }
 
-void client_603_response_callback(void *data)
+void client_601_response_callback(void *data)
 {
     server_response_t *response = (server_response_t *)data;
 
