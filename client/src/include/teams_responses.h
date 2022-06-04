@@ -237,6 +237,18 @@ void client_603_response_callback(void *data);
 /// \param data The data of the response.
 void client_604_response_callback(void *data);
 
+/// \brief The 605 client response callback.
+/// \param data The data of the response.
+void client_605_response_callback(void *data);
+
+/// \brief The 606 client response callback.
+/// \param data The data of the response.
+void client_606_response_callback(void *data);
+
+/// \brief The 607 client response callback.
+/// \param data The data of the response.
+void client_607_response_callback(void *data);
+
 /// Template for all the responses
 static const server_response_t server_response_template[] = {
     {
@@ -563,7 +575,7 @@ static const server_response_t server_response_template[] = {
                 .thread_uuid = NULL,
             }
         },
-        .callback = default_response_callback
+        .callback = client_601_response_callback
     },
     {
         .code = 602,
@@ -577,7 +589,7 @@ static const server_response_t server_response_template[] = {
                 .thread_uuid = NULL,
             }
         },
-        .callback = default_response_callback
+        .callback = client_602_response_callback
     },
     {
         .code = 603,
@@ -591,7 +603,7 @@ static const server_response_t server_response_template[] = {
                 .thread_uuid = NULL,
             }
         },
-        .callback = default_response_callback
+        .callback = client_603_response_callback
     },
     {
         .code = 604,
@@ -605,7 +617,7 @@ static const server_response_t server_response_template[] = {
                 .thread_uuid = NULL,
             }
         },
-        .callback = default_response_callback
+        .callback = client_604_response_callback
     }
 };
 
