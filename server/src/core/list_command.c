@@ -5,20 +5,17 @@
 ** list_command
 */
 
-/// \file server/src/list_command.c
+/// \file server/src/core/list_command.c
 
 #include "cli_commands.h"
 #include "rcodes.h"
 #include "logging_server.h"
 
-///
 /// \brief List all the team
-///
 /// \param user User info
 /// \param serv Serv info
 /// \return true When operation succeed
 /// \return false When operation faield
-///
 static bool command_list_team(user_list_t *user, server_data_t *serv)
 {
     char **args = NULL;
@@ -38,20 +35,16 @@ static bool command_list_team(user_list_t *user, server_data_t *serv)
     return print_retcode(206, cretcodes(args), user->user_peer, true);
 }
 
-///
 /// \brief List all the channel
-///
 /// \param user User info
 /// \param serv Serv info
 /// \param uuid Location uuid
 /// \return true When operation succeed
 /// \return false When operation failed
-///
 static bool command_list_chan(user_list_t *user, server_data_t *serv,
 my_uuid_t *uuid)
 {
     child_list_t list = get_team_child_list(serv->wrapper, uuid);
-
     char **args = NULL;
     channel_t *chan = NULL;
 
@@ -70,20 +63,16 @@ my_uuid_t *uuid)
     return print_retcode(207, cretcodes(args), user->user_peer, true);
 }
 
-///
 /// \brief List all the thread
-///
 /// \param user User info
 /// \param serv Serv info
 /// \param uuid Location uuid
 /// \return true When operation succeed
 /// \return false When operation failed
-///
 static bool command_list_thread(user_list_t *user, server_data_t *serv,
 my_uuid_t *uuid)
 {
     child_list_t list = get_channel_child_list(serv->wrapper, uuid);
-
     char **args = NULL;
     thread_t *thread = NULL;
 
@@ -104,20 +93,16 @@ my_uuid_t *uuid)
     return print_retcode(208, cretcodes(args), user->user_peer, true);
 }
 
-///
 /// \brief List all the comment
-///
 /// \param user User info
 /// \param serv Serv info
 /// \param uuid Location uuid
 /// \return true When operation succeed
 /// \return false When operation failed
-///
 static bool command_list_reply(user_list_t *user, server_data_t *serv,
 my_uuid_t *uuid)
 {
     child_list_t list = get_thread_child_list(serv->wrapper, uuid);
-
     char **args = NULL;
     comment_t *comment = NULL;
 

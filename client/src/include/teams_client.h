@@ -5,6 +5,8 @@
 ** teams_client
 */
 
+/// \file client/src/include/teams_client.h
+
 #ifndef TEAMS_CLIENT_H
     #define TEAMS_CLIENT_H
 
@@ -35,9 +37,11 @@ teams_client_t *teams_client_create(const char *ip, long port);
 
 /// \brief Runs a connected client by sending and
 /// receiving messages to the associated server
+/// \param server The teams client to run
 void run_teams_client(teams_client_t *server);
 
 /// \brief Stop a connected client and destroy all associated ressources
+/// \param server The teams client to stop
 void stop_teams_client(teams_client_t *server);
 
 #endif /* TEAMS_CLIENT_H */

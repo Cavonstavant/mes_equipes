@@ -5,18 +5,17 @@
 ** user_list_command
 */
 
-/// \file server/src/use_list_command.c
+/// \file server/src/core/use_list_command.c
 
 #include "cli_commands.h"
 #include "rcodes.h"
 #include "logging_server.h"
 
-bool command_users(cli_command_t *cmd,
+bool command_users(cli_command_t *cmd __attribute__((unused)),
 user_list_t *user, server_data_t *data)
 {
     char **args = NULL;
 
-    (void) cmd;
     if (!user->is_auth)
         return print_retcode(401, NULL, user->user_peer, false);
     if (data->wrapper->user_n == 0)

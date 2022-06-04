@@ -113,6 +113,7 @@ add_library(${TARGET} ${SRC})
 
 target_link_libraries(${TARGET}
     PRIVATE ${PROJECT_NAME}_uuid_wrapper
+    PUBLIC myteams_api
 )
 
 target_include_directories(${TARGET}
@@ -138,10 +139,3 @@ add_subdirectory(uuid/uuid_wrapper)
 set_property(
      TARGET ${TARGET} PROPERTY POSITION_INDEPENDENT_CODE ON
 )
-
-
-# add_executable(a.out ${PROJECT_SOURCE_DIR}/objects/main.c)
-
-# target_link_libraries(a.out
-#     PUBLIC ${TARGET}
-# )

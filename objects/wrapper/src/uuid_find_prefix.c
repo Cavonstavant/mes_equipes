@@ -10,13 +10,10 @@
 #include "object_wrapper.h"
 #include <stdlib.h>
 
-///
 /// \brief Find a user uuid with prefix
-///
 /// \param wrapper Wrapper object
 /// \param repr Uuid without prefix
 /// \return char* Prefix
-///
 static char *find_a_uuid_user(object_wrapper_t *wrapper, char *repr)
 {
     for (int i = 0; i < wrapper->user_n; i++)

@@ -27,11 +27,11 @@ bool server_read_client(tcp_server_t *srv, peer_t *tmp)
     if (!tmp || !srv)
         return false;
     read_size = read(tmp->sock_fd, tmp->input_buffer, MAX_MSG);
-    if (read_size < 0){
+    if (read_size < 0) {
         TEAMS_LOG("read");
         return false;
     }
-    if (read_size == 0){
+    if (read_size == 0) {
         TEAMS_LOG("Client disconnected");
         server_close_client(srv, tmp);
         return false;

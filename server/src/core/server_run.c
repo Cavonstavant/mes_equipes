@@ -7,6 +7,7 @@
 
 /// \file server/src/core/server_run.c
 
+#include "pack_json.h"
 #include "server.h"
 #include "fd_set_manage.h"
 #include "parser.h"
@@ -14,15 +15,11 @@
 
 volatile bool *server_state = NULL;
 
-///
 /// \brief Catch the sigint signal
-///
 /// \param var Useless data
-///
-void sigint_handler(int var)
+void sigint_handler(int var __attribute__((unused)))
 {
     *server_state = false;
-    (void) var;
 }
 
 int server_run(int port)
@@ -33,6 +30,7 @@ int server_run(int port)
         return FAILED;
     signal(SIGINT, sigint_handler);
     server_loop(server_data);
+    pack_wrapper_to_json(server_data->wrapper, "saves/server.json");
     destroy_server_data(server_data);
     return SUCCESS;
 }

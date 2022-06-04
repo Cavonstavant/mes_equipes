@@ -18,6 +18,7 @@
 /// \param file The json file
 /// \param n The index of the child
 /// \param c_nb The number of the channel to skip
+/// \return true if the child was filled, false otherwise
 static bool fill_child(object_wrapper_t *wrap, char *file, int n, int c_nb)
 {
     int nb_child = get_balise_number(file + n, c_nb, "\"CHA_Child number\":");

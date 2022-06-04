@@ -31,7 +31,7 @@ bool server_write_client(tcp_server_t *srv, peer_t *tmp)
         TEAMS_LOG("Internal Error: empty output buffer.\n");
         return (false);
     }
-    if ((write_size = write(tmp->sock_fd, tmp->output_buffer, msg_size)) < 0){
+    if ((write_size = write(tmp->sock_fd, tmp->output_buffer, msg_size)) < 0) {
         TEAMS_LOG("write\n");
         return (false);
     }

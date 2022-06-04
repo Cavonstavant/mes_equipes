@@ -9,11 +9,8 @@
 
 #include "object_wrapper.h"
 
-///
 /// \brief Dump user of a wrapper object
-///
 /// \param wrapper Wrapper object to print
-///
 static void wrapper_dump_user(object_wrapper_t *wrapper)
 {
     printf("--- %i Users ---\n", wrapper->user_n);

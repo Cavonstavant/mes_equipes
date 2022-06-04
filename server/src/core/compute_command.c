@@ -11,6 +11,11 @@
 #include "cli_commands.h"
 #include "rcodes.h"
 
+/// \brief Add a character to the command at index.
+/// \param command The buffer to add the character to.
+/// \param index The index to add the character to.
+/// \param c The character to add.
+/// \return The new command.
 static char *add_char(char *command, int index, char c)
 {
     command = realloc(command, sizeof(char) * (index + 2));

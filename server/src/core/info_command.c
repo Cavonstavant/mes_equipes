@@ -5,20 +5,17 @@
 ** info_command
 */
 
-/// \file server/src/info_command.c
+/// \file server/src/core/info_command.c
 
 #include "cli_commands.h"
 #include "rcodes.h"
 #include "logging_server.h"
 
-///
 /// \brief Display info of the current user
-///
 /// \param user User info
 /// \param serv Serv info
 /// \return true When operation succeed
 /// \return false When operation faield
-///
 static bool command_info_user(user_list_t *user, server_data_t *serv)
 {
     user_t *auser = wrapper_find_user(serv->wrapper, user->user_uuid);
@@ -31,15 +28,12 @@ static bool command_info_user(user_list_t *user, server_data_t *serv)
     }), user->user_peer, true);
 }
 
-///
 /// \brief Display info of the current loc
-///
 /// \param user User info
 /// \param serv Serv info
 /// \param uuid Location uuid
 /// \return true When operation succeed
 /// \return false When operation failed
-///
 static bool command_info_team(user_list_t *user, server_data_t *serv,
 my_uuid_t *uuid)
 {
@@ -53,15 +47,12 @@ my_uuid_t *uuid)
     }), user->user_peer, true);
 }
 
-///
 /// \brief Display info of the current loc
-///
 /// \param user User info
 /// \param serv Serv info
 /// \param uuid Location uuid
 /// \return true When operation succeed
 /// \return false When operation failed
-///
 static bool command_info_chan(user_list_t *user, server_data_t *serv,
 my_uuid_t *uuid)
 {
@@ -75,15 +66,12 @@ my_uuid_t *uuid)
     }), user->user_peer, true);
 }
 
-///
 /// \brief Display info of the current loc
-///
 /// \param user User info
 /// \param serv Serv info
 /// \param uuid Location uuid
 /// \return true When operation succeed
 /// \return false When operation failed
-///
 static bool command_info_thread(user_list_t *user, server_data_t *serv,
 my_uuid_t *uuid)
 {

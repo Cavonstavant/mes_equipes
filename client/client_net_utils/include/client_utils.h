@@ -92,12 +92,18 @@ client_net_server_t *create_net_server(const char *ip, long port);
 /// \return true if the message was sent, false otherwise
 bool send_message(client_net_server_t *server);
 
+/// \brief Set the output buffer of the mes_équipes server
+/// \param server The mes_équipes server to set the output buffer of
+/// \param msg The null terminated message to set the output buffer to
 void set_output_buffer(client_net_server_t *server, const char *msg);
 
 /// \brief Retrieve the last message recieved from the server
+/// \param server The mes_équipes server to retrieve the last message from
+/// \return A pointer to the last message recieved from the server
 char *fetch_message(client_net_server_t *server);
 
 /// \brief Update the mes_équipes client by sending and receiving messages
+/// \param server The mes_équipes client to update
 void update_client(client_net_server_t *server);
 
 #endif /* INCLUDE_UTILS_H */

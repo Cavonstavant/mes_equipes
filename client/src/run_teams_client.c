@@ -63,9 +63,9 @@ static void manage_response(char *msg)
         exit(0);
 }
 
-/// \brief print the message from the server.
-/// \param server The server to print the message from.
-/// \param serv clients.
+/// \brief Prints the usage of the client
+/// \param server the client net server
+/// \param serv the teams client
 static void print_message(client_net_server_t *server, teams_client_t *serv)
 {
     char *msg = NULL;
@@ -82,11 +82,8 @@ static void print_message(client_net_server_t *server, teams_client_t *serv)
 void run_teams_client(teams_client_t *server)
 {
     client_net_server_t *net_server = server->net_srv;
-
-    while (net_server->connected)
-    {
-        if (!net_server->connected)
-        {
+    while (net_server->connected) {
+        if (!net_server->connected) {
             printf("Connection to the server lost\n");
             break;
         }

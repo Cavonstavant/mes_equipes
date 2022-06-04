@@ -5,6 +5,8 @@
 ** server_accept_new_client
 */
 
+/// \file server/net_utils/fd_sets_manage/server_accept_new_client.c
+
 #include "net_utils.h"
 
 /// \brief accepts a new client and returns the new peer
@@ -20,12 +22,12 @@ static peer_t *accept_client(tcp_server_t *srv)
     client_fd = accept(srv->sock_fd,
         (struct sockaddr *)&client_addr,
         &client_addr_size);
-    if (client_fd < 0){
+    if (client_fd < 0) {
         TEAMS_LOG("accept");
         return (NULL);
     }
     new_client = new_peer(client_fd, client_addr);
-    if (new_client == NULL){
+    if (new_client == NULL) {
         TEAMS_LOG("peer_create");
         return (NULL);
     }
@@ -37,7 +39,7 @@ bool server_accept_new_client(tcp_server_t *srv)
 {
     peer_t *new = accept_client(srv);
 
-    if (new == NULL){
+    if (new == NULL) {
         TEAMS_LOG("Internal Error: could not accept new client.\n");
         return (false);
     }

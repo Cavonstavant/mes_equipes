@@ -5,7 +5,7 @@
 ** uuid_wrapper
 */
 
-/// \file src/include/my_uuid.h
+/// \file objects/uuid/uuid_wrapper/src/include/my_uuid.h
 
 #ifndef MY_UUID_H
     #define MY_UUID_H
@@ -87,6 +87,8 @@ static inline int my_uuid_compare(w_uuid_t uu1, w_uuid_t uu2)
 }
 
 /// \brief get the my_uuid_prefix_t representation of a given uuid
+/// \param uuid The uuid to be converted
+/// \return The my_uuid_prefix_t representation of the given uuid
 my_uuid_prefix_t my_uuid_get_prefix(w_uuid_t *uuid);
 
 /// \brief Convert a string to a uuid wrapper

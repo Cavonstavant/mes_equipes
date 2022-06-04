@@ -5,7 +5,7 @@
 ** subscribe_command
 */
 
-/// \file server/src/subscribe_command.c
+/// \file server/src/core/subscribe_command.c
 
 #include "cli_commands.h"
 #include "rcodes.h"
@@ -53,6 +53,10 @@ user_list_t *user, server_data_t *data)
     team->uuid.repr, NULL}), user->user_peer, true);
 }
 
+/// \brief Command list my
+/// \param user User list
+/// \param srv Server data
+/// \return true When operation succeed
 static bool command_list_my(user_list_t *user, server_data_t *srv)
 {
     child_list_t list = get_subscribed_team_of_user(srv->wrapper,
@@ -75,6 +79,11 @@ static bool command_list_my(user_list_t *user, server_data_t *srv)
     return print_retcode(206, cretcodes(args), user->user_peer, true);
 }
 
+/// \brief Command list their
+/// \param user User list
+/// \param srv Server data
+/// \param uuid UUID
+/// \return true When operation succeed
 static bool command_list_their(user_list_t *user, server_data_t *srv,
 my_uuid_t *uuid)
 {
