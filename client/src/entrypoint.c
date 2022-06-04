@@ -12,6 +12,7 @@
 #include "teams_client.h"
 #include "client_utils.h"
 
+/// \brief The usage to be print
 static const char *usage = "USAGE: %s ip port\n \
 \tip\tis the server ip address on which the server socket listens \
 \tport\tis the port number on which the server socket listens\n";

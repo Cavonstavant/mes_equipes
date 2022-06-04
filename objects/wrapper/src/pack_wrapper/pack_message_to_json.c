@@ -19,7 +19,7 @@ static void message_to_json(message_t *message, FILE *file)
 
     fprintf(file, "{\"MES_UUID\":\"%s\",", message->uuid->uuid.repr);
     fprintf(file, "\"MES_Body\":\"%s\",", message->body);
-    strftime(time_display, 20, "%Y-%m-%d %H:%M:%S", localtime(&message->time));
+    strftime(time_display, 20, "%Y-%m-%d %H-%M-%S", localtime(&message->time));
     fprintf(file, "\"MES_Time\":\"%s\"}", time_display);
 }
 

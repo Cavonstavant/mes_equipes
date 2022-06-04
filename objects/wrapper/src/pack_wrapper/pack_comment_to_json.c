@@ -21,7 +21,7 @@ static void comment_to_json(comment_t *comment, FILE *file)
     fprintf(file, "\"COM_Parent\":\"%s\",", comment->thread->uuid.repr);
     fprintf(file, "\"COM_Author\":\"%s\",", comment->author->uuid.repr);
     fprintf(file, "\"COM_Body\":\"%s\",", comment->body);
-    strftime(time_display, 20, "%Y-%m-%d %H:%M:%S", localtime(&comment->time));
+    strftime(time_display, 20, "%Y-%m-%d %H-%M-%S", localtime(&comment->time));
     fprintf(file, "\"COM_Time\":\"%s\"}", time_display);
 }
 

@@ -71,8 +71,7 @@ static inline void log_error(int line __attribute__((unused)),
 {
     char *errmsg = strerror(errno);
 
-    if (strncmp(errmsg, "Success", 7) != 0)
-        printf("%s:%d:%s():\n\t%s: %s\n", file, line, func, msg, errmsg);
+    printf("%s:%d:%s():\n\t%s: %s\n", file, line, func, msg, errmsg);
 }
 
     /// \brief Simple macro used to log a message

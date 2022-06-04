@@ -60,7 +60,7 @@ my_uuid_t *uuid)
         args[i * 3 + 2] = chan->description;
     }
     args[list.size * 3] = NULL;
-    return print_retcode(206, cretcodes(args), user->user_peer, true);
+    return print_retcode(207, cretcodes(args), user->user_peer, true);
 }
 
 /// \brief List all the thread
@@ -90,7 +90,7 @@ my_uuid_t *uuid)
         args[i * 5 + 4] = thread->body;
     }
     args[list.size * 5] = NULL;
-    return print_retcode(206, cretcodes(args), user->user_peer, true);
+    return print_retcode(208, cretcodes(args), user->user_peer, true);
 }
 
 /// \brief List all the comment
@@ -119,7 +119,7 @@ my_uuid_t *uuid)
         args[i * 4 + 3] = comment->body;
     }
     args[list.size * 4] = NULL;
-    return print_retcode(206, cretcodes(args), user->user_peer, true);
+    return print_retcode(209, cretcodes(args), user->user_peer, true);
 }
 
 bool command_list(cli_command_t *cmd,

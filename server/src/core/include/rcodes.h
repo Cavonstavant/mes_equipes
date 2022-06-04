@@ -35,14 +35,14 @@ static const retcodes_t retcodes[] = {
     {.repr = "200 Success\n",
     .code = 200,
     .params = NULL},
-    {.repr = "201 Successfully connected to existing user:%s",
+    {.repr = "201 %s",
     .code = 201,
     .params = NULL},
     {.repr =
-    "202 Successfully connected, new user created with username:%s",
+    "202 %s",
     .code = 202,
     .params = NULL},
-    {.repr = "203 Successfully disconnected as user:%s",
+    {.repr = "203 %s",
     .code = 203,
     .params = NULL},
     {.repr = "204 %s",
@@ -211,7 +211,6 @@ static inline char *cretcodes(char **param)
         res[strlen(res)] = ':';
     }
     strcat(res, param[size - 1]);
-    strcat(res, "\n");
     return res;
 }
 

@@ -85,10 +85,7 @@ server_data_t *server_data)
 
     if (cmd == NULL)
         return (-1);
-    if (call_command(cmd, users, server_data) < 0) {
-        print_retcode(520, NULL, users->user_peer, false);
-        return (-1);
-    }
+    call_command(cmd, users, server_data);
     free(cmd->name);
     if (cmd->arguments) {
         for (int i = 0; cmd->arguments[i]; i++) {

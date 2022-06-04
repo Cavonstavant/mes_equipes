@@ -29,8 +29,6 @@ bool send_message(client_net_server_t *server)
         write(server->sock_fd,
         server->output_buffer,
         strlen(server->output_buffer));
-    if (strncmp(server->output_buffer, "/logout", 7) == 0)
-        server->connected = false;
     server->pending_write = false;
     return true;
 }
