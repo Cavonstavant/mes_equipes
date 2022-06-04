@@ -26,5 +26,8 @@ set (CALLBACKS_SRC
     ${CALLBACK_ROOT}/callback_602.c
     ${CALLBACK_ROOT}/callback_603.c
     ${CALLBACK_ROOT}/callback_604.c
+    ${CALLBACK_ROOT}/callback_605.c
+    ${CALLBACK_ROOT}/callback_606.c
+    ${CALLBACK_ROOT}/callback_607.c
     PARENT_SCOPE
 )

@@ -2,10 +2,10 @@
 ** EPITECH PROJECT, 2022
 ** mes_equipes
 ** File description:
-** callback_605
+** callback_606
 */
 
-/// \file client/src/server_responses_callbacks/callback_605.c
+/// \file client/src/server_responses_callbacks/callback_606.c
 
 #include "teams_responses.h"
 #include "logging_client.h"
@@ -18,13 +18,13 @@ static void update_response_data(server_response_t *resp, char *msg)
 {
     if (!resp)
         return;
-    if (!(resp->data.data.team_response_data.team_uuid
+    if (!(resp->data.data.channel_response_data.channel_uuid
         = strtok(msg, ":")))
         return;
-    if (!(resp->data.data.team_response_data.team_name
+    if (!(resp->data.data.channel_response_data.channel_name
         = strtok(NULL, ":")))
         return;
-    if (!(resp->data.data.team_response_data.team_description
+    if (!(resp->data.data.channel_response_data.channel_description
         = strtok(NULL, ":")))
         return;
 }
@@ -35,13 +35,13 @@ static void call_api(server_response_t *res)
 {
     if (!res)
         return;
-    client_event_team_created(
-        res->data.data.team_response_data.team_uuid + 4,
-        res->data.data.team_response_data.team_name,
-        res->data.data.team_response_data.team_description);
+    client_event_channel_created(
+        res->data.data.channel_response_data.channel_uuid + 4,
+        res->data.data.channel_response_data.channel_name,
+        res->data.data.channel_response_data.channel_description);
 }
 
-void client_605_response_callback(void *data)
+void client_606_response_callback(void *data)
 {
     server_response_t *response = (server_response_t *)data;
 
@@ -51,7 +51,7 @@ void client_605_response_callback(void *data)
     update_response_data(response, response->message);
     call_api(response);
     update_response_data(response, NULL);
-    while (response->data.data.team_response_data.user_uuid
+    while (response->data.data.event_data.user_uuid
         && response->message) {
         call_api(response);
         fflush(NULL);

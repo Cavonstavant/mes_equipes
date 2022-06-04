@@ -2,10 +2,10 @@
 ** EPITECH PROJECT, 2022
 ** mes_equipes
 ** File description:
-** callback_605
+** callback_607
 */
 
-/// \file client/src/server_responses_callbacks/callback_605.c
+/// \file client/src/server_responses_callbacks/callback_607.c
 
 #include "teams_responses.h"
 #include "logging_client.h"
@@ -18,13 +18,19 @@ static void update_response_data(server_response_t *resp, char *msg)
 {
     if (!resp)
         return;
-    if (!(resp->data.data.team_response_data.team_uuid
+    if (!(resp->data.data.thread_response_data.thread_uuid
         = strtok(msg, ":")))
         return;
-    if (!(resp->data.data.team_response_data.team_name
+    if (!(resp->data.data.thread_response_data.user_uuid
         = strtok(NULL, ":")))
         return;
-    if (!(resp->data.data.team_response_data.team_description
+    if (!(resp->data.data.thread_response_data.creation_time
+        = strtok(NULL, ":")))
+        return;
+    if (!(resp->data.data.thread_response_data.thread_title
+        = strtok(NULL, ":")))
+        return;
+    if (!(resp->data.data.thread_response_data.thread_body
         = strtok(NULL, ":")))
         return;
 }
@@ -35,13 +41,15 @@ static void call_api(server_response_t *res)
 {
     if (!res)
         return;
-    client_event_team_created(
-        res->data.data.team_response_data.team_uuid + 4,
-        res->data.data.team_response_data.team_name,
-        res->data.data.team_response_data.team_description);
+    client_event_thread_created(
+        res->data.data.thread_response_data.thread_uuid + 4,
+        res->data.data.thread_response_data.user_uuid + 4,
+        res->data.data.thread_response_data.creation_time,
+        res->data.data.thread_response_data.thread_title,
+        res->data.data.thread_response_data.thread_body);
 }
 
-void client_605_response_callback(void *data)
+void client_607_response_callback(void *data)
 {
     server_response_t *response = (server_response_t *)data;
 
@@ -51,7 +59,7 @@ void client_605_response_callback(void *data)
     update_response_data(response, response->message);
     call_api(response);
     update_response_data(response, NULL);
-    while (response->data.data.team_response_data.user_uuid
+    while (response->data.data.event_data.user_uuid
         && response->message) {
         call_api(response);
         fflush(NULL);
