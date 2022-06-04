@@ -207,7 +207,6 @@ static inline char *cretcodes(char **param)
         res[strlen(res)] = ':';
     }
     strcat(res, param[size - 1]);
-    strcat(res, "\n");
     return res;
 }
 
