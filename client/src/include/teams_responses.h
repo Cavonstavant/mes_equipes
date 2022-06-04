@@ -94,6 +94,7 @@ typedef enum server_response_data_type_e {
     USER_INFO_DATA,
     SUBSCRIBE_DATA,
     HELP_DATA,
+    EVENT_DATA,
     DATA_TYPE_SIZE
 } server_response_data_type_t;
 
@@ -219,6 +220,22 @@ void client_321_response_callback(void *data);
 /// \brief The 401 client response callback.
 /// \param data The data of the response.
 void client_401_response_callback(void *data);
+
+/// \brief The 601 client response callback.
+/// \param data The data of the response.
+void client_601_response_callback(void *data);
+
+/// \brief The 602 client response callback.
+/// \param data The data of the response.
+void client_602_response_callback(void *data);
+
+/// \brief The 603 client response callback.
+/// \param data The data of the response.
+void client_603_response_callback(void *data);
+
+/// \brief The 604 client response callback.
+/// \param data The data of the response.
+void client_604_response_callback(void *data);
 
 /// Template for all the responses
 static const server_response_t server_response_template[] = {
@@ -534,6 +551,62 @@ static const server_response_t server_response_template[] = {
         },
         .callback = default_response_callback
     },
+    {
+        .code = 601,
+        .data = {
+            .type = EVENT_DATA,
+            .data.event_data = {
+                .user_uuid = NULL,
+                .user_name = NULL,
+                .event_message = NULL,
+                .team_uuid = NULL,
+                .thread_uuid = NULL,
+            }
+        },
+        .callback = default_response_callback
+    },
+    {
+        .code = 602,
+        .data = {
+            .type = EVENT_DATA,
+            .data.event_data = {
+                .user_uuid = NULL,
+                .user_name = NULL,
+                .event_message = NULL,
+                .team_uuid = NULL,
+                .thread_uuid = NULL,
+            }
+        },
+        .callback = default_response_callback
+    },
+    {
+        .code = 603,
+        .data = {
+            .type = EVENT_DATA,
+            .data.event_data = {
+                .user_uuid = NULL,
+                .user_name = NULL,
+                .event_message = NULL,
+                .team_uuid = NULL,
+                .thread_uuid = NULL,
+            }
+        },
+        .callback = default_response_callback
+    },
+    {
+        .code = 604,
+        .data = {
+            .type = EVENT_DATA,
+            .data.event_data = {
+                .user_uuid = NULL,
+                .user_name = NULL,
+                .event_message = NULL,
+                .team_uuid = NULL,
+                .thread_uuid = NULL,
+            }
+        },
+        .callback = default_response_callback
+    }
 };
 
 /// \brief sets the default response data fror the giver response code
