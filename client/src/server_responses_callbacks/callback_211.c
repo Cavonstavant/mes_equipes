@@ -5,10 +5,15 @@
 ** callback_211
 */
 
+/// \file client/src/server_responses_callbacks/callback_211.c
+
 #include "teams_responses.h"
 #include "logging_client.h"
 #include <stdio.h>
 
+/// \brief Update response data callback.
+/// \param resp The server response.
+/// \param msg The message to parse.
 static void update_response_data(server_response_t *resp, char *msg)
 {
     char *status = NULL;
@@ -26,6 +31,8 @@ static void update_response_data(server_response_t *resp, char *msg)
     resp->data.data.user_info_data.status = atoi(status);
 }
 
+/// \brief Call the client api.
+/// \param res The server response.
 static void call_api(server_response_t *res)
 {
     if (!res)

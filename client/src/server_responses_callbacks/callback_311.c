@@ -5,12 +5,15 @@
 ** callback_311
 */
 
+/// \file client/src/server_responses_callbacks/callback_311.c
+
 #include "teams_responses.h"
 #include "logging_client.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
 
+/// \brief Lists uuid prefixes.
 static const char *uuid_prefixes[] = {
     "CHA",
     "NULL",
@@ -19,6 +22,9 @@ static const char *uuid_prefixes[] = {
     NULL
 };
 
+/// \brief Find user response type.
+/// \param response The server response.
+/// \return true if the response is a user response, false otherwise.
 static bool user_response_type(char *response)
 {
     if (strncmp(response, "/send", 5) == 0
@@ -28,6 +34,9 @@ static bool user_response_type(char *response)
     return false;
 }
 
+/// \brief Find team response type.
+/// \param The server response.
+/// \return true if the response is a team response, false otherwise.
 static bool team_response_type(char *response)
 {
     if (strncmp(response, "/subscribe", 10) == 0
@@ -37,6 +46,8 @@ static bool team_response_type(char *response)
     return false;
 }
 
+/// \brief Manage use command.
+/// \param response The server response.
 static void manage_use_command(char *response)
 {
     strtok(NULL, ":");

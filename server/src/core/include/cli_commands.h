@@ -44,7 +44,7 @@ bool command_login(cli_command_t *, user_list_t *, server_data_t *);
 /// \brief This function get the commands static const defined in
 /// cli_command.c.
 /// \return const cli_command_t * An array of available commands.
-const cli_command_t *get_cli_commands();
+const cli_command_t *get_cli_commands(void);
 
 /// \brief This function get a cli_commands depending of it's name.
 /// \param char * The called command to find the structure corresponding of the

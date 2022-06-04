@@ -5,10 +5,15 @@
 ** callback_209
 */
 
+/// \file client/src/server_responses_callbacks/callback_209.c
+
 #include "teams_responses.h"
 #include "logging_client.h"
 #include <stdio.h>
 
+/// \brief Update response data callback.
+/// \param resp The server response.
+/// \param msg The message to parse.
 static void update_response_data(server_response_t *resp, char *msg)
 {
     if (!resp)
@@ -27,6 +32,8 @@ static void update_response_data(server_response_t *resp, char *msg)
         return;
 }
 
+/// \brief Call the client api.
+/// \param resp The server response.
 static void call_api(server_response_t *res)
 {
     struct tm temp = {0};
@@ -43,7 +50,6 @@ static void call_api(server_response_t *res)
         mktime(&temp),
         res->data.data.message_response_data.message_body);
 }
-
 
 void client_209_response_callback(void *data)
 {
