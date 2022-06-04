@@ -33,8 +33,8 @@ static void call_api(server_response_t *res)
     if (!res)
         return;
     client_event_private_message_received(
-        res->data.data.event_data.user_uuid + 4,
-        res->data.data.event_data.event_message);
+        res->data.data.event_data.user_uuid,
+        res->data.data.event_data.user_name);
 }
 
 void client_603_response_callback(void *data)

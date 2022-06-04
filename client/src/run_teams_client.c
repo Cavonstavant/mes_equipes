@@ -47,12 +47,12 @@ static void manage_response(char *msg)
     int code = -1;
 
     code = get_code_from_response(msg);
-    if (code >= 500)
+    if (code >= 500 && code < 600)
         print_syntax_error(msg);
     if (!(response = create_response_from_code(code)))
         return;
     response->message = msg;
-    if (code >= 300){
+    if (code >= 300 && code < 400) {
         printf("\033[0;4mError:\n\t\033[0m");
         printf("\033[1;31m%s\033[0m\n\n", msg);
     } else

@@ -674,9 +674,9 @@ int code)
 
     if (!data)
         return false;
-    while (i < 24 && server_response_template[i].code != code)
+    while (i < 31 && server_response_template[i].code != code)
         i++;
-    if (i == 24)
+    if (i == 31)
         return false;
     template = server_response_template[i];
     data->callback = template.callback;
