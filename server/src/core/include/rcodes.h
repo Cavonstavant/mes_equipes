@@ -201,7 +201,7 @@ static inline char *cretcodes(char **param)
     for (; param[size] != NULL; size++);
     for (int i = 0; i < size; i++)
         total_size += strlen(param[i]);
-    res = malloc(sizeof(char) * (total_size + 2 * size));
+    res = malloc(sizeof(char) * ((total_size + 2 * size) + 1));
     if (res == NULL)
         return NULL;
     res[0] = '\0';
