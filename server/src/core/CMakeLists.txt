@@ -21,6 +21,7 @@ set(SRC
     ${SRC_ROOT}/user_list_command.c
     ${SRC_ROOT}/list_command.c
     ${SRC_ROOT}/info_command.c
+    ${SRC_ROOT}/event_gestion.c
 
     ${INC_ROOT}/cli_commands.h
     ${INC_ROOT}/entrypoint.h

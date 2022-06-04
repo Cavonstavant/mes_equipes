@@ -94,6 +94,7 @@ typedef enum server_response_data_type_e {
     USER_INFO_DATA,
     SUBSCRIBE_DATA,
     HELP_DATA,
+    EVENT_DATA,
     DATA_TYPE_SIZE
 } server_response_data_type_t;
 
@@ -219,6 +220,34 @@ void client_321_response_callback(void *data);
 /// \brief The 401 client response callback.
 /// \param data The data of the response.
 void client_401_response_callback(void *data);
+
+/// \brief The 601 client response callback.
+/// \param data The data of the response.
+void client_601_response_callback(void *data);
+
+/// \brief The 602 client response callback.
+/// \param data The data of the response.
+void client_602_response_callback(void *data);
+
+/// \brief The 603 client response callback.
+/// \param data The data of the response.
+void client_603_response_callback(void *data);
+
+/// \brief The 604 client response callback.
+/// \param data The data of the response.
+void client_604_response_callback(void *data);
+
+/// \brief The 605 client response callback.
+/// \param data The data of the response.
+void client_605_response_callback(void *data);
+
+/// \brief The 606 client response callback.
+/// \param data The data of the response.
+void client_606_response_callback(void *data);
+
+/// \brief The 607 client response callback.
+/// \param data The data of the response.
+void client_607_response_callback(void *data);
 
 /// Template for all the responses
 static const server_response_t server_response_template[] = {
@@ -534,6 +563,102 @@ static const server_response_t server_response_template[] = {
         },
         .callback = default_response_callback
     },
+    {
+        .code = 601,
+        .data = {
+            .type = EVENT_DATA,
+            .data.event_data = {
+                .user_uuid = NULL,
+                .user_name = NULL,
+                .event_message = NULL,
+                .team_uuid = NULL,
+                .thread_uuid = NULL,
+            }
+        },
+        .callback = client_601_response_callback
+    },
+    {
+        .code = 602,
+        .data = {
+            .type = EVENT_DATA,
+            .data.event_data = {
+                .user_uuid = NULL,
+                .user_name = NULL,
+                .event_message = NULL,
+                .team_uuid = NULL,
+                .thread_uuid = NULL,
+            }
+        },
+        .callback = client_602_response_callback
+    },
+    {
+        .code = 603,
+        .data = {
+            .type = EVENT_DATA,
+            .data.event_data = {
+                .user_uuid = NULL,
+                .user_name = NULL,
+                .event_message = NULL,
+                .team_uuid = NULL,
+                .thread_uuid = NULL,
+            }
+        },
+        .callback = client_603_response_callback
+    },
+    {
+        .code = 604,
+        .data = {
+            .type = EVENT_DATA,
+            .data.event_data = {
+                .user_uuid = NULL,
+                .user_name = NULL,
+                .event_message = NULL,
+                .team_uuid = NULL,
+                .thread_uuid = NULL,
+            }
+        },
+        .callback = client_604_response_callback
+    },
+    {
+        .code = 605,
+        .data = {
+            .type  = TEAM_RESPONSE_DATA,
+            .data.team_response_data = {
+                .team_uuid = NULL,
+                .team_name = NULL,
+                .team_description = NULL,
+                .creation_time = NULL
+            }
+        },
+        .callback = client_605_response_callback
+    },
+    {
+        .code = 606,
+        .data = {
+            .type = CHANNEL_RESPONSE_DATA,
+            .data.channel_response_data = {
+                .channel_uuid = NULL,
+                .channel_name = NULL,
+                .channel_description = NULL,
+                .creation_time = NULL
+            }
+        },
+        .callback = client_606_response_callback
+    },
+    {
+        .code = 607,
+        .data = {
+            .type = THREAD_RESPONSE_DATA,
+            .data.thread_response_data = {
+                .thread_uuid = NULL,
+                .user_uuid = NULL,
+                .thread_title = NULL,
+                .thread_body = NULL,
+                .creation_time = NULL
+            }
+        },
+        .callback = client_607_response_callback
+    }
 };
 
 /// \brief sets the default response data fror the giver response code
@@ -549,9 +674,9 @@ int code)
 
     if (!data)
         return false;
-    while (i < 24 && server_response_template[i].code != code)
+    while (i < 31 && server_response_template[i].code != code)
         i++;
-    if (i == 24)
+    if (i == 31)
         return false;
     template = server_response_template[i];
     data->callback = template.callback;
