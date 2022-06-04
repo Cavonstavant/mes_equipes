@@ -46,6 +46,7 @@ static void manage_response(char *msg)
     server_response_t *response = NULL;
     int code = -1;
 
+    printf("Message : %s\n", msg);
     code = get_code_from_response(msg);
     if (code >= 500)
         print_syntax_error(msg);

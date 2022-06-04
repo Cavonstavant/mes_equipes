@@ -51,7 +51,10 @@ user_list_t *user, server_data_t *server)
         return print_retcode(503, NULL, user->user_peer, false);
     server_event_private_message_sended(user->user_uuid->uuid.repr + 4,
     send->uuid.repr + 4, command->arguments[1]);
-    return print_retcode(200, NULL, user->user_peer, true);
+    send_user_event(server, send, 603, (char *[]) {
+    user->user_uuid->uuid.repr + 4, wrapper_find_user(server->wrapper,
+    user->user_uuid)->name, NULL});
+    return true;
 }
 
 /// \brief Command list message
