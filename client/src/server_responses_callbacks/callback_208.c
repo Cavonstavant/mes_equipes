@@ -1,4 +1,3 @@
-
 /*
 ** EPITECH PROJECT, 2022
 ** mes_equipes
