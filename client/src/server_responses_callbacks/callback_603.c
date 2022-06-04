@@ -5,7 +5,7 @@
 ** callback_220
 */
 
-/// \file client/src/server_responses_callbacks/callback_602.c
+/// \file client/src/server_responses_callbacks/callback_601.c
 
 #include "teams_responses.h"
 #include "logging_client.h"
@@ -32,9 +32,9 @@ static void call_api(server_response_t *res)
 {
     if (!res)
         return;
-    client_event_logged_out(
+    client_event_private_message_received(
         res->data.data.event_data.user_uuid + 4,
-        res->data.data.event_data.user_name);
+        res->data.data.event_data.event_message);
 }
 
 void client_601_response_callback(void *data)
