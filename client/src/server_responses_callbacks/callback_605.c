@@ -36,7 +36,7 @@ static void call_api(server_response_t *res)
     if (!res)
         return;
     client_event_team_created(
-        res->data.data.team_response_data.team_uuid + 4,
+        res->data.data.team_response_data.team_uuid,
         res->data.data.team_response_data.team_name,
         res->data.data.team_response_data.team_description);
 }
@@ -51,7 +51,7 @@ void client_605_response_callback(void *data)
     update_response_data(response, response->message);
     call_api(response);
     update_response_data(response, NULL);
-    while (response->data.data.team_response_data.user_uuid
+    while (response->data.data.team_response_data.team_uuid
         && response->message) {
         call_api(response);
         fflush(NULL);

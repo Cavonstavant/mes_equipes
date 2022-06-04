@@ -36,7 +36,7 @@ static void call_api(server_response_t *res)
     if (!res)
         return;
     client_event_channel_created(
-        res->data.data.channel_response_data.channel_uuid + 4,
+        res->data.data.channel_response_data.channel_uuid,
         res->data.data.channel_response_data.channel_name,
         res->data.data.channel_response_data.channel_description);
 }
@@ -51,7 +51,7 @@ void client_606_response_callback(void *data)
     update_response_data(response, response->message);
     call_api(response);
     update_response_data(response, NULL);
-    while (response->data.data.event_data.user_uuid
+    while (response->data.data.channel_response_data.channel_uuid
         && response->message) {
         call_api(response);
         fflush(NULL);
