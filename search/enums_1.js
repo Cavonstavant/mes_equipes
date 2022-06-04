@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['user_5fstate_5fe_999',['user_state_e',['../server_8h.html#adb094f797aec481063e38b90221bfa00',1,'server.h']]],
-  ['uuid_5ftype_5fs_1000',['uuid_type_s',['../object__uuid_8h.html#a8ff88fae822fe28a02f7fa750e1e6f7b',1,'object_uuid.h']]]
+  ['server_5fresponse_5fdata_5ftype_5fe_1181',['server_response_data_type_e',['../teams__responses_8h.html#a90389f9dfa014b8d9aa4d25059104424',1,'teams_responses.h']]]
 ];

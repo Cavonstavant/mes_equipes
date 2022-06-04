@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['message_5fn_919',['message_n',['../structconversation__s.html#a9ea8ad2db2ae4f141813a7ac8364a839',1,'conversation_s::message_n()'],['../structobject__wrapper__s.html#aa4363b7fe6f75aa0daf958878e2bff7f',1,'object_wrapper_s::message_n()']]],
-  ['messages_920',['messages',['../structconversation__s.html#a348e322b94e52bc4f4acb6928c6dfbad',1,'conversation_s::messages()'],['../structobject__wrapper__s.html#a038782d4e7a684bd73b6ddfb2b082193',1,'object_wrapper_s::messages()']]]
+  ['list_1078',['list',['../structchild__list__s.html#a617e62dfa72077df6cfa9d6c287b4488',1,'child_list_s']]],
+  ['loc_1079',['loc',['../structuser__list__s.html#a8e693c5b199eb2c554e8ee25f943418e',1,'user_list_s']]]
 ];

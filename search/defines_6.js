@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['name_5ferror_1037',['NAME_ERROR',['../object__name_8h.html#a28a305ae9ffbe772b9d8ed9ea604372e',1,'object_name.h']]],
-  ['name_5finvalid_5fsize_1038',['NAME_INVALID_SIZE',['../object__name_8h.html#ae2b0ff9c3cd18ed9595e4470fb8e904e',1,'object_name.h']]],
-  ['name_5fsize_1039',['NAME_SIZE',['../object__name_8h.html#a834e9a379307f869a10f4da078be5786',1,'object_name.h']]]
+  ['matched_1225',['MATCHED',['../object__uuid_8h.html#a5721cd75e5247d90e9033368ee5e6312',1,'object_uuid.h']]],
+  ['max_5fmsg_1226',['MAX_MSG',['../client__utils_8h.html#aa24597a54a085c6c2c33b64138f09eff',1,'MAX_MSG():&#160;client_utils.h'],['../net__utils_8h.html#aa24597a54a085c6c2c33b64138f09eff',1,'MAX_MSG():&#160;net_utils.h']]],
+  ['message_5ferror_1227',['MESSAGE_ERROR',['../object__message_8h.html#a32358e5ff4a8bbea03adbeef3e53ad20',1,'object_message.h']]],
+  ['mismatched_1228',['MISMATCHED',['../object__uuid_8h.html#aa7544e3a35c2f3a04a41e0e8079474ce',1,'object_uuid.h']]]
 ];

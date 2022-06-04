@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['info_5fcommand_2ec_169',['info_command.c',['../info__command_8c.html',1,'']]],
-  ['init_5fserver_5fdata_170',['init_server_data',['../server_8h.html#a8ddd1a38aa9f92503f2abe27c7d8e2c0',1,'init_server_data(long port):&#160;server_data.c'],['../server__data_8c.html#a8ddd1a38aa9f92503f2abe27c7d8e2c0',1,'init_server_data(long port):&#160;server_data.c']]],
-  ['input_5fbuffer_171',['input_buffer',['../structserver__s.html#a57009c1599f744f0d144358700fff9ca',1,'server_s::input_buffer()'],['../structpeer__s.html#a45c37ca0e2af1945af1bbc6e3571cf9c',1,'peer_s::input_buffer()']]],
-  ['internals_2eh_172',['internals.h',['../internals_8h.html',1,'']]],
-  ['is_5fauth_173',['is_auth',['../structuser__list__s.html#a1dc085684eab0d8a5db44185939376c6',1,'user_list_s']]]
+  ['help_5fcommand_2ec_226',['help_command.c',['../help__command_8c.html',1,'']]],
+  ['help_5fdata_227',['help_data',['../unionserver__response__data__u.html#abb8914247d31c49b19a982958b0ccede',1,'server_response_data_u::help_data()'],['../teams__responses_8h.html#a90389f9dfa014b8d9aa4d25059104424a218201196b5386db40a259087658d81c',1,'HELP_DATA():&#160;teams_responses.h']]],
+  ['help_5fdata_5fs_228',['help_data_s',['../structhelp__data__s.html',1,'']]],
+  ['help_5fmessage_229',['help_message',['../structhelp__data__s.html#ad1f25a314f4e5a193733671b80c9d986',1,'help_data_s']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['list_917',['list',['../structchild__list__s.html#a617e62dfa72077df6cfa9d6c287b4488',1,'child_list_s']]],
-  ['loc_918',['loc',['../structuser__list__s.html#a8e693c5b199eb2c554e8ee25f943418e',1,'user_list_s']]]
+  ['input_5fbuffer_1076',['input_buffer',['../structserver__s.html#a57009c1599f744f0d144358700fff9ca',1,'server_s::input_buffer()'],['../structpeer__s.html#a45c37ca0e2af1945af1bbc6e3571cf9c',1,'peer_s::input_buffer()']]],
+  ['is_5fauth_1077',['is_auth',['../structuser__list__s.html#a1dc085684eab0d8a5db44185939376c6',1,'user_list_s']]]
 ];

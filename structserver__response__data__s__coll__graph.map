@@ -1,0 +1,12 @@
+<map id="server_response_data_s" name="server_response_data_s">
+<area shape="rect" id="node1" title="The data of a response." alt="" coords="677,188,856,215"/>
+<area shape="rect" id="node2" href="$unionserver__response__data__u.html" title="Only one type of data is allowed to be returned by a response." alt="" coords="416,188,596,215"/>
+<area shape="rect" id="node3" href="$structhelp__data__s.html" title=" " alt="" coords="54,11,154,37"/>
+<area shape="rect" id="node4" href="$structuser__info__data__s.html" title=" " alt="" coords="38,61,170,88"/>
+<area shape="rect" id="node5" href="$structchannel__response__data__s.html" title=" " alt="" coords="9,112,199,139"/>
+<area shape="rect" id="node6" href="$structevent__data__s.html" title=" " alt="" coords="49,163,159,189"/>
+<area shape="rect" id="node7" href="$structsubscribe__data__s.html" title=" " alt="" coords="37,213,171,240"/>
+<area shape="rect" id="node8" href="$structmessage__response__data__s.html" title=" " alt="" coords="5,264,203,291"/>
+<area shape="rect" id="node9" href="$structteam__response__data__s.html" title=" " alt="" coords="18,315,190,341"/>
+<area shape="rect" id="node10" href="$structthread__response__data__s.html" title=" " alt="" coords="14,365,194,392"/>
+</map>

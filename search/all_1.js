@@ -1,14 +1,9 @@
 var searchData=
 [
-  ['body_6',['body',['../structcomment__s.html#a326be76c8d0e98b9d716088d565baa62',1,'comment_s::body()'],['../structcomment__creation__s.html#a025be9b0c37198ae84f7234e513311c0',1,'comment_creation_s::body()'],['../structmessage__s.html#aaf5ad8f5305bdd95c405b7a75b6074be',1,'message_s::body()'],['../structmessage__creation__s.html#a8f6ec4b2dbc53c2474a9594dcb3acb5f',1,'message_creation_s::body()'],['../structthread__s.html#aad411152a5965582fb3148d362566880',1,'thread_s::body()'],['../structthread__creation__s.html#ab89fc835693833a0c3405e51ac1722ec',1,'thread_creation_s::body()']]],
-  ['body_5fdestroy_7',['body_destroy',['../object__body_8h.html#a8047934d863367897ec90bb5562b3151',1,'body_destroy(body_t body_to_destroy):&#160;object_body.c'],['../object__body_8c.html#a8047934d863367897ec90bb5562b3151',1,'body_destroy(body_t body_to_destroy):&#160;object_body.c']]],
-  ['body_5fdump_8',['body_dump',['../object__body_8h.html#a39e70ba2ee7d04f764d6f2dd0cdfde85',1,'body_dump(body_t body):&#160;body_dump.c'],['../body__dump_8c.html#a39e70ba2ee7d04f764d6f2dd0cdfde85',1,'body_dump(body_t body):&#160;body_dump.c']]],
-  ['body_5fdump_2ec_9',['body_dump.c',['../body__dump_8c.html',1,'']]],
-  ['body_5fedit_5fcontent_10',['body_edit_content',['../object__body_8h.html#aff431a81de236794ac3038c6f1e91e4b',1,'body_edit_content(body_t body, char *body_content):&#160;body_setter.c'],['../body__setter_8c.html#aff431a81de236794ac3038c6f1e91e4b',1,'body_edit_content(body_t body, char *body_content):&#160;body_setter.c']]],
-  ['body_5ferror_11',['BODY_ERROR',['../object__body_8h.html#ad08e5d24686b6cdcee3c358ab0e256c6',1,'object_body.h']]],
-  ['body_5finit_12',['body_init',['../object__body_8h.html#a48a1d1932cdf056c860d8c35e661c81a',1,'body_init(char *body_content):&#160;object_body.c'],['../object__body_8c.html#a48a1d1932cdf056c860d8c35e661c81a',1,'body_init(char *body_content):&#160;object_body.c']]],
-  ['body_5finvalid_5fsize_13',['BODY_INVALID_SIZE',['../object__body_8h.html#a3ff789875cfb47105b577bd5a0c07484',1,'object_body.h']]],
-  ['body_5fsetter_2ec_14',['body_setter.c',['../body__setter_8c.html',1,'']]],
-  ['body_5fsize_15',['BODY_SIZE',['../object__body_8h.html#a3170fd55c9e7f4a582647deab1b25aab',1,'object_body.h']]],
-  ['body_5ft_16',['body_t',['../object__body_8h.html#ae76459eee75ca162d91d057e2dd9f3d8',1,'object_body.h']]]
+  ['active_5fuser_5fn_1',['active_user_n',['../structserver__data__s.html#a8c5114e3501fbe1060b856a73a13f029',1,'server_data_s']]],
+  ['active_5fusers_2',['active_users',['../structserver__data__s.html#a91db159309da670aec07cb6d78b78f04',1,'server_data_s']]],
+  ['add_5fuser_5fto_5fserver_3',['add_user_to_server',['../net__utils_8h.html#a7ac2470fea90278e1221a55c26aed4c4',1,'net_utils.h']]],
+  ['arguments_4',['arguments',['../structcli__command__s.html#a129498503329d8916faec5648d5ce144',1,'cli_command_s']]],
+  ['auth_5fcommand_2ec_5',['auth_command.c',['../auth__command_8c.html',1,'']]],
+  ['author_6',['author',['../structcomment__s.html#a5818fc71d10dc54b6594e94fa989f3ef',1,'comment_s::author()'],['../structcomment__creation__s.html#a4e66db7ec21a907bbefa1c267392ec81',1,'comment_creation_s::author()'],['../structthread__s.html#a2d8d44d487466c62e15deaa000f5e2d6',1,'thread_s::author()'],['../structthread__creation__s.html#ac1ee0b712059a8d52c0c52e421192b40',1,'thread_creation_s::author()']]]
 ];

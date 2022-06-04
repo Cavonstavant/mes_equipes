@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['message_5fcreation_5fs_535',['message_creation_s',['../structmessage__creation__s.html',1,'']]],
-  ['message_5fs_536',['message_s',['../structmessage__s.html',1,'']]],
-  ['my_5fuuid_5fs_537',['my_uuid_s',['../structmy__uuid__s.html',1,'']]]
+  ['event_5fdata_5fs_629',['event_data_s',['../structevent__data__s.html',1,'']]]
 ];

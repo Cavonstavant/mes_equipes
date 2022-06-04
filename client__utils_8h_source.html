@@ -144,25 +144,24 @@ $(document).ready(function(){initNavTree('client__utils_8h_source.html',''); ini
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;{</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">char</span> *errmsg = strerror(errno);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">if</span> (strncmp(errmsg, <span class="stringliteral">&quot;Success&quot;</span>, 7) != 0)</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        printf(<span class="stringliteral">&quot;%s:%d:%s():\n\t%s: %s\n&quot;</span>, file, line, func, msg, errmsg);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="client__utils_8h.html#a8b2781cb26c170039ce2be4a72b1d521">   79</a></span>&#160;<span class="preprocessor">    #define TEAMS_LOG(msg) \</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">        do {log_error(__LINE__, \</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">strrchr(__FILE__, &#39;/&#39;) + 1, __func__, msg);} while (0)</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<a class="code" href="structserver__s.html">client_net_server_t</a> *<a class="code" href="client__utils_8h.html#a986aac3fabf3da548bbd880233d6d6ab">create_net_server</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *ip, <span class="keywordtype">long</span> port);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="client__utils_8h.html#a6c1e93f72b6356d92171fb825e17aae0">send_message</a>(<a class="code" href="structserver__s.html">client_net_server_t</a> *server);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keywordtype">void</span> <a class="code" href="client__utils_8h.html#a209ac115fb574176b09520e3a1602825">set_output_buffer</a>(<a class="code" href="structserver__s.html">client_net_server_t</a> *server, <span class="keyword">const</span> <span class="keywordtype">char</span> *msg);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keywordtype">char</span> *<a class="code" href="client__utils_8h.html#a7189f074e7b6a2568dd54ac3263532ae">fetch_message</a>(<a class="code" href="structserver__s.html">client_net_server_t</a> *server);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keywordtype">void</span> <a class="code" href="client__utils_8h.html#a9aef5bca400df71b0617cee413992b3e">update_client</a>(<a class="code" href="structserver__s.html">client_net_server_t</a> *server);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* INCLUDE_UTILS_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    printf(<span class="stringliteral">&quot;%s:%d:%s():\n\t%s: %s\n&quot;</span>, file, line, func, msg, errmsg);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="client__utils_8h.html#a8b2781cb26c170039ce2be4a72b1d521">   78</a></span>&#160;<span class="preprocessor">    #define TEAMS_LOG(msg) \</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">        do {log_error(__LINE__, \</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">strrchr(__FILE__, &#39;/&#39;) + 1, __func__, msg);} while (0)</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<a class="code" href="structserver__s.html">client_net_server_t</a> *<a class="code" href="client__utils_8h.html#a986aac3fabf3da548bbd880233d6d6ab">create_net_server</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *ip, <span class="keywordtype">long</span> port);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="client__utils_8h.html#a6c1e93f72b6356d92171fb825e17aae0">send_message</a>(<a class="code" href="structserver__s.html">client_net_server_t</a> *server);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keywordtype">void</span> <a class="code" href="client__utils_8h.html#a209ac115fb574176b09520e3a1602825">set_output_buffer</a>(<a class="code" href="structserver__s.html">client_net_server_t</a> *server, <span class="keyword">const</span> <span class="keywordtype">char</span> *msg);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keywordtype">char</span> *<a class="code" href="client__utils_8h.html#a7189f074e7b6a2568dd54ac3263532ae">fetch_message</a>(<a class="code" href="structserver__s.html">client_net_server_t</a> *server);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keywordtype">void</span> <a class="code" href="client__utils_8h.html#a9aef5bca400df71b0617cee413992b3e">update_client</a>(<a class="code" href="structserver__s.html">client_net_server_t</a> *server);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* INCLUDE_UTILS_H */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="astructserver__s_html_a6feda54ed7a86ee5c733462df82b1dfd"><div class="ttname"><a href="structserver__s.html#a6feda54ed7a86ee5c733462df82b1dfd">server_s::err_fds</a></div><div class="ttdeci">fd_set err_fds</div><div class="ttdoc">The fd set containing the sock fd of the mes_équipe server.</div><div class="ttdef"><b>Definition:</b> client_utils.h:57</div></div>
