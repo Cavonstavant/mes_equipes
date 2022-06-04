@@ -18,13 +18,6 @@ char **args)
 
     for (size_t i = 0; i < serv->active_user_n; i++) {
         temp = serv->active_users[i];
-        printf("HERE :\n");
-        if (temp->disconnected != CONNECTED)
-            printf("1\n");
-        if (!temp->is_auth)
-            printf("2\n");
-        if (!my_uuid_cmp(user, temp->user_uuid))
-            printf("3\n");
         if (temp->disconnected != CONNECTED || !temp->is_auth ||
         !my_uuid_cmp(user, temp->user_uuid))
             continue;
