@@ -450,7 +450,7 @@ static const server_response_t server_response_template[] = {
             }
         },
         .callback = default_response_callback
-    }
+    },
 };
 
 /// \brief sets the default response data fror the giver response code
