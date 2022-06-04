@@ -39,6 +39,10 @@ static void call_api(server_response_t *res)
         res->data.data.team_response_data.team_uuid + 4,
         res->data.data.team_response_data.team_name,
         res->data.data.team_response_data.team_description);
+    client_event_team_created(
+        res->data.data.team_response_data.team_uuid + 4,
+        res->data.data.team_response_data.team_name,
+        res->data.data.team_response_data.team_description);
 }
 
 void client_215_response_callback(void *data)

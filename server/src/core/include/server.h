@@ -120,7 +120,7 @@ char **args);
 void send_users_event(server_data_t *serv, int code, char **args);
 
 ///
-/// \brief Send a event to all connected and authentified users without current
+/// \brief Send a event to all connected and authentified users exclude current
 ///
 /// \param serv Server informations
 /// \param code Rcode to call
@@ -129,5 +129,25 @@ void send_users_event(server_data_t *serv, int code, char **args);
 ///
 void send_users_event_logout(server_data_t *serv, int code, char **args,
 int sock);
+
+///
+/// \brief Send a event to all users exclude current
+///
+/// \param serv Serverinformations
+/// \param code Rcode to call
+/// \param args Arguments to call
+///
+void send_users_event_team(server_data_t *serv, int *info, char **args);
+
+///
+/// \brief Send a event to all users for object creation
+///
+/// \param serv Serveur informations
+/// \param parent Parent uuid
+/// \param code Rcode to call
+/// \param args Arguments to call
+///
+void send_users_event_create(server_data_t *serv, my_uuid_t *parent,
+int *infos, char **args);
 
 #endif /* !SERVER_H_ */
