@@ -5,10 +5,13 @@
 ** teams_client
 */
 
+/// \file client/src/teams_client.c
+
 #include "teams_client.h"
 #include <stdlib.h>
 
-/// init the client methods
+/// \brief Initializes the teams client methods
+/// \param server the teams client
 static void init_client_methods(teams_client_t *server)
 {
     server->run = run_teams_client;
@@ -29,4 +32,3 @@ teams_client_t *teams_client_create(const char *ip, long port)
     client->prompt_display = true;
     return client;
 }
-

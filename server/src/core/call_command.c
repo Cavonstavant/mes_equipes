@@ -10,6 +10,9 @@
 #include "cli_commands.h"
 #include "rcodes.h"
 
+/// \brief The number of command available.
+/// \param args The arguments of the command.
+/// \return The number of arguments.
 static int get_nb_arguments(char **args)
 {
     int i = 0;
@@ -18,6 +21,11 @@ static int get_nb_arguments(char **args)
     return (i);
 }
 
+/// \brief Check if the command is valid.
+/// \param cmd The command reference to check.
+/// \param command The command to check.
+/// \param users The user list.
+/// \return true if the command is valid, false otherwise.
 static bool check_arguments_validity(const cli_command_t *cmd,
 cli_command_t *command,
 user_list_t *users)
@@ -35,12 +43,6 @@ user_list_t *users)
         return print_retcode(510, NULL, users->user_peer, false);
     return (true);
 }
-
-/// /!\ This function doesn't call the function actually, because the function
-/// are not implemented yet.
-/// /!\ The argument to be passed as parameter in the function to be called
-/// must be contains the arguments of the command, and an object to be use
-/// to ask a write on the client.
 
 int call_command(cli_command_t *command, user_list_t *users,
 server_data_t *server_data)

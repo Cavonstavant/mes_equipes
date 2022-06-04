@@ -13,7 +13,9 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-/// Utility function to detect if the server fd has been closed
+/// \brief Utility function to detect if the server fd has been closed
+/// \param server the remote server
+/// \return true if the server fd has been closed, false otherwise
 static bool check_for_disconnection(client_net_server_t *server)
 {
     if (!(fcntl(server->sock_fd, F_GETFD) != -1 || errno != EBADF)) {
@@ -23,7 +25,8 @@ static bool check_for_disconnection(client_net_server_t *server)
     return (false);
 }
 
-/// Get the user input via getline
+/// \brief Get the user input via getline
+/// \param server the remote server
 static void get_user_input(client_net_server_t *server)
 {
     char *msg = NULL;
@@ -45,7 +48,7 @@ void update_client(client_net_server_t *server)
         return;
     fill_fd_sets(server);
     if (select(FD_SETSIZE, &server->read_fds,
-        &server->write_fds, NULL, NULL) == -1){
+        &server->write_fds, NULL, NULL) == -1) {
         TEAMS_LOG("Internal Server Error: select\n");
         return;
     }
@@ -55,7 +58,7 @@ void update_client(client_net_server_t *server)
         send_message(server);
         update_client(server);
     }
-    if (FD_ISSET(server->sock_fd, &server->err_fds)){
+    if (FD_ISSET(server->sock_fd, &server->err_fds)) {
         TEAMS_LOG("Internal Server Error: Failed to connect\n");
         server->connected = false;
     }

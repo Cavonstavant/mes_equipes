@@ -5,22 +5,19 @@
 ** use_command
 */
 
-/// \file server/src/use_command.c
+/// \file server/src/core/use_command.c
 
 #include "cli_commands.h"
 #include "rcodes.h"
 #include "logging_server.h"
 
-///
 /// \brief Change the user loc to a team
-///
 /// \param uuid Uuid of the team to go
 /// \param serv Server info
 /// \param user User info
 /// \param print Last command of use
 /// \return true When operation succeed
 /// \return false When operation failed
-///
 static bool command_go_team(my_uuid_t *uuid, server_data_t *serv,
 user_list_t *user, bool print)
 {
@@ -35,16 +32,13 @@ user_list_t *user, bool print)
     return true;
 }
 
-///
 /// \brief Change the user loc to a chan
-///
 /// \param uuid Uuid of the chan to go
 /// \param serv Server info
 /// \param user User info
 /// \param print Last command of use
 /// \return true When operation succeed
 /// \return false When operation failed
-///
 static bool command_go_to_chan(my_uuid_t *uuid, server_data_t *serv,
 user_list_t *user, bool print)
 {
@@ -57,16 +51,13 @@ user_list_t *user, bool print)
     return true;
 }
 
-///
 /// \brief Change the user loc to a thread
-///
 /// \param uuid Uuid of the thread to go
 /// \param serv Server info
 /// \param user User info
 /// \param print Last command of use
 /// \return true When operation succeed
 /// \return false When operation failed
-///
 static bool command_go_to_thread(my_uuid_t *uuid, server_data_t *serv,
 user_list_t *user, bool print)
 {
@@ -79,16 +70,13 @@ user_list_t *user, bool print)
     return true;
 }
 
-///
 /// \brief Change the user loc to a object
-///
 /// \param uuid Uuid of the object to go
 /// \param serv Server info
 /// \param user User info
 /// \param print Last command of use
 /// \return true When operation succeed
 /// \return false When operation failed
-///
 static bool command_go_next(char *uuid, user_list_t *user,
 server_data_t *serv, bool print)
 {

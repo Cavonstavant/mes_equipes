@@ -15,15 +15,11 @@
 
 volatile bool *server_state = NULL;
 
-///
 /// \brief Catch the sigint signal
-///
 /// \param var Useless data
-///
-void sigint_handler(int var)
+void sigint_handler(int var __attribute__((unused)))
 {
     *server_state = false;
-    (void) var;
 }
 
 int server_run(int port)

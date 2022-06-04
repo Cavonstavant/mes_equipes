@@ -5,6 +5,8 @@
 ** internals
 */
 
+/// \file client/client_net_utils/include/internals.h
+
 #ifndef INTERNALS_H
     #define INTERNALS_H
 

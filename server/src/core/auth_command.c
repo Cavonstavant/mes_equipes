@@ -5,17 +5,16 @@
 ** auth_command
 */
 
-/// \file server/src/auth_command.c
+/// \file server/src/core/auth_command.c
 
 #include "cli_commands.h"
 #include "rcodes.h"
 #include "logging_server.h"
 #include "upper_component_adding.h"
 
-bool command_logout(cli_command_t *command,
+bool command_logout(cli_command_t *command __attribute__((unused)),
 user_list_t *user, server_data_t *server_data)
 {
-    (void) command;
     user->disconnected = TO_LOGOUT;
     if (user->is_auth) {
         print_retcode(203, cretcodes((char *[]) {user->user_uuid->uuid.repr,

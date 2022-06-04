@@ -11,15 +11,12 @@
 #include "rcodes.h"
 #include "logging_server.h"
 
-///
 /// \brief Create a new conversation if the two user are not linked
-///
 /// \param user User info
 /// \param send Uuid of second user
 /// \param server Server info
 /// \return true When operation succeed
 /// \return false When operation failed
-///
 static bool command_create_conv(user_list_t *user, my_uuid_t *send,
 server_data_t *server)
 {
@@ -57,6 +54,12 @@ user_list_t *user, server_data_t *server)
     return print_retcode(200, NULL, user->user_peer, true);
 }
 
+/// \brief Command list message
+/// \param srv Server info
+/// \param user User list
+/// \param send Uuid of second user
+/// \param conve Uuid of conversation
+/// \return List of messages
 static char **command_list_messages(server_data_t *srv, user_list_t *user,
 my_uuid_t *send, my_uuid_t *conve)
 {

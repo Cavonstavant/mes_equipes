@@ -115,13 +115,16 @@ strrchr(__FILE__, '/') + 1, __func__, msg);} while (0)
 /// \brief Creates a new client
 /// \param sock_fd The client file descriptor
 /// \param peer_addr The client address informations
+/// \return The new peer
 peer_t *new_peer(int fd, struct sockaddr_in addr);
 
 /// \brief Util function to display currently connected clients
+/// \param peers_head The head of the circular queue of peers
 void display_clients(struct peers_head *peers_head);
 
 /// \brief Create a TCP server
 /// \param port Port to listen on
+/// \return The tcp server
 tcp_server_t *create_tcp_server(long port);
 
 /// \brief Add a user to the server.
@@ -129,6 +132,7 @@ tcp_server_t *create_tcp_server(long port);
 /// \param username The username of the user to add.
 /// \param password The password of the user to add.
 /// \warning The password is inserted 'as is' inside the server
+/// \return true if the user was added, false otherwise.
 bool add_user_to_server(tcp_server_t *srv, char *username, char *password);
 
 /// \brief Update the read and write fd sets according to
@@ -139,6 +143,7 @@ void server_fill_fd_sets(tcp_server_t *srv);
 /// \brief Wait for a client update
 /// \note This function is a wrapper around select()
 /// \param src The tcp server containing the peers and the w/r/err fd sets
+/// \return 0 if no error, -1 if an error occured
 int server_wait(tcp_server_t *srv);
 
 /// \brief Handle a client update

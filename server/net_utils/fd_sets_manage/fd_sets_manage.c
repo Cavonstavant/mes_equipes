@@ -5,7 +5,7 @@
 ** fd_sets_manage
 */
 
-/// \file server/net_utils/fd_set_manage.c
+/// \file server/net_utils/fd_sets_manage/fd_set_manage.c
 
 #include "net_utils.h"
 #include "fd_set_manage.h"

@@ -35,4 +35,3 @@ bool channel_add_threads(channel_t *channel, my_uuid_t *thread)
     channel->threads_n += 1;
     return OPERATION_SUCCESS;
 }
-

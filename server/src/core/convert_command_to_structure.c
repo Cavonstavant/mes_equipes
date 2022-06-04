@@ -26,7 +26,7 @@ static char *get_command_name(char *command)
     if (!name)
         return (NULL);
     strncpy(name, command, i);
-    name[i] = '\0'; /// WARNING THOMAS CHECK LAST CHAR IS \N
+    name[i] = '\0';
     return (name);
 }
 
