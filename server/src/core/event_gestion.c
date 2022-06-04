@@ -11,6 +11,18 @@
 #include "object_wrapper.h"
 #include "server.h"
 
+void send_users_event(server_data_t *serv, int code, char **args)
+{
+    user_list_t *temp = NULL;
+
+    for (size_t i = 0; i < serv->active_user_n; i++) {
+        temp = serv->active_users[i];
+        if (temp->disconnected != CONNECTED || !temp->is_auth)
+            continue;
+        print_retcode(code, cretcodes(args), temp->user_peer, true);
+    }
+}
+
 void send_user_event(server_data_t *serv, my_uuid_t *user, int code,
 char **args)
 {

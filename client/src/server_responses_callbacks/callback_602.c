@@ -33,7 +33,7 @@ static void call_api(server_response_t *res)
     if (!res)
         return;
     client_event_logged_out(
-        res->data.data.event_data.user_uuid + 4,
+        res->data.data.event_data.user_uuid,
         res->data.data.event_data.user_name);
 }
 

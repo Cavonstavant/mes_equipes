@@ -110,4 +110,13 @@ void remove_disconnected_user(server_data_t *server_data, user_state_t comp);
 void send_user_event(server_data_t *serv, my_uuid_t *user, int code,
 char **args);
 
+///
+/// \brief Send a event to all connected and authentified users
+///
+/// \param serv Server informations
+/// \param code Rcode to call
+/// \param args Arguments of the rcode
+///
+void send_users_event(server_data_t *serv, int code, char **args);
+
 #endif /* !SERVER_H_ */
