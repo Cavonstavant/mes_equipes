@@ -2,10 +2,10 @@
 ** EPITECH PROJECT, 2022
 ** mes_equipes
 ** File description:
-** callback_220
+** callback_605
 */
 
-/// \file client/src/server_responses_callbacks/callback_604.c
+/// \file client/src/server_responses_callbacks/callback_605.c
 
 #include "teams_responses.h"
 #include "logging_client.h"
@@ -45,7 +45,7 @@ static void call_api(server_response_t *res)
         res->data.data.event_data.event_message);
 }
 
-void client_604_response_callback(void *data)
+void client_605_response_callback(void *data)
 {
     server_response_t *response = (server_response_t *)data;
 
