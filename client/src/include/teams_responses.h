@@ -63,9 +63,12 @@ struct help_data_s {
     char *help_message;
 };
 
-struct error_bad_relational_state_s {
-    char *ctx;
-    char *msg;
+struct event_data_s {
+    char *user_uuid;
+    char *user_name;
+    char *event_message;
+    char *team_uuid;
+    char *thread_uuid;
 };
 
 /// @}
@@ -79,6 +82,7 @@ typedef union server_response_data_u {
     struct user_info_data_s user_info_data;
     struct subscribe_data_s subscribe_data;
     struct help_data_s help_data;
+    struct event_data_s event_data;
 } server_response_internal_data_t;
 
 /// Enum of possible responses data types.
