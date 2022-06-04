@@ -5,7 +5,7 @@
 ** callback_220
 */
 
-/// \file client/src/server_responses_callbacks/callback_220.c
+/// \file client/src/server_responses_callbacks/callback_601.c
 
 #include "teams_responses.h"
 #include "logging_client.h"
@@ -32,7 +32,7 @@ static void call_api(server_response_t *res)
 {
     if (!res)
         return;
-    client_print_unsubscribed(
+    client_event_logged_in(
         res->data.data.event_data.user_uuid + 4,
         res->data.data.event_data.user_name);
 }
