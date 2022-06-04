@@ -95,12 +95,18 @@ typedef enum server_response_data_type_e {
 
 /// The data of a response
 typedef struct server_response_data_s {
+
+    /// \brief The type of data
     server_response_data_type_t type;
+
+    /// \brief The data
     server_response_internal_data_t data;
 } server_response_data_t;
 
 typedef void (*server_response_callback_t)(void *);
 
+/// \brief A response from the server.
+/// \param data The data of the response.
 static inline void default_response_callback(void *data)
 {
     (void)data;
@@ -108,33 +114,106 @@ static inline void default_response_callback(void *data)
 
 /// A response from the server
 typedef struct server_response_s {
+
+    /// \brief The code of the response.
     int code;
+
+    /// \brief The message of the response.
     char *message;
+
+    /// \brief The data of the response.
     server_response_data_t data;
+
+    /// \brief The callback to call when the response is received.
     server_response_callback_t callback;
 } server_response_t;
 
+/// \brief The 201 client response callback.
+/// \param data The data of the response.
 void client_201_response_callback(void *data);
+
+/// \brief The 202 client response callback.
+/// \param data The data of the response.
 void client_202_response_callback(void *data);
+
+/// \brief The 203 client response callback.
+/// \param data The data of the response.
 void client_203_response_callback(void *data);
+
+/// \brief The 204 client response callback.
+/// \param data The data of the response.
 void client_204_response_callback(void *data);
+
+/// \brief The 205 client response callback.
+/// \param data The data of the response.
 void client_206_response_callback(void *data);
+
+/// \brief The 207 client response callback.
+/// \param data The data of the response.
 void client_207_response_callback(void *data);
+
+/// \brief The 208 client response callback.
+/// \param data The data of the response.
 void client_208_response_callback(void *data);
+
+/// \brief The 209 client response callback.
+/// \param data The data of the response.
 void client_209_response_callback(void *data);
+
+/// \brief The 210 client response callback.
+/// \param data The data of the response.
 void client_210_response_callback(void *data);
+
+/// \brief The 211 client response callback.
+/// \param data The data of the response.
 void client_211_response_callback(void *data);
+
+/// \brief The 212 client response callback.
+/// \param data The data of the response.
 void client_212_response_callback(void *data);
+
+/// \brief The 213 client response callback.
+/// \param data The data of the response.
 void client_213_response_callback(void *data);
+
+/// \brief The 214 client response callback.
+/// \param data The data of the response.
 void client_214_response_callback(void *data);
+
+/// \brief The 215 client response callback.
+/// \param data The data of the response.
 void client_215_response_callback(void *data);
+
+/// \brief The 216 client response callback.
+/// \param data The data of the response.
 void client_216_response_callback(void *data);
+
+/// \brief The 217 client response callback.
+/// \param data The data of the response.
 void client_217_response_callback(void *data);
+
+/// \brief The 218 client response callback.
+/// \param data The data of the response.
 void client_218_response_callback(void *data);
+
+/// \brief The 219 client response callback.
+/// \param data The data of the response.
 void client_219_response_callback(void *data);
+
+/// \brief The 220 client response callback.
+/// \param data The data of the response.
 void client_220_response_callback(void *data);
+
+/// \brief The 311 client response callback.
+/// \param data The data of the response.
 void client_311_response_callback(void *data);
+
+/// \brief The 321 client response callback.
+/// \param data The data of the response.
 void client_321_response_callback(void *data);
+
+/// \brief The 401 client response callback.
+/// \param data The data of the response.
 void client_401_response_callback(void *data);
 
 /// Template for all the responses
@@ -454,6 +533,9 @@ static const server_response_t server_response_template[] = {
 };
 
 /// \brief sets the default response data fror the giver response code
+/// \param data the response data to use
+/// \param code the response code
+/// \return true if the response code is valid, false otherwise
 static inline bool memset_server_response_data(
 server_response_t *data,
 int code)
@@ -475,6 +557,8 @@ int code)
 }
 
 /// \brief creates a new server response data struct
+/// \param code the response code
+/// \return the new server response data struct
 static inline server_response_t *create_response_from_code(int code)
 {
     server_response_t *data = malloc(sizeof(server_response_t));

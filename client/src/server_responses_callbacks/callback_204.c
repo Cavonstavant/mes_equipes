@@ -5,10 +5,15 @@
 ** callback_204
 */
 
+/// \file client/src/server_responses_callbacks/callback_204.c
+
 #include "teams_responses.h"
 #include "logging_client.h"
 #include <stdio.h>
 
+/// \brief Update response data.
+/// \param response The server response.
+/// \param msg The message to parse.
 static void update_response_data(server_response_t *response, char *msg)
 {
     if (!response)

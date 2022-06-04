@@ -2,13 +2,18 @@
 ** EPITECH PROJECT, 2022
 ** mes_equipes
 ** File description:
-** callback_211
+** callback_212
 */
+
+/// \file client/src/server_responses_callbacks/callback_212.c
 
 #include "teams_responses.h"
 #include "logging_client.h"
 #include <stdio.h>
 
+/// \brief Update response data callback.
+/// \param resp The server response.
+/// \param msg The message to parse.
 static void update_response_data(server_response_t *resp, char *msg)
 {
     if (!resp)
@@ -24,6 +29,8 @@ static void update_response_data(server_response_t *resp, char *msg)
         return;
 }
 
+/// \brief Call the client api.
+/// \param res The server response.
 static void call_api(server_response_t *res)
 {
     if (!res)
@@ -33,7 +40,6 @@ static void call_api(server_response_t *res)
         res->data.data.team_response_data.team_name,
         res->data.data.team_response_data.team_description);
 }
-
 
 void client_212_response_callback(void *data)
 {
