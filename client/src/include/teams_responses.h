@@ -631,7 +631,7 @@ static const server_response_t server_response_template[] = {
                 .thread_uuid = NULL,
             }
         },
-        .callback = client_605_response_callback
+        .callback = client_604_response_callback
     },
     {
         .code = 606,
@@ -645,7 +645,7 @@ static const server_response_t server_response_template[] = {
                 .thread_uuid = NULL,
             }
         },
-        .callback = client_606_response_callback
+        .callback = client_604_response_callback
     },
     {
         .code = 607,
@@ -659,7 +659,7 @@ static const server_response_t server_response_template[] = {
                 .thread_uuid = NULL,
             }
         },
-        .callback = client_607_response_callback
+        .callback = client_604_response_callback
     }
 };
 
@@ -676,9 +676,9 @@ int code)
 
     if (!data)
         return false;
-    while (i < 24 && server_response_template[i].code != code)
+    while (i < 31 && server_response_template[i].code != code)
         i++;
-    if (i == 24)
+    if (i == 31)
         return false;
     template = server_response_template[i];
     data->callback = template.callback;

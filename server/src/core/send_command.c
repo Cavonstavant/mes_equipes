@@ -45,8 +45,7 @@ user_list_t *user, server_data_t *server)
     if (!command_create_conv(user, send, server))
         return false;
     if (!wrapper_new_message_to_conversation(server->wrapper,
-    (message_creation_t) {
-        command->arguments[1]
+    (message_creation_t) {command->arguments[1]
     }, find_conv_by_participant(server->wrapper, user->user_uuid, send)))
         return print_retcode(503, NULL, user->user_peer, false);
     server_event_private_message_sended(user->user_uuid->uuid.repr + 4,
@@ -54,7 +53,8 @@ user_list_t *user, server_data_t *server)
     send_user_event(server, send, 603, (char *[]) {
     user->user_uuid->uuid.repr + 4, wrapper_find_user(server->wrapper,
     user->user_uuid)->name, NULL});
-    return true;
+    return (!my_uuid_cmp(user->user_uuid, send) ? print_retcode(200, NULL,
+    user->user_peer, true) : true);
 }
 
 /// \brief Command list message
