@@ -17,6 +17,7 @@ var teams__responses_8h =
       [ "USER_INFO_DATA", "teams__responses_8h.html#a90389f9dfa014b8d9aa4d25059104424a1630de7b225ae837961b15171026483c", null ],
       [ "SUBSCRIBE_DATA", "teams__responses_8h.html#a90389f9dfa014b8d9aa4d25059104424a31485938e279e32cbe31b3955ebd7fbe", null ],
       [ "HELP_DATA", "teams__responses_8h.html#a90389f9dfa014b8d9aa4d25059104424a218201196b5386db40a259087658d81c", null ],
+      [ "EVENT_DATA", "teams__responses_8h.html#a90389f9dfa014b8d9aa4d25059104424a902f4c55935c5a7e55d9134f2efa14a0", null ],
       [ "DATA_TYPE_SIZE", "teams__responses_8h.html#a90389f9dfa014b8d9aa4d25059104424a7c3af51c1125650eccf91f438eeace92", null ]
     ] ],
     [ "client_201_response_callback", "teams__responses_8h.html#a444a80a144b3b0dcd2c8e276c5213841", null ],
@@ -40,5 +41,12 @@ var teams__responses_8h =
     [ "client_220_response_callback", "teams__responses_8h.html#a3f8a10ed55579b20ba640c8c7c42b74f", null ],
     [ "client_311_response_callback", "teams__responses_8h.html#a798a84b2e9bbd17f76a2f5ec6ac5affa", null ],
     [ "client_321_response_callback", "teams__responses_8h.html#a2673ef652b0ab45baa3595a2a3a88705", null ],
-    [ "client_401_response_callback", "teams__responses_8h.html#a63223afee439d0d898894aafefd7d71e", null ]
+    [ "client_401_response_callback", "teams__responses_8h.html#a63223afee439d0d898894aafefd7d71e", null ],
+    [ "client_601_response_callback", "teams__responses_8h.html#af09e1ba8c5fa8ad92af462153512a970", null ],
+    [ "client_602_response_callback", "teams__responses_8h.html#a7d0d5250c5a66b38ee1e5f89b9cd01c9", null ],
+    [ "client_603_response_callback", "teams__responses_8h.html#ab25738bcbff0a7ff17ab1b8ecd616b9c", null ],
+    [ "client_604_response_callback", "teams__responses_8h.html#a3a54c8bea7d8c8839692e8fdd47be23b", null ],
+    [ "client_605_response_callback", "teams__responses_8h.html#a0e12895337d17290f4b6a4a4f043bad0", null ],
+    [ "client_606_response_callback", "teams__responses_8h.html#a5a6213e05cbd47d276cab80328601f6f", null ],
+    [ "client_607_response_callback", "teams__responses_8h.html#a3e5e37e3e0f7dcc397359a55a70ff159", null ]
 ];

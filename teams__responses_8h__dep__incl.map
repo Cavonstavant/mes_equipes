@@ -1,5 +1,5 @@
 <map id="client/src/include/teams_responses.h" name="client/src/include/teams_responses.h">
-<area shape="rect" id="node1" title=" " alt="" coords="2435,5,2587,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="3213,5,3365,47"/>
 <area shape="rect" id="node2" href="$run__teams__client_8c.html" title=" " alt="" coords="5,95,160,136"/>
 <area shape="rect" id="node3" href="$callback__201_8c.html" title=" " alt="" coords="185,95,383,136"/>
 <area shape="rect" id="node4" href="$callback__202_8c.html" title=" " alt="" coords="407,95,606,136"/>
@@ -23,4 +23,11 @@
 <area shape="rect" id="node22" href="$callback__311_8c.html" title=" " alt="" coords="4415,95,4614,136"/>
 <area shape="rect" id="node23" href="$callback__320_8c.html" title=" " alt="" coords="4638,95,4837,136"/>
 <area shape="rect" id="node24" href="$callback__401_8c.html" title=" " alt="" coords="4861,95,5059,136"/>
+<area shape="rect" id="node25" href="$callback__601_8c.html" title=" " alt="" coords="5083,95,5282,136"/>
+<area shape="rect" id="node26" href="$callback__602_8c.html" title=" " alt="" coords="5306,95,5505,136"/>
+<area shape="rect" id="node27" href="$callback__603_8c.html" title=" " alt="" coords="5529,95,5727,136"/>
+<area shape="rect" id="node28" href="$callback__604_8c.html" title=" " alt="" coords="5751,95,5950,136"/>
+<area shape="rect" id="node29" href="$callback__605_8c.html" title=" " alt="" coords="5974,95,6173,136"/>
+<area shape="rect" id="node30" href="$callback__606_8c.html" title=" " alt="" coords="6197,95,6395,136"/>
+<area shape="rect" id="node31" href="$callback__607_8c.html" title=" " alt="" coords="6419,95,6618,136"/>
 </map>

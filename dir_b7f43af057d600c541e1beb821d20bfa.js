@@ -21,5 +21,12 @@ var dir_b7f43af057d600c541e1beb821d20bfa =
     [ "callback_220.c", "callback__220_8c.html", "callback__220_8c" ],
     [ "callback_311.c", "callback__311_8c.html", "callback__311_8c" ],
     [ "callback_320.c", "callback__320_8c.html", "callback__320_8c" ],
-    [ "callback_401.c", "callback__401_8c.html", "callback__401_8c" ]
+    [ "callback_401.c", "callback__401_8c.html", "callback__401_8c" ],
+    [ "callback_601.c", "callback__601_8c.html", "callback__601_8c" ],
+    [ "callback_602.c", "callback__602_8c.html", "callback__602_8c" ],
+    [ "callback_603.c", "callback__603_8c.html", "callback__603_8c" ],
+    [ "callback_604.c", "callback__604_8c.html", "callback__604_8c" ],
+    [ "callback_605.c", "callback__605_8c.html", "callback__605_8c" ],
+    [ "callback_606.c", "callback__606_8c.html", "callback__606_8c" ],
+    [ "callback_607.c", "callback__607_8c.html", "callback__607_8c" ]
 ];
