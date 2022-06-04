@@ -39,12 +39,16 @@ static void update_response_data(server_response_t *resp, char *msg)
 /// \param res The server response.
 static void call_api(server_response_t *res)
 {
+    struct tm temp = {0};
+
     if (!res)
         return;
+    strptime(res->data.data.thread_response_data.creation_time,
+        "%Y-%m-%d %H-%M-%S", &temp);
     client_event_thread_created(
-        res->data.data.thread_response_data.thread_uuid + 4,
-        res->data.data.thread_response_data.user_uuid + 4,
-        res->data.data.thread_response_data.creation_time,
+        res->data.data.thread_response_data.thread_uuid,
+        res->data.data.thread_response_data.user_uuid,
+        mktime(&temp),
         res->data.data.thread_response_data.thread_title,
         res->data.data.thread_response_data.thread_body);
 }
@@ -59,7 +63,7 @@ void client_607_response_callback(void *data)
     update_response_data(response, response->message);
     call_api(response);
     update_response_data(response, NULL);
-    while (response->data.data.event_data.user_uuid
+    while (response->data.data.thread_response_data.thread_uuid
         && response->message) {
         call_api(response);
         fflush(NULL);
