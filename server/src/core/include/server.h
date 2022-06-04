@@ -119,4 +119,15 @@ char **args);
 ///
 void send_users_event(server_data_t *serv, int code, char **args);
 
+///
+/// \brief Send a event to all connected and authentified users without current
+///
+/// \param serv Server informations
+/// \param code Rcode to call
+/// \param args Arguments to call
+/// \param sock Socket to skip
+///
+void send_users_event_logout(server_data_t *serv, int code, char **args,
+int sock);
+
 #endif /* !SERVER_H_ */
