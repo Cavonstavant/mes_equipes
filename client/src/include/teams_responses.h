@@ -631,7 +631,7 @@ static const server_response_t server_response_template[] = {
                 .thread_uuid = NULL,
             }
         },
-        .callback = client_605_response_callback
+        .callback = default_response_callback
     },
     {
         .code = 606,
@@ -645,7 +645,7 @@ static const server_response_t server_response_template[] = {
                 .thread_uuid = NULL,
             }
         },
-        .callback = client_606_response_callback
+        .callback = default_response_callback
     },
     {
         .code = 607,
@@ -659,7 +659,7 @@ static const server_response_t server_response_template[] = {
                 .thread_uuid = NULL,
             }
         },
-        .callback = client_607_response_callback
+        .callback = default_response_callback
     }
 };
 
