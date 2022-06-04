@@ -8,27 +8,27 @@
 NAME := my_teams
 
 $(NAME):
-	cmake . -B ./build -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
+	cmake . -B ./build -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug
 	cmake --build ./build
 	rm -rf libs/
 
 clean:
-	cmake . -B ./build -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
+	cmake . -B ./build -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug
 	cmake --build ./build
 	rm -rf libs/
 
 fclean:
-	cmake . -B ./build -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
+	cmake . -B ./build -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug
 	cmake --build ./build
 	rm -rf libs/
 
 re:
-	cmake . -B ./build -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
+	cmake . -B ./build -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug
 	cmake --build ./build
 	rm -rf libs/
 
 all:
-	cmake . -B ./build -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
+	cmake . -B ./build -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug
 	cmake --build ./build
 	rm -rf libs/
 
