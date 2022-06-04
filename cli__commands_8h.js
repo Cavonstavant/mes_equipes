@@ -21,5 +21,5 @@ var cli__commands_8h =
     [ "convert_command_to_structure", "cli__commands_8h.html#a6c43fbfe6e6eb748fde7b100c811b5d5", null ],
     [ "fill_command_arguments", "cli__commands_8h.html#a7c77d57583ecaadc230d090f50f7392d", null ],
     [ "get_cli_command_by_name", "cli__commands_8h.html#a3be87adad64eb43e3778c5559034e754", null ],
-    [ "get_cli_commands", "cli__commands_8h.html#ac9744b15a63eff3572f1ffdb0c8f7040", null ]
+    [ "get_cli_commands", "cli__commands_8h.html#aa10378b08ff05a3abb3130efa6d57157", null ]
 ];

@@ -170,6 +170,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:a6c1e93f72b6356d92171fb825e17aae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a message to the mes_équipes server conforming to RFC.  <a href="client__utils_8h.html#a6c1e93f72b6356d92171fb825e17aae0">More...</a><br /></td></tr>
 <tr class="separator:a6c1e93f72b6356d92171fb825e17aae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a209ac115fb574176b09520e3a1602825"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client__utils_8h.html#a209ac115fb574176b09520e3a1602825">set_output_buffer</a> (<a class="el" href="client__utils_8h.html#a8a31d3f91a9f1270050b2e05923c00a2">client_net_server_t</a> *server, const char *msg)</td></tr>
+<tr class="memdesc:a209ac115fb574176b09520e3a1602825"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the output buffer of the mes_équipes server.  <a href="client__utils_8h.html#a209ac115fb574176b09520e3a1602825">More...</a><br /></td></tr>
 <tr class="separator:a209ac115fb574176b09520e3a1602825"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7189f074e7b6a2568dd54ac3263532ae"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="client__utils_8h.html#a7189f074e7b6a2568dd54ac3263532ae">fetch_message</a> (<a class="el" href="client__utils_8h.html#a8a31d3f91a9f1270050b2e05923c00a2">client_net_server_t</a> *server)</td></tr>
 <tr class="memdesc:a7189f074e7b6a2568dd54ac3263532ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the last message recieved from the server.  <a href="client__utils_8h.html#a7189f074e7b6a2568dd54ac3263532ae">More...</a><br /></td></tr>
@@ -290,6 +291,13 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Retrieve the last message recieved from the server. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">server</td><td>The mes_équipes server to retrieve the last message from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A pointer to the last message recieved from the server </dd></dl>
 
 </div>
 </div>
@@ -347,6 +355,15 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Set the output buffer of the mes_équipes server. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">server</td><td>The mes_équipes server to set the output buffer of </td></tr>
+    <tr><td class="paramname">msg</td><td>The null terminated message to set the output buffer to </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a9aef5bca400df71b0617cee413992b3e"></a>
@@ -366,6 +383,12 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Update the mes_équipes client by sending and receiving messages. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">server</td><td>The mes_équipes client to update </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -157,13 +157,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="server_8h.html#ae3ed3ed33e0e04d42a57b1afda4c0c86">user_list_t</a> *&#160;</td>
-          <td class="paramname"><em>users</em>, </td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="server_8h.html#a9ca54fdf642f42b1f7fbdf968d0d4295">server_data_t</a> *&#160;</td>
-          <td class="paramname"><em>server_data</em>&#160;</td>
+          <td class="paramname">&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -174,7 +174,13 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This function call the function store on the structure passed as parameter. </p>
-<p>/!\ This function doesn't call the function actually, because the function are not implemented yet. /!\ The argument to be passed as parameter in the function to be called must be contains the arguments of the command, and an object to be use to ask a write on the client. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cli_command_t</td><td>The structure which contains the function to be call. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0, or -1 if an error occurs. </dd></dl>
 
 </div>
 </div>

@@ -139,8 +139,10 @@ Include dependency graph for send_command.c:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a1989e92f489fed1e4fe4155cc66fddc9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="send__command_8c.html#a1989e92f489fed1e4fe4155cc66fddc9">command_send</a> (<a class="el" href="cli__commands_8h.html#aad57a9a9f24b943a80700aa407287a6e">cli_command_t</a> *command, <a class="el" href="server_8h.html#ae3ed3ed33e0e04d42a57b1afda4c0c86">user_list_t</a> *user, <a class="el" href="server_8h.html#a9ca54fdf642f42b1f7fbdf968d0d4295">server_data_t</a> *server)</td></tr>
+<tr class="memdesc:a1989e92f489fed1e4fe4155cc66fddc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The send command.  <a href="send__command_8c.html#a1989e92f489fed1e4fe4155cc66fddc9">More...</a><br /></td></tr>
 <tr class="separator:a1989e92f489fed1e4fe4155cc66fddc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5363dd436367fbd50c9881c206bdf71d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="send__command_8c.html#a5363dd436367fbd50c9881c206bdf71d">command_messages</a> (<a class="el" href="cli__commands_8h.html#aad57a9a9f24b943a80700aa407287a6e">cli_command_t</a> *command, <a class="el" href="server_8h.html#ae3ed3ed33e0e04d42a57b1afda4c0c86">user_list_t</a> *user, <a class="el" href="server_8h.html#a9ca54fdf642f42b1f7fbdf968d0d4295">server_data_t</a> *server)</td></tr>
+<tr class="memdesc:a5363dd436367fbd50c9881c206bdf71d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The messages command.  <a href="send__command_8c.html#a5363dd436367fbd50c9881c206bdf71d">More...</a><br /></td></tr>
 <tr class="separator:a5363dd436367fbd50c9881c206bdf71d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -154,19 +156,19 @@ Functions</h2></td></tr>
           <td class="memname">bool command_messages </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="cli__commands_8h.html#aad57a9a9f24b943a80700aa407287a6e">cli_command_t</a> *&#160;</td>
-          <td class="paramname"><em>command</em>, </td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="server_8h.html#ae3ed3ed33e0e04d42a57b1afda4c0c86">user_list_t</a> *&#160;</td>
-          <td class="paramname"><em>user</em>, </td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="server_8h.html#a9ca54fdf642f42b1f7fbdf968d0d4295">server_data_t</a> *&#160;</td>
-          <td class="paramname"><em>server</em>&#160;</td>
+          <td class="paramname">&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -175,6 +177,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The messages command. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cli_command</td><td>The command to call. </td></tr>
+    <tr><td class="paramname">user_list</td><td>The list of users. </td></tr>
+    <tr><td class="paramname">server_data</td><td>The server data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the command is valid, false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -188,19 +201,19 @@ Functions</h2></td></tr>
           <td class="memname">bool command_send </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="cli__commands_8h.html#aad57a9a9f24b943a80700aa407287a6e">cli_command_t</a> *&#160;</td>
-          <td class="paramname"><em>command</em>, </td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="server_8h.html#ae3ed3ed33e0e04d42a57b1afda4c0c86">user_list_t</a> *&#160;</td>
-          <td class="paramname"><em>user</em>, </td>
+          <td class="paramname">, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="server_8h.html#a9ca54fdf642f42b1f7fbdf968d0d4295">server_data_t</a> *&#160;</td>
-          <td class="paramname"><em>server</em>&#160;</td>
+          <td class="paramname">&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -209,6 +222,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The send command. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cli_command</td><td>The command to call. </td></tr>
+    <tr><td class="paramname">user_list</td><td>The list of users. </td></tr>
+    <tr><td class="paramname">server_data</td><td>The server data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the command is valid, false otherwise. </dd></dl>
 
 </div>
 </div>

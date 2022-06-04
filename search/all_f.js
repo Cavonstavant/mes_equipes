@@ -29,7 +29,7 @@ var searchData=
   ['server_5fwrite_5fclient_353',['server_write_client',['../fd__set__manage_8h.html#a5d18ba9f1648614cf49086caa70f7392',1,'server_write_client(tcp_server_t *srv, peer_t *tmp):&#160;server_write_client.c'],['../server__write__client_8c.html#a5d18ba9f1648614cf49086caa70f7392',1,'server_write_client(tcp_server_t *srv, peer_t *tmp):&#160;server_write_client.c']]],
   ['server_5fwrite_5fclient_2ec_354',['server_write_client.c',['../server__write__client_8c.html',1,'']]],
   ['set_5foutput_5fbuffer_355',['set_output_buffer',['../client__utils_8h.html#a209ac115fb574176b09520e3a1602825',1,'set_output_buffer(client_net_server_t *server, const char *msg):&#160;send_message.c'],['../send__message_8c.html#a209ac115fb574176b09520e3a1602825',1,'set_output_buffer(client_net_server_t *server, const char *msg):&#160;send_message.c']]],
-  ['sigint_5fhandler_356',['sigint_handler',['../server__run_8c.html#a080ad247ab697f7e5f96b0113cbdadc3',1,'server_run.c']]],
+  ['sigint_5fhandler_356',['sigint_handler',['../server__run_8c.html#a999a2e2025740e771aacd616c328704d',1,'server_run.c']]],
   ['size_357',['size',['../structchild__list__s.html#a436dd4edeaf075df258ae99618a40a48',1,'child_list_s']]],
   ['sock_5ffd_358',['sock_fd',['../structserver__s.html#af2a71ed580a2a3c722cbad632538212d',1,'server_s::sock_fd()'],['../structpeer__s.html#adce567be2c1ab70e50f6bb43d9acf67f',1,'peer_s::sock_fd()'],['../structtcp__server__s.html#a739e5321330a4ce09c923277938895d5',1,'tcp_server_s::sock_fd()']]],
   ['srv_5faddr_359',['srv_addr',['../structserver__s.html#a392dce00b025a21f06d3af55c36e6814',1,'server_s']]],
