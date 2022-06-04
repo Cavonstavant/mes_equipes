@@ -39,7 +39,7 @@ my_uuid_t *uuid)
 {
     team_t *team = wrapper_find_team(serv->wrapper, uuid);
 
-    return print_retcode(211, cretcodes((char *[]) {
+    return print_retcode(212, cretcodes((char *[]) {
         team->uuid->uuid.repr,
         team->name,
         team->description,
@@ -58,7 +58,7 @@ my_uuid_t *uuid)
 {
     channel_t *channel = wrapper_find_channel(serv->wrapper, uuid);
 
-    return print_retcode(211, cretcodes((char *[]) {
+    return print_retcode(213, cretcodes((char *[]) {
         channel->uuid->uuid.repr,
         channel->name,
         channel->description,
@@ -77,7 +77,7 @@ my_uuid_t *uuid)
 {
     thread_t *thread = wrapper_find_thread(serv->wrapper, uuid);
 
-    return print_retcode(211, cretcodes((char *[]) {
+    return print_retcode(214, cretcodes((char *[]) {
         thread->uuid->uuid.repr,
         thread->author->uuid.repr,
         thread_get_time(thread),

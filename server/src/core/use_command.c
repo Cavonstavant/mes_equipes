@@ -106,7 +106,8 @@ user_list_t *user, server_data_t *server_data)
 {
     int command_number = 0;
 
-    for (; command->arguments[command_number] != NULL; command_number++);
+    if (command->arguments)
+        for (; command->arguments[command_number] != NULL; command_number++);
     if (!user->is_auth)
         return print_retcode(401, NULL, user->user_peer, true);
     if (command_number == 0)

@@ -60,9 +60,9 @@ static bool create_new_user(object_wrapper_t *wrapper, char *file, int occ)
         return false;
     if (!wrapper_adding_user(wrapper, (user_creation_t) {name, s}))
         return false;
+    user_edit_uuid(wrapper->users[occ], uuid);
     server_event_user_loaded(wrapper->users[occ]->uuid->uuid.repr + 4,
     wrapper->users[occ]->name);
-    user_edit_uuid(wrapper->users[occ], uuid);
     if (!fill_teams(wrapper, file, index, occ))
         return false;
     free(uuid);
