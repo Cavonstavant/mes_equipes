@@ -53,6 +53,12 @@ static void call_api(server_response_t *res)
         mktime(&temp),
         res->data.data.thread_response_data.thread_title,
         res->data.data.thread_response_data.thread_body);
+    client_event_thread_created(
+        res->data.data.thread_response_data.thread_uuid + 4,
+        res->data.data.thread_response_data.user_uuid + 4,
+        mktime(&temp),
+        res->data.data.thread_response_data.thread_title,
+        res->data.data.thread_response_data.thread_body);
 }
 
 void client_217_response_callback(void *data)

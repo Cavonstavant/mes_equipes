@@ -83,24 +83,25 @@ static bool command_create_thread(char **arguments, user_list_t *user,
 server_data_t *serv)
 {
     thread_t *new = NULL;
+    char **res = NULL;
 
     if (!arguments || !arguments[0] || !arguments[1])
         return false;
     if (find_thread_by_name_exc(serv->wrapper, arguments[0], user->loc))
         return print_retcode(320, NULL, user->user_peer, true);
     if (!wrapper_new_thread_to_channel(serv->wrapper, (thread_creation_t) {
-        arguments[0], arguments[1], user->user_uuid, user->loc
-    }, user->loc)) {
+    arguments[0], arguments[1], user->user_uuid, user->loc}, user->loc))
         return print_retcode(503, NULL, user->user_peer, true);
-    }
     new = wrapper_find_thread(serv->wrapper,
     find_thread_by_name_exc(serv->wrapper, arguments[0], user->loc));
     server_event_thread_created(user->loc->uuid.repr + 4,
     new->uuid->uuid.repr + 4, user->user_uuid->uuid.repr + 4,
     arguments[0], arguments[1]);
-    return print_retcode(217, cretcodes((char *[]) {new->uuid->uuid.repr,
-    user->user_uuid->uuid.repr, thread_get_time(new), arguments[0],
-    arguments[1], NULL}), user->user_peer, true);
+    res = (char *[]) {new->uuid->uuid.repr, user->user_uuid->uuid.repr,
+    thread_get_time(new), arguments[0], arguments[1], NULL};
+    send_users_event_create(serv, user->loc,
+    (int []) {607, user->user_peer->sock_fd}, res);
+    return print_retcode(217, cretcodes(res), user->user_peer, true);
 }
 
 /// \brief Create a new reply
