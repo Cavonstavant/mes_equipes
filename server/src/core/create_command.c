@@ -118,15 +118,16 @@ server_data_t *serv)
     if (!arguments || !arguments[0])
         return false;
     if (!wrapper_new_comment_to_thread(serv->wrapper, (comment_creation_t) {
-        arguments[0],
-        user->loc,
-        user->user_uuid
-    }, user->loc)) {
+    arguments[0], user->loc, user->user_uuid}, user->loc))
         return print_retcode(503, NULL, user->user_peer, true);
-    }
     new = serv->wrapper->comments[serv->wrapper->comment_n - 1];
     server_event_reply_created(user->loc->uuid.repr + 4,
     user->user_uuid->uuid.repr + 4, arguments[0]);
+    send_users_event_create(serv, user->loc,
+    (int []) {604, user->user_peer->sock_fd}, (char *[]) {
+    get_associated_team_thread(serv->wrapper, user->loc)->uuid.repr + 4,
+    user->loc->uuid.repr + 4, user->user_uuid->uuid.repr + 4,
+    arguments[0], NULL});
     return print_retcode(218, cretcodes((char *[]) {new->thread->uuid.repr,
     new->author->uuid.repr, comment_get_time(new), arguments[0], NULL}),
     user->user_peer, true);

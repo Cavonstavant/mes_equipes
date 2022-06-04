@@ -55,7 +55,7 @@ void client_604_response_callback(void *data)
     update_response_data(response, response->message);
     call_api(response);
     update_response_data(response, NULL);
-    while (response->data.data.event_data.user_uuid
+    while (response->data.data.event_data.team_uuid
         && response->message) {
         call_api(response);
         fflush(NULL);
